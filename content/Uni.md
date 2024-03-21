@@ -1,2 +1,0 @@
-- [[3. Semester]]
-- [[4.Semester]]
