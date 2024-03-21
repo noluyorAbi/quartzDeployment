@@ -27,7 +27,7 @@ dependencies:
     specifier: ^0.2.10
     version: 0.2.10
   d3:
-    specifier: ^7.8.5
+    specifier: ^7.9.0
     version: 7.9.0
   esbuild-sass-plugin:
     specifier: ^2.16.1
