@@ -15,3 +15,4 @@ tags:
 - [[Minimale Schlüssel]]
 - [[Referenzielle Integrität]]
 - [[Data Definition Language (DDL)]]
+- [[Relationale Algebra]]
