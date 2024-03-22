@@ -2,7 +2,7 @@
 title: "University Notes"
 created: 2024-03-21 01:39
 date: 2024-03-21
-description: "Collection of notes from my university studies in computer science."
+description: A streamlined platform offering comprehensive computer science study materials, ideal for German-speaking students seeking to enhance their academic expertise.
 ---
 
 ---
