@@ -18,9 +18,12 @@ export default ((opts?: Options) => {
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://github.com/noluyorAbi">noluyorAbi</a> © {year}
-          <br/>
-         <span>Made with<a href="https://github.com/jackyzha0/quartz"> Quartz v{version}</a></span>
+          <br />
+          <span>
+            Made with<a href="https://github.com/jackyzha0/quartz"> Quartz v{version}</a>
+          </span>
         </p>
+        <a href="mailto:contact@myuninotes.com">contact@myuninotes.com</a>
       </footer>
     )
   }
