@@ -33,13 +33,15 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
         segments.push(formatDate(getDate(cfg, fileData)!, cfg.locale))
       }
 
-      // Display reading time if enabled
+      // Display reading time if enabled, using 150 WPM
       if (options.showReadingTime) {
-        const { minutes, words: _words } = readingTime(text)
-        const displayedTime = i18n(cfg.locale).components.contentMeta.readingTime({
-          minutes: Math.ceil(minutes),
-        })
-        segments.push(displayedTime)
+        const readingOptions = { wordsPerMinute: 150 }; // Set custom WPM
+        const { minutes } = readingTime(text, readingOptions);
+        const totalSeconds = Math.ceil(minutes * 60);
+        const displayedMinutes = Math.floor(totalSeconds / 60);
+        const displayedSeconds = totalSeconds % 60;
+        const readingTimeText = `Reading Time: ${displayedMinutes} min ${displayedSeconds} sec`; // Display
+        segments.push(readingTimeText);
       }
 
       const segmentsElements = segments.map((segment) => <span>{segment}</span>)
