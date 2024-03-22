@@ -206,7 +206,7 @@ devDependencies:
     specifier: ^0.19.9
     version: 0.19.12
   prettier:
-    specifier: ^3.2.4
+    specifier: ^3.2.5
     version: 3.2.5
   tsx:
     specifier: ^4.7.1
