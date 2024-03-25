@@ -75,11 +75,11 @@ dependencies:
     specifier: ^0.4.5
     version: 0.4.5
   preact:
-    specifier: ^10.19.6
-    version: 10.20.0
+    specifier: ^10.20.1
+    version: 10.20.1
   preact-render-to-string:
     specifier: ^6.4.0
-    version: 6.4.1(preact@10.20.0)
+    version: 6.4.1(preact@10.20.1)
   pretty-bytes:
     specifier: ^6.1.1
     version: 6.1.1
@@ -2908,17 +2908,17 @@ packages:
     engines: {node: '>=8.6'}
     dev: false
 
-  /preact-render-to-string@6.4.1(preact@10.20.0):
+  /preact-render-to-string@6.4.1(preact@10.20.1):
     resolution: {integrity: sha512-oHKIFIv+/N0i3fNRF4ANMr2I93maycuXK78ERJ0vUW+nz6MXXMO6mTOFxp3itvSVBS/GXtLAy2jio3ZPeD8lZQ==}
     peerDependencies:
       preact: '>=10'
     dependencies:
-      preact: 10.20.0
+      preact: 10.20.1
       pretty-format: 3.8.0
     dev: false
 
-  /preact@10.20.0:
-    resolution: {integrity: sha512-wU7iZw2BjsaKDal3pDRDy/HpPB6cuFOnVUCcw9aIPKG98+ZrXx3F+szkos8BVME5bquyKDKvRlOJFG8kMkcAbg==}
+  /preact@10.20.1:
+    resolution: {integrity: sha512-JIFjgFg9B2qnOoGiYMVBtrcFxHqn+dNXbq76bVmcaHYJFYR4lW67AOcXgAYQQTDYXDOg/kTZrKPNCdRgJ2UJmw==}
     dev: false
 
   /prettier@3.2.5:
