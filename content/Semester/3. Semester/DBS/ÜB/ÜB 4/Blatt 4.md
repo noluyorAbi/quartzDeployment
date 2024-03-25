@@ -23,11 +23,11 @@ Thema:
 
 Definition Quotient formal:
 
-$$R \div S = \{ t \ | \ t \in \Pi_{R-S}(R) \ \land \ (\{t\} \times S) \subseteq R \}$$
+$R \div S = \{ t \ | \ t \in \Pi_{R-S}(R) \ \land \ (\{t\} \times S) \subseteq R \}$
 
-$$= \{ t \ | \ t \in \Pi_{R-S}(R) \ \land \ \forall s \in S: (t, s) \in R \}$$
+$= \{ t \ | \ t \in \Pi_{R-S}(R) \ \land \ \forall s \in S: (t, s) \in R \}$
 
-$$= \Pi_{R-S}(R) - \Pi_{R-S}((\Pi_{R-S}(R) \times S) - R)$$
+$= \Pi_{R-S}(R) - \Pi_{R-S}((\Pi_{R-S}(R) \times S) - R)$
 
 ---
 
@@ -69,19 +69,19 @@ $$= \Pi_{R-S}(R) - \Pi_{R-S}((\Pi_{R-S}(R) \times S) - R)$$
 
 ### a) Bestimme die Artikelbezeichnung (artbez) und den Lagerort für alle Artikel mit einem Preis von über 5000.
 
-$$\Pi_{artbez,lagerort}(\sigma_{preis>5000}(Inventar))$$
+$\Pi_{artbez,lagerort}(\sigma_{preis>5000}(Inventar))$
 
 ### b) Bestimme die Vornamen aller Mitarbeiter, die in München im Einsatz sind und mindestens ein Produkt seit dem 24.07.2023 verkauft haben.
 
-$$\Pi_{vorname}(\sigma_{einsatz = ''München'' \  \land \ bestelldatum \  \ge \ '24.07.2023' }(Verkauf \bowtie Personal ))$$
+$\Pi_{vorname}(\sigma_{einsatz = ''München'' \  \land \ bestelldatum \  \ge \ '24.07.2023' }(Verkauf \bowtie Personal ))$
 ### c) Bestimme die Personalnummern der Vorgesetzten aller Mitarbeiter, die etwas an einen Kunden aus dem Bezirk mit der PLZ '74391' verkauft haben.
-$$\Pi_{vorgesetzt}(\sigma_{ort = '74391' }(Personal \bowtie Kunde \bowtie Verkauf))$$
+$\Pi_{vorgesetzt}(\sigma_{ort = '74391' }(Personal \bowtie Kunde \bowtie Verkauf))$
 ### d) Bestimme die Auftragsnummern (auftrnr) aller Bestellungen, die 'Betten Kaiser' aufgegeben hat und die von 'Michael Roser' bearbeitet wurden.
 
-$$\Pi_{auftrnr}(\sigma_{kundname = 'Betten Kaiser' \ \land \ nachname = 'Roser' \ \land \ vorname = 'Michael'}(Kunde \bowtie Personal \bowtie Verkauf ))$$
+$\Pi_{auftrnr}(\sigma_{kundname = 'Betten Kaiser' \ \land \ nachname = 'Roser' \ \land \ vorname = 'Michael'}(Kunde \bowtie Personal \bowtie Verkauf ))$
 ### e) Bestimme das Bestelldatum und die Artikelnummern (artnr) aller Aufträge, deren Produkte im gleichen Ort lagern, in dem der Kunde seinen Sitz hat und die von einem Mitarbeiter mit einem Gehalt von unter 4500 verkauft wurden.
 
-$$\Pi_{artnr,bestelldatum}(\sigma_{lagerort = ort \ \land \ gehalt \  \lt 4500 }(Kunde \bowtie Personal \bowtie Ineventar \bowtie Verkauf \bowtie Auftragsposten))$$
+$\Pi_{artnr,bestelldatum}(\sigma_{lagerort = ort \ \land \ gehalt \  \lt 4500 }(Kunde \bowtie Personal \bowtie Ineventar \bowtie Verkauf \bowtie Auftragsposten))$
 
 ---
 
@@ -96,7 +96,7 @@ Gegeben seien die Relationen Lieferant `L`, Teil `T` und Projekt `P` als Datenmo
 
 Außerdem sei Relation `RT` definiert durch: 
 
-$$RT = \Pi_{tnr}(\sigma_{farbe='ROT'}(T)).$$
+$RT = \Pi_{tnr}(\sigma_{farbe='ROT'}(T)).$
 
 Hinweis: Unten finden Sie zum Verständnis eine Beispielausprägung des Relationenschemas.
 
@@ -124,3 +124,8 @@ Was berechnen die folgenden Ausdrucke?
 
 
 Zusammengefasst unterscheiden sich die Abfragen in dem, was sie betrachten (Lieferanten-Teil-Paare, Lieferanten im Kontext von Projekten, oder einfach alle fähigen Lieferanten) und in der Spezifität ihrer Ergebnisse (spezifische Paare, Lieferanten bezogen auf Projekte, oder eine generelle Liste von Lieferanten).
+
+
+---
+
+Als nächstes: [[Blatt 5]]

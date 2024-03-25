@@ -10,6 +10,7 @@ fach: "[[DBS]]"
 # Aufgabe 3-1 *Schlüssel und Fremdschlüssel*
 
 ## Aufgabe 3-1 Schlüssel und Fremdschlüssel
+
 **Ein Fremdschlüssel ist ein Attribut oder eine Attributkombination einer Relation, welches auf einen Primärschlüssel (bzw. Schlüsselkandidat) einer anderen oder der gleichen Relation verweist.**
 
 **Eine relationale Datenbank enthält alle Informationen über bereits gesehenen Serien einer Streamingplattform und die darin vorkommenden Rollen:**
@@ -22,12 +23,12 @@ fach: "[[DBS]]"
 
 ### Rolle
 
-| RID | Vorname | Nachname | SID  |
-|-----|---------|----------|------|
-| 13  | Jon     | Snow     | 47   |
-| 19  | Tyrion  | Lannister| 47   |
-| 24  | Sheldon | Cooper   | 59   |
-| 33  | Rick    | Grimes   | null |
+| RID | Vorname | Nachname  | SID  |
+| --- | ------- | --------- | ---- |
+| 13  | Jon     | Snow      | 47   |
+| 19  | Tyrion  | Lannister | 47   |
+| 24  | Sheldon | Cooper    | 59   |
+| 33  | Rick    | Grimes    | null |
 
 **Die Attribute `Serie.SID` und `Rolle.RID` stellen die Primärschlüssel der beiden Relationen dar. Das Schema enthält außerdem folgende Fremdschlüsselbeziehung zwischen Rollen und Serie:**
 
@@ -42,18 +43,18 @@ fach: "[[DBS]]"
 
 - Effizientere Überprüfbarkeit von Schlüssel-/ Fremdschlüsselbedingungen  
 	- *Beispiel:*
-	- ```Stellen Sie sich eine Tabelle vor, die Studenteninformationen an einer Universität speichert. Die Tabelle könnte folgende Spalten haben: `StudentenID`, `Name`, `Alter`, `Studiengang` und `E-Mail-Adresse`.
+```Stellen Sie sich eine Tabelle vor, die Studenteninformationen an einer Universität speichert. Die Tabelle könnte folgende Spalten haben: `StudentenID`, `Name`, `Alter`, `Studiengang` und `E-Mail-Adresse`.
 	
-	 In diesem Fall könnte die `StudentenID` ein minimaler Schlüssel sein, da jede `StudentenID` einzigartig ist und jeden Studenten eindeutig identifiziert. Kein anderes Attribut kann aus diesem Schlüssel entfernt werden, ohne seine Eindeutigkeit zu verlieren.
+In diesem Fall könnte die `StudentenID` ein minimaler Schlüssel sein, da jede `StudentenID` einzigartig ist und jeden Studenten eindeutig identifiziert. Kein anderes Attribut kann aus diesem Schlüssel entfernt werden, ohne seine Eindeutigkeit zu verlieren.
 	
-	 Hier ist ein einfaches Beispiel:
+Hier ist ein einfaches Beispiel:
 	
-	 |StudentenID|Name|Alter|Studiengang|E-Mail-Adresse|
-	 |---|---|---|---|---|
-	 |12345|Max Mustermann|21|Informatik|max@uni.de|
-	 |67890|Erika Muster|22|Physik|erika@uni.de|
+|StudentenID|Name|Alter|Studiengang|E-Mail-Adresse|
+|---|---|---|---|---|
+|12345|Max Mustermann|21|Informatik|max@uni.de|
+|67890|Erika Muster|22|Physik|erika@uni.de|
 	
-	 In dieser Tabelle ist `StudentenID` der minimale Schlüssel.```
+In dieser Tabelle ist `StudentenID` der minimale Schlüssel.```
 
 
 ### c) Was versteht man unter referenzieller Integrität?
@@ -69,7 +70,7 @@ fach: "[[DBS]]"
 
 - [ ] Einfügen von (12, 'Harvey', 'Specter', 41) in Rolle **→ referenzierte SID existiert nicht**
 - [ ] Einfügen von (47, 'FOX', 'Suits') in Serie **→ SID existiert bereits also nicht korrekt**
-- [v] Einfügen von (42, 'Leonard', 'Hofstadter', 59) in Rolle **→ Passt alles**
+- [x] Einfügen von (42, 'Leonard', 'Hofstadter', 59) in Rolle **→ Passt alles**
 
 
 ---
@@ -172,10 +173,10 @@ ALTER TABLE KTL
 MODIFY (Volumen INTEGER)
 
 ALTER TABLE KTL 
-ADD CONSTAINT volumen_constraint CHECK (Volumen > 0)
+ADD CONSTRAINT volumen_constraint CHECK (Volumen > 0)
 ```
 
-```java
+
 → Die erste, als falsch markierte SQL-Anweisung hat ein paar Probleme, die sie in den meisten SQL-Dialekten ungültig machen würden:
 
 1. In vielen SQL-Dialekten, darunter MySQL, ist die Syntax `MODIFY(Volumen INTEGER CHECK(Volumen > 0))` nicht korrekt. Das `CHECK`-Constraint wird typischerweise nicht innerhalb der `MODIFY`-Anweisung definiert.
@@ -184,11 +185,9 @@ ADD CONSTAINT volumen_constraint CHECK (Volumen > 0)
 Die zweite, als richtig markierte SQL-Anweisung umgeht diese Probleme:
 
 1. `ALTER TABLE KTL MODIFY (Volumen INTEGER)` – Diese Anweisung ist syntaktisch korrekt. Sie ändert den Datentyp der Spalte `Volumen` auf `INTEGER`, ohne irgendwelche Constraints anzugeben.
-2. `ALTER TABLE KTL ADD CONSTRAINT volumen_constraint CHECK (Volumen > 0)` – Diese separate Anweisung fügt das `CHECK`-Constraint korrekt hinzu. Hierbei wird das `CHECK`-Constraint als eigener `CONSTRAINT` definiert, was in den meisten SQL-Datenbanksystemen der richtige Weg ist. (Aber auch hier sollte "CONSTAINT" zu "CONSTRAINT" korrigiert werden.)
+2. `ALTER TABLE KTL ADD CONSTRAINT volumen_constraint CHECK (Volumen > 0)` – Diese separate Anweisung fügt das `CHECK`-Constraint korrekt hinzu. Hierbei wird das `CHECK`-Constraint als eigener `CONSTRAINT` definiert, was in den meisten SQL-Datenbanksystemen der richtige Weg ist.
 
 Zusammenfassend ist das "richtige" Statement korrekt, weil es die Syntax-Regeln befolgt, die von den meisten SQL-Datenbanksystemen erwartet werden.
-```
-
 
 ### e) Nun sollen Sie alle Tabellen wieder loschen ohne die referenzielle Integrität zu verletzen. 
 
@@ -198,3 +197,8 @@ DROP TABLE Kunde
 DROP TABLE Team
 DROP TABLE Leistung
 ```
+
+
+---
+
+Als nächstes: [[Blatt 4]]

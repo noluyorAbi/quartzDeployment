@@ -9,7 +9,7 @@ fach: "[[DBS]]"
 
 # Aufgabe 2-1 *Datenbanksysteme – Dateiverwaltungssysteme*
 
-## Erläutern Sie die Vorteile, die Datenbanksysteme gegen ¨ uber Dateiverwaltungssystemen durch die [[3 - Ebenenarchitektur]] (Externe, Interne, Konzeptionelle Ebene) besitzen. Insbesondere soll dabei auf folgende Punkte eingegangen werden: [[Unterschiede zwischen Datenbanksystemen und Dateiverwaltungssystemen]]
+## Erläutern Sie die Vorteile, die Datenbanksysteme gegenüber Dateiverwaltungssystemen durch die [[3 - Ebenenarchitektur]] (Externe, Interne, Konzeptionelle Ebene) besitzen. Insbesondere soll dabei auf folgende Punkte eingegangen werden: [[Unterschiede zwischen Datenbanksystemen und Dateiverwaltungssystemen]]
 
 ### a) Erweiterung der abgespeicherten Datensatze um ein Attribut
 
@@ -18,7 +18,7 @@ fach: "[[DBS]]"
 | Änderung der Recordstrukturen der Dateien                                                        | Änderung des konzeptionellen Schemas und der internen Ebene                                               |
 | → alle betroffenen Anwendungen (die auf die geänderten Dateien zugreifen) müssen geändert werden | → externe Sichten können meist unverändert bleiben (evtl. Müssen einige Benutzersichten verändert werden) |
 | → Zeitaufwendig                                                                                  | → Benutzersichten können im Laufe der Zeit angepasst werden                                               |
-| → Änderungen nur mir Ankündigung möglich                                                         | → Änderungen können spontan und ohne WIsen der Anwender passieren                                         |
+| → Änderungen nur mir Ankündigung möglich                                                         | → Änderungen können spontan und ohne Wissen der Anwender passieren                                        |
 
 ### b) Anlegen eines Index zum schnelleren Zugriff auf die Datensätze
 
@@ -85,4 +85,6 @@ Diese Datenbank dient dazu, einen Überblick über das Angebot des Geschäfts zu
 | 2      | E.T. the Extra-Terrestrial  | 1982             | 179   |
 | 1      | Sam& Max Hit the Road       | 1983             |       |
 
- 
+---
+
+Als nächstes: [[Blatt 3]]

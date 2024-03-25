@@ -10,7 +10,7 @@ fach: "[[DBS]]"
 
 # Aufgabe 1-1
 ## a) Welche 9 Zentralen Anforderungen an Ein Datenbanksystem Definierte Edgar Codd?
-
+ 
 - **Integration** → Verwaltung aller von Anwendung benötigten Daten 
 - **Operation** → Operation zur Speicherung, Manipulation der Daten müssen vorhanden sein 
 - **Data Dictionary** → Katalog erlaubt Zugriff auf die die Beschreibung der Daten
@@ -27,7 +27,7 @@ fach: "[[DBS]]"
 
 # Aufgabe 1-2
 
-## Betrachten Wir Die Mengen A = {a, B, c} Und Z = {1, 2, 3, 4} Und Eine Zweistellige Relation R Dazwischen. Wenn Zum Beispiel Die Elemente a ∈ A Und 2 ∈ Z in Der Relation R Stehen, Druckt Man Das Mathematisch ¨ so Aus: aR2 Oder (a, 2) ∈ R. Graphisch Kann Man Es so Veranschaulichen, Dass Man Die Elemente Der Beiden Mengen Hinzeichnet Und Zwischen a Und 2 Eine Linie Zieht:
+## Betrachten Wir Die Mengen A = {a, b, c} Und Z = {1, 2, 3, 4} Und Eine Zweistellige Relation R Dazwischen. Wenn Zum Beispiel Die Elemente a ∈ A Und 2 ∈ Z in Der Relation R Stehen, Druckt Man Das Mathematisch so Aus: aR2 Oder (a, 2) ∈ R. Graphisch Kann Man Es so Veranschaulichen, Dass Man Die Elemente Der Beiden Mengen Hinzeichnet Und Zwischen a Und 2 Eine Linie Zieht:
 
 ## Mit Dieser Veranschaulichung Sind Die Mathematischen Definitionen Praktisch Nur Bedingungen, Wie viele Linien Mit Den Elementen Verbunden Sein Müssen Oder Dürfen
 
@@ -48,3 +48,7 @@ fach: "[[DBS]]"
 ### Eine zweistellige Relation zwischen A und Z, die keine Funktion ist. (D.h. weder von A nach Z noch von Z nach A.)
 
 - $M = \{(a,1),(a,2),(b,1),(c,3) \}$
+
+---
+
+Als nächstes: [[Blatt 2]]
