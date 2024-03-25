@@ -14,7 +14,7 @@ Das Schema des Tupelkalküls (TK) stellt eine andere, jedoch ähnlich mächtige 
 
 Betrachten wir folgendes Beispiel für eine Tupelkalkül-Abfrage:
 
-$$~{TK: \  \underbrace{Schema(t)}_{\text{Variablenname}} = \underbrace{Schema(Angestellter)}_{\text{Welches Schema initial}} \ ; \  \{ \ \underbrace{[ \ t.Name \ ]}_{\text{Was zurückgegeben werden soll}} | \ \ \  \underbrace{\ t \ \in \ Angestellter}_{\text{Welches Schema final}} \ \land \ \underbrace{\ t.Gehalt \ \lt \ 2000}_{\text{Bedingung}} \}}$$
+$$\mathmbox{TK: \  \underbrace{Schema(t)}_{\text{Variablenname}} = \underbrace{Schema(Angestellter)}_{\text{Welches Schema initial}} \ ; \  \{ \ \underbrace{[ \ t.Name \ ]}_{\text{Was zurückgegeben werden soll}} | \ \ \  \underbrace{\ t \ \in \ Angestellter}_{\text{Welches Schema final}} \ \land \ \underbrace{\ t.Gehalt \ \lt \ 2000}_{\text{Bedingung}} \}}$$
 
 In diesem Beispiel kann die Tupelkalkül-Abfrage `TK` wie folgt interpretiert werden:
 
