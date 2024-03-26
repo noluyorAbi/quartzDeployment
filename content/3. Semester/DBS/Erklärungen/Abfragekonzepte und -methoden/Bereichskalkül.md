@@ -11,7 +11,7 @@ fach: "[[DBS]]"
 
 Das Schema des Bereichkalküls (BK) ist ein mächtiges Werkzeug in der Welt der Datenbanksysteme (DBS) , das für die Abfrage und Manipulation von Daten unter Verwendung von Prädikatenlogik verwendet wird. Bereichskalküle nutzen eine formale Sprache, um komplexe Abfragen in einer Art und Weise zu beschreiben, die sowohl präzise als auch flexibel ist. Im Kern erlaubt es uns, spezifische Daten aus einer großen Menge basierend auf bestimmten Bedingungen auszuwählen.
 
-$BK: \ \ \{\underbrace{na}_{\text{Was returned werden soll}}| \ \ \ \underbrace{\exists ge}_{\text{Tupel die wir checken}}: \underbrace{Angestellter(\_,na,ge,\_,\_,\_)}_{\text{Schema + Tupel die wir brauchen}} \ \land \ \underbrace{ge \ \land \ 2000}_{Bedingung} \}$
+$$~{BK: \ \ \{\underbrace{na}_{\text{Was returned werden soll}}| \ \ \ \underbrace{\exists ge}_{\text{Tupel die wir checken}}: \underbrace{Angestellter(\_,na,ge,\_,\_,\_)}_{\text{Schema + Tupel die wir brauchen}} \ \land \ \underbrace{ge \ \land \ 2000}_{Bedingung} \}}$$
 
 In diesem Beispiel repräsentiert `BK` eine Bereichskalkül-Abfrage, die folgendermaßen interpretiert werden kann:
 
@@ -20,6 +20,15 @@ In diesem Beispiel repräsentiert `BK` eine Bereichskalkül-Abfrage, die folgend
 - **Schema + Tupel, die benötigt werden:** `Angestellter(_, na, ge, _, _, _)` definiert das Schema der Angestelltentabelle, wobei die Unterstriche (`_`) Platzhalter für nicht spezifizierte Attribute sind. In diesem Kontext sind wir interessiert an den Tupeln, die Informationen über den Namen (`na`) und das Gehalt (`ge`) des Angestellten enthalten.
 - **Bedingung:** `ge > 2000` ist die Bedingung, die erfüllt sein muss. In diesem Fall suchen wir nach Angestellten, deren Gehalt (`ge`) mehr als 2000 beträgt.
 
+## Beispiel für Join-Operation im TK
+
+### b) Erstellen Sie eine Liste aller Verkaufsnummern mit Verkaufsdatum, die in den Abteilungen im 3. Stock verkauft wurden und deren Lieferant entweder aus Italien oder aus Frankreich kommt. [[Blatt 6]]
+
+$$~{\{ \text{Vnr}, \text{Vda} \ | \ \exists \text{abtnr}, \text{artnr}, \text{lnr} : \text{Verkauf}(\text{Vnr}, \text{Vda}, \text{abtnr}, \text{artnr}, \_, \_) \ \land \ \text{Abteilung}(\text{abtnr}, \_, 3, \_) \ \land \ \text{Artikel}(\text{artnr}, \_, \_, \_, \text{lnr}) \ \land \ (\text{Lieferant}(\text{lnr}, \_, 'Italien') \ \lor \ \text{Lieferant}(\text{lnr}, \_, 'Frankreich'))\}}$$
+
+*Hinzufügen durch:* 
+- Hinzufügen der Attribute in $\exists$ Klausel
+- logisches Verbinden durch $Schemaname(\_,attrr1,\_,attr2,...)$
 ## Interpretation
 
 Die oben genannte Abfrage wird also alle Namen (`na`) der Angestellten zurückgeben, für die mindestens ein Eintrag in der Angestelltentabelle existiert, dessen Gehalt (`ge`) mehr als 2000 beträgt. Es ist eine mächtige Weise, spezifische Informationen basierend auf gegebenen Kriterien abzufragen, ohne alle Details des zugrundeliegenden Datenschemas kennen zu müssen.
