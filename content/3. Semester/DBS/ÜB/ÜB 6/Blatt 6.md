@@ -63,5 +63,14 @@ $$~{Schema(ver) = Schema(Verkauf) \{ [ver.Nummer, ver.Datum] \mid ver \in Verkau
 $$~{\{ \text{Vnr}, \text{Vda} \ | \ \exists \text{abtnr}, \text{artnr}, \text{lnr} : \text{Verkauf}(\text{Vnr}, \text{Vda}, \text{abtnr}, \text{artnr}, \_, \_) \ \land \ \text{Abteilung}(\text{abtnr}, \_, 3, \_) \ \land \ \text{Artikel}(\text{artnr}, \_, \_, \_, \text{lnr}) \ \land \ (\text{Lieferant}(\text{lnr}, \_, 'Italien') \ \lor \ \text{Lieferant}(\text{lnr}, \_, 'Frankreich'))\}}$$
 
 
+### c) Bestimmen Sie fur alle Filialen in der Stadt Köln, die Nummern und Namen aller Angestellten sowie die Abteilungsnamen in denen diese Angestellten arbeiten.
+
+**TK:**
+$$
+Schema(ang)=Schema(Angestellter)\{ [ang.Nummer, ang.Name, abt.Name] \mid \exists \ ang \in \text{Angestellter} , abt \in \text{Abteilung} , fil \in \text{Filiale} \land ang.Abteilung = abt.Nummer \land abt.Filiale = fil.Nummer \land fil.Stadt = 'Koeln' \}
+$$
 
 
+### d) Bestimmen Sie die Nummern, Namen, Gehalt und Geburtsjahr aller Angestellten, die am 01.10.2023 etwas verkauft haben und keine Leiter einer Abteilung sind.
+
+### e) Bestimmen Sie die Nummern und Namen der Lieferanten, welche die Kaufhauskette mit mindestens drei unterschiedlichen Artikeln beliefern.
