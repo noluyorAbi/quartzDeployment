@@ -48,29 +48,29 @@ Hinweis: Im obigen Schema werden Fremdschlüssel durch eine Linie über dem ents
 ### a) Bestimmen Sie die Namen aller Angestellten mit einem Gehalt von weniger als 2000.
 
 **TK:**
-$$~{TK: \  \underbrace{Schema(t)}_{\text{Variablenname}} = \underbrace{Schema(Angestellter)}_{\text{aus welchem Schema}} \ ; \  \{ \ \underbrace{[ \ t.Name \ ]}_{\text{Was zurückgegeben werden soll}} | \ \ \  \underbrace{\ t \ \in \ Angestellter}_{\text{Welches Schema final}} \ \land \ \underbrace{\ t.Gehalt \ \lt \ 2000}_{\text{Bedingung}} \}}$$
+$$TK: \  \underbrace{Schema(t)}_{\text{Variablenname}} = \underbrace{Schema(Angestellter)}_{\text{aus welchem Schema}} \ ; \  \{ \ \underbrace{[ \ t.Name \ ]}_{\text{Was zurückgegeben werden soll}} | \ \ \  \underbrace{\ t \ \in \ Angestellter}_{\text{Welches Schema final}} \ \land \ \underbrace{\ t.Gehalt \ \lt \ 2000}_{\text{Bedingung}} \}$$
 
 **BK:**
-$$~{BK: \ \ \{\underbrace{na}_{\text{Was returned werden soll}}| \ \ \ \underbrace{\exists ge}_{\text{Tupel die wir checken}}: \underbrace{Angestellter(\_,na,ge,\_,\_,\_)}_{\text{Schema + Tupel die wir brauchen}} \ \land \ \underbrace{ge \ \land \ 2000}_{Bedingung} \}}$$
+$$BK: \ \ \{\underbrace{na}_{\text{Was returned werden soll}}| \ \ \ \underbrace{\exists ge}_{\text{Tupel die wir checken}}: \underbrace{Angestellter(\_,na,ge,\_,\_,\_)}_{\text{Schema + Tupel die wir brauchen}} \ \land \ \underbrace{ge \ \land \ 2000}_{Bedingung} \}$$
 
 ### b) Erstellen Sie eine Liste aller Verkaufsnummern mit Verkaufsdatum, die in den Abteilungen im 3. Stock verkauft wurden und deren Lieferant entweder aus Italien oder aus Frankreich kommt.
 
 
 **TK:**
-$$~{Schema(ver) = Schema(Verkauf) \{ [ver.Nummer, ver.Datum] \mid ver \in Verkauf \land (\exists ab \in Abteilung, art \in Artikel, l \in Lieferant) (ver.Abteilung = ab.Nummer \land ver.Artikel = art.Nummer \land art.Lieferant = l.Nummer \land ab.Stock = 3 \land (l.Land = 'Italien' \lor l.Land = 'Frankreich'))\}}$$
+$$Schema(ver) = Schema(Verkauf) \{ [ver.Nummer, ver.Datum] \mid ver \in Verkauf \land (\exists ab \in Abteilung, art \in Artikel, l \in Lieferant) (ver.Abteilung = ab.Nummer \land ver.Artikel = art.Nummer \land art.Lieferant = l.Nummer \land ab.Stock = 3 \land (l.Land = 'Italien' \lor l.Land = 'Frankreich'))\}$$
 
 **BK:**
-$$~{\{ \text{Vnr}, \text{Vda} \ | \ \exists \text{abtnr}, \text{artnr}, \text{lnr} : \text{Verkauf}(\text{Vnr}, \text{Vda}, \text{abtnr}, \text{artnr}, \_, \_) \ \land \ \text{Abteilung}(\text{abtnr}, \_, 3, \_) \ \land \ \text{Artikel}(\text{artnr}, \_, \_, \_, \text{lnr}) \ \land \ (\text{Lieferant}(\text{lnr}, \_, 'Italien') \ \lor \ \text{Lieferant}(\text{lnr}, \_, 'Frankreich'))\}}$$
+$$\{ \text{Vnr}, \text{Vda} \ | \ \exists \text{abtnr}, \text{artnr}, \text{lnr} : \text{Verkauf}(\text{Vnr}, \text{Vda}, \text{abtnr}, \text{artnr}, \_, \_) \ \land \ \text{Abteilung}(\text{abtnr}, \_, 3, \_) \ \land \ \text{Artikel}(\text{artnr}, \_, \_, \_, \text{lnr}) \ \land \ (\text{Lieferant}(\text{lnr}, \_, 'Italien') \ \lor \ \text{Lieferant}(\text{lnr}, \_, 'Frankreich'))\}$$
 
 
 ### c) Bestimmen Sie fur alle Filialen in der Stadt Köln, die Nummern und Namen aller Angestellten sowie die Abteilungsnamen in denen diese Angestellten arbeiten.
 
 **TK:**
-$$
-Schema(ang)=Schema(Angestellter)\{ [ang.Nummer, ang.Name, abt.Name] \mid \exists \ ang \in \text{Angestellter} , abt \in \text{Abteilung} , fil \in \text{Filiale} \land ang.Abteilung = abt.Nummer \land abt.Filiale = fil.Nummer \land fil.Stadt = 'Koeln' \}
-$$
+$$Schema(ang)=Schema(Angestellter)\{ [ang.Nummer, ang.Name, abt.Name] \mid \exists \ ang \in \text{Angestellter} , abt \in \text{Abteilung} , fil \in \text{Filiale} \land ang.Abteilung = abt.Nummer \land abt.Filiale = fil.Nummer \land fil.Stadt = 'Koeln' \}$$
 
 
 ### d) Bestimmen Sie die Nummern, Namen, Gehalt und Geburtsjahr aller Angestellten, die am 01.10.2023 etwas verkauft haben und keine Leiter einer Abteilung sind.
 
 ### e) Bestimmen Sie die Nummern und Namen der Lieferanten, welche die Kaufhauskette mit mindestens drei unterschiedlichen Artikeln beliefern.
+
+$$Schema(r) = Schema (R); \{\ [r.A,r.B,r.C,s.D,s.E,s.F] \mid r \in R \land \exists s \in S  \ \}$$
