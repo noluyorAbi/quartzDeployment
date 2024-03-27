@@ -6,6 +6,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 ---
+
 Gegeben sei die folgende relationale "Geschäftsdatenbank" einer Kaufhauskette. Es kann davon ausgegangen werden, dass eine Abteilung nur von einem Angestellten geleitet wird, welcher selbst in dieser Abteilung tätig ist:
 
 - **Angestellter** (Nummer, Name, Gehalt, Abteilung, Geburtsjahr, Einstellungsdatum)
@@ -42,7 +43,7 @@ Hinweis: Im obigen Schema werden Fremdschlüssel durch eine Linie über dem ents
 
 **Aufgabenstellung:** Formulieren Sie Anfragen jeweils im Tupel- und Bereichskalkül. Bei Anfragen, die den Tupelkalkül verwenden, geben Sie zusätzlich das Schema aller freien Variablen an.
 
-# Needed Know-How 
+# Needed Know-How
 - [[Tupelkalkül]]
 - [[Bereichskalkül]]
 ### a) Bestimmen Sie die Namen aller Angestellten mit einem Gehalt von weniger als 2000.
@@ -74,3 +75,45 @@ $$Schema(ang)=Schema(Angestellter)\{ [ang.Nummer, ang.Name, abt.Name] \mid \exis
 ### e) Bestimmen Sie die Nummern und Namen der Lieferanten, welche die Kaufhauskette mit mindestens drei unterschiedlichen Artikeln beliefern.
 
 $$Schema(r) = Schema (R); \{\ [r.A,r.B,r.C,s.D,s.E,s.F] \mid r \in R \land \exists s \in S  \ \}$$
+
+
+# Aufgabe 6-2 **Tupel- und Bereichskalkül**
+
+*Zeigen Sie, wie man die folgenden Operationen der relationale Algebra sowohl im Tupel- als auch im Bereichskalkül darstellen kann. Für Anfragen im Tupelkalkül soll dar über hinaus das Schema aller freien Variablen angegeben werden.*
+
+```text
+Lösungen müssen noch eingetragen werden, leider keine Zeit für gehabt
+```
+
+### a) σA=x(R(A, B, C))
+#### Lösung im Tupelkalkül:
+
+#### Lösung im Bereichskalkül:
+
+### b) ΠA,B(R(A, B, C))
+#### Lösung im Tupelkalkül:
+
+#### Lösung im Bereichskalkül:
+
+
+### c) R(A, B, C) ▷◁ S(C, D, E)
+#### Lösung im Tupelkalkül:
+
+#### Lösung im Bereichskalkül:
+
+
+### d) R(A, B, C) ∪ S(A, B, C)
+#### Lösung im Tupelkalkül:
+
+#### Lösung im Bereichskalkül:
+
+
+### e) R(A, B, C) ∩ S(A, B, C)
+#### Lösung im Tupelkalkül:
+
+#### Lösung im Bereichskalkül:
+
+
+### f) R(A, B, C) − S(A, B, C)
+
+### g) R(A, B, C) × S(D, E, F)
