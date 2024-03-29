@@ -21,6 +21,25 @@ Gegeben seien die Relationen `Kunde`, `Personal`, `Verkauf`, `Inventar` und `Auf
 
 ### a) Finden Sie die Nummern und Bezeichnungen aller Artikel, deren Preis entweder dem Gehalt von Roswita Hartinger oder Margot Winter entspricht. (Zusatzanforderung oben beachten!)
 
+**JOIN:**
+```SQL
+SELECT DISTINCT art_nr,art_bez FROM Inventar JOIN Personal ON gehalt=preis
+WHERE  ((vorname = "Roswita" AND nachname = "Hartinger") OR (vorname = "Margot" AND nachname = "Winter")) 
+```
+
+**UNTERABFRAGE**
+```SQL
+SELECT DISTINCT * FROM Inventar I
+WHERE (
+preis = (
+SELECT DISTINCT gehalt FROM Personal as RH
+WHERE vorname = "Roswita" AND nachname = "Hartinger" )
+OR
+preis =(
+SELECT DISTINCT gehalt FROM Personal as RH
+WHERE vorname = "Margot" AND nachname = "Winter" )
+)
+```
 ### b) Geben Sie alle Kundennamen an, die am 24.07.2023 etwas von einem Mitarbeiter mit dem Einsatzort Hamburg gekauft haben. (Zusatzanforderung oben beachten!)
 
 ### c) Erzeugen Sie eine Liste aller Mitarbeiter Vornamen, Nachnamen und Gehalt und zwar absteigend sortiert nach Gehalt. Bei gleichem Gehalt wird alphabetisch aufsteigend zunächst nach Nachnamen und dann nach Vornamen sortiert.

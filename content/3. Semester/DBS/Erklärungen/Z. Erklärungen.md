@@ -19,6 +19,7 @@ tags:
 - [[Relationale Algebra]]
 - [[Bereichskalkül]]
 - [[Tupelkalkül]]
+- [[Erweiterte Abfragen in SQL]]
 
 
 
