@@ -58,3 +58,29 @@ fach: "[[DBS]]"
 - Mit `GROUP BY attribute_1 [, attribute_2, …]` können Ergebnisse in Gruppen sortiert werden, um Aggregatfunktionen wie `AVG()`, `COUNT()`, `MAX()`, `MIN()`, und `SUM()` anzuwenden.
 - Wichtig: Alle in der `SELECT`-Klausel aufgeführten Attribute, die nicht Teil einer Aggregatfunktion sind, müssen in der `GROUP BY`-Klausel enthalten sein.
 - Die `HAVING`-Klausel erlaubt es, Bedingungen auf die Gruppen anzuwenden, im Gegensatz zur `WHERE`-Klausel, die vor der Gruppierung angewendet wird.
+
+
+# Reihenfolge 
+
+In SQL bestimmt die Reihenfolge der Klauseln, wie die Abfrage verarbeitet wird. Dies ist wichtig, um die gewünschten Ergebnisse effektiv zu erhalten und Fehler zu vermeiden. Die Standardreihenfolge der wichtigsten SQL-Klauseln in einer SELECT-Abfrage ist wie folgt:
+
+1. **SELECT**: Gibt die Spalten oder Berechnungen an, die zurückgegeben werden sollen.
+2. **FROM**: Gibt die Tabellen an, aus denen die Daten ausgewählt werden.
+3. **JOIN** (falls vorhanden): Spezifiziert die Tabellen, die mit der Haupttabelle verbunden werden sollen, und die Bedingungen für die Verbindung.
+4. **WHERE**: Filtert Zeilen basierend auf einer spezifischen Bedingung.
+5. **GROUP BY** (falls vorhanden): Gruppiert die resultierenden Zeilen auf Basis einer oder mehrerer Spalten. Wird oft in Verbindung mit Aggregatfunktionen verwendet.
+6. **HAVING** (falls vorhanden): Filtert Gruppen basierend auf einer spezifischen Bedingung. Wird nur verwendet, wenn auch `GROUP BY` verwendet wird.
+7. **SELECT** (erneut, aber diesmal mit Aggregatfunktionen, falls `GROUP BY` verwendet wird): In diesem Schritt können Aggregatfunktionen wie `SUM()`, `AVG()`, `MAX()`, usw. angewendet werden, falls Gruppierungen vorgenommen wurden.
+8. **ORDER BY**: Sortiert die Ergebnisse der Abfrage in aufsteigender oder absteigender Reihenfolge basierend auf einer oder mehreren Spalten.
+9. **LIMIT** (oder in einigen Datenbanksystemen `FETCH FIRST`/`TOP`): Begrenzt die Anzahl der zurückgegebenen Zeilen.
+
+*Beispiel:*
+```sql
+SELECT Kategorie, AVG(Preis) AS Durchschnittspreis
+FROM Verkaeufe
+GROUP BY Kategorie
+HAVING AVG(Preis) > 100
+ORDER BY Durchschnittspreis DESC;
+```
+
+Es ist wichtig zu beachten, dass nicht alle diese Klauseln in jeder Abfrage vorhanden sein müssen, aber wenn sie verwendet werden, sollte ihre Reihenfolge der oben genannten Liste entsprechen, um Syntaxfehler zu vermeiden.
