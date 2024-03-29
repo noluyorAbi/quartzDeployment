@@ -168,3 +168,5 @@ WHERE NOT EXISTS (
 #### Funktionsweise:
 
 Die Anfrage ermittelt Angestellte, die an jeden Kunden in Landshut mindestens einmal verkauft haben, indem sie sicherstellt, dass es keinen Kunden aus Landshut gibt, für den nicht mindestens ein Verkauf durch den Angestellten getätigt wurde. Nur wenn für einen Angestellten keine solche Ausnahme gefunden wird, wird er in das Ergebnis aufgenommen.
+
+Als nächstes: [[Blatt 8]]

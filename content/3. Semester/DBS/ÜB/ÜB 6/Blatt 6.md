@@ -115,5 +115,14 @@ Lösungen müssen noch eingetragen werden, leider keine Zeit für gehabt
 
 
 ### f) R(A, B, C) − S(A, B, C)
+#### Lösung im Tupelkalkül:
+
+#### Lösung im Bereichskalkül:
 
 ### g) R(A, B, C) × S(D, E, F)
+#### Lösung im Tupelkalkül:
+
+#### Lösung im Bereichskalkül:
+
+
+Als nächstes: [[Blatt 7]]
