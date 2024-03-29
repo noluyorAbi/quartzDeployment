@@ -40,7 +40,7 @@ fach: "[[DBS]]"
 - Syntax: `WHERE ausdruck 𝜃 ALL (SELECT … FROM …)`
 - Die Bedingung muss für alle Werte der Unterabfrage zutreffen. Zum Beispiel bedeutet `< ALL`, dass der Ausdruck kleiner als das kleinste Ergebnis der Unterabfrage sein muss.
 
-## Existenzquantor simulieren
+## Existenzquantor simulieren / Allquantor
 
 - Syntax: `WHERE [NOT] EXISTS (SELECT … FROM …)`
 - Diese Konstruktion prüft, ob die Unterabfrage Ergebnisse liefert oder nicht. Es ist eine direkte Umsetzung des Existenzquantors, oft genutzt, um Zusammenhänge zwischen verschiedenen Tabellen auszudrücken.

@@ -115,3 +115,56 @@ WHERE K.ort = 'Stuttgart'
 GROUP BY A.art_nr
 HAVING COUNT(DISTINCT K.kund_nr) >= 2;
 ```
+
+---
+
+# Aufgabe 7-2 **Anfragen in SQL** [[Erweiterte Abfragen in SQL]]
+
+### a) Finden Sie die Nummern und Namen aller Kunden, die noch nie etwas gekauft haben.
+
+```sql
+SELECT * FROM Kunde
+WHERE kund_nr NOT IN (SELECT kund_nr FROM Verkauf)
+```
+
+### b) Finden Sie die Nummern und Nachnamen aller Angestellten (Personal), welche allen Kunden mit Wohnsitz Landshut bereits etwas verkauft haben
+
+Die Aufgabe besteht darin, die Nummern und Nachnamen aller Angestellten (Tabelle `Personal`) zu finden, die allen Kunden mit Wohnsitz in Landshut (Tabelle `Kunde`) bereits etwas verkauft haben.
+
+Die Lösung verwendet eine SQL-Anfrage mit einer `NOT EXISTS`-Klausel, die eine verschachtelte Unterabfrage beinhaltet:
+
+```sql
+SELECT P.pers_nr, P.nachname 
+FROM Personal P
+WHERE NOT EXISTS (
+    SELECT * FROM Kunde K
+    WHERE K.ort = 'Landshut'
+    AND NOT EXISTS (
+        SELECT * FROM Verkauf V
+        WHERE V.pers_nr = P.pers_nr 
+        AND V.kund_nr = K.kund_nr
+    )
+);
+```
+
+#### Erklärung der SQL-Anfrage:
+
+- `NOT EXISTS` = `FOR ALL` $(\ \forall \ )$ [[Erweiterte Abfragen in SQL#Existenzquantor simulieren / Allquantor|Allquantor in SQL]]
+
+- In SQL werden `NOT EXISTS`-Unterabfragen typischerweise von innen nach außen ausgewertet:
+
+- `SELECT P.pers_nr, P.nachname`: Dies wählt die Mitarbeiter-Nummer (`pers_nr`) und den Nachnamen (`nachname`) aus der Tabelle `Personal`.
+
+- `FROM Personal P`: Die Daten werden aus der Tabelle `Personal` abgerufen, wobei der Alias `P` für die Tabelle verwendet wird.
+
+- `WHERE NOT EXISTS ( ... )`: Diese Klausel wird verwendet, um nur die Angestellten auszuwählen, für die die folgende Bedingung zutrifft: Es gibt keinen Kunden aus Landshut, dem sie nicht etwas verkauft haben. [[Erweiterte Abfragen in SQL#Existenzquantor simulieren / Allquantor|Allquantor in SQL]]
+
+  - `SELECT * FROM Kunde K WHERE K.ort = 'Landshut'`: Innerhalb der `NOT EXISTS`-Klausel wählt diese Unterabfrage alle Kunden aus Landshut aus.
+
+  - `AND NOT EXISTS ( ... )`: Diese Klausel prüft, ob es für den jeweiligen Kunden aus der inneren Abfrage keinen Verkaufseintrag gibt, der dem aktuellen Angestellten (`P.pers_nr`) zugeordnet ist.
+
+    - `SELECT * FROM Verkauf V WHERE V.pers_nr = P.pers_nr AND V.kund_nr = K.kund_nr`: Diese Unterabfrage überprüft, ob es Verkaufsdatensätze gibt, die den Kunden (`K.kund_nr`) mit dem Angestellten (`P.pers_nr`) verbinden.
+
+#### Funktionsweise:
+
+Die Anfrage ermittelt Angestellte, die an jeden Kunden in Landshut mindestens einmal verkauft haben, indem sie sicherstellt, dass es keinen Kunden aus Landshut gibt, für den nicht mindestens ein Verkauf durch den Angestellten getätigt wurde. Nur wenn für einen Angestellten keine solche Ausnahme gefunden wird, wird er in das Ergebnis aufgenommen.
