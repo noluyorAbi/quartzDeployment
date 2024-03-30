@@ -33,7 +33,7 @@ const defaultOptions = {
       return -1
     }
   },
-  filterFn: (node) => node.name !== "tags",
+  filterFn: (node) => node.name !== "tags" && node.name !=="The-value-of-the-cloak-is-known-in-the-rain.", // "The-value-of-the-cloak-is-known-in-the-rain." will be excluded from the explorer view.
   order: ["filter", "map", "sort"],
 } satisfies Options
 
