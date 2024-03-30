@@ -14,14 +14,14 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <hr />
-        <a>The value of the cloak is known in the rain.</a>
+        <p>The value of the cloak is known in the rain.</p>
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://github.com/noluyorAbi">noluyorAbi</a> © {year}
           <br />
-          <span>
+          {/* <span>
             Made with<a href="https://github.com/jackyzha0/quartz"> Quartz v{version}</a>
-          </span>
+          </span> */}
         </p>
         <a href="mailto:contact@myuninotes.com">contact@myuninotes.com</a>
       </footer>
