@@ -6,4 +6,4 @@
  -  Schedules
 
 ## [[Übungsblätter]]
-## [[Z. Erklärungen |Erklärungen]]
+## [[Verzeichnis-Erklärungen|Verzeichnis-Erklärungen]]

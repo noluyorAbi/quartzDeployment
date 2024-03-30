@@ -6,7 +6,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 ---
-# Aufgabe 8-1 **Anfragen in SQL** [[Erweiterte Abfragen in SQL]]
+# Aufgabe 8-1 **Anfragen in SQL** [[Aggregatfunktionen in SQL]]
 
 Gegeben seien die Relationen `Professoren`, `Personal`, `Studenten`, `Vorlesungen`, `Voraussetzungen`, `hoeren` und `Pruefungen` als Datenmodell für eine Universitätsdatenbank:
 
@@ -21,10 +21,20 @@ Formulieren Sie folgende Anfragen für das obige Datenbankschema in der Datenban
 
 Hinweis: Am Ende des Übungsblattes finden Sie zum Verständnis eine passende Beispielausprägung des Relationenschemas. Achten Sie darauf, dass Ihre Anfrage für jede mögliche Ausprägung der Datenbank das richtige Ergebnis liefert; nicht nur für die gegebene Beispielausprägung. Darüber Hinaus finden Sie eine Beispielausprägung auch in der SQL-Schnittstelle.
 
-### a) Bestimmen Sie für jede Vorlesung (Anzuzeigen: Nummer und Titel) die Durchschnittsnote (gerundet auf drei Stellen) über alle in dem Fach stattgefundenen Prüfungen.
+### a) Bestimmen Sie für jede Vorlesung (Anzuzeigen: Nummer und Titel) die Durchschnittsnote (gerundet auf drei Stellen) über alle in dem Fach stattgefundenen Prüfungen. [[Aggregatfunktionen in SQL#AVG()]]
 
-Zum Runden können Sie die Funktion `ROUND` benutzen. Beispielsweise wird das Ergebnis der Berechnung in folgender Anfrage auf drei Nachkommastellen gerundet:
+*Zum Runden können Sie die Funktion `ROUND` benutzen. Beispielsweise wird das Ergebnis der Berechnung in folgender Anfrage auf drei Nachkommastellen gerundet:*
 
 ```sql
 SELECT ROUND(menge*gewicht / 1000,3) FROM LTP NATURAL JOIN T
 ```
+
+```sql
+SELECT vorlNr,titel,ROUND(AVG(note),3) AS Durchschnittsnote FROM Pruefungen 
+NATURAL JOIN Vorlesungen
+GROUP BY titel,vorlNr 
+```
+
+### b) Bestimmen Sie Personalnummer und Namen eines jeden Professors, zusammen mit der Anzahl der unterschiedlichen Vorlesungen, die er hält. Professoren ohne Vorlesung sollen mit einer Vorlesungsanzahl von 0 angegeben werden.
+
+*Sortieren Sie das Ergebnis absteigend nach der Anzahl der Vorlesungen.*
