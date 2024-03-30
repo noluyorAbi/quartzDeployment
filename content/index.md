@@ -10,7 +10,7 @@ description: A streamlined platform offering comprehensive computer science stud
 # Semester
 
 - [[3. Semester]]
-
+  
 ---
 
 ### About This Site

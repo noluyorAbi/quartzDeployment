@@ -14,7 +14,7 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <hr />
-        <p>The value of the cloak is known in the rain.</p>
+        <a href={"/The-value-of-the-cloak-is-known-in-the-rain."}>The value of the cloak is known in the rain.</a>
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://github.com/noluyorAbi">noluyorAbi</a> © {year}
