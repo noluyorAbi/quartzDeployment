@@ -41,11 +41,16 @@ ol,
 ul,
 .katex,
 .math {
-  color: var(--darkgray);
-  fill: var(--darkgray);
-  overflow-wrap: none; // davor anywhere
-  hyphens: auto;
+  word-break: normal;
+  white-space: nowrap;
+  overflow-x: auto; /* Fügt einen horizontalen Scrollbalken hinzu, falls der Inhalt überläuft */
 }
+
+/*   color: var(--darkgray);
+  fill: var(--darkgray);
+  overflow-wrap: anywhere;
+  hyphens: auto;
+ */
 
 .math {
   &.math-display {
