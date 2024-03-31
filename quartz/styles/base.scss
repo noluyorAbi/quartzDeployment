@@ -41,22 +41,31 @@ ol,
 ul,
 .katex,
 .math {
-  word-break: normal;
-  white-space: nowrap;
-  overflow-x: auto; /* Fügt einen horizontalen Scrollbalken hinzu, falls der Inhalt überläuft */
-}
-
-/*   color: var(--darkgray);
+  color: var(--darkgray);
   fill: var(--darkgray);
   overflow-wrap: anywhere;
   hyphens: auto;
- */
+}
+
+/* .math {
+  &.math-display {
+    text-align: center;
+  }
+} 
+altes
+*/
 
 .math {
+  // Spezifische Anpassungen für LaTeX-Elemente
+  overflow-wrap: normal;
+  white-space: nowrap;
+  hyphens: none;
+
   &.math-display {
     text-align: center;
   }
 }
+
 
 strong {
   font-weight: $semiBoldWeight;
