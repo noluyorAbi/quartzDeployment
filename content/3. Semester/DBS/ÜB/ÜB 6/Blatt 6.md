@@ -49,7 +49,7 @@ Hinweis: Im obigen Schema werden Fremdschlüssel durch eine Linie über dem ents
 ### a) Bestimmen Sie die Namen aller Angestellten mit einem Gehalt von weniger als 2000.
 
 **TK:**
-$$TK: \  \underbrace{Schema(t)}_{\text{Variablenname}} = \underbrace{Schema(Angestellter)}_{\text{aus welchem Schema}} \ ; \  \{ \ \underbrace{[ \ t.Name \ ]}_{\text{Was zurückgegeben werden soll}} | \ \ \  \underbrace{\ t \ \in \ Angestellter}_{\text{Welches Schema final}} \ \land \ \underbrace{\ t.Gehalt \ \lt \ 2000}_{\text{Bedingung}} \}$$
+$$~(TK: \  \underbrace{Schema(t)}_{\text{Variablenname}} = \underbrace{Schema(Angestellter)}_{\text{aus welchem Schema}} \ ; \  \{ \ \underbrace{[ \ t.Name \ ]}_{\text{Was zurückgegeben werden soll}} | \ \ \  \underbrace{\ t \ \in \ Angestellter}_{\text{Welches Schema final}} \ \land \ \underbrace{\ t.Gehalt \ \lt \ 2000}_{\text{Bedingung}} \})$$
 
 **BK:**
 $$BK: \ \ \{\underbrace{na}_{\text{Was returned werden soll}}| \ \ \ \underbrace{\exists ge}_{\text{Tupel die wir checken}}: \underbrace{Angestellter(\_,na,ge,\_,\_,\_)}_{\text{Schema + Tupel die wir brauchen}} \ \land \ \underbrace{ge \ \land \ 2000}_{Bedingung} \}$$
@@ -115,6 +115,7 @@ Lösungen müssen noch eingetragen werden, leider keine Zeit für gehabt
 
 
 ### f) R(A, B, C) − S(A, B, C)
+
 #### Lösung im Tupelkalkül:
 
 #### Lösung im Bereichskalkül:
