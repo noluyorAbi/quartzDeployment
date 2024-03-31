@@ -91,3 +91,12 @@ HAVING COUNT(*) >= 2
 - **`GROUP BY persNr, name`**: Gruppiert nach Professor.
 - **`HAVING COUNT(*) >= 2`**: Filtert Professoren mit mindestens zwei zugehörigen Studenten.
 
+
+### e) Bestimmen Sie für jede Vorlesung (anzuzeigen: Nummer und Titel), welche mindestens eine andere Vorlesung voraussetzt, die prozentualen Anteile (gerundet auf zwei Nachkommastellen) der teilnehmenden Studenten pro Semester. Dabei interessieren uns nur Vorlesungen, die von Studenten aus unterschiedlichen Semestern gehört werden. Andere Vorlesungen sollen nicht in der Ergebnistabelle auftauchen.
+
+*Ein Beispiel: Die Vorlesung Softwaretechnik setzt eine andere Vorlesung voraus und wird von insgesamt 6 Studenten gehört. Davon stammt ein Student aus dem fünften Semester. Also macht dieser Fünftsemestler ein Sechstel aller Hörer aus. Das entsprechende Ergebnistupel ist somit (6, 'Softwaretechnik', 5, 16,67).*
+
+*Das Ergebnis soll sortiert werden: alphabetisch nach dem Vorlesungstitel, dann absteigend nach dem prozentualen Anteil, bei gleichem Anteil aufsteigend nach dem Semester.* 
+
+*Tipp: Erstellen Sie passende Views.*
+
