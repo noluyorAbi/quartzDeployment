@@ -120,3 +120,5 @@ HAVING AVG(gehalt) > 5000;
 ```
 
 Aggregatfunktionen sind ein mächtiges Werkzeug in SQL, um komplexe Datenabfragen effizient und effektiv zu bearbeiten, indem sie detaillierte Daten in nützliche Informationen und Einsichten umwandeln.
+
+# [[Erweiterte Abfragen in SQL#Reihenfolge|Reihenfolge der Keywords]]

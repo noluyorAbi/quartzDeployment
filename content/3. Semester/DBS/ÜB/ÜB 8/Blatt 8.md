@@ -28,7 +28,8 @@ Hinweis: Am Ende des Übungsblattes finden Sie zum Verständnis eine passende Be
 ```sql
 SELECT ROUND(menge*gewicht / 1000,3) FROM LTP NATURAL JOIN T
 ```
-
+-
+Lösung:
 ```sql
 SELECT vorlNr,titel,ROUND(AVG(note),3) AS Durchschnittsnote FROM Pruefungen 
 NATURAL JOIN Vorlesungen
@@ -38,3 +39,21 @@ GROUP BY titel,vorlNr
 ### b) Bestimmen Sie Personalnummer und Namen eines jeden Professors, zusammen mit der Anzahl der unterschiedlichen Vorlesungen, die er hält. Professoren ohne Vorlesung sollen mit einer Vorlesungsanzahl von 0 angegeben werden.
 
 *Sortieren Sie das Ergebnis absteigend nach der Anzahl der Vorlesungen.*
+
+```sql
+SELECT persNr, name, COUNT(vorlNr) AS Anzahl_Vorlesungen FROM Professoren 
+LEFT JOIN Vorlesungen ON persNr = gelesenVon 
+GROUP BY persNr, name 
+ORDER BY Anzahl DESC
+```
+
+### c) Bestimmen Sie für jeden Studenten (Anzuzeigen: Matrikelnummer und Name), wie viele andere Studenten aus einem höheren Semester dieser kennt (d.h. beide besuchen mindestens eine Vorlesung gemeinsam). Zeigen Sie nur Studenten an, die mehr als zwei andere Studenten aus einem höheren Semester kennen.
+
+```sql
+SELECT s1.matrNr, s1.name, COUNT(DISTINCT s2.matrNr) AS Anzahl_Studenten_Aus_Hoeheren_Semestern FROM Studenten s1
+JOIN hoeren h1 ON s1.matrNr = h1.matrNr
+JOIN  hoeren h2 ON h1.vorlNr = h2.vorlNr AND h1.matrNr != h2.matrNr
+JOIN Studenten s2 ON h2.matrNr = s2.matrNr AND s2.semester > s1.semester
+GROUP BY s1.matrNr, s1.name
+HAVING COUNT(DISTINCT s2.matrNr) > 2;
+```
