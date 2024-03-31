@@ -55,15 +55,10 @@ altes
 */
 
 .math {
-  // Spezifische Anpassungen für LaTeX-Elemente
-  overflow-wrap: normal;
-  white-space: nowrap;
-  hyphens: none;
-  overflow-x: auto;
-  &.math-display {
-    text-align: center;
-    overflow-x: auto;
-  }
+  overflow-wrap: normal !important;
+  white-space: nowrap !important;
+  hyphens: none !important;
+  overflow-x: auto !important;
 }
 
 
