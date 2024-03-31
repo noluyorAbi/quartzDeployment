@@ -47,7 +47,7 @@ GROUP BY persNr, name
 ORDER BY Anzahl DESC
 ```
 
-### c) Bestimmen Sie für jeden Studenten (Anzuzeigen: Matrikelnummer und Name), wie viele andere Studenten aus einem höheren Semester dieser kennt (d.h. beide besuchen mindestens eine Vorlesung gemeinsam). Zeigen Sie nur Studenten an, die mehr als zwei andere Studenten aus einem höheren Semester kennen.
+### <span style="color: red">!!!</span> c) Bestimmen Sie für jeden Studenten (Anzuzeigen: Matrikelnummer und Name), wie viele andere Studenten aus einem höheren Semester dieser kennt (d.h. beide besuchen mindestens eine Vorlesung gemeinsam). Zeigen Sie nur Studenten an, die mehr als zwei andere Studenten aus einem höheren Semester kennen.
 
 ```sql
 SELECT s1.matrNr, s1.name, COUNT(DISTINCT s2.matrNr) AS Anzahl_Studenten_Aus_Hoeheren_Semestern FROM Studenten s1
@@ -57,3 +57,37 @@ JOIN Studenten s2 ON h2.matrNr = s2.matrNr AND s2.semester > s1.semester
 GROUP BY s1.matrNr, s1.name
 HAVING COUNT(DISTINCT s2.matrNr) > 2;
 ```
+
+### <span style="color: red">!!!</span> d) Bestimmen Sie die Professoren (Anzuzeigen: Personalnummer und Name), für die mindestens zwei Studenten mindestens drei Vorlesungen des jeweiligen Professors hören 
+
+*Tipp: Erstellen Sie passende Views, um die Anfrage übersichtlicher zu gestalten. Benutzen Sie hierzu die Syntax aus der Vorlesung!*
+
+```sql
+CREATE VIEW AZ AS
+(
+SELECT matrNr, gelesenVon, COUNT(*) as anz
+FROM Vorlesungen NATURAL JOIN hoeren
+GROUP BY matrNr, gelesenVon
+HAVING COUNT(*) >= 3
+)
+```
+
+```sql
+SELECT persNr, name
+FROM Professoren JOIN AZ ON persNr = 
+GROUP BY persNr, namegelesenVon
+HAVING COUNT(*) >= 2
+```
+
+#### Erklärung 
+- **`CREATE VIEW AZ`**: Erstellt eine temporäre Tabelle zur Vereinfachung komplexer Abfragen.
+- **`SELECT matrNr, gelesenVon, COUNT(*) as anz`**: Wählt Studenten-ID, Professor-ID und zählt Vorlesungen.
+- **`FROM Vorlesungen NATURAL JOIN hoeren`**: Verbindet Vorlesungen mit gehörten Vorlesungen auf Basis gleicher Spalten.
+- **`GROUP BY matrNr, gelesenVon`**: Gruppiert Ergebnisse nach Student und Professor.
+- **`HAVING COUNT(*) >= 3`**: Berücksichtigt nur Gruppen mit mindestens drei Vorlesungen.
+
+- **`SELECT persNr, name`**: Wählt Professoren-ID und -Namen.
+- **`FROM Professoren JOIN AZ ON persNr = gelesenVon`**: Verknüpft Professoren mit dem View, basierend auf ID.
+- **`GROUP BY persNr, name`**: Gruppiert nach Professor.
+- **`HAVING COUNT(*) >= 2`**: Filtert Professoren mit mindestens zwei zugehörigen Studenten.
+
