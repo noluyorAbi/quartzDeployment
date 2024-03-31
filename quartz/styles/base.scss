@@ -43,24 +43,18 @@ ul,
 .math {
   color: var(--darkgray);
   fill: var(--darkgray);
+  overflow-wrap: anywhere;
   hyphens: auto;
 }
 
-/* .math {
+.math {
   &.math-display {
     text-align: center;
+    word-break: normal;
+    white-space: nowrap;
+    overflow-x: auto;
   }
-} 
-altes
-*/
-
-.math {
-  overflow-wrap: normal !important;
-  white-space: nowrap !important;
-  hyphens: none !important;
-  overflow-x: auto !important;
 }
-
 
 strong {
   font-weight: $semiBoldWeight;
