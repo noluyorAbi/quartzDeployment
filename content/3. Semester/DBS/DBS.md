@@ -1,4 +1,4 @@
-#DBS 
+
 ## Themen
  -  Bereichskalkül
  -  Tupelkalkül
