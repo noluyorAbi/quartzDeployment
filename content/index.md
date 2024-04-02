@@ -7,7 +7,7 @@ description: "A brief description of your page."
 
 # Semester
 
-- [[Uni2/Semester/3.Semester/3.Semester]]
+- [[Uni2/Semester/3.Semester/3.Semester.md]]
 - [[4.Semester]]
 
 
