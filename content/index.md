@@ -7,7 +7,7 @@ description: "A brief description of your page."
 
 # Semester
 
-- [[3.Semester]]
+- [[3. Semester]]
 - [[4.Semester]]
 
 ### About This Site
