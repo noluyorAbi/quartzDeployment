@@ -36,7 +36,11 @@ export default (() => {
         <meta property="og:width" content="1200" />
         <meta property="og:height" content="675" />
         <link rel="icon" href={iconPath} />
-        <meta name="description" content={description} />
+        {/* <meta name="description" content={description} /> */}
+        <meta
+          name="description"
+          content="Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across all disciplines. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!"
+        />
         <meta name="generator" content="Quartz" />
         {css.map((href) => (
           <link key={href} href={href} rel="stylesheet" type="text/css" spa-preserve />
