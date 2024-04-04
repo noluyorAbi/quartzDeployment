@@ -4,7 +4,7 @@ last modified: 2024-03-11 20:37
 fach: "[[DBS]]"
 tags: [DBS]
 date created: Monday, 11. March 2024, 20:37
-date modified: Thursday, 4. April 2024, 15:24
+date modified: Thursday, 4. April 2024, 18:23
 ---
 
 # Verzeichnis
@@ -48,4 +48,4 @@ date modified: Thursday, 4. April 2024, 15:24
 - [[Bereichskalkül]]
 - [[Tupelkalkül]]
 
-Dieses Verzeichnis gruppiert Themen in allgemeinere Kategorien, wobei die theoretischen Grundlagen, die Datenintegrität, die Abfragesprachen und die relationalen Konzepte voneinander getrennt sind. Innerhalb der SQL-Abfragekonzepte ist der Cross Join als spezifisches Thema aufgeführt, was darauf hinweist, dass es Teil des größeren Bereichs der SQL-Abfrageoperationen ist.
+Dieses Verzeichnis gruppiert Themen in allgemeinere Kategorien, wobei die theoretischen Grundlagen, die Datenintegrität, die Abfragesprachen und die relationalen Konzepte voneinander getrennt sind. Innerhalb der SQL-Abfragekonzepte ist der Cross Join also spezifisches Thema aufgeführt, was darauf hinweist, dass es Teil des größeren Bereichs der SQL-Abfrageoperationen ist.

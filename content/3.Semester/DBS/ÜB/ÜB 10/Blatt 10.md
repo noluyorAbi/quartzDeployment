@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Thursday, 4. April 2024, 15:04
-date modified: Thursday, 4. April 2024, 18:22
+date modified: Thursday, 4. April 2024, 18:29
 Thema:
   - "[[Normalformen]]"
   - "[[Anomalien in Datenbanksystemen]]"
@@ -68,10 +68,11 @@ Die verschiedenen Modelle werden von Huber fortlaufend nummeriert (`mnr`). Ein b
 
 ### b) Überführen Sie die Relation in die 2.NF und geben Sie die so entstehenden Relationen an.
 
-1. Relation: `Hersteller` 
+1. Relation: `Modell` 
 	- Erstelle eine neue Relation für jeden partiellen Schlüssel mit seinen abhängigen Attribute
 	- **mnr → hnr, hersteller, typ, ps**
-$$Hersteller(\underline{mnr},hersteller, typ, ps)$$
+	- **hnr → hersteller**
+$$Modell(\underline{mnr},hnr,hersteller, typ, ps)$$
 2. Relation: `Fahrzeug`
 	- Attribute, die voll funktional vom (ursprünglichen) Schlüssel abhängig sidn, bleiben in der ursprünglichen Relation
 	- **mnr, fznr → baujahr, km-stand, n-preis, h-preis, ek-preis**
@@ -87,3 +88,4 @@ $$Fahrzeug(\underline{mnr},\underline{fznr},baujahr,km-stand, n-preis, h-preis, 
 **3.NF besagt**
 - *Für alle nicht-trivialen funktionalen Abhängigkeiten 𝑋 → 𝑌 muss 𝑋 einen Schlüsselkandidaten enthalten*, oder
 - *𝑌 muss ein Primärattribut sein.*
+

@@ -93,11 +93,7 @@ In der 3. Normalform (3NF) wird gefordert, dass:
 Die **3NF** baut auf der **2. Normalform (2NF)** auf und zielt darauf ab, transitive Abhängigkeiten zwischen Nicht-Schlüsselattributen zu beseitigen. Das heißt, es dürfen keine funktionalen Abhängigkeiten zwischen Nicht-Schlüsselattributen bestehen, die über einen Umweg (transitiv) von einem Schlüsselkandidaten abhängen. So wird sichergestellt, dass die Relationen frei von Anomalien sind, die bei Einfüge-, Lösch- oder Änderungsoperationen entstehen können, und dass die Datenintegrität gewahrt bleibt.
 
 <details> 
-<summary>
-
-### Beispiel
-
-</summary>
+<summary>### Beispiel</summary>
 
 Stellen wir uns eine Datenbanktabelle `Angestellter` vor, die folgende Spalten hat:
 
