@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Thursday, 4. April 2024, 15:04
-date modified: Thursday, 4. April 2024, 17:37
+date modified: Thursday, 4. April 2024, 18:11
 Thema:
   - "[[Normalformen]]"
   - "[[Anomalien in Datenbanksystemen]]"
@@ -30,7 +30,8 @@ Die verschiedenen Modelle werden von Huber fortlaufend nummeriert (`mnr`). Ein b
 
 # Aufgabe 10-1 **Problem bei nicht normalisierten DB**
 
-*Beschreiben Sie die Problem (Redundanzen, Anomalien), die bei Nutzung des o.g. Relationenschemas in der Datenbank des Autohandlers auftreten können.*
+>[!note] Aufgabenstellung
+>Beschreiben Sie die Problem (Redundanzen, Anomalien), die bei Nutzung des o.g. Relationenschemas in der Datenbank des Autohandlers auftreten können.
 
 - [[Anomalien in Datenbanksystemen#Redundanz]]: 
     - `Hersteller` und `hnr` geben beide die gleiche Information wieder und sind somit redundant.
@@ -46,11 +47,11 @@ Die verschiedenen Modelle werden von Huber fortlaufend nummeriert (`mnr`). Ein b
 ---
 # Aufgabe 10-2 **2. Normalform***
 
-*Die Menge der vollen und nicht-trivialen funktionalen Abhängigkeiten sei im Folgenden gegeben durch:*
-
-- *mnr → hnr, hersteller, typ, ps*
-- *hnr → hersteller*
-- *mnr, fznr → baujahr, km-stand, n-preis, h-preis, ek-preis*
+>[!note] Aufgabenstellung
+> Die Menge der vollen und nicht-trivialen funktionalen Abhängigkeiten sei im Folgenden gegeben durch:
+> - mnr → hnr, hersteller, typ, ps
+> - hnr → hersteller
+> - mnr, fznr → baujahr, km-stand, n-preis, h-preis, ek-preis
 
 ### a) Erläutern Sie, warum das gegebene Schema nicht der 2. Normalform (2.NF) genügt. \[[[Normalformen#2. Normalform (2NF)]]]
 
@@ -58,9 +59,28 @@ Die verschiedenen Modelle werden von Huber fortlaufend nummeriert (`mnr`). Ein b
 	- Für jedes Attribute A gilt:
 		- *A ist primär* oder
 		- *A ist voll funktional abhängig von jedem Schlüsselkandidaten.*
-		- 
+
 - Schlüsselkandidaten sind $SK = \{mnr,fznr\}$
 - Voll funktionale Attribute, die von jedem Schlüsselkandidaten abhängig sind, sind $A=\{baujahr, km-stand, n-preis, h-preis, ek-preis\}$
 
-- Attribute die keine Schlüsselkandidaten sind, sind also $R=\{hnr,hersteller,typ,ps\}$
-- Da es also 
+→ Attribute die keine Schlüsselkandidaten sind, sind also $R=\{hnr,hersteller,typ,ps\}$
+	  Da es also Attribute gibt die nicht prim oder voll funktional abhängig von jedem Schlüsselkandidaten sind und $|R| \neq 0$, ist die **2.NF nicht erfüllt**
+
+### b) Überführen Sie die Relation in die 2.NF und geben Sie die so entstehenden Relationen an.
+
+1. Relation: `Hersteller` 
+	- Erstelle eine neue Relation für jeden partiellen Schlüssel mit seinen abhängigen Attribute
+	- **mnr → hnr, hersteller, typ, ps**
+$$Hersteller(\underline{mnr},hersteller, typ, ps)$$
+2. Relation: `Fahrzeug`
+	- Attribute, die voll funktional vom (ursprünglichen) Schlüssel abhängig sidn, bleiben in der ursprünglichen Relation
+	- **mnr, fznr → baujahr, km-stand, n-preis, h-preis, ek-preis**
+$$Fahrzeug(\underline{mnr},\underline{fznr},baujahr,km-stand, n-preis, h-preis, ek-preis)$$
+
+--- 
+
+# Aufgabe 10-3 **[[Normalformen#3. Normalform (3NF)]]**
+
+>[!note] Aufgabenstellung
+>Falls das in Aufgabe 10-2 entstandene Relationenschema noch nicht der **3. Normalform (3.NF)** genügt, führen Sie dieses in die 3.NF über und geben Sie die so entstehenden Relationen an. Andernfalls begründen Sie, warum das Relationenschema aus Aufgabe 10-2 bereits der 3.NF genügt.
+
