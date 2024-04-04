@@ -1,16 +1,18 @@
 ---
-title: "University Notes"
-created: 2024-03-21 01:39
-date: 2024-03-21
-description: "A brief description of your page."
+title: University Notes
+description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across all disciplines. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Thursday, 4. April 2024, 15:24
+date modified: Thursday, 4. April 2024, 15:55
 ---
 
+# Modules
+
+- [[DBS|Datenbanksysteme (DBS)]]
+- [[SWT|Softwaretechnick (SWT)]]
 # Semester
 
 - [[3.Semester]]
-- [[4.Semester]]
+- [[4.Semester]] (coming soon)
 
 ### About This Site
 
