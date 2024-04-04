@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Monday, 11. March 2024, 16:07
-date modified: Thursday, 4. April 2024, 18:21
+date modified: Thursday, 4. April 2024, 19:01
 ---
 
 # Warum Normalformen?
@@ -84,11 +84,16 @@ Die 2NF beseitigt **partielle funktionale Abhängigkeiten** von Nicht-Primäratt
 
 ## 3. Normalform (3NF)
 
+> [!tip] Merkhilfe
+> Schauen alle Abhängigkeiten an, linke Seite immer Schlüssel oder rechts immer primäre Attribute
+
 **Nicht-triviale funktionale Abhängigkeiten 𝑋 → 𝑌** bedeuten, dass das Attribut-Set 𝑌 nicht vollständig innerhalb des Attribut-Sets 𝑋 enthalten ist und 𝑌 funktional von 𝑋 abhängt. Das heißt, die Kenntnis von 𝑋 ermöglicht es eindeutig, 𝑌 zu bestimmen, ohne dass 𝑌 ein Teil von 𝑋 ist. 
 
 In der 3. Normalform (3NF) wird gefordert, dass:
-- *Für alle nicht-trivialen funktionalen Abhängigkeiten 𝑋 → 𝑌 muss 𝑋 einen Schlüsselkandidaten enthalten*, oder
+- *2.NF erfüllt ist* 
+- *Für alle nicht-trivialen funktionalen Abhängigkeiten 𝑋 → 𝑌 muss 𝑋 einen Schlüsselkandidaten enthalten (bzw. kein Nichtschlüsselattribut hängt von keinem anderen Nichtschlüsselattribut ab)*, oder
 - *𝑌 muss ein Primärattribut sein.*
+
 
 Die **3NF** baut auf der **2. Normalform (2NF)** auf und zielt darauf ab, transitive Abhängigkeiten zwischen Nicht-Schlüsselattributen zu beseitigen. Das heißt, es dürfen keine funktionalen Abhängigkeiten zwischen Nicht-Schlüsselattributen bestehen, die über einen Umweg (transitiv) von einem Schlüsselkandidaten abhängen. So wird sichergestellt, dass die Relationen frei von Anomalien sind, die bei Einfüge-, Lösch- oder Änderungsoperationen entstehen können, und dass die Datenintegrität gewahrt bleibt.
 

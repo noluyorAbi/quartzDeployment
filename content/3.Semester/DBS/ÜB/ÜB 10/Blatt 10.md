@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Thursday, 4. April 2024, 15:04
-date modified: Thursday, 4. April 2024, 18:29
+date modified: Thursday, 4. April 2024, 19:08
 Thema:
   - "[[Normalformen]]"
   - "[[Anomalien in Datenbanksystemen]]"
@@ -84,8 +84,35 @@ $$Fahrzeug(\underline{mnr},\underline{fznr},baujahr,km-stand, n-preis, h-preis, 
 
 >[!note] Aufgabenstellung
 >Falls das in Aufgabe 10-2 entstandene Relationenschema noch nicht der **3. Normalform (3.NF)** genügt, führen Sie dieses in die 3.NF über und geben Sie die so entstehenden Relationen an. Andernfalls begründen Sie, warum das Relationenschema aus Aufgabe 10-2 bereits der 3.NF genügt.
+> - mnr → hnr, hersteller, typ, ps
+> - hnr → hersteller
+> - mnr, fznr → baujahr, km-stand, n-preis, h-preis, ek-preis
 
-**3.NF besagt**
+**3.NF besagt:**
+- *2.NF ist erfüllt.*
 - *Für alle nicht-trivialen funktionalen Abhängigkeiten 𝑋 → 𝑌 muss 𝑋 einen Schlüsselkandidaten enthalten*, oder
 - *𝑌 muss ein Primärattribut sein.*
 
+Basierend auf der Musterlösung und der Analyse der Relationen aus Aufgabe 10-2 erkennen wir, dass die Relation **Fahrzeug** bereits der 3. Normalform entspricht. Die Relation **Model** hingegen erfüllt die 3. Normalform nicht, da die funktionale Abhängigkeit `hnr → hersteller` eine transitive Abhängigkeit darstellt, die in 3NF nicht zulässig ist. Um das Schema vollständig in die 3. Normalform zu überführen, wird folgende Anpassung vorgenommen:
+
+### Korrigierte und ergänzte Relationen für 3NF:
+
+1. **Relation Fahrzeug** bleibt unverändert, da sie bereits die 3NF Kriterien erfüllt:$$Fahrzeug(\underline{mnr}, \underline{fznr}, baujahr, km-stand, n-preis, h-preis, ek-preis)$$
+$$\underbrace{\underbrace{mnr,fznr}_{Schlüsselkandidaten}→ baujahr, km-stand, n-preis, h-preis, ek-preis}_{Erfüllt \ 3.NF}$$
+
+
+2. **Relation Model** wird angepasst, um die transitive Abhängigkeit zu entfernen. Dazu wird die Abhängigkeit `hnr → hersteller` in eine eigene Relation extrahiert:
+$$   Modell(\underline{mnr}, hnr, typ, ps)$$
+$$\underbrace{hnr → hersteller}_{\text{Erfüllt nicht 3. NF, da linke Seite kein Schlüsselkandidat bzw. rechts kein primäres Attribut}}$$
+
+3. **Neue Relation Hersteller** wird eingeführt, um die transitive Abhängigkeit aufzulösen:
+$$   Hersteller(\underline{hnr}, hersteller)$$
+
+Durch diese Änderung wird sichergestellt, dass:
+- Jedes Attribute in **Fahrzeug** und **Model** entweder ein Primärattribut ist oder voll funktional von dem Primärschlüssel abhängt, ohne transitive Abhängigkeiten.
+- Die neue Relation **HerstellerInfo** speichert die Zuordnung zwischen `hnr` und `hersteller`, wobei `hersteller` direkt von `hnr` abhängig ist und somit die 3NF erfüllt.
+
+### Fazit:
+Das überarbeitete Schema erfüllt nun die Kriterien der 3. Normalform. Es wurden alle transitiven Abhängigkeiten entfernt, indem die Informationen in separate Relationen aufgeteilt wurden, wodurch die Datenintegrität und die Reduktion von Redundanzen verbessert werden.******
+**
+**

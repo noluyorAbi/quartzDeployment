@@ -1,15 +1,14 @@
 ---
 title: University Notes
-description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across all disciplines. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
+description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Thursday, 4. April 2024, 15:55
+date modified: Thursday, 4. April 2024, 18:44
 ---
 
 # Modules
 
 - [[DBS|Datenbanksysteme (DBS)]]
 - [[SWT|Softwaretechnick (SWT)]] (coming soon)
-
 # Semester
 
 - [[3.Semester]]
@@ -23,10 +22,8 @@ This website serves as a centralized archive, offering you structured access to 
 
 Here, you’ll find detailed notes covering a range of topics, from the basics of programming to the complexities of algorithms and data structures, all tailored to support and enhance your understanding of this dynamic field. This page is updated frequently throughout the semester, with new topics being added regularly to enrich the content and ensure it reflects the latest developments in the field.
 
-<!-- Google tag (gtag.js) -->
 
-<meta name="description"content="Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!"
->
+<!-- Google tag (gtag.js) -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E24ELVW963"></script>
 
