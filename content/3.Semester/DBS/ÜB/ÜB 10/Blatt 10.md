@@ -219,7 +219,8 @@ $$\text{Weder B noch C lassen sich herleiten (stehen nur auf linker Seite)}$$
 #### Linksreduktion
 - $(C,A → D) \ \text{ist überflüssig}$  
 	- wird zu $C →D$ da gilt:
-		- $D \element C$
+		- $D \in (F,\{C,A\}-A)=\{C,F,D\}$
+		- 
 - $C → F,D$
 - $B → A,E$
 - $E → F,A$
