@@ -86,6 +86,8 @@ Die 2NF beseitigt **partielle funktionale Abhängigkeiten** von Nicht-Primäratt
 
 > [!tip] Merkhilfe
 > Schauen alle Abhängigkeiten an, linke Seite immer Schlüssel oder rechts immer primäre Attribute
+> $$\underbrace{\underbrace{mnr,fznr}_{Schlüsselkandidaten}→ baujahr, km-stand, n-preis, h-preis, ek-preis}_{Erfüllt \ 3.NF}$$
+
 
 **Nicht-triviale funktionale Abhängigkeiten 𝑋 → 𝑌** bedeuten, dass das Attribut-Set 𝑌 nicht vollständig innerhalb des Attribut-Sets 𝑋 enthalten ist und 𝑌 funktional von 𝑋 abhängt. Das heißt, die Kenntnis von 𝑋 ermöglicht es eindeutig, 𝑌 zu bestimmen, ohne dass 𝑌 ein Teil von 𝑋 ist. 
 
