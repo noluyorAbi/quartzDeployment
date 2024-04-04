@@ -23,6 +23,7 @@ date modified: Thursday, 4. April 2024, 15:24
 - [[Erweiterte Abfragen in SQL]]
 - [[Aggregatfunktionen in SQL]]
 - [[ER-Modell|ER-Modell]]
+- [[Normalformen]]
 
 
 

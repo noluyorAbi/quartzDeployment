@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Thursday, 4. April 2024, 15:04
-date modified: Thursday, 4. April 2024, 18:11
+date modified: Thursday, 4. April 2024, 18:22
 Thema:
   - "[[Normalformen]]"
   - "[[Anomalien in Datenbanksystemen]]"
@@ -45,7 +45,7 @@ Die verschiedenen Modelle werden von Huber fortlaufend nummeriert (`mnr`). Ein b
     - Änderungen der PS eines Modells müssen in allen Tupeln eingetragen werden, oder bei Änderungen des Namens des Herstellers müssen alle Tuple geändert werden.
 
 ---
-# Aufgabe 10-2 **2. Normalform***
+# Aufgabe 10-2 [[Normalformen#2. Normalform (2NF)]]
 
 >[!note] Aufgabenstellung
 > Die Menge der vollen und nicht-trivialen funktionalen Abhängigkeiten sei im Folgenden gegeben durch:
@@ -84,3 +84,6 @@ $$Fahrzeug(\underline{mnr},\underline{fznr},baujahr,km-stand, n-preis, h-preis, 
 >[!note] Aufgabenstellung
 >Falls das in Aufgabe 10-2 entstandene Relationenschema noch nicht der **3. Normalform (3.NF)** genügt, führen Sie dieses in die 3.NF über und geben Sie die so entstehenden Relationen an. Andernfalls begründen Sie, warum das Relationenschema aus Aufgabe 10-2 bereits der 3.NF genügt.
 
+**3.NF besagt**
+- *Für alle nicht-trivialen funktionalen Abhängigkeiten 𝑋 → 𝑌 muss 𝑋 einen Schlüsselkandidaten enthalten*, oder
+- *𝑌 muss ein Primärattribut sein.*
