@@ -2,29 +2,6 @@
 
 // put your custom CSS here!
 
-/* Anpassung des Scrollbalkens nur für .katex und .math Elemente */
-.katex::-webkit-scrollbar,
-.math::-webkit-scrollbar {
-  width: 12px; /* Breite des Scrollbalkens */
-}
-
-.katex::-webkit-scrollbar-track,
-.math::-webkit-scrollbar-track {
-  background: #f41010; /* Hintergrundfarbe des Tracks */
-  border-radius: 10px; /* Abrundung der Ecken des Tracks */
-}
-
-.katex::-webkit-scrollbar-thumb,
-.math::-webkit-scrollbar-thumb {
-  background: #c62323; /* Farbe des Scrollbalken-Daumens */
-  border-radius: 10px; /* Abrundung der Ecken des Daumens */
-}
-
-.katex::-webkit-scrollbar-thumb:hover,
-.math::-webkit-scrollbar-thumb:hover {
-  background: #e10101; /* Farbe des Daumens beim Überfahren mit der Maus */
-}
-
 p,
 ul,
 text,
@@ -36,8 +13,6 @@ ol,
 ul,
 .katex,
 .math {
-  color: var(--darkgray);
-  fill: var(--darkgray);
   overflow-wrap: anywhere;
   hyphens: auto;
   overflow-x: auto;
