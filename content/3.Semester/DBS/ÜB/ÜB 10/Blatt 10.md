@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Thursday, 4. April 2024, 15:04
-date modified: Thursday, 4. April 2024, 22:06
+date modified: Thursday, 4. April 2024, 23:23
 Thema:
   - "[[Normalformen]]"
   - "[[Anomalien in Datenbanksystemen]]"
@@ -209,18 +209,96 @@ $$
 $$\text{AttrHülle}(F,\{C\}) = \{C,F,D\} \neq \{A,B,C,D,E,F\}
 $$
 $$\text{Weder B noch C lassen sich herleiten (stehen nur auf linker Seite)}$$
+
 ### b) Bringen Sie das Relationenschema R mithilfe des Synthesealgorithmus in die 3. Normalform. Führen Sie jeden Schritt (inklusive Teilschritte) des Algorithmus durch, begründen Sie diesen kurz (Attributhüllen bei Links- und Rechtsreduktion, etc.) und kennzeichnen Sie Stellen, an denen nichts zu tun ist, deutlich.
+
+#### 1. Bestimmung der kanonischen Überdeckung 𝐹𝑐 zu 𝐹
+
+$$F = \{ C, A \rightarrow D \ | \ C \rightarrow F, D \ | \ B \rightarrow A, E \ | \ E \rightarrow F, A \}
+$$
 
 - $C,A → D$
 - $C → F,D$
 - $B → A,E$
 - $E → F,A$
 
-#### Linksreduktion
-- $(C,A → D) \ \text{ist überflüssig}$  
+#### a) Linksreduktion
+
+1. $(C,A → D) \ \text{ist überflüssig}$  
 	- wird zu $C →D$ da gilt:
 		- $D \in (F,\{C,A\}-A)=\{C,F,D\}$
-		- 
-- $C → F,D$
-- $B → A,E$
-- $E → F,A$
+		- auch ohne A wird D abgedeckt durch C in 2.
+
+2. $(C → F,D) \  \text{ist nötig}$
+
+3. $(B → A,E) \ \text{ist nötig}$
+
+4. $(E → F,A) \ \text{ist nötig}$
+
+#### b) Rechtsreduktion
+
+1. $(C →D)$ 
+
+	- wird zu $(C → \emptyset)$ da:
+
+	- $D \in AttrHülle((F-(C→D)\cup(C→\emptyset),\{C\}) = \{C,F,D\}$
+
+	- D wird abgedeckt durch *2.*
+
+
+
+2. $(C → F,D)$ 
+
+
+
+3. $(B → A,E)$ 
+
+	- wird zu $B →E$
+
+	- $A \in AttrHülle((F-(B→A,E)\cup(B→E),{B})=\{B,E,F,A\}$
+
+	- A wird abgedeckt durch *4.*
+
+
+
+4. $(E → F,A)$
+
+
+#### c) Entfernung von rechtsleeren Abhängigkeiten
+
+$$F=\{C→\emptyset \ | \ C → F,D \ | \ B→E \ | \ E→F,A \}$$
+$$\text{wird zu}$$
+$$F=\{\ C → F,D \ | \ B→E \ | \ E→F,A \}$$
+
+#### d) Zusammenfassen von Abhängigkeiten mit gleicher linker Seite
+
+$$F=\{\ C → F,D \ | \ B→E \ | \ E→F,A \}$$
+$$Nix \  zu \  tun$$
+$$\Longrightarrow F_c=\{\ C → F,D \ | \ B→E \ | \ E→F,A \}$$
+
+#### 2. Erzeugen eines neues Relationenschemas aus 𝐹𝑐
+
+- $R_1(\underline C,F,D) → F_1=\{C→F,D\}$
+
+- $R_2(\underline B,E) → F_2=\{B→E\}$
+
+- $R_3(\underline E,F,A) → F_3=\{E→F,A\}$
+
+#### 3. Rekonstruktion eines Schlüsselkandidaten:
+
+Neue Relation für Schlüsselkandidaten $\{𝐵, 𝐶\}$
+
+$$\Longrightarrow R_4(\underline{B},\underline{C}) → F_4=\emptyset$$
+#### 4. Elimination überflüssiger Relationen
+
+In diesem Schritt nix zu tun 
+
+**Finale Relationen:**
+
+- $R_1(\underline C,F,D)$
+
+- $R_2(\underline B,E)$
+
+- $R_3(\underline E,F,A)$
+
+- $R_4(\underline{B},\underline{C})$

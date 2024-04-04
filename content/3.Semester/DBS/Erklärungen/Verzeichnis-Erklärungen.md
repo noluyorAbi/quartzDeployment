@@ -4,10 +4,42 @@ last modified: 2024-03-11 20:37
 fach: "[[DBS]]"
 tags: [DBS]
 date created: Monday, 11. March 2024, 20:37
-date modified: Thursday, 4. April 2024, 19:15
+date modified: Thursday, 4. April 2024, 23:25
 ---
 
 # Verzeichnis
+
+Ein umfassender Leitfaden zur Vertiefung in die Welt der Datenbanksysteme, strukturiert durch Schlüsselkonzepte und Techniken, die für das Verständnis und die Anwendung von Datenbankmanagement unerlässlich sind.
+
+## Grundlagen
+- [[Datenbankmanagementsystem (DBMS)]]: Eine Einführung in die Kernkomponenten und Funktionen von DBMS.
+- [[3 - Ebenenarchitektur]]: Die Architekturprinzipien hinter DBMS, erklärt durch das Drei-Schichten-Modell.
+- [[Unterschiede zwischen Datenbanksystemen und Dateiverwaltungssystemen]]: Ein Vergleich, der die spezifischen Vorteile von DBMS hervorhebt.
+
+## Design und Modellierung
+- [[Anomalien in Datenbanksystemen]]: Erklärung von Designproblemen, die zu Anomalien in Daten führen können.
+- [[Minimale Schlüssel]]: Diskussion über die Bestimmung minimaler Schlüssel in einer Datenbank.
+- [[Referenzielle Integrität]]: Die Wichtigkeit der Beziehungserhaltung zwischen Datenbanktabellen.
+- [[Normalformen]]: Ein Leitfaden zu den Normalformen für die Optimierung von Datenbankdesigns.
+- [[Schlüsselkandidat vs. Primäres Attribut]]: Unterschiede und Bedeutungen in der Datenbankstruktur.
+
+## SQL-Techniken
+- [[Data Definition Language (DDL)]]: Grundlagen der Datendefinitionssprache.
+- [[CrossJoin in SQL]]: Eine detaillierte Betrachtung der CrossJoin-Operation in SQL.
+- [[Erweiterte Abfragen in SQL]]: Techniken für komplexere SQL-Abfragen.
+- [[Aggregatfunktionen in SQL]]: Nutzung von Aggregatfunktionen zur Datenanalyse.
+
+## Theoretische Grundlagen
+- [[Relationale Algebra]]: Die mathematische Grundlage hinter relationalen Datenbankabfragen.
+- [[Bereichskalkül]]: Eine Form der Datenbankabfrage, die auf dem Konzept der Bereiche basiert.
+- [[Tupelkalkül]]: Eine weitere fundamentale Abfrageform, die auf Tupeln basiert.
+
+## ER-Modellierung
+- [[ER-Modell|ER-Modell]]: Grundzüge und Anwendungen des Entity-Relationship-Modells.
+
+Dieses Verzeichnis dient also Navigationshilfe und Referenzrahmen für Studierende und Praktiker im Bereich Datenbanken, um die umfangreichen Aspekte von Datenbankmanagementsystemen zu erforschen und zu verstehen.
+
+# Gesamtverzeichnis
 
 - [[Datenbankmanagementsystem (DBMS)]]
 - [[3 - Ebenenarchitektur]]
@@ -28,25 +60,3 @@ date modified: Thursday, 4. April 2024, 19:15
 
 
 
-## Grundlagen der Datenbanksysteme
-- [[Datenbankmanagementsystem (DBMS)]]
-	- [[3 - Ebenenarchitektur]]
-	- [[Unterschiede zwischen Datenbanksystemen und Dateiverwaltungssystemen]]
-
-## Konzepte und Theorien der Datenintegrität
-- [[Anomalien in Datenbanksystemen]]
-- [[Minimale Schlüssel]]
-- [[Referenzielle Integrität]]
-
-## Sprachen und Abfragen in Datenbanken
-- [[Data Definition Language (DDL)]]
-- SQL-Abfragekonzepte
-  - [[CrossJoin in SQL]]
-
-## Theoretische Konzepte
-- [[Relationale Algebra]]
-  - Join-Operationen (Hier könnte Cross Join auch aufgeführt werden, falls gewünscht)
-- [[Bereichskalkül]]
-- [[Tupelkalkül]]
-
-Dieses Verzeichnis gruppiert Themen in allgemeinere Kategorien, wobei die theoretischen Grundlagen, die Datenintegrität, die Abfragesprachen und die relationalen Konzepte voneinander getrennt sind. Innerhalb der SQL-Abfragekonzepte ist der Cross Join also spezifisches Thema aufgeführt, was darauf hinweist, dass es Teil des größeren Bereichs der SQL-Abfrageoperationen ist.

@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Monday, 11. March 2024, 16:07
-date modified: Thursday, 4. April 2024, 21:41
+date modified: Thursday, 4. April 2024, 22:35
 ---
 
 # Warum Normalformen?
@@ -146,10 +146,13 @@ Der Synthesealgorithmus wird verwendet, um ein beliebiges Relationenschema R mit
 ## Synthesealgorithmus Schritt 1 – Kanonische Überdeckung 𝑭𝒄 zu 𝑭
 
 ### a) Linksreduktion:
+
 - Prüfe für jede 𝑋 → 𝑌 ∈ 𝐹:
 - Prüfe für jedes 𝐴 ∈ 𝑋:
 - Wenn 𝑌 ⊆ 𝐴𝑡𝑡𝑟𝐻ü𝑙𝑙𝑒(𝐹, 𝑋 − 𝐴), ist A in X überflüssig und kann entfernt werden.
 - Aus 𝑋 → 𝑌 wird dann (𝑋 − 𝐴) → 𝑌.
+
+[[Blatt 10#Linksreduktion|Anwendungsbeispiel]]
 
 ### b) Rechtsreduktion:
 - Prüfe für jede (linksreduzierte) 𝑋 → 𝑌 ∈ 𝐹:
