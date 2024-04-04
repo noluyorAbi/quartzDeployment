@@ -39,7 +39,7 @@ export default (() => {
         {/* <meta name="description" content={description} /> */}
         <meta
           name="description"
-          content="Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across all disciplines. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!"
+          content="Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!"
         />
         <meta name="generator" content="Quartz" />
         {css.map((href) => (
