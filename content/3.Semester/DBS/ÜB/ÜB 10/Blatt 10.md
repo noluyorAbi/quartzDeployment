@@ -58,8 +58,9 @@ Die verschiedenen Modelle werden von Huber fortlaufend nummeriert (`mnr`). Ein b
 	- Für jedes Attribute A gilt:
 		- *A ist primär* oder
 		- *A ist voll funktional abhängig von jedem Schlüsselkandidaten.*
-	
+		- 
 - Schlüsselkandidaten sind $SK = \{mnr,fznr\}$
-- Voll funktionale Attribute, die von jedem Schlüsselkandidaten abhängig sind, sind $\{baujahr, km-stand, n-preis, h-preis, ek-preis\}$
+- Voll funktionale Attribute, die von jedem Schlüsselkandidaten abhängig sind, sind $A=\{baujahr, km-stand, n-preis, h-preis, ek-preis\}$
 
-Attribute die keine Schlüsselkandidaten sind, sind also $$
+- Attribute die keine Schlüsselkandidaten sind, sind also $R=\{hnr,hersteller,typ,ps\}$
+- Da es also 
