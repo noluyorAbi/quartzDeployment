@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Thursday, 4. April 2024, 15:04
-date modified: Thursday, 4. April 2024, 20:28
+date modified: Thursday, 4. April 2024, 22:06
 Thema:
   - "[[Normalformen]]"
   - "[[Anomalien in Datenbanksystemen]]"
@@ -175,3 +175,51 @@ $$\rightarrow Nicht abhängigkeitserhaltend$$
 ### Was bedeutet "nicht abhängigkeitserhaltend"?
 
 Eine Zerlegung einer Relation in eine Normalform ist "nicht abhängigkeitserhaltend", wenn nach der Zerlegung nicht alle ursprünglichen funktionalen Abhängigkeiten direkt in den zerlegten Relationen abgebildet werden können. Das bedeutet, dass manche funktionalen Abhängigkeiten möglicherweise nur durch das Joinen mehrerer Relationen rekonstruiert werden können. Dies kann die Integrität und die Konsistenz der Datenbank beeinträchtigen, da zusätzliche Einschränkungen erforderlich sind, um sicherzustellen, dass die ursprünglichen Abhängigkeiten gewahrt bleiben.
+
+---
+
+# Aufgabe 10-5 [[Normalformen#Synthesealgorithmus]]
+
+
+>[!note] Aufgabenstellung
+Gegeben sei das Relationenschema `R(A, B, C, D, E, F)`, sowie die Menge `F` der zugehörigen nicht-trivialen funktionalen Abhängigkeiten: 
+`{ C, A → D ; C → F, D ; B → A, E ; E → F, A }`
+
+### a) Begründen Sie, warum `{B, C}` der einzige Schlüsselkandidat ist.
+
+#### Gedankengang:
+
+Abzudecken sind: $A,B,C,D,E,F$
+
+- $B$ deckt folgende ab: $A,E$
+- welche wiederum folgende abdecken: $D,F$
+- Es fällt also weg $\not A,\not B, C,\not D,\not E,\not F$ und es bleibt nur noch C übrig was keine Herleitung hat
+- Dies hat zur Folge, dass C auch ein Schlüsselkandidat werden muss 
+- B und C sind die Minimalsten Attribute die alle anderen abdecken.
+#### Formelle Schreibweise:
+
+$$\mathcal{F} = \{C, A \rightarrow D \;|\; C \rightarrow F, D \;|\; B \rightarrow A, E \;|\; E \rightarrow F, A\}
+$$
+
+1. **Eindeutigkeit:**
+$$\text{AttrHülle}(F,\{B,C\}) = \{B,C,F,D,A,E\}$$
+2. **Minimalität**
+$$\text{AttrHülle}(F,\{B\}) = \{B,A,E,F\} \neq \{A,B,C,D,E,F\}
+$$
+$$\text{AttrHülle}(F,\{C\}) = \{C,F,D\} \neq \{A,B,C,D,E,F\}
+$$
+$$\text{Weder B noch C lassen sich herleiten (stehen nur auf linker Seite)}$$
+### b) Bringen Sie das Relationenschema R mithilfe des Synthesealgorithmus in die 3. Normalform. Führen Sie jeden Schritt (inklusive Teilschritte) des Algorithmus durch, begründen Sie diesen kurz (Attributhüllen bei Links- und Rechtsreduktion, etc.) und kennzeichnen Sie Stellen, an denen nichts zu tun ist, deutlich.
+
+- $C,A → D$
+- $C → F,D$
+- $B → A,E$
+- $E → F,A$
+
+#### Linksreduktion
+- $(C,A → D) \ \text{ist überflüssig}$  
+	- wird zu $C →D$ da gilt:
+		- $D \element C$
+- $C → F,D$
+- $B → A,E$
+- $E → F,A$

@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Monday, 11. March 2024, 16:07
-date modified: Thursday, 4. April 2024, 21:10
+date modified: Thursday, 4. April 2024, 21:41
 ---
 
 # Warum Normalformen?
@@ -98,7 +98,6 @@ In der 3. Normalform (3NF) wird gefordert, dass:
 - *Für alle nicht-trivialen funktionalen Abhängigkeiten 𝑋 → 𝑌 muss 𝑋 einen Schlüsselkandidaten enthalten (bzw. kein Nichtschlüsselattribut hängt von keinem anderen Nichtschlüsselattribut ab)*, oder
 - *𝑌 muss ein Primärattribut sein.*
 
-
 Die **3NF** baut auf der **2. Normalform (2NF)** auf und zielt darauf ab, transitive Abhängigkeiten zwischen Nicht-Schlüsselattributen zu beseitigen. Das heißt, es dürfen keine funktionalen Abhängigkeiten zwischen Nicht-Schlüsselattributen bestehen, die über einen Umweg (transitiv) von einem Schlüsselkandidaten abhängen. So wird sichergestellt, dass die Relationen frei von Anomalien sind, die bei Einfüge-, Lösch- oder Änderungsoperationen entstehen können, und dass die Datenintegrität gewahrt bleibt.
 
 [[Blatt 10#Aufgabe 10-3 ** Normalformen 3. Normalform (3NF) **|Anwendungsbeispiel]]
@@ -143,6 +142,45 @@ Der Synthesealgorithmus wird verwendet, um ein beliebiges Relationenschema R mit
 - 𝑅1, … , 𝑅𝑛 ist eine verlustlose Zerlegung von R.
 - 𝑅1, … , 𝑅𝑛 ist abhängigkeitserhaltend.
 - 𝑅1, … , 𝑅𝑛 sind alle in 3. Normalform.
+
+## Synthesealgorithmus Schritt 1 – Kanonische Überdeckung 𝑭𝒄 zu 𝑭
+
+### a) Linksreduktion:
+- Prüfe für jede 𝑋 → 𝑌 ∈ 𝐹:
+- Prüfe für jedes 𝐴 ∈ 𝑋:
+- Wenn 𝑌 ⊆ 𝐴𝑡𝑡𝑟𝐻ü𝑙𝑙𝑒(𝐹, 𝑋 − 𝐴), ist A in X überflüssig und kann entfernt werden.
+- Aus 𝑋 → 𝑌 wird dann (𝑋 − 𝐴) → 𝑌.
+
+### b) Rechtsreduktion:
+- Prüfe für jede (linksreduzierte) 𝑋 → 𝑌 ∈ 𝐹:
+- Prüfe für jedes B ∈ Y:
+- Wenn B ⊆ 𝐴𝑡𝑡𝑟𝐻ü𝑙𝑙𝑒(𝐹 − {𝑋 → 𝑌} ∪ {𝑋 → 𝑌 − 𝐵}, 𝑋), ist B auf der rechten Seite überflüssig.
+- Aus 𝑋 → 𝑌 wird dann 𝑋 → (𝑌 − 𝐵).
+
+### c) Entfernen überflüssiger funktionaler Abhängigkeiten:
+- Entferne alle funktionalen Abhängigkeiten (FD) mit leerer rechter Seite, also 𝑋 → {}.
+
+### d) Zusammenfassen von FDs:
+- Fasse alle FDs mit gleicher linker Seite zusammen:
+- Aus 𝑋 → 𝑌1, … , 𝑋 → 𝑌𝑛 wird 𝑋 → (𝑌1 ∪ ⋯ ∪ 𝑌𝑛).
+
+## Synthesealgorithmus Schritt 2 – Erzeuge Relationenschemas aus 𝑭𝒄
+
+- Für jede FD 𝑋 → 𝑌 ∈ 𝐹𝑐:
+  - Erzeuge Relationenschema 𝑅𝑋 ≔ 𝑋 ∪ 𝑌.
+  - Ordne 𝑅𝑋 die FDs 𝐹𝑋 ≔ {𝑋′ → 𝑌′ | 𝑋′ ∪ 𝑌′ ∈ 𝑅𝑋} zu.
+  - Schlüssel sind alle Attribute aus 𝑋.
+
+## Synthesealgorithmus Schritt 3 – Rekonstruiere einen Schlüsselkandidaten
+
+- Falls eines der in Schritt 2 erzeugten Schemata einen Schlüsselkandidaten von R bezüglich 𝐹𝑐 enthält, ist nichts zu tun.
+- Wenn nicht:
+  - Wähle einen Schlüsselkandidaten 𝑆 ⊆ 𝑅 aus und definiere folgendes Schema: 𝑅𝑆 ≔ 𝑆 mit 𝐹𝑆 ≔ {}.
+
+## Synthesealgorithmus Schritt 4 – Eliminiere überflüssige Relationen
+
+- Eliminiere diejenigen Schemata 𝑅𝑋, die in einem anderen Relationenschema 𝑅𝑋′ enthalten sind, d.h. 𝑅𝑋 ⊆ 𝑅𝑋′.
+
 
 ---
 
