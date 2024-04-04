@@ -1,10 +1,10 @@
 ---
 created: 2024-03-29 19:25
 last modified: 2024-03-29 19:25
-tags:
-  - DBS
-  - Erklaerung
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Friday, 29. March 2024, 19:25
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 # Unterabfragen in SQL in „FROM“
@@ -60,7 +60,7 @@ fach: "[[DBS]]"
 - Die `HAVING`-Klausel erlaubt es, Bedingungen auf die Gruppen anzuwenden, im Gegensatz zur `WHERE`-Klausel, die vor der Gruppierung angewendet wird.
 
 
-# Reihenfolge 
+# Reihenfolge
 
 In SQL bestimmt die Reihenfolge der Klauseln, wie die Abfrage verarbeitet wird. Dies ist wichtig, um die gewünschten Ergebnisse effektiv zu erhalten und Fehler zu vermeiden. Die Standardreihenfolge der wichtigsten SQL-Klauseln in einer SELECT-Abfrage ist wie folgt:
 

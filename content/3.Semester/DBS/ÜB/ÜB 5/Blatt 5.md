@@ -1,10 +1,10 @@
 ---
 created: 2024-03-22 16:08
 last modified: 2024-03-22 16:08
-tags:
-  - DBS
-  - Übungsblatt
+tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
+date created: Friday, 22. March 2024, 16:08
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 **Hinweis:** Bitte nutzen Sie zur Beantwortung der SQL-Übungsaufgaben ausschließlich die in der Vorlesung und in den Tutorien definierte Notation. Wir behalten uns vor, andere Operationen und Schlüsselwörter als Fehler zu werten, selbst wenn ein spezifisches Datenbanksystem diese Operation unterstützt.

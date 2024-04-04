@@ -1,10 +1,10 @@
 ---
 created: 2024-03-11 17:10
 last modified: 2024-03-12 16:59
-tags:
-  - Übungsblatt
-  - DBS
+tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
+date created: Monday, 11. March 2024, 17:10
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 # Aufgabe 2-1 *Datenbanksysteme – Dateiverwaltungssysteme*

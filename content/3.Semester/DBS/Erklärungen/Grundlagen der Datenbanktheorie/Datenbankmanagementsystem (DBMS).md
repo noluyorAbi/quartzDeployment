@@ -1,10 +1,10 @@
 ---
 created: 2024-03-11 20:30
 last modified: 2024-03-11 20:30
-tags:
-  - Erklaerung
-  - DBS
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Monday, 11. March 2024, 20:30
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 # Datenbankmanagementsystem (DBMS)

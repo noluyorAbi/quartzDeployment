@@ -1,10 +1,10 @@
 ---
 created: 2024-03-25 16:25
 last modified: 2024-03-25 16:25
-tags:
-  - DBS
-  - Übungsblatt
+tags: [DBS, Übungsblatt]
 fach: "[[Uni2/Semester/3.Semester/DBS/DBS|DBS]]"
+date created: Monday, 25. March 2024, 16:25
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 Gegeben sei die folgende relationale "Geschäftsdatenbank" einer Kaufhauskette. Es kann davon ausgegangen werden, dass eine Abteilung nur von einem Angestellten geleitet wird, welcher selbst in dieser Abteilung tätig ist:

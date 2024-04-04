@@ -1,3 +1,8 @@
+---
+date created: Saturday, 30. March 2024, 01:12
+date modified: Thursday, 4. April 2024, 15:25
+---
+
 "The value of the cloak is known in the rain." This proverb speaks volumes about the true test of worth and utility, which often comes only in times of need. It's a metaphorical statement emphasizing that the real value of something is realized not when conditions are favorable, but rather when they are adverse. This concept is universal, transcending cultures and contexts, and can be applied to various aspects of life, including education and personal growth. In the digital era, where information is abundant and resources are just a click away, the true value of educational content and tools becomes evident in moments of genuine need.
 
 ### The Cloak in the Digital Rain: Educational Resources

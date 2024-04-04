@@ -1,11 +1,12 @@
 ---
 created: 2024-03-25 18:33
 last modified: 2024-03-25 18:33
-tags:
-  - DBS
-  - Erklaerung
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Monday, 25. March 2024, 18:33
+date modified: Thursday, 4. April 2024, 15:24
 ---
+
 # Schema des Tupelkalküls
 
 Das Schema des Tupelkalküls (TK) stellt eine andere, jedoch ähnlich mächtige Methode zur Datenabfrage in Datenbanksystemen dar, die auf dem Konzept der Tupel und direkten Operationen auf diesen Tupeln basiert. Im Gegensatz zum Bereichskalkül, der mit Bereichen und Prädikaten arbeitet, fokussiert sich der Tupelkalkül auf einzelne Tupel und deren Attribute.

@@ -2,8 +2,9 @@
 created: 2024-03-11 20:37
 last modified: 2024-03-11 20:37
 fach: "[[DBS]]"
-tags:
-  - DBS
+tags: [DBS]
+date created: Monday, 11. March 2024, 20:37
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 # Verzeichnis

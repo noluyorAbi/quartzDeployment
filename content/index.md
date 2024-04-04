@@ -3,6 +3,8 @@ title: "University Notes"
 created: 2024-03-21 01:39
 date: 2024-03-21
 description: "A brief description of your page."
+date created: Thursday, 21. March 2024, 01:39
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 # Semester

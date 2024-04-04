@@ -1,10 +1,10 @@
 ---
 created: 2024-03-20 18:09
 last modified: 2024-03-20 18:09
-tags:
-  - DBS
-  - Erklaerung
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Wednesday, 20. March 2024, 18:09
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 # Daten Definition Language (DDL)

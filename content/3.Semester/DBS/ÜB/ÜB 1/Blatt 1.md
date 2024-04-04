@@ -1,11 +1,12 @@
 ---
 created: 2024-03-11 17:05
 last modified: 2024-03-11 17:05
-tags:
-  - Übungsblatt
-  - DBS
+tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
+date created: Monday, 11. March 2024, 17:05
+date modified: Thursday, 4. April 2024, 15:24
 ---
+
 # PDF : [Blatt 1](obsidian://open?vault=Uni&file=Uni2%2F3.%20Semester%2FDBS%2F%C3%9CB%2F%C3%9CB%201%2Fu01.pdf)
 
 # Aufgabe 1-1

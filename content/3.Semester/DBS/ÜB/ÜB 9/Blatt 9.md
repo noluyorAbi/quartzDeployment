@@ -1,10 +1,10 @@
 ---
 created: 2024-04-01 19:40
 last modified: 2024-04-01 19:41
-tags:
-  - DBS
-  - Übungsblatt
+tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
+date created: Monday, 1. April 2024, 19:40
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 # Aufgabe 9-1: **Beziehungen**

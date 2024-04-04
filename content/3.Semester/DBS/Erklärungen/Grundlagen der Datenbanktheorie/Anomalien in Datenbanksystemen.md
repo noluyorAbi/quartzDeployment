@@ -1,11 +1,12 @@
 ---
 created: 2024-03-14 18:09
 last modified: 2024-03-14 18:09
-tags:
-  - DBS
-  - Erklaerung
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Thursday, 14. March 2024, 18:09
+date modified: Thursday, 4. April 2024, 15:24
 ---
+
 # Anomalien in Datenbanksystemen
 
 In Datenbanksystemen können Anomalien auftreten, wenn die Datenstruktur nicht sorgfältig entworfen ist. Diese Unstimmigkeiten können die Integrität der Datenbank beeinträchtigen und führen oft zu inkonsistenten oder fehlerhaften Daten. Die Haupttypen von Anomalien sind:

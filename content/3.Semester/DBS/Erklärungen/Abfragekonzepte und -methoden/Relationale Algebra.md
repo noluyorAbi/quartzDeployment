@@ -1,11 +1,12 @@
 ---
 created: 2024-03-21 15:35
 last modified: 2024-03-21 15:35
-tags:
-  - DBS
-  - Erklaerung
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Thursday, 21. March 2024, 15:35
+date modified: Thursday, 4. April 2024, 15:24
 ---
+
 # Was ist die relationale Algebra vor allem im Bereich DBS?
 
 - Formale Anfragesprache (neben Bereichs und Tupel Kalkül)
@@ -25,7 +26,7 @@ fach: "[[DBS]]"
 
 # Grundoperationen
 
-## Vereinigung 
+## Vereinigung
 
 $$R \cup S = \{t| t  \in R  \ oder \ t \in S \}$$
 - 2 Relationen werden einfach "zusammen addiert"
@@ -39,12 +40,12 @@ $$R \cup S = \{t| t  \in R  \ oder \ t \in S \}$$
 - R ohne S
 ---
 
-## Kartesisches Produkt 
+## Kartesisches Produkt
 
 - Jedes Tupel aus R mit jedem Tupel aus S
 ---
 
-## Selektion 
+## Selektion
 
   $$σ_F(R) = { t | t ∈ R ∧ erfüllt F }$$
 - Die Selektion wird durch das Symbol σ dargestellt und filtert die Zeilen einer Tabelle basierend auf einem Kriterium F. Im Beispiel wird das Kriterium `Gewicht ≤ 12` verwendet.
@@ -55,15 +56,15 @@ $$R \cup S = \{t| t  \in R  \ oder \ t \in S \}$$
 
 $$\Pi_{a1, \ldots , am}(R) = \{t_{a1}, \ldots , t_{am} | t \in R\}$$
 - Zeigt nur die ausgewählten Spalten aus einer Relation 
-- Z.B. *$\Pi_{TNr,Gewicht}$*  zeigt die Tupel und jeweils deren spalten TNr und Gewicht keine anderen Spalten
+- Z.B. *$\Pi_{TNr,Gewicht}$* zeigt die Tupel und jeweils deren spalten TNr und Gewicht keine anderen Spalten
 ---
 
-## Durchschnitt 
+## Durchschnitt
 $$R \  \cap \ S = \{\ t \ | \ t \in \ R \ und \ t \ \in \ S \}$$
 - Relation als Ergebnis welche den Schnitt der beiden Relationen enthält
 ---
 
-## Joins 
+## Joins
 
 - Zum Zusammenfügen von Relationen 
 ---

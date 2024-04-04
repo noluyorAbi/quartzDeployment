@@ -1,11 +1,12 @@
 ---
 created: 2024-03-22 17:17
 last modified: 2024-03-22 17:17
-tags:
-  - DBS
-  - Erklaerung
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Friday, 22. March 2024, 17:17
+date modified: Thursday, 4. April 2024, 15:24
 ---
+
 Ein Cross Join, auch bekannt als kartesisches Produkt, ist eine SQL-Operation, die jede Zeile einer Tabelle mit jeder Zeile einer anderen Tabelle kombiniert. Wenn Sie zwei Tabellen haben, wobei die erste Tabelle A \( n \) Zeilen enthält und die zweite Tabelle B \( m \) Zeilen, dann erzeugt ein Cross Join zwischen diesen beiden Tabellen ein Resultatset, das \( n \times m \) Zeilen hat.
 
 ### Wie es funktioniert:

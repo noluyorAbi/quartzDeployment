@@ -1,10 +1,8 @@
 ---
-created: 2024-04-01 19:42
-last modified: 2024-04-01 19:42
-tags:
-  - Erklaerung
-  - DBS
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Monday, 1. April 2024, 19:42
+date modified: Thursday, 4. April 2024, 15:26
 ---
 
 # ER-Modell
@@ -27,7 +25,7 @@ fach: "[[DBS]]"
 
 ![1:1 - Beziehung](1zu1.png)
 
-→  Zusammenfassung der beiden beteiligten Relationen zu einer
+→ Zusammenfassung der beiden beteiligten Relationen zu einer
 ## 1:n - Beziehung
 
 ![1:n - Beziehung](1zuN.png)

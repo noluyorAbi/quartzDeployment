@@ -1,11 +1,12 @@
 ---
 created: 2024-03-30 01:52
 last modified: 2024-03-30 01:52
-tags:
-  - DBS
-  - Erklaerung
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Saturday, 30. March 2024, 01:52
+date modified: Thursday, 4. April 2024, 15:24
 ---
+
 # Aggregatfunktionen in SQL
 
 Aggregatfunktionen in SQL sind spezielle Funktionen, die auf eine Sammlung von Werten (zum Beispiel alle Werte in einer Spalte) angewendet werden und daraus einen einzelnen Wert berechnen. Diese Funktionen sind besonders nützlich, um Zusammenfassungen, Statistiken oder andere Formen von aggregierten Daten aus Datenbankabfragen zu extrahieren. Nachfolgend sind einige der am häufigsten verwendeten Aggregatfunktionen in SQL beschrieben.
@@ -63,7 +64,7 @@ SELECT AVG(gehalt)
 FROM mitarbeiter;
 ```
 
-## MIN() und MAX()
+## MIN() Und MAX()
 
 Die `MIN()` und `MAX()` Funktionen ermitteln den kleinsten bzw. größten Wert einer Spalte.
 

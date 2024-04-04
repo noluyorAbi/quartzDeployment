@@ -1,11 +1,12 @@
 ---
 created: 2024-03-20 17:49
 last modified: 2024-03-20 17:49
-tags:
-  - DBS
-  - Erklaerung
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Wednesday, 20. March 2024, 17:49
+date modified: Thursday, 4. April 2024, 15:24
 ---
+
 # Minimale Schlüssel in Datenbanksystemen
 
 Minimale Schlüssel spielen eine entscheidende Rolle in der Struktur von Datenbanken, insbesondere im Kontext relationaler Datenbanksysteme. Sie dienen zur eindeutigen Identifikation von Datensätzen in einer Tabelle und sind fundamental für die Integrität und Effizienz der Datenverwaltung.

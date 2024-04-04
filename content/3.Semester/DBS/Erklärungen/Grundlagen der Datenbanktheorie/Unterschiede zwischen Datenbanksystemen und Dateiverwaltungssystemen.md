@@ -1,11 +1,12 @@
 ---
 created: 2024-03-14 17:56
 last modified: 2024-03-14 17:56
-tags:
-  - DBS
-  - Erklaerung
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Thursday, 14. March 2024, 17:55
+date modified: Thursday, 4. April 2024, 15:24
 ---
+
 In der Welt der Datenverwaltung spielen sowohl Datenbanksysteme als auch Dateiverwaltungssysteme eine zentrale Rolle. Obwohl beide Systeme dazu dienen, Daten zu speichern und zu verwalten, unterscheiden sie sich grundlegend in Bezug auf ihre Funktionalität, Komplexität und Einsatzgebiete. In diesem Artikel werden wir die Schlüsselunterschiede zwischen Datenbanksystemen und Dateiverwaltungssystemen erläutern.
 
 ## Einführung

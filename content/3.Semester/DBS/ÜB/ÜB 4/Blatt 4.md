@@ -1,12 +1,12 @@
 ---
 created: 2024-03-21 14:54
 last modified: 2024-03-21 14:54
-tags:
-  - DBS
-  - Übungsblatt
+tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
 Thema:
   - Relationale Algebra
+date created: Thursday, 21. March 2024, 14:54
+date modified: Thursday, 4. April 2024, 15:25
 ---
 
 # Aufgabe 4-1 **Natural Join**
@@ -37,16 +37,16 @@ $= \Pi_{R-S}(R) - \Pi_{R-S}((\Pi_{R-S}(R) \times S) - R)$
 *Bsp.: |A ∪ A| = |A|*
 
 ### a) |A ∪ B| [[Relationale Algebra#Vereinigung]]
-- |A ∪ B|  ≤  |A| + |B|
+- |A ∪ B| ≤ |A| + |B|
 
 ### b) |A − B| [[Relationale Algebra#Differenz]]
 - |A − B| = |A| − |B|
 
 ### c) |A × B| [[Relationale Algebra#Kartesisches Produkt]]
-- |A × B| =  |A| ∗ |B|
+- |A × B| = |A| ∗ |B|
 
 ### d) |ΠX,Y,...(A)| [[Relationale Algebra#Projektion]]
-- |ΠX,Y,...(A)| ≤  |A|
+- |ΠX,Y,...(A)| ≤ |A|
 
 ### e) |σf (A)| [[Relationale Algebra#Selektion]]
 - |σf (A)| ≤ |A|
@@ -109,13 +109,13 @@ Was berechnen die folgenden Ausdrucke?
 
 - **Unterschied:** Der Fokus liegt hier nicht nur darauf, _welche_ Lieferanten rote Teile liefern, sondern auch darauf, _welche spezifischen roten Teile_ sie liefern. Das Ergebnis zeigt Paare aus Lieferant und Teil, die zusammen alle roten Teile abdecken.
 
-###  b) $\Pi_{lnr}(\Pi_{lnr,pnr,tnr}(LTP) \div RT)$
+### b) $\Pi_{lnr}(\Pi_{lnr,pnr,tnr}(LTP) \div RT)$
 - Alle Lieferanten, die an mind. Ein Projekt alle roten Teile liefern
 
 - **Was es bedeutet:** Hier wird identifiziert, welche Lieferanten in der Lage sind, alle roten Teile zu liefern, wobei die Projekte, zu denen sie geliefert werden, berücksichtigt werden. Das heißt, die Lieferanten, die für mindestens ein Projekt alle roten Teile liefern können, werden aufgelistet.
 
 - **Unterschied:** Der Schwerpunkt liegt auf den Lieferanten und ihrer Fähigkeit, alle roten Teile zu liefern, allerdings mit einem zusätzlichen Kontext – den Projekten. Es geht nicht um die spezifischen Teile, sondern um die Fähigkeit der Lieferanten, alle roten Teile im Kontext von Projekten zu liefern.
-###  c) $\Pi_{lnr}(LTP \div RT)$
+### c) $\Pi_{lnr}(LTP \div RT)$
 - Alle Lieferanten, die jedes Rote Teil in jeder Menge an mind. Ein Projekt liefern
 
 - **Was es bedeutet:** Diese Abfrage zielt darauf ab, alle Lieferanten zu finden, die fähig sind, jedes rote Teil zu liefern, unabhängig von den Projekten oder der Menge. Es ist die umfassendste Abfrage, die einfach alle Lieferanten auflistet, die alle roten Teile liefern können.

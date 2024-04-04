@@ -1,10 +1,10 @@
 ---
 created: 2024-03-20 17:22
 last modified: 2024-03-20 17:22
-tags:
-  - DBS
-  - Übungsblatt
+tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
+date created: Wednesday, 20. March 2024, 17:22
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 # Aufgabe 3-1 *Schlüssel und Fremdschlüssel*
@@ -101,7 +101,7 @@ In dieser Tabelle ist `StudentenID` der minimale Schlüssel.```
 - Alle übrigen Attribute sind variable Strings.
 - Die Attribute KName, TLeiter und Bezeichnung müssen immer einen Wert enthalten.
 
-### a) Geben sie mit `CREATE TABLE` Befehle mit den dafür notwendigen Constraints zur Definition des o.g. Datenbankschemas an.  [[Data Definition Language (DDL)]]
+### a) Geben sie mit `CREATE TABLE` Befehle mit den dafür notwendigen Constraints zur Definition des o.g. Datenbankschemas an. [[Data Definition Language (DDL)]]
 
 - **Kunde**
 ```sql
@@ -189,7 +189,7 @@ Die zweite, als richtig markierte SQL-Anweisung umgeht diese Probleme:
 
 Zusammenfassend ist das "richtige" Statement korrekt, weil es die Syntax-Regeln befolgt, die von den meisten SQL-Datenbanksystemen erwartet werden.
 
-### e) Nun sollen Sie alle Tabellen wieder loschen ohne die referenzielle Integrität zu verletzen. 
+### e) Nun sollen Sie alle Tabellen wieder loschen ohne die referenzielle Integrität zu verletzen.
 
 ```sql
 DROP TABLE KTL 

@@ -1,10 +1,8 @@
 ---
-created: 2024-03-29 23:20
-last modified: 2024-03-29 23:20
-tags:
-  - DBS
-  - Übungsblatt
+tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
+date created: Friday, 29. March 2024, 23:20
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 # Aufgabe 8-1 **Anfragen in SQL** [[Aggregatfunktionen in SQL]]

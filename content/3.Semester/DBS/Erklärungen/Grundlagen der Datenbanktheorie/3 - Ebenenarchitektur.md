@@ -1,10 +1,10 @@
 ---
 created: 2024-03-12 17:27
 last modified: 2024-03-12 17:29
-tags:
-  - Erklaerung
-  - DBS
+tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
+date created: Tuesday, 12. March 2024, 17:27
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 # 3 - Ebenenarchitektur

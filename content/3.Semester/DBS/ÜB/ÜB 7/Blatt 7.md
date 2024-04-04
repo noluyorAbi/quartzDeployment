@@ -1,10 +1,10 @@
 ---
 created: 2024-03-28 15:50
 last modified: 2024-03-28 15:50
-tags:
-  - DBS
-  - Übungsblatt
+tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
+date created: Thursday, 28. March 2024, 15:50
+date modified: Thursday, 4. April 2024, 15:24
 ---
 
 Gegeben seien die Relationen `Kunde`, `Personal`, `Verkauf`, `Inventar` und `Auftragsposten` als Datenmodell für eine Möbel-Verkauf-Datenbank (vgl. Übungsblatt 4):
