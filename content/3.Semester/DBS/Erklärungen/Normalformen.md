@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Monday, 11. March 2024, 16:07
-date modified: Thursday, 4. April 2024, 20:23
+date modified: Thursday, 4. April 2024, 21:10
 ---
 
 # Warum Normalformen?
@@ -85,7 +85,7 @@ Die 2NF beseitigt **partielle funktionale Abhängigkeiten** von Nicht-Primäratt
 ## 3. Normalform (3NF)
 
 > [!tip] Merkhilfe
-> Schauen alle Abhängigkeiten an, linke Seite immer Schlüssel oder rechts immer primäre Attribute
+> Schauen alle Abhängigkeiten an, linke Seite immer Schlüssel oder rechts immer primäre Attribute, bzw. keine Abhängigkeit zwischen nicht-schlüsseln
 
 > $$\underbrace{\underbrace{mnr,fznr}_{Schlüsselkandidaten}→ baujahr, km-stand, n-preis, h-preis, ek-preis}_{Erfüllt \ 3.NF}$$
 
