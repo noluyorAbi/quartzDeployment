@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Monday, 11. March 2024, 16:07
-date modified: Thursday, 4. April 2024, 19:01
+date modified: Thursday, 4. April 2024, 20:23
 ---
 
 # Warum Normalformen?
@@ -86,8 +86,10 @@ Die 2NF beseitigt **partielle funktionale Abhängigkeiten** von Nicht-Primäratt
 
 > [!tip] Merkhilfe
 > Schauen alle Abhängigkeiten an, linke Seite immer Schlüssel oder rechts immer primäre Attribute
+
 > $$\underbrace{\underbrace{mnr,fznr}_{Schlüsselkandidaten}→ baujahr, km-stand, n-preis, h-preis, ek-preis}_{Erfüllt \ 3.NF}$$
 
+> $$\underbrace{hnr → hersteller}_{\text{Erfüllt nicht 3. NF, da linke Seite kein Schlüsselkandidat bzw. rechts kein primäres Attribut}}$$
 
 **Nicht-triviale funktionale Abhängigkeiten 𝑋 → 𝑌** bedeuten, dass das Attribut-Set 𝑌 nicht vollständig innerhalb des Attribut-Sets 𝑋 enthalten ist und 𝑌 funktional von 𝑋 abhängt. Das heißt, die Kenntnis von 𝑋 ermöglicht es eindeutig, 𝑌 zu bestimmen, ohne dass 𝑌 ein Teil von 𝑋 ist. 
 
@@ -99,8 +101,10 @@ In der 3. Normalform (3NF) wird gefordert, dass:
 
 Die **3NF** baut auf der **2. Normalform (2NF)** auf und zielt darauf ab, transitive Abhängigkeiten zwischen Nicht-Schlüsselattributen zu beseitigen. Das heißt, es dürfen keine funktionalen Abhängigkeiten zwischen Nicht-Schlüsselattributen bestehen, die über einen Umweg (transitiv) von einem Schlüsselkandidaten abhängen. So wird sichergestellt, dass die Relationen frei von Anomalien sind, die bei Einfüge-, Lösch- oder Änderungsoperationen entstehen können, und dass die Datenintegrität gewahrt bleibt.
 
+[[Blatt 10#Aufgabe 10-3 ** Normalformen 3. Normalform (3NF) **|Anwendungsbeispiel]]
+
 <details> 
-<summary>### Beispiel</summary>
+<summary>### Weiteres Beispiel</summary>
 
 Stellen wir uns eine Datenbanktabelle `Angestellter` vor, die folgende Spalten hat:
 
@@ -142,12 +146,53 @@ Der Synthesealgorithmus wird verwendet, um ein beliebiges Relationenschema R mit
 
 ---
 
-# Boyce–Codd Normalform (BCNF)
+# Boyce-Codd-Normalform (BCNF)
 
-Für alle nicht-trivialen funktionalen Abhängigkeiten 𝑋 → 𝑌 gilt:
-- 𝑋 enthält Schlüsselkandidaten.
+> [!tip] Merkhilfe
+> Jede Abhängigkeit schaut streng auf Superkeys. Jede linke Seite ist ein Superkey.
+> Also falls **X nicht primär** ist und ** Y primär** ist es **KEIN BCNF**
+> 
 
-Die BCNF beseitigt funktionale Abhängigkeiten under Attribute, die primär sind, aber nicht vollständig einen Schlüssel bilden. BCNF impliziert die 3. Normalform, aber man kann nicht immer eine BCNF-Zerlegung finden, die die Abhängigkeiten bewahrt.
+> $$\underbrace{SK \rightarrow A}_{\text{Erfüllt BCNF, da linke Seite ein Superkey}}$$
 
----
+> $$\underbrace{X \rightarrow Y}_{\text{Erfüllt nicht BCNF, da X kein Superkey}}$$
 
+Die **Boyce-Codd-Normalform (BCNF)** ist eine Verschärfung der 3. Normalform, die zusätzlich verlangt, dass:
+- 3.NF ist erfüllt
+- *Für alle nicht-trivialen funktionalen Abhängigkeiten 𝑋 → 𝑌 in einer Relation, muss 𝑋 ein Superkey sein*. bzw. *𝑋 enthält Schlüsselkandidaten.*
+- Ein *Superkey* ist eine Attributkombination, die so erweitert ist, dass sie alle Attribute in einer Relation eindeutig identifiziert. Jeder Superkey ist auch ein Schlüsselkandidat, aber nicht jeder Schlüsselkandidat ist ein Superkey.
+
+BCNF zielt darauf ab, verbleibende Anomalien zu beseitigen, die in 3NF noch möglich sind, insbesondere solche, die aus funktionalen Abhängigkeiten resultieren, bei denen die linke Seite kein Schlüsselkandidat ist. Dies stellt sicher, dass keine Abhängigkeiten von Nicht-Superkeys zu anderen Attribute bestehen, wodurch Redundanzen und Anomalien weiter reduziert werden.
+
+[[Blatt 10#Aufgabe 10-4 Normalformen Boyce–Codd Normalform (BCNF)|Anwendungsbeispiel]]
+
+<details>
+<summary>### Weiteres Beispiel</summary>
+
+Ein Beispiel, das oft zur Illustration von BCNF verwendet wird, betrifft eine Tabelle `Vorlesung` mit folgenden Attribute:
+
+- `Dozent`
+- `Fach`
+- `Raum`
+
+Angenommen, die funktionalen Abhängigkeiten sind wie folgt:
+
+- `Dozent, Fach → Raum`
+- `Raum → Dozent`
+
+Hier erfüllt die Tabelle die 3NF, da keine transitiven Abhängigkeiten zwischen Nicht-Schlüsselattributen bestehen. Jedoch ist `Raum` kein Superkey, was zu Redundanz führen kann, da derselbe Dozent in verschiedenen Fächern denselben Raum nutzen könnte.
+
+**Um BCNF zu erreichen**, könnte die Tabelle wie folgt aufgeteilt werden:
+
+1. `DozentFach`:
+   - `Dozent`
+   - `Fach`
+   - (Primärschlüssel könnte hier eine Kombination aus Dozent und Fach sein)
+
+2. `RaumZuweisung`:
+   - `Raum`
+   - `Dozent`
+   - (Primärschlüssel wäre hier `Raum`, wenn wir annehmen, dass ein Raum zu einer Zeit nur von einem Dozenten genutzt werden kann)
+
+Durch diese Aufteilung wird sichergestellt, dass in jeder Relation alle nicht-trivialen funktionalen Abhängigkeiten von einem Superkey abhängen, wodurch die BCNF erfüllt wird.
+</details>

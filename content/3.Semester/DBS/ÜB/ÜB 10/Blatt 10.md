@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Thursday, 4. April 2024, 15:04
-date modified: Thursday, 4. April 2024, 19:08
+date modified: Thursday, 4. April 2024, 20:28
 Thema:
   - "[[Normalformen]]"
   - "[[Anomalien in Datenbanksystemen]]"
@@ -110,9 +110,68 @@ $$   Hersteller(\underline{hnr}, hersteller)$$
 
 Durch diese Änderung wird sichergestellt, dass:
 - Jedes Attribute in **Fahrzeug** und **Model** entweder ein Primärattribut ist oder voll funktional von dem Primärschlüssel abhängt, ohne transitive Abhängigkeiten.
-- Die neue Relation **HerstellerInfo** speichert die Zuordnung zwischen `hnr` und `hersteller`, wobei `hersteller` direkt von `hnr` abhängig ist und somit die 3NF erfüllt.
+- Die neue Relation **Hersteller** speichert die Zuordnung zwischen `hnr` und `hersteller`, wobei `hersteller` direkt von `hnr` abhängig ist und somit die 3NF erfüllt.
 
-### Fazit:
-Das überarbeitete Schema erfüllt nun die Kriterien der 3. Normalform. Es wurden alle transitiven Abhängigkeiten entfernt, indem die Informationen in separate Relationen aufgeteilt wurden, wodurch die Datenintegrität und die Reduktion von Redundanzen verbessert werden.******
-**
-**
+### Zusammenfassend:
+Das überarbeitete Schema erfüllt nun die Kriterien der 3. Normalform. Es wurden alle transitiven Abhängigkeiten entfernt, indem die Informationen in separate Relationen aufgeteilt wurden, wodurch die Datenintegrität und die Reduktion von Redundanzen verbessert werden.
+
+$$\text{Fahrzeug}(\underline{\text{mnr}}, \underline{\text{fznr}}, \text{baujahr}, \text{km-stand}, \text{n-preis}, \text{h-preis}, \text{ek-preis})$$
+$$\text{Modell}(\underline{\text{mnr}}, \text{hnr}, \text{typ}, \text{ps})$$
+$$\text{Hersteller}(\underline{\text{hnr}}, \text{hersteller})$$
+
+
+> 1. Für die funktionale Abhängigkeit innerhalb der **Relation Model**:
+>$$\underbrace{mnr \rightarrow hnr, hersteller, typ, ps}_{\text{Erfüllt \ 3.NF, da die linke Seite (mnr) ein Schlüsselkandidat ist}}$$
+
+
+> 2. Für die funktionale Abhängigkeit, die durch die **Relation Hersteller** adressiert wird:
+>$$\underbrace{hnr \rightarrow hersteller}_{\text{Erfüllt \ 3.NF, da die linke Seite (hnr) ein Schlüsselkandidat der Relation Hersteller ist}}$$
+
+
+>3. Für die funktionale Abhängigkeit innerhalb der **Relation Fahrzeug**:
+>$$\underbrace{\underbrace{mnr, fznr}_{\text{Schlüsselkandidaten}} \rightarrow baujahr, km-stand, n-preis, h-preis, ek-preis}_{\text{Erfüllt \ 3.NF}}$$
+
+--- 
+
+# Aufgabe 10-4 [[Normalformen#Boyce–Codd Normalform (BCNF)]]
+
+>[!note] Aufgabenstellung
+>Geben Sie ein beliebiges Beispiel an, bei dem das Einhalten der 3.NF noch nicht zu einem "guten" Datenbankdesign führt, sondern erst die Zerlegung in ein der Boyce-Codd-NF genügendes Schema alle Redundanzen beseitigt.
+
+**Beispiel:**
+$$FLS=\{\underline{Fach},Lehrer,\underline{Schüler}\}$$
+*Es gilt:* 
+- Jeder Schüler hat einen Lehrer pro Fach: 
+	- 𝑆𝑐ℎü𝑙𝑒𝑟, 𝐹𝑎𝑐ℎ → 𝐿𝑒ℎ𝑟𝑒r
+- Jeder Lehrer Vertritt nur ein Fach (aber zu jedem Fach kann es mehrere Lehrer geben: 
+	- 𝐿𝑒ℎ𝑟𝑒𝑟 → 𝐹𝑎𝑐ℎ
+	- X ist primär aber Y primär → <span style="color:red">Kein BCNF</span> [[Normalformen#Boyce-Codd-Normalform (BCNF)|(siehe Merkhilfe)]]
+
+*Schlüsselkandidaten sind:*
+$$SKs = \{\{Schüler,Fach\},\{Schüler, Lehrer\}\}$$
+
+*Diese funktionalen Abhängigkeiten führen zu den Schlüsselkandidaten:*
+- {Schüler, Fach}, weil ein Schüler für jedes Fach genau einen Lehrer hat. Dieses Attributpaar kann jede Tuple in der Relation eindeutig identifizieren.
+- {Schüler, Lehrer}, weil, obwohl ein Lehrer nur ein Fach unterrichtet, ein Schüler bei verschiedenen Lehrern in unterschiedlichen Fächern sein kann. Daher kann die Kombination aus Schüler und Lehrer auch jede Tuple eindeutig identifizieren.
+## Normalformen:
+
+#### 2.NF: Jedes Attribute ist prim
+#### 3NF: ((Schüler,Fach) Enthält SK und Fach ist prim) -> auch 2NF und 1NF
+#### BCNF: (Lehrer enthält keinen SK) → <span style="color:red">Kein BCNF</span>
+
+## Anomalien:
+
+- Einfügen: kein Lehrer mit zugehörigem Fach ohne Schüler
+- Entfernen: mit letztem Schüler wird Info über Lehrer und Fach gelöscht
+
+## BCNF:
+
+Die Relationen in BCNF sind:
+
+$$LehrerFach(\underline{Lehrer}, Fach)$$
+$$ SchülerLehrer(\underline{Schüler}, \underline{Lehrer})$$
+$$\rightarrow Nicht abhängigkeitserhaltend$$
+
+### Was bedeutet "nicht abhängigkeitserhaltend"?
+
+Eine Zerlegung einer Relation in eine Normalform ist "nicht abhängigkeitserhaltend", wenn nach der Zerlegung nicht alle ursprünglichen funktionalen Abhängigkeiten direkt in den zerlegten Relationen abgebildet werden können. Das bedeutet, dass manche funktionalen Abhängigkeiten möglicherweise nur durch das Joinen mehrerer Relationen rekonstruiert werden können. Dies kann die Integrität und die Konsistenz der Datenbank beeinträchtigen, da zusätzliche Einschränkungen erforderlich sind, um sicherzustellen, dass die ursprünglichen Abhängigkeiten gewahrt bleiben.

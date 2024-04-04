@@ -4,7 +4,7 @@ last modified: 2024-03-11 20:37
 fach: "[[DBS]]"
 tags: [DBS]
 date created: Monday, 11. March 2024, 20:37
-date modified: Thursday, 4. April 2024, 18:23
+date modified: Thursday, 4. April 2024, 19:15
 ---
 
 # Verzeichnis
@@ -24,6 +24,7 @@ date modified: Thursday, 4. April 2024, 18:23
 - [[Aggregatfunktionen in SQL]]
 - [[ER-Modell|ER-Modell]]
 - [[Normalformen]]
+- [[Schlüsselkandidat vs. Primäres Attribut]]
 
 
 
