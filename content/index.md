@@ -8,7 +8,7 @@ date modified: Thursday, 4. April 2024, 15:55
 # Modules
 
 - [[DBS|Datenbanksysteme (DBS)]]
-- [[SWT|Softwaretechnick (SWT)]]
+- [[SWT|Softwaretechnick (SWT)]] (coming soon)
 # Semester
 
 - [[3.Semester]]
