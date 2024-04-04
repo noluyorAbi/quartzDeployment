@@ -4,7 +4,7 @@ last modified: 2024-03-14 18:09
 tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
 date created: Thursday, 14. March 2024, 18:09
-date modified: Thursday, 4. April 2024, 15:24
+date modified: Thursday, 4. April 2024, 16:56
 ---
 
 # Anomalien in Datenbanksystemen
@@ -15,7 +15,7 @@ In Datenbanksystemen können Anomalien auftreten, wenn die Datenstruktur nicht s
 
 - **Beschreibung**: Schwierigkeiten beim Hinzufügen neuer Daten.
 - **Problem**: Notwendige Daten fehlen, um einen neuen Eintrag hinzuzufügen, weil jede Information in der Tabelle von anderen abhängig ist.
-- **Beispiel**: Ein neues Produkt kann nicht hinzugefügt werden, ohne dass ein zugehöriger Kunde existiert.
+- **Beispiel**: Ein neues Product kann nicht hinzugefügt werden, ohne dass ein zugehöriger Kunde existiert.
 
 ## Entfernungsanomalie
 
@@ -27,13 +27,13 @@ In Datenbanksystemen können Anomalien auftreten, wenn die Datenstruktur nicht s
 
 - **Beschreibung**: Inkonsistenzen beim Ändern von Daten.
 - **Problem**: Änderungen an Daten in einer Tabelle müssen mehrfach durchgeführt werden, um Konsistenz zu gewährleisten.
-- **Beispiel**: Ändern der Adresse eines Kunden erfordert mehrere Änderungen, wenn der Kunde mehrmals in der Tabelle aufgeführt ist.
+- **Beispiel**: Ändern der Address eines Kunden erfordert mehrere Änderungen, wenn der Kunde mehrmals in der Tabelle aufgeführt ist.
 
 ## Redundanz
 
 - **Beschreibung**: Überflüssige Kopien von Daten.
 - **Problem**: Mehrfache und unnötige Speicherung derselben Daten, was zu Speicherplatzverschwendung und potenziellen Inkonsistenzen führt.
-- **Beispiel**: Ein Kunde ist mit der gleichen Adresse in mehreren Datensätzen gespeichert, was zu Schwierigkeiten bei der Aktualisierung führt.
+- **Beispiel**: Ein Kunde ist mit der gleichen Address in mehreren Datensätzen gespeichert, was zu Schwierigkeiten bei der Aktualisierung führt.
 
 ## Vermeidung von Anomalien
 
