@@ -20,6 +20,11 @@ export default (() => {
 
     return (
       <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1763484998384870"
+          crossorigin="anonymous"
+        ></script> {/* AdSense Script */}
         <title>{title}</title>
         <meta charSet="utf-8" />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
