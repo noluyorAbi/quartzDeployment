@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Friday, 5. April 2024, 23:02
-date modified: Saturday, 6. April 2024, 01:43
+date modified: Saturday, 6. April 2024, 01:50
 ---
 
 # Aufgabe 11-1 [[Normalformen#Synthesealgorithmus]]
@@ -78,6 +78,13 @@ Es gibt hier nichts zu ändern, da links jeweils nur ein Attribute steht
 ### Relationsschema erzeugen
 
 $$R_1(\underline{ChefPersNr},ChefName)$$
+$$~{R_2(\underline{PersNr},Name, Fachgebiet, ChefPersNr, ChefName)}$$
+$$~{R_3(\underline{MatrNr},PersNr, Name, Fachgebiet, ChefPersNr, ChefName, StudName, Semester, StudWohnOrt)}$$
 
-$$R_2(\underline{PersNr},Name, Fachgebiet, ChefPersNr, ChefName)$$
-$$R_3(\underline{MatrNr},PersNr, Name, Fachgebiet, ChefPersNr, ChefName, StudName, Semester, StudWohnOrt**)$$
+### Rekonstruktion eines Schlüsselkandidaten:
+
+→ Diplomand enthält Schlüsselkandidaten (MatrNr)
+
+### Elimination überflüssiger Relationen
+
+→ nichts zu tun
