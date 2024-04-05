@@ -62,6 +62,9 @@ Eine Zerlegung von Relation 𝑅 in 𝑅1, … , 𝑅𝑛 ist:
 
 ## 1. Normalform (1NF)
 
+> [!tip] Merkhilfe
+> Alle Attribute sind atomar
+
 Alle Attribute enthalten atomare Werte (String, Integer, …) und keine Tuple, Listen, usw. In relationalen Datenbanken sind nicht-atomare Werte nicht erlaubt/möglich, daher sind relationale Datenbanken immer in 1. Normalform.
 
 → In dieser Vorlesung oft schon erfüllt.
@@ -70,6 +73,9 @@ Alle Attribute enthalten atomare Werte (String, Integer, …) und keine Tuple, L
 
 ## 2. Normalform (2NF)
 
+> [!tip] Merkhilfe
+> *1.NF* + jedes Nicht-Schlüssel-Attribut (NSA) ist voll funktional abhängig vvon jedem Schlüsselkandidaten
+ 
 Für jedes Attribute A in einer Relation gilt in der 2. Normalform, dass:
 - A ein Primärattribut ist (also Teil eines Schlüsselkandidaten) oder
 - A voll funktional abhängig von jedem Schlüsselkandidaten ist.

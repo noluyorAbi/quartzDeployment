@@ -4,14 +4,14 @@ last modified: 2024-03-12 16:59
 tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
 date created: Monday, 11. March 2024, 17:10
-date modified: Thursday, 4. April 2024, 15:24
+date modified: Friday, 5. April 2024, 23:06
 ---
 
 # Aufgabe 2-1 *Datenbanksysteme – Dateiverwaltungssysteme*
 
 ## Erläutern Sie die Vorteile, die Datenbanksysteme gegenüber Dateiverwaltungssystemen durch die [[3 - Ebenenarchitektur]] (Externe, Interne, Konzeptionelle Ebene) besitzen. Insbesondere soll dabei auf folgende Punkte eingegangen werden: [[Unterschiede zwischen Datenbanksystemen und Dateiverwaltungssystemen]]
 
-### a) Erweiterung der abgespeicherten Datensatze um ein Attribut
+### a) Erweiterung der abgespeicherten Datensatze um ein Attribute
 
 | Dateiverwaltungssystem                                                                           | Datenbanksystem                                                                                           |
 | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
@@ -50,24 +50,24 @@ Diese Datenbank dient dazu, einen Überblick über das Angebot des Geschäfts zu
 
 ## a) Welcher Nachteil ergibt sich, wenn die Tabelle nach obigem Schema gespeichert wird? [[Anomalien in Datenbanksystemen]]
 
-- Mitarbeiterzahl existiert mehrmals in der Tabelle als nötig ([[Anomalien in Datenbanksystemen#Redundanz|Redundanz]])
+- Mitarbeiterzahl existiert mehrmals in der Tabelle also nötig ([[Anomalien in Datenbanksystemen#Redundanz|Redundanz]])
 - Es kann kein Studio existieren ohne Spiel, was nicht der Realität entspricht. Es müssen immer ganze Zeilen eingefügt werden ([[Anomalien in Datenbanksystemen#Einfügeanomalie|Einfügeanomalie]])
 - Bei einer Änderung der Mitarbeiteranzahl müssen mehrere Zeilen geändert werden was unnötigen Overhead darstellt. ([[Anomalien in Datenbanksystemen#Änderungsanomalie|Änderungsanomalie]])
 - Beim Löschen gehen Informationen verloren die nicht verloren gehen sollten. Bsp. beim löschen von E.T geht auch die Information der Mitarbeiteranzahl von Atari verloren. ([[Anomalien in Datenbanksystemen#Entfernungsanomalie|Entfernungsanomalie]])
 
 ## b) LucasArts stellt einen neuen Mitarbeiter ein. Der Geschäftsführer besteht darauf das diese wichtige Information sofort aktualisiert wird. Was ist beim Aktualisieren der Tabelle zu beachten? Welches Problem ergibt sich sonst?
 
-- Da die Mitarbeiteranzahl bei jedem Spiel gespeichert wird muss sie in jeder Zeile wo LucasArts als Studio vertreten ist geändert werden. Das ist unnötige Arbeit welche zu Fehlern und einer inkonsistenten Datenbank führen kann, falls diese Info nicht in jeder Zeile umgeändert wird. Dies nennt man auch [[Anomalien in Datenbanksystemen#Änderungsanomalie|Änderungsanomalie.]]
+- Da die Mitarbeiteranzahl bei jedem Spiel gespeichert wird muss sie in jeder Zeile wo LucasArts also Studio vertreten ist geändert werden. Das ist unnötige Arbeit welche zu Fehlern und einer inkonsistenten Datenbank führen kann, falls diese Info nicht in jeder Zeile umgeändert wird. Dies nennt man auch [[Anomalien in Datenbanksystemen#Änderungsanomalie|Änderungsanomalie.]]
 
 ## c) Niemand kauft das Spiel "E.T. the Extra-Terrestrial", und der Laden nimmt es daher aus seinem Sortiment (und vergräbt es auf einer Müllhalde...). Die entsprechende Zeile wird aus der Tabelle entfernt. Welcher Nachteil entsteht dadurch?
 
-- Es kommt zu einer [[Anomalien in Datenbanksystemen#Entfernungsanomalie|Entfernungsanomalie]], da mehrere Informationen mit der Löschung des Spieles aus der Tabelle hervorkommen. Da E.T das einzige Spiel von ATARI in der Liste ist, verlieren wir zudem ATARI als Studio und deren Mitarbeiterzahl. Beides Sachen welche nur aus Folge gelöscht wurden und nicht weil es das Ziel war.
+- Es kommt zu einer [[Anomalien in Datenbanksystemen#Entfernungsanomalie|Entfernungsanomalie]], da mehrere Informationen mit der Löschung des Spieles aus der Tabelle hervorkommen. Da E.T das einzige Spiel von ATARI in der Liste ist, verlieren wir zudem ATARI also Studio und deren Mitarbeiterzahl. Beides Sachen welche nur aus Folge gelöscht wurden und nicht weil es das Ziel war.
 
 ## d) Welches Problem ergibt sich, wenn ein neues Studios inkl. Mitarbeiteranzahl in die Tabelle eingefügt werden soll, für das noch kein Spiel verkauft wird.
 
 - Es kann kein Studio hinzugefügt werden, was noch kein Spiel veröffentlicht hat, da sonst notwendige Inforamtionen wie Spiel und Erscheinungsdatum in der Zeile fehlen → [[Anomalien in Datenbanksystemen#Einfügeanomalie|Einfügeanomalie]]
 
-## e) Spalten Sie obige Tabelle in mindestens zwei Tabellen auf, so dass die in (a) bis (d) diskutierten Probleme und Nachteile vermieden werden. Kennzeichnen Sie hierbei die Schlüssel. Nehmen Sie an, dass alle Namen eindeutig sind. Fuhren Sie keine künstlichen Attribute ein.
+## e) Spalten Sie obige Tabelle in mindestens zwei Tabellen auf, so dass die in (a) bis (d) diskutierten Problem und Nachteile vermieden werden. Kennzeichnen Sie hierbei die Schlüssel. Nehmen Sie an, dass alle Namen eindeutig sind. Fuhren Sie keine künstlichen Attribute ein.
 
 ### Tabelle Studios
 
@@ -87,4 +87,4 @@ Diese Datenbank dient dazu, einen Überblick über das Angebot des Geschäfts zu
 
 ---
 
-Als nächstes: [[Blatt 3]]
+Also nächstes: [[Blatt 3]]

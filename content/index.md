@@ -1,8 +1,10 @@
 ---
+tags: 
+fach: 
 title: University Notes
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Thursday, 4. April 2024, 18:44
+date modified: Friday, 5. April 2024, 23:02
 ---
 
 # Modules

@@ -1,6 +1,8 @@
 ---
+tags: 
+fach: 
 date created: Monday, 11. March 2024, 17:07
-date modified: Thursday, 4. April 2024, 15:25
+date modified: Friday, 5. April 2024, 23:06
 ---
 
 # Übungsblätter
