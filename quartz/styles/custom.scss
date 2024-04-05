@@ -1,7 +1,26 @@
+// Importiere deine Basis-SCSS-Datei
 @use "./base.scss";
 
-// put your custom CSS here!
+// Benutzerdefinierte Scrollbar-Stile für ein dunkles Thema
+::-webkit-scrollbar {
+  width: 12px; // Breite der vertikalen Scrollbar
+  height: 12px; // Höhe der horizontalen Scrollbar
+}
 
+::-webkit-scrollbar-track {
+  background: #2e2e2e; // Dunkle Hintergrundfarbe des Scrollbar-Tracks
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555; // Dunklere Hintergrundfarbe des Scrollbar-Griffs
+  border-radius: 6px; // Abrundung der Ecken des Scrollbar-Griffs
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 188, 227); // Hintergrundfarbe des Scrollbar-Griffs beim Hover
+}
+
+// Anwendung des dunklen Themas auf Elemente mit Overflow
 p,
 ul,
 text,
@@ -15,6 +34,97 @@ ul,
 .math {
   overflow-wrap: anywhere;
   hyphens: auto;
-  overflow-x: auto;
-  overflow-y: clip;
+  overflow-x: auto; // Erlaubt horizontalen Overflow mit Scrollbar
+  overflow-y: clip; // Verhindert vertikalen Overflow
+  scrollbar-width: thin; // Für Firefox
+  scrollbar-color: #555 #2e2e2e; // Scrollbar-Farbe für ein dunkles Thema in Firefox
 }
+
+/* ------------------------------------------------------------------------------------------- */
+
+/* [saved-theme="dark"] {
+  article {
+    h1 {
+      color: rgb(0, 188, 227); 
+    }
+    h2 {
+      color: rgb(0, 123, 149); 
+    }
+    h3 {
+      color: rgb(0, 74, 90); 
+    }
+    h4 {
+      color: rgb(161, 140, 190); 
+    }
+    h5 {
+      color: rgb(180, 142, 173); 
+    }
+    h6 {
+      color: rgb(208, 135, 112); 
+    }
+  }
+
+  strong,
+  code {
+    color: rgb(216, 222, 233); 
+  }
+
+  span.text-highlight {
+    background-color: rgba(163, 190, 140, 0.3); 
+  }
+
+  em {
+    color: rgb(129, 161, 193); 
+  }
+
+  ::selection {
+    background: rgb(76, 86, 106); 
+  }
+}
+
+[saved-theme="light"] {
+  article {
+    h1 {
+      color: #8c4308;
+    }
+
+    h2 {
+      color: rgb(143, 94, 21);
+    }
+
+    h3 {
+      color: #33635c;
+    }
+
+    h4 {
+      color: rgb(15, 75, 110);
+    }
+
+    h5 {
+      color: rgb(52, 84, 138);
+    }
+
+    h6 {
+      color: rgb(90, 74, 120);
+    }
+  }
+
+  strong {
+    color: #0f4b6e !important;
+  }
+
+  em {
+    color: #0f4b6e !important;
+  }
+
+  code {
+    color: #343b58 !important; 
+    background-color: #c3c5c9;
+  }
+
+  span.text-highlight {
+    color: #343b58 !important;
+    background: #bca093 !important;
+  }
+}
+ */

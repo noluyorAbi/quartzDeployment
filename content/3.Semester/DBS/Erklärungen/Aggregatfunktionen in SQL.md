@@ -4,7 +4,7 @@ last modified: 2024-03-30 01:52
 tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
 date created: Saturday, 30. March 2024, 01:52
-date modified: Thursday, 4. April 2024, 15:24
+date modified: Friday, 5. April 2024, 01:47
 ---
 
 # Aggregatfunktionen in SQL
@@ -13,7 +13,7 @@ Aggregatfunktionen in SQL sind spezielle Funktionen, die auf eine Sammlung von W
 
 ## COUNT()
 
-Die `COUNT()` Funktion zählt die Anzahl der Zeilen, die einem bestimmten Kriterium entsprechen.
+Die `COUNT()` Function zählt die Anzahl der Zeilen, die einem bestimmten Kriterium entsprechen.
 
 ```sql
 SELECT COUNT(column_name)
@@ -30,7 +30,7 @@ FROM mitarbeiter;
 
 ## SUM()
 
-Die `SUM()` Funktion summiert die Werte einer bestimmten Spalte.
+Die `SUM()` Function summiert die Werte einer bestimmten Spalte.
 
 ```sql
 SELECT SUM(column_name)
@@ -47,7 +47,7 @@ FROM mitarbeiter;
 
 ## AVG()
 
-Die `AVG()` Funktion berechnet den Durchschnittswert einer bestimmten Spalte.
+Die `AVG()` Function berechnet den Durchschnittswert einer bestimmten Spalte.
 
 ```sql
 SELECT AVG(column_name)
@@ -56,7 +56,7 @@ WHERE condition;
 ```
 
 - **Beispiel**: Berechnung des Durchschnittsgehalts der Mitarbeiter.
-- <b style="color:red;">Achtung!</b> Average benötigt bei mehr als einer Attribute im `SELECT` [[Aggregatfunktionen in SQL#GROUP BY|GROUP BY]]  
+- <b style="color:red;">Achtung!</b> Average benötigt bei mehr also einer Attribute im `SELECT` [[Aggregatfunktionen in SQL#GROUP BY|GROUP BY]]  
 
 
 ```sql
@@ -74,7 +74,7 @@ FROM table_name
 WHERE condition;
 ```
 
-- **Beispiel**: Ermittlung des niedrigsten und höchsten Gehalts unter den Mitarbeitern.
+- **Beispiel**: Ermittlung des niedrigsten und höchsten Gehalts under den Mitarbeitern.
 
 ```sql
 SELECT MIN(gehalt), MAX(gehalt)

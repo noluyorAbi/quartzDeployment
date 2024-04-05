@@ -4,7 +4,7 @@ last modified: 2024-03-12 17:29
 tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
 date created: Tuesday, 12. March 2024, 17:27
-date modified: Thursday, 4. April 2024, 15:24
+date modified: Friday, 5. April 2024, 01:44
 ---
 
 # 3 - Ebenenarchitektur
@@ -42,4 +42,4 @@ Die 3-Ebenen-Architektur ist ein Rahmenwerk für Datenbanksysteme, das eine effi
   - Änderungen an der physischen Speicherung (wie Änderungen in der Dateiorganisation oder den Zugriffsmethoden) wirken sich nicht auf die Anwendungsschicht aus.
   - Optimierungen der Datenbankperformance können durchgeführt werden, ohne die Anwendungslogik oder Benutzerinteraktionen zu stören.
 
-Durch die Implementierung dieser Architektur und die Einhaltung der Prinzipien der logischen und physischen Datenunabhängigkeit kann ein Datenbanksystem flexibel, zuverlässig und wartungsfreundlich gestaltet werden, wobei es gleichzeitig eine hohe Datenqualität und Anwendungsfreundlichkeit bietet.
+Durch die Implementierung dieser Architektur und die Einhaltung der Prinzipien der logischen und physischen Datenunabhängigkeit kann ein Datenbanksystem flexible, zuverlässig und wartungsfreundlich gestaltet werden, wobei es gleichzeitig eine hohe Datenqualität und Anwendungsfreundlichkeit bietet.
