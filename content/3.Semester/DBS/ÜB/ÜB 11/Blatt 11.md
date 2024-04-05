@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Friday, 5. April 2024, 23:02
-date modified: Saturday, 6. April 2024, 01:25
+date modified: Saturday, 6. April 2024, 01:43
 ---
 
 # Aufgabe 11-1 [[Normalformen#Synthesealgorithmus]]
@@ -40,9 +40,11 @@ date modified: Saturday, 6. April 2024, 01:25
 >Schritte des Synthesealgorithmus:
 >- Linksreduktion
 >- Rechtsreduktion
->- Entfernen überflüssiger Abhängigkeiten
->- Zusammenfassen
->- Relationsschema erzeugen 
+>- Entfernung von rechtsleeren Abhängigkeiten
+>- Zusammenfassen von Abhängigkeiten mit gleicher linker Seite
+>- Neues Relationsschema erzeugen 
+>- Rekonstruktion eines Schlüsselkandidaten:
+>- Elimination überflüssiger Relationen
 
 ### Linksreduktion
 
@@ -54,26 +56,28 @@ Es gibt hier nichts zu ändern, da links jeweils nur ein Attribute steht
 
 ### Rechtsreduktion
 
-- ChefPersNr → ChefName
-	- ChefPersNr → $\emptyset$
-	- ChefName kommt in PersNr vor
+- **ChefPersNr → ChefName**
+	- bleibt unverändert
 
-- PersNr → Name, Fachgebiet, ChefPersNr, ChefName
-	- PersNr → $\emptyset$
-	- kommt alles auch in MatrNr vor
+- **PersNr → Name, Fachgebiet, ChefPersNr, ChefName**
+	- wird zu *PersNr → Name, Fachgebiet, ChefPersNr*
+	- weil Chefname kommt in ChefPersNr schon vor 
 
-- MatrNr → PersNr, Name, Fachgebiet, ChefPersNr, ChefName, StudName, Semester, StudWohnOrt
+- **MatrNr → PersNr, Name, Fachgebiet, ChefPersNr, ChefName, StudName, Semester, StudWohnOrt**
+	- wird zu: *MatrNr → PersNr,, StudName, Semester, StudWohnOrt*
+	- alles Andere kommts schon in PersNr und ChefPersNr vor
 
-### Entfernen überflüssiger Abhängigkeiten
+### Entfernung von rechtsleeren Abhängigkeiten
 
+- gibt keine überflüssige Abhängigkeit
 
+### Zusammenfassen von Abhängigkeiten mit gleicher linker Seite
 
-### Zusammenfassen
-
-
-
-$$nix \ zu  \ tun, \ bleibt \ also \ so $$
+- keine gleiche linke Seite
 
 ### Relationsschema erzeugen
 
+$$R_1(\underline{ChefPersNr},ChefName)$$
 
+$$R_2(\underline{PersNr},Name, Fachgebiet, ChefPersNr, ChefName)$$
+$$R_3(\underline{MatrNr},PersNr, Name, Fachgebiet, ChefPersNr, ChefName, StudName, Semester, StudWohnOrt**)$$
