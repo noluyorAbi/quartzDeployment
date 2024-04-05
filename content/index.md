@@ -40,3 +40,6 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
   gtag('config', 'G-E24ELVW963');
 
 </script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1763484998384870"
+     crossorigin="anonymous"></script>
