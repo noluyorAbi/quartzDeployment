@@ -20,7 +20,7 @@ Ein umfassender Leitfaden zur Vertiefung in die Welt der Datenbanksysteme, struk
 - [[Anomalien in Datenbanksystemen]]: Erklärung von Designproblemen, die zu Anomalien in Daten führen können.
 - [[Minimale Schlüssel]]: Diskussion über die Bestimmung minimaler Schlüssel in einer Datenbank.
 - [[Referenzielle Integrität]]: Die Wichtigkeit der Beziehungserhaltung zwischen Datenbanktabellen.
-- [[Normalformen]]: Ein Leitfaden zu den Normalformen für die Optimierung von Datenbankdesigns.
+- [[Normalformen und Synthesealgorithmus]]: Ein Leitfaden zu den Normalformen für die Optimierung von Datenbankdesigns.
 - [[Schlüsselkandidat vs. Primäres Attribut]]: Unterschiede und Bedeutungen in der Datenbankstruktur.
 
 ## SQL-Techniken
@@ -55,7 +55,7 @@ Dieses Verzeichnis dient also Navigationshilfe und Referenzrahmen für Studieren
 - [[Erweiterte Abfragen in SQL]]
 - [[Aggregatfunktionen in SQL]]
 - [[ER-Modell|ER-Modell]]
-- [[Normalformen]]
+- [[Normalformen und Synthesealgorithmus]]
 - [[Schlüsselkandidat vs. Primäres Attribut]]
 
 

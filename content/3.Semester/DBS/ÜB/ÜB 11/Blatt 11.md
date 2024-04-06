@@ -4,10 +4,10 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Friday, 5. April 2024, 23:02
-date modified: Saturday, 6. April 2024, 01:50
+date modified: Saturday, 6. April 2024, 02:06
 ---
 
-# Aufgabe 11-1 [[Normalformen#Synthesealgorithmus]]
+# Aufgabe 11-1 [[Normalformen und Synthesealgorithmus#Synthesealgorithmus]]
 
 
 >[!note] Aufgabenstellung
@@ -78,7 +78,9 @@ Es gibt hier nichts zu ändern, da links jeweils nur ein Attribute steht
 ### Relationsschema erzeugen
 
 $$R_1(\underline{ChefPersNr},ChefName)$$
+
 $$~{R_2(\underline{PersNr},Name, Fachgebiet, ChefPersNr, ChefName)}$$
+
 $$~{R_3(\underline{MatrNr},PersNr, Name, Fachgebiet, ChefPersNr, ChefName, StudName, Semester, StudWohnOrt)}$$
 
 ### Rekonstruktion eines Schlüsselkandidaten:
@@ -88,3 +90,38 @@ $$~{R_3(\underline{MatrNr},PersNr, Name, Fachgebiet, ChefPersNr, ChefName, StudN
 ### Elimination überflüssiger Relationen
 
 → nichts zu tun
+
+---
+
+# Aufgabe 11-2 [[Kombinatorik von Schedules#Kombinatorik von Schedules]]
+
+>[!note] Aufgabenstellung
+>Gegeben sei eine Menge von n Transaktionen **{T1, ..., Tn}**, wobei jede Transaktion **Ti** aus vielen Einzeloperationen besteht:
+>**Ti = ⟨Ai,1, Ai,2, ..., Ai,in⟩**
+>
+>**Beispiel:**
+>- **T1 = ⟨A1,1, A1,2, A1,3, A1,4⟩**
+>- **T2 = ⟨A2,1, A2,2, A2,3⟩**
+>- **T3 = ⟨A3,1, A3,2, A3,3⟩**
+>
+>Erläutern Sie für das Beispiel **{T1, T2, T3}** sowie für den allgemeinen Fall **{T1, ..., Tn}**:
+## (a) Wieviele beliebige Schedules gibt es?
+## (b) Wieviele serielle Schedules gibt es?
+## (c) Wieviele serialisierbare Schedules gibt es?
+
+---
+# Aufgabe 11-3 [[Serialisierbarkeit von Schedules#Serialisierbarkeit von Schedules]]
+
+>[!note] Aufgabenstellung
+>Geben Sie für die folgenden Beispiele jeweils den vollständigen Abhängigkeitsgraphen sowie ggf. einen äquivalenten seriellen Schedule an bzw. begründen Sie kurz, warum dieser nicht existiert.
+## (a) S1 = (w1(x), w2(y), w3(x), r1(x), r2(z), w4(y), r4(z), w4(x), r3(y), r1(z))
+## (b) S2 = (w1(x), r4(x), r1(y), r1(z), w1(z), w3(x), r4(z), w3(y), w2(y), w2(z))
+
+---
+# Aufgabe 11-4 [[Anomalien in Datenbanksystemen]]
+
+>[!note] Aufgabenstellung
+>Welche Anomalien treten in den folgenden Schedules auf? Begründen Sie Ihre Antwort.
+## (a) S1 = (r1(x), r2(y), w2(x), r1(z), r1(x), w2(y), w1(z))
+## (b) S2 = (r2(y), r1(x), w2(x), w2(y), w1(x))
+## (c) S3 = (r1(x), r2(z), w1(y), r2(y), w1(x), w2(z), w1(y))

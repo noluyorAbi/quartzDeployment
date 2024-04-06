@@ -4,9 +4,9 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Thursday, 4. April 2024, 15:04
-date modified: Thursday, 4. April 2024, 23:23
+date modified: Saturday, 6. April 2024, 02:04
 Thema:
-  - "[[Normalformen]]"
+  - "[[Normalformen und Synthesealgorithmus]]"
   - "[[Anomalien in Datenbanksystemen]]"
 ---
 
@@ -45,7 +45,7 @@ Die verschiedenen Modelle werden von Huber fortlaufend nummeriert (`mnr`). Ein b
     - Änderungen der PS eines Modells müssen in allen Tupeln eingetragen werden, oder bei Änderungen des Namens des Herstellers müssen alle Tuple geändert werden.
 
 ---
-# Aufgabe 10-2 [[Normalformen#2. Normalform (2NF)]]
+# Aufgabe 10-2 [[Normalformen und Synthesealgorithmus#2. Normalform (2NF)]]
 
 >[!note] Aufgabenstellung
 > Die Menge der vollen und nicht-trivialen funktionalen Abhängigkeiten sei im Folgenden gegeben durch:
@@ -53,7 +53,7 @@ Die verschiedenen Modelle werden von Huber fortlaufend nummeriert (`mnr`). Ein b
 > - hnr → hersteller
 > - mnr, fznr → baujahr, km-stand, n-preis, h-preis, ek-preis
 
-### a) Erläutern Sie, warum das gegebene Schema nicht der 2. Normalform (2.NF) genügt. \[[[Normalformen#2. Normalform (2NF)]]]
+### a) Erläutern Sie, warum das gegebene Schema nicht der 2. Normalform (2.NF) genügt. \[[[Normalformen und Synthesealgorithmus#2. Normalform (2NF)]]]
 
 **2. NF besagt:**
 	- Für jedes Attribute A gilt:
@@ -80,7 +80,7 @@ $$Fahrzeug(\underline{mnr},\underline{fznr},baujahr,km-stand, n-preis, h-preis, 
 
 --- 
 
-# Aufgabe 10-3 **[[Normalformen#3. Normalform (3NF)]]**
+# Aufgabe 10-3 **[[Normalformen und Synthesealgorithmus#3. Normalform (3NF)]]**
 
 >[!note] Aufgabenstellung
 >Falls das in Aufgabe 10-2 entstandene Relationenschema noch nicht der **3. Normalform (3.NF)** genügt, führen Sie dieses in die 3.NF über und geben Sie die so entstehenden Relationen an. Andernfalls begründen Sie, warum das Relationenschema aus Aufgabe 10-2 bereits der 3.NF genügt.
@@ -133,7 +133,7 @@ $$\text{Hersteller}(\underline{\text{hnr}}, \text{hersteller})$$
 
 --- 
 
-# Aufgabe 10-4 [[Normalformen#Boyce–Codd Normalform (BCNF)]]
+# Aufgabe 10-4 [[Normalformen und Synthesealgorithmus#Boyce–Codd Normalform (BCNF)]]
 
 >[!note] Aufgabenstellung
 >Geben Sie ein beliebiges Beispiel an, bei dem das Einhalten der 3.NF noch nicht zu einem "guten" Datenbankdesign führt, sondern erst die Zerlegung in ein der Boyce-Codd-NF genügendes Schema alle Redundanzen beseitigt.
@@ -145,7 +145,7 @@ $$FLS=\{\underline{Fach},Lehrer,\underline{Schüler}\}$$
 	- 𝑆𝑐ℎü𝑙𝑒𝑟, 𝐹𝑎𝑐ℎ → 𝐿𝑒ℎ𝑟𝑒r
 - Jeder Lehrer Vertritt nur ein Fach (aber zu jedem Fach kann es mehrere Lehrer geben: 
 	- 𝐿𝑒ℎ𝑟𝑒𝑟 → 𝐹𝑎𝑐ℎ
-	- X ist primär aber Y primär → <span style="color:red">Kein BCNF</span> [[Normalformen#Boyce-Codd-Normalform (BCNF)|(siehe Merkhilfe)]]
+	- X ist primär aber Y primär → <span style="color:red">Kein BCNF</span> [[Normalformen und Synthesealgorithmus#Boyce-Codd-Normalform (BCNF)|(siehe Merkhilfe)]]
 
 *Schlüsselkandidaten sind:*
 $$SKs = \{\{Schüler,Fach\},\{Schüler, Lehrer\}\}$$
@@ -178,12 +178,13 @@ Eine Zerlegung einer Relation in eine Normalform ist "nicht abhängigkeitserhalt
 
 ---
 
-# Aufgabe 10-5 [[Normalformen#Synthesealgorithmus]]
+# Aufgabe 10-5 [[Normalformen und Synthesealgorithmus#Synthesealgorithmus]]
 
 
 >[!note] Aufgabenstellung
-Gegeben sei das Relationenschema `R(A, B, C, D, E, F)`, sowie die Menge `F` der zugehörigen nicht-trivialen funktionalen Abhängigkeiten: 
-`{ C, A → D ; C → F, D ; B → A, E ; E → F, A }`
+>Gegeben sei das Relationenschema `R(A, B, C, D, E, F)`, sowie die Menge `F` der zugehörigen
+>nicht-trivialen funktionalen Abhängigkeiten: 
+>`{ C, A → D ; C → F, D ; B → A, E ; E → F, A }`
 
 ### a) Begründen Sie, warum `{B, C}` der einzige Schlüsselkandidat ist.
 
@@ -214,8 +215,7 @@ $$\text{Weder B noch C lassen sich herleiten (stehen nur auf linker Seite)}$$
 
 #### 1. Bestimmung der kanonischen Überdeckung 𝐹𝑐 zu 𝐹
 
-$$F = \{ C, A \rightarrow D \ | \ C \rightarrow F, D \ | \ B \rightarrow A, E \ | \ E \rightarrow F, A \}
-$$
+$$F = \{ C, A \rightarrow D \ | \ C \rightarrow F, D \ | \ B \rightarrow A, E \ | \ E \rightarrow F, A \}$$
 
 - $C,A → D$
 - $C → F,D$

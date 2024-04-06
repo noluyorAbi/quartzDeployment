@@ -3,12 +3,12 @@
 
 // Benutzerdefinierte Scrollbar-Stile für ein dunkles Thema
 ::-webkit-scrollbar {
-  width: 12px; // Breite der vertikalen Scrollbar
+  width: 8px; // Breite der vertikalen Scrollbar
   height: 12px; // Höhe der horizontalen Scrollbar
 }
 
 ::-webkit-scrollbar-track {
-  background: #2e2e2e; // Dunkle Hintergrundfarbe des Scrollbar-Tracks
+  background: #2e2e2e00; // Dunkle Hintergrundfarbe des Scrollbar-Tracks (transparent)
 }
 
 ::-webkit-scrollbar-thumb {
@@ -17,7 +17,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 188, 227); // Hintergrundfarbe des Scrollbar-Griffs beim Hover
+  background: rgb(0, 148, 178); // Hintergrundfarbe des Scrollbar-Griffs beim Hover
 }
 
 // Anwendung des dunklen Themas auf Elemente mit Overflow
