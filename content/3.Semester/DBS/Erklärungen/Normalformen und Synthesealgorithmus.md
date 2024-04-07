@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Monday, 11. March 2024, 16:07
-date modified: Sunday, 7. April 2024, 15:06
+date modified: Sunday, 7. April 2024, 15:52
 ---
 
 # Warum Normalformen?
@@ -71,6 +71,8 @@ Eine Zerlegung von Relation 𝑅 in 𝑅1, … , 𝑅𝑛 ist:
 > - Eine Tabelle ohne Primärschlüssel.
 > - Wiederholende Gruppen sind in Spalten nicht erlaubt (z.B. Inventory1, Inventory2,...).
 
+### Erklärung:
+
 Alle Attribute enthalten atomare Werte (String, Integer, …) und keine Tuple, Listen, usw. In relationalen Datenbanken sind nicht-atomare Werte nicht erlaubt/möglich, daher sind relationale Datenbanken immer in 1. Normalform.
 
 → In dieser Vorlesung oft schon erfüllt.
@@ -81,7 +83,15 @@ Alle Attribute enthalten atomare Werte (String, Integer, …) und keine Tuple, L
 
 > [!tip] Merkhilfe
 > *1.NF* + jedes Nicht-Schlüssel-Attribut (NSA) ist voll funktional abhängig vvon jedem Schlüsselkandidaten
- 
+> 
+> <span style="color:orange">(Each non-key attribute must depend on the entire primary key)</span>
+
+>[!warning] Was die 2NF bricht
+> - Nicht alle Nicht-Primärattribute hängen vollständig von jedem Teil des Schlüssels ab.
+> - Attribute, die nicht vom Schlüssel abhängen, sollten nicht in der gleichen Tabelle sein.
+
+### Erklärung:
+
 Für jedes Attribute A in einer Relation gilt in der 2. Normalform, dass:
 - A ein Primärattribut ist (also Teil eines Schlüsselkandidaten) oder
 - A voll funktional abhängig von jedem Schlüsselkandidaten ist.
@@ -113,11 +123,23 @@ Die 2NF ist wichtig, um Redundanzen zu vermeiden und die Datenintegrität zu gew
 ## 3. Normalform (3NF)
 
 > [!tip] Merkhilfe
-> Schauen alle Abhängigkeiten an, linke Seite immer Schlüssel oder rechts immer primäre Attribute, bzw. keine Abhängigkeit zwischen nicht-schlüsseln
+> - nicht Schlüssel Kandidaten dürfen nicht eine Abhängigkeit sein
+> - Schauen alle Abhängigkeiten an, linke Seite immer Schlüssel oder rechts immer primäre Attribute, bzw. keine Abhängigkeit zwischen nicht-schlüsseln
+> <br/>
+>- <span style="color:orange">Every non-key attribute in a table should depend on the key,the whole key, and nothing but the key</span>
+>- BCNF: <span style="color:#32de84">Every ~~non-key~~ attribute in a table should depend on the key,the whole key, and nothing but the key </span>
+
+>[!warning] Was die 3NF bricht
+> - Transitiven Abhängigkeiten von Nicht-Schlüsselattributen.
+> - Nicht-Schlüsselattribute, die nicht direkt vom Primärschlüssel abhängen, sondern von anderen Nicht-Schlüsselattributen.
+> - Fehlende Normalisierung von wiederholten Gruppen von Attribute in separate Tabellen.
+
 
 > $$\underbrace{\underbrace{mnr,fznr}_{Schlüsselkandidaten}→ baujahr, km-stand, n-preis, h-preis, ek-preis}_{Erfüllt \ 3.NF}$$
 
 > $$\underbrace{hnr → hersteller}_{\text{Erfüllt nicht 3. NF, da linke Seite kein Schlüsselkandidat bzw. rechts kein primäres Attribut}}$$
+
+### Erklärung:
 
 **Nicht-triviale funktionale Abhängigkeiten 𝑋 → 𝑌** bedeuten, dass das Attribut-Set 𝑌 nicht vollständig innerhalb des Attribut-Sets 𝑋 enthalten ist und 𝑌 funktional von 𝑋 abhängt. Das heißt, die Kenntnis von 𝑋 ermöglicht es eindeutig, 𝑌 zu bestimmen, ohne dass 𝑌 ein Teil von 𝑋 ist. 
 
@@ -128,7 +150,8 @@ In der 3. Normalform (3NF) wird gefordert, dass:
 
 Die **3NF** baut auf der **2. Normalform (2NF)** auf und zielt darauf ab, transitive Abhängigkeiten zwischen Nicht-Schlüsselattributen zu beseitigen. Das heißt, es dürfen keine funktionalen Abhängigkeiten zwischen Nicht-Schlüsselattributen bestehen, die über einen Umweg (transitiv) von einem Schlüsselkandidaten abhängen. So wird sichergestellt, dass die Relationen frei von Anomalien sind, die bei Einfüge-, Lösch- oder Änderungsoperationen entstehen können, und dass die Datenintegrität gewahrt bleibt.
 
-[[Blatt 10#Aufgabe 10-3 ** Normalformen 3. Normalform (3NF) **|Anwendungsbeispiel]]
+[[Blatt 10#Aufgabe 10-3 ** Normalformen und Synthesealgorithmus 3. Normalform (3NF) **|Anwendungsbeispiel]]
+
 
 <details> 
 <summary>### Weiteres Beispiel</summary>

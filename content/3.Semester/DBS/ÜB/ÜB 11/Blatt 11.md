@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Friday, 5. April 2024, 23:02
-date modified: Saturday, 6. April 2024, 02:06
+date modified: Sunday, 7. April 2024, 15:57
 ---
 
 # Aufgabe 11-1 [[Normalformen und Synthesealgorithmus#Synthesealgorithmus]]
@@ -106,6 +106,8 @@ $$~{R_3(\underline{MatrNr},PersNr, Name, Fachgebiet, ChefPersNr, ChefName, StudN
 >
 >Erläutern Sie für das Beispiel **{T1, T2, T3}** sowie für den allgemeinen Fall **{T1, ..., Tn}**:
 ## (a) Wieviele beliebige Schedules gibt es?
+
+
 ## (b) Wieviele serielle Schedules gibt es?
 ## (c) Wieviele serialisierbare Schedules gibt es?
 

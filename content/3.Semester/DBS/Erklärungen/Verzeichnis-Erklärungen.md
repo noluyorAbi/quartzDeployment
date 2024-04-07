@@ -4,7 +4,7 @@ last modified: 2024-03-11 20:37
 fach: "[[DBS]]"
 tags: [DBS]
 date created: Monday, 11. March 2024, 20:37
-date modified: Friday, 5. April 2024, 00:55
+date modified: Sunday, 7. April 2024, 16:33
 ---
 
 # Verzeichnis
@@ -57,6 +57,8 @@ Dieses Verzeichnis dient also Navigationshilfe und Referenzrahmen für Studieren
 - [[ER-Modell|ER-Modell]]
 - [[Normalformen und Synthesealgorithmus]]
 - [[Schlüsselkandidat vs. Primäres Attribut]]
+- [[Transaktionen]]
+- [[Schedules]]
 
 
 
