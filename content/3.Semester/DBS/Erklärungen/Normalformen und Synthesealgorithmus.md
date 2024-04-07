@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Monday, 11. March 2024, 16:07
-date modified: Saturday, 6. April 2024, 01:03
+date modified: Sunday, 7. April 2024, 15:06
 ---
 
 # Warum Normalformen?
@@ -58,12 +58,18 @@ Eine Zerlegung von Relation 𝑅 in 𝑅1, … , 𝑅𝑛 ist:
 
 ---
 
-# Normalformen
+# Normalformen [Erklärvideo](https://youtu.be/GFQaEYEc8_8?si=JrY6j-_g_5CWBezQ)
 
 ## 1. Normalform (1NF)
 
 > [!tip] Merkhilfe
 > Alle Attribute sind atomar
+
+>[!warning] Was die 1NF bricht
+> - Die Verwendung der Zeilenreihenfolge zur Übermittlung von Informationen verstößt gegen die 1.NF.
+> - Gemischte Datentypen innerhalb von Spalten.
+> - Eine Tabelle ohne Primärschlüssel.
+> - Wiederholende Gruppen sind in Spalten nicht erlaubt (z.B. Inventory1, Inventory2,...).
 
 Alle Attribute enthalten atomare Werte (String, Integer, …) und keine Tuple, Listen, usw. In relationalen Datenbanken sind nicht-atomare Werte nicht erlaubt/möglich, daher sind relationale Datenbanken immer in 1. Normalform.
 
@@ -85,6 +91,22 @@ Für jedes Attribute A in einer Relation gilt in der 2. Normalform, dass:
 **Voll funktional abhängig** bedeutet, dass die Abhängigkeit zwischen einem Attribute und einem Schlüsselkandidaten komplett ist. Das heißt, das Attribute kann nur eindeutig identifiziert oder abgeleitet werden, wenn der gesamte Schlüsselkandidat bekannt ist, nicht nur ein Teil davon. 
 
 Die 2NF beseitigt **partielle funktionale Abhängigkeiten** von Nicht-Primärattributen von einem Teil eines zusammengesetzten Schlüssels, indem sichergestellt wird, dass jedes Nicht-Primärattribut vollständig von jedem Schlüsselkandidaten abhängt. Das führt zu einer Reduzierung von Redundanzen und Anomalien bei der Datenmanipulation.
+
+Ein einfaches Beispiel für die 2. Normalform (2NF) in einer Datenbank könnte eine Tabelle für Studentenleistungen sein:
+
+| Student_ID | Vorname | Nachname | Kurs_ID | Kursname | Dozent_ID | Dozent_Name |
+|------------|---------|----------|---------|----------|-----------|-------------|
+| 001        | Max     | Mustermann| 101     | Mathematik| 201       | Dr. Schmidt |
+| 002        | Maria   | Müller   | 102     | Englisch | 202       | Prof. Wagner |
+| 003        | Ali     | Khan     | 101     | Mathematik| 201       | Dr. Schmidt |
+
+In diesem Beispiel ist die Spalte "Student_ID" ein Primärattribut, da sie Teil des Schlüssels ist und jede Zeile eindeutig identifiziert. Die Spalten "Kurs_ID" und "Dozent_ID" sind ebenfalls Teil des Primärschlüssels.
+
+Um sicherzustellen, dass die Tabelle die 2NF erfüllt, müssen wir prüfen, ob jedes Nicht-Primärattribut voll funktional von jedem Schlüsselkandidaten abhängt.
+
+In diesem Fall hängt der "Kursname" von der "Kurs_ID" ab, und der "Dozent_Name" hängt von der "Dozent_ID" ab. Beide erfüllen die Anforderungen der 2NF, da sie voll funktional von ihren jeweiligen Schlüsselattributen abhängen.
+
+Die 2NF ist wichtig, um Redundanzen zu vermeiden und die Datenintegrität zu gewährleisten, indem partielle funktionale Abhängigkeiten eliminiert werden.
 
 ---
 
