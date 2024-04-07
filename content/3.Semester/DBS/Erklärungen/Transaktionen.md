@@ -4,20 +4,20 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Sunday, 7. April 2024, 15:57
-date modified: Sunday, 7. April 2024, 16:33
+date modified: Sunday, 7. April 2024, 17:30
 ---
 
 # Was sind Transaktionen?
 
 **Transaktion:**
-- Folge von Befehlen (read,write), die die Datenbank von einem *konstistenten* Zustand in einen anderen *konsistenten* Zustand füht.
+- Folge von Befehlen (read,write), die die Datenbank von einem *konsistenten* Zustand in einen anderen *konsistenten* Zustand führt.
 
 → Einheit *integritätserhaltender* Zustandsänderung einer Datenbank
 
 ## Transaktionen (TA)
 
 **Hauptaufgaben** von Transaktionen:
-- Synchronistaion (koordination mehrerer Benutzerprozess)
+- Synchronisation (Koordination mehrerer Benutzerprozess)
 - Recovery (Beheben von Fehlersituationen)
 
 **Eigenschaften** von Transaktionen:
@@ -41,6 +41,8 @@ date modified: Sunday, 7. April 2024, 16:33
 	
 - Ohne Kontrolle des Ablaufs von TAs 
 	→ *Anomalien* können auftreten 
+
+# Anomalien
 
 ## Anomalien – Lost Update
 
