@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Monday, 8. April 2024, 12:24
-date modified: Monday, 8. April 2024, 16:04
+date modified: Monday, 8. April 2024, 16:39
 ---
 
 # Aufgabe 12-1 [[ER-Modell]]
@@ -72,7 +72,7 @@ $$
 
 ## (a) [[Relationale Algebra#Vereinigung]]
 $$
-\pi_{A,B,D}(R) \bowtie_{D<E} \pi_{C,E}(\sigma_{D<5}(S))
+\pi_{A,B,D}(R) \underset{D<E}{\bowtie} \pi_{C,E}(\sigma_{D<5}(S))
 $$
 ### Lösung
 
@@ -252,3 +252,23 @@ $$
 \right)
 $$
 
+## [[Tupelkalkül]]
+
+$$
+Schema(pro) = Schema(Produkt);
+$$
+$$
+{[pro.Name,ver.VKPreis] \ | \ pro \in Produkt \ \land \ (\exists \ ver \in Verkauf, ang \in Angestellter
+) }
+$$
+$$
+ang.Name = 'Peter Müller' \ \land \ ver.Datum = '04.02.2017'
+$$
+
+$$
+\begin{align*}
+\text{Schema(pro)} & = \text{Schema(Produkt)}; \\
+\left[ \text{pro.Name}, \text{ver.VKPreis} \right] & : \text{pro} \in \text{Produkt} \ \land \ (\exists \text{ ver} \in \text{Verkauf}, \text{ ang} \in \text{Angestellter}) \\
+& \text{ang.Name} = 'Peter Müller' \ \land \ \text{ver.Datum} = '04.02.2017'
+\end{align*}
+$$
