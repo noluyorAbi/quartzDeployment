@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Friday, 5. April 2024, 23:02
-date modified: Sunday, 7. April 2024, 18:07
+date modified: Sunday, 7. April 2024, 20:06
 ---
 
 # Aufgabe 11-1 [[Normalformen und Synthesealgorithmus#Synthesealgorithmus]]
@@ -167,29 +167,74 @@ $$
 $$
 S_1 = (w_1(x), w_2(y), w_3(x), r_1(x), r_2(z), w_4(y), r_4(z), w_4(x), r_3(y), r_1(z))
 $$
+$$
+\begin{array}{|c|c|c|}
+\hline
+x & y & z \\
+\hline
+w_1 & & \\
 
-| x   | y   | z   |
-| --- | --- | --- |
-| w1  |     |     |
-|     | w2  |     |
-| w3  |     |     |
-| r1  |     |     |
-|     |     | r2  |
-|     | w4  |     |
-|     |     | r4  |
-| w4  |     |     |
-|     | r3  |     |
-|     |     | r1  |
-• Auf Objekt $x$: $ww_{1,3} \ x$, $ww_{1,4} \ x$, $wr_{3,1} \ x$, $ww_{3,4} \ x$, $rw_{1,4} \ x$
-• Auf Objekt $y$: $ww_{2,4} \ y$, $wr_{2,3} \ y$, $wr_{4,3}(y)$
-• Auf Objekt 𝑧: wird nur gelesen → keine Abhängigkeiten
+ & w_2 & \\
+
+w_3 & & \\
+
+r_1 & & \\
+
+ & & r_2 \\
+
+ & w_4 & \\
+
+ & & r_4 \\
+
+w_4 & & \\
+
+ & r_3 & \\
+
+ & & r_1 \\
+\hline
+\end{array}
+$$
+### Abhängigkeiten
+
+• Auf Object $x$: $ww_{1,3} \ x$, $ww_{1,4} \ x$, $wr_{3,1} \ x$, $ww_{3,4} \ x$, $rw_{1,4} \ x$
+• Auf Object $y$: $ww_{2,4} \ y$, $wr_{2,3} \ y$, $wr_{4,3}(y)$
+• Auf Object 𝑧: wird nur gelesen → keine Abhängigkeiten
 
 
 ## b)
 $$
 S2 = (w_1(x), r_4(x), r_1(y), r_1(z), w_1(z), w_3(x), r_4(z), w_3(y), w_2(y), w_2(z))
 $$
+$$
+\begin{array}{|c|c|c|}
+\hline
+x & y & z \\
+\hline
+w_1 & & \\
 
+r_4 & & \\
+
+ & r_1 & \\
+
+ & & r_1 \\
+
+& & w_1 \\
+
+w_3 & & \\
+
+ & & r_4 \\
+& w_3 & \\
+& w_2 & \\
+ & & w_2 \\
+\hline
+\end{array}
+$$
+
+### Abhängigkeiten
+
+- Auf Objekt x: $w_{1,4}(x)$, $ww_{1,3}(x)$, $rw_{4,3}(x)$
+- Auf Objekt y: $rw_{1,3}(y)$, $rw_{1,2}(y)$, $ww_{3,2}(y)$
+- Auf Objekt z: $rw_{1,2}(z)$, $w_{1,4}(z)$, $ww_{1,2}(z)$, $rw_{4,2}(z)$
 
 ---
 # Aufgabe 11-4 [[Transaktionen#Anomalien]]
@@ -212,3 +257,5 @@ $$
 $$
 S_3 = (r_1(x), r_2(z), w_1(y), r_2(y), w_1(x), w_2(z), w_1(y))
 $$
+
+
