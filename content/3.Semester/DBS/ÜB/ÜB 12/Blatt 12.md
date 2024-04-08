@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Monday, 8. April 2024, 12:24
-date modified: Monday, 8. April 2024, 19:00
+date modified: Monday, 8. April 2024, 19:47
 ---
 
 # Aufgabe 12-1 [[ER-Modell]]
@@ -379,13 +379,15 @@ $$
 	
 $\Longrightarrow$ Mithilfe von $\{A,B,C\}$ kann man alle Attribute herleiten. Zudem ist diese Menge $S$ *eindeutig* und *minimal*
 
+
+
+## b) Bestimmen Sie die kanonische Überdeckung $F_C$ zu $F$. Geben Sie dazu die kanonische Überdeckung an und erläutern Sie, wie sie erreicht wird. [[Normalformen und Synthesealgorithmus#Synthesealgorithmus]]
+
 >[!note] Aufgabenstellung b)
 > Gegeben sei das Relationenschema $R_2(A, B, C, D, E, F)$, sowie die Menge der zugehörigen nicht-trivialen funktionalen Abhängigkeiten:
 >$$
 >\{A, B, C \rightarrow D, \ \ \ \ \ \ D \rightarrow E, \ \ \ \ \ \ B, C \rightarrow D, E, F, \ \ \ \ \ \ E \rightarrow F\}
 >$$
-
-## b) Bestimmen Sie die kanonische Überdeckung $F_C$ zu $F$. Geben Sie dazu die kanonische Überdeckung an und erläutern Sie, wie sie erreicht wird. [[Normalformen und Synthesealgorithmus#Synthesealgorithmus]]
 
 >[!tip] Erinnerung
 >**Schritte des Synthesealgorithmus:**
@@ -422,17 +424,90 @@ $$
 
 ### Rechtsreduktion
 
-- $B, C \rightarrow D$
-	- $B, C \rightarrow \emptyset$
-	- $D$ wird abgedeckt durch $B, C \rightarrow D, E, F$
+>[!Danger] Falsche Anwendung der Rechtsreduktion zum vorbeugen von Fehlern
+> - $B, C \rightarrow D$
+>   - $B, C \rightarrow \emptyset$
+>   - $D$ wird abgedeckt durch $B, C \rightarrow D, E, F$
+>
+> - $D \rightarrow E$
+>   - $D \rightarrow \emptyset$
+>   - $E$ wird abgedeckt durch $B, C \rightarrow D, E, F$
+>
+> - $B, C \rightarrow D, E, F$
+>   - bleibt unverändert
+>
+> - $E \rightarrow F$
+>   - $E \rightarrow \emptyset$
+>   - $F$ wird abgedeckt durch $B, C \rightarrow D, E, F$
+>
+>nicht korrekt, weil das Entfernen von $E$ und $F$ aus diesen Abhängigkeiten bedeuten würde, dass sie aus der Überdeckung komplett verschwinden. Das ist nicht das Ziel der Rechtsreduktion. Das Ziel ist es, Redundanzen zu entfernen, nicht aber die komplette Abhängigkeit.
 
-- $D \rightarrow E$ 
-	- $D \rightarrow \emptyset$ 
-	- $E$ wird abgedeckt durch $B, C \rightarrow D, E, F$
+>[!Success] Richtige Anwendung der Rechtsreduktion
+>- $B, C \rightarrow D$ 
+>    - $B, C \rightarrow \emptyset$ 
+>    - $D$ wird abgedeckt durch $B, C \rightarrow D, E, F$ 
+>
+>- $D \rightarrow E$ 
+>    - bleibt unverändert
+>
+>- $B, C \rightarrow D, E, F$ 
+>    - $B, C \rightarrow D, \cancel{E}, \cancel{F}$ 
+>    - $E$ und $F$ werden abgedeckt durch $D \rightarrow E$ und $E \rightarrow F$ 
+>
+>- $E \rightarrow F$ 
+>    - bleibt unverändert
+>
+> Wir behalten $D \rightarrow E$ und $E \rightarrow F$ in der kanonischen Überdeckung, da diese direkten funktionalen Abhängigkeiten eine klare und eigenständige Beziehung zwischen den Attribute definieren, die nicht implizit durch $B, C \rightarrow D, E, F$ abgedeckt sind.
 
-- $B, C \rightarrow D, E, F$
-	- bleibt unverändert
 
-- $E \rightarrow F$
-	- $E \rightarrow \emptyset$
-	- $F$ wird abgedeckt durch $B, C \rightarrow D, E, F$
+### c) Entfernung von rechtsleeren Abhängigkeiten
+
+$$
+F = \{B, C \rightarrow \emptyset, \ \ \ \ \ \ D \rightarrow E, \ \ \ \ \ \ B, C \rightarrow D \ \ \ \ \ \ E \rightarrow F\}
+$$
+$$
+wird \ zu
+$$
+$$
+F = \{ D \rightarrow E, \ \ \ \ \ \ B, C \rightarrow D \ \ \ \ \ \ E \rightarrow F\}
+$$
+
+### d) Zusammenfassen von Abhängigkeiten mit gleicher linker Seite
+
+<center>
+Gibt keine gleiche linke Seite
+</center>
+
+$$
+\Longrightarrow \ \ \ \  F_c = \{ D \rightarrow E, \ \ \ \ \ \ B, C \rightarrow D \ \ \ \ \ \ E \rightarrow F\}
+$$
+
+### e) Neues Relationsschema erzeugen
+
+- $R_1(\underline D,E) → F_1=\{D→E\}$
+
+- $R_2(\underline B,\underline{C},D) → F_2=\{B,C→D\}$
+
+- $R_3(\underline E,F) → F_3=\{E→F\}$
+
+### f) Rekonstruktion eines Schlüsselkandidaten:
+
+Neue Relation für Schlüsselkandidaten $\{B,C\}$
+
+$$
+\Longrightarrow \ \ R_4(\underline{B},\underline C) → F_{4}= \emptyset
+$$
+
+### g) Elimination überflüssiger Relationen
+
+<center>In diesem Schritt nix zu tun </center>
+
+### **Finale Relationen:**
+
+- $R_1(\underline D,E)$
+
+- $R_2(\underline B,\underline{C},D)$
+
+- $R_3(\underline E,F)$
+
+- $R_4(\underline{B},\underline C)$
