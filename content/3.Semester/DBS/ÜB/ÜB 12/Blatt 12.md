@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Monday, 8. April 2024, 12:24
-date modified: Monday, 8. April 2024, 16:39
+date modified: Monday, 8. April 2024, 16:43
 ---
 
 # Aufgabe 12-1 [[ER-Modell]]
@@ -230,7 +230,8 @@ $$
 >\text{FNR})
 >$$
 >$$
->\text{Verkauf} (\underline{\text{PNR}}, \underline{\text{PersNr}}, >\underline{\text{Datum}}, \text{VKPreis})
+>\text{Verkauf} (\underline{\text{PNR}}, \underline{\text{PersNr}},
+>\underline{\text{Datum}}, \text{VKPreis})
 >$$
 >Geben Sie für die folgende verbal formulierte Anfrage einen äquivalenten Ausdruck in **Relationaler Algebra** und **wahlweise in relationalem Tupel- oder Bereichskalkül** an. Für Anfragen im Tupelkalkül soll darüber hinaus das Schema aller freien Variablen angegeben werden. Sie können an passender Stelle auch den Join-Operator benutzen.
 >
@@ -238,9 +239,12 @@ $$
 
 ## [[Relationale Algebra]]
 
+**Bedingung vor Join**
 $$
 \Pi_{Angestellter.Name,Verkauf.VKPreis}(\sigma_{Angestellter.Name='Peter Müller' \  \land \ Verkauf.Datum=04.02.2017}(Produkt \underset{Produkt.PNR = Verkauf.PNR}{\bowtie} Verkauf \underset{Verkauf.PersNr = Angestellter.PersNr}{\bowtie} Angestellter))
 $$
+
+**Bedingung nach Join**
 $$
 \Pi_{\text{Produkt.Name, VKPreis}} \left( 
     \text{Produkt} 
@@ -266,10 +270,3 @@ $$
 ang.Name = 'Peter Müller' \ \land \ ver.Datum = '04.02.2017'
 $$
 
-$$
-\begin{align*}
-\text{Schema(pro)} & = \text{Schema(Produkt)}; \\
-\left[ \text{pro.Name}, \text{ver.VKPreis} \right] & : \text{pro} \in \text{Produkt} \ \land \ (\exists \text{ ver} \in \text{Verkauf}, \text{ ang} \in \text{Angestellter}) \\
-& \text{ang.Name} = 'Peter Müller' \ \land \ \text{ver.Datum} = '04.02.2017'
-\end{align*}
-$$
