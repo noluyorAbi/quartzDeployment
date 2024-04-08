@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Monday, 8. April 2024, 12:24
-date modified: Monday, 8. April 2024, 19:47
+date modified: Monday, 8. April 2024, 22:30
 ---
 
 # Aufgabe 12-1 [[ER-Modell]]
@@ -492,6 +492,9 @@ $$
 
 ### f) Rekonstruktion eines Schlüsselkandidaten:
 
+>[!unsure]
+> Unsicher ob dies nötig, da in $R_2$ schon $B$ und $C$ enthalten
+
 Neue Relation für Schlüsselkandidaten $\{B,C\}$
 
 $$
@@ -510,4 +513,6 @@ $$
 
 - $R_3(\underline E,F)$
 
-- $R_4(\underline{B},\underline C)$
+- $Unsicher:(R_4(\underline{B},\underline C)$
+
+
