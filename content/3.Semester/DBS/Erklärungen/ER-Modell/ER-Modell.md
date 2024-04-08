@@ -2,7 +2,7 @@
 tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
 date created: Monday, 1. April 2024, 19:42
-date modified: Monday, 8. April 2024, 13:39
+date modified: Monday, 8. April 2024, 14:00
 ---
 
 # ER-Modell
