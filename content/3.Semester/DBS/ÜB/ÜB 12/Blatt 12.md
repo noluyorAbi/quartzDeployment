@@ -221,15 +221,16 @@ $$
 >Gegeben sei das folgende Relationenschema. Dabei sind die Schlüsselattribute jeweils unterstrichen.
 >
 >$$
->\text{Produkt} (\underline{\text{PNR}}, \text{Name}, \text{Gewicht}, \text{Farbe}) $$
+>\text{Produkt} (\underline{\text{PNR}}, \text{Name}, \text{Gewicht}, \text{Farbe})$$
 >$$
 >\text{Filiale} (\underline{\text{FNR}}, \text{Name}, \text{Ort})
 >$$
 >$$
->\text{Angestellter} (\underline{\text{PersNr}}, \text{Name}, \text{Gehalt}, \text{FNR})
+>\text{Angestellter} (\underline{\text{PersNr}}, \text{Name}, \text{Gehalt},
+>\text{FNR})
 >$$
 >$$
->\text{Verkauf} (\underline{\text{PNR}}, \underline{\text{PersNr}}, \underline{\text{Datum}}, \text{VKPreis})
+>\text{Verkauf} (\underline{\text{PNR}}, \underline{\text{PersNr}}, >\underline{\text{Datum}}, \text{VKPreis})
 >$$
 >Geben Sie für die folgende verbal formulierte Anfrage einen äquivalenten Ausdruck in **Relationaler Algebra** und **wahlweise in relationalem Tupel- oder Bereichskalkül** an. Für Anfragen im Tupelkalkül soll darüber hinaus das Schema aller freien Variablen angegeben werden. Sie können an passender Stelle auch den Join-Operator benutzen.
 >
