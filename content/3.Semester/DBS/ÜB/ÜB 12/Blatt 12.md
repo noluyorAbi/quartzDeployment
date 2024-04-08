@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Monday, 8. April 2024, 12:24
-date modified: Monday, 8. April 2024, 22:30
+date modified: Monday, 8. April 2024, 22:41
 ---
 
 # Aufgabe 12-1 [[ER-Modell]]
