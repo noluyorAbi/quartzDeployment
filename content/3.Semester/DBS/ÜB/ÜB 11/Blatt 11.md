@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Friday, 5. April 2024, 23:02
-date modified: Sunday, 7. April 2024, 20:06
+date modified: Monday, 8. April 2024, 12:23
 ---
 
 # Aufgabe 11-1 [[Normalformen und Synthesealgorithmus#Synthesealgorithmus]]
@@ -232,9 +232,9 @@ $$
 
 ### Abhängigkeiten
 
-- Auf Objekt x: $w_{1,4}(x)$, $ww_{1,3}(x)$, $rw_{4,3}(x)$
-- Auf Objekt y: $rw_{1,3}(y)$, $rw_{1,2}(y)$, $ww_{3,2}(y)$
-- Auf Objekt z: $rw_{1,2}(z)$, $w_{1,4}(z)$, $ww_{1,2}(z)$, $rw_{4,2}(z)$
+- Auf Object x: $w_{1,4}(x)$, $ww_{1,3}(x)$, $rw_{4,3}(x)$
+- Auf Object y: $rw_{1,3}(y)$, $rw_{1,2}(y)$, $ww_{3,2}(y)$
+- Auf Object z: $rw_{1,2}(z)$, $w_{1,4}(z)$, $ww_{1,2}(z)$, $rw_{4,2}(z)$
 
 ---
 # Aufgabe 11-4 [[Transaktionen#Anomalien]]
@@ -247,15 +247,66 @@ Hier sind die gegebenen Schedules entsprechend dem gegebenen Vorlagenformat umge
 $$
 S_1 = (r_1(x), r_2(y), w_2(x), r_1(z), r_1(x), w_2(y), w_1(z))
 $$
-
+$$
+\begin{array}{|c|c|c|}
+\hline
+x & y & z \\
+\hline
+r_1 & & \\
+ & r_2 & \\
+w_2 & & \\
+ & & r_1 \\
+r_1 & & \\
+ & w_2 & \\
+ & & w_1 \\
+\hline
+\end{array}
+$$
+→ [[Transaktionen#Anomalien – Non-Repeatable Read|Non-Repeatable Read]]
+- In diesem Fall ist das nur für $𝑥$ der Fall
+- Muster: $r_1(x),w_2(x),r_1(x)$
+- Verstoß gegen Isolation
 ## (b)
 $$
 S_2 = (r_2(y), r_1(x), w_2(x), w_2(y), w_1(x))
 $$
+$$
+\begin{array}{|c|c|c|}
+\hline
+x & y & z \\
+\hline
+ & r_2 & \\
+r_1 & & \\
+w_2 & & \\
+ & w_2 & \\
+w_1 & & \\
+\hline
+\end{array}
 
+$$
+→ [[Transaktionen#Anomalien – Lost Update|Lost Update]] bezüglich $x$ 
+- Muster: $r_1(x),w_2(x),w_1(x)$
+<div style="width: 480px; height: 360px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:480px; height:360px" src="https://lucid.app/documents/embedded/7354a80c-a294-4e93-b051-4149fac864e6" id="Zx4qgDoS.MZ~"></iframe></div>
 ## (c)
 $$
 S_3 = (r_1(x), r_2(z), w_1(y), r_2(y), w_1(x), w_2(z), w_1(y))
 $$
+$$
+\begin{array}{|c|c|c|}
+\hline
+x & y & z \\
+\hline
+r_1 & & \\
+ & & r_2 \\
+ & w_1 & \\
+ & r_2 & \\
+w_1 & & \\
+ & & w_2 \\
+ & w_1 & \\
+\hline
+\end{array}
 
+$$
+→ [[Transaktionen#Anomalien – Dirty Read / Dirty Write|Dirty Read]] bezüglich $y$
+- Muster: $w_1(x),r_2(y),w_1(y)$
 

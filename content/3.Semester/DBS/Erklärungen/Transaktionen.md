@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Sunday, 7. April 2024, 15:57
-date modified: Sunday, 7. April 2024, 17:30
+date modified: Monday, 8. April 2024, 12:24
 ---
 
 # Was sind Transaktionen?
@@ -44,7 +44,14 @@ date modified: Sunday, 7. April 2024, 17:30
 
 # Anomalien
 
+Für Anomalie sind immer 3 Aktionen von 2 Transaktionen auf ein Object nötig
+
 ## Anomalien – Lost Update
+
+>[!tip] Muster
+>$r_1(x),w_2(x),w_1(x)$
+>
+>RWW
 
 - Verloren gegangene Änderung
 - Zwei Transaktionen: $T_{1}$ , $T_2$
@@ -56,6 +63,11 @@ $\Longrightarrow$ Verstoß gegen *Durability*
 
 ## Anomalien – Dirty Read / Dirty Write
 
+>[!tip] Muster
+ > $w_1(x),r_2(y),w_1(y)$
+ > 
+ > WRW
+
 - Zugriff auf „schmutzige“ (nicht dauerhaft gültige) Daten
 - Zwei Transaktionen: $T_{1}$ , $T_2$
 
@@ -65,6 +77,11 @@ $\Longrightarrow$ Verstoß gegen *Durability*
 $\Longrightarrow$ Verstoß gegen *Consistency*
 
 ## Anomalien – Non-Repeatable Read
+
+>[!tip] Muster
+> $r_1(x),w_2(x),r_1(x)$
+> 
+> RWR
 
 - Eine Transaktion sieht während ihrer Ausführung zwei unterschiedliche Werte von einem Object
 - $T_1$ liest beim ersten Auslesen von x einen anderen Wert also beim zweiten, da $T_2$ den Wert von x verändert
