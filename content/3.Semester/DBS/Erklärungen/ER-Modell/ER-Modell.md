@@ -2,12 +2,12 @@
 tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
 date created: Monday, 1. April 2024, 19:42
-date modified: Thursday, 4. April 2024, 15:26
+date modified: Monday, 8. April 2024, 13:39
 ---
 
 # ER-Modell
 
-- E/R steht für Entitity/Relation
+- E/R steht für Entity/Relation
 - Modellierung eines Datenbankschemas:
 	- Attribute der jeweiligen 
 	- Zusammenhänge zwischen der jeweiligen Relation
@@ -15,7 +15,7 @@ date modified: Thursday, 4. April 2024, 15:26
 
 - Entity: *▭*
 	- Ein Entity existiert und ist unterscheidbar von anderen Entities
-- Attribut : *⬭*
+- Attribute : *⬭*
 	- Charakteristische Eigenschaft von Entities, Schlüssel = identifiziert Entity eindeutig
 - Relation/Beziehung: *◇*
 	- Zusammenhänge zwischen Entities
