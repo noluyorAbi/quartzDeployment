@@ -4,21 +4,21 @@ last modified: 2024-03-25 18:33
 tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
 date created: Monday, 25. March 2024, 18:33
-date modified: Thursday, 4. April 2024, 15:24
+date modified: Monday, 8. April 2024, 16:51
 ---
 
 # Schema des Bereichkalküls
 
-Das Schema des Bereichkalküls (BK) ist ein mächtiges Werkzeug in der Welt der Datenbanksysteme (DBS) , das für die Abfrage und Manipulation von Daten unter Verwendung von Prädikatenlogik verwendet wird. Bereichskalküle nutzen eine formale Sprache, um komplexe Abfragen in einer Art und Weise zu beschreiben, die sowohl präzise als auch flexibel ist. Im Kern erlaubt es uns, spezifische Daten aus einer großen Menge basierend auf bestimmten Bedingungen auszuwählen.
+Das Schema des Bereichkalküls (BK) ist ein mächtiges Werkzeug in der Welt der Datenbanksysteme (DBS) , das für die Abfrage und Manipulation von Daten under Verwendung von Prädikatenlogik verwendet wird. Bereichskalküle nutzen eine formale Sprache, um komplexe Abfragen in einer Art und Weise zu beschreiben, die sowohl präzise also auch flexible ist. Im Kern erlaubt es uns, spezifische Daten aus einer großen Menge basierend auf bestimmten Bedingungen auszuwählen.
 
 $$~{BK: \ \ \{\underbrace{na}_{\text{Was returned werden soll}}| \ \ \ \underbrace{\exists ge}_{\text{Tupel die wir checken}}: \underbrace{Angestellter(\_,na,ge,\_,\_,\_)}_{\text{Schema + Tupel die wir brauchen}} \ \land \ \underbrace{ge \ \land \ 2000}_{Bedingung} \}}$$
 
 In diesem Beispiel repräsentiert `BK` eine Bereichskalkül-Abfrage, die folgendermaßen interpretiert werden kann:
 
 - **Was zurückgegeben werden soll:** Das Symbol `na` steht für den Namen des Angestellten, der in den Ergebnissen der Abfrage zurückgegeben wird.
-- **Tupel, die geprüft werden:** Der Ausdruck `∃ge` bedeutet, dass es mindestens ein Tupel gibt, das die nachfolgenden Bedingungen erfüllt.
-- **Schema + Tupel, die benötigt werden:** `Angestellter(_, na, ge, _, _, _)` definiert das Schema der Angestelltentabelle, wobei die Unterstriche (`_`) Platzhalter für nicht spezifizierte Attribute sind. In diesem Kontext sind wir interessiert an den Tupeln, die Informationen über den Namen (`na`) und das Gehalt (`ge`) des Angestellten enthalten.
-- **Bedingung:** `ge > 2000` ist die Bedingung, die erfüllt sein muss. In diesem Fall suchen wir nach Angestellten, deren Gehalt (`ge`) mehr als 2000 beträgt.
+- **Tuple, die geprüft werden:** Der Ausdruck `∃ge` bedeutet, dass es mindestens ein Tuple gibt, das die nachfolgenden Bedingungen erfüllt.
+- **Schema + Tuple, die benötigt werden:** `Angestellter(_, na, ge, _, _, _)` definiert das Schema der Angestelltentabelle, wobei die Unterstriche (`_`) Platzhalter für nicht spezifizierte Attribute sind. In diesem Kontext sind wir interessiert an den Tupeln, die Informationen über den Namen (`na`) und das Gehalt (`ge`) des Angestellten enthalten.
+- **Bedingung:** `ge > 2000` ist die Bedingung, die erfüllt sein muss. In diesem Fall suchen wir nach Angestellten, deren Gehalt (`ge`) mehr also 2000 beträgt.
 
 ## Beispiel für Join-Operation im TK
 
@@ -31,7 +31,7 @@ $$~{\{ \text{Vnr}, \text{Vda} \ | \ \exists \text{abtnr}, \text{artnr}, \text{ln
 - logisches Verbinden durch $Schemaname(\_,attrr1,\_,attr2,...)$
 ## Interpretation
 
-Die oben genannte Abfrage wird also alle Namen (`na`) der Angestellten zurückgeben, für die mindestens ein Eintrag in der Angestelltentabelle existiert, dessen Gehalt (`ge`) mehr als 2000 beträgt. Es ist eine mächtige Weise, spezifische Informationen basierend auf gegebenen Kriterien abzufragen, ohne alle Details des zugrundeliegenden Datenschemas kennen zu müssen.
+Die oben genannte Abfrage wird also alle Namen (`na`) der Angestellten zurückgeben, für die mindestens ein Eintrag in der Angestelltentabelle existiert, dessen Gehalt (`ge`) mehr also 2000 beträgt. Es ist eine mächtige Weise, spezifische Informationen basierend auf gegebenen Kriterien abzufragen, ohne alle Details des zugrundeliegenden Datenschemas kennen zu müssen.
 
 ## Wichtigkeit im DBS
 

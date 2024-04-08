@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Monday, 8. April 2024, 12:24
-date modified: Monday, 8. April 2024, 16:43
+date modified: Monday, 8. April 2024, 17:31
 ---
 
 # Aufgabe 12-1 [[ER-Modell]]
@@ -14,6 +14,8 @@ date modified: Monday, 8. April 2024, 16:43
 >
 >Die einzelnen Wettkämpfe besitzen eine Wettkampfnummer, den Namen der Sportart, einen Termin und eine Wettkampfstätte. An jedem Wettkampf nehmen beliebig viele Sportler teil, die durch eine Startnummer identifiziert werden. Jeder Wettkampf wird von genau einem Schiedsrichter geleitet, der eine eindeutige Schiedsrichternummer besitzt. Es sollen die Nationen mit eindeutigem Kürzel und dem vollen Namen abgespeichert werden. Jede Person besitzt einen Namen und gehört zu einer Nation.
 ## (a) Entwerfen Sie zu diesem Zweck ein E/R-Modell.
+
+*Scrollen und zoomen mit STRG gedrückt*
 
 <iframe frameborder="0" style="width:100%;height:599px;" src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=ER.drawio#R7V1bc5s4GP0t%2B%2BCZ7YM9SNwfc2m6M512O5PddrtvCii2GgxeIefSX78SSBgJEl8agx2T6YxBCCE%2BnfPpfLrQkX0xf%2FxA0WL2KYtxMoJW%2FDiyL0cQAs8O%2BI9IeSpTXOiVCVNKYplplXBNfmKZaMnUJYlxrmVkWZYwstAToyxNccS0NERp9qBnu80S%2FakLNMWNhOsIJc3UbyRmszI1cK1V%2Bh%2BYTGfqycCSV%2BZIZZYJ%2BQzF2YOWhB%2FZVZYyWcUvmM5RilPGr3xC9A7Tkft%2Bxph407MRvOL%2FbkXuyTTLpglGC5JPomzOk6OcZ7m6RXOSCDPXCjqXBfHH2e9H9gXNMlYezR8vcCLaSjVDWaerZ65WdqCi3A1ucD59%2FfxEv5x9jZ7%2B%2BnF%2B93dMEBq7sCzmHiVLaWBpHPakLE5n2fxmyV%2Fo%2FGFGGL5eoEhceeD44mkzNk%2F4GRCHKJotKf4g0i8dniCsc6WMcEYjcXvErQutS7TkTcTtUGa6zpa0KLS0LnSFfV1hYfc5G7ullXlWZWd%2BqD3Ehee1x9xjygiH0VlCpil%2F0pzEsXjDc5ot0xjH8h3yO8yimTyJlvQeXxHGSDqVST%2FIdFoYhrffubQdLxk%2FPtsqoGprzkmczTGjvK6WvMEGfnmLpKNtu%2BX5wwrcoWTorIZrTyIWSaxOq5JXEOAHEgXbIMJrQYSXMGGbBUo1aHj%2FLQV6z6MsyWjBCYtOb37nVePPttTPu8JSlmjGsaKEyMrvR3MBIVlKO0CMTLWy8sI3iZIAWDzWL5QVFFfSjDMvqV27R5Qg%2FstRgBgHa74mX4QWz2V5kM0hLjr8bYsrCWa81mNuqqgAjXlnRhczlMoiSwxZHD1sjEpciuSIY6fArLpGOEBT%2BSRLvWpxhVFe2C0vXz0pxeVVDp%2FC1dYe85DRWK9YVRZ%2Fl5s7wosTZeaMZnd4LAGo5SscQFFGZV%2FpBvjxDYrupgWbxgYgoOuWWKgfvKu9RoyjjCJGsnTMZiS6S3Eu605Swogynpm31tAv5qtVR8sXk3yRoCd1JSHcetD6jcwXGWUoZbKxkwwxw74K%2BfxoKn6neDa6sEfnHhWdxc%2BlogynYMmaMlvDt4qarnesh%2BRHe3aXtuEuVb9fc5e23XSX9r7cpfLDL3WgOI3PhPLhZ1GC8pxEevPqJj3oXpQ3E336R9a0OPnOT6wJdNX5pWgpqzp7kmcFNmJ5sgNqcNyQhWsxU8OEgkkdEyqN4oS7iXu9%2BDagyCd8yUghCRUkPbu9B1dF5EWzyLvqAs0syNKxDX1f2FUriyE6xaxRFocXeqplW4gM%2BUt1tvQ6W5p25AdliSteVGb9BaqAragife2R88SauHWmgDU0wY%2BE1W7jZ99rV1Y3iRN1z17YxDvRAmprY4f%2BaOdqEHZgsCPtfJ0LjmX0FVtzTutQXoM4Q5DWr%2BoIDG%2FZd4ymepwhRhtitCFGG2K0w4rRqhHXg4nRnNOM0Sp5efIxGlCTHL8ao4Eg6CpGA9CIKzuJ0dwhRttHjLZ%2Fam0QsHm9BmwA6tTZOWADtk6MTQO2V%2BOI3%2BDI50LDNIMyjQzHHJh1riECf6LH97BFRQDYAtf9RV3Bs1HXUonHj4XCvKA%2Fxax7JS%2BXz2pL%2FliyyPF6dKB8Uc6m35JHgahjcrSdg8cY0QFeEzovObrXR07Y4jHmeEBDF2iArulKeseDwuegsjZRWX7vQ%2BG5MtM6SbBegoV9SjDbjMzNkHvjMXNXL6gaIe1IgvnDVNIWBIJviUBBnwSCZvhvis1NCQRDPYapViB2RaDmlNL1ImNJuTJxCGJeRXl4pvBwbDhpTh11G8X4zbmja24wHOeUROVszgCA11qtZB0kAtqGw404VkCCkvFnOkSxfYHHMWadHdh31NIcGx6i2N7QEPSNhrZ14m9ego%2B0GbV1E2pKgoOJBcO6Bp94XMe%2BpMPFyRdMCW8rUYNepw0U79eK%2BFJa9KXNXWNNo%2BPvqM09Wy%2FI7Xh%2BwW%2FOLwzMeo5ZGquqQPewFkoqwXXgBHJCY4JuVwK5vh7cOk7HBGoOtzcFLq8DG%2FRtj4pmbM4Hg54VjVJUg749BDT4faPhFIeYjV09m%2FbC6ri8yz%2FMXljRe30vDPvshSv5p4igFntvvUxGAVYVFHbbCwfNIeaBQBsR6FBlbHgcBDJHSuwd15mZG4zMydJ986dtk4c5ND%2Fs%2BtmfJAmNYQDgT%2FyeN%2F4EzaH7lMznArQMk6SBj2HrwnZNDoDR5jZsa3OvxXvtbfdCcEoDra394cvd4UEsrVbOem3fGDp99o3A16MsV3mvrcWlow%2FxuMGKKF31j23Lcd8oLzSMv4G95Wtpovi0XpT2qjWBY%2FQX5jKejfmk9qipgnxDtO6bTG1DpoPY7E552CA0loocgt4Mm0OiCeZ2ZW9Oacqt3ZfVvu4evmxkAuAAxGd4SqOgrXOKxyA%2BNx2Y6Vd8mp863Fl8OsYEvQfDrsVneEKDm6cnPsNNxWe%2F8%2FXQ4JNaRL81n4DR8XQ8Xx82R7W%2BYcbu0Hxx21Shw2rkHRVGc0%2BtGzYnWbtdiwxAm8Aw1mp8%2Bzgs1OgTN8bHM7zAmoCgAZxOZ%2BcBaHbA18UXgWgzNhlQ0Yk38Vq8SVuwskdnssGU2VtRZc8JsZX0WifExGBwPdIJg%2BNZk1zx%2F8BjHhDovtO37cp3br3pNtD55ntWo6w9KzUAtvuU1okzzHJdnWEhPCKGbRou9cyw0J%2FYdrj6g3qn5PJmqP0Z5W%2FMPWN5om%2F1wL3mRPC%2FmAxyp6OviJjj817oTrymDO5Y8ZzkXpFd%2FXHdG4MXPXF%2FXtc7Cq8L1fLoys06FRm2Hn5y9XEs33MngVvz6B272ea6gj%2BHoLIbL1t9l%2FOgfOwGc%2BODj23OnR2qhw2OwsPage4VPcfwgxvvxvPgZI%2BBIz9d%2FR92ZfbVfzxov%2F8f"></iframe>
 
@@ -221,7 +223,8 @@ $$
 >Gegeben sei das folgende Relationenschema. Dabei sind die Schlüsselattribute jeweils unterstrichen.
 >
 >$$
->\text{Produkt} (\underline{\text{PNR}}, \text{Name}, \text{Gewicht}, \text{Farbe})$$
+>\text{Produkt} (\underline{\text{PNR}}, \text{Name}, \text{Gewicht}, \text{Farbe})
+>$$
 >$$
 >\text{Filiale} (\underline{\text{FNR}}, \text{Name}, \text{Ort})
 >$$
@@ -233,7 +236,7 @@ $$
 >\text{Verkauf} (\underline{\text{PNR}}, \underline{\text{PersNr}},
 >\underline{\text{Datum}}, \text{VKPreis})
 >$$
->Geben Sie für die folgende verbal formulierte Anfrage einen äquivalenten Ausdruck in **Relationaler Algebra** und **wahlweise in relationalem Tupel- oder Bereichskalkül** an. Für Anfragen im Tupelkalkül soll darüber hinaus das Schema aller freien Variablen angegeben werden. Sie können an passender Stelle auch den Join-Operator benutzen.
+>Geben Sie für die folgende verbal formulierte Anfrage einen äquivalenten Ausdruck in **Relationaler Algebra** und **wahlweise in relationalem Tupel- oder Bereichskalkül** an. Für Anfragen im Tupelkalkül soll darüber hinaus das Schema aller freien Variable angegeben werden. Sie können an passender Stelle auch den Join-Operator benutzen.
 >
 >- Bestimmen Sie Name und Verkaufspreis aller Produkte, die der Angestellte Peter Müller am 04.02.2017 verkauft hat.
 
@@ -263,10 +266,65 @@ $$
 Schema(pro) = Schema(Produkt);
 $$
 $$
-{[pro.Name,ver.VKPreis] \ | \ pro \in Produkt \ \land \ (\exists \ ver \in Verkauf, ang \in Angestellter
+{\{ \ [pro.Name,ver.VKPreis] \ \} \ | \ pro \in Produkt \ \land \ (\exists \ ver \in Verkauf, ang \in Angestellter
 ) }
 $$
 $$
 ang.Name = 'Peter Müller' \ \land \ ver.Datum = '04.02.2017'
 $$
 
+## [[Bereichskalkül]]
+
+$$
+\{ \ proname,vkpreis \ | \ \exists ProNr,PersNr \ : 
+$$
+$$
+Produkt(ProNr,proname,\_,\_) \ \land 
+$$
+$$
+Verkauf(ProNr,PersNr,'04.02.2017',vkpreis) \ \land 
+$$
+$$
+Angestellter(PersNr,'Peter Müller',\_,\_) \ \}
+$$
+
+---
+
+# Aufgabe 12-4 **SQL**
+
+>[!note] Aufgabenstellung
+>Gegeben sei das folgende Relationenschema zur Fußball-Weltmeisterschaft.
+>- $Mannschaft (\underline{Land}, Trainer)$
+><br/>
+>- $Spieler (\underline{SpielerNr}, Name,\underline{Mannschaft}, Geburtsdatum, Position)$
+><br/>
+>- $Austragungsort (\underline{Stadion}, Platze)$
+><br/>
+>- $Schiedsrichter (\underline{SID}, Name, Nationalitat)$
+><br/>
+>- $Spiel (\underline{SpielID}, Tag, MannschaftA, MannschaftB, Austragungsort, Zuschauer)$
+><br/>
+>- $Tor (\underline{Spieler}, \underline{Mannschaft}, \underline{Spiel}, \underline{Minute})$
+><br/>
+>- $leitet (\underline{Spiel}, \underline{Schiedsrichter})$
+><br/>
+> *Formulieren Sie die folgenden Anfragen in SQL.*
+
+## a) Bestimmen Sie für jeden Austragungsort die Anzahl der Spiele, die dort stattgefunden haben. Beachten Sie, dass auch Austragungsorte gespeichert wurden, an denen dann kein Spiel stattgefunden hat.
+
+```sql
+SELECT Stadion, COUNT(SpielID) FROM Austragungsort
+LEFT JOIN Spiel ON Spiel.Austragungsort = Austragungsort.Stadion
+GROUP BY Austragungsort.Stadion
+```
+
+## b) Bestimmen Sie die Anzahl der Spiele, die Spanien im Laufe der WM gespielt hat, in denen mindestens ein Tor fiel.
+
+```sql
+SELECT Land, COUNT(SpielID) FROM Mannschaft 
+JOIN Spiel ON Spiel.MannschaftA = Mannschaft.Land OR Spiel.MannschaftB = Mannschaft.Land 
+WHERE Mannschaft.Land IN (SELECT Mannschaft,COUNT(*) FROM Tor
+						 GROUP BY Mannschaft
+						 HAVING C
+						 )
+```
