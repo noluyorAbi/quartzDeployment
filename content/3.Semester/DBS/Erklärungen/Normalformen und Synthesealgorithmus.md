@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Monday, 11. March 2024, 16:07
-date modified: Sunday, 7. April 2024, 15:52
+date modified: Monday, 8. April 2024, 18:48
 ---
 
 # Warum Normalformen?
@@ -188,7 +188,17 @@ Jetzt hängt in jeder Tabelle jedes Nicht-Schlüsselattribut direkt vom Primärs
 
 # Synthesealgorithmus
 
-[[Blatt 10#Aufgabe 10-5 Normalformen Synthesealgorithmus|Anwendungsbeispiel]]
+>[!tip] Merkhilfe
+>**Schritte des Synthesealgorithmus:**
+>- Linksreduktion
+>- Rechtsreduktion
+>- Entfernung von rechtsleeren Abhängigkeiten
+>- Zusammenfassen von Abhängigkeiten mit gleicher linker Seite
+>- Neues Relationsschema erzeugen 
+>- Rekonstruktion eines Schlüsselkandidaten:
+>- Elimination überflüssiger Relationen
+
+[[Blatt 10#Aufgabe 10-5 Normalformen und Synthesealgorithmus Synthesealgorithmus]]
 
 Der Synthesealgorithmus wird verwendet, um ein beliebiges Relationenschema R mit funktionalen Abhängigkeiten F in Relationen 𝑅1, … , 𝑅𝑛 zu zerlegen, für die gilt:
 

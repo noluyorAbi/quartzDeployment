@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Monday, 8. April 2024, 12:24
-date modified: Monday, 8. April 2024, 17:31
+date modified: Monday, 8. April 2024, 19:00
 ---
 
 # Aufgabe 12-1 [[ER-Modell]]
@@ -321,10 +321,118 @@ GROUP BY Austragungsort.Stadion
 ## b) Bestimmen Sie die Anzahl der Spiele, die Spanien im Laufe der WM gespielt hat, in denen mindestens ein Tor fiel.
 
 ```sql
-SELECT Land, COUNT(SpielID) FROM Mannschaft 
-JOIN Spiel ON Spiel.MannschaftA = Mannschaft.Land OR Spiel.MannschaftB = Mannschaft.Land 
-WHERE Mannschaft.Land IN (SELECT Mannschaft,COUNT(*) FROM Tor
-						 GROUP BY Mannschaft
-						 HAVING C
-						 )
+SELECT COUNT(DISTINCT Spiel.SpielID) AS Anzahl_Spiele FROM Spiel
+JOIN Tor ON Spiel.SpielID = Tor.Spiel
+WHERE (Spiel.MannschaftA = 'Spanien' OR Spiel.MannschaftB = 'Spanien');
 ```
+
+1. **SELECT COUNT(DISTINCT Spiel.SpielID) AS Anzahl_Spiele**: Diese Zeile zählt die einzigartigen Spiel-IDs. Mit `COUNT(DISTINCT ...)` wird sichergestellt, dass jedes Spiel, unabhängig davon, wie viele Tore darin gefallen sind, nur einmal gezählt wird.
+
+2. **FROM Spiel JOIN Tor ON Spiel.SpielID = Tor.Spiel**: Diese Zeile verknüpft die Tabellen `Spiel` und `Tor` über die Spiel-ID. Das bedeutet, dass nur Spiele berücksichtigt werden, in denen mindestens ein Tor gefallen ist (da nur solche Spiele in der `Tor`-Tabelle aufgeführt werden).
+
+3. **WHERE (Spiel.MannschaftA = 'Spanien' OR Spiel.MannschaftB = 'Spanien')**: Diese Bedingung filtert die Spiele, in denen Spanien entweder also Mannschaft A oder also Mannschaft B beteiligt war.
+
+Die Kombination dieser Elemente führt dazu, dass die Abfrage die Anzahl der unterschiedlichen Spiele liefert, in denen Spanien gespielt hat und in denen mindestens ein Tor erzielt wurde, wobei jedes Spiel nur einmal gezählt wird, auch wenn mehrere Tore fielen.
+
+#### Weitere Lösungen
+
+```sql
+SELECT COUNT(SpielID) FROM spiel s JOIN Tor t ON s.SpiellD = t.spiel
+WHERE MannschaftA = 'Spanien' OR MannschaftB = 'Spanien'
+GROUP BY SpielID;
+```
+
+```sql
+SELECT COUNT(SpiellD) FROM Spiel
+WHERE (MannschaftA= 'Spanien' OR MannschaftB = 'Spanien') AND
+EXISTS (SELECT * FROM Tor WHERE Tor.Spiel = Spiel.SpiellD);
+```
+
+---
+
+# Aufgabe 12-5 **Funktionale Abhängigkeiten**
+
+>[!note] Aufgabenstellung a)
+> Gegeben sei das Relationenschema $R_1(A, B, C, D, E, F)$, sowie die Menge der zugehörigen nicht-trivialen funktionalen Abhängigkeiten:
+>$$
+>\{A, B → D \ \ \ \ \ \ \ \ B, C → E \ \ \ \ \ \ \ \ B → F \}
+>$$
+
+
+## a) Bestimmen Sie die Menge der Schlüsselkandidaten von R1. Geben Sie dazu alle Schlüsselkandidaten an und erläutern Sie, warum es keine weiteren Schlüsselkandidaten gibt
+
+$$
+Schlüsselkandidaten \ S = \{A,B,C\}
+$$
+
+- $A,B \rightarrow D$
+	→ $R_1(\cancel{A}, \cancel{B}, C, \cancel{D}, E, F)$
+	→ $R_1(C, E, F)$
+
+- $B,C \rightarrow E$
+	→ $R_1(\cancel{C}, \cancel{E}, F)$
+	→ $R_1(F)$
+	
+- $B \rightarrow F$
+	→ $R_1(F)$
+	→ $R_1(\cancel{F})$
+	
+$\Longrightarrow$ Mithilfe von $\{A,B,C\}$ kann man alle Attribute herleiten. Zudem ist diese Menge $S$ *eindeutig* und *minimal*
+
+>[!note] Aufgabenstellung b)
+> Gegeben sei das Relationenschema $R_2(A, B, C, D, E, F)$, sowie die Menge der zugehörigen nicht-trivialen funktionalen Abhängigkeiten:
+>$$
+>\{A, B, C \rightarrow D, \ \ \ \ \ \ D \rightarrow E, \ \ \ \ \ \ B, C \rightarrow D, E, F, \ \ \ \ \ \ E \rightarrow F\}
+>$$
+
+## b) Bestimmen Sie die kanonische Überdeckung $F_C$ zu $F$. Geben Sie dazu die kanonische Überdeckung an und erläutern Sie, wie sie erreicht wird. [[Normalformen und Synthesealgorithmus#Synthesealgorithmus]]
+
+>[!tip] Erinnerung
+>**Schritte des Synthesealgorithmus:**
+>- Linksreduktion
+>- Rechtsreduktion
+>- Entfernung von rechtsleeren Abhängigkeiten
+>- Zusammenfassen von Abhängigkeiten mit gleicher linker Seite
+>- Neues Relationsschema erzeugen 
+>- Rekonstruktion eines Schlüsselkandidaten:
+>- Elimination überflüssiger Relationen
+
+$$
+R_2(A, B, C, D, E, F)
+$$
+$$
+F = \{A, B, C \rightarrow D, \ \ \ \ \ \ D \rightarrow E, \ \ \ \ \ \ B, C \rightarrow D, E, F, \ \ \ \ \ \ E \rightarrow F\}
+$$
+### Linksreduktion
+
+- $A, B, C \rightarrow D$
+	→ $\cancel{A}, B, C \rightarrow D$
+	→ $B, C \rightarrow D$
+	- Da gilt $D \in (F,\{A,B,C\}-A)=D$
+	- Wir können $A$ in der funktionalen Abhängigkeit $A, B, C \rightarrow D$ weglassen, weil $D$ bereits durch $B$ und $C$ alleine hergeleitet werden kann.
+
+- $D \rightarrow E$
+	- minimal gibt nix zu ändern
+
+- $B, C \rightarrow D, E, F$
+	- gibt nix zu ändern 
+
+- $E \rightarrow F$
+	- minimal gibt nix zu ändern
+
+### Rechtsreduktion
+
+- $B, C \rightarrow D$
+	- $B, C \rightarrow \emptyset$
+	- $D$ wird abgedeckt durch $B, C \rightarrow D, E, F$
+
+- $D \rightarrow E$ 
+	- $D \rightarrow \emptyset$ 
+	- $E$ wird abgedeckt durch $B, C \rightarrow D, E, F$
+
+- $B, C \rightarrow D, E, F$
+	- bleibt unverändert
+
+- $E \rightarrow F$
+	- $E \rightarrow \emptyset$
+	- $F$ wird abgedeckt durch $B, C \rightarrow D, E, F$
