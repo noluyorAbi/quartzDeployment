@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Monday, 11. March 2024, 16:07
-date modified: Monday, 8. April 2024, 18:48
+date modified: Tuesday, 9. April 2024, 15:33
 ---
 
 # Warum Normalformen?
@@ -82,7 +82,10 @@ Alle Attribute enthalten atomare Werte (String, Integer, …) und keine Tuple, L
 ## 2. Normalform (2NF)
 
 > [!tip] Merkhilfe
-> *1.NF* + jedes Nicht-Schlüssel-Attribut (NSA) ist voll funktional abhängig vvon jedem Schlüsselkandidaten
+> *1.NF* + 
+> - jedes Nicht-Schlüssel-Attribut (NSA) ist voll funktional abhängig von jedem Schlüsselkandidaten
+> 
+> $\Longrightarrow$ **! Transitive Abhängigkeiten zwischen nicht Schlüsselkandidaten sind erlaubt**, nur falls eine Abhängigkeit zu einem Schlüsselkandidaten besteht muss eine Abhängigkeit zu allen Schlüsselkandidaten auch bestehen!
 > 
 > <span style="color:orange">(Each non-key attribute must depend on the entire primary key)</span>
 
@@ -123,17 +126,21 @@ Die 2NF ist wichtig, um Redundanzen zu vermeiden und die Datenintegrität zu gew
 ## 3. Normalform (3NF)
 
 > [!tip] Merkhilfe
-> - nicht Schlüssel Kandidaten dürfen nicht eine Abhängigkeit sein
-> - Schauen alle Abhängigkeiten an, linke Seite immer Schlüssel oder rechts immer primäre Attribute, bzw. keine Abhängigkeit zwischen nicht-schlüsseln
+ >- Keine transitiven Abhängigkeiten (Kein Nichtschlüssel zu anderem Nichtschlüssel) wobei der eine Nichtschlüssel wiederum von einem Schlüsselkandidaten abhängt
+> - *"Vermittler"* hängt also von Schlüsselkandidat ab ist aber selber keiner und hat eine Abhängigkeit zu einem Nichtschlüsselkandidaten
+> - Reicht wenn ein Nichtschlüssel Attribute von *irgendeinem* Schlüsselkandidaten abhängig ist 
 > <br/>
+> 
+> Z.B. $R = (\underline A, B, C, D)$
+> Die 3.NF ist hier nicht gegeben, da es eine Abhängigkeit $A→B$ geben kann, und dann wiederum eine Abhängigkeit $B→C$ wo $B$ also der *Vermittler* dient [[Klausuraufgaben WS-2023-24#(a) Können wir mit Sicherheit davon ausgehen, dass $R$ auch die zweite und dritte Normalform erfüllt? Begründen Sie Ihre Aussage jeweils in ein bis zwei Sätzen.|(Beispiel aus Klausur WS23-24)]]
+>
 >- <span style="color:orange">Every non-key attribute in a table should depend on the key,the whole key, and nothing but the key</span>
 >- BCNF: <span style="color:#32de84">Every ~~non-key~~ attribute in a table should depend on the key,the whole key, and nothing but the key </span>
 
 >[!warning] Was die 3NF bricht
-> - Transitiven Abhängigkeiten von Nicht-Schlüsselattributen.
+> - Transitive Abhängigkeiten von Nicht-Schlüsselattributen.
 > - Nicht-Schlüsselattribute, die nicht direkt vom Primärschlüssel abhängen, sondern von anderen Nicht-Schlüsselattributen.
 > - Fehlende Normalisierung von wiederholten Gruppen von Attribute in separate Tabellen.
-
 
 > $$\underbrace{\underbrace{mnr,fznr}_{Schlüsselkandidaten}→ baujahr, km-stand, n-preis, h-preis, ek-preis}_{Erfüllt \ 3.NF}$$
 
