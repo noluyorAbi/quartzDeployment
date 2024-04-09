@@ -4,10 +4,10 @@ last modified: 2024-03-28 15:50
 tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
 date created: Thursday, 28. March 2024, 15:50
-date modified: Thursday, 4. April 2024, 15:24
+date modified: Tuesday, 9. April 2024, 17:20
 ---
 
-Gegeben seien die Relationen `Kunde`, `Personal`, `Verkauf`, `Inventar` und `Auftragsposten` als Datenmodell für eine Möbel-Verkauf-Datenbank (vgl. Übungsblatt 4):
+Gegeben seien die Relationen `Kunde`, `Personal`, `Verkauf`, `Inventar` und `Auftragsposten` also Datenmodell für eine Möbel-Verkauf-Datenbank (vgl. Übungsblatt 4):
 
 - **Kunde** (`kund_nr`, `kund_name`, `adresse`, `ort`, `plz`)
 - **Personal** (`pers_nr`, `nachname`, `vorname`, `einsatz`, `vorgesetzt`, `gehalt`)
@@ -19,7 +19,7 @@ Gegeben seien die Relationen `Kunde`, `Personal`, `Verkauf`, `Inventar` und `Auf
 
 *Formulieren Sie folgende Anfragen in der Datenbanksprache SQL. Formulieren Sie die Teilaufgaben a) und b) jeweils einmal mit Hilfe von Join-Operationen und einmal nur mittels Unterabfragen ohne Join oder Kreuzprodukt. Achten Sie darauf, Duplikate zu vermeiden.*
 
-***Manchmal werden in SELECT-Abfragen anstelle der korrekten Attribute Sternchen (\*) verwendet. Dies geschieht, weil es beim Erlernen von Abfragen hilfreich ist, alle Attribute der Tupel zu sehen. Anstelle des Sternchens sollten jedoch die in der Aufgabenstellung geforderten Attribute explizit genannt werden. Das macht die Abfrage klarer und vermeidet unnötige Informationen.**
+***Manchmal werden in SELECT-Abfragen anstelle der korrekten Attribute Sternchen (\*) verwendet. Dies geschieht, weil es beim Erlernen von Abfragen hilfreich ist, alle Attribute der Tuple zu sehen. Anstelle des Sternchens sollten jedoch die in der Aufgabenstellung geforderten Attribute explicit genannt werden. Das macht die Abfrage klarer und vermeidet unnötige Informationen.**
 
 ### a) Finden Sie die Nummern und Bezeichnungen aller Artikel, deren Preis entweder dem Gehalt von Roswita Hartinger oder Margot Winter entspricht. (Zusatzanforderung oben beachten!)
 
@@ -169,4 +169,4 @@ WHERE NOT EXISTS (
 
 Die Anfrage ermittelt Angestellte, die an jeden Kunden in Landshut mindestens einmal verkauft haben, indem sie sicherstellt, dass es keinen Kunden aus Landshut gibt, für den nicht mindestens ein Verkauf durch den Angestellten getätigt wurde. Nur wenn für einen Angestellten keine solche Ausnahme gefunden wird, wird er in das Ergebnis aufgenommen.
 
-Als nächstes: [[Blatt 8]]
+Also nächstes: [[Blatt 8]]

@@ -4,10 +4,10 @@ last modified: 2024-03-20 18:09
 tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
 date created: Wednesday, 20. March 2024, 18:09
-date modified: Thursday, 4. April 2024, 15:24
+date modified: Tuesday, 9. April 2024, 16:59
 ---
 
-# Daten Definition Language (DDL)
+# Daten Definition Language (DDL) / SQL
 
 Die DDL wird verwendet, um Tabellen in einer Datenbank anzulegen, zu verändern oder zu löschen.
 
@@ -24,22 +24,22 @@ CREATE TABLE tabellenname (
 );
 ```
 
-- **`attribut` – Name des Attributs.**
+- **`attribut` – Name des Attributes.**
 
-- **`datentyp` – Datentyp des Attributs.**
+- **`datentyp` – Datentyp des Attributes.**
   - `CHAR(n)` – String fester Länge n.
   - `VARCHAR(n)` – String variabler Länge (maximal n).
-  - `INT` – Ganze Zahl (positiv oder negativ).
+  - `INT` – Ganze Zahl (positive oder negative).
   - `DECIMAL(n, m)` – Festkommazahl mit n Stellen insgesamt, m davon hinter dem Komma.
-  - `FLOAT` – Gleitkommazahl, Kommazahl egal wie viele Stellen vor oder hinter dem Komma.
+  - `FLOAT` – Gleitkommazahl, Kommazahl equal wie viele Stellen vor oder hinter dem Komma.
   
-- **`constraint` – Beschränkung für das Attribut.**
-  - `NOT NULL` – Attribut muss gefüllt werden.
-  - `UNIQUE` – Attribut darf nicht doppelt vorkommen.
-  - `PRIMARY KEY` – Attribut ist alleiniger Primärer Schlüssel.
-  - `CHECK(b)` – Attribut muss Bedingung b erfüllen (z.B. CHECK attribut > 0).
+- **`constraint` – Beschränkung für das Attribute.**
+  - `NOT NULL` – Attribute muss gefüllt werden.
+  - `UNIQUE` – Attribute darf nicht doppelt vorkommen.
+  - `PRIMARY KEY` – Attribute ist alleiniger Primärer Schlüssel.
+  - `CHECK(b)` – Attribute muss Bedingung b erfüllen (z.B. CHECK attribute > 0).
   - `DEFAULT x` – Wenn nicht gefüllt, dann Defaultwert x.
-  - `REFERENCES t(a)` – Fremdschlüssel, der auf Attribut a in Tabelle t verweist.
+  - `REFERENCES t(a)` – Fremdschlüssel, der auf Attribute a in Tabelle t verweist.
 
 ## Tabellenconstraints
 
@@ -59,9 +59,9 @@ DROP (attribut);
 ADD CONSTRAINT (constraint_name constraint);
 ```
 
-- `ADD` – Hinzufügen eines Attributs.
-- `MODIFY` – Ändern eines Attributs.
-- `DROP` – Löschen eines Attributs.
+- `ADD` – Hinzufügen eines Attributes.
+- `MODIFY` – Ändern eines Attributes.
+- `DROP` – Löschen eines Attributes.
 - `ADD CONSTRAINT` – Hinzufügen einer Beschränkung mit Name = constraint_name.
 
 ## Löschen von Tabellen

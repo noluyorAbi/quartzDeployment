@@ -4,17 +4,17 @@ last modified: 2024-03-20 17:22
 tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
 date created: Wednesday, 20. March 2024, 17:22
-date modified: Thursday, 4. April 2024, 15:24
+date modified: Tuesday, 9. April 2024, 16:47
 ---
 
 # Aufgabe 3-1 *Schlüssel und Fremdschlüssel*
 
 ## Aufgabe 3-1 Schlüssel und Fremdschlüssel
 
-**Ein Fremdschlüssel ist ein Attribut oder eine Attributkombination einer Relation, welches auf einen Primärschlüssel (bzw. Schlüsselkandidat) einer anderen oder der gleichen Relation verweist.**
+**Ein Fremdschlüssel ist ein Attribute oder eine Attributkombination einer Relation, welches auf einen Primärschlüssel (bzw. Schlüsselkandidat) einer anderen oder der gleichen Relation verweist.**
 
 **Eine relationale Datenbank enthält alle Informationen über bereits gesehenen Serien einer Streamingplattform und die darin vorkommenden Rollen:**
-### Serie
+### Series
 
 | SID | Sender | Serienname          |
 |-----|--------|---------------------|
@@ -30,9 +30,9 @@ date modified: Thursday, 4. April 2024, 15:24
 | 24  | Sheldon | Cooper    | 59   |
 | 33  | Rick    | Grimes    | null |
 
-**Die Attribute `Serie.SID` und `Rolle.RID` stellen die Primärschlüssel der beiden Relationen dar. Das Schema enthält außerdem folgende Fremdschlüsselbeziehung zwischen Rollen und Serie:**
+**Die Attribute `Serie.SID` und `Rolle.RID` stellen die Primärschlüssel der beiden Relationen dar. Das Schema enthält außerdem folgende Fremdschlüsselbeziehung zwischen Rollen und Series:**
 
-**Rolle.SID → Serie.SID**
+**Rolle.SID → Series.SID**
 
 ### a) Wie reagiert ein Datenbanksystem wenn Primärschlüssel definiert wurden?
 
@@ -45,7 +45,7 @@ date modified: Thursday, 4. April 2024, 15:24
 	- *Beispiel:*
 ```Stellen Sie sich eine Tabelle vor, die Studenteninformationen an einer Universität speichert. Die Tabelle könnte folgende Spalten haben: `StudentenID`, `Name`, `Alter`, `Studiengang` und `E-Mail-Adresse`.
 	
-In diesem Fall könnte die `StudentenID` ein minimaler Schlüssel sein, da jede `StudentenID` einzigartig ist und jeden Studenten eindeutig identifiziert. Kein anderes Attribut kann aus diesem Schlüssel entfernt werden, ohne seine Eindeutigkeit zu verlieren.
+In diesem Fall könnte die `StudentenID` ein minimaler Schlüssel sein, da jede `StudentenID` einzigartig ist und jeden Studenten eindeutig identifiziert. Kein anderes Attribute kann aus diesem Schlüssel entfernt werden, ohne seine Eindeutigkeit zu verlieren.
 	
 Hier ist ein einfaches Beispiel:
 	
@@ -57,19 +57,19 @@ Hier ist ein einfaches Beispiel:
 In dieser Tabelle ist `StudentenID` der minimale Schlüssel.```
 
 
-### c) Was versteht man unter referenzieller Integrität?
+### c) Was versteht man under referenzieller Integrität?
 
 - Bedingungen zur Sicherung der Datenintegrität bei Nutzung relationaler Datenbanken
-	 1. Ein Datensatz mit Fremdschlüssel kann nur dann eingefügt werden, wenn in der referenzierter Tabelle ein Datensatz mit den entsprechenden Werten als Primärschlüssel oder einem eindeutigen Alternativschlüssel existiert. *(nur erstellbar falls referenz existiert)*
+	 1. Ein Datensatz mit Fremdschlüssel kann nur dann eingefügt werden, wenn in der referenzierter Tabelle ein Datensatz mit den entsprechenden Werten also Primärschlüssel oder einem eindeutigen Alternativschlüssel existiert. *(nur erstellbar falls reference existiert)*
 	 2. Datensatzlöschung oder Änderung ist nur möglich falls zu diesem Datensatz keine abhängigen Datensätze in Beziehung stehen *(nur bearbeitbar falls keine abhängigen Daten in Beziehung)* **No dangeling references**
 
 
 ### d) Gehen Sie davon aus, dass sich nur die oben gezeigten Eintrage in der Datenbank befinden. Welche der Einfügeoperationen wird das Datenbanksystem erfolgreich verarbeiten können? Bitte begründen Sie Ihre Antwort kurz.
 
-*Gehe davon aus, dass sich nur die oben gezeigten Einträge in der Datenbank befinden. Welche der Einfügeoperationen wird das Datenbanksystem erfolgreich verarbeiten können? Bitte begründe deine Antwort kurz.*
+*Gehe davon aus, dass sich nur die oben gezeigten Einträge in der Datenbank befinden. Welche der Einfügeoperationen wird das Datenbanksystem erfolgreich verarbeiten können? Bitte begründe define Antwort kurz.*
 
 - [ ] Einfügen von (12, 'Harvey', 'Specter', 41) in Rolle **→ referenzierte SID existiert nicht**
-- [ ] Einfügen von (47, 'FOX', 'Suits') in Serie **→ SID existiert bereits also nicht korrekt**
+- [ ] Einfügen von (47, 'FOX', 'Suits') in Series **→ SID existiert bereits also nicht korrekt**
 - [x] Einfügen von (42, 'Leonard', 'Hofstadter', 59) in Rolle **→ Passt alles**
 
 
@@ -145,7 +145,7 @@ PRIMARY KEY (KNr, TNr, LNr)
 ```
 
 
-### b) Fügen Sie in die Kunden-Relation “K” eine weitere Spalte “Branche” als variablen Text der Länge 30 mit dem Default-Wert ‘Automobil’ ein
+### b) Fügen Sie in die Kunden-Relation “K” eine weitere Spalte “Branche” also variable Text der Länge 30 mit dem Default-Wert ‘Automobil’ ein
 
 ```sql
 ALTER TABLE Kunde 
@@ -159,7 +159,7 @@ ALTER TABLE Team
 DROP(TGrösse);
 ```
 
-### d) Ändern Sie den Datentyp des Attributs `Volumen` aus der Relation `KTL` in eine ganze Zahl, die größer als 0 ist.
+### d) Ändern Sie den Datentyp des Attributes `Volumen` aus der Relation `KTL` in eine ganze Zahl, die größer also 0 ist.
 
 # FALSCH: X
 ```sql
@@ -177,15 +177,15 @@ ADD CONSTRAINT volumen_constraint CHECK (Volumen > 0)
 ```
 
 
-→ Die erste, als falsch markierte SQL-Anweisung hat ein paar Probleme, die sie in den meisten SQL-Dialekten ungültig machen würden:
+→ Die erste, also falsch markierte SQL-Anweisung hat ein paar Problem, die sie in den meisten SQL-Dialekten ungültig machen würden:
 
 1. In vielen SQL-Dialekten, darunter MySQL, ist die Syntax `MODIFY(Volumen INTEGER CHECK(Volumen > 0))` nicht korrekt. Das `CHECK`-Constraint wird typischerweise nicht innerhalb der `MODIFY`-Anweisung definiert.
 2. In manchen SQL-Systemen, wie zum Beispiel SQLite, ist die direkte Einbettung des `CHECK`-Constraints in einer `ALTER TABLE ... MODIFY COLUMN`-Anweisung nicht erlaubt.
 
-Die zweite, als richtig markierte SQL-Anweisung umgeht diese Probleme:
+Die zweite, also richtig markierte SQL-Anweisung umgeht diese Problem:
 
 1. `ALTER TABLE KTL MODIFY (Volumen INTEGER)` – Diese Anweisung ist syntaktisch korrekt. Sie ändert den Datentyp der Spalte `Volumen` auf `INTEGER`, ohne irgendwelche Constraints anzugeben.
-2. `ALTER TABLE KTL ADD CONSTRAINT volumen_constraint CHECK (Volumen > 0)` – Diese separate Anweisung fügt das `CHECK`-Constraint korrekt hinzu. Hierbei wird das `CHECK`-Constraint als eigener `CONSTRAINT` definiert, was in den meisten SQL-Datenbanksystemen der richtige Weg ist.
+2. `ALTER TABLE KTL ADD CONSTRAINT volumen_constraint CHECK (Volumen > 0)` – Diese separate Anweisung fügt das `CHECK`-Constraint korrekt hinzu. Hierbei wird das `CHECK`-Constraint also eigener `CONSTRAINT` definiert, was in den meisten SQL-Datenbanksystemen der richtige Weg ist.
 
 Zusammenfassend ist das "richtige" Statement korrekt, weil es die Syntax-Regeln befolgt, die von den meisten SQL-Datenbanksystemen erwartet werden.
 
@@ -201,4 +201,4 @@ DROP TABLE Leistung
 
 ---
 
-Als nächstes: [[Blatt 4]]
+Also nächstes: [[Blatt 4]]

@@ -6,7 +6,7 @@ fach: "[[DBS]]"
 Thema:
   - Relationale Algebra
 date created: Thursday, 21. March 2024, 14:54
-date modified: Thursday, 4. April 2024, 15:25
+date modified: Tuesday, 9. April 2024, 17:03
 ---
 
 # Aufgabe 4-1 **Natural Join**
@@ -19,7 +19,7 @@ date modified: Thursday, 4. April 2024, 15:25
 
 # Aufgabe 4-2 **Ableitung des Quotient-Operators** [[Relationale Algebra#Quotient| (Quotientoperator)]]
 
-*Bilden Sie die relationale Operation „Quotient“ durch die fünf relationalen Grundoperationen (Vereinigung, Differenz, kartesisches Produkt, Selektion, Projektion) nach.*
+*Bilden Sie die relationale Operation „Quotient“ durch die fünf relationalen Grundoperationen (Vereinigung, Differenz, kartesisches Product, Selektion, Projektion) nach.*
 
 Definition Quotient formal:
 
@@ -55,15 +55,15 @@ $= \Pi_{R-S}(R) - \Pi_{R-S}((\Pi_{R-S}(R) \times S) - R)$
 
 # Aufgabe 4-4 *Anfragen in relationaler Algebra*
 
-*Gegeben seien die Relationen Kunde, Personal, Verkauf, Inventar und Auftragsposten als Datenmodell für eine Möbel-Verkauf-Datenbank:*
+*Gegeben seien die Relationen Kunde, Personal, Verkauf, Inventar und Auftragsposten also Datenmodell für eine Möbel-Verkauf-Datenbank:*
 
-- `Kunde` (kundnr, kundname, adresse, ort, plz)
+- `Kunde` (kundnr, kundname, address, ort, plz)
 - `Personal` (persnr, nachname, vorname, einsatz, vorgesetzt, gehalt)
 - `Verkauf` (auftrnr, bestelldatum, persnr, kundnr)
 - `Inventar` (artnr, artbez, lagerbest, lagerort, preis)
 - `Auftragsposten` (auftrnr, artnr, menge)
 
-*Hinweis: Am Ende des Übungsblattes finden Sie zum Verständnis eine passende Beispielausprägung des Relationenschemas. Achten Sie darauf, dass Ihre Anfrage für jede mögliche Ausprägung der Datenbank das richtige Ergebnis liefert; nicht nur für die gegebene Beispielausprägung.*
+*Hinweis: Am End des Übungsblattes finden Sie zum Verständnis eine passende Beispielausprägung des Relationenschemas. Achten Sie darauf, dass Ihre Anfrage für jede mögliche Ausprägung der Datenbank das richtige Ergebnis liefert; nicht nur für die gegebene Beispielausprägung.*
 
 *Formulieren Sie die folgenden Anfragen durch Ausdrücke über der relationalen Algebra.*
 
@@ -71,7 +71,7 @@ $= \Pi_{R-S}(R) - \Pi_{R-S}((\Pi_{R-S}(R) \times S) - R)$
 
 $\Pi_{artbez,lagerort}(\sigma_{preis>5000}(Inventar))$
 
-### b) Bestimme die Vornamen aller Mitarbeiter, die in München im Einsatz sind und mindestens ein Produkt seit dem 24.07.2023 verkauft haben.
+### b) Bestimme die Vornamen aller Mitarbeiter, die in München im Einsatz sind und mindestens ein Product seit dem 24.07.2023 verkauft haben.
 
 $\Pi_{vorname}(\sigma_{einsatz = ''München'' \  \land \ bestelldatum \  \ge \ '24.07.2023' }(Verkauf \bowtie Personal ))$
 ### c) Bestimme die Personalnummern der Vorgesetzten aller Mitarbeiter, die etwas an einen Kunden aus dem Bezirk mit der PLZ '74391' verkauft haben.
@@ -79,7 +79,7 @@ $\Pi_{vorgesetzt}(\sigma_{ort = '74391' }(Personal \bowtie Kunde \bowtie Verkauf
 ### d) Bestimme die Auftragsnummern (auftrnr) aller Bestellungen, die 'Betten Kaiser' aufgegeben hat und die von 'Michael Roser' bearbeitet wurden.
 
 $\Pi_{auftrnr}(\sigma_{kundname = 'Betten Kaiser' \ \land \ nachname = 'Roser' \ \land \ vorname = 'Michael'}(Kunde \bowtie Personal \bowtie Verkauf ))$
-### e) Bestimme das Bestelldatum und die Artikelnummern (artnr) aller Aufträge, deren Produkte im gleichen Ort lagern, in dem der Kunde seinen Sitz hat und die von einem Mitarbeiter mit einem Gehalt von unter 4500 verkauft wurden.
+### e) Bestimme das Bestelldatum und die Artikelnummern (artnr) aller Aufträge, deren Produkte im gleichen Ort lagern, in dem der Kunde seinen Sitz hat und die von einem Mitarbeiter mit einem Gehalt von under 4500 verkauft wurden.
 
 $\Pi_{artnr,bestelldatum}(\sigma_{lagerort = ort \ \land \ gehalt \  \lt 4500 }(Kunde \bowtie Personal \bowtie Ineventar \bowtie Verkauf \bowtie Auftragsposten))$
 
@@ -87,7 +87,7 @@ $\Pi_{artnr,bestelldatum}(\sigma_{lagerort = ort \ \land \ gehalt \  \lt 4500 }(
 
 # Aufgabe 4-5 *Anfragen mit dem Quotient-Operator*
 
-Gegeben seien die Relationen Lieferant `L`, Teil `T` und Projekt `P` als Datenmodell für eine Lieferanten-Teile-Projekte-Datenbank. Ferner existiert eine Relation `LTP`, die die Beziehungen der vorgenannten Relationen modelliert:
+Gegeben seien die Relationen Lieferant `L`, Teil `T` und Projekt `P` also Datenmodell für eine Lieferanten-Teile-Projekte-Datenbank. Ferner existiert eine Relation `LTP`, die die Beziehungen der vorgenannten Relationen modelliert:
 
 - `L` (`lnr`, `lname`, `status`, `sitz`) 
 - `T` (`tnr`, `tname`, `farbe`, `gewicht`)
@@ -128,4 +128,4 @@ Zusammengefasst unterscheiden sich die Abfragen in dem, was sie betrachten (Lief
 
 ---
 
-Als nächstes: [[Blatt 5]]
+Also nächstes: [[Blatt 5]]
