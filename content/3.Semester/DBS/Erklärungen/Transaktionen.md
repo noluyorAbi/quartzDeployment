@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Sunday, 7. April 2024, 15:57
-date modified: Tuesday, 9. April 2024, 23:42
+date modified: Wednesday, 10. April 2024, 00:04
 ---
 
 # Was sind Transaktionen?
@@ -214,9 +214,9 @@ $\Longrightarrow$ Transaktionen müssen so Ausgeführt werden, dass das *ACID*-P
 
 # Ultimative Anomalien Zusammenfassung
 
->[!tip]- Erklärung der Transaktionsanomalien: Lost Update, Dirty Read, Non-Repeatable Read
+>[!tip]- Ultimative Anomalien Zusammenfassung --- Erklärung der Transaktionsanomalien: Lost Update, Dirty Read, Non-Repeatable Read
 >
->**Lost Update**
+>**Lost Update RWW**
 >
 >Bei einem "Lost Update" wird eine Änderung von einer anderen Transaktion überschrieben, ohne dass diese Änderungen wahrgenommen wurden:
 >
@@ -258,7 +258,7 @@ $\Longrightarrow$ Transaktionen müssen so Ausgeführt werden, dass das *ACID*-P
 >\end{array}
 >$$
 >
->**Dirty Read**
+>**Dirty Read WRW**
 >
 >Ein "Dirty Read" beschreibt das Lesen von Daten, die von einer anderen Transaktion geändert wurden, aber noch nicht festgeschrieben sind:
 >
@@ -302,7 +302,7 @@ $\Longrightarrow$ Transaktionen müssen so Ausgeführt werden, dass das *ACID*-P
 >\end{array}
 >$$
 >
->**Non-Repeatable Read**
+>**Non-Repeatable Read RWR**
 >
 >Ein "Non-Repeatable Read" tritt auf, wenn eine Transaktion denselben Datensatz mehrmals liest und unterschiedliche Werte feststellt:
 >
