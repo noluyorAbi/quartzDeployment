@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[DBS]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Tuesday, 9. April 2024, 21:53
+date modified: Tuesday, 9. April 2024, 23:42
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
@@ -414,7 +414,7 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >T_{1}→T_4→T_2→T_3
 $$
 
-## (c) Welche Anomalien treten im Schedule $S_2$ auf? Geben Sie für jede Anomalie an, ob diese auftritt und falls ja, bezüglich welchen Objekten. Jede Anomalie kann entweder keinmal, einmal oder mehrmals auftreten.
+## (c) Welche Anomalien treten im Schedule $S_2$ auf? Geben Sie für jede [[Transaktionen#Anomalien]] an, ob diese auftritt und falls ja, bezüglich welchen Objekten. Jede Anomalie kann entweder keinmal, einmal oder mehrmals auftreten.
 
 >[!note] Aufgabenstellung
 >Betrachten Sie nun folgenden Schedule:
@@ -426,13 +426,136 @@ $$
 >- Lost-Update
 >- Non-repeatable Read
 
-+
-
-
+>[!tip]-  Ultimative Anomalien Zusammenfassung --- Erklärung der Transaktionsanomalien: Lost Update, Dirty Read, Non-Repeatable Read
+>
+>**Lost Update**
+>
+>Bei einem "Lost Update" wird eine Änderung von einer anderen Transaktion überschrieben, ohne dass diese Änderungen wahrgenommen wurden:
+>
+>$$
+>x = 100
+>$$
+>$$
+>\begin{array}{|c|c|}
+>\hline
+>T_1& T_2\\  
+>\hline 
+>r(x) & \\
+>x=x+10& \\
+>& r(x) \\
+>& x=x-20\\
+>w(x)& \\
+>& w(x) \\
+>\hline
+>\end{array}
+>$$
+>- T1 und T2 lesen x (100).
+>- T1 erhöht x auf 110, aber bevor es schreibt, liest T2 den alten Wert (100) und verringert ihn auf 80.
+>- T1 schreibt 110, aber T2 überschreibt es mit 80.
+>- Das führt dazu, dass die Änderung von T1 verloren geht.
+>
+>$$
+>Merkhilfe:
+>$$
+>$$
+>\begin{array}{|c|c|}
+>\hline
+>T_1& T_2\\  
+>\hline 
+>r & \\
+>& r \\
+>w& \\
+>& w \\
+>\hline
+>\end{array}
+>$$
+>
+>**Dirty Read**
+>
+>Ein "Dirty Read" beschreibt das Lesen von Daten, die von einer anderen Transaktion geändert wurden, aber noch nicht festgeschrieben sind:
+>
+>$$
+>x = 100
+>$$
+>$$
+>\begin{array}{|c|c|}
+>\hline
+>T_1& T_2\\  
+>\hline 
+>r(x) & \\
+>x=x+10& \\
+>w(x)& \\
+>& r(x) \\
+>& x=x-20\\
+>& w(x) \\
+>FAIL & \\
+>\hline
+>\end{array}
+>$$
+>- T1 erhöht x auf 110 und schreibt.
+>- T2 liest den neuen Wert 110, verringert ihn auf 90 und schreibt.
+>- T1 scheitert und macht seine Änderungen rückgängig.
+>- T2 hat Daten basierend auf einem noch nicht festgeschriebenen Wert geändert.
+>
+>$$
+>Merkhilfe:
+>$$
+>$$
+>\begin{array}{|c|c|}
+>\hline
+>T_1& T_2\\  
+>\hline 
+>r & \\
+>w \\
+>& r \\
+>& w\\
+>FAIL \\
+>\hline
+>\end{array}
+>$$
+>
+>**Non-Repeatable Read**
+>
+>Ein "Non-Repeatable Read" tritt auf, wenn eine Transaktion denselben Datensatz mehrmals liest und unterschiedliche Werte feststellt:
+>
+>$$
+>x = 100
+>$$
+>$$
+>\begin{array}{|c|c|}
+>\hline
+>T_1& T_2\\  
+>\hline 
+>r(x) & \\
+>& w(x) \\
+>& x=x+10\\
+>r(x) & \\
+>\hline
+>\end{array}
+>$$
+>- T1 liest x, welches 100 ist.
+>- T2 ändert x auf 110 und schreibt.
+>- T1 liest x erneut und findet den Wert 110, anders als beim ersten Mal.
+>
+>$$
+>Merkhilfe:
+>$$
+>$$
+>\begin{array}{|c|c|}
+>\hline
+>T_1& T_2\\  
+>\hline 
+>r & \\
+>& w \\
+>r & \\
+>\hline
+>\end{array}
+>$$
+>
+>Diese Anomalien verdeutlichen unterschiedliche Risiken und Herausforderungen im Umgang mit Transaktionen in Datenbanksystemen, die es durch geeignete Isolationslevel und Sperrmechanismen zu managen gilt.
 
 >[!success]- Lösung (klicken zum Aufklappen)
 >>[!note] Merkhile
 >>DR: WRW
 >>LU: RWW
 >>NRR: RWR
-
