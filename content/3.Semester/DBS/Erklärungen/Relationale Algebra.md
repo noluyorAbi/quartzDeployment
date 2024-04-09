@@ -4,7 +4,7 @@ last modified: 2024-03-21 15:35
 tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
 date created: Thursday, 21. March 2024, 15:35
-date modified: Monday, 8. April 2024, 15:40
+date modified: Tuesday, 9. April 2024, 19:00
 ---
 
 # Was ist die relationale Algebra vor allem im Bereich DBS?
@@ -67,13 +67,26 @@ $$\Pi_{a1, \ldots , am}(R) = \{t_{a1}, \ldots , t_{am} | t \in R\}$$
 ---
 
 ## Durchschnitt
-$$R \  \cap \ S = \{\ t \ | \ t \in \ R \ und \ t \ \in \ S \}$$
+$$
+R \  \cap \ S = \{\ t \ | \ t \in \ R \ und \ t \ \in \ S \}
+$$
 - Relation also Ergebnis welche den Schnitt der beiden Relationen enthält
 
 ---
 
 ## Joins
 
+$$
+R \underset{\phi}{\bowtie} S = \sigma_\phi(R\times S)
+$$
+$$
+\phi \ \text{Steht als Bedingung bzw. Ausdruck }
+$$
+### Equi-Join
+
+$$
+R \bowtie_{A=B} S = \{\ (r,s)\ | \ r\in R\land s\in S\land r_{|A|}=s_{|B|} \ \}
+$$
 - Zum Zusammenfügen von Relationen 
 
 ---
@@ -83,6 +96,10 @@ $$R \  \cap \ S = \{\ t \ | \ t \in \ R \ und \ t \ \in \ S \}$$
 [[Blatt 12#(b) Relationale Algebra Quotient|Blatt 12 Anwendungsbeispiel]]
 
 Der Quotient ist eine etwas komplexere Operation in der relationalen Algebra. Gegeben zwei Relationen R und S, wird der Quotient R ÷ S also die Menge aller Tuple t definiert, die bei der Projektion von R auf die Attribute, die nicht in S sind (R - S), existieren und für die jedes Tuple in S mit t kombiniert werden kann, um ein Tuple in R zu formen.
+
+$$
+R \div S = \pi_{R\ '} \ (R) - \pi_{R\ '} \ ((\pi_{R\ '} \ (R) \times S) - R)
+$$
 
 $$R \div S = \{ t \ | \ t \in \Pi_{R-S}(R) \land \{t\} \times S \subseteq R \}$$
 

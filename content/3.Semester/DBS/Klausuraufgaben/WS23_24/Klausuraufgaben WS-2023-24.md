@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[DBS]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Tuesday, 9. April 2024, 17:19
+date modified: Tuesday, 9. April 2024, 18:56
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
@@ -211,7 +211,7 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >				 )
 >```
 
-## (d) Geben Sie für jeden Einsatz den Einsatznamen sowie die Gesamtkosten aller Bezahlungen für die Agenten aus. Jedoch sollen dabei nur die Bezahlung der Agenten mitgezählt werden, die schon an mehr als zwei <u>unterschiedlichen</u> Einsätzen beteiligt waren.
+## (d) Geben Sie für jeden Einsatz den Einsatznamen sowie die Gesamtkosten aller Bezahlungen für die Agenten aus. Jedoch sollen dabei nur die Bezahlung der Agenten mitgezählt werden, die schon an mehr also zwei <u>unterschiedlichen</u> Einsätzen beteiligt waren.
 
 $Agenten (\underline{ANr}, Name)$
 $Einsätze (\underline{EName}, Datum, Ort,Zielperson)$
@@ -220,9 +220,9 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 
 Hier ist eine kurze, stichpunktartige Erklärung, wie man auf die SQL-Abfrage kommt, die in den Callout integriert ist:
 
-Hier ist der Callout, der sowohl die SQL-Abfrage als auch die stichpunktartige Erklärung ihrer Komponenten enthält:
+Hier ist der Callout, der sowohl die SQL-Abfrage also auch die stichpunktartige Erklärung ihrer Komponenten enthält:
 
->[!success] **Lösung (klicken zum Aufklappen)**
+>[!success]- Lösung (klicken zum Aufklappen)
 >```sql
 >SELECT E.EName, SUM(NT.Bezahlung) AS Gesamtkosten FROM Einsätze E
 >JOIN nimmt-teil NT ON E.EName = NT.EName
@@ -237,15 +237,76 @@ Hier ist der Callout, der sowohl die SQL-Abfrage als auch die stichpunktartige E
 >- **Verknüpfung der Tabellen**: Verbinde die `Einsätze`-, `nimmt-teil`- und `Decknamen`-Tabellen, um Einsätze mit den zugehörigen Bezahlungen und Agenten zu assoziieren.
 >   - `FROM Einsätze E JOIN nimmt-teil NT ON E.EName = NT.EName`: Jeder Einsatz wird mit den Details seiner Teilnahme verknüpft.
 >   - `JOIN Decknamen D ON NT.Deckname = D.Deckname`: Die Teilnahmeinformationen werden über Decknamen mit den Agenten verbunden.
->- **Filtern von Agenten**: Wähle nur die Agenten aus, die an mehr als zwei verschiedenen Einsätzen beteiligt waren.
+>- **Filtern von Agenten**: Wähle nur die Agenten aus, die an mehr also zwei verschiedenen Einsätzen beteiligt waren.
 >   - `WHERE D.ANr IN (...)`: Es wird eine Unterabfrage verwendet, die die Agenten filtert.
 >   - `SELECT D2.ANr FROM Decknamen D2 JOIN nimmt-teil NT2 ON D2.Deckname = NT2.Deckname`: Diese Unterabfrage sammelt alle Agenten und deren Einsätze.
 >   - `GROUP BY D2.ANr`: Gruppierung der Agenten, um die Einsätze je Agent zu zählen.
->   - `HAVING COUNT(DISTINCT NT2.EName) > 2`: Agenten, die an mehr als zwei unterschiedlichen Einsätzen teilgenommen haben, werden ausgewählt.
+>   - `HAVING COUNT(DISTINCT NT2.EName) > 2`: Agenten, die an mehr also zwei unterschiedlichen Einsätzen teilgenommen haben, werden ausgewählt.
 >- **Aggregieren der Kosten**: Berechne die Gesamtkosten der Bezahlungen für jeden Einsatz.
 >   - `SUM(NT.Bezahlung) AS Gesamtkosten`: Summiert alle Bezahlungen, die den oben genannten Kriterien entsprechen.
 >   - `GROUP BY E.EName`: Die Ergebnisse werden nach Einsatzname gruppiert, um die Kosten pro Einsatz auszugeben.
 >### Ziel der Abfrage
->- Die Abfrage liefert den Namen jedes Einsatzes zusammen mit den Gesamtkosten der Zahlungen an Agenten, die intensiv (mehr als zwei verschiedene Einsätze) involviert waren.
+>- Die Abfrage liefert den Namen jedes Einsatzes zusammen mit den Gesamtkosten der Zahlungen an Agenten, die intensiv (mehr also zwei verschiedene Einsätze) involviert waren.
 
-## (e) Geben Sie die Namen der 7.ielpersonen an, gegen die unter dem Decknamen 007 im Jahr 19-56 (zwischen dem 01 .OI .1956 und 31.12.19.56 etnschließljch) ermittelt wurde. Hinweis: Datunxswertc können mit Hilfe der Operatoren < , f, >, und verglichen werden.
+## (e) Geben Sie die Namen der Zielpersonen an, gegen die under dem Decknamen 007 im Jahr 1956 (zwischen dem 01.01.1956 und 31.12.1956 einschließlich) ermittelt wurde. Hinweis: Datumsangaben können mit Hilfe der Operatoren `<`, `<=`, `>`, `>=` und = verglichen werden.
+
+>[!note] Aufgabenstellung
+>Formulieren Sie die folgende Anfrage im [[Tupelkalkül]]. Zusätzlich soll das Schema aller freien Variable angegeben werden.
+
+$Agenten (\underline{ANr}, Name)$
+$Einsätze (\underline{EName}, Datum, Ort,Zielperson)$
+$Decknamen (\underline{Deckname}, ANr)$
+$nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
+
+>[!success]- Lösung (klicken zum Aufklappen)
+>$$
+>Schema(ein) = Schema(Einsätze)
+>$$
+>$$
+>\{ [\ ein.Zielperson \ ] \ | \ ein \in Einsätze \ , (\exists \ nt \in \text{nimmt
+>teil}) :
+>$$
+>$$
+>nt.Deckname = \text{"007"} \ \land
+>$$
+>$$
+>01.01.1956 \leq ein.Datum \ \land \ ein.Datum \leq 31.12.1956
+>$$
+
+---
+
+# Aufgabe 3 [[Relationale Algebra]]
+
+## (a) Gegeben seien die zwei Relationen R und S. Bilden Sie die folgenden Operationen durch Verwendung der fünf relationalen Grundoperationen (Vereinigung. Differenz, Kartesisches Product. Selektion, Projektion) nach
+
+### 1. [[Relationale Algebra#Durchschnitt]]
+
+>[!success]- Lösung (klicken zum Aufklappen)
+>$$
+>R \  \cap \ S = \{\ t \ | \ t \in \ R \ und \ t \ \in \ S \}
+>$$
+>$$
+>oder
+>$$
+>$$
+>R∩S=R−(R−S)
+>$$
+>$$
+>oder
+>$$
+>$$
+>R∩S=(R∪S)−((R−S)∪(S−R))
+>$$
+### 2. Join mit Bedingung $\phi$
+
+>[!success]- Lösung (klicken zum Aufklappen)
+>$$
+>R \underset{\phi}{\bowtie} S = \sigma_\phi(R\times S)
+>$$
+
+### 3. [[Relationale Algebra#Quotient]]
+
+>[!success]- Lösung (klicken zum Aufklappen)
+>$$
+>R \div S = \pi_{R\ '} \ (R) - \pi_{R\ '} \ ((\pi_{R\ '} \ (R) \times S) - R)
+>$$
