@@ -4,7 +4,7 @@ last modified: 2024-03-21 15:35
 tags: [DBS, Erklaerung]
 fach: "[[DBS]]"
 date created: Thursday, 21. March 2024, 15:35
-date modified: Tuesday, 9. April 2024, 19:00
+date modified: Tuesday, 9. April 2024, 21:22
 ---
 
 # Was ist die relationale Algebra vor allem im Bereich DBS?

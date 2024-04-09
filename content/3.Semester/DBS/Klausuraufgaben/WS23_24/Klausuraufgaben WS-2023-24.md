@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[DBS]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Tuesday, 9. April 2024, 20:38
+date modified: Tuesday, 9. April 2024, 21:53
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
@@ -378,4 +378,61 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >$$
 
 ## (a) Geben Sie den Abhängigkeitsgraphen von $S_1$ an. Nutzen Sie hierzu die unten dargestellte Vorlage.
+
+>[!success] **Lösung (klicken zum Aufklappen)**  
+>**Tabelle anfertigen zur leichteren Skizze**  
+>$$  
+>\begin{array}{|c|c|c|c|c|}  
+>\hline  
+>a & b & c & d & e \\  
+>\hline  
+> & & w_1 & & \\ % w_1(c)  
+>w_4 & & & & \\ % w_4(a)  
+> & r_3 & & & \\ % r_3(b)  
+> & & & r_1 & \\ % r_1(d)  
+> & & & & w_2 \\ % w_2(e)  
+> & & r_2 & & \\ % r_2(c)  
+> & & & & r_3 \\ % r_3(e)  
+> & & & w_4 & \\ % w_4(d)  
+>r_2 & & & & \\ % r_2(a)  
+> & & & & w_3 \\ % w_3(e)  
+> & r_4 & & & \\ % r_4(b)  
+>\hline  
+>\end{array}  
+>$$  
+>  
+>>[!info]  
+>>Scrollen und zoomen mit STRG gedrückt
+>>Auf das 3. Icon von links klicken falls Skizze nicht zu sehen ist
+><iframe frameborder="0" style="width:100%;height:450px;" src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1#R7Zldb%2BI4FIZ%2FTaTpxaDETgJcllJmpVWl0bDadi49iUm8E2LGMV%2F76%2FeY2PkwTaHqpszOIiFhHx8fOz6vn9jg4Lvl7pMgq%2FSBxzRzkBvvHDx1EPIQDuBLWfalZRRoQyJYrJ1qw5z9TbXR1dY1i2nRcpScZ5Kt2saI5zmNZMtGhODbttuCZ%2B1RVyShR4Z5RLJj6yOLZWqewq3tv1GWpGZkz9UtS2KctaFIScy3LRPdyRnPpZ7iZyqWJKe5hJYHIr5T4QT3qZTqSW8dNIPPQnkPEs6TjJIVKwYRX4I5KsBltiBLlqllbgSa6EAwHL538J3gXJal5e6OZipXJg3lnGYdrdU6CBX3jA4xmv%2FI%2F8R7dymZh0f3v4unh484LMNsSLbWC%2BygMIOAE%2FVoapXkXi99%2BGPNTcPH4iAMWAUXoRWIa1K3QylR3394JpReKNOgl78KjGCiIB%2BoTLYpk3S%2BIpFq2YKCwZbKZQY1D4rFdyqjVFdSEqVrQT8pp6kPhr9YkhxCwtpOorXY0BmTkuWJ7qDmMDM5uRWRGiuCZCN3StagGEhL6TTna3GYQZlsFKgHDVTCg66UB2XSwdWkHYqtQQI0sYcpN5eSgl6TDRWS7joT7FWyge1N%2BZJKAeO41d7WKtY72wt1fVvvk8onbeyRkbYRrfukCl3LCQpaUa9R17BHdaGrut5TXUH406lr1KO6%2FKu6Lsku37%2B4usY9qgtf1XVJdl1eXb53pK4vjx%2Fim2MB5PGtOjVDLcpIUbConXfB13lM1VDuL6UCumPyST%2BVKn9V5UGga9Ndo2m6N5UcUvPUrHxtVupOh1rdy9xy0AiqkoiESjixM8g0FWrHlSvkdmqTxkdXFkuZkFKzZKdO4uX4J197x1pvaDl4RsrGJmhGJNu0J%2FycvvUInzk70E5vJWSBuroXmhDlg%2BpezeuIHWjYcZ4wgXQi7ECwG8i%2B4bZSDkX3hEfWfH33xWlZs8L2pcpyH1tgcVvuUCinW4OiStgb2IE630wx27zpxfT45UN0Y4J9E2%2BK1XjFHabV9Yb7vwNuMETDFuRcd3wm5gbYHbZQN3DD0SncQaiKbtrWyTy%2FzcfARLMD%2FBRcHF6Si9jmon10OJeL2FxrdKAAo164aIPRO0E6g7bK333ZP7B%2FjfDeA424TzSSKxrfG41h2Eajb1B5Eo0uxm00DgP0q6Fx9J9AI%2FLG7UOSHeJcNIYGhVWgfo6MaNweB4%2FeA13%2BEboAOfTmX%2BPXYyPYFTwnwBM0sOOdi5zAecW18zVg6ZMhw3MZMn6eIdVxwLF%2FUekTKdYPOoFNgrOR4rW3OhqHvSAltE5DePwCUureJjxfLAoqrR4nsAPV%2Bs%2FF0r3%2BRxjf%2FwM%3D"></iframe>
+
+## (b) Ist der Schedule S, serialisierbar? Falls ja, geben Sie alle möglichen seriellen Schedules an. Falls der Schedule nicht serialisierbar ist, begründen Sie Ihre Antwort.
+
+>[!success]- Lösung (klicken zum Aufklappen)
+>Der Schedule ist serialisierbar, da er zyklenfrei ist
+>$$
+>T_{1}→T_4→T_2→T_3
+$$
+
+## (c) Welche Anomalien treten im Schedule $S_2$ auf? Geben Sie für jede Anomalie an, ob diese auftritt und falls ja, bezüglich welchen Objekten. Jede Anomalie kann entweder keinmal, einmal oder mehrmals auftreten.
+
+>[!note] Aufgabenstellung
+>Betrachten Sie nun folgenden Schedule:
+>$$
+>S_2 = (r_2(b), r_2(c), w_1(c), r_1(c), w_1(b), r_2(a), w_2(c), r_1(c), r_2(b), w_2(b), w_2(a), w_2(a))
+>$$
+>**Anomalien**:
+>- Dirty Read
+>- Lost-Update
+>- Non-repeatable Read
+
++
+
+
+
+>[!success]- Lösung (klicken zum Aufklappen)
+>>[!note] Merkhile
+>>DR: WRW
+>>LU: RWW
+>>NRR: RWR
 
