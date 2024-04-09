@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[DBS]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Tuesday, 9. April 2024, 19:09
+date modified: Tuesday, 9. April 2024, 20:38
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
@@ -127,10 +127,10 @@ FROM R NATURAL JOIN S;
 >
 >In der Relation `Agenten` werden alle Agenten mit einer eindeutigen Nummer und ihrem Namen gespeichert. Die Relation `Einsätze` beschreibt Einsätze, die jeweils mit einem eindeutigen Namen beschrieben werden. Einsätze finden an einem bestimmten Datum und Ort statt und werden aufgrund einer Zielperson durchgeführt. Die Agenten tragen Decknamen (Relation `Decknamen`). Dabei ist einem Decknamen jeweils ein Agent eindeutig zuzuordnen. Ein Agent kann aber mehrere Decknamen haben. Agenten nehmen gegen Bezahlung an Einsätzen teil (Relation `nimmt-teil`). Außerdem kann ein Agent auch under mehreren Decknamen an einem Einsatz teilnehmen.
 
-$Agenten (\underline{ANr}, Name)$
-$Einsätze (\underline{EName}, Datum, Ort,Zielperson)$
-$Decknamen (\underline{Deckname}, ANr)$
-$nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
+- $Agenten (\underline{ANr}, Name)$
+- $Einsätze (\underline{EName}, Datum, Ort,Zielperson)$
+- $Decknamen (\underline{Deckname}, ANr)$
+- $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 
 ## (a) Geben Sie die Anweisung in [[Data Definition Language (DDL)|SQL-DDL]] an, die notwendig ist, um die Relation "nimmt-teil" wie beschrieben zu erzeugen. Achten Sie dabei auf Fremdschlüsselbeziehungen und wählen Sie anhand der gegebenen Ausprägungen sinnvolle Datentypen. Die Bezahlung ist ganzzahlig und darf niemals negative sein. Gehen Sie davon aus, dass alle Zeichenketten eine maximale Länge von 20 haben.
 
@@ -175,26 +175,26 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 
 ## (b) Erstellen Sie eine Liste aller Einsätze, an denen der Agent under dem Decknamen 007 beteiligt war. Die Liste soll den Einsatznamen, das Datum, den Ort und die Zielperson enthalten. Sortieren Sie die Liste absteigend nach dem Namen der Zielperson und bei gleicher Zielperson aufsteigend nach dem Datum.
 
-$Agenten (\underline{ANr}, Name)$
-$Einsätze (\underline{EName}, Datum, Ort,Zielperson)$
-$Decknamen (\underline{Deckname}, ANr)$
-$nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
+- $Agenten (\underline{ANr}, Name)$
+- $Einsätze (\underline{EName}, Datum, Ort,Zielperson)$
+- $Decknamen (\underline{Deckname}, ANr)$
+- $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 
 >[!success]- Lösung (klicken zum Aufklappen)
 >
 >```sql
-SELECT EName,Datum,Ort,Zielperson FROM Einsätze
-JOIN nimmt-teil ON Einsätze.EName = nimmt-teil.EName
-WHERE Deckname = "007"
-ORDER BY Zielperson DESC, Datum ASC
+>SELECT EName,Datum,Ort,Zielperson FROM Einsätze
+>JOIN nimmt-teil ON Einsätze.EName = nimmt-teil.EName
+>WHERE Deckname = "007"
+>ORDER BY Zielperson DESC, Datum ASC
 >```
 
 ## (c) Geben Sie zu jedem Agenten den Realnamen und dessen Einsatzorte an. Nehmen Sie jedoch nur diejenigen Orte auf, an denen noch kein anderer Agent einen Einsatz hatte.
 
-$Agenten (\underline{ANr}, Name)$
-$Einsätze (\underline{EName}, Datum, Ort,Zielperson)$
-$Decknamen (\underline{Deckname}, ANr)$
-$nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
+- $Agenten (\underline{ANr}, Name)$
+- $Einsätze (\underline{EName}, Datum, Ort,Zielperson)$
+- $Decknamen (\underline{Deckname}, ANr)$
+- $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 
 >[!success]- Lösung (klicken zum Aufklappen)
 >```sql
@@ -213,10 +213,10 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 
 ## (d) Geben Sie für jeden Einsatz den Einsatznamen sowie die Gesamtkosten aller Bezahlungen für die Agenten aus. Jedoch sollen dabei nur die Bezahlung der Agenten mitgezählt werden, die schon an mehr also zwei <u>unterschiedlichen</u> Einsätzen beteiligt waren.
 
-$Agenten (\underline{ANr}, Name)$
-$Einsätze (\underline{EName}, Datum, Ort,Zielperson)$
-$Decknamen (\underline{Deckname}, ANr)$
-$nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
+- $Agenten (\underline{ANr}, Name)$
+- $Einsätze (\underline{EName}, Datum, Ort,Zielperson)$
+- $Decknamen (\underline{Deckname}, ANr)$
+- $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 
 Hier ist eine kurze, stichpunktartige Erklärung, wie man auf die SQL-Abfrage kommt, die in den Callout integriert ist:
 
@@ -318,13 +318,64 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >- $Personen(\underline{PersId},Name,Vermögen)$
 >- $Wohnung(\underline{WhgId},ort,Wohnfläche,Besitzer)$
 >
->Hierbei verweist das Attribut `Besitzer` in Wohnung auf das Attribut `Persld` in Personen.
+>Hierbei verweist das Attribute `Besitzer` in Wohnung auf das Attribute `Persld` in Personen.
 >Formulieren Sie die folgenden Anfragen in der relationalen Algebra.
 
 ### 1. Ermitteln Sie die Namen und das Vermögen aller Personen, die eine Wohnung in Hamburg und in München besitzen.
 
-$$
-\Pi_{Name,}
-$$
+>[!success]- Lösung (klicken zum Aufklappen)
+>$$
+>P_{München}=\Pi_{Name,Vermögen}(\sigma_{\text{ort="München"}}(Personen\underset{Besitzer = PersId}{\bowtie} Wohnung)
+>$$
+>$$
+>P_{Hamburg}=\Pi_{Name,Vermögen}(\sigma_{\text{ort="Hamburg"}}(Personen\underset{Besitzer = PersId}{\bowtie} Wohnung)
+>$$
+>$$
+>P_{München \ \cap \ Hamburg} = P_{München} \ \cap \ P_{Hamburg}
+>$$
 
+### 2. Bestimmen Sie die Ids aller Personen, die keine Wohnung besitzen
+
+>[!success]- Lösung (klicken zum Aufklappen)
+>$$
+>\Pi_{PersId}(Personen) \ \backslash \ \Pi_{PersId}(Personen\underset{Besitzer = PersId}{\bowtie} Wohnung)
+>$$
+
+--- 
+
+# Aufgabe 4 [[ER-Modell]]
+
+>[!note]
+> ER-Modellierung (8 Punkte)
+> Stadt, Land, Fluss einmal anders: Die relationale Datenbank eines geographischen Informationssystems beinhaltet Städte, Länder und Flüsse mit folgenden Einzelheiten:
+>
+> - Eine **Stadt** wird durch ihren `Namen` und das `Land` gekennzeichnet, in dem sie liegt. Außerdem hat jede Stadt eine `Einwohnerzahl`.
+> - Ein **Land** hat einen eindeutigen `Namen`, eine `Fläche` und ebenfalls eine `Einwohnerzahl`. Ein Land kann an mehrere Länder angrenzen. In einem Land liegt mindestens eine Stadt, wobei jede Stadt nur in genau einem Land liegt. Außerdem hat jedes Land eine Hauptstadt.
+> - Ein **Fluss** wird durch seinen `Namen` bestimmt und hat eine gewisse `Länge`. Jeder Fluss kann durch mehrere Städte und auch durch mehrere Länder fließen. Hierbei wird gespeichert, wie viele `Kilometer` ein Fluss ein Land durchfließt. Des Weiteren kann ein Fluss in einen anderen Fluss `münden`, in den auch weitere Flüsse `münden` können. Eine Stadt kann an mehreren Flüssen liegen und durch ein Land können mehrere Flüsse fließen.
+>
+> Erstellen Sie ein Entity-Relationship-Diagramm für die oben beschriebene Datenbank. Markieren Sie die Funktionalitäten der Relationships und unterstreichen Sie den Primärschlüssel jeder Entität. Vermeiden Sie es, zusätzliche, nicht geforderte Attribute einzuführen. 
+> 
+> Nutzen Sie also Grundlage für das Entity-Relationship-Diagramm nur die unten aufgeführten Entitäten.
+
+>[!info]
+>*Scrollen und zoomen mit STRG gedrückt*
+>*Auf das 3. Icon von links klicken falls Skizze nicht zu sehen ist*
+
+>[!success]- Lösung (klicken zum Aufklappen)
+><br/>
+><iframe frameborder="0" style="width:100%;height:603px;" src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1#R7V1bj5s4GP01kXYfEoHN9XGurbTbVaXZ7baPDHgSOgSyQGYy%2FfVrB0zwJQESLpkJo0oFQzDY53z%2BrjCBN8vNp9hZLb5EHgomQPE2E3g7AUDVTIj%2FIy1vWYummFnDPPa9%2FKRdw4P%2FC%2BWNSt669j2UMCemURSk%2FoptdKMwRG7KtDlxHL2ypz1FAdvrypkjoeHBdQKx9V%2FfSxdZq6Uru%2FbPyJ8vaM%2Bqkh9ZOvTkvCFZOF70yjShTXofhWl%2Bi19RvHRCFKb4yBcnfkbxRL9bpCl50qsJuMf%2FnsjZs3kUzQPkrPxk5kZL3Owm%2BJT7J2fpB2SYSxe6zi%2BEu4N3E3gTR1GabS03Nyggc0WnIbun%2Bz1Hi3GIyXVr%2FED78u2vt%2Fjr1Tf37e%2Bf18%2F%2FeL7jTA2QXebFCdb5AOeDk77REY8X0fJxjR%2Fo%2BnXhp%2Bhh5bjkyCvGF25bpMsA76lk03EX6xh9Iu23Gm4go3NPB%2BEqdsnPXTy6QLl11niK8DhkJz1E63h70Wx0gU7GVycjrO8bYz0bZXwqHWe8yXSig%2BtSNy8oTn0Mo6vAn4e4p6XveeQJr%2BNoHXrIy58heUapu8h33HX8gu79NPXDed7005%2FPtwMDyK37QXATBVG8HSj4ZLnIdclF0jh6RqUjj5auYYTCa3HS8nkkt4c2paZ8Ej%2BhaInSGD%2BdQo8acKZnP8opDCnEX3eEsI2saVHigpGf5uT4nhfX3sEGb%2BTIaYIiKEGREaRkKFZOyMDJ%2BG9NEL%2Bd9mmyFS94rhVVXW2246PgYUinTjZL5IiLh2o7g%2FRYBjxyKIxyEOLtR8d9nm%2FncupmA0%2FOiOePvwEdDxd%2BMKW88fv2V%2FRm8Nac%2FD9Hi8kNnFwbMeH8rzV9Cjwq2YNkpwkUIfdVzY9zosMJqHdiN18WWoO0xQFa1QVAQygCGnYGaK1aLKLQuyLrGd5zAydJfJedbXaEz1o24pmL377jLhS684PsYDGT795uygdv3%2FK9LVK8fKcRhtDGT7%2FnB8h2qT%2B8t%2BuO7NDe9gINeZzKkDrxHKUH5pcqQQkd28ProwjcEjCp5lEGJm2LUeCk%2Fgt7dzK05j18jfyttpHzAmgGywubA3x2%2F%2Fmvyms%2FdyGomPyaAXX2UtmYCZfCEHfeSqetyAmJQLBiaE7gnN6Ic2EUog9AuJmiqxzpIKig3THkOYGqpG%2Bswfp4gsnNH%2BZiJfWoximQtpKL5qBcVIHFEEij%2B025qNKVrDDAOFI3ZuKefqjFRhmvMfYB3siu2CqJTdGeeEgdLxWNCoas79mwOMVi8BxkPUktBsO10ONTO%2BrV1OSQAER7QQUS6nRmMJiiwfCnE3ojSgZECdTPDiWiFn4fEPvsSnMXSFQOgsBfJagaKE6yyjxTT%2F6GgOs9aQ6NcNQCKnTAoqJYTmuuuu2DQqYmZlb6mtrnfzlLVDLd13vt9hEyXUAGcoLEGBoyxiVaFs1M%2BcKmmCnAZuwKw7AOWhZkhzcP2oFctUUAaxodVGhwRsdQtoRusAzRzCPteoOjml7TlmhN3TdHZtVmFsMqcNhcPzsCaWdFIM3mjPFjCaSbnDGu9UsgSxm1mfPWZqaqzakz9sDqjKVKMPPRhS7vJK0pdBVG6JrnIXRBTaFLhcOZCN1itaeykoZ9G3tAKWDphfiwRkse0CnHXC0PK3bqAbXsanaOGRVnlVEBFZ0DtiSfQhN5ZXUl4W1RK3gKfJQkBNwentiFAKn3noGQJ3zcFtkefa%2FzkBdKlpiDYEiEa2c5CPYlLfN0uS6imD%2FKC3TLEc3jl24qBaqXbvuslm6osku3TtPDmi7dGudwMIA9M%2BtlErS1wNrgcnjBYFzugCgU4ypNeKbhSS9rwwrW31pTh2VewON5RulTO5HnTHimAY5nhnkkz1RWJdFr%2BiX6S9exZcG5dZKIyu4Yw%2B0thqtafJ6XLvFW9BvFVVWZIiPxcYWjk2soJxfglnVTklHeq49LVcVV%2Fs8s9B%2FOx9B%2FPxaRkDRqSISJzCbqUJbIKg0%2BqPJXShIt3J2FWdQw4ES3B3V81raeCvafiVqnWmwetgnhTD0y%2FRNytQ6moQjX6tiCUtVm5Q0XzaJS1OA9EkleIjEYkWxzBqG9%2B2N9boaOrdLSH3f92hTjUrWxNtMhxTzw8F%2F4Db4py9RXoXX3R%2Fz9y1Qk2J0fvkaLEMW%2FnEUwKjA12SFoKxLCHAjdWqxaWxQxl9BuSdDehmNfCotLLHE5NnLbwBV8BLCE8pOKWpZDLD%2FXyhWKer7Uq36lCl8z1lGclrM%2Bqf3QVpxWOndiTugooXuX0EW%2BYj7zqiS7vFcBfZH5jDMFmKyQNq2hpfSBqsNWRLdRV3TDIfVlTbFnJW3Z1vfUyTfPG9Y41w6wT60H3vMEhs33BNrNwpFOb40knI%2FC4z0xQtbarYoSHlW8j%2FtQ2KxmRbcPioD9UcI6pC6TVTrrsHb9%2FzAKWWGXtJT%2Br3HFWcL7ATq2cut4Y8dct7Zz3U7SuDS%2B9KTHXDc5hkRXyRw%2FzC8Cc%2FLGHQ5OY57bqQDgs3h7zHOTA%2BASnSLUq1x3fT79TTvKzNbYxZoU0TRdrPFE3PtkftteuulSUjPjZ7BEOs6jWKzAjZdu7p0MdQuPmurfOt%2BPqRy8ryLRiLuvTrV19YIKdPep66CRPJDXt7Re3nJJ1AZQ4zSjI41raBynlXeSuyefEdHN9YcfRJmgLyoMFOkrWUY%2FaAdKGeSktD60H5SGSy9BIreQIWBqjBw27RbTBE7zmVQ6QqksqJmTPZh0ttiYvsG%2F6aB%2BBQNb8W2o3SheGhfaoG9F6VSRotroxb23dKZyYWbbNivo24ZJpVkWQ3z7cEWFNKjRsU8U1M0Vyrw%2BQ%2FHbZpUvUzlS%2BeLMl9PrJvaExrmXpZn8y9eFxCeubsruQxpcUAUha1aVAhQmG6AwzIMMPXll3vOWmApZdHl85xJqj6X7FPTEd76fXvhbI013DK%2FsY6eL78zxw4KZg4RbONgU7%2BsaLNoiBsaX2y8e3OBh3oZcHgWIXXbIhYdRC6CAbATG0AeOwIAa7tdRzpxVGFf8CIxqSkRLRx%2BBkaOomcvoA9meimqzxqdiGj0YnzZgcu9mukGPN4nnnZRmV62NGjW10YF9%2F%2Fwb0nk18mjfP0%2B3lvRRyCkWvaRMg2ZZdR%2BI4bahcQwH3X8bh6TTsdarXvHW0EH8S7UZDoZkuLBeArVIgW1cFyF%2BgQ3q%2FMXaMjw5NzLoIx5PNc13%2Fz23z856lSbZB0iUlyi8lO%2B5cZ9oK6uouZevDR2UWzRVSSZZV19tO5j%2BO9ox78aO4dQYDYoQ6tU%2FAoEAofHNi50nP7AYGNodQmXWxYVNjtRSISxnP0xJCX9FGPRg3GRmZz%2FfKduGVmjf%2B1Ix2jNja79w4cAS1LuSW%2BRy28dptHxFSpF%2F1EPKGt7dfQQ7O3335XJ49z8%3D"></iframe>
+><br/>
+>
+
+---
+
+# Aufgabe 5 [[Transaktionen]]
+
+>[!note] Aufgabenstellung
+> Gegeben sei der folgende Schedule:
+>$$
+>S_1 = (w_1(c), w_4(a), r_3(b), r_1(d), w_2(e), r_2(c), r_3(e), w_4(d), r_2(a), w_3(e), r_4(b))
+>$$
+
+## (a) Geben Sie den Abhängigkeitsgraphen von $S_1$ an. Nutzen Sie hierzu die unten dargestellte Vorlage.
 
