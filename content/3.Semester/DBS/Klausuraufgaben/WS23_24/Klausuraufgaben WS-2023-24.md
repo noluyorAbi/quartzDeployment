@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[DBS]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Tuesday, 9. April 2024, 18:56
+date modified: Tuesday, 9. April 2024, 19:09
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
@@ -310,3 +310,21 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >$$
 >R \div S = \pi_{R\ '} \ (R) - \pi_{R\ '} \ ((\pi_{R\ '} \ (R) \times S) - R)
 >$$
+
+
+## (b) Gegeben sind nun folgende Relationen
+
+>[!note] Aufgabenstellung
+>- $Personen(\underline{PersId},Name,Vermögen)$
+>- $Wohnung(\underline{WhgId},ort,Wohnfläche,Besitzer)$
+>
+>Hierbei verweist das Attribut `Besitzer` in Wohnung auf das Attribut `Persld` in Personen.
+>Formulieren Sie die folgenden Anfragen in der relationalen Algebra.
+
+### 1. Ermitteln Sie die Namen und das Vermögen aller Personen, die eine Wohnung in Hamburg und in München besitzen.
+
+$$
+\Pi_{Name,}
+$$
+
+
