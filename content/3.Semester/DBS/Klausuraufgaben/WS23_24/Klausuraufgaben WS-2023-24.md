@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[DBS]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Wednesday, 10. April 2024, 00:04
+date modified: Wednesday, 10. April 2024, 01:12
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
@@ -559,3 +559,84 @@ $$
 >>DR: WRW
 >>LU: RWW
 >>NRR: RWR
+>
+>![img](C:\Users\alper\OneDrive\Desktop\LMU\Uni\Uni2\Semester\3.Semester\DBS\Klausuraufgaben\WS23_24\DR-NRR-LU.png.png)
+
+---
+
+# Aufgabe 6 [[Normalformen und Synthesealgorithmus]]
+
+
+## (a) Gegeben sind die folgenden Relationen, deren funktionale Abhängigkeiten und ihre Schlüsselkandidaten.
+
+### 1. $R_1(A, B, C, D)$
+
+>[!note] Aufgabenstellung
+>Funktionale Abhängigkeiten:
+> - $(F1)\  A, C \rightarrow B$
+>- $(F2)\ B \rightarrow D$
+>  - $(F3)\  D \rightarrow A$
+>- Schlüsselkandidaten: $(A, C), (B, C), (C, D)$
+>
+>Entscheiden Sie, ob das Relationenschema die 3. Normalform erfüllt und begründen Sie Ihre Antwort.
+
+>[!success]- Lösung (klicken zum Aufklappen)
+→ Das Relationenschema $R_1(A, B, C, D)$ erfüllt die 3. Normalform. Es existieren keine transitiven Abhängigkeiten zwischen Nicht-Schlüsselattributen. Alle funktionalen Abhängigkeiten, in denen ein Attribut von anderen abhängt, betreffen entweder Schlüsselkandidaten oder sind zwischen Attributen, die Teil von Schlüsselkandidaten sind. Daher gibt es keine Verletzungen der Bedingungen der 3. Normalform.
+
+### 2. $R_2(A, B, C, D, E)$
+
+>[!note] Aufgabenstellung
+>Funktionale Abhängigkeiten:
+> - $(F1)\  A, C \rightarrow B$
+> - $(F2)\  C \rightarrow D$
+>  - $(F3)\  D, E \rightarrow B$
+>- Schlüsselkandidaten: $(A, C, E)$
+>
+>Entscheiden Sie, ob das Relationenschema die 3. Normalform erfüllt und begründen Sie Ihre Antwort.
+
+>[!success]- Lösung (klicken zum Aufklappen)
+>→ $F_2$  $D$ ist abhängig von partiellem Schlüsselkandidaten und nicht von allen. Dadurch ist die 2.NF nicht gegeben und somit auch nicht die 3.NF
+
+## (b) Gegeben sei das Relationenschema $R_3​(U,V,W,X,Y,Z)$ sowie die Menge $F$ der zugehörigen nicht-trivialen funktionalen Abhängigkeiten:
+
+>[!note] Aufgabenstellung
+>Funktionale Abhängigkeiten:
+>- $W,X \rightarrow Y$
+>- $V,X,Y \rightarrow Z$
+>- $U,V \rightarrow W$
+>- $X \rightarrow U$
+>- $Z \rightarrow V,X$
+>
+>Bestimmen Sie alle Schlüsselkandidaten der Relation $R_3$ und begründen Sie jeweils, warum es sich um einen Schlüsselkandidaten handelt. Begründen Sie auch, weshalb es keine weiteren Schlüsselkandidaten gibt.
+
+[[Normalformen und Synthesealgorithmus#Synthesealgorithmus]]
+
+>[!tip] Merkhilfe
+>**Schritte des Synthesealgorithmus:**
+>- Linksreduktion
+>- Rechtsreduktion
+>- Entfernung von rechtsleeren Abhängigkeiten
+>- Zusammenfassen von Abhängigkeiten mit gleicher linker Seite
+>- Neues Relationsschema erzeugen 
+>- Rekonstruktion eines Schlüsselkandidaten:
+>- Elimination überflüssiger Relationen
+
+Schlüsselkandidat = $Z$ weil:
+- $Z$ deckt folgende ab $V,X$
+	- $R_3​(U,\not{V},W,\not X,Y,\not Z)$
+- $X$ deckt wiederum $U$ ab
+	- $R_{3​(\not}U,\not{V},W,\not X,Y,\not Z)$
+- 
+### Linksreduktion
+
+- $W,X \rightarrow Y$
+- $V,X,Y \rightarrow Z$
+- $U,V \rightarrow W$
+- $X \rightarrow U$
+- $Z \rightarrow V,X$
+### Rechtsreduktion
+
+- $V,Y \rightarrow Y$
+- $Z \rightarrow V,X$
+-  $U \rightarrow W$
+- $X \rightarrow U$
