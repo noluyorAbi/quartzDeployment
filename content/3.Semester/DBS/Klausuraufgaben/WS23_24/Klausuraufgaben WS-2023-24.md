@@ -532,7 +532,7 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >$$
 >- T1 liest x, welches 100 ist.
 >- T2 ändert x auf 110 und schreibt.
->- T1 liest x erneut und findet den Wert 110, anders also beim ersten Mal.
+>- T1 liest x erneut und findet den Wert 110, anders als beim ersten Mal.
 >
 >$$
 >Merkhilfe:
@@ -578,7 +578,7 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >Entscheiden Sie, ob das Relationenschema die 3. Normalform erfüllt und begründen Sie Ihre Antwort.
 
 >[!success]- Lösung (klicken zum Aufklappen)
-→ Das Relationenschema $R_1(A, B, C, D)$ erfüllt die 3. Normalform. Es existieren keine transitiven Abhängigkeiten zwischen Nicht-Schlüsselattributen. Alle funktionalen Abhängigkeiten, in denen ein Attribute von anderen abhängt, betreffen entweder Schlüsselkandidaten oder sind zwischen Attribute, die Teil von Schlüsselkandidaten sind. Daher gibt es keine Verletzungen der Bedingungen der 3. Normalform.
+>→ Das Relationenschema $R_1(A, B, C, D)$ erfüllt die 3. Normalform. Es existieren keine transitiven Abhängigkeiten zwischen Nicht-Schlüsselattributen. Alle funktionalen Abhängigkeiten, in denen ein Attribute von anderen abhängt, betreffen entweder Schlüsselkandidaten oder sind zwischen Attribute, die Teil von Schlüsselkandidaten sind. Daher gibt es keine Verletzungen der Bedingungen der 3. Normalform.
 
 ### 2. $R_2(A, B, C, D, E)$
 

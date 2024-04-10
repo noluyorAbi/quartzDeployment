@@ -1,7 +1,7 @@
 ---
 tags: 
 fach: 
-title: Studying made easy
+title: Studying made easy.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
 date modified: Wednesday, 10. April 2024, 14:10
@@ -55,22 +55,22 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
 // ASCII Art definieren 
 console.clear()
 const asciiArt1 = `
-⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
-⠀⣸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡄⠀
-⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀
-⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀
-⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆
-⣿⣿⡟⠉⢹⣿⣿⣿⣿⣿⣿⣿⠉⠙⣿⣿⡇
-⢸⣿⠿⠶⣿⣿⣿⣿⣿⣿⣿⣿⣶⠶⢿⣿⠁
-⠀⠻⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⣸⠏⠀
-⠀⠀⠀⢈⠰⢦⣤⣤⣤⣤⣤⠶⠈⠁⠀⠀⠀
-⢀⢀⠂⠀⠀⠀⠤⣄⣄⡤⠀⠀⠀⠑⢄⠀⠀
-⣼⣿⣶⣴⣇⠀⠀⠀⠀⠀⠀⢰⣦⣤⣶⣿⠀
-⢬⣿⡿⣿⡧⢼⣤⣿⣯⣥⡥⢼⣿⣿⣿⣏⠀
-⠀⣿⣿⡟⣀⠀⠈⣿⣿⡁⠀⢀⠹⣿⣿⡇⠀
-⢰⠿⠻⣿⣿⣿⣶⠿⡿⢷⣿⣿⣿⡿⠿⡇⠀
-⠀⠐⠛⠻⠿⠛⠛⠀⠀⠛⠻⠿⠿⠿⠆⠀⠀⠀
-`; 
+                                  ⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
+                                  ⠀⣸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡄⠀
+                                  ⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀
+                                  ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀
+                                  ⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆
+                                  ⣿⣿⡟⠉⢹⣿⣿⣿⣿⣿⣿⣿⠉⠙⣿⣿⡇
+                                  ⢸⣿⠿⠶⣿⣿⣿⣿⣿⣿⣿⣿⣶⠶⢿⣿⠁
+                                  ⠀⠻⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⣸⠏⠀
+                                  ⠀⠀⠀⢈⠰⢦⣤⣤⣤⣤⣤⠶⠈⠁⠀⠀⠀
+                                  ⢀⢀⠂⠀⠀⠀⠤⣄⣄⡤⠀⠀⠀⠑⢄⠀⠀
+                                  ⣼⣿⣶⣴⣇⠀⠀⠀⠀⠀⠀⢰⣦⣤⣶⣿⠀
+                                  ⢬⣿⡿⣿⡧⢼⣤⣿⣯⣥⡥⢼⣿⣿⣿⣏⠀
+                                  ⠀⣿⣿⡟⣀⠀⠈⣿⣿⡁⠀⢀⠹⣿⣿⡇⠀
+                                  ⢰⠿⠻⣿⣿⣿⣶⠿⡿⢷⣿⣿⣿⡿⠿⡇⠀
+                                  ⠀⠐⠛⠻⠿⠛⠛⠀⠀⠛⠻⠿⠿⠿⠆⠀⠀⠀
+`;
 const asciiArt2 = ` 
    ▄████████  ▄█     ▄████████    ▄█   ▄█▄  ▄██████▄     ▄▄▄▄███▄▄▄▄      ▄████████ ███▄▄▄▄   
   ███    ███ ███    ███    ███   ███ ▄███▀ ███    ███  ▄██▀▀▀███▀▀▀██▄   ███    ███ ███▀▀▀██▄ 
