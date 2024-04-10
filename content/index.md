@@ -53,8 +53,8 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
 
 <script> 
 // ASCII Art definieren 
-let asciiArt1 = undefined;
-let asciiArt2 = undefined;
+var asciiArt1 = undefined;
+var asciiArt2 = undefined;
 if (typeof asciiArt1 !== 'undefined') {
     if (typeof asciiArt2 !== 'undefined') {
         console.clear();
