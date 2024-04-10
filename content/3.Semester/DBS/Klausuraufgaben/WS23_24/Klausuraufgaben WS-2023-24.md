@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[DBS]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Wednesday, 10. April 2024, 11:50
+date modified: Wednesday, 10. April 2024, 12:53
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
@@ -409,7 +409,7 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >Der Schedule ist serialisierbar, da er zyklenfrei ist
 >$$
 >T_{1}→T_4→T_2→T_3
-$$
+>$$
 
 ## (c) Welche Anomalien treten im Schedule $S_2$ auf? Geben Sie für jede [[Transaktionen#Anomalien]] an, ob diese auftritt und falls ja, bezüglich welchen Objekten. Jede Anomalie kann entweder keinmal, einmal oder mehrmals auftreten.
 
