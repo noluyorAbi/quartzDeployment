@@ -9,11 +9,11 @@ date modified: Wednesday, 10. April 2024, 02:08
 
 # Welcome to MyUniNotes  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 
-## Modules
+## Modules 📚
 
 - [[DBS|Datenbanksysteme (DBS)]]
 - other modules following soon
-## Semester
+## Semester 🗓️
 
 - [[3.Semester]]
 - [[4.Semester]] (coming soon)
