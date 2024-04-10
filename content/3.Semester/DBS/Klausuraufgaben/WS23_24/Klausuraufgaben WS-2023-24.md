@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[DBS]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Wednesday, 10. April 2024, 01:12
+date modified: Wednesday, 10. April 2024, 01:52
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
@@ -609,34 +609,53 @@ $$
 >
 >Bestimmen Sie alle Schlüsselkandidaten der Relation $R_3$ und begründen Sie jeweils, warum es sich um einen Schlüsselkandidaten handelt. Begründen Sie auch, weshalb es keine weiteren Schlüsselkandidaten gibt.
 
-[[Normalformen und Synthesealgorithmus#Synthesealgorithmus]]
-
->[!tip] Merkhilfe
->**Schritte des Synthesealgorithmus:**
->- Linksreduktion
->- Rechtsreduktion
->- Entfernung von rechtsleeren Abhängigkeiten
->- Zusammenfassen von Abhängigkeiten mit gleicher linker Seite
->- Neues Relationsschema erzeugen 
->- Rekonstruktion eines Schlüsselkandidaten:
->- Elimination überflüssiger Relationen
-
-Schlüsselkandidat = $Z$ weil:
-- $Z$ deckt folgende ab $V,X$
-	- $R_3​(U,\not{V},W,\not X,Y,\not Z)$
-- $X$ deckt wiederum $U$ ab
-	- $R_{3​(\not}U,\not{V},W,\not X,Y,\not Z)$
-- 
-### Linksreduktion
-
-- $W,X \rightarrow Y$
-- $V,X,Y \rightarrow Z$
-- $U,V \rightarrow W$
-- $X \rightarrow U$
-- $Z \rightarrow V,X$
-### Rechtsreduktion
-
-- $V,Y \rightarrow Y$
-- $Z \rightarrow V,X$
--  $U \rightarrow W$
-- $X \rightarrow U$
+>[!success] **Schlüsselkandidaten für die Relation $R_3$** (klicken zum Aufklappen)
+>#### Schlüsselkandidat: $\{Z\}$
+>
+>- **Funktionale Abhängigkeiten:**
+>  - $W,X \rightarrow Y$
+>  - $V,X,Y \rightarrow Z$
+>  - $U,V \rightarrow W$
+>  - $X \rightarrow U$
+>  - $Z \rightarrow V,X$
+>
+>**Begründung:**
+>
+>- **$Z \rightarrow V, X$** deckt $V$ und $X$ ab.
+>- **$X \rightarrow U$** ermöglicht, dass $Z$ auch $U$ abdeckt, da $X$ durch $Z$ bestimmt wird.
+>- **$U, V \rightarrow W$** und da sowohl $U$ als auch $V$ durch $Z$ bestimmt sind, wird auch $W$ abgedeckt.
+>- **$W, X \rightarrow Y$** ermöglicht, dass $Z$ auch $Y$ abdeckt, indem $W$ und $X$ (bereits durch $Z$ bestimmt) verwendet werden.
+>- **$V, X, Y \rightarrow Z$** ist redundant, da $Z$ selbst verwendet wird, um alles abzudecken.
+>
+>**Vollständigkeit der Abdeckung:** $\{Z\}^{+} = \{U, V, W, X, Y, Z\}$
+>
+>**Minimalität:** Keine echte Teilmenge von $\{Z\}$ kann die gesamte Relation abdecken.
+>
+>#### Schlüsselkandidat: $\{V, X\}$
+>
+>- **Funktionale Abhängigkeiten:**
+>  - $W,X \rightarrow Y$
+>  - $V,X,Y \rightarrow Z$
+>  - $U,V \rightarrow W$
+>  - $X \rightarrow U$
+>  - $Z \rightarrow V,X$
+>
+>**Begründung:**
+>
+>- **$X \rightarrow U$** deckt $U$ ab.
+>- **$U, V \rightarrow W$** deckt $W$ ab, da sowohl $U$ (bereits durch $X$ abgedeckt) als auch $V$ in der Attributmenge enthalten sind.
+>- **$W, X \rightarrow Y$** deckt $Y$ ab, da sowohl $W$ (über $U, V$ abgedeckt) als auch $X$ in der Attributmenge enthalten sind.
+>- **$V, X, Y \rightarrow Z$** deckt $Z$ ab, sobald $Y$ bestimmt ist.
+>
+>**Vollständigkeit der Abdeckung:** $\{V, X\}^{+} = \{U, V, W, X, Y, Z\}$
+>
+>**Minimalität:** Keine echte Teilmenge von $\{V, X\}$ kann die gesamte Relation abdecken.
+>
+>## Fazit
+>
+>Die Analyse zeigt, dass sowohl $\{Z\}$ als auch $\{V, X\}$ minimale Schlüsselkandidaten für die Relation $R_3$ sind. Beide Attributmengen decken die gesamte Relation funktional ab und erfüllen die Kriterien der Minimalität für Schlüsselkandidaten.
+>
+>### Warum keine weiteren Kandidaten?
+>
+>- **Attribute allein oder in anderen Kombinationen:** Kein einzelnes Attribut außer $Z$ und keine andere Kombination außer $\{V, X\}$ können alle anderen Attribute bestimmen. Beispielsweise reicht $X$ allein nicht aus, um $V$, $W$, $Y$ und $Z$ zu bestimmen. Ebenso kann eine Kombination wie $\{U, V\}$ oder $\{W, X\}$ nicht $Z$ und somit nicht alle Attribute abdecken.
+>- **Redundanzfreie Kombinationen:** Alle anderen Kombinationen, die die gesamte Relation abdecken könnten, würden zusätzliche, unnötige Attribute enthalten und somit nicht minimal sein.
