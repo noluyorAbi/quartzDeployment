@@ -49,14 +49,11 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1763484998384870"
      crossorigin="anonymous"></script>
 
-
-
-
-
 <!-- Easter Egg (Siskoman) -->
 
 <script> 
 // ASCII Art definieren 
+if (typeof asciiArt1 !== 'undefined' && typeof asciiArt2 !== 'undefined') {console.clear()} 
 let asciiArt1 = `
                                   ⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
                                   ⠀⣸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡄⠀
@@ -84,41 +81,10 @@ let asciiArt2 = `
    ▄█    ███ ███     ▄█    ███   ███ ▀███▄ ███    ███  ███   ███   ███   ███    ███ ███   ███ 
  ▄████████▀  █▀    ▄████████▀    ███   ▀█▀  ▀██████▀    ▀█   ███   █▀    ███    █▀   ▀█   █▀ 
 `; 
-}
-console.clear()
-if (typeof asciiArt1 !== 'undefined' && typeof asciiArt2 !== 'undefined') {
-console.clear()
-} else {
-let asciiArt1 = `
-                                  ⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
-                                  ⠀⣸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡄⠀
-                                  ⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀
-                                  ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀
-                                  ⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆
-                                  ⣿⣿⡟⠉⢹⣿⣿⣿⣿⣿⣿⣿⠉⠙⣿⣿⡇
-                                  ⢸⣿⠿⠶⣿⣿⣿⣿⣿⣿⣿⣿⣶⠶⢿⣿⠁
-                                  ⠀⠻⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⣸⠏⠀
-                                  ⠀⠀⠀⢈⠰⢦⣤⣤⣤⣤⣤⠶⠈⠁⠀⠀⠀
-                                  ⢀⢀⠂⠀⠀⠀⠤⣄⣄⡤⠀⠀⠀⠑⢄⠀⠀
-                                  ⣼⣿⣶⣴⣇⠀⠀⠀⠀⠀⠀⢰⣦⣤⣶⣿⠀
-                                  ⢬⣿⡿⣿⡧⢼⣤⣿⣯⣥⡥⢼⣿⣿⣿⣏⠀
-                                  ⠀⣿⣿⡟⣀⠀⠈⣿⣿⡁⠀⢀⠹⣿⣿⡇⠀
-                                  ⢰⠿⠻⣿⣿⣿⣶⠿⡿⢷⣿⣿⣿⡿⠿⡇⠀
-                                  ⠀⠐⠛⠻⠿⠛⠛⠀⠀⠛⠻⠿⠿⠿⠆⠀⠀⠀
-`;
-let asciiArt2 = ` 
-   ▄████████  ▄█     ▄████████    ▄█   ▄█▄  ▄██████▄     ▄▄▄▄███▄▄▄▄      ▄████████ ███▄▄▄▄   
-  ███    ███ ███    ███    ███   ███ ▄███▀ ███    ███  ▄██▀▀▀███▀▀▀██▄   ███    ███ ███▀▀▀██▄ 
-  ███    █▀  ███▌   ███    █▀    ███▐██▀   ███    ███  ███   ███   ███   ███    ███ ███   ███ 
-  ███        ███▌   ███         ▄█████▀    ███    ███  ███   ███   ███   ███    ███ ███   ███ 
-▀███████████ ███▌ ▀███████████ ▀▀█████▄    ███    ███  ███   ███   ███ ▀███████████ ███   ███ 
-         ███ ███           ███   ███▐██▄   ███    ███  ███   ███   ███   ███    ███ ███   ███ 
-   ▄█    ███ ███     ▄█    ███   ███ ▀███▄ ███    ███  ███   ███   ███   ███    ███ ███   ███ 
- ▄████████▀  █▀    ▄████████▀    ███   ▀█▀  ▀██████▀    ▀█   ███   █▀    ███    █▀   ▀█   █▀ 
-`; 
-}
 // ASCII Art in der Konsole ausgeben 
 console.log(asciiArt1); 
 console.log(asciiArt2); 
+asciiArt1 = undefined;
+asciiArt2 = undefined;
 </script>
 
