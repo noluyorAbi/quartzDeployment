@@ -28,6 +28,55 @@ This website serves as a centralized archive, offering you structured access to 
 Here, you’ll find detailed notes covering a range of topics, from the basics of programming to the complexities of algorithms and data structures, all tailored to support and enhance your understanding of this dynamic field. This page is updated frequently throughout the semester, with new topics being added regularly to enrich the content and ensure it reflects the latest developments in the field.
 
 
+
+
+
+
+
+
+
+
+
+
+<!--  There are scripts below this tag -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Google tag (gtag.js) -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E24ELVW963"></script>
@@ -52,23 +101,22 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
 <!-- Easter Egg (Siskoman) -->
 
 <script> 
-// Had problems w redeclaring there using `var` 
+
 /*
 
-You think `var` is creepy? Read this: https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/apAmd#the-case-for-var
+Had problems with redeclaring, therefore using `var`. Needed to do this because the console would throw errors if you visited index.html, went to another link, and revisited index.html.
 
-Anyway if you are reading this, what are you doing here anyway? HMU if you have a better solution than using var
+You think `var` is creepy? Read this then: [https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/apAmd#the-case-for-var](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/apAmd#the-case-for-var)
+
+Anyway, if you are reading this, what are you doing here anyway? Hit me up if you have a better solution than using `var`, which you probably have if you are digging down this deep into a website made by a student.
+
+If you are still reading this and no one ever told you yet, congratulations you are officially a nerd ;D
 
 */
 console.clear();
 var asciiArt1 = undefined;
 var asciiArt2 = undefined;
-if (typeof asciiArt1 !== 'undefined') {
-    if (typeof asciiArt2 !== 'undefined') {
-        console.clear();
-    }
-}
-// ASCII Art definieren 
+// ASCII art of the best superhero
  asciiArt1 = `
                                   ⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
                                   ⠀⣸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡄⠀
@@ -96,10 +144,7 @@ if (typeof asciiArt1 !== 'undefined') {
    ▄█    ███ ███     ▄█    ███   ███ ▀███▄ ███    ███  ███   ███   ███   ███    ███ ███   ███ 
  ▄████████▀  █▀    ▄████████▀    ███   ▀█▀  ▀██████▀    ▀█   ███   █▀    ███    █▀   ▀█   █▀ 
 `; 
-// ASCII Art in der Konsole ausgeben 
 console.log(asciiArt1); 
 console.log(asciiArt2); 
-asciiArt1 = undefined;
-asciiArt2 = undefined;
 </script>
 
