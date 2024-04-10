@@ -33,6 +33,7 @@ Entdecke einen umfassenden Leitfaden, der speziell darauf ausgerichtet ist, die 
 - [[Unterschiede zwischen Datenbanksystemen und Dateiverwaltungssystemen|Unterschiede zwischen DBMS und Dateiverwaltungssystemen]]
 - [[Verzeichnis-Erklärungen|Verzeichnis-Erklärungen]]
 - [[ER-Modell|ER-Modell]]
+- [[Kanonische  Überdeckung]]
 
 ## Detaillierte Kategorien
 
