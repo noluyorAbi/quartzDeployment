@@ -53,7 +53,7 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
 
 <script> 
 // ASCII Art definieren 
-clear()
+console.clear()
 const asciiArt1 = `
 ⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
 ⠀⣸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡄⠀

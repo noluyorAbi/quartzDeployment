@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[DBS]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Wednesday, 10. April 2024, 12:53
+date modified: Wednesday, 10. April 2024, 13:58
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
@@ -423,7 +423,7 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >- Lost-Update
 >- Non-repeatable Read
 
->[!tip]-  Ultimative Anomalien Zusammenfassung --- Erklärung der Transaktionsanomalien: Lost Update, Dirty Read, Non-Repeatable Read
+>[!tip]- Ultimative Anomalien Zusammenfassung --- Erklärung der Transaktionsanomalien: Lost Update, Dirty Read, Non-Repeatable Read
 >
 >**Lost Update RWW**
 >
@@ -532,7 +532,7 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >$$
 >- T1 liest x, welches 100 ist.
 >- T2 ändert x auf 110 und schreibt.
->- T1 liest x erneut und findet den Wert 110, anders als beim ersten Mal.
+>- T1 liest x erneut und findet den Wert 110, anders also beim ersten Mal.
 >
 >$$
 >Merkhilfe:
@@ -578,7 +578,7 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >Entscheiden Sie, ob das Relationenschema die 3. Normalform erfüllt und begründen Sie Ihre Antwort.
 
 >[!success]- Lösung (klicken zum Aufklappen)
-→ Das Relationenschema $R_1(A, B, C, D)$ erfüllt die 3. Normalform. Es existieren keine transitiven Abhängigkeiten zwischen Nicht-Schlüsselattributen. Alle funktionalen Abhängigkeiten, in denen ein Attribut von anderen abhängt, betreffen entweder Schlüsselkandidaten oder sind zwischen Attributen, die Teil von Schlüsselkandidaten sind. Daher gibt es keine Verletzungen der Bedingungen der 3. Normalform.
+→ Das Relationenschema $R_1(A, B, C, D)$ erfüllt die 3. Normalform. Es existieren keine transitiven Abhängigkeiten zwischen Nicht-Schlüsselattributen. Alle funktionalen Abhängigkeiten, in denen ein Attribute von anderen abhängt, betreffen entweder Schlüsselkandidaten oder sind zwischen Attribute, die Teil von Schlüsselkandidaten sind. Daher gibt es keine Verletzungen der Bedingungen der 3. Normalform.
 
 ### 2. $R_2(A, B, C, D, E)$
 
@@ -592,7 +592,7 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >Entscheiden Sie, ob das Relationenschema die 3. Normalform erfüllt und begründen Sie Ihre Antwort.
 
 >[!success]- Lösung (klicken zum Aufklappen)
->→ $F_2$  $D$ ist abhängig von partiellem Schlüsselkandidaten und nicht von allen. Dadurch ist die 2.NF nicht gegeben und somit auch nicht die 3.NF
+>→ $F_2$ $D$ ist abhängig von partiellem Schlüsselkandidaten und nicht von allen. Dadurch ist die 2.NF nicht gegeben und somit auch nicht die 3.NF
 
 ## (b) Gegeben sei das Relationenschema $R_3​(U,V,W,X,Y,Z)$ sowie die Menge $F$ der zugehörigen nicht-trivialen funktionalen Abhängigkeiten:
 
@@ -606,7 +606,7 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >
 >Bestimmen Sie alle Schlüsselkandidaten der Relation $R_3$ und begründen Sie jeweils, warum es sich um einen Schlüsselkandidaten handelt. Begründen Sie auch, weshalb es keine weiteren Schlüsselkandidaten gibt.
 
->[!success] **Schlüsselkandidaten für die Relation $R_3$** (klicken zum Aufklappen)
+>[!success]- **Schlüsselkandidaten für die Relation $R_3$** (klicken zum Aufklappen)
 >#### Schlüsselkandidat: $\{Z\}$
 >
 >- **Funktionale Abhängigkeiten:**
@@ -620,7 +620,7 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >
 >- **$Z \rightarrow V, X$** deckt $V$ und $X$ ab.
 >- **$X \rightarrow U$** ermöglicht, dass $Z$ auch $U$ abdeckt, da $X$ durch $Z$ bestimmt wird.
->- **$U, V \rightarrow W$** und da sowohl $U$ als auch $V$ durch $Z$ bestimmt sind, wird auch $W$ abgedeckt.
+>- **$U, V \rightarrow W$** und da sowohl $U$ also auch $V$ durch $Z$ bestimmt sind, wird auch $W$ abgedeckt.
 >- **$W, X \rightarrow Y$** ermöglicht, dass $Z$ auch $Y$ abdeckt, indem $W$ und $X$ (bereits durch $Z$ bestimmt) verwendet werden.
 >- **$V, X, Y \rightarrow Z$** ist redundant, da $Z$ selbst verwendet wird, um alles abzudecken.
 >
@@ -640,8 +640,8 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >**Begründung:**
 >
 >- **$X \rightarrow U$** deckt $U$ ab.
->- **$U, V \rightarrow W$** deckt $W$ ab, da sowohl $U$ (bereits durch $X$ abgedeckt) als auch $V$ in der Attributmenge enthalten sind.
->- **$W, X \rightarrow Y$** deckt $Y$ ab, da sowohl $W$ (über $U, V$ abgedeckt) als auch $X$ in der Attributmenge enthalten sind.
+>- **$U, V \rightarrow W$** deckt $W$ ab, da sowohl $U$ (bereits durch $X$ abgedeckt) also auch $V$ in der Attributmenge enthalten sind.
+>- **$W, X \rightarrow Y$** deckt $Y$ ab, da sowohl $W$ (über $U, V$ abgedeckt) also auch $X$ in der Attributmenge enthalten sind.
 >- **$V, X, Y \rightarrow Z$** deckt $Z$ ab, sobald $Y$ bestimmt ist.
 >
 >**Vollständigkeit der Abdeckung:** $\{V, X\}^{+} = \{U, V, W, X, Y, Z\}$
@@ -650,9 +650,9 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 >
 >## Fazit
 >
->Die Analyse zeigt, dass sowohl $\{Z\}$ als auch $\{V, X\}$ minimale Schlüsselkandidaten für die Relation $R_3$ sind. Beide Attributmengen decken die gesamte Relation funktional ab und erfüllen die Kriterien der Minimalität für Schlüsselkandidaten.
+>Die Analyse zeigt, dass sowohl $\{Z\}$ also auch $\{V, X\}$ minimale Schlüsselkandidaten für die Relation $R_3$ sind. Beide Attributmengen decken die gesamte Relation funktional ab und erfüllen die Kriterien der Minimalität für Schlüsselkandidaten.
 >
 >### Warum keine weiteren Kandidaten?
 >
->- **Attribute allein oder in anderen Kombinationen:** Kein einzelnes Attribut außer $Z$ und keine andere Kombination außer $\{V, X\}$ können alle anderen Attribute bestimmen. Beispielsweise reicht $X$ allein nicht aus, um $V$, $W$, $Y$ und $Z$ zu bestimmen. Ebenso kann eine Kombination wie $\{U, V\}$ oder $\{W, X\}$ nicht $Z$ und somit nicht alle Attribute abdecken.
+>- **Attribute allein oder in anderen Kombinationen:** Kein einzelnes Attribute außer $Z$ und keine andere Kombination außer $\{V, X\}$ können alle anderen Attribute bestimmen. Beispielsweise reicht $X$ allein nicht aus, um $V$, $W$, $Y$ und $Z$ zu bestimmen. Ebenso kann eine Kombination wie $\{U, V\}$ oder $\{W, X\}$ nicht $Z$ und somit nicht alle Attribute abdecken.
 >- **Redundanzfreie Kombinationen:** Alle anderen Kombinationen, die die gesamte Relation abdecken könnten, würden zusätzliche, unnötige Attribute enthalten und somit nicht minimal sein.
