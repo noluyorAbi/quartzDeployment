@@ -52,7 +52,15 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
 <!-- Easter Egg (Siskoman) -->
 
 <script> 
-// ASCII Art definieren 
+// Had problems w redeclaring there using `var` 
+/*
+
+You think `var` is creepy? Read this: https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/apAmd#the-case-for-var
+
+Anyway if you are reading this, what are you doing here anyway? HMU if you have a better solution than using var
+
+*/
+console.clear();
 var asciiArt1 = undefined;
 var asciiArt2 = undefined;
 if (typeof asciiArt1 !== 'undefined') {
@@ -60,6 +68,7 @@ if (typeof asciiArt1 !== 'undefined') {
         console.clear();
     }
 }
+// ASCII Art definieren 
  asciiArt1 = `
                                   ⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
                                   ⠀⣸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡄⠀
