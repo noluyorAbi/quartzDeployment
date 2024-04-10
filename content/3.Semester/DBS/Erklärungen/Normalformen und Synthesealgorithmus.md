@@ -132,7 +132,7 @@ Die 2NF ist wichtig, um Redundanzen zu vermeiden und die Datenintegrität zu gew
 > <br/>
 > 
 > Z.B. $R = (\underline A, B, C, D)$
-> Die 3.NF ist hier nicht gegeben, da es eine Abhängigkeit $A→B$ geben kann, und dann wiederum eine Abhängigkeit $B→C$ wo $B$ also der *Vermittler* dient [[Klausuraufgaben WS-2023-24#(a) Können wir mit Sicherheit davon ausgehen, dass $R$ auch die zweite und dritte Normalform erfüllt? Begründen Sie Ihre Aussage jeweils in ein bis zwei Sätzen.|(Beispiel aus Klausur WS23-24)]]
+> Die 3.NF ist hier nicht gegeben, da es eine Abhängigkeit $A→B$ geben kann, und dann wiederum eine Abhängigkeit $B→C$ wo $B$ also der *Vermittler* dient [[Klausuraufgaben-WS-2023-24#(a) Können wir mit Sicherheit davon ausgehen, dass $R$ auch die zweite und dritte Normalform erfüllt? Begründen Sie Ihre Aussage jeweils in ein bis zwei Sätzen.|(Beispiel aus Klausur WS23-24)]]
 >
 >- <span style="color:orange">Every non-key attribute in a table should depend on the key,the whole key, and nothing but the key</span>
 >- BCNF: <span style="color:#32de84">Every ~~non-key~~ attribute in a table should depend on the key,the whole key, and nothing but the key </span>
