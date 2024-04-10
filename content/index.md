@@ -1,24 +1,24 @@
 ---
 tags: 
 fach: 
-title: University Notes
+title: The Academic Archive - MyUniNotes on Computer Science
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Wednesday, 10. April 2024, 02:08
+date modified: Wednesday, 10. April 2024, 02:37
 ---
 
-# Welcome to MyUniNotes  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
+# Welcome to MyUniNotes <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="10px"/>
 
-## Modules 📚
+## 📚 Modules
 
 - [[DBS|Datenbanksysteme (DBS)]]
 - other modules following soon
-## Semester 🗓️
+## 🗓️ Semester 
 
 - [[3.Semester]]
 - [[4.Semester]] (coming soon)
 
-### About This Site 
+### About This Site
 
 This website serves as a centralized archive, offering you structured access to a wealth of study materials that I’ve gathered and written in the language of the module (mostly German). It’s designed to provide a clear, organized, and comprehensive resource for anyone interested in the intricacies of computer science, as seen through my personal academic lens. If necessary, the website can be translated into any required language using a browser’s built-in translator.
 
