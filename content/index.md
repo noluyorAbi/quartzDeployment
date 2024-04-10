@@ -54,7 +54,10 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
 <script> 
 // ASCII Art definieren 
 console.clear()
-const asciiArt1 = `
+if (typeof asciiArt1 !== 'undefined' && typeof asciiArt2 !== 'undefined') {
+console.clear()
+} else {
+let asciiArt1 = `
                                   ⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
                                   ⠀⣸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡄⠀
                                   ⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀
@@ -71,7 +74,7 @@ const asciiArt1 = `
                                   ⢰⠿⠻⣿⣿⣿⣶⠿⡿⢷⣿⣿⣿⡿⠿⡇⠀
                                   ⠀⠐⠛⠻⠿⠛⠛⠀⠀⠛⠻⠿⠿⠿⠆⠀⠀⠀
 `;
-const asciiArt2 = ` 
+let asciiArt2 = ` 
    ▄████████  ▄█     ▄████████    ▄█   ▄█▄  ▄██████▄     ▄▄▄▄███▄▄▄▄      ▄████████ ███▄▄▄▄   
   ███    ███ ███    ███    ███   ███ ▄███▀ ███    ███  ▄██▀▀▀███▀▀▀██▄   ███    ███ ███▀▀▀██▄ 
   ███    █▀  ███▌   ███    █▀    ███▐██▀   ███    ███  ███   ███   ███   ███    ███ ███   ███ 
@@ -81,6 +84,7 @@ const asciiArt2 = `
    ▄█    ███ ███     ▄█    ███   ███ ▀███▄ ███    ███  ███   ███   ███   ███    ███ ███   ███ 
  ▄████████▀  █▀    ▄████████▀    ███   ▀█▀  ▀██████▀    ▀█   ███   █▀    ███    █▀   ▀█   █▀ 
 `; 
+}
 // ASCII Art in der Konsole ausgeben 
 console.log(asciiArt1); 
 console.log(asciiArt2); 
