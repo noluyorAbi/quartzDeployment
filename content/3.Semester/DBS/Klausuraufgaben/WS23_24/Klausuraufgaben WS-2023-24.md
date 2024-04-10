@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[DBS]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Wednesday, 10. April 2024, 02:07
+date modified: Wednesday, 10. April 2024, 11:50
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
@@ -218,9 +218,6 @@ FROM R NATURAL JOIN S;
 - $Decknamen (\underline{Deckname}, ANr)$
 - $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 
-Hier ist eine kurze, stichpunktartige Erklärung, wie man auf die SQL-Abfrage kommt, die in den Callout integriert ist:
-
-Hier ist der Callout, der sowohl die SQL-Abfrage also auch die stichpunktartige Erklärung ihrer Komponenten enthält:
 
 >[!success]- Lösung (klicken zum Aufklappen)
 >```sql
