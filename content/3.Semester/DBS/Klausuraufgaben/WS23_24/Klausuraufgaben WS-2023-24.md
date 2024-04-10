@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[DBS]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Wednesday, 10. April 2024, 01:52
+date modified: Wednesday, 10. April 2024, 02:07
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
