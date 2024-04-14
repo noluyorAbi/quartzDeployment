@@ -4,7 +4,7 @@ last modified: 2024-03-20 17:22
 tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
 date created: Wednesday, 20. March 2024, 17:22
-date modified: Tuesday, 9. April 2024, 16:47
+date modified: Thursday, 11. April 2024, 03:48
 ---
 
 # Aufgabe 3-1 *Schlüssel und Fremdschlüssel*

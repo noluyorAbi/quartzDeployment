@@ -1,12 +1,12 @@
 ---
-created: 2024-03-21 14:54
-last modified: 2024-03-21 14:54
-tags: [DBS, Übungsblatt]
+tags:
+  - DBS
+  - Übungsblatt
 fach: "[[DBS]]"
 Thema:
   - Relationale Algebra
 date created: Thursday, 21. March 2024, 14:54
-date modified: Tuesday, 9. April 2024, 17:03
+date modified: Friday, 12. April 2024, 00:33
 ---
 
 # Aufgabe 4-1 **Natural Join**
