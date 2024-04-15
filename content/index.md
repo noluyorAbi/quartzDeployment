@@ -4,7 +4,7 @@ fach:
 title: Studying made easy.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Tuesday, 16. April 2024, 01:06
+date modified: Tuesday, 16. April 2024, 01:18
 ---
 
 # Welcome to MyUniNotes
@@ -13,11 +13,15 @@ date modified: Tuesday, 16. April 2024, 01:06
 
 - [[DBS|Datenbanksysteme (DBS)]]
 - [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/) *(another site created by a fellow student)*
-- other modules following soon
+- [[Formale Sprachen und Komplexität]] (in work)
+- [[Rechnernetze und Verteilte Systeme]] (in work)
+- [[Bachelorseminar-Software Security]] (in work)
+- [[Einführung in die linearen statistischen Modellierung]]
+- more modules in work 
 ## 🗓️ Semester
 
 - [[3.Semester]]
-- [[4.Semester]]
+- [[4.Semester]] (currently in work)
 
 ### About This Site
 
