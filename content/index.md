@@ -4,7 +4,7 @@ fach:
 title: Studying made easy.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Thursday, 11. April 2024, 03:45
+date modified: Tuesday, 16. April 2024, 00:59
 ---
 
 # Welcome to MyUniNotes
@@ -39,7 +39,7 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
 
 
 <!-- There are scripts below this tag -->
-
+<!-- linter-disable -->
 
 
 
@@ -137,7 +137,16 @@ var asciiArt2 = undefined;
 
 
 `;
- asciiArt2 =  ` ▄████████ ▄█ ▄████████ ▄█ ▄█▄ ▄██████▄ ▄▄▄▄███▄▄▄▄ ▄████████ ███▄▄▄▄ ███ ███ ███ ███ ███ ███ ▄███▀ ███ ███ ▄██▀▀▀███▀▀▀██▄ ███ ███ ███▀▀▀██▄ ███ █▀ ███▌ ███ █▀ ███▐██▀ ███ ███ ███ ███ ███ ███ ███ ███ ███ ███ ███▌ ███ ▄█████▀ ███ ███ ███ ███ ███ ███ ███ ███ ███ ▀███████████ ███▌ ▀███████████ ▀▀█████▄ ███ ███ ███ ███ ███ ▀███████████ ███ ███ ███ ███ ███ ███▐██▄ ███ ███ ███ ███ ███ ███ ███ ███ ███ ▄█ ███ ███ ▄█ ███ ███ ▀███▄ ███ ███ ███ ███ ███ ███ ███ ███ ███ ▄████████▀ █▀ ▄████████▀ ███ ▀█▀ ▀██████▀ ▀█ ███ █▀ ███ █▀ ▀█ █▀ `; 
+ asciiArt2 =  `   
+   ▄████████  ▄█     ▄████████    ▄█   ▄█▄  ▄██████▄    ▄▄▄▄███▄▄▄▄      ▄████████ ███▄▄▄▄   
+  ███    ███ ███    ███    ███   ███ ▄███▀ ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███ ███▀▀▀██▄ 
+  ███    █▀  ███▌   ███    █▀    ███▐██▀   ███    ███ ███   ███   ███   ███    ███ ███   ███ 
+  ███        ███▌   ███         ▄█████▀    ███    ███ ███   ███   ███   ███    ███ ███   ███ 
+▀███████████ ███▌ ▀███████████ ▀▀█████▄    ███    ███ ███   ███   ███ ▀███████████ ███   ███ 
+         ███ ███           ███   ███▐██▄   ███    ███ ███   ███   ███   ███    ███ ███   ███ 
+   ▄█    ███ ███     ▄█    ███   ███ ▀███▄ ███    ███ ███   ███   ███   ███    ███ ███   ███ 
+ ▄████████▀  █▀    ▄████████▀    ███   ▀█▀  ▀██████▀   ▀█   ███   █▀    ███    █▀   ▀█   █▀  
+                                 ▀ `; 
 console.log(asciiArt1); 
 console.log(asciiArt2); 
 </script>
