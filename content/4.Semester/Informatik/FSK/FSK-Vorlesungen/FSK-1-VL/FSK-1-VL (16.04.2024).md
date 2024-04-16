@@ -6,7 +6,7 @@ tags:
   - vorlesung
 fach: "[[FSK]]"
 date created: Tuesday, 16. April 2024, 11:25
-date modified: Tuesday, 16. April 2024, 16:21
+date modified: Tuesday, 16. April 2024, 16:36
 ---
 
 # TODO
@@ -16,6 +16,8 @@ date modified: Tuesday, 16. April 2024, 16:21
 - Chomsky-Hierarchie nochmal üben
 - Syntaxbäume VL 1c 
 - Rechts und Linksableitung
+- Typen lernen typ1, typ2,typ3
+- Entscheidungsprobleme lernen
 # Geplanter Inhalt dieser VL
 
 - [Vorlesung 1a: Begrüßung, Organisatorisches, Inhaltsübersicht und Grundlagen](https://www.tcs.ifi.lmu.de/lehre/ss-2024/fsk_de/vl-01a-ft-begruessung-organisatorisches-inhaltsuebersicht-und-grundlagen.pdf)
@@ -81,6 +83,8 @@ Die theoretische Informatik umfasst drei große Themenbereiche:
     - Die Klassen $P$ und $NP$
     - $NP$-Schwere, $NP$-Vollständigkeit
     - Konkrete $NP$-vollständige Problem
+
+# Vorlesung 1a: Begrüßung, Organisatorisches, Inhaltsübersicht und Grundlagen
 
 # Grundlagen: [[Wörter]]
 
@@ -454,3 +458,4 @@ Bestimmte Eigenschaften wie Entscheidbarkeit sind zentral für das Verständnis 
 ## Zusammenfassung der Chomsky-Hierarchie
 
 Die Chomsky-Hierarchie ordnet Sprachen basierend auf ihren grammatikalischen Einschränkungen in vier Typen. Diese Hierarchy hilft nicht nur, die theoretischen Grundlagen der Sprachverarbeitung zu verstehen, sondern auch praktische Parsing-Strategien zu entwickeln.
+
