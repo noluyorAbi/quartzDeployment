@@ -3,9 +3,10 @@ tags:
   - 4semester
   - informatik
   - FSK
+  - vorlesung
 fach: "[[FSK]]"
 date created: Tuesday, 16. April 2024, 11:25
-date modified: Tuesday, 16. April 2024, 13:06
+date modified: Tuesday, 16. April 2024, 14:38
 ---
 
 # Geplanter Inhalt dieser VL
@@ -172,6 +173,8 @@ Seien $u, v$ Wörter über einem Alphabet $\Sigma$.
 
 # Grundlagen: Formale Sprache
 
+Formale Sprachen sind ein grundlegendes Konzept in der Informatik und der theoretischen Computerwissenschaft, das zur Beschreibung und Analyse von Syntax und strukturellen Mustern von Daten und Anweisungen verwendet wird. Sie bestehen aus Alphabeten, die die Grundbausteine der Sprachen sind, und Regeln, die definieren, wie Zeichen zu gültigen Strings oder „Wörtern“ kombiniert werden können. Diese Sprachen werden oft verwendet, um die Syntax von Programmiersprachen zu definieren, aber auch in der Automatentheorie, der Komplexitätstheorie und der Logik.
+
 >[!note] Definition
 >Eine (*formale*) **Sprache** $L$ über dem Alphabet $\Sigma$ ist eine Teilmenge von $\Sigma^*$
 >d.h $L \subseteq \Sigma^*$
@@ -195,5 +198,58 @@ Seien $u, v$ Wörter über einem Alphabet $\Sigma$.
 >	- $L_1 \cdot L_2 = L_1L_2 = \{uv | u \in L_1$ und $v \in L_2\}$
 >
 >Eine (*formale*) **Sprache** $L$ über dem Alphabet $\Sigma$ ist eine Teilmenge von $\Sigma^*$, d.h. $L \subseteq \Sigma^*$.
+
+>[!tip] Beispiel
+>Beispiele für Operationen auf formalen Sprachen
+>
+>Gegeben sei das Alphabet $\Sigma = \{a, b\}$ und zwei formale Sprachen $L_1 = \{a^i | i \in \mathbb{N}\}$ und $L_2 = \{b^i | i \in \mathbb{N}\}$.
+>
+>- $L_1 \cup L_2$ ist die Sprache der Wörter, die nur aus $a$'s oder nur aus $b$'s bestehen.
+>- $L_1 \cap L_2 = \{\varepsilon\}$, wobei $\varepsilon$ das leere Wort darstellt und zeigt, dass beide Sprachen das leere Wort enthalten.
+>- $\overline{L_1}$ ist die Sprache der Wörter, die mindestens ein $b$ enthalten.
+>- $L_1L_2 = \{a^ib^j | i, j \in \mathbb{N}\}$ ist die Sprache, die aus allen Kombinationen von $a$'s gefolgt von $b$'s besteht.
+>- $L_2L_1 = \{b^ia^j | i, j \in \mathbb{N}\}$ ist die Sprache, die aus allen Kombinationen von $b$'s gefolgt von $a$'s besteht.
+>- $L_1L_1 = L_1$ zeigt, dass die Konkatenation von $L_1$ mit sich selbst die Sprache nicht verändert.
+
+# [[Kleenescher Abschluss]]
+
+Sei $L$ eine Sprache. Dann ist der **Kleenesche Abschluss** von $L$, benannt nach Stephen Cole Kleene, definiert als:
+
+$$
+\begin{aligned}
+L^{0} &:= \{\epsilon\} &\quad L^{*} &:= \bigcup_{i \in \mathbb{N}} L^i \\
+L^{i} &:= L \cdot L^{i-1} \text{ für } i>0 &\quad L^{+} &:= \bigcup_{i \in \mathbb{N}_{>0}} L^i \\
+\end{aligned}
+$$
+
+## Beispiel
+
+Gegeben sei die Sprache $L = \{ab, ac\}$.
+
+$$
+L^{0} = \{\epsilon\}
+$$
+
+Das bedeutet, $L^0$ ist die Sprache, die nur das leere Wort $\epsilon$ enthält. Dies ist in der Definition des Kleeneschen Abschlusses enthalten und repräsentiert die $0$-fache Konkatenation von Wörtern aus $L$, also kein Wort.
+
+$$
+L^{1} = L \cdot L^{0} = L = \{ab, ac\}
+$$
+
+$L^1$ ist gleich $L$, da die einmalige Konkatenation eines Wortes aus $L$ mit dem leeren Wort $\epsilon$ das ursprüngliche Wort ergibt. Deshalb ist $L^1$ die Sprache $L$ selbst.
+
+$$
+L^{2} = L \cdot L^{1} = \{abab, abac, acab, acac\}
+$$
+
+$L^2$ entspricht der zweifachen Konkatenation der Wörter aus $L$. Jedes Wort aus $L$ wird mit jedem Wort aus $L$ kombiniert, was die Sprache $L^2$ ergibt, die aus allen möglichen Kombinationen von zwei Wörtern aus $L$ besteht.
+
+$$
+L^{3} = L \cdot L^{2} = \{ababab, ababac, abacab, abacac, acabab, acabac, acacab, acacac\}
+$$
+
+Analog dazu ist $L^3$ die dreifache Konkatenation der Wörter aus $L$. Jedes Wort aus $L^2$ wird mit jedem Wort aus $L$ kombiniert. Dadurch entstehen längere Wörter, die aus drei Segmenten bestehen, die jeweils aus $L$ stammen.
+
+In diesen Beispielen zeigt sich, dass mit steigendem $i$, $L^i$ eine Sprache darstellt, die aus Wörtern besteht, die durch $i$-fache Konkatenation der Wörter aus $L$ gebildet werden. Der Kleenesche Abschluss $L^*$ umfasst dann alle diese Möglichkeiten einschließlich des leeren Wortes.
 
 

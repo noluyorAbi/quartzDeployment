@@ -2,7 +2,7 @@
 tags: 
 fach: 
 date created: Monday, 11. March 2024, 14:20
-date modified: Tuesday, 16. April 2024, 11:01
+date modified: Tuesday, 16. April 2024, 14:16
 ---
 
 # Übersicht der Studieninhalte

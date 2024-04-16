@@ -5,10 +5,12 @@ tags:
   - "#FSK"
 fach: "[[FSK]]"
 date created: Tuesday, 16. April 2024, 11:20
-date modified: Tuesday, 16. April 2024, 12:00
+date modified: Tuesday, 16. April 2024, 14:39
 ---
 
 # Übersicht der Studieninhalte
+
+# [[FSK-Vorlesung]]
 
 ## [[FSK-Verzeichnis-Erklärungen]]
 
