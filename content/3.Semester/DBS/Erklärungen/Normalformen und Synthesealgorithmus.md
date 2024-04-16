@@ -157,7 +157,7 @@ In der 3. Normalform (3NF) wird gefordert, dass:
 
 Die **3NF** baut auf der **2. Normalform (2NF)** auf und zielt darauf ab, transitive Abhängigkeiten zwischen Nicht-Schlüsselattributen zu beseitigen. Das heißt, es dürfen keine funktionalen Abhängigkeiten zwischen Nicht-Schlüsselattributen bestehen, die über einen Umweg (transitiv) von einem Schlüsselkandidaten abhängen. So wird sichergestellt, dass die Relationen frei von Anomalien sind, die bei Einfüge-, Lösch- oder Änderungsoperationen entstehen können, und dass die Datenintegrität gewahrt bleibt.
 
-[[Blatt 10#Aufgabe 10-3 ** Normalformen und Synthesealgorithmus 3. Normalform (3NF) **|Anwendungsbeispiel]]
+[[DBS-Blatt 10#Aufgabe 10-3 ** Normalformen und Synthesealgorithmus 3. Normalform (3NF) **|Anwendungsbeispiel]]
 
 
 <details> 
@@ -205,7 +205,7 @@ Jetzt hängt in jeder Tabelle jedes Nicht-Schlüsselattribut direkt vom Primärs
 >- Rekonstruktion eines Schlüsselkandidaten:
 >- Elimination überflüssiger Relationen
 
-[[Blatt 10#Aufgabe 10-5 Normalformen und Synthesealgorithmus Synthesealgorithmus]]
+[[DBS-Blatt 10#Aufgabe 10-5 Normalformen und Synthesealgorithmus Synthesealgorithmus]]
 
 Der Synthesealgorithmus wird verwendet, um ein beliebiges Relationenschema R mit funktionalen Abhängigkeiten F in Relationen 𝑅1, … , 𝑅𝑛 zu zerlegen, für die gilt:
 
@@ -273,7 +273,7 @@ Die **Boyce-Codd-Normalform (BCNF)** ist eine Verschärfung der 3. Normalform, d
 
 BCNF zielt darauf ab, verbleibende Anomalien zu beseitigen, die in 3NF noch möglich sind, insbesondere solche, die aus funktionalen Abhängigkeiten resultieren, bei denen die linke Seite kein Schlüsselkandidat ist. Dies stellt sicher, dass keine Abhängigkeiten von Nicht-Superkeys zu anderen Attribute bestehen, wodurch Redundanzen und Anomalien weiter reduziert werden.
 
-[[Blatt 10#Aufgabe 10-4 Normalformen Boyce–Codd Normalform (BCNF)|Anwendungsbeispiel]]
+[[DBS-Blatt 10#Aufgabe 10-4 Normalformen Boyce–Codd Normalform (BCNF)|Anwendungsbeispiel]]
 
 <details>
 <summary>### Weiteres Beispiel</summary>

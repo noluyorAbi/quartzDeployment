@@ -27,7 +27,7 @@ In diesem Beispiel kann die Tupelkalkül-Abfrage `TK` wie folgt interpretiert we
 
 ## Beispiel für Join-Operation im TK
 
-### b) Erstellen Sie eine Liste aller Verkaufsnummern mit Verkaufsdatum, die in den Abteilungen im 3. Stock verkauft wurden und deren Lieferant entweder aus Italien oder aus Frankreich kommt. [[Blatt 6]]
+### b) Erstellen Sie eine Liste aller Verkaufsnummern mit Verkaufsdatum, die in den Abteilungen im 3. Stock verkauft wurden und deren Lieferant entweder aus Italien oder aus Frankreich kommt. [[DBS-Blatt 6]]
 
 $$~{Schema(ver) = Schema(Verkauf) \; \{ [ver.Nummer, ver.Datum] \mid ver \in Verkauf \land (\exists ab \in Abteilung, art \in Artikel, l \in Lieferant) (ver.Abteilung = ab.Nummer \land ver.Artikel = art.Nummer \land art.Lieferant = l.Nummer \land ab.Stock = 3 \land (l.Land = 'Italien' \lor l.Land = 'Frankreich'))\}}$$
 

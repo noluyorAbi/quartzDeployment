@@ -93,7 +93,7 @@ $$
 
 ## Quotient
 
-[[Blatt 12#(b) Relationale Algebra Quotient|Blatt 12 Anwendungsbeispiel]]
+[[DBS-Blatt 12#(b) Relationale Algebra Quotient|Blatt 12 Anwendungsbeispiel]]
 
 Der Quotient ist eine etwas komplexere Operation in der relationalen Algebra. Gegeben zwei Relationen R und S, wird der Quotient R ÷ S also die Menge aller Tuple t definiert, die bei der Projektion von R auf die Attribute, die nicht in S sind (R - S), existieren und für die jedes Tuple in S mit t kombiniert werden kann, um ein Tuple in R zu formen.
 

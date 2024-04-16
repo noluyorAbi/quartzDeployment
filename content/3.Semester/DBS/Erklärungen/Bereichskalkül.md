@@ -22,7 +22,7 @@ In diesem Beispiel repräsentiert `BK` eine Bereichskalkül-Abfrage, die folgend
 
 ## Beispiel für Join-Operation im TK
 
-### b) Erstellen Sie eine Liste aller Verkaufsnummern mit Verkaufsdatum, die in den Abteilungen im 3. Stock verkauft wurden und deren Lieferant entweder aus Italien oder aus Frankreich kommt. [[Blatt 6]]
+### b) Erstellen Sie eine Liste aller Verkaufsnummern mit Verkaufsdatum, die in den Abteilungen im 3. Stock verkauft wurden und deren Lieferant entweder aus Italien oder aus Frankreich kommt. [[DBS-Blatt 6]]
 
 $$~{\{ \text{Vnr}, \text{Vda} \ | \ \exists \text{abtnr}, \text{artnr}, \text{lnr} : \text{Verkauf}(\text{Vnr}, \text{Vda}, \text{abtnr}, \text{artnr}, \_, \_) \ \land \ \text{Abteilung}(\text{abtnr}, \_, 3, \_) \ \land \ \text{Artikel}(\text{artnr}, \_, \_, \_, \text{lnr}) \ \land \ (\text{Lieferant}(\text{lnr}, \_, 'Italien') \ \lor \ \text{Lieferant}(\text{lnr}, \_, 'Frankreich'))\}}$$
 
