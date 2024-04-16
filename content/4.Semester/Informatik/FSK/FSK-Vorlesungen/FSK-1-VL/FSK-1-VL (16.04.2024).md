@@ -6,7 +6,7 @@ tags:
   - vorlesung
 fach: "[[FSK]]"
 date created: Tuesday, 16. April 2024, 11:25
-date modified: Tuesday, 16. April 2024, 14:38
+date modified: Tuesday, 16. April 2024, 14:58
 ---
 
 # Geplanter Inhalt dieser VL
@@ -142,6 +142,26 @@ Die theoretische Informatik umfasst drei große Themenbereiche:
 
 Beachten Sie, dass beim Übergang von $\Sigma^i$ zu $\Sigma^{i+1}$, jedes Wort aus $\Sigma^i$ mit jedem Zeichen aus $\Sigma$ konkateniert wird, um die Wörter der Länge $i+1$ zu bilden.
 
+# Weitere Notationen und Begriffe
+
+Für Wörter über einem Alphabet $\Sigma$ gelten die folgenden Notationen und Begriffe:
+
+- Wenn $w$ ein Wort über $\Sigma$ ist, dann wird durch $w^m$ das Wort bezeichnet, das durch $m$-maliges Konkatenieren von $w$ entsteht, das heißt:
+  - $w^0 = \epsilon$ ist das leere Wort, und für $m > 0$ ist $w^m = ww^{m-1}$, also das Wort $w$, $m$-mal wiederholt.
+  
+- Das rückwärts gelesene Wort von $w$ wird mit $\overline{w}$ bezeichnet. Es gilt also:
+  - $\overline{\epsilon} = \epsilon$ und für $w = a_1a_2\ldots a_n$ ist $\overline{w} = a_n\ldots a_2a_1$.
+  
+- Ein Wort $w$ ist ein **Palindrom**, genau dann wenn $w = \overline{w}$, das bedeutet, das Wort ist vorwärts wie rückwärts gelesen gleich.
+
+Beispiele für Palindrome sind:
+
+- "anna"
+- "reliefpfeiler"
+- "lagerregal"
+- "annasusanna"
+
+Palindrome sind in der theoretischen Informatik ein interessanter Fall, weil sie oft in der Automatentheorie zur Demonstration der Eigenschaften von speziellen Automaten oder zur Illustration von Grenzen bestimmter Arten von Automaten verwendet werden.
 
 # Sprechweisen: Präfix, Suffix, Teilwort
 
@@ -150,6 +170,7 @@ Seien $u, v$ Wörter über einem Alphabet $\Sigma$.
 - $u$ ist ein **Präfix** von $v$, wenn es ein Wort $w$ gibt mit $uw = v$.
 - $u$ ist ein **Suffix** von $v$, wenn es ein Wort $w$ gibt mit $wu = v$.
 - $u$ ist ein **Teilwort** von $v$, wenn es Wörter $w_1, w_2$ gibt mit $w_1uw_2 = v$.
+	 $\Longrightarrow$ **Präfix und Suffix impliziert Teilwort!**
 
 ![[Pasted image 20240416124604.png|center]]
 
@@ -159,13 +180,14 @@ Seien $u, v$ Wörter über einem Alphabet $\Sigma$.
 - $w$ ist ein Präfix, Suffix und Teilwort von $w$.
 - $aba$ ist ein Präfix, Suffix und Teilwort von $w$.
 - $ababb$ ist ein Präfix und Teilwort von $w$, aber kein Suffix von $w$.
-- $bab$ ist ein Teilwort von $w$, aber weder ein Präfix noch ein Suffix.
-
+- $bab$ ist ein Teilwort von $w$, aber weder ein Präfix noch ein Suffix. 
+- <br/>
 - <span style="color:cyan">w</span> ist ein Präfix, Suffix und Teilwort von w.
 - <span style="color:cyan">aba</span> ist ein Präfix, Suffix und **Teilwort** von w. **(WARUM TEILWORT??)** !!!
+	 $\Longrightarrow$ **Präfix und Suffix impliziert Teilwort!**
 - <span style="color:cyan">ababb</span> ist ein Präfix und Teilwort von w, aber kein Suffix von w.
 - <span style="color:green">bab</span> ist ein Teilwort von w, aber weder ein Präfix noch ein Suffix.
-
+- <br/>
 - Das ganze Wort <span style="color:cyan">ababbaba</span> ist ein Präfix, Suffix und Teilwort von w.
 - <span style="color:cyan">aba</span>bb<span style="color:red">aba</span> ist ein Präfix, Suffix und Teilwort von w, gefunden am Anfang, am End und in der Mitte des Wortes.
 - <span style="color:cyan">ababb</span>aba ist ein Präfix und Teilwort von w, gefunden am Anfang und in der Mitte des Wortes, aber kein Suffix.
@@ -178,6 +200,7 @@ Formale Sprachen sind ein grundlegendes Konzept in der Informatik und der theore
 >[!note] Definition
 >Eine (*formale*) **Sprache** $L$ über dem Alphabet $\Sigma$ ist eine Teilmenge von $\Sigma^*$
 >d.h $L \subseteq \Sigma^*$
+>Kann leeres Wort enthalten z.B kann eine Textdatei leer sein
 
 >Beachte: L steht für "Language" 
 
@@ -185,16 +208,16 @@ Formale Sprachen sind ein grundlegendes Konzept in der Informatik und der theore
 >Seien $L$, $L_1$, $L_2$ formale **Sprachen** über dem Alphabet $\Sigma$. Dann sind folgende Operationen definiert:
 >
 >- **Vereinigung**: 
->	- Die Vereinigung von $L_1$ und $L_2$ ist definiert also 
+>	- Die Vereinigung von $L_1$ und $L_2$ ist definiert als 
 >	- $L_1 \cup L_2 = \{w | w \in L_1$ oder $w \in L_2\}$
 >- **Schnitt**: 
->	- Der Schnitt von $L_1$ und $L_2$ ist definiert also 
+>	- Der Schnitt von $L_1$ und $L_2$ ist definiert als 
 >	- $L_1 \cap L_2 = \{w | w \in L_1$ und $w \in L_2\}$
 >- **Komplement**: 
->	- Das Komplement zu $L$ ist definiert also 
+>	- Das Komplement zu $L$ ist definiert als 
 >	- $\overline{L} = \Sigma^* \setminus L$
->- **Product**: 
->	- Das Product von $L_1$ und $L_2$ ist definiert also 
+>- **Produkt**: 
+>	- Das Produkt von $L_1$ und $L_2$ ist definiert als 
 >	- $L_1 \cdot L_2 = L_1L_2 = \{uv | u \in L_1$ und $v \in L_2\}$
 >
 >Eine (*formale*) **Sprache** $L$ über dem Alphabet $\Sigma$ ist eine Teilmenge von $\Sigma^*$, d.h. $L \subseteq \Sigma^*$.
@@ -204,8 +227,8 @@ Formale Sprachen sind ein grundlegendes Konzept in der Informatik und der theore
 >
 >Gegeben sei das Alphabet $\Sigma = \{a, b\}$ und zwei formale Sprachen $L_1 = \{a^i | i \in \mathbb{N}\}$ und $L_2 = \{b^i | i \in \mathbb{N}\}$.
 >
->- $L_1 \cup L_2$ ist die Sprache der Wörter, die nur aus $a$'s oder nur aus $b$'s bestehen.
->- $L_1 \cap L_2 = \{\varepsilon\}$, wobei $\varepsilon$ das leere Wort darstellt und zeigt, dass beide Sprachen das leere Wort enthalten.
+>- $L_1 \cup L_2$ ist die Sprache der Wörter, die nur aus $a$'s oder nur aus $b$'s bestehen. $\epsilon$ ist inkludiert da epsilon a und auch b ist
+>- $L_1 \cap L_2 = \{\varepsilon\}$, wobei $\varepsilon$ das leere Wort darstellt und zeigt, dass beide Sprachen das leere Wort enthalten. $\{\varepsilon\} \neq \emptyset$
 >- $\overline{L_1}$ ist die Sprache der Wörter, die mindestens ein $b$ enthalten.
 >- $L_1L_2 = \{a^ib^j | i, j \in \mathbb{N}\}$ ist die Sprache, die aus allen Kombinationen von $a$'s gefolgt von $b$'s besteht.
 >- $L_2L_1 = \{b^ia^j | i, j \in \mathbb{N}\}$ ist die Sprache, die aus allen Kombinationen von $b$'s gefolgt von $a$'s besteht.
@@ -213,7 +236,7 @@ Formale Sprachen sind ein grundlegendes Konzept in der Informatik und der theore
 
 # [[Kleenescher Abschluss]]
 
-Sei $L$ eine Sprache. Dann ist der **Kleenesche Abschluss** von $L$, benannt nach Stephen Cole Kleene, definiert als:
+Sei $L$ eine Sprache. Dann ist der **Kleenesche Abschluss** von $L$, benannt nach Stephen Cole Kleene, definiert also:
 
 $$
 \begin{aligned}
@@ -223,6 +246,8 @@ L^{i} &:= L \cdot L^{i-1} \text{ für } i>0 &\quad L^{+} &:= \bigcup_{i \in \mat
 $$
 
 ## Beispiel
+
+Z.B L = Englisch dann L^5  fünf englische Wörter 
 
 Gegeben sei die Sprache $L = \{ab, ac\}$.
 
@@ -252,4 +277,26 @@ Analog dazu ist $L^3$ die dreifache Konkatenation der Wörter aus $L$. Jedes Wor
 
 In diesen Beispielen zeigt sich, dass mit steigendem $i$, $L^i$ eine Sprache darstellt, die aus Wörtern besteht, die durch $i$-fache Konkatenation der Wörter aus $L$ gebildet werden. Der Kleenesche Abschluss $L^*$ umfasst dann alle diese Möglichkeiten einschließlich des leeren Wortes.
 
+# Weitere Beispiele für Operationen auf formalen Sprachen
+
+Im Kontext formaler Sprachen können komplexe Strukturen wie Zeitangaben oder Zahlenreihen durch die Verknüpfung einfacherer Sprachen konstruiert werden. Hier sind zwei Beispiele dafür:
+
+- Die Sprache aller **gültigen Uhrzeiten** lässt sich ausdrücken als:
+
+  $$
+  ((\{\epsilon, 1\} \cdot \{0, \ldots, 9\}) \cup (\{2\} \cdot \{0, 1, 2, 3\})) \cdot \{:\} \cdot (\{0, 1, 2, 3, 4, 5\} \cdot \{0, \ldots, 9\})
+  $$
+
+  Diese Sprache beschreibt die Kombination von Stunden und Minuten, wobei Stunden von 00 bis 23 und Minuten von 00 bis 59 abgedeckt werden. Das Zeichen $\{:\}$ steht dabei als Trennzeichen zwischen Stunden und Minuten.
+
+- Die Sprache aller **natürlichen Zahlen** kann repräsentiert werden durch:
+
+  $$
+  \{0\} \cup (\{1, \ldots, 9\} \cdot \{0, \ldots, 9\}^*)
+  $$
+
+  Hierbei beschreibt der erste Teil $\{0\}$ die Zahl Null, und der zweite Teil die natürlichen Zahlen beginnend mit einer Ziffer von 1 bis 9, gefolgt von beliebig vielen Ziffern von 0 bis 9, was allen natürlichen Zahlen außer der Null entspricht.
+
+
+# Vorlesung 1b: Grammatiken und die Chomsky-Hierarchie
 
