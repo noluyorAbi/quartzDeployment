@@ -6,7 +6,7 @@ tags:
   - vorlesung
 fach: "[[FSK]]"
 date created: Tuesday, 16. April 2024, 11:25
-date modified: Tuesday, 16. April 2024, 16:36
+date modified: Tuesday, 16. April 2024, 16:40
 ---
 
 # TODO
@@ -18,6 +18,7 @@ date modified: Tuesday, 16. April 2024, 16:36
 - Rechts und Linksableitung
 - Typen lernen typ1, typ2,typ3
 - Entscheidungsprobleme lernen
+- Problem vs Sprachen
 # Geplanter Inhalt dieser VL
 
 - [Vorlesung 1a: Begrüßung, Organisatorisches, Inhaltsübersicht und Grundlagen](https://www.tcs.ifi.lmu.de/lehre/ss-2024/fsk_de/vl-01a-ft-begruessung-organisatorisches-inhaltsuebersicht-und-grundlagen.pdf)
