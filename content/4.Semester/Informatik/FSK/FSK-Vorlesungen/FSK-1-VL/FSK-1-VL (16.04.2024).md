@@ -6,9 +6,16 @@ tags:
   - vorlesung
 fach: "[[FSK]]"
 date created: Tuesday, 16. April 2024, 11:25
-date modified: Tuesday, 16. April 2024, 14:58
+date modified: Tuesday, 16. April 2024, 16:21
 ---
 
+# TODO
+
+- 1b und 1c genauer ausarbeiten
+- Grammatik 1b wiederholen, vorallem das mit aaaab 
+- Chomsky-Hierarchie nochmal üben
+- Syntaxbäume VL 1c 
+- Rechts und Linksableitung
 # Geplanter Inhalt dieser VL
 
 - [Vorlesung 1a: Begrüßung, Organisatorisches, Inhaltsübersicht und Grundlagen](https://www.tcs.ifi.lmu.de/lehre/ss-2024/fsk_de/vl-01a-ft-begruessung-organisatorisches-inhaltsuebersicht-und-grundlagen.pdf)
@@ -77,12 +84,12 @@ Die theoretische Informatik umfasst drei große Themenbereiche:
 
 # Grundlagen: [[Wörter]]
 
->[!note] Definition
+>[!note] Definition DefinitionDefinition
 > Ein **Alphabet** $\Sigma$ ist eine endliche *nicht leere* Menge von **Zeichen** (oder **Symbolen**).
 
 > Z.B $\Sigma = \{a,b,c,d,e\}$
 
->[!note] Definition
+>[!note] Definition DefinitionDefinition
 >Ein **Wort** w über $\Sigma$ ist eine endliche Folge von Zeichen aus $\Sigma$.
 
 > Beispiele: 
@@ -109,12 +116,12 @@ Die theoretische Informatik umfasst drei große Themenbereiche:
 
 # [[Konkatenation und Kleene-Stern]] (REFRACTOR)
 
->[!note] Definition
+>[!note] Definition DefinitionDefinition
 >Das Wort $u \cdot v$ (alternativ $uv$) entsteht, indem Wort $v$ hinten an Wort $u$ angehängt wird.
 
 > Die Konkatenation hilft folgende Mengen von Wörtern über zu definieren:
 
->[!note] Definition
+>[!note] Definition DefinitionDefinition
 > 
 > Sei $\Sigma$ ein Alphabet, dann definieren wir:
 >$$
@@ -197,27 +204,27 @@ Seien $u, v$ Wörter über einem Alphabet $\Sigma$.
 
 Formale Sprachen sind ein grundlegendes Konzept in der Informatik und der theoretischen Computerwissenschaft, das zur Beschreibung und Analyse von Syntax und strukturellen Mustern von Daten und Anweisungen verwendet wird. Sie bestehen aus Alphabeten, die die Grundbausteine der Sprachen sind, und Regeln, die definieren, wie Zeichen zu gültigen Strings oder „Wörtern“ kombiniert werden können. Diese Sprachen werden oft verwendet, um die Syntax von Programmiersprachen zu definieren, aber auch in der Automatentheorie, der Komplexitätstheorie und der Logik.
 
->[!note] Definition
+>[!note] Definition DefinitionDefinition
 >Eine (*formale*) **Sprache** $L$ über dem Alphabet $\Sigma$ ist eine Teilmenge von $\Sigma^*$
 >d.h $L \subseteq \Sigma^*$
 >Kann leeres Wort enthalten z.B kann eine Textdatei leer sein
 
 >Beachte: L steht für "Language" 
 
->[!note] Definition
+>[!note] Definition DefinitionDefinition
 >Seien $L$, $L_1$, $L_2$ formale **Sprachen** über dem Alphabet $\Sigma$. Dann sind folgende Operationen definiert:
 >
 >- **Vereinigung**: 
->	- Die Vereinigung von $L_1$ und $L_2$ ist definiert als 
+>	- Die Vereinigung von $L_1$ und $L_2$ ist definiert also 
 >	- $L_1 \cup L_2 = \{w | w \in L_1$ oder $w \in L_2\}$
 >- **Schnitt**: 
->	- Der Schnitt von $L_1$ und $L_2$ ist definiert als 
+>	- Der Schnitt von $L_1$ und $L_2$ ist definiert also 
 >	- $L_1 \cap L_2 = \{w | w \in L_1$ und $w \in L_2\}$
 >- **Komplement**: 
->	- Das Komplement zu $L$ ist definiert als 
+>	- Das Komplement zu $L$ ist definiert also 
 >	- $\overline{L} = \Sigma^* \setminus L$
->- **Produkt**: 
->	- Das Produkt von $L_1$ und $L_2$ ist definiert als 
+>- **Product**: 
+>	- Das Product von $L_1$ und $L_2$ ist definiert also 
 >	- $L_1 \cdot L_2 = L_1L_2 = \{uv | u \in L_1$ und $v \in L_2\}$
 >
 >Eine (*formale*) **Sprache** $L$ über dem Alphabet $\Sigma$ ist eine Teilmenge von $\Sigma^*$, d.h. $L \subseteq \Sigma^*$.
@@ -247,7 +254,7 @@ $$
 
 ## Beispiel
 
-Z.B L = Englisch dann L^5  fünf englische Wörter 
+Z.B L = Englisch dann L^5 fünf englische Wörter 
 
 Gegeben sei die Sprache $L = \{ab, ac\}$.
 
@@ -281,13 +288,13 @@ In diesen Beispielen zeigt sich, dass mit steigendem $i$, $L^i$ eine Sprache dar
 
 Im Kontext formaler Sprachen können komplexe Strukturen wie Zeitangaben oder Zahlenreihen durch die Verknüpfung einfacherer Sprachen konstruiert werden. Hier sind zwei Beispiele dafür:
 
-- Die Sprache aller **gültigen Uhrzeiten** lässt sich ausdrücken als:
+- Die Sprache aller **gültigen Uhrzeiten** lässt sich ausdrücken also:
 
   $$
   ((\{\epsilon, 1\} \cdot \{0, \ldots, 9\}) \cup (\{2\} \cdot \{0, 1, 2, 3\})) \cdot \{:\} \cdot (\{0, 1, 2, 3, 4, 5\} \cdot \{0, \ldots, 9\})
   $$
 
-  Diese Sprache beschreibt die Kombination von Stunden und Minuten, wobei Stunden von 00 bis 23 und Minuten von 00 bis 59 abgedeckt werden. Das Zeichen $\{:\}$ steht dabei als Trennzeichen zwischen Stunden und Minuten.
+  Diese Sprache beschreibt die Kombination von Stunden und Minuten, wobei Stunden von 00 bis 23 und Minuten von 00 bis 59 abgedeckt werden. Das Zeichen $\{:\}$ steht dabei also Trennzeichen zwischen Stunden und Minuten.
 
 - Die Sprache aller **natürlichen Zahlen** kann repräsentiert werden durch:
 
@@ -297,6 +304,153 @@ Im Kontext formaler Sprachen können komplexe Strukturen wie Zeitangaben oder Za
 
   Hierbei beschreibt der erste Teil $\{0\}$ die Zahl Null, und der zweite Teil die natürlichen Zahlen beginnend mit einer Ziffer von 1 bis 9, gefolgt von beliebig vielen Ziffern von 0 bis 9, was allen natürlichen Zahlen außer der Null entspricht.
 
-
+---
 # Vorlesung 1b: Grammatiken und die Chomsky-Hierarchie
 
+## Grundlagen der Grammatiken
+
+Grammatiken ermöglichen die Definition formaler Sprachen, die aus Wörtern bestehen, welche gemäß spezifischer Regeln gebildet werden.
+
+### Definition einer Grammatik
+
+>[!note] Definition 
+> Eine **Grammatik** $G$ ist definiert also ein 4-Tupel $(V, \Sigma, P, S)$, wobei:
+> - $V$ eine endliche Menge von Variable ist, auch Nichtterminale genannt.
+> - $\Sigma$ ein Alphabet von Terminalsymbolen ist, das disjunkt zu $V$ ist ($V \cap \Sigma = \emptyset$).
+> - $P$ eine endliche Menge von Produktionsregeln ist, wobei jede Regel eine Form $\ell \rightarrow r$ hat.
+> - $S \in V$ das Startsymbol ist.
+
+#### Beispiel
+
+Grammatik für einfache arithmetische Ausdrücke:
+- $V = \{\text{E}, \text{T}, \text{F}\}$
+- $\Sigma = \{+, *, (, ), \text{id}\}$
+- $P$ enthält Regeln wie:
+  - $\text{E} \rightarrow \text{E} + \text{T} | \text{T}$
+  - $\text{T} \rightarrow \text{T} * \text{F} | \text{F}$
+  - $\text{F} \rightarrow (\text{E}) | \text{id}$
+- $S = \text{E}$
+
+### Syntaxbäume
+
+Syntaxbäume visualisieren, wie Sätze aus der Grammatik abgeleitet werden können, und illustrieren die Anwendung von Produktionsregeln in einer hierarchischen Struktur.
+
+## Chomsky-Hierarchie
+
+Die **Chomsky-Hierarchie** klassifiziert Grammatiken nach der Komplexität ihrer Produktionsregeln.
+
+>[!note] Definition
+> - **Typ 0 (Rekursiv aufzählbar)**: Keine Einschränkungen für die Produktionsregeln.
+> - **Typ 1 (Kontextsensitiv)**: Alle Regeln $\ell \rightarrow r$ erfüllen $|\ell| \leq |r|$, was bedeutet, dass die Länge der linken Seite kleiner oder gleich der rechten Seite ist.
+> - **Typ 2 (Kontextfrei)**: Jede Regel ist von der Form $A \rightarrow \gamma$, mit $A \in V$ und $\gamma \in (V \cup \Sigma)^*$.
+> - **Typ 3 (Regulär)**: Regeln sind von der Form $A \rightarrow aB$ oder $A \rightarrow a$, mit $A, B \in V$ und $a \in \Sigma$.
+
+### Beispiele für Grammatiken in der Chomsky-Hierarchie
+
+Reguläre Grammatiken erzeugen einfache Sprachen, typisch für viele Textverarbeitungsaufgaben:
+- Grammatik für das Erkennen von Kennworten mit Buchstaben gefolgt von Zahlen.
+
+## Weitere Begriffe und Definitionen
+
+>[!note] Definition
+> - **Satzform**: Ein Wort über $(V \cup \Sigma)^*$, das durch das Startsymbol $S$ beginnt und durch Anwenden von Regeln aus $P$ abgeleitet wird.
+> - **Ableitung**: Ein Process, bei dem durch Anwenden von Produktionsregeln aus einer Satzform schrittweise Wörter über $\Sigma^*$ erzeugt werden.
+> - **Linksableitung**: Eine Ableitung, bei der immer das linkeste Nichtterminal ersetzt wird.
+
+## Abschluss und Weiterführende Themen
+
+Die nächste Vorlesung behandelt spezielle Typen von Grammatiken und ihre Anwendung in der Analyse und Erzeugung von Programmiersprachen. Weitere Themen umfassen die Entscheidbarkeitstheorie und die Automatentheorie, die in der theoretischen Informatik von zentraler Bedeutung sind.
+
+--- 
+
+# Vorlesung 1c: Weitere Grammatikbegriffe sowie Eigenschaften von Sprachen
+
+## Wiederholung: Definition einer Grammatik
+
+>[!note] 
+> Eine **Grammatik** $G$ ist ein 4-Tupel $(V, \Sigma, P, S)$, wobei:
+> - $V$ eine endliche Menge von Variable (alternativ Nichtterminalen) ist,
+> - $\Sigma$ ein Alphabet von Zeichen (alternativ Terminalen) ist, das disjunkt zu $V$ ist $(V \cap \Sigma = \emptyset)$,
+> - $P$ eine endliche Menge von Produktionsregeln ist, von der Form $\ell \rightarrow r$ mit $\ell \in (V \cup \Sigma)^+$ und $r \in (V \cup \Sigma)^*$,
+> - $S \in V$ das Startsymbol (alternativ Startvariable) ist.
+
+## Die Chomsky-Hierarchie
+
+>[!note]
+> - **Typ 0 (Rekursiv aufzählbar)**: Keine Einschränkungen für die Produktionsregeln.
+> - **Typ 1 (Kontextsensitiv)**: Für alle $\ell \rightarrow r \in P$ ist $|\ell| \leq |r|$.
+> - **Typ 2 (Kontextfrei)**: $\ell \rightarrow r \in P$ wobei $\ell \in V$.
+> - **Typ 3 (Regulär)**: Für alle $A \rightarrow r \in P$ gilt $r = a$ oder $r = aA'$ für $a \in \Sigma$ und $A' \in V$, d.h. die rechten Seiten sind Wörter aus $\Sigma \cup \Sigma V$.
+
+## Syntaxbäume
+
+>[!note]
+> Der **Syntaxbaum** zeigt, wie ein Wort durch Anwendung der Produktionsregeln einer Grammatik generiert wird. Die Wurzel des Baumes ist das Startsymbol $S$, und die Blätter sind die Terminale, die das Wort bilden. Die innere Struktur des Baumes repräsentiert die Anwendung der Produktionsregeln.
+
+### Beispiel eines Syntaxbaums
+
+Die Grammatik $G = (\{E, M, Z\}, \{+, *, (, ), 1, 2\}, P, E)$ mit Regeln wie $E \rightarrow E + M$ und $M \rightarrow M * Z$ kann den Ausdruck $1 * 2$ mit unterschiedlichen Ableitungen darstellen, die jedoch denselben Syntaxbaum nutzen:
+
+```
+    E
+   / \
+  M   M
+ /     \
+1       2
+```
+
+## Links- und Rechtsableitungen
+
+Links- und Rechtsableitungen beschreiben, wie das linkeste oder rechteste Nichtterminal in einer Satzform schrittweise ersetzt wird, um ein Wort in der Sprache zu generieren.
+
+### Beispiel für Linksableitung
+
+```
+E
+⇒ E + M
+⇒ M + M
+⇒ M * Z + M
+⇒ 1 * Z + M
+⇒ 1 * 2 + M
+⇒ 1 * 2 + Z
+⇒ 1 * 2 + 3
+```
+
+## Erweiterte Backus-Naur-Form (EBNF)
+
+>[!note]
+> EBNF ist eine Notation für kontextfreie Grammatiken, die es erlaubt, Regeln kompakter auszudrücken:
+> - Alternativen: $A \rightarrow w_1 | w_2 | \ldots | w_n$
+> - Optionale Elemente: $A \rightarrow u[v]w$
+> - Wiederholungen: $A \rightarrow u\{v\}w$
+
+## Anwendungen von kontextfreien Grammatiken
+
+Kontextfreie Grammatiken werden häufig zur syntaktischen Analyse in der Programmierung verwendet. Tools wie YACC, ANTLR und PLY nutzen diese Grammatiken, um Parser für verschiedene Programmiersprachen zu generieren. Diese Werkzeuge transformieren grammatikbasierte Spezifikationen direkt in den Quellcode von Parsern, die dann in der Softwareentwicklung eingesetzt werden können.
+
+### Beispiel: ANTLR Grammatik
+Ein typisches ANTLR Grammatikbeispiel sieht wie folgt aus:
+
+prog: (expr NEWLINE)\*;
+
+expr: expr ('\*' | '/') expr
+    | expr ('+' | '-') expr
+    | INT
+    | '(' expr ')';
+
+Diese Definition erlaubt die Erkennung und syntaktische Analyse von einfachen mathematischen Ausdrücken.
+
+## Abgeschlossenheit von Sprachen
+
+Die Abgeschlossenheit einer Sprachklasse bezieht sich darauf, ob die Klasse under bestimmten Operationen wie Vereinigung, Schnitt, Komplement und Produktbildung geschlossen ist. Das heißt, das Ergebnis der Operation fällt immer noch in dieselbe Klasse.
+
+## Entscheidbarkeit und Problem
+
+Bestimmte Eigenschaften wie Entscheidbarkeit sind zentral für das Verständnis der Berechenbarkeitstheorie. Eine Sprache ist entscheidbar, wenn es möglich ist, mit einem endlichen Verfahren (Algorithmus) zu bestimmen, ob ein beliebiges Wort zur Sprache gehört.
+
+>[!note]
+> **Entscheidbarkeit**: Eine Sprache ist entscheidbar, wenn es einen Algorithmus gibt, der in endlicher Zeit entscheidet, ob ein gegebenes Wort zur Sprache gehört oder nicht.
+
+## Zusammenfassung der Chomsky-Hierarchie
+
+Die Chomsky-Hierarchie ordnet Sprachen basierend auf ihren grammatikalischen Einschränkungen in vier Typen. Diese Hierarchy hilft nicht nur, die theoretischen Grundlagen der Sprachverarbeitung zu verstehen, sondern auch praktische Parsing-Strategien zu entwickeln.

@@ -5,12 +5,14 @@ tags:
   - "#FSK"
 fach: "[[FSK]]"
 date created: Tuesday, 16. April 2024, 11:20
-date modified: Tuesday, 16. April 2024, 14:39
+date modified: Tuesday, 16. April 2024, 15:59
 ---
 
 # Übersicht der Studieninhalte
 
-# [[FSK-Vorlesung]]
+## [[FSK-Vorlesung]]
+
+Die FSK-Vorlesung bietet eine grundlegende Einführung in die Fachspezifischen Kenntnisse, die für das Studium erforderlich sind. Durch präzise Vorlesungen und interactively Lerneinheiten werden Studierende mit den Kernkonzepten und -methoden vertraut gemacht. Diese Vorlesungen sind darauf ausgerichtet, das theoretische Wissen zu stärken und praktische Fähigkeiten zu entwickeln, die im weiteren Verlauf des Studiums und in der beruflichen Laufbahn von Nutzen sein werden.
 
 ## [[FSK-Verzeichnis-Erklärungen]]
 
@@ -24,4 +26,6 @@ Diese Sektion bietet Zugang zu allen aktuellen und vergangenen Übungsblättern 
 
 Hier wird eine Zusammenfassung aller relevanten Klausuraufgaben inklusive deren Lösungen bereitgestellt. Diese Inhalte sind besonders wertvoll zur Prüfungsvorbereitung und zum Verständnis der Anforderungen in den Abschlussprüfungen.
 
-# [[FSK-1-VL (16.04.2024)#Organisatorisches]]
+## [[FSK-1-VL (16.04.2024)#Organisatorisches]]
+
+In dieser ersten Vorlesung des Kurses werden organisatorische Details behandelt, die für ein erfolgreiches Semester unerlässlich sind. Es wird auf die Kursstruktur, Bewertungskriterien und die Nutzung von Lernressourcen eingegangen. Zusätzlich werden wichtige Determine, wie Prüfungs- und Abgabefristen, bekannt gegeben. Ziel ist es, Studierenden einen klaren Überblick zu geben, was sie im Laufe des Semesters erwartet und wie sie sich optimal auf die Herausforderungen des Kurses vorbereiten können.
