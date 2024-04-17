@@ -6,13 +6,14 @@ tags:
   - vorlesung
 fach: 
 date created: Tuesday, 16. April 2024, 14:04
-date modified: Tuesday, 16. April 2024, 16:11
+date modified: Wednesday, 17. April 2024, 13:07
 ---
 
 # Liste aller VL
 
 - [[FSK-1-VL (16.04.2024)]]
 	- [[FSK-1-VL (16.04.2024)#Inhalte der Veranstaltung]]
+	- [[FSK-1-VL (16.04.2024)#Vorlesung 1a Begrüßung, Organisatorisches, Inhaltsübersicht und Grundlagen]]
 	- [[FSK-1-VL (16.04.2024)#Vorlesung 1b Grammatiken und die Chomsky-Hierarchie]]
 	- [[FSK-1-VL (16.04.2024)#Vorlesung 1c Weitere Grammatikbegriffe sowie Eigenschaften von Sprachen]]
 - 
