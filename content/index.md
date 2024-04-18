@@ -4,7 +4,7 @@ fach:
 title: Studying made easy.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Tuesday, 16. April 2024, 11:22
+date modified: Friday, 19. April 2024, 00:32
 ---
 
 # Welcome to MyUniNotes
@@ -17,7 +17,6 @@ date modified: Tuesday, 16. April 2024, 11:22
 - [[Rechnernetze und Verteilte Systeme]] (in work)
 - [[Bachelorseminar-Software Security]] (in work)
 - [[LiMo-Intro-ErsteVL]]
-- more modules in work 
 ## 🗓️ Semester
 
 - [[3.Semester]]
