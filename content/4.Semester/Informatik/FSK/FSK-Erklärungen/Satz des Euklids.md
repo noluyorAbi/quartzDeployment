@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: "[[FSK]]"
 date created: Thursday, 18. April 2024, 16:18
-date modified: Thursday, 18. April 2024, 16:28
+date modified: Thursday, 18. April 2024, 17:37
 ---
 
 # Satz des Euklids

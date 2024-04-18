@@ -6,10 +6,11 @@ tags:
   - informatik
 fach: "[[FSK]]"
 date created: Thursday, 18. April 2024, 16:21
-date modified: Thursday, 18. April 2024, 16:24
+date modified: Thursday, 18. April 2024, 17:22
 ---
 
 # Erklärungen
 
 - [[Beweisen]]
 - [[Satz des Euklids]]
+- [[Sprachen]]

@@ -6,9 +6,11 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Thursday, 18. April 2024, 17:04
+date modified: Thursday, 18. April 2024, 18:05
 Thema:
   - "[[Beweisen]]"
+  - "[[Sprachen]]"
+  - "[[Grundlegende Operationen auf formalen Sprachen]]"
 ---
 
 # FSKO-1 Fundamentale Beweisstrategien
@@ -101,8 +103,8 @@ Ja, gilt da man für jedes $n$ das $k$ also $n+1$ wählen kann und $n<n+1$ gilt.
 **Fall n = $\infty$:**
 	- Es gibt kein k was grösser ist also n, da $\infty$ definitionsgemäß ($\infty > x$ für alle $x \in \mathbb{R}$) größer ist also alle reellen Zahlen 
 		$\Longrightarrow$ Für diesen Fall gibt es kein k > n, weshalb die Aussage *nicht stimmt.*
-																
-																$\square$
+
+$\square$
 
 ### iii) Zeigen Sie: Es gibt unendlich viele Primzahlen. [[Satz des Euklids]]
 
@@ -116,7 +118,8 @@ Ja, gilt da man für jedes $n$ das $k$ also $n+1$ wählen kann und $n<n+1$ gilt.
 - Betrachte nun die Zahl $q = p_1,p_2,…,p_{n-1},p_{n} +1 = \overset{n}{\underset{i=1}{\Pi}} p_{i}+1$ 
 - $q$ ist nun ebenfalls eine Primzahl (**Erklärung:** *Da alle nicht Primzahlen durch die Primfaktorzerlegung darstellbar sind, aber q nicht, da q durch Primzahlen und einem +1 am End dargestellt wird. Das +1 macht also q selbst zu einer Primzahl*) 
 - Dies ist jedoch ein Widerspruch in der Annahme, dass es nur die Primzahlen $p_1,p_2,…,p_{n-1},p_n$ gibt
-																$\square$
+
+$\square$
 
 ## b) Die Gleichheit von Mengen ist wie folgt definiert:
 
@@ -139,20 +142,51 @@ Ja, gilt da man für jedes $n$ das $k$ also $n+1$ wählen kann und $n<n+1$ gilt.
 
 ### i) Für alle Mengen $S$ und $T$ gilt: $S = T$ g.d.w. $\forall x, x \in S \Leftrightarrow x \in T$.
 
-ZZ: S = T under der Annahme $\forall x, x \in S \Leftrightarrow x \in T$
+*ZZ*: S = T under der Annahme $\forall x, x \in S \Leftrightarrow x \in T$
 
 *Beweis:* 
-	1. Schritt: Zeige $S \subseteq T$
-		- $\forall x \ gilt \ wenn \ x \ in \ S \ ist, \ ist \ es \ auch \ in \ T$
-			 $\Longrightarrow$ $S \subseteq T$
-	 2. Schritt: Zeige $T \subseteq S$
-		 - $\forall x \ gilt \ wenn \ x \ in \ T \ ist, \ ist \ es \ auch \ in \ S$
+- 1.Schritt: Zeige $S \subseteq T$
+	- $\forall x \ gilt \ wenn \ x \ in \ S \ ist, \ ist \ es \ auch \ in \ T$
+		  $\Longrightarrow$ $S \subseteq T$
+- 2. Schritt: Zeige $T \subseteq S$
+	- $\forall x \ gilt \ wenn \ x \ in \ T \ ist, \ ist \ es \ auch \ in \ S$
 			 $\Longrightarrow$ $T \subseteq S$
 
-$\Longrightarrow$ Aus der Definition ergibt sich 
+$\Longrightarrow$ Aus der Definition ergibt sich $S = T \text{ g.d.w. } S \subseteq T \land T \subseteq S$ dies ist hier gegeben also ist der Beweis abgeschlossen
 
+$\square$
+ 
+### ii) Für alle [[Sprachen]] $A, B, C$ über einem Alphabet $\Sigma$ gilt: $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$.
 
+*ZZ:* $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$
 
-### ii) Für alle Sprachen $A, B, C$ über einem Alphabet $\Sigma$ gilt: $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$.
+*Definitionen*([[Grundlegende Operationen auf formalen Sprachen]]):
+1. **Konkatenation $(A \cdot B)$**: Die Sprache, die aus allen möglichen Kombinationen von Strings besteht, wobei ein String aus \(A\) direkt gefolgt von einem String aus \(B\) ist. Das heißt, für jedes $(x \in A)$ und jedes $(y \in B)$, gehört der String $(x \cdot y)$ zu $(A \cdot B)$.
 
+2. **Vereinigung $(B \cup C)$**: Die Sprache, die alle Strings enthält, die in $(B)$ oder $(C)$ sind. Ein String $(y)$ gehört zu $(B \cup C)$, wenn $(y \in B)$ oder $(y \in C)$.
+
+*Beweis:*  
+- **Teil 1:**
+	- Sei $w$ ein beliebiges Element aus $A \cdot B \cup C$ 
+	- Nach Definition der Konkatenation gibt es einen String $x \in A$ und einen String $y \in (B \cup C)$ , so dass $w = x \cdot y$
+	- Da $y \in (B \cup C)$, ist $y$ entweder in $B$ oder in $C$
+		- wenn $y$ in $B$ bedeutet es also für $w$ folgendes: $w = x \cdot y \in A \cdot B$
+		- wenn $y$ in $C$ bedeutet es also für $w$ folgendes: $w = x \cdot y \in A \cdot C$
+		$\Longrightarrow$ Jedes Element $w$ was in $A \cdot (B \cup C)$ ist also auch in $A \cdot B \  \cup  A \cdot C$ enthalten
+		$\Longrightarrow$ Daraus lässt sich herleiten, dass : $A \cdot (B \cup C) \subseteq (A \cdot B \  \cup  A \cdot C)$
+- **Teil 2:**
+	- Sei $w$ ein beliebiges Element aus $A \cdot B \  \cup  A \cdot C$
+	- Das bedeutet $w$ ist entweder in $A \cdot B$ oder $A \cdot C$
+		- wenn $w \in A \cdot B$, dann gibt es einen String $x \in A$ und $y \in B$, so dass $w = x \cdot y$
+		- wenn $w \in A \cdot C$, dann gibt es einen String $x \in A$ und $y \in C$, so dass $w = x \cdot y$
+	- In beiden Fällen ist $y \in B$ oder $y \in C$, also $y \in (B \cup C)$
+	- Daher gilt $w = x \cdot y \in A \cdot (B \cup C)$
+	$\Longrightarrow$ Daher schließt sich $(A \cdot B \  \cup  A \cdot C) \subseteq  (A \cdot (B \cup C))$
+
+*Schlussfolgerung:* 
 ### iii) $\{ N \in \mathbb{N} | n$ ist prim und $n \geq 3 \} = \{ n \in \mathbb{N} | n$ ist prim und ungerade $\}$
+
+
+
+In dem Beweis benutzen wir die Definition der Konkatenation von Sprachen, um zu zeigen, wie die Elemente der linken Seite \(A \cdot (B \cup C)\) und der rechten Seite \(A \cdot B \cup A \cdot C\) zusammengesetzt sind. Hier sind die spezifischen Anwendungen der Definitionen in den einzelnen Schritten des Beweises:
+
