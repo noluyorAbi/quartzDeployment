@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Thursday, 18. April 2024, 15:24
+date modified: Thursday, 18. April 2024, 17:04
 Thema:
   - "[[Beweisen]]"
 ---
@@ -16,9 +16,9 @@ Thema:
 >[!note] Aufgabenstellung
 >In dieser Aufgabe diskutieren wir fundamentale Beweisstrategien. Diese Strategien sollten aus anderen Kursen bekannt sein, aber da FSK sehr beweislastig ist, wiederholen wir sie hier.
 
-a) Die folgende Tabelle fasst zusammen, wie man mit Aussagen, die bestimmte logische Operationen enthalten, umgeht.
+## a) Die folgende Tabelle fasst zusammen, wie man mit Aussagen, die bestimmte logische Operationen enthalten, umgeht.
 
-| Formel            | Um eine Aussage dieser Form zu beweisen...                | Wenn eine Aussage dieser Form angenommen wird...                                                                |
+| Formel            | Um eine Aussage dieser Form zu beweisen…                | Wenn eine Aussage dieser Form angenommen wird…                                                                |
 | ----------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | $P \land Q$       | beweise sowohl $P$ also auch $Q$                           | nimm $P$ und $Q$ an                                                                                             |
 | $P \lor Q$        | beweise entweder $P$ oder $Q$                             | beweise die gewünschte Aussage sowohl under der Annahme $P$ also auch under der Annahme $Q$ (Fallunterscheidung) |
@@ -99,19 +99,60 @@ Ja, gilt da man für jedes $n$ das $k$ also $n+1$ wählen kann und $n<n+1$ gilt.
 #### - für $n,k \in \mathbb{R} \cup \{\infty\}$, wobei $\infty > x$ für alle $x \in \mathbb{R}$?
 
 **Fall n = $\infty$:**
-	- Es gibt kein k was grösser ist als n, da $\infty$ definitionsgemäß ($\infty > x$ für alle $x \in \mathbb{R}$) größer ist als alle reellen Zahlen 
-		$\Longrightarrow$  Für diesen Fall gibt es kein k > n, weshalb die Aussage *nicht stimmt.*
+	- Es gibt kein k was grösser ist also n, da $\infty$ definitionsgemäß ($\infty > x$ für alle $x \in \mathbb{R}$) größer ist also alle reellen Zahlen 
+		$\Longrightarrow$ Für diesen Fall gibt es kein k > n, weshalb die Aussage *nicht stimmt.*
 																
 																$\square$
 
-### iii) Zeigen Sie: Es gibt unendlich viele Primzahlen. 
+### iii) Zeigen Sie: Es gibt unendlich viele Primzahlen. [[Satz des Euklids]]
 
 **Beweis per Widerspruch:**
 
 *ZZ*: Es gibt unendlich viele Primzahlen
 
 *Beweis:* 
-- Angenommen es gäbe nur endlich viele Primzahlen (Genauer: n Primzahlen)
-- Bezeichne diese mit $p_1,p_2,...,p_{n-1},p_n$
-- Betrachte nun die Zahl $q = p_1,p_2,...,p_{n-1},p_{n} +1 = \underset{i=1}{\Pi}$ 
+- *Angenommen* es gäbe nur endlich viele Primzahlen (Genauer: n Primzahlen)
+- Bezeichne diese mit $p_1,p_2,…,p_{n-1},p_n$
+- Betrachte nun die Zahl $q = p_1,p_2,…,p_{n-1},p_{n} +1 = \overset{n}{\underset{i=1}{\Pi}} p_{i}+1$ 
+- $q$ ist nun ebenfalls eine Primzahl (**Erklärung:** *Da alle nicht Primzahlen durch die Primfaktorzerlegung darstellbar sind, aber q nicht, da q durch Primzahlen und einem +1 am End dargestellt wird. Das +1 macht also q selbst zu einer Primzahl*) 
+- Dies ist jedoch ein Widerspruch in der Annahme, dass es nur die Primzahlen $p_1,p_2,…,p_{n-1},p_n$ gibt
+																$\square$
 
+## b) Die Gleichheit von Mengen ist wie folgt definiert:
+
+>[!note] Aufgabenstellung
+>
+>$$
+>S \subseteq T \text{ g.d.w. } \forall x, x \in S \implies x \in T
+>$$
+>$$
+>S = T \text{ g.d.w. } S \subseteq T \land T \subseteq S
+>$$
+>Zeigen sie: 
+>
+>i) Für alle Mengen $S$ und $T$ gilt: $S = T$ g.d.w. $\forall x, x \in S \Leftrightarrow x \in T$.
+>
+>ii) Für alle Sprachen $A, B, C$ über einem Alphabet $\Sigma$ gilt: $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$.
+>
+>iii) $\{ n \in \mathbb{N} | n$ ist prim und $n \geq 3 \} = \{ n \in \mathbb{N} | n$ ist prim und ungerade $\}$.
+
+
+### i) Für alle Mengen $S$ und $T$ gilt: $S = T$ g.d.w. $\forall x, x \in S \Leftrightarrow x \in T$.
+
+ZZ: S = T under der Annahme $\forall x, x \in S \Leftrightarrow x \in T$
+
+*Beweis:* 
+	1. Schritt: Zeige $S \subseteq T$
+		- $\forall x \ gilt \ wenn \ x \ in \ S \ ist, \ ist \ es \ auch \ in \ T$
+			 $\Longrightarrow$ $S \subseteq T$
+	 2. Schritt: Zeige $T \subseteq S$
+		 - $\forall x \ gilt \ wenn \ x \ in \ T \ ist, \ ist \ es \ auch \ in \ S$
+			 $\Longrightarrow$ $T \subseteq S$
+
+$\Longrightarrow$ Aus der Definition ergibt sich 
+
+
+
+### ii) Für alle Sprachen $A, B, C$ über einem Alphabet $\Sigma$ gilt: $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$.
+
+### iii) $\{ N \in \mathbb{N} | n$ ist prim und $n \geq 3 \} = \{ n \in \mathbb{N} | n$ ist prim und ungerade $\}$
