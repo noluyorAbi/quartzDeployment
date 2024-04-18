@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Thursday, 18. April 2024, 15:05
+date modified: Thursday, 18. April 2024, 15:24
 Thema:
   - "[[Beweisen]]"
 ---
@@ -96,12 +96,22 @@ Gesamtaussage : $(\forall n, \exists k, k > n) \Leftrightarrow (\forall n, \exis
 #### - für $n,k \in \mathbb{N}$?
 
 Ja, gilt da man für jedes $n$ das $k$ also $n+1$ wählen kann und $n<n+1$ gilt. Somit ist die Aussage wahr.
-
-
-
 #### - für $n,k \in \mathbb{R} \cup \{\infty\}$, wobei $\infty > x$ für alle $x \in \mathbb{R}$?
 
-Beweisen Sie Ihre Antworten.
+**Fall n = $\infty$:**
+	- Es gibt kein k was grösser ist als n, da $\infty$ definitionsgemäß ($\infty > x$ für alle $x \in \mathbb{R}$) größer ist als alle reellen Zahlen 
+		$\Longrightarrow$  Für diesen Fall gibt es kein k > n, weshalb die Aussage *nicht stimmt.*
+																
+																$\square$
 
-### iii) Zeigen Sie: Es gibt unendlich viele Primzahlen.
+### iii) Zeigen Sie: Es gibt unendlich viele Primzahlen. 
+
+**Beweis per Widerspruch:**
+
+*ZZ*: Es gibt unendlich viele Primzahlen
+
+*Beweis:* 
+- Angenommen es gäbe nur endlich viele Primzahlen (Genauer: n Primzahlen)
+- Bezeichne diese mit $p_1,p_2,...,p_{n-1},p_n$
+- Betrachte nun die Zahl $q = p_1,p_2,...,p_{n-1},p_{n} +1 = \underset{i=1}{\Pi}$ 
 
