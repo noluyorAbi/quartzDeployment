@@ -4,9 +4,11 @@ tags:
   - FSK
   - Übungsblatt
   - informatik
-fach:
+fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Wednesday, 17. April 2024, 12:27
+date modified: Thursday, 18. April 2024, 15:05
+Thema:
+  - "[[Beweisen]]"
 ---
 
 # FSKO-1 Fundamentale Beweisstrategien
@@ -92,6 +94,11 @@ Gesamtaussage : $(\forall n, \exists k, k > n) \Leftrightarrow (\forall n, \exis
 ### ii) Gilt die Aussage $\forall n, \exists k, k > n$
 
 #### - für $n,k \in \mathbb{N}$?
+
+Ja, gilt da man für jedes $n$ das $k$ also $n+1$ wählen kann und $n<n+1$ gilt. Somit ist die Aussage wahr.
+
+
+
 #### - für $n,k \in \mathbb{R} \cup \{\infty\}$, wobei $\infty > x$ für alle $x \in \mathbb{R}$?
 
 Beweisen Sie Ihre Antworten.
