@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Thursday, 18. April 2024, 18:05
+date modified: Thursday, 18. April 2024, 18:13
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
@@ -101,8 +101,8 @@ Ja, gilt da man für jedes $n$ das $k$ also $n+1$ wählen kann und $n<n+1$ gilt.
 #### - für $n,k \in \mathbb{R} \cup \{\infty\}$, wobei $\infty > x$ für alle $x \in \mathbb{R}$?
 
 **Fall n = $\infty$:**
-	- Es gibt kein k was grösser ist also n, da $\infty$ definitionsgemäß ($\infty > x$ für alle $x \in \mathbb{R}$) größer ist also alle reellen Zahlen 
-		$\Longrightarrow$ Für diesen Fall gibt es kein k > n, weshalb die Aussage *nicht stimmt.*
+- Es gibt kein k was grösser ist also n, da $\infty$ definitionsgemäß ($\infty > x$ für alle $x \in \mathbb{R}$) größer ist also alle reellen Zahlen 
+	$\Longrightarrow$ Für diesen Fall gibt es kein k > n, weshalb die Aussage *nicht stimmt.*
 
 $\square$
 
@@ -183,10 +183,20 @@ $\square$
 	- Daher gilt $w = x \cdot y \in A \cdot (B \cup C)$
 	$\Longrightarrow$ Daher schließt sich $(A \cdot B \  \cup  A \cdot C) \subseteq  (A \cdot (B \cup C))$
 
-*Schlussfolgerung:* 
+*Schlussfolgerung:* $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$
+
+$\square$
+
 ### iii) $\{ N \in \mathbb{N} | n$ ist prim und $n \geq 3 \} = \{ n \in \mathbb{N} | n$ ist prim und ungerade $\}$
 
 
 
-In dem Beweis benutzen wir die Definition der Konkatenation von Sprachen, um zu zeigen, wie die Elemente der linken Seite \(A \cdot (B \cup C)\) und der rechten Seite \(A \cdot B \cup A \cdot C\) zusammengesetzt sind. Hier sind die spezifischen Anwendungen der Definitionen in den einzelnen Schritten des Beweises:
 
+--- 
+# FSK0-2 Wörter, Sprachen
+
+
+
+
+--- 
+# FSK0-3 Äquivalenzrelationen
