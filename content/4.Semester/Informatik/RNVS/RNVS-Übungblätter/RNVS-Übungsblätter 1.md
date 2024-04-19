@@ -7,4 +7,4 @@ date modified: Friday, 19. April 2024, 01:52
 
 # Übungsblatt
 
-- [[FSK-ÜB-0]]
+- [[RNVS-Blatt-00]]
