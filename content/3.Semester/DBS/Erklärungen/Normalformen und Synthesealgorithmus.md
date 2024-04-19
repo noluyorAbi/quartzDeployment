@@ -4,7 +4,7 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Monday, 11. March 2024, 16:07
-date modified: Tuesday, 9. April 2024, 15:33
+date modified: Saturday, 20. April 2024, 01:28
 ---
 
 # Warum Normalformen?
@@ -69,7 +69,7 @@ Eine Zerlegung von Relation 𝑅 in 𝑅1, … , 𝑅𝑛 ist:
 > - Die Verwendung der Zeilenreihenfolge zur Übermittlung von Informationen verstößt gegen die 1.NF.
 > - Gemischte Datentypen innerhalb von Spalten.
 > - Eine Tabelle ohne Primärschlüssel.
-> - Wiederholende Gruppen sind in Spalten nicht erlaubt (z.B. Inventory1, Inventory2,...).
+> - Wiederholende Gruppen sind in Spalten nicht erlaubt (z.B. Inventory1, Inventory2,…).
 
 ### Erklärung:
 
@@ -142,9 +142,13 @@ Die 2NF ist wichtig, um Redundanzen zu vermeiden und die Datenintegrität zu gew
 > - Nicht-Schlüsselattribute, die nicht direkt vom Primärschlüssel abhängen, sondern von anderen Nicht-Schlüsselattributen.
 > - Fehlende Normalisierung von wiederholten Gruppen von Attribute in separate Tabellen.
 
-> $$\underbrace{\underbrace{mnr,fznr}_{Schlüsselkandidaten}→ baujahr, km-stand, n-preis, h-preis, ek-preis}_{Erfüllt \ 3.NF}$$
+> $$
+\underbrace{\underbrace{mnr,fznr}_{Schlüsselkandidaten}→ baujahr, km-stand, n-preis, h-preis, ek-preis}_{Erfüllt \ 3.NF}
+$$
 
-> $$\underbrace{hnr → hersteller}_{\text{Erfüllt nicht 3. NF, da linke Seite kein Schlüsselkandidat bzw. rechts kein primäres Attribut}}$$
+> $$
+\underbrace{hnr → hersteller}_{\text{Erfüllt nicht 3. NF, da linke Seite kein Schlüsselkandidat bzw. rechts kein primäres Attribut}}
+$$
 
 ### Erklärung:
 
@@ -262,9 +266,13 @@ Der Synthesealgorithmus wird verwendet, um ein beliebiges Relationenschema R mit
 > Also falls **X nicht primär** ist und ** Y primär** ist es **KEIN BCNF**
 > 
 
-> $$\underbrace{SK \rightarrow A}_{\text{Erfüllt BCNF, da linke Seite ein Superkey}}$$
+> $$
+\underbrace{SK \rightarrow A}_{\text{Erfüllt BCNF, da linke Seite ein Superkey}}
+$$
 
-> $$\underbrace{X \rightarrow Y}_{\text{Erfüllt nicht BCNF, da X kein Superkey}}$$
+> $$
+\underbrace{X \rightarrow Y}_{\text{Erfüllt nicht BCNF, da X kein Superkey}}
+$$
 
 Die **Boyce-Codd-Normalform (BCNF)** ist eine Verschärfung der 3. Normalform, die zusätzlich verlangt, dass:
 - 3.NF ist erfüllt
