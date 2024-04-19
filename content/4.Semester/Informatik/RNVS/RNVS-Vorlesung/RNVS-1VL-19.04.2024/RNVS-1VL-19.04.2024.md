@@ -7,8 +7,13 @@ tags:
 fach: "[[RNVS]]"
 Thema:
 date created: Friday, 19. April 2024, 09:18
-date modified: Friday, 19. April 2024, 11:05
+date modified: Friday, 19. April 2024, 11:43
 ---
+
+# TODO
+
+- [ ] Skript heraussuchen
+## Skript gekommen bis Seite: 34
 
 # Organisatorisches
 
@@ -34,10 +39,30 @@ date modified: Friday, 19. April 2024, 11:05
 # Beispielspiel wie man eine Nachricht verschickt
 
 - Absender
-- Empfänger mit eindeutiger Adresse (IPv4 begrenzte Anzahl an Adressen)
+- Empfänger mit eindeutiger Address (IPv4 begrenzte Anzahl an Adressen)
 - *Protokoll* 
 - *Schnittstelle*
 - *Dienst* 
-	$\Longrightarrow$ Wichtigsten 3 Begriffe der VL
+	$\Longrightarrow$ wichtigsten 3 Begriffe der VL
 - Routing Entscheidung welchen Pfad/Weg die Nachricht geht. Jeder Knoten entscheidet wo es weiter geht.
-- 
+
+# Teil 2: Grundlagen
+
+- Alice Bob Beispiel, welches wir in der VL mit Papier gespielt haben
+- **Fragestellung:**
+	- Wie adressiert man einen Endpunkt im Netz?
+	- Wie transportiert man die Nachrichten vom Sender zum Empfänger
+	- Wie kann man zuverlässige über unzuverlässige Transportwege kommunizieren?
+	- Wie können mehrere Nutzer die Ressourcen im Internet gleichzeitig nutzen?
+	- Wie kann man die Komplexität bewältigen?
+- Protokoll ist wie eine Sprache zwischen zwei Geräten, die über das Internet kommunizieren
+- **Definition Rechnernetz:**
+	- Rechnernetz ist ein Zusammenschluss unabhängiger (autonomer Computer) durch eine Kommunikationstechnologie. Diese Computer sind verbunden, wenn sie in der Lage sind, Informationen auszutauschen.
+- Computernetzwerk und Rechnernetzwerk sagen ist illegal Rechnernetz ist das einzig wahre
+- **Definition Verteiltes System:**
+	- Nach Arbeitsweise
+	- Nach Diensterbringung
+	- Menge von Hardware und Software Komponenten vernetzter Rechner 
+	- VS ist das Drumherum mit dem kommuniziert wird statt der Grundlage wie beim Rechnernetz
+- $Rechnernetz \subset Verteiltes \ System$ aber auch $Verteiltes \ System \subset  Rechnernetz$
+- Rechnernetz vs. Verteilte Systeme
