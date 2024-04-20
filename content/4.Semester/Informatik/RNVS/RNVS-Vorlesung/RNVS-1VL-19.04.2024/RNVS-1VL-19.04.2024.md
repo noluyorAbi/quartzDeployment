@@ -7,12 +7,12 @@ tags:
 fach: "[[RNVS]]"
 Thema:
 date created: Friday, 19. April 2024, 09:18
-date modified: Saturday, 20. April 2024, 01:29
+date modified: Saturday, 20. April 2024, 02:47
 ---
 
 # TODO
 
-- [ ] Skript heraussuchen
+- [ ] Skript heraussuchen 
 ## Skript gekommen bis Seite: 34
 
 # Organisatorisches

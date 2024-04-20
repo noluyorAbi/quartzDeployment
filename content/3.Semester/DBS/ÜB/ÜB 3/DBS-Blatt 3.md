@@ -4,7 +4,7 @@ last modified: 2024-03-20 17:22
 tags: [DBS, Übungsblatt]
 fach: "[[DBS]]"
 date created: Wednesday, 20. March 2024, 17:22
-date modified: Tuesday, 16. April 2024, 11:02
+date modified: Saturday, 20. April 2024, 01:54
 ---
 
 # Aufgabe 3-1 *Schlüssel und Fremdschlüssel*
@@ -180,7 +180,7 @@ ADD CONSTRAINT volumen_constraint CHECK (Volumen > 0)
 → Die erste, also falsch markierte SQL-Anweisung hat ein paar Problem, die sie in den meisten SQL-Dialekten ungültig machen würden:
 
 1. In vielen SQL-Dialekten, darunter MySQL, ist die Syntax `MODIFY(Volumen INTEGER CHECK(Volumen > 0))` nicht korrekt. Das `CHECK`-Constraint wird typischerweise nicht innerhalb der `MODIFY`-Anweisung definiert.
-2. In manchen SQL-Systemen, wie zum Beispiel SQLite, ist die direkte Einbettung des `CHECK`-Constraints in einer `ALTER TABLE ... MODIFY COLUMN`-Anweisung nicht erlaubt.
+2. In manchen SQL-Systemen, wie zum Beispiel SQLite, ist die direkte Einbettung des `CHECK`-Constraints in einer `ALTER TABLE … MODIFY COLUMN`-Anweisung nicht erlaubt.
 
 Die zweite, also richtig markierte SQL-Anweisung umgeht diese Problem:
 
