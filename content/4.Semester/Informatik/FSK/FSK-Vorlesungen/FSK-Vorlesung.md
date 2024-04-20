@@ -6,7 +6,7 @@ tags:
   - vorlesung
 fach: 
 date created: Tuesday, 16. April 2024, 14:04
-date modified: Wednesday, 17. April 2024, 13:07
+date modified: Saturday, 20. April 2024, 11:04
 ---
 
 # Liste aller VL

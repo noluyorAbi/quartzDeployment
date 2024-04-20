@@ -5,7 +5,7 @@ tags:
   - "#FSK"
 fach: "[[FSK]]"
 date created: Tuesday, 16. April 2024, 11:20
-date modified: Tuesday, 16. April 2024, 15:59
+date modified: Saturday, 20. April 2024, 11:04
 ---
 
 # Übersicht der Studieninhalte
