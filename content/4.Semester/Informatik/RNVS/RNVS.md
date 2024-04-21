@@ -5,7 +5,7 @@ tags:
   - informatik
 fach: "[[RNVS]]"
 date created: Friday, 19. April 2024, 02:28
-date modified: Saturday, 20. April 2024, 01:20
+date modified: Sunday, 21. April 2024, 15:35
 ---
 
 # Index für das Modul RNVS
@@ -25,7 +25,7 @@ In den folgenden Unterordnern finden Sie Materialien zu den verschiedenen Aspekt
 - [[RNVS-Vorlesung|Vorlesungen]]
   - Zugriff auf alle Vorlesungsnotizen und -materialien. Jede Vorlesung ist detailliert dokumentiert, um das Lernen und die Überprüfung zu erleichtern.
 
-- [[RNVS-Übungblätter|Übungblätter]]
+- [[RNVS-Übungsblätter|Übungsblätter]]
   - Hier finden Sie Übungsblätter und Aufgaben, die im Laufe des Semesters ausgegeben wurden, inklusive Lösungshinweisen und Erklärungen.
 
 ## Weitere Ressourcen

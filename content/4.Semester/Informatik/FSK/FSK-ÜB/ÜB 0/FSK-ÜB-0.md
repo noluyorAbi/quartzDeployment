@@ -6,11 +6,12 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Sunday, 21. April 2024, 15:16
+date modified: Sunday, 21. April 2024, 15:39
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
   - "[[Grundlegende Operationen auf formalen Sprachen]]"
+  - "[[Induktion]]"
 ---
 
 # FSKO-1 Fundamentale Beweisstrategien
@@ -105,8 +106,8 @@ Ja, gilt da man für jedes $n$ das $k$ also $n+1$ wählen kann und $n<n+1$ gilt.
 	$\Longrightarrow$ Für diesen Fall gibt es kein k > n, weshalb die Aussage *nicht stimmt.*
 
 $$
-	ag*{$lacksquare$}
-$$$
+\tag*{$\blacksquare$}
+$$
 
 ### iii) Zeigen Sie: Es gibt unendlich viele Primzahlen. [[Satz des Euklids]]
 
@@ -241,6 +242,10 @@ $$
 >\end{cases}
 >$$
 >Zeigen Sie, dass für alle Wörter $u, v, w$ gilt: $u \cdot (v \cdot w) = (u \cdot v) \cdot w$. Verwenden Sie vollständige [[Induktion]] (siehe Skript, Kapitel 2) über die Länge von $u$.
+
+**Induktionsanfang:**
+
+
 
 # FSK0-2 Wörter, Sprachen
 

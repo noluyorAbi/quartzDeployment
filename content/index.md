@@ -4,23 +4,27 @@ fach:
 title: Studying made easy.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Saturday, 20. April 2024, 11:04
+date modified: Sunday, 21. April 2024, 15:32
 ---
 
 # Welcome to MyUniNotes
 
 ## 📚 Modules
 
+### Informatik
 - [[DBS|Datenbanksysteme (DBS)]]
 - [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/) *(another site created by a fellow student)*
-- [[FSK]] (in work)
-- [[Rechnernetze und Verteilte Systeme]] (in work)
-- [[Bachelorseminar-Software Security]] (in work)
-- [[LiMo-Intro-ErsteVL]]
+- [[FSK|Formale Sprachen und Komplexität (FSK)]] (active)
+- [[RNVS|Rechnernetze und Verteilte Systeme|Rechnernetze und Verteilte Systeme (RNVS)]] (active)
+- [[Bachelorseminar-Software Security]] (active)
+### Statistik
+- [[LiMo-Intro-ErsteVL]] (active)
+
+
 ## 🗓️ Semester
 
 - [[3.Semester]]
-- [[4.Semester]] (currently in work)
+- [[4.Semester]] (currently active)
 
 ### About This Site
 
