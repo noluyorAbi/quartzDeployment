@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Sunday, 21. April 2024, 15:39
+date modified: Sunday, 21. April 2024, 17:16
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
@@ -243,8 +243,25 @@ $$
 >$$
 >Zeigen Sie, dass für alle Wörter $u, v, w$ gilt: $u \cdot (v \cdot w) = (u \cdot v) \cdot w$. Verwenden Sie vollständige [[Induktion]] (siehe Skript, Kapitel 2) über die Länge von $u$.
 
-**Induktionsanfang:**
+**Z.Z:** 
+$$
+u⋅(v⋅w)=(u⋅v)⋅w
+$$
 
+**Induktionsanfang:**
+$$
+\begin{aligned}
+\varepsilon \cdot(v \cdot w) &= v \cdot w \\
+(\varepsilon \cdot v)\cdot w &= v \cdot w
+\end{aligned}
+$$
+Da das leere Wort $\varepsilon$ das neutrale Element der Konkatenation ist, sind die beiden Ausdrücke gleich.
+
+**Induktionsschritt:**
+
+- **Induktionsannahme:**
+	- Angenommen, die Gleichung: $$𝑢⋅(𝑣⋅𝑤)=(𝑢⋅𝑣)⋅𝑤$$ gilt für alle $u$ der Länge $n$.
+	- Nun müssen wir zeigen, dass die Gleichung auch für alle $u$ der Länge $𝑛+1$ gilt.
 
 
 # FSK0-2 Wörter, Sprachen
