@@ -173,12 +173,12 @@ $\square$
 		- wenn $y$ in $B$ bedeutet es also für $w$ folgendes: $w = x \cdot y \in A \cdot B$
 		- wenn $y$ in $C$ bedeutet es also für $w$ folgendes: $w = x \cdot y \in A \cdot C$
 		$\Longrightarrow$ Jedes Element $w$ was in $A \cdot (B \cup C)$ ist also auch in $A \cdot B \  \cup  A \cdot C$ enthalten
-		$\Longrightarrow$ Daraus lässt sich herleiten, dass : $A \cdot (B \cup C) \subseteq (A \cdot B \  \cup  A \cdot C)$
+		$\Longrightarrow$ Daraus lässt sich herleiten, dass: $A \cdot (B \cup C) \subseteq (A \cdot B \  \cup  A \cdot C)$
 - **Teil 2:**
 	- Sei $w$ ein beliebiges Element aus $A \cdot B \  \cup  A \cdot C$
 	- Das bedeutet $w$ ist entweder in $A \cdot B$ oder $A \cdot C$
-		- wenn $w \in A \cdot B$, dann gibt es einen String $x \in A$ und $y \in B$, so dass $w = x \cdot y$
-		- wenn $w \in A \cdot C$, dann gibt es einen String $x \in A$ und $y \in C$, so dass $w = x \cdot y$
+		- wenn $w \in A \cdot B$, dann gibt es einen String $x \in A$ und $y \in B$, sodass $w = x \cdot y$
+		- wenn $w \in A \cdot C$, dann gibt es einen String $x \in A$ und $y \in C$, sodass $w = x \cdot y$
 	- In beiden Fällen ist $y \in B$ oder $y \in C$, also $y \in (B \cup C)$
 	- Daher gilt $w = x \cdot y \in A \cdot (B \cup C)$
 	$\Longrightarrow$ Daher schließt sich $(A \cdot B \  \cup  A \cdot C) \subseteq  (A \cdot (B \cup C))$
@@ -187,7 +187,12 @@ $\square$
 
 $\square$
 
-### iii) $\{ N \in \mathbb{N} | n$ ist prim und $n \geq 3 \} = \{ n \in \mathbb{N} | n$ ist prim und ungerade $\}$
+### iii) $\{ n \in \mathbb{N} | n$ ist prim und $n \geq 3 \} = \{ n \in \mathbb{N} | n$ ist prim und ungerade $\}$
+
+**Z.Z.:**
+
+**Beweis:**
+- 
 
 
 
