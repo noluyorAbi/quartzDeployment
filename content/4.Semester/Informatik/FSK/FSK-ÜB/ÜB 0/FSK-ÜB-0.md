@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Thursday, 18. April 2024, 18:13
+date modified: Sunday, 21. April 2024, 14:18
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
@@ -104,7 +104,9 @@ Ja, gilt da man für jedes $n$ das $k$ also $n+1$ wählen kann und $n<n+1$ gilt.
 - Es gibt kein k was grösser ist also n, da $\infty$ definitionsgemäß ($\infty > x$ für alle $x \in \mathbb{R}$) größer ist also alle reellen Zahlen 
 	$\Longrightarrow$ Für diesen Fall gibt es kein k > n, weshalb die Aussage *nicht stimmt.*
 
-$\square$
+$$
+	ag*{$lacksquare$}
+$$$
 
 ### iii) Zeigen Sie: Es gibt unendlich viele Primzahlen. [[Satz des Euklids]]
 
@@ -119,7 +121,9 @@ $\square$
 - $q$ ist nun ebenfalls eine Primzahl (**Erklärung:** *Da alle nicht Primzahlen durch die Primfaktorzerlegung darstellbar sind, aber q nicht, da q durch Primzahlen und einem +1 am End dargestellt wird. Das +1 macht also q selbst zu einer Primzahl*) 
 - Dies ist jedoch ein Widerspruch in der Annahme, dass es nur die Primzahlen $p_1,p_2,…,p_{n-1},p_n$ gibt
 
-$\square$
+$$
+\tag*{$\blacksquare$}
+$$
 
 ## b) Die Gleichheit von Mengen ist wie folgt definiert:
 
@@ -154,7 +158,9 @@ $\square$
 
 $\Longrightarrow$ Aus der Definition ergibt sich $S = T \text{ g.d.w. } S \subseteq T \land T \subseteq S$ dies ist hier gegeben also ist der Beweis abgeschlossen
 
-$\square$
+$$
+\tag*{$\blacksquare$}
+$$
  
 ### ii) Für alle [[Sprachen]] $A, B, C$ über einem Alphabet $\Sigma$ gilt: $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$.
 
@@ -185,12 +191,22 @@ $\square$
 
 *Schlussfolgerung:* $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$
 
-$\square$
+:$$	ag*{$lacksquare$}$$$$
 
-### iii) $\{ n \in \mathbb{N} | n$ ist prim und $n \geq 3 \} = \{ n \in \mathbb{N} | n$ ist prim und ungerade $\}$
+### iii) $\{ N \in \mathbb{N} | n$ ist prim und $n \geq 3 \} = \{ n \in \mathbb{N} | n$ ist prim und ungerade $\}$
 
-**Z.Z.:**
+**Z.Z.:** Alle Primzahlen größer gleich 3 sind ungerade
 
+**Definitionen:**
+$$
+\begin{proof}[foo]
+  Der Satz von foo!
+  \label{thm:foo}
+\end{proof}
+$$
+$$
+\tag*{$\blacksquare$}
+$$
 **Beweis:**
 - 
 
