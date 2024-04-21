@@ -6,7 +6,7 @@ tags:
   - vorlesung
 fach: "[[FSK]]"
 date created: Tuesday, 16. April 2024, 11:25
-date modified: Friday, 19. April 2024, 11:11
+date modified: Sunday, 21. April 2024, 01:13
 ---
 
 # TODO
