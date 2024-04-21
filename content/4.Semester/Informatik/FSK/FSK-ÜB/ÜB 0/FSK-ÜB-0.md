@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Sunday, 21. April 2024, 14:18
+date modified: Sunday, 21. April 2024, 15:16
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
@@ -80,9 +80,9 @@ Gesamtaussage : $(\forall n, \exists k, k > n) \Leftrightarrow (\forall n, \exis
 >[!success]- Erklärung
 >### i) Zeigen Sie: $(\forall n, \exists k, k > n) \Leftrightarrow (\neg\exists n, \forall k, n \geq k)$
 >
->Die linke Seite der Äquivalenz, $(\forall n, \exists k, k > n)$, ist eine direkte Folge der Eigenschaft, dass die natürlichen Zahlen unendlich sind. Für jede natürliche Zahl \( n \) können wir eine größere natürliche Zahl \( k \) finden, indem wir einfach \( k = n + 1 \) wählen. Dies funktioniert auch im Bereich der reellen Zahlen.
+>Die linke Seite der Äquivalenz, $(\forall n, \exists k, k > n)$, ist eine direkte Folge der Eigenschaft, dass die natürlichen Zahlen unendlich sind. Für jede natürliche Zahl $ n \) können wir eine größere natürliche Zahl $ k \) finden, indem wir einfach $ k = n + 1 \) wählen. Dies funktioniert auch im Bereich der reellen Zahlen.
 >
->Die rechte Seite, $(\neg\exists n, \forall k, n \geq k)$, beinhaltet eine Verneinung und eine universelle Aussage. Die direkte Übersetzung dieser mathematischen Logik in Worte sagt, dass es keine Zahl \( n \) gibt, die größer oder gleich jeder anderen Zahl \( k \) ist. Das ist gleichbedeutend damit zu sagen, dass für jede gewählte Zahl \( n \) immer eine andere Zahl \( k \) existieren wird, die größer ist, da keine Zahl die Eigenschaft erfüllen kann, die größte zu sein. In der Welt der natürlichen Zahlen bedeutet das, dass es keine größte natürliche Zahl gibt.
+>Die rechte Seite, $(\neg\exists n, \forall k, n \geq k)$, beinhaltet eine Verneinung und eine universelle Aussage. Die direkte Übersetzung dieser mathematischen Logik in Worte sagt, dass es keine Zahl $ n \) gibt, die größer oder gleich jeder anderen Zahl $ k \) ist. Das ist gleichbedeutend damit zu sagen, dass für jede gewählte Zahl $ n \) immer eine andere Zahl $ k \) existieren wird, die größer ist, da keine Zahl die Eigenschaft erfüllen kann, die größte zu sein. In der Welt der natürlichen Zahlen bedeutet das, dass es keine größte natürliche Zahl gibt.
 >
 >Die Umformung von der rechten zur linken Seite und umgekehrt kann wie folgt mathematisch gerechtfertigt werden:
 >
@@ -167,7 +167,7 @@ $$
 *ZZ:* $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$
 
 *Definitionen*([[Grundlegende Operationen auf formalen Sprachen]]):
-1. **Konkatenation $(A \cdot B)$**: Die Sprache, die aus allen möglichen Kombinationen von Strings besteht, wobei ein String aus \(A\) direkt gefolgt von einem String aus \(B\) ist. Das heißt, für jedes $(x \in A)$ und jedes $(y \in B)$, gehört der String $(x \cdot y)$ zu $(A \cdot B)$.
+1. **Konkatenation $(A \cdot B)$**: Die Sprache, die aus allen möglichen Kombinationen von Strings besteht, wobei ein String aus $A\) direkt gefolgt von einem String aus $B\) ist. Das heißt, für jedes $(x \in A)$ und jedes $(y \in B)$, gehört der String $(x \cdot y)$ zu $(A \cdot B)$.
 
 2. **Vereinigung $(B \cup C)$**: Die Sprache, die alle Strings enthält, die in $(B)$ oder $(C)$ sind. Ein String $(y)$ gehört zu $(B \cup C)$, wenn $(y \in B)$ oder $(y \in C)$.
 
@@ -191,29 +191,57 @@ $$
 
 *Schlussfolgerung:* $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$
 
-:$$	ag*{$lacksquare$}$$$$
+$$
+\tag*{$\blacksquare$}
+$$
+<!--linter-disable-->
 
-### iii) $\{ N \in \mathbb{N} | n$ ist prim und $n \geq 3 \} = \{ n \in \mathbb{N} | n$ ist prim und ungerade $\}$
+### iii) $\{ n \in \mathbb{N} | n$ ist prim und $n \geq 3 \} = \{ n \in \mathbb{N} | n$ ist prim und ungerade $\}$
+
+<!-- linter-enable -->
 
 **Z.Z.:** Alle Primzahlen größer gleich 3 sind ungerade
 
 **Definitionen:**
 $$
-\begin{proof}[foo]
-  Der Satz von foo!
-  \label{thm:foo}
-\end{proof}
+\begin{aligned}
+&1.\ \text{Sei} \  d(n) \text{ definiert als die Teileranzahlfunktion } \ d(n) := |\{d\in \mathbb{N} : d \ | \ d \}|\\
+&2. \ \text{So wird}  \ \mathbb{P} \ \text{Primzahlen wie folgt definiert:} \ \mathbb{P} = \{n \in \mathbb{N} \ \backslash \ \{1\} \ | \ d(n) = 2 \}   \\
+&3. \text{ Definition gerade Zahlen:} \ 2k \\
+\end{aligned}
 $$
+
+**Beweis:**
+*Beweis durch Widerspruch*
+- Angenommen, $𝑥$ ist eine gerade Primzahl größer als 2 
+- Dann gilt: $\exists k \in \mathbb{N}: 2k = x$
+- Für die gerade Primzahl $x$ würde dies bedeuten, dass: $d(x) = 3$, da $1$, $2$, und $x$ Teiler von $x \ bzw. 2k$ sind.
+- Dies widerspricht jedoch der Definition $\mathbb{P}$ wo gilt, dass: $\mathbb{P} = \{n \in \mathbb{N} \ | \ d(n) = 2 \}$
+
+$\Longrightarrow$ Da $𝑥$ mehr als zwei Teiler hat, kann $𝑥$ keine Primzahl sein. Somit sind alle Primzahlen größer als 2 ungerade, was die zu zeigende Behauptung bestätigt.
 $$
 \tag*{$\blacksquare$}
 $$
-**Beweis:**
-- 
+
+## c) Die Konkatenation $v \cdot w$ (alternativ $vw$) zweier Wörter über einem Alphabet $\Sigma$ ist rekursiv definiert durch:
 
 
+>[!note] Aufgabenstellung
+>$$
+>\varepsilon \cdot w = w
+>$$
+>$$
+>av \cdot w = a(v \cdot w)
+>$$
+>Alternativ kann man diese Definition auch so schreiben:
+>$$
+>v \cdot w = \begin{cases}
+>  w & \text{falls } v = \varepsilon \\
+>  a(v' \cdot w) & \text{falls } v = av'
+>\end{cases}
+>$$
+>Zeigen Sie, dass für alle Wörter $u, v, w$ gilt: $u \cdot (v \cdot w) = (u \cdot v) \cdot w$. Verwenden Sie vollständige [[Induktion]] (siehe Skript, Kapitel 2) über die Länge von $u$.
 
-
---- 
 # FSK0-2 Wörter, Sprachen
 
 

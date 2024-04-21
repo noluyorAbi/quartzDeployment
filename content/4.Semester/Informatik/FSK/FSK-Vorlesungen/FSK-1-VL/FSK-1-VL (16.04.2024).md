@@ -6,7 +6,7 @@ tags:
   - vorlesung
 fach: "[[FSK]]"
 date created: Tuesday, 16. April 2024, 11:25
-date modified: Sunday, 21. April 2024, 01:13
+date modified: Sunday, 21. April 2024, 15:14
 ---
 
 # TODO
@@ -28,7 +28,7 @@ date modified: Sunday, 21. April 2024, 01:13
 # Organisatorisches:
 
 - Zentralübung alle 2 Wochen Mittwochs um 12-14 Uhr in A240
-- **BONUSPUNKTE!!** Immer eine Woche Zeit für 
+- **BONUSPUNKTE!!** Immer eine Woche Zeit für <span style="color:red">(Bonuspunkte wurden abgeschafft aufgrund von rechtlichen Unklarheiten)</span> 
 - **Klausur:** 5. August 2024 ab 15:00 
 - Das Datum der Nachholklausur ist noch nicht bekannt.
 
