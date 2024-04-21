@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Sunday, 21. April 2024, 17:16
+date modified: Sunday, 21. April 2024, 17:24
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
@@ -120,7 +120,7 @@ $$
 - Bezeichne diese mit $p_1,p_2,…,p_{n-1},p_n$
 - Betrachte nun die Zahl $q = p_1,p_2,…,p_{n-1},p_{n} +1 = \overset{n}{\underset{i=1}{\Pi}} p_{i}+1$ 
 - $q$ ist nun ebenfalls eine Primzahl (**Erklärung:** *Da alle nicht Primzahlen durch die Primfaktorzerlegung darstellbar sind, aber q nicht, da q durch Primzahlen und einem +1 am End dargestellt wird. Das +1 macht also q selbst zu einer Primzahl*) 
-- Dies ist jedoch ein Widerspruch in der Annahme, dass es nur die Primzahlen $p_1,p_2,…,p_{n-1},p_n$ gibt
+- Dies ist jedoch ein Widerspruch in der Annahme, dass es nur die Primzahlen $p_1,p_2,…,p_{n-1},p_n$ gibt.
 
 $$
 \tag*{$\blacksquare$}
@@ -260,10 +260,43 @@ Da das leere Wort $\varepsilon$ das neutrale Element der Konkatenation ist, sind
 **Induktionsschritt:**
 
 - **Induktionsannahme:**
-	- Angenommen, die Gleichung: $$𝑢⋅(𝑣⋅𝑤)=(𝑢⋅𝑣)⋅𝑤$$ gilt für alle $u$ der Länge $n$.
-	- Nun müssen wir zeigen, dass die Gleichung auch für alle $u$ der Länge $𝑛+1$ gilt.
+	- Angenommen, die Gleichung: $$
+𝑢⋅(𝑣⋅𝑤)=(𝑢⋅𝑣)⋅𝑤
+$$ gilt für alle $u$ der Länge $n$.
 
+ Nun müssen wir zeigen, dass die Gleichung auch für alle $u$ der Länge $𝑛+1$ gilt
 
+Sei $u$ ein Wort der Länge $n+1$. Dann lässt sich $u$ schreiben als $u = au'$, wobei $a$ ein Buchstabe aus $\Sigma$ und $u'$ ein Wort der Länge $n$ ist.
+
+Wir verwenden die rekursive Definition der Konkatenation und die Induktionsannahme:
+
+$$
+ u \cdot (v \cdot w) = au' \cdot (v \cdot w) 
+$$
+$$
+ = a(u' \cdot (v \cdot w)) 
+$$ (gemäß der rekursiven Definition)
+
+Nun wenden wir die Induktionsannahme auf $u'$ an, da $|u'| = n$:
+
+$$
+ = a((u' \cdot v) \cdot w) 
+$$
+$$
+ = (au' \cdot v) \cdot w 
+$$ (wieder rekursive Definition)
+
+Und da $au' = u$ ist, haben wir:
+
+$$
+ = (u \cdot v) \cdot w 
+$$
+
+Damit ist der Induktionsschritt bewiesen und die Eigenschaft, dass die Konkatenation assoziativ ist, gilt für alle Wörter $u$, $v$, und $w$ über einem Alphabet $\Sigma$.
+$$
+\tag*{$\blacksquare$}
+$$
+ 
 # FSK0-2 Wörter, Sprachen
 
 
