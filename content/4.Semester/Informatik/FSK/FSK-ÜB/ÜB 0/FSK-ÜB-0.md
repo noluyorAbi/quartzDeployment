@@ -260,9 +260,11 @@ Da das leere Wort $\varepsilon$ das neutrale Element der Konkatenation ist, sind
 **Induktionsschritt:**
 
 - **Induktionsannahme:**
-	- Angenommen, die Gleichung: $$
+	- Angenommen, die Gleichung: 
+$$
 𝑢⋅(𝑣⋅𝑤)=(𝑢⋅𝑣)⋅𝑤
-$$ gilt für alle $u$ der Länge $n$.
+$$ 
+gilt für alle $u$ der Länge $n$.
 
  Nun müssen wir zeigen, dass die Gleichung auch für alle $u$ der Länge $𝑛+1$ gilt
 
@@ -275,7 +277,8 @@ $$
 $$
 $$
  = a(u' \cdot (v \cdot w)) 
-$$ (gemäß der rekursiven Definition)
+$$ 
+(gemäß der rekursiven Definition)
 
 Nun wenden wir die Induktionsannahme auf $u'$ an, da $|u'| = n$:
 
