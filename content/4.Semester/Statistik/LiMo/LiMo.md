@@ -4,7 +4,7 @@ tags:
   - statistik
 fach: 
 date created: Tuesday, 16. April 2024, 11:12
-date modified: Tuesday, 16. April 2024, 11:13
+date modified: Monday, 22. April 2024, 23:01
 ---
 
 # Übersicht der Studieninhalte
