@@ -4,7 +4,7 @@ tags:
   - "#statistik"
 fach: 
 date created: Monday, 15. April 2024, 12:13
-date modified: Tuesday, 16. April 2024, 11:12
+date modified: Monday, 22. April 2024, 23:17
 ---
 
 Is in List with Statistic courses

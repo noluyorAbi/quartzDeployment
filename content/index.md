@@ -4,7 +4,7 @@ fach:
 title: Studying made easy.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Monday, 22. April 2024, 13:31
+date modified: Monday, 22. April 2024, 23:40
 ---
 
 
@@ -21,8 +21,9 @@ date modified: Monday, 22. April 2024, 13:31
 - [[RNVS|Rechnernetze und Verteilte Systeme|Rechnernetze und Verteilte Systeme (RNVS)]] (active)
 - [[Bachelorseminar-Software Security]] (active)
 ### Statistik
-- [[Uni2/Semester/4.Semester/Statistik/BaySta/Vorlesung/LiMo|LiMo]] (active)
-
+- [[Uni2/Semester/4.Semester/Statistik/BaySta/Vorlesung/LiMo|LiMo]] 
+- [[BaySta]] (active)
+- [[I2ML]]
 
 ## 🗓️ Semester
 

@@ -7,7 +7,7 @@ tags:
 fach: "[[RNVS]]"
 Thema:
 date created: Friday, 19. April 2024, 09:18
-date modified: Saturday, 20. April 2024, 02:47
+date modified: Monday, 22. April 2024, 23:31
 ---
 
 # TODO
@@ -52,7 +52,7 @@ date modified: Saturday, 20. April 2024, 02:47
 - **Fragestellung:**
 	- Wie adressiert man einen Endpunkt im Netz?
 	- Wie transportiert man die Nachrichten vom Sender zum Empfänger
-	- Wie kann man zuverlässige über unzuverlässige Transportwege kommunizieren?
+	- Wie kann man zuverlässig über unzuverlässige Transportwege kommunizieren?
 	- Wie können mehrere Nutzer die Ressourcen im Internet gleichzeitig nutzen?
 	- Wie kann man die Komplexität bewältigen?
 - Protokoll ist wie eine Sprache zwischen zwei Geräten, die über das Internet kommunizieren
