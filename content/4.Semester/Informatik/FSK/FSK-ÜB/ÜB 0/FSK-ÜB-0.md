@@ -6,13 +6,17 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Monday, 22. April 2024, 15:19
+date modified: Monday, 22. April 2024, 15:32
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
   - "[[Grundlegende Operationen auf formalen Sprachen]]"
   - "[[Induktion]]"
 ---
+
+# Wiederholen:
+- [[FSK-ÜB-0#FSK0-3 Äquivalenzrelationen|Aufgabe 0-3]]
+
 
 # FSKO-1 Fundamentale Beweisstrategien
 
