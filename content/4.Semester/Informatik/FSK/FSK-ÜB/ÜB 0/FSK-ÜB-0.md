@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Monday, 22. April 2024, 12:39
+date modified: Monday, 22. April 2024, 12:45
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
@@ -360,3 +360,15 @@ $$
 > ist eine Äquivalenzrelation. Ihre Äquivalenzklassen sind $\{0, 3, 6, \ldots\}$, $\{1, 4, 7, \ldots\}$ und $\{2, 5, 8, \ldots\}$. Sie hat somit Index 3.
 > 
 >Geben Sie für die folgenden Relationen jeweils an, ob sie Äquivalenzrelationen sind. Berechnen Sie außerdem den Index von mindestens zwei der Äquivalenzrelationen.
+
+### a) $R_1 \subseteq \{0,1,2,3\} \times \{0,1,2,3\}$ Mit $0R1, 2R1, 3R1$ (und sonst $\neg xRy$).
+
+### b) $R_2 \subseteq \{0,1,2\} \times \{0,1,2\}$ Mit $0R2, 1R2, 2R2$ (und sonst $\neg xRy$).
+
+### c) $R_3 \subseteq \{0,1,2\} \times \{0,1,2\}$ Mit $0R3, 1R3, 2R3, 1R3, 2R3, 2R3, 1R3$ (und sonst $\neg xRy$).
+
+### d) $R_4 = \{(p,q) |$ Die Personen $p, q$ haben das gleiche Geburtsjahr$\}$.
+
+### e) $R_5 = \{(u,v) |$ Die Wörter $u$ und $v$ über dem Alphabet $\{a,b\}$ stimmen in den ersten $k$ Positionen überein, wobei $k$ die Länge des kürzeren Wortes ist$\}$.
+
+### f) $R_6 = \{(p,q) | p,q \in \mathbb{N}, P + q$ ist gerade$\}$.
