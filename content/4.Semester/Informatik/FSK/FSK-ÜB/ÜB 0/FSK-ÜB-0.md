@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Monday, 22. April 2024, 12:45
+date modified: Monday, 22. April 2024, 15:19
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
@@ -109,18 +109,23 @@ $$
 \tag*{$\blacksquare$}
 $$
 
+
 ### iii) Zeigen Sie: Es gibt unendlich viele Primzahlen. [[Satz des Euklids]]
 
-**Beweis per Widerspruch:**
-
 *ZZ*: Es gibt unendlich viele Primzahlen
+
+**Beweis per Widerspruch:**
 
 *Beweis:* 
 - *Angenommen* es gäbe nur endlich viele Primzahlen (Genauer: n Primzahlen)
 - Bezeichne diese mit $p_1,p_2,…,p_{n-1},p_n$
 - Betrachte nun die Zahl $q = p_1,p_2,…,p_{n-1},p_{n} +1 = \overset{n}{\underset{i=1}{\Pi}} p_{i}+1$ 
-- $q$ ist nun ebenfalls eine Primzahl (**Erklärung:** *Da alle nicht Primzahlen durch die Primfaktorzerlegung darstellbar sind, aber q nicht, da q durch Primzahlen und einem +1 am End dargestellt wird. Das +1 macht also q selbst zu einer Primzahl*) 
+- $q$ ist nun ebenfalls eine Primzahl (**Erklärung:** *Da alle nicht Primzahlen durch die Primfaktorzerlegung darstellbar sind, aber q nicht, da q durch Primzahlen und einem +1 am Ende dargestellt wird. Das +1 macht also q selbst zu einer Primzahl*) 
 - Dies ist jedoch ein Widerspruch in der Annahme, dass es nur die Primzahlen $p_1,p_2,…,p_{n-1},p_n$ gibt.
+
+#### Additum aus der Übung:
+- Satz des Ausschlusses $A \lor \neg A$
+
 
 $$
 \tag*{$\blacksquare$}
@@ -147,7 +152,7 @@ $$
 
 ### i) Für alle Mengen $S$ und $T$ gilt: $S = T$ g.d.w. $\forall x, x \in S \Leftrightarrow x \in T$.
 
-*ZZ*: S = T under der Annahme $\forall x, x \in S \Leftrightarrow x \in T$
+*ZZ*: S = T unter der Annahme $\forall x, x \in S \Leftrightarrow x \in T$
 
 *Beweis:* 
 - 1.Schritt: Zeige $S \subseteq T$
@@ -165,17 +170,19 @@ $$
  
 ### ii) Für alle [[Sprachen]] $A, B, C$ über einem Alphabet $\Sigma$ gilt: $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$.
 
+Konkatenation Def.: $L_1L_{2}= \{w_1w_{2} | w_{1} \in L_{1}, w_{2}\in L_2\}$
+
 *ZZ:* $A \cdot (B \cup C) = A \cdot B \cup A \cdot C$
 
 *Definitionen*([[Grundlegende Operationen auf formalen Sprachen]]):
-1. **Konkatenation $(A \cdot B)$**: Die Sprache, die aus allen möglichen Kombinationen von Strings besteht, wobei ein String aus $A\) direkt gefolgt von einem String aus $B\) ist. Das heißt, für jedes $(x \in A)$ und jedes $(y \in B)$, gehört der String $(x \cdot y)$ zu $(A \cdot B)$.
+1. **Konkatenation $(A \cdot B)$**: Die Sprache, die aus allen möglichen Kombinationen von Strings besteht, wobei ein String aus $A$ $direkt gefolgt von einem String aus $B$$ ist. Das heißt, für jedes $(x \in A)$ und jedes $(y \in B)$, gehört der String $(x \cdot y)$ zu $(A \cdot B)$.
 
 2. **Vereinigung $(B \cup C)$**: Die Sprache, die alle Strings enthält, die in $(B)$ oder $(C)$ sind. Ein String $(y)$ gehört zu $(B \cup C)$, wenn $(y \in B)$ oder $(y \in C)$.
 
 *Beweis:*  
 - **Teil 1:**
 	- Sei $w$ ein beliebiges Element aus $A \cdot B \cup C$ 
-	- Nach Definition der Konkatenation gibt es einen String $x \in A$ und einen String $y \in (B \cup C)$ , so dass $w = x \cdot y$
+	- Nach Definition der Konkatenation gibt es einen String $x \in A$ und einen String $y \in (B \cup C)$, sodass $w = x \cdot y$
 	- Da $y \in (B \cup C)$, ist $y$ entweder in $B$ oder in $C$
 		- wenn $y$ in $B$ bedeutet es also für $w$ folgendes: $w = x \cdot y \in A \cdot B$
 		- wenn $y$ in $C$ bedeutet es also für $w$ folgendes: $w = x \cdot y \in A \cdot C$
@@ -321,6 +328,12 @@ $$
 >Hinweis: Für eine Menge von Symbolen $S$ bezeichnen wir mit $S^*$ die
 >Menge aller endlichen Folgen von Symbolen aus $S$ (z.B. $\{a, b\}^* = \{\epsilon, a, b, aa, ab, ba, bb, aaa, \ldots \}$).
 
+### Antworten
+
+1. Wähle $u = aab$. Dieses Wort ist in $U^*$, da es direkt in $U$ vorkommt, jedoch nicht in $V^*$, weil es nicht durch eine gerade Anzahl von $a$s und $b$s gebildet werden kann.
+2. Wähle $v = aa$. Dieses Wort ist in $V^*$, da es direkt in $V$ vorkommt, jedoch nicht in $U^*$, weil es nicht in $U$ vorkommt oder durch Elemente von $U$ gebildet werden kann.
+3. Wähle $w = aabaabaa$. Dieses Wort ist sowohl in $U^*$ als auch in $V^*$, weil es durch Konkatenation der Elemente von $U$ sowie $V$ gebildet werden kann. Besser das leere Wort, da dies in beides ist $\varepsilon$
+4. Wähle $x = aba$. Dieses Wort ist in keiner der beiden Mengen $U^*$ oder $V^*$, weil es nicht durch Konkatenation der Elemente von $U$ oder $V$ gebildet werden kann.
 
 ## b) Sei $w = ababababbbbccbaaaaabaacaaabbbbbaba$
 
@@ -332,7 +345,51 @@ $$
 >- $v[1] = a$, das erste Symbol in $v$ ist a;
 >- $\#_b(v) > 0$, die Anzahl von Vorkommen von $b$ in $v$ ist größer als 0.
 
+Um die Aufgabe zu lösen, suchen wir nach allen Teilwörtern \( v \) des gegebenen Wortes \( w \), die folgende Bedingungen erfüllen:
+- Die Länge von \( v \) beträgt 4 Zeichen (\( |v| = 4 \)).
+- Das erste Zeichen von \( v \) ist \( a \) (\( v[1] = a \)).
+- \( v \) enthält mindestens ein \( b \) (\( \#_b(v) > 0 \)).
 
+Wir beginnen, indem wir das gegebene Wort \( w \) betrachten:
+\[ w = ababababbbbccbaaaaabaacaaabbbbbaba \]
+
+### Schritte zur Lösung:
+1. **Identifizierung aller möglichen 4-Zeichen-Teilwörter von \( w \)**: Wir extrahieren jedes mögliche 4-Zeichen-Teilwort beginnend mit jedem Index in \( w \), solange die Länge des Teilworts 4 Zeichen beträgt.
+2. **Filterung der Teilwörter**: Jedes gefundene Teilwort wird daraufhin überprüft, ob es mit einem \( a \) beginnt und mindestens ein \( b \) enthält.
+
+### Beispielhafte Durchführung:
+- Extrahiere 4-Zeichen-Teilwörter und prüfe die Bedingungen.
+
+Angenommen, wir beginnen beim ersten Index:
+- \( w[0:4] = abab \)
+  - Beginnt mit \( a \): ja
+  - Enthält \( b \): ja
+  - Dieses Teilwort wird behalten.
+
+Ein weiteres Beispiel beim zweiten Index:
+- \( w[1:5] = baba \)
+  - Beginnt mit \( a \): nein
+  - Dieses Teilwort wird nicht behalten.
+
+Wir führen diesen Prozess für das gesamte Wort durch.
+
+### Alle gültigen Teilwörter:
+Nach Überprüfung aller Teilwörter erhält man folgende gültige 4-Zeichen-Teilwörter:
+- `abab`
+- `abab`
+- `abab`
+- `abab`
+- `abbb`
+- `abbc`
+- `aaba`
+- `aaab`
+- `aaca`
+- `acaa`
+- `abbb`
+- `bbbb`
+- `bbba`
+
+Diese Liste gibt alle möglichen Teilwörter an, die die gegebenen Bedingungen erfüllen.
 
 --- 
 # FSK0-3 Äquivalenzrelationen
@@ -361,6 +418,7 @@ $$
 > 
 >Geben Sie für die folgenden Relationen jeweils an, ob sie Äquivalenzrelationen sind. Berechnen Sie außerdem den Index von mindestens zwei der Äquivalenzrelationen.
 
+>[!danger] Aufgabenstellungen falsch muss ausgebessert werden
 ### a) $R_1 \subseteq \{0,1,2,3\} \times \{0,1,2,3\}$ Mit $0R1, 2R1, 3R1$ (und sonst $\neg xRy$).
 
 ### b) $R_2 \subseteq \{0,1,2\} \times \{0,1,2\}$ Mit $0R2, 1R2, 2R2$ (und sonst $\neg xRy$).
