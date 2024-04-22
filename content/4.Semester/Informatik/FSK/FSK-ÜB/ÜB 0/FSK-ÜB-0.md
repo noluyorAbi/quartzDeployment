@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Sunday, 21. April 2024, 17:24
+date modified: Monday, 22. April 2024, 12:29
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
@@ -299,8 +299,54 @@ $$
  
 # FSK0-2 Wörter, Sprachen
 
+## a) Seien $\Sigma = \{a, b\}$, $U = \{aab, baa\}$ und $V = \{aa, bb\}$
+
+>[!note] Aufgabenstellung
+>Geben Sie Wörter $u, v, w, x \in \Sigma^*$ an, sodass
+>
+>- $u \in U^*$ und $u \notin V^*$;
+>- $v \notin U^*$ und $v \in V^*$;
+>- $w \in U^*$ und $w \in V^*$;
+>- $x \notin U^*$ und $x \notin V^*$.
+>
+>Hinweis: Für eine Menge von Symbolen $S$ bezeichnen wir mit $S^*$ die
+>Menge aller endlichen Folgen von Symbolen aus $S$ (z.B. $\{a, b\}^* = \{\epsilon, a, b, aa, ab, ba, bb, aaa, \ldots \}$).
+
+## b) Sei $w = ababababbbbccbaaaaabaacaaabbbbbaba$
+
+>[!note] Aufgabenstellung
+>Geben Sie alle Teilwörter $v$ von $w$ an, auf die alle der folgenden
+>Eigenschaften zutreffen:
+>
+>- $|v| = 4$, die Länge von $v$ ist 4;
+>- $v[1] = a$, das erste Symbol in $v$ ist a;
+>- $\#_b(v) > 0$, die Anzahl von Vorkommen von $b$ in $v$ ist größer als 0.
 
 
 
 --- 
 # FSK0-3 Äquivalenzrelationen
+
+>[!note] Aufgabenstellung
+> Eine Relation zwischen zwei Mengen $M, N$ ist eine Menge $R \subseteq M \times N$ von Paaren bestehend je aus einem Element aus $M$ und einem aus $N$. $M$ und $N$ können hierbei beliebige Mengen sein. Ist $(p, q) \in R$, so schreibt man auch $R(p, q)$, $pRq$ oder $p \sim q$.
+> 
+> Ist klar, um welche Relation es sich handelt, kann man auch $p \sim q$ schreiben.
+> 
+> Eine Relation $R$ heißt Äquivalenzrelation, wenn
+> 
+> - die zugrundeliegenden Mengen gleich sind: $M = N$;
+> - für alle $x \in M$ gilt $xRx$ (d.h. $R$ ist reflexiv);
+> - für alle $x, y \in M$ gilt $xRy$ impliziert $yRx$ (d.h. $R$ ist symmetrisch);
+> - für alle $x, y, z \in M$ gilt $xRy$ und $yRz$ impliziert $xRz$ (d.h. $R$ ist transitiv).
+>
+> Eine Äquivalenzklasse $K$ einer Äquivalenzrelation $R$ ist eine maximale Menge von Elementen $u, v, w, \ldots \in M$ sodass alle Elemente von $K$ durch $R$ in Beziehung stehen: $uRv$, $vRu$, $vRw$, etc. "Maximal" bedeutet, dass es kein Element $x \in M$ gibt, das nicht in $K$ ist, aber mit allen Elementen von $K$ in Beziehung steht. Der Index einer Äquivalenzrelation ist die Anzahl ihrer Äquivalenzklassen.
+> 
+> Beispiel: Die Relation
+> 
+>$$
+\{ (u, v) | u, v \in \mathbb{N} \text{ und } u \text{ geteilt durch } 3 \text{ hat denselben Rest wie } v \text{ geteilt durch } 3\}
+>$$
+> 
+> ist eine Äquivalenzrelation. Ihre Äquivalenzklassen sind $\{0, 3, 6, \ldots\}$, $\{1, 4, 7, \ldots\}$ und $\{2, 5, 8, \ldots\}$. Sie hat somit Index 3.
+> 
+>Geben Sie für die folgenden Relationen jeweils an, ob sie Äquivalenzrelationen sind. Berechnen Sie außerdem den Index von mindestens zwei der Äquivalenzrelationen.
