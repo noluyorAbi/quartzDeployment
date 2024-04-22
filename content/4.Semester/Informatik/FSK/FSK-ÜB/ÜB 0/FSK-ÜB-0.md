@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Monday, 22. April 2024, 12:29
+date modified: Monday, 22. April 2024, 12:39
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
@@ -275,9 +275,11 @@ Wir verwenden die rekursive Definition der Konkatenation und die Induktionsannah
 $$
  u \cdot (v \cdot w) = au' \cdot (v \cdot w) 
 $$
+
 $$
  = a(u' \cdot (v \cdot w)) 
-$$ 
+$$
+
 (gemäß der rekursiven Definition)
 
 Nun wenden wir die Induktionsannahme auf $u'$ an, da $|u'| = n$:
@@ -285,9 +287,11 @@ Nun wenden wir die Induktionsannahme auf $u'$ an, da $|u'| = n$:
 $$
  = a((u' \cdot v) \cdot w) 
 $$
+
 $$
  = (au' \cdot v) \cdot w 
-$$ (wieder rekursive Definition)
+$$
+(wieder rekursive Definition)
 
 Und da $au' = u$ ist, haben wir:
 
@@ -295,7 +299,9 @@ $$
  = (u \cdot v) \cdot w 
 $$
 
+
 Damit ist der Induktionsschritt bewiesen und die Eigenschaft, dass die Konkatenation assoziativ ist, gilt für alle Wörter $u$, $v$, und $w$ über einem Alphabet $\Sigma$.
+
 $$
 \tag*{$\blacksquare$}
 $$
@@ -314,6 +320,7 @@ $$
 >
 >Hinweis: Für eine Menge von Symbolen $S$ bezeichnen wir mit $S^*$ die
 >Menge aller endlichen Folgen von Symbolen aus $S$ (z.B. $\{a, b\}^* = \{\epsilon, a, b, aa, ab, ba, bb, aaa, \ldots \}$).
+
 
 ## b) Sei $w = ababababbbbccbaaaaabaacaaabbbbbaba$
 
