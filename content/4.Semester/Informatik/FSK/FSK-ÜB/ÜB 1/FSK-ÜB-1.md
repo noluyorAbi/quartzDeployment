@@ -4,10 +4,12 @@ tags:
   - Übungsblatt
   - FSK
   - informatik
-fach: "[[FSK]]"
+fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
 Thema:
+  - "[[Beweisen]]"
+  - "[[Endliche Geometrische Reihe]]"
 date created: Tuesday, 23. April 2024, 11:29
-date modified: Tuesday, 23. April 2024, 14:28
+date modified: Wednesday, 24. April 2024, 00:02
 ---
 
 # FSK1-1 Operationen auf formalen Sprachen (2 Punkte)
@@ -16,8 +18,7 @@ date modified: Tuesday, 23. April 2024, 14:28
 >
 >Beweisen oder widerlegen Sie jede der folgenden Aussagen:
 
-## a)
-Seien $L_1$ und $L_2$ formale Sprachen über dem Alphabet $\Sigma = \{a, b\}$, sodass alle Wörter in $L_1$ eine gerade Anzahl von $a$'s haben und alle Wörter in $L_2$ eine gerade Anzahl von $b$'s haben. Dann haben alle Wörter in $L_1 \cap L_2$ eine gerade Anzahl von $a$'s und eine gerade Anzahl von $b$'s.
+## a) Seien $L_1$ und $L_2$ formale Sprachen über dem Alphabet $\Sigma = \{a, b\}$, sodass alle Wörter in $L_1$ eine gerade Anzahl von $a$'s haben und alle Wörter in $L_2$ eine gerade Anzahl von $b$'s haben. Dann haben alle Wörter in $L_1 \cap L_2$ eine gerade Anzahl von $a$'s und eine gerade Anzahl von $b$'s.
 
 **Gedankengang:**
 - Im Schnitt sind nur Wörter drin, die jeweils in $L_1$ und $L_2$ drin sind.
@@ -38,8 +39,7 @@ $$
 \tag*{$\blacksquare$}
 $$
 
-## b)
-Sei die formale Sprache $L$ definiert als $L = \{ w \in \{a, b\}^* | \#_a(w) \leq \#_b(w) \}$. Dann gilt $L \cup \{b\}^* = L$.
+## b) Sei die formale Sprache $L$ definiert als $L = \{ w \in \{a, b\}^* | \#_a(w) \leq \#_b(w) \}$. Dann gilt $L \cup \{b\}^* = L$.
 
 **Z.Z.:** Anzahl a's in w kleiner gleich Anzahl b's dann folgt, dass $L \cup \{b\}^{*}=L$
 
@@ -51,15 +51,34 @@ $$
 \tag*{$\blacksquare$}
 $$
 
-## c)
-Sei $\Sigma$ ein Alphabet und $k \in \mathbb{N}$. Sei $L$ die Sprache $\{ w \in \Sigma^{*} | \ |w| \leq k \}$. Dann ist $L$ eine endliche Sprache.
+## c) Sei $\Sigma$ ein Alphabet und $k \in \mathbb{N}$. Sei $L$ die Sprache $\{ w \in \Sigma^{*} | \ |w| \leq k \}$. Dann ist $L$ eine endliche Sprache.
 
-**Z.Z.:** Wenn man $k$ als Grenze wählt, gibt es nur endlich viele Wörter mit der Länge $k$
+**Z.Z.:** L, die Sprache aller Wörter w über dem Alphabet Σ mit einer Länge von höchstens k, ist eine endliche Sprache 
 
-**Gedankengang**
+**Beweis**
+- Stimmt, da $k$ eine endliche Zahl ist und definiert ist, dass $|w| \leq k$ 
+- Es gibt für jedes Wort bis zur Länge bis $k$ also folgende mögliche Anzahlen 
+$$
+|\Sigma|^{0}+|\Sigma|^{1}+|\Sigma|^{2} + \ ...\ + |\Sigma|^{k-1} + |\Sigma|^{k}
+$$
+- Dies ist eine [[Endliche Geometrische Reihe]] im Stil: 
+$$
+\underset{{n=0}}{\overset{k}{\Pi}}|\Sigma|^n
+$$
+$\Longrightarrow$ Da es sich um eine endliche geometrische Reihe handelt ist die Behauptung, dass $L$ eine endliche Sprache ist trivialerweise korrekt.
 
-## d)
-Über dem Alphabet $\Sigma = \{a, b, c\}$ definieren wir die Sprache $L = \{ w \in \Sigma^* | \#_a(w) + \#_b(w) = \#_c(w) \}$, also die Sprache der Wörter, die so viele $a$'s und $b$'s wie $c$'s enthalten. Es gilt: $L^* \subseteq L$.
+ 
+## d) Über dem Alphabet $\Sigma = \{a, b, c\}$ definieren wir die Sprache $L = \{ w \in \Sigma^* | \#_a(w) + \#_b(w) = \#_c(w) \}$, also die Sprache der Wörter, die so viele $a$'s und $b$'s wie $c$'s enthalten. Es gilt: $L^* \subseteq L$.
+
+**Z.Z:** $L^* \subseteq L$
+
+**Beweis**
+- $L^*$ ist die [[Konkatenation und Kleene-Stern|Kleene-Stern]] Hüll von $L$, was bedeutet, dass $L^*$ die Sprache ist, die alle Möglichen Wörter aus $L$ enthält inklusive dem leeren Wort $\varepsilon$
+	- Die Definition von $L = \{ w \in \Sigma^* | \#_a(w) + \#_b(w) = \#_c(w) \}$, wird also durch $L^*$ erfüllt, da $L^{*}\subset L$
+	- Für $\varepsilon$ ist die Bedingung auch erfüllt, da: 
+$$
+\varepsilon\in L^*:(\#_{a}(\varepsilon)= 0\land \#_{b}(\varepsilon) =0 \implies \#_{c}(\varepsilon) =0)
+$$
 
 ---
 

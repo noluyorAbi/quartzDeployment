@@ -4,7 +4,7 @@ tags:
   - informatik
   - FSK
   - vorlesung
-fach: "[[FSK]]"
+fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
 date created: Tuesday, 16. April 2024, 11:25
 date modified: Sunday, 21. April 2024, 15:14
 ---

@@ -3,9 +3,9 @@ tags:
   - 4semester
   - "#informatik"
   - "#FSK"
-fach: "[[FSK]]"
+fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
 date created: Tuesday, 16. April 2024, 11:20
-date modified: Sunday, 21. April 2024, 15:15
+date modified: Tuesday, 23. April 2024, 23:56
 ---
 
 # Übersicht der Studieninhalte

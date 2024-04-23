@@ -17,7 +17,7 @@ date modified: Tuesday, 23. April 2024, 15:34
 ### Informatik
 - [[DBS|Datenbanksysteme (DBS)]]
 - [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/) *(another site created by a fellow student)*
-- [[FSK|Formale Sprachen und Komplexität (FSK)]] (active)
+- [[Uni2/Semester/4.Semester/Informatik/FSK/FSK|Formale Sprachen und Komplexität (FSK)]] (active)
 - [[RNVS|Rechnernetze und Verteilte Systeme (RNVS)]] (active)
 - [[Bachelorseminar-Software Security]] (active)
 ### Statistik

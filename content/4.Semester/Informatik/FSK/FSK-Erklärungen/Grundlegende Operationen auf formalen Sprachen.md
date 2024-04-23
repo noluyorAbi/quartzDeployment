@@ -3,7 +3,7 @@ tags:
   - 4semester
   - Erklaerung
   - FSK
-fach: "[[FSK]]"
+fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
 date created: Thursday, 18. April 2024, 17:27
 date modified: Thursday, 18. April 2024, 17:30
 Thema:
