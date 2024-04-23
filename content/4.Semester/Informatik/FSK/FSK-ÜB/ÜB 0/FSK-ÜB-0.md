@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Monday, 22. April 2024, 15:32
+date modified: Tuesday, 23. April 2024, 11:29
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
@@ -16,7 +16,6 @@ Thema:
 
 # Wiederholen:
 - [[FSK-ÜB-0#FSK0-3 Äquivalenzrelationen|Aufgabe 0-3]]
-
 
 # FSKO-1 Fundamentale Beweisstrategien
 
@@ -422,7 +421,7 @@ Diese Liste gibt alle möglichen Teilwörter an, die die gegebenen Bedingungen e
 > 
 >Geben Sie für die folgenden Relationen jeweils an, ob sie Äquivalenzrelationen sind. Berechnen Sie außerdem den Index von mindestens zwei der Äquivalenzrelationen.
 
->[!danger] Aufgabenstellungen falsch muss ausgebessert werden
+>[!danger] Aufgabenstellungen falsch muss ausgebessert werden von mir 
 ### a) $R_1 \subseteq \{0,1,2,3\} \times \{0,1,2,3\}$ Mit $0R1, 2R1, 3R1$ (und sonst $\neg xRy$).
 
 ### b) $R_2 \subseteq \{0,1,2\} \times \{0,1,2\}$ Mit $0R2, 1R2, 2R2$ (und sonst $\neg xRy$).
