@@ -5,8 +5,12 @@ tags:
   - "#BaySta"
 fach: "[[BaySta]]"
 date created: Monday, 22. April 2024, 23:34
-date modified: Monday, 22. April 2024, 23:34
+date modified: Tuesday, 23. April 2024, 00:17
 ---
+
+# [[BaySta-Kapitel]]
+
+
 
 https://moodle.lmu.de/course/view.php?id=32800
 # Zeitplan
