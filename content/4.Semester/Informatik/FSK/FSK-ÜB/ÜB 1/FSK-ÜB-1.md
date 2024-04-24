@@ -9,7 +9,7 @@ Thema:
   - "[[Beweisen]]"
   - "[[Endliche Geometrische Reihe]]"
 date created: Tuesday, 23. April 2024, 11:29
-date modified: Wednesday, 24. April 2024, 09:35
+date modified: Thursday, 25. April 2024, 00:24
 ---
 
 # TODO:
@@ -96,7 +96,7 @@ Daher ist $L^* \subseteq L$ bewiesen.
 $$
 \tag*{$\blacksquare$} 
 $$
-##### [[Induktiver Beweis für FSK1-1d]]
+### [[Induktiver Beweis für FSK1-1d]]
 ---
 
 # FSK1-2 Grammatiken angeben (2 Punkte)

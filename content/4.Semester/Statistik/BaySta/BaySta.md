@@ -5,14 +5,14 @@ tags:
   - "#BaySta"
 fach: "[[BaySta]]"
 date created: Monday, 22. April 2024, 23:34
-date modified: Tuesday, 23. April 2024, 00:17
+date modified: Thursday, 25. April 2024, 00:23
 ---
 
+# [Kapitel-Webseite](http://bayeskurs.volkerschmid.de/)
 # [[BaySta-Kapitel]]
 
+# [Moodle](https://moodle.lmu.de/course/view.php?id=32800)
 
-
-https://moodle.lmu.de/course/view.php?id=32800
 # Zeitplan
 
 | Montag 16:15         | Freitag 12:15       |
@@ -32,3 +32,44 @@ https://moodle.lmu.de/course/view.php?id=32800
 | 1. Juli                             | 5. Juli                                   |
 | 8. Juli                             | 12. Juli                                  |
 | 15. Juli                            | 19. Juli: Endveranstaltung                |
+
+# Einführung in die Bayes-Statistik
+
+## Einstieg
+
+Für die Inhalte dieses Kurses brauchen wir grundlegende Vorkenntnisse über Zufallsereignisse und Wahrscheinlichkeitsrechnung.
+
+## Grundlagen
+
+In diesem Kapitel sehen wir uns das Beispiel an, das auf Thomas Bayes zurückgeht.
+
+## Bayes-Prinzip
+
+Prinzip: In den letzten beiden Kapiteln haben wir einfache Anwendungen der Bayes-Formel kennengelernt.
+
+## Modellierung und Posteriori
+
+Modellierung und numerische Berechnung der Posteriori. Wir haben uns zuletzt auf die Priori konzentriert.
+
+## Modellierung und MCMC
+
+Modellvergleich: Da wir nun unterschiedliche Modelle kennengelernt haben, beschäftigen wir uns erstmal mit der Frage, wie wir Modelle bayesianisch vergleichen können.
+
+## Hierarchische Modellierung
+
+Die Modelle werden nun immer komplexer. Wir erweitern erst Mal die Einfach-Regression zur…
+
+## Ergänzungen
+
+Die folgenden Abschnitte sind zur inhaltlichen Ergänzung und nicht prüfungsrelevant. 
+
+- MCMC Diagnostik für MCMC
+- Hamiltonian MC mit Stan
+- Alternative Ansätze
+- Empirischer Bayes
+- BayesX Approximation
+- Laplace-Approximation der Posteriori und INLA
+- Spezielle Modelle
+  - Bruchpunktmodelle
+  - Modell für Mischverteilungen
+

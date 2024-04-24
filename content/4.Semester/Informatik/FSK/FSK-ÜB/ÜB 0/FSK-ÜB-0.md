@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: 
 date created: Wednesday, 17. April 2024, 11:07
-date modified: Tuesday, 23. April 2024, 11:29
+date modified: Thursday, 25. April 2024, 00:34
 Thema:
   - "[[Beweisen]]"
   - "[[Sprachen]]"
@@ -422,14 +422,14 @@ Diese Liste gibt alle möglichen Teilwörter an, die die gegebenen Bedingungen e
 >Geben Sie für die folgenden Relationen jeweils an, ob sie Äquivalenzrelationen sind. Berechnen Sie außerdem den Index von mindestens zwei der Äquivalenzrelationen.
 
 >[!danger] Aufgabenstellungen falsch muss ausgebessert werden von mir 
-### a) $R_1 \subseteq \{0,1,2,3\} \times \{0,1,2,3\}$ Mit $0R1, 2R1, 3R1$ (und sonst $\neg xRy$).
+## a) $R_1 \subseteq \{0,1,2,3\} \times \{0,1,2,3\}$ Mit $0R1, 2R1, 3R1$ (und sonst $\neg xRy$).
 
-### b) $R_2 \subseteq \{0,1,2\} \times \{0,1,2\}$ Mit $0R2, 1R2, 2R2$ (und sonst $\neg xRy$).
+## b) $R_2 \subseteq \{0,1,2\} \times \{0,1,2\}$ Mit $0R2, 1R2, 2R2$ (und sonst $\neg xRy$).
 
-### c) $R_3 \subseteq \{0,1,2\} \times \{0,1,2\}$ Mit $0R3, 1R3, 2R3, 1R3, 2R3, 2R3, 1R3$ (und sonst $\neg xRy$).
+## c) $R_3 \subseteq \{0,1,2\} \times \{0,1,2\}$ Mit $0R3, 1R3, 2R3, 1R3, 2R3, 2R3, 1R3$ (und sonst $\neg xRy$).
 
-### d) $R_4 = \{(p,q) |$ Die Personen $p, q$ haben das gleiche Geburtsjahr$\}$.
+## d) $R_4 = \{(p,q) |$ Die Personen $p, q$ haben das gleiche Geburtsjahr$\}$.
 
-### e) $R_5 = \{(u,v) |$ Die Wörter $u$ und $v$ über dem Alphabet $\{a,b\}$ stimmen in den ersten $k$ Positionen überein, wobei $k$ die Länge des kürzeren Wortes ist$\}$.
+## e) $R_5 = \{(u,v) |$ Die Wörter $u$ und $v$ über dem Alphabet $\{a,b\}$ stimmen in den ersten $k$ Positionen überein, wobei $k$ die Länge des kürzeren Wortes ist$\}$.
 
-### f) $R_6 = \{(p,q) | p,q \in \mathbb{N}, P + q$ ist gerade$\}$.
+## f) $R_6 = \{(p,q) | p,q \in \mathbb{N}, P + q$ ist gerade$\}$.

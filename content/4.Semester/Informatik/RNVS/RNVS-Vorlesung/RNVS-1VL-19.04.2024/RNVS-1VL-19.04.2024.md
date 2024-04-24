@@ -12,7 +12,7 @@ date modified: Monday, 22. April 2024, 23:31
 
 # TODO
 
-- [ ] Skript heraussuchen 
+- [x] Skript heraussuchen [completion:: 2024-04-25]
 ## Skript gekommen bis Seite: 34
 
 # Organisatorisches

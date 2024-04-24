@@ -7,7 +7,7 @@ tags:
 fach: "[[RNVS]]"
 Thema:
 date created: Friday, 19. April 2024, 01:50
-date modified: Wednesday, 24. April 2024, 19:45
+date modified: Thursday, 25. April 2024, 00:36
 ---
 
 # Aufgabe 1: Anforderungen des Internets (H)
@@ -187,7 +187,7 @@ Die größte Herausforderung beim Arbeiten mit Binärzahlen ist, dass es kaum ei
 *Tabelle 2: Multiplikation (Zahl) \* (Faktor)*
 
 
-### **(a)** Tabelle 2 zeigt die Ergebnisse für die Berechnungen $(1, 2, 8, 10, 16) \cdot (2, 8)$ im Dezimal und Oktalsystem. Führen Sie die selbe Rechnung für das Binär- und Hexadezimalsystem durch!
+## **(a)** Tabelle 2 zeigt die Ergebnisse für die Berechnungen $(1, 2, 8, 10, 16) \cdot (2, 8)$ im Dezimal und Oktalsystem. Führen Sie die selbe Rechnung für das Binär- und Hexadezimalsystem durch!
 
 | Zahlensystem      | Zahl   | multipliziert mit Faktor |            |            |             |             |
 | ----------------- | ------ | ------------------------ | ---------- | ---------- | ----------- | ----------- |
@@ -200,24 +200,16 @@ Die größte Herausforderung beim Arbeiten mit Binärzahlen ist, dass es kaum ei
 |                   | *acht* | 1000                     | 10000      | 1000000    | 1010000     | 10000000    |
 | **Hexadezimal**   | *zwei* | 2                        | 4          | 10         | 14          | 20          |
 |                   | *acht* | 8                        | 10         | 100        | 50          | 80          |
-### **(b)** Ergebnisse der folgenden Terme im angegebenen Zahlensystem auf…
+## **(b)** Ergebnisse der folgenden Terme im angegebenen Zahlensystem auf…
 
-#### I. Als Binärzahl: $2^2$, $2^3$, $2^4$, $2^5$, $2^6$, $2^7$
+### I. Als Binärzahl: $2^2$, $2^3$, $2^4$, $2^5$, $2^6$, $2^7$
 - 100
 - 1000
 - 10000
 - 100000
 - 1000000
 - 10000000
-#### Ii. Als Oktalzahl: $8^2$, $8^3$, $8^4$, $8^5$, $8^6$, $8^7$
-- 100
-- 1000
-- 10000
-- 100000
-- 1000000
-- 10000000
-
-#### Iii. Als Dezimalzahl: $10^2$, $10^3$, $10^4$, $10^5$, $10^6$, $10^7$
+### Ii. Als Oktalzahl: $8^2$, $8^3$, $8^4$, $8^5$, $8^6$, $8^7$
 - 100
 - 1000
 - 10000
@@ -225,7 +217,15 @@ Die größte Herausforderung beim Arbeiten mit Binärzahlen ist, dass es kaum ei
 - 1000000
 - 10000000
 
-#### Iv. Als Hexadezimalzahl: $16^2$, $16^3$, $16^4$, $16^5$, $16^6$, $16^7$
+### Iii. Als Dezimalzahl: $10^2$, $10^3$, $10^4$, $10^5$, $10^6$, $10^7$
+- 100
+- 1000
+- 10000
+- 100000
+- 1000000
+- 10000000
+
+### Iv. Als Hexadezimalzahl: $16^2$, $16^3$, $16^4$, $16^5$, $16^6$, $16^7$
 - 100
 - 1000
 - 10000
