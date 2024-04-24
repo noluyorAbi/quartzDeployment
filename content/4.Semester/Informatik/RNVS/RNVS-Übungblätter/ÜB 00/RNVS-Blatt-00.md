@@ -7,7 +7,7 @@ tags:
 fach: "[[RNVS]]"
 Thema:
 date created: Friday, 19. April 2024, 01:50
-date modified: Wednesday, 24. April 2024, 18:09
+date modified: Wednesday, 24. April 2024, 18:22
 ---
 
 # Aufgabe 1: Anforderungen des Internets (H)
@@ -29,15 +29,12 @@ date modified: Wednesday, 24. April 2024, 18:09
 >- $n \cdot (n-1):$ alle möglichen Richtungen der verbindung zwischen den Geräten (jedes Gerät) kann mit jedem anderem verbunden werden
 >- $\div 2:$ Jede Verbindung zwischen zwei Geräten soll nur einmal gezählt werden statt 2 mal von A zu B ist gleiche Verbindung wie B zu A
 
-
-
 - 8 Teilnehmer?
 	- 28 Verbindungen
 - 300 Teilnehmer?
 	- 44850 Verbindungen
 - $N$ Teilnehmer?
 	- $\underset{n=1}{\overset{n-1}{\Sigma}}n$ = $\frac{n \cdot (n-1)}{2}$
-	
 ## (b) Statt dessen sollen jetzt immer maximal fünf Geräte direkt mit einem _Knoten_, aber nicht untereinander, verbunden sein. Maximal fünf dieser Knoten sind wiederum mit einem Knoten verbunden, usw.
 
 >[!tip] Formel zur Berechnung der Anzahl von Verbindungen in einem hierarchischen Netzwerk

@@ -4,8 +4,8 @@ tags:
   - FSK
   - informatik
   - Übungsblatt
-fach: "[[Uni2/templates/FSK|FSK]]"
-Thema:
+fach: "[[FSK-Template|FSK-Template]]"
+Thema: 
 date created: Wednesday, 24. April 2024, 00:14
 date modified: Wednesday, 24. April 2024, 00:14
 ---

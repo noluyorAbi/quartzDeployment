@@ -4,7 +4,7 @@ tags:
   - FSK
   - informatik
   - Erklaerung
-fach: "[[Uni2/templates/FSK|FSK]]"
+fach: "[[FSK-Template|FSK-Template]]"
 Thema:
   - "[[FSK-ÜB-1#FSK1-2 Grammatiken angeben (2 Punkte)]]"
 date created: Wednesday, 24. April 2024, 00:46
