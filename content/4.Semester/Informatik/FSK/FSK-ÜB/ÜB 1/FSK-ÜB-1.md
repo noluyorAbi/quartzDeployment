@@ -9,7 +9,7 @@ Thema:
   - "[[Beweisen]]"
   - "[[Endliche Geometrische Reihe]]"
 date created: Tuesday, 23. April 2024, 11:29
-date modified: Wednesday, 24. April 2024, 00:02
+date modified: Wednesday, 24. April 2024, 02:14
 ---
 
 # FSK1-1 Operationen auf formalen Sprachen (2 Punkte)
@@ -66,30 +66,94 @@ $$
 \underset{{n=0}}{\overset{k}{\Pi}}|\Sigma|^n
 $$
 $\Longrightarrow$ Da es sich um eine endliche geometrische Reihe handelt ist die Behauptung, dass $L$ eine endliche Sprache ist trivialerweise korrekt.
-
+ $$
+\tag*{$\blacksquare$}
+$$
  
 ## d) Über dem Alphabet $\Sigma = \{a, b, c\}$ definieren wir die Sprache $L = \{ w \in \Sigma^* | \#_a(w) + \#_b(w) = \#_c(w) \}$, also die Sprache der Wörter, die so viele $a$'s und $b$'s wie $c$'s enthalten. Es gilt: $L^* \subseteq L$.
 
-**Z.Z:** $L^* \subseteq L$
+**(Z.Z.):** $L^* \subseteq L$
 
-**Beweis**
-- $L^*$ ist die [[Konkatenation und Kleene-Stern|Kleene-Stern]] Hüll von $L$, was bedeutet, dass $L^*$ die Sprache ist, die alle Möglichen Wörter aus $L$ enthält inklusive dem leeren Wort $\varepsilon$
-	- Die Definition von $L = \{ w \in \Sigma^* | \#_a(w) + \#_b(w) = \#_c(w) \}$, wird also durch $L^*$ erfüllt, da $L^{*}\subset L$
-	- Für $\varepsilon$ ist die Bedingung auch erfüllt, da: 
+**Beweis:**
+- Jedes Wort $w \in L$ erfüllt per Definition die Bedingung $\#_a(w) + \#_b(w) = \#_c(w)$.
+- Das leere Wort $\varepsilon$ erfüllt die Bedingung trivialerweise, denn es enthält keine Buchstaben.
+- Die Konkatenation zweier Wörter $w_1, w_2 \in L$ ergibt ein Wort $w = w_1w_2$, für das gilt:
+
 $$
-\varepsilon\in L^*:(\#_{a}(\varepsilon)= 0\land \#_{b}(\varepsilon) =0 \implies \#_{c}(\varepsilon) =0)
+\begin{align*}
+\#_a(w) + \#_b(w) &= (\#_a(w_1) + \#_b(w_1)) + (\#_a(w_2) + \#_b(w_2)) \\
+&= \#_c(w_1) + \#_c(w_2) \\
+&= \#_c(w)
+\end{align*}
 $$
 
+- Da Konkatenationen assoziativ sind, erweitert sich diese Eigenschaft auf die Konkatenation beliebig vieler Wörter aus $L$.
+- Folglich erfüllt jedes Wort in $L^*$, einschließlich $\varepsilon$ und beliebiger Konkatenationen von Wörtern aus $L$, die definierende Bedingung von $L$.
+
+Daher ist $L^* \subseteq L$ bewiesen.
+$$
+\tag*{$\blacksquare$} 
+$$
+##### [[Induktiver Beweis für FSK1-1d]]
 ---
 
 # FSK1-2 Grammatiken angeben (2 Punkte)
 
 >[!note]
 >
->Sei \( \Sigma = \{a, b\} \). Geben Sie für jede der folgenden Teilaufgaben eine Grammatik \( G_i \) als 4-Tupel an, sodass \( L(G_i) \) die Sprache \( L_i \) über \( \Sigma \) erzeugt. Verwenden Sie keine \( \varepsilon \)-Produktionen. Erläutern Sie, warum \( L(G_i) = L_i \) gilt, indem Sie die "Aufgabe" der einzelnen Variablen und Produktionen erläutern. Geben Sie außerdem jeweils den Typ Ihrer Grammatik an (mit Begründung).
+>Sei $\Sigma = {a, b}$. Geben Sie für jede der folgenden Teilaufgaben eine Grammatik $G_i$ als 4-Tupel an, sodass $L(G_i)$ die Sprache $L_i$ über $\Sigma$ erzeugt. Verwenden Sie keine $\varepsilon$-Produktionen. Erläutern Sie, warum $L(G_i) = L_i$ gilt, indem Sie die "Aufgabe" der einzelnen Variablen und Produktionen erläutern. Geben Sie außerdem jeweils den Typ Ihrer Grammatik an (mit Begründung).
+
+[[Grammatiken#Kochrezept|Kochrezept]] zum Erstellen von Grammatiken
 
 ## a) $L_1 = \{a, b\}^+$
 
+- Alphabet: $\Sigma = \{a,b\}$
+- 4-Tupel Grammatikform $G = (N, \Sigma, P, S)$
+- $N: \{S\}$
+- $P: \{S \rightarrow aS|bS|a|b\}$ [[Grammatiken#Beispiel aus FSK-ÜB-1 FSK1-2 Grammatiken angeben (2 Punkte)|Erklärung der Schreibweise]]
+- $S:S$
+$$
+G = \{S,\{a,b\},\{S \rightarrow aS|bS|a|b\},S\}
+$$
+reguläre Grammatik, da sie rechtslineare Produktionen verwendet.
+
 ## b) $L_2 = \{w \in \Sigma^* \ | \ |w| \leq 2\}$
 
+- Alphabet: $\Sigma = \{a,b\}$
+- 4-Tupel Grammatikform $G = (N, \Sigma, P, S)$
+- $N: \{S,A\}$
+- $P: \{S \rightarrow aA \ | \ bA \ | \ \varepsilon,\  A \rightarrow a \ | \ b\}$
+- $S:S$
+$$
+G = \{\{S,A\},\{a,b\},\{\{S \rightarrow aA \ | \ bA \ | \ \varepsilon,\  A \rightarrow a \ | \ b\},S\}
+$$
+
 ## c) $L_3 = \{a^i b^j a^i b^i \ | \ I, j > 0\}$
+
+Für die Sprache $L_3 = \{a^ib^ja^ib^j | i,j > 0\}$, benötigen wir eine kontextfreie Grammatik (CFG), da das Muster eine spezifische Reihenfolge und Anzahl von 'a's und 'b's erfordert, die gleichmäßig verteilt sind. Hier ist eine mögliche Grammatik:
+
+- Alphabet: $\Sigma = \{a, b\}$
+- 4-Tupel Grammatikform $G = (N, \Sigma, P, S)$
+- $N$: $\{S, A, B, C, D\}$
+- $P$:
+  - $S \rightarrow aSC | aD$
+  - $C \rightarrow bC | b$
+  - $D \rightarrow aDB | aB$
+  - $B \rightarrow bB | b$
+- $S$: $S$
+
+Die Grammatik wird dann folgendermaßen als 4-Tupel repräsentiert:
+
+$$
+\begin{align*}
+G = \{ & \{S, A, B, C, D\}, \\
+       & \{a, b\}, \\
+       & \{S \rightarrow aSC \mid aD, \\
+       & \phantom{\{} C \rightarrow bC \mid b, \\
+       & \phantom{\{} D \rightarrow aDB \mid aB, \\
+       & \phantom{\{} B \rightarrow bB \mid b\}, \\
+       & S \}
+\end{align*}
+$$
+
+Diese Grammatik erzeugt Wörter in $L_3$, indem sie zunächst eine beliebige Anzahl von 'a's hinzufügt (durch wiederholte Anwendung von $S \rightarrow aSC$), gefolgt von einer gleichen Anzahl von 'b's (durch wiederholte Anwendung von $C \rightarrow bC$). Dann wechselt sie zum Zustand $D$, wo sie eine gleiche Anzahl von 'a's hinzufügt (durch wiederholte Anwendung von $D \rightarrow aDB$), gefolgt von einer gleichen Anzahl von 'b's zum Abschluss (durch wiederholte Anwendung von $B \rightarrow bB$).

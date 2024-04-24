@@ -6,14 +6,14 @@ tags:
   - informatik
 fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
 date created: Thursday, 18. April 2024, 16:18
-date modified: Thursday, 18. April 2024, 17:37
+date modified: Wednesday, 24. April 2024, 00:46
 ---
 
 # Satz des Euklids
 
 Der **Satz des Euklids** besagt, dass es unendlich viele Primzahlen gibt. Dies ist eines der grundlegendsten Ergebnisse in der Zahlentheorie. Euklid bewies diesen Satz in seinem Werk *Elemente*, welches um 300 v. Chr. verfasst wurde.
 
-## Beweis [[Beweisen]]
+## [[Beweisen]]
 
 Euklids Beweis für die Unendlichkeit der Primzahlen ist überraschend einfach und elegant. Hier ist eine kurze Darstellung seines Beweises:
 
