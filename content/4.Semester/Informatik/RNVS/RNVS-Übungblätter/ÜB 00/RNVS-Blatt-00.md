@@ -40,7 +40,7 @@ date modified: Wednesday, 24. April 2024, 18:52
 
 >[!tip] Formel zur Berechnung der Anzahl von Verbindungen in einem hierarchischen Netzwerk
 >$$
-\sum_{i=0}^{h-1} k_i
+>\sum_{i=0}^{h-1} k_i
 >$$
 >- $k_0 = n$: Anzahl der Teilnehmer auf der untersten Ebene (Ebene 0).
 >- $k_i = \lceil \frac{k_{i-1}}{k} \rceil$: Anzahl der Knoten auf Ebene $i$, wobei $k$ die maximale Anzahl von Geräten oder Knoten ist, die ein einzelner Knoten verbinden kann.
@@ -84,15 +84,15 @@ Bestimmt. Dabei bezieht sich $e$ auf die Anzahl der vollständigen Ebenen unterh
 >Zahlensysteme bestehen aus einem Alphabet (Ziffern) und einer Menge von Regeln, wie Wörter (Zahlen) gebildet werden. Bei dem in Europa gängigen Stellenwertsystem werden Zahlen von links nach rechts mit den Koeffizienten der Zerlegung in eine Summe von Potenzen einer gewählten Basis, meist 10, aufgeschrieben. Die erste Ziffer ist demnach der Koeffizient der höchsten verwendeten Potenz und mit jeder weiteren Ziffer wird der Exponent um 1 verringert. Ein Komma (,) markiert den Vorzeichenwechsel des Exponenten. Wird kein Vorzeichenwechsel benötigt, so ist der Exponent des letzten Summanden, der Ziffer ganz rechts, stets 0. Die folgende Tabelle zeigt gängige Stellenwertzahlensysteme in der Informatik.
 >
 >$$
-\begin{array}{|l|l|l|l|l|l|l|l|l|l|l|}
-\hline
-\textbf{Bezeichnung} & \textbf{Basis} & {\textbf{Ziffern (→ aufsteigende Wertigkeit)}} \\
-\hline
-\text{Dezimalsystem} & \text{zehn} & 0 \ | \ 1 \ | \ 2 \ | \ 3 \ | \ 4 \ | \ 5 \ | \ 6 \ | \ 7 \ | \ 8 \ | \ 9 \\
-\text{Oktalsystem} & \text{acht} & 0 \ | \ 1 \ | \ 2 \ | \ 3 \ | \ 4 \ | \ 5 \ | \ 6 \ | \ 7 \ | \ - \ | \ - \\
-\text{Dualsystem/Binärsystem} & \text{zwei} & 0 \ | \ 1 \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \\
-\hline
-\end{array}
+>\begin{array}{|l|l|l|l|l|l|l|l|l|l|l|}
+>\hline
+>\textbf{Bezeichnung} & \textbf{Basis} & {\textbf{Ziffern (→ aufsteigende Wertigkeit)}} \\
+>\hline
+>\text{Dezimalsystem} & \text{zehn} & 0 \ | \ 1 \ | \ 2 \ | \ 3 \ | \ 4 \ | \ 5 \ | \ 6 \ | \ 7 \ | \ 8 \ | \ 9 \\
+>\text{Oktalsystem} & \text{acht} & 0 \ | \ 1 \ | \ 2 \ | \ 3 \ | \ 4 \ | \ 5 \ | \ 6 \ | \ 7 \ | \ - \ | \ - \\
+>\text{Dualsystem/Binärsystem} & \text{zwei} & 0 \ | \ 1 \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \\
+>\hline
+>\end{array}
 >$$
 >
 >Tabelle 1: Zahlensysteme werden häufig entsprechend der Mächtigkeit ihres Alphabets benannt.
