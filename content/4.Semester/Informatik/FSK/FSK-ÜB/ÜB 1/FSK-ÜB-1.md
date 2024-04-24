@@ -9,13 +9,15 @@ Thema:
   - "[[Beweisen]]"
   - "[[Endliche Geometrische Reihe]]"
 date created: Tuesday, 23. April 2024, 11:29
-date modified: Wednesday, 24. April 2024, 09:15
+date modified: Wednesday, 24. April 2024, 09:35
 ---
 
+# TODO:
+
+- [ ] [[FSK-ÜB-1#FSK1-4 Spracheigenschaft per Induktion beweisen (0 Punkte)|Aufgabe FSK1-4 verstehen]]
 # FSK1-1 Operationen auf formalen Sprachen (2 Punkte)
 
->[!note]
->
+>[!note] Aufgabenstellung
 >Beweisen oder widerlegen Sie jede der folgenden Aussagen:
 
 ## a) Seien $L_1$ und $L_2$ formale Sprachen über dem Alphabet $\Sigma = \{a, b\}$, sodass alle Wörter in $L_1$ eine gerade Anzahl von $a$'s haben und alle Wörter in $L_2$ eine gerade Anzahl von $b$'s haben. Dann haben alle Wörter in $L_1 \cap L_2$ eine gerade Anzahl von $a$'s und eine gerade Anzahl von $b$'s.
@@ -225,3 +227,43 @@ Diese Wörter sind nicht in $L(G)$, da sie die korrespondierenden Klammern nicht
 
 Die Sprache $L(G)$ besteht aus allen korrekt geschachtelten Klammerausdrücken, die entweder runde $(, )$ oder eckige $[, ]$ Klammern nutzen können. Ein korrekter Ausdruck muss jede geöffnete Klammer mit der entsprechenden schließenden Klammer der gleichen Form schließen.
 
+--- 
+
+# FSK1-4 Spracheigenschaft per Induktion beweisen (0 Punkte)
+
+>[!note] Aufgabenstellung
+>Die Grammatik $G$ sei definiert durch $G = (\{A\}, \{a, b\}, \{A \rightarrow AA, A \rightarrow aAbb, A \rightarrow bab\}, A)$. Beweisen Sie, dass gilt:
+>
+>$$
+w \in L(G) \Rightarrow \#_b(w) = 2 \cdot \#_a(w)
+> $$
+>
+>**Hinweis:** Beweisen Sie zunächst die allgemeinere Aussage, dass für jede Satzform $u$ gilt: Wenn $u$ von $G$ in $n$ Schritten erzeugt wird (d.h. $A \Rightarrow^n u$), dann ist $\#_b(u) = 2 \cdot \#_a(u)$. Verwenden Sie vollständige Induktion über $n$.
+
+## Induktionsbeweis für die Spracheigenschaft von G
+
+Um zu zeigen, dass für jede Satzform $u$ gilt: Wenn $u$ in $n$ Schritten von $G$ erzeugt wird (d.h. $A \Rightarrow^n u$), dann ist $\#_b(u) = 2 \cdot \#_a(u)$, verwenden wir eine vollständige Induktion über $n$.
+
+**Induktionsanfang (IA):** Für $n = 0$ gibt es nur die Satzform $A$, und diese enthält keine $a$'s oder $b$'s, also ist $\#_b(u) = 0 = 2 \cdot 0 = 2 \cdot \#_a(u)$.
+
+**Induktionsvoraussetzung (IV):** Angenommen, die Aussage gilt für eine beliebige Satzform $u$, die in $n$ Schritten von $G$ erzeugt wird, d.h. $\#_b(u) = 2 \cdot \#_a(u)$.
+
+**Induktionsschritt (IS):** Wir nehmen an, dass $u$ in $n+1$ Schritten von $G$ erzeugt wird. Dann muss $u$ eine Ableitung der Form $A \Rightarrow v$ haben, wobei $v$ eine Satzform ist, die in $n$ oder weniger Schritten erzeugt wird. Da $v$ in $n$ oder weniger Schritten erzeugt wird, gilt nach Induktionsvoraussetzung $\#_b(v) = 2 \cdot \#_a(v)$.
+
+Nun betrachten wir die Ableitung $A \Rightarrow v$. Es gibt drei mögliche Regeln, die angewendet werden könnten:
+
+1. $A \rightarrow AA$
+2. $A \rightarrow aAbb$
+3. $A \rightarrow bab$
+
+Für jeden dieser Fälle betrachten wir, wie viele $a$'s und $b$'s in $v$ hinzukommen:
+
+1. Wenn die Regel $A \rightarrow AA$ angewendet wird, dann wird die Anzahl der $a$'s und $b$'s in $v$ verdoppelt, also bleibt das Verhältnis $\frac{\#_b(v)}{\#_a(v)} = 2$.
+
+2. Wenn die Regel $A \rightarrow aAbb$ angewendet wird, dann wird ein $a$ und zwei $b$'s hinzugefügt, also wird das Verhältnis $\frac{\#_b(v) + 2}{\#_a(v) + 1} = \frac{2 \cdot \#_a(v) + 2}{\#_a(v) + 1} = 2$.
+
+3. Wenn die Regel $A \rightarrow bab$ angewendet wird, dann wird ein $b$ und zwei $a$'s hinzugefügt, also wird das Verhältnis $\frac{\#_b(v) + 1}{\#_a(v) + 2} = \frac{2 \cdot \#_a(v) + 1}{\#_a(v) + 2} = 2$.
+
+In jedem Fall bleibt das Verhältnis $\frac{\#_b(v)}{\#_a(v)}$ unverändert, was bedeutet, dass nach $n+1$ Schritten immer noch $\#_b(u) = 2 \cdot \#_a(u)$ gilt.
+
+Damit haben wir die Aussage für alle Satzformen bewiesen, die von $G$ erzeugt werden können, und der Induktionsbeweis ist abgeschlossen.
