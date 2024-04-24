@@ -7,7 +7,7 @@ tags:
 fach: "[[RNVS]]"
 Thema:
 date created: Friday, 19. April 2024, 01:50
-date modified: Wednesday, 24. April 2024, 19:22
+date modified: Wednesday, 24. April 2024, 19:45
 ---
 
 # Aufgabe 1: Anforderungen des Internets (H)
@@ -88,11 +88,11 @@ Bestimmt. Dabei bezieht sich $e$ auf die Anzahl der vollständigen Ebenen unterh
 >\hline
 >\textbf{Bezeichnung} & \textbf{Basis} & {\textbf{Ziffern (→ aufsteigende Wertigkeit)}} \\
 >\hline
->\text{Dezimalsystem} & \text{zehn} & 0 \ | \ 1 \ | \ 2 \ | \ 3 \ | \ 4 \ | \ 5 \ | \ 6 \ | \ 7 \ | \ 8 \ | \ 9 \\
+>\text{Dezimalsystem} & \text{zehn} & 0 \ | \ 1 \ | \ 2 \ | \ 3 \ | \ 4 \ | \ 5 \ |\ 6 \ | \ 7 \ | \ 8 \ | \ 9 \\
 >\text{Oktalsystem} & \text{acht} & 0 \ | \ 1 \ | \ 2 \ | \ 3 \ | \ 4 \ | \ 5 \ | \ 6 \ | \ 7 \ | \ - \ | \ - \\
 >\text{Dualsystem/Binärsystem} & \text{zwei} & 0 \ | \ 1 \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \\
 >\hline
-\end{array}
+>\end{array}
 >$$
 >
 >Tabelle 1: Zahlensysteme werden häufig entsprechend der Mächtigkeit ihres Alphabets benannt.
@@ -162,7 +162,7 @@ $0→1→2→3→4→5→6→7→8→9→A→B→C→D→E→F$
 
 >[!warning] Aufgepasst
 >$$
-\underset{\longrightarrow \ 33 \ Stellen}{(2^{32})_{10}=(1000..)_2}
+>\underset{\longrightarrow \ 33 \ Stellen}{(2^{32})_{10}=(1000..)_2}
 >$$
 
 $$
