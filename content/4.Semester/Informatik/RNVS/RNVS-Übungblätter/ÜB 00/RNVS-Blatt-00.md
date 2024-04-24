@@ -7,7 +7,7 @@ tags:
 fach: "[[RNVS]]"
 Thema:
 date created: Friday, 19. April 2024, 01:50
-date modified: Wednesday, 24. April 2024, 18:22
+date modified: Wednesday, 24. April 2024, 18:52
 ---
 
 # Aufgabe 1: Anforderungen des Internets (H)
@@ -16,18 +16,19 @@ date modified: Wednesday, 24. April 2024, 18:22
 >Im Internet macht es den Anschein, also wären alle Geräte unmittelbar miteinander verbunden.
 ## (a) Angenommen Sie müssen ein Netz entwerfen, in dem jedes Endgerät mit jedem anderen verkabelt ist, d. h. _komplett vermascht_
 
->[!tip] Formel zur Berechnung der Anzahl von Verbindungen
->$$
-\frac{n \cdot (n-1)}{2}
->$$
->$$
->=
->$$
->$$
-\underset{n=1}{\overset{n-1}{\Sigma}}n
->$$
->- $n \cdot (n-1):$ alle möglichen Richtungen der verbindung zwischen den Geräten (jedes Gerät) kann mit jedem anderem verbunden werden
->- $\div 2:$ Jede Verbindung zwischen zwei Geräten soll nur einmal gezählt werden statt 2 mal von A zu B ist gleiche Verbindung wie B zu A
+>[!tip] Formel zur Berechnung der Anzahl von Verbindungen in einem hierarchischen Netzwerk
+> $$
+> \frac{n \cdot (n-1)}{2}
+> $$
+> $$
+> =
+> $$
+> $$
+> \underset{n=1}{\overset{n-1}{\Sigma}}n
+> $$
+> - **$n \cdot (n-1)$**: Alle möglichen Richtungen der Verbindung zwischen den Geräten (jedes Gerät kann mit jedem anderen verbunden werden).
+> - **$\div 2$**: Jede Verbindung zwischen zwei Geräten soll nur einmal gezählt werden, statt zweimal (von A zu B ist dieselbe Verbindung wie von B zu A).
+
 
 - 8 Teilnehmer?
 	- 28 Verbindungen
@@ -64,8 +65,16 @@ date modified: Wednesday, 24. April 2024, 18:22
 	- $\text{Dritte Ebene: }12 \div 5 = 3 \ Knoten$ **(Es wird immer aufgerundet!)** $\lceil \frac{5}{12}\rceil$
 		- $\Longrightarrow 300 +60+12+3 = 375$
 
-- $N$ Teilnehmer? Gehen Sie von $N = 5^a$ mit $a \in \mathbb{N}$ aus. ([[Endliche Geometrische Reihe]])
-	- #Frage 
+- N Teilnehmer: $\frac{5^{e+1}-1}{4}$ auf Ebene $e$
+	- Ausgehend von einem Baum, jede Ebene hat $K = 5^e$ Knoten.
+	- $K = 1 + 5 + 25 + \ldots + 5^e = \sum_{i=0}^{e} 5^i = \frac{5^{e+1}-1}{4}$
+	- Auf $e = 0$ hat nur Kinderknoten, daher noch das $-1$.
+
+In der Formel, die wir verwenden, steht $e$ für die Anzahl der Ebenen in einer Baumstruktur, in der jeder Knoten maximal fünf Kindknoten haben kann. In einem solchen Baum ist jeder Knoten ein Gerät oder ein Teilnehmer, und die Anzahl der Teilnehmer, die in der Struktur untergebracht werden können, wird durch die Formel
+$$
+\frac{5^{e+1} - 1}{4}
+$$
+Bestimmt. Dabei bezieht sich $e$ auf die Anzahl der vollständigen Ebenen unterhalb der Wurzel des Baumes. Wenn $e = 0$, dann gibt es nur die Wurzelebene ohne weitere Ebenen darunter. Mit jeder Erhöhung von $e$ um 1 wird eine weitere Ebene hinzugefügt, was die Gesamtanzahl der möglichen Teilnehmer signifikant erhöht, da die Anzahl der Knoten geometrisch mit der Basis 5 zunimmt.
 
 --- 
 

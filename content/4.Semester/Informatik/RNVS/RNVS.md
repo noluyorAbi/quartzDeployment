@@ -5,31 +5,24 @@ tags:
   - informatik
 fach: "[[RNVS]]"
 date created: Friday, 19. April 2024, 02:28
-date modified: Sunday, 21. April 2024, 15:35
+date modified: Wednesday, 24. April 2024, 19:15
 ---
 
-# Index für das Modul RNVS
+# Übersicht der Studieninhalte
 
-## Überblick
-Das Modul Rechnernetze und Verteilte Systeme (RNVS) beschäftigt sich mit den Grundlagen der Netzwerktechnik und der Entwicklung verteilter Systeme. Es umfasst Themen wie Netzwerkprotokolle, -architekturen, Verteilungsstrategien und vieles mehr.
+## [[RNVS-Vorlesung]]
 
-## Inhaltsverzeichnis
-In den folgenden Unterordnern finden Sie Materialien zu den verschiedenen Aspekten des Moduls RNVS:
+Die RNVS-Vorlesung bietet eine grundlegende Einführung in die Fachspezifischen Kenntnisse, die für das Studium erforderlich sind. Durch präzise Vorlesungen und interaktive Lerneinheiten werden Studierende mit den Kernkonzepten und -methoden vertraut gemacht. Diese Vorlesungen sind darauf ausgerichtet, das theoretische Wissen zu stärken und praktische Fähigkeiten zu entwickeln, die im weiteren Verlauf des Studiums und in der beruflichen Laufbahn von Nutzen sein werden.
 
-- [[RNVS-Verzeichnis-Erklärungen|Erklärungen]]
-  - Hier finden Sie Erklärungen und Zusammenfassungen zu verschiedenen Themen von RNVS, wie TCP/IP, Routing-Protokolle und Netzwerkarchitekturen.
+## [[RNVS-Verzeichnis-Erklärungen]]
 
-- [[RNVS-Fragen|Fragen]]
-  - Dieser Ordner enthält Übungsfragen, die Ihnen helfen, Ihr Wissen zu überprüfen und sich auf Prüfungen vorzubereiten.
+Das Verzeichnis bietet eine umfassende Sammlung von Themen, die mit dem Kursmodul verbunden sind. Jedes Thema wird tiefgründig aufgegriffen und erklärt, um ein gründliches Verständnis zu fördern. Diese Informationen sind essenziell, um die Organisation der Kursmaterialien zu verstehen und effizient auf benötigte Ressourcen zuzugreifen. Ziel ist es, den Zugang zu diesen wertvollen Lernmaterialien zu erleichtern und dein Studium effektiver zu gestalten.
 
-- [[RNVS-Vorlesung|Vorlesungen]]
-  - Zugriff auf alle Vorlesungsnotizen und -materialien. Jede Vorlesung ist detailliert dokumentiert, um das Lernen und die Überprüfung zu erleichtern.
+## [[RNVS-Übungsblätter]]
 
-- [[RNVS-Übungsblätter|Übungsblätter]]
-  - Hier finden Sie Übungsblätter und Aufgaben, die im Laufe des Semesters ausgegeben wurden, inklusive Lösungshinweisen und Erklärungen.
+Diese Sektion bietet Zugang zu allen aktuellen und vergangenen Übungsblättern des Kurses. Nutze diese Ressourcen, um dich auf bevorstehende Prüfungen vorzubereiten oder um vergangene Inhalte zur Auffrischung deines Wissens durchzugehen.
 
-## Weitere Ressourcen
-Vergessen Sie nicht, die [[RNVS-Verzeichnis-Erklärungen|Verzeichnis-Erklärungen]] zu konsultieren, die eine Übersicht über die Struktur und das Layout des RNVS-Moduls bietet.
+## [[RNVS-Klausuraufgaben]]
 
-## Kontakt
-Bei Fragen oder Anregungen zu den Kursmaterialien wenden Sie sich bitte an den Modulverantwortlichen oder besuchen Sie die Sprechstunde.
+Hier wird eine Zusammenfassung aller relevanten Klausuraufgaben inklusive deren Lösungen bereitgestellt. Diese Inhalte sind besonders wertvoll zur Prüfungsvorbereitung und zum Verständnis der Anforderungen in den Abschlussprüfungen.
+
