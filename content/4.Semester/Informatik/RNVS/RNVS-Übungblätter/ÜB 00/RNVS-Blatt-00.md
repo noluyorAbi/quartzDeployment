@@ -7,7 +7,7 @@ tags:
 fach: "[[RNVS]]"
 Thema:
 date created: Friday, 19. April 2024, 01:50
-date modified: Wednesday, 24. April 2024, 18:52
+date modified: Wednesday, 24. April 2024, 19:22
 ---
 
 # Aufgabe 1: Anforderungen des Internets (H)
@@ -54,7 +54,7 @@ date modified: Wednesday, 24. April 2024, 18:52
 
 <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2024-04-24T13:50:33.813Z\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0\&quot; etag=\&quot;Vq1wb2wpJ-38711b-GO2\&quot; version=\&quot;24.2.8\&quot; type=\&quot;device\&quot;&gt;\n &lt;diagram name=\&quot;Seite-1\&quot; id=\&quot;m4TSJ6fQ5CY7JYnawMut\&quot;&gt;\n &lt;mxGraphModel dx=\&quot;1325\&quot; dy=\&quot;2115\&quot; grid=\&quot;1\&quot; gridSize=\&quot;10\&quot; guides=\&quot;1\&quot; tooltips=\&quot;1\&quot; connect=\&quot;1\&quot; arrows=\&quot;1\&quot; fold=\&quot;1\&quot; page=\&quot;1\&quot; pageScale=\&quot;1\&quot; pageWidth=\&quot;1169\&quot; pageHeight=\&quot;827\&quot; math=\&quot;0\&quot; shadow=\&quot;0\&quot;&gt;\n &lt;root&gt;\n &lt;mxCell id=\&quot;0\&quot; /&gt;\n &lt;mxCell id=\&quot;1\&quot; parent=\&quot;0\&quot; /&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-1\&quot; value=\&quot;Knoten\&quot; style=\&quot;whiteSpace=wrap;strokeWidth=2;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n &lt;mxGeometry x=\&quot;622\&quot; y=\&quot;20\&quot; width=\&quot;65\&quot; height=\&quot;33\&quot; as=\&quot;geometry\&quot; /&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-2\&quot; value=\&quot;Knoten\&quot; style=\&quot;rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n &lt;mxGeometry x=\&quot;329\&quot; y=\&quot;122\&quot; width=\&quot;65\&quot; height=\&quot;33\&quot; as=\&quot;geometry\&quot; /&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-3\&quot; value=\&quot;Knoten\&quot; style=\&quot;rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n &lt;mxGeometry x=\&quot;915\&quot; y=\&quot;122\&quot; width=\&quot;65\&quot; height=\&quot;33\&quot; as=\&quot;geometry\&quot; /&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-4\&quot; value=\&quot;Teilnehmer\&quot; style=\&quot;rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n &lt;mxGeometry x=\&quot;20\&quot; y=\&quot;224\&quot; width=\&quot;97\&quot; height=\&quot;33\&quot; as=\&quot;geometry\&quot; /&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-5\&quot; value=\&quot;Teilnehmer\&quot; style=\&quot;rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n &lt;mxGeometry x=\&quot;167\&quot; y=\&quot;224\&quot; width=\&quot;97\&quot; height=\&quot;33\&quot; as=\&quot;geometry\&quot; /&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-6\&quot; value=\&quot;Teilnehmer\&quot; style=\&quot;rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n &lt;mxGeometry x=\&quot;313\&quot; y=\&quot;224\&quot; width=\&quot;97\&quot; height=\&quot;33\&quot; as=\&quot;geometry\&quot; /&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-7\&quot; value=\&quot;Teilnehmer\&quot; style=\&quot;rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n &lt;mxGeometry x=\&quot;460\&quot; y=\&quot;224\&quot; width=\&quot;97\&quot; height=\&quot;33\&quot; as=\&quot;geometry\&quot; /&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-8\&quot; value=\&quot;Teilnehmer\&quot; style=\&quot;rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n &lt;mxGeometry x=\&quot;606\&quot; y=\&quot;224\&quot; width=\&quot;97\&quot; height=\&quot;33\&quot; as=\&quot;geometry\&quot; /&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-9\&quot; value=\&quot;Teilnehmer\&quot; style=\&quot;rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n &lt;mxGeometry x=\&quot;753\&quot; y=\&quot;224\&quot; width=\&quot;97\&quot; height=\&quot;33\&quot; as=\&quot;geometry\&quot; /&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-10\&quot; value=\&quot;Teilnehmer\&quot; style=\&quot;rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n &lt;mxGeometry x=\&quot;899\&quot; y=\&quot;224\&quot; width=\&quot;97\&quot; height=\&quot;33\&quot; as=\&quot;geometry\&quot; /&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-11\&quot; value=\&quot;Teilnehmer\&quot; style=\&quot;rounded=1;absoluteArcSize=1;arcSize=14;whiteSpace=wrap;strokeWidth=2;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n &lt;mxGeometry x=\&quot;1046\&quot; y=\&quot;224\&quot; width=\&quot;97\&quot; height=\&quot;33\&quot; as=\&quot;geometry\&quot; /&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-12\&quot; value=\&quot;1\&quot; style=\&quot;curved=1;startArrow=none;endArrow=block;exitX=-0.0011658888596754807;exitY=0.6767594265243215;entryX=0.49705528846153846;entryY=-0.0060605713815400095;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YPAxg7wEys1kg9rIgMSj-1\&quot; target=\&quot;YPAxg7wEys1kg9rIgMSj-2\&quot;&gt;\n &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n &lt;Array as=\&quot;points\&quot;&gt;\n &lt;mxPoint x=\&quot;361\&quot; y=\&quot;88\&quot; /&gt;\n &lt;/Array&gt;\n &lt;/mxGeometry&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-13\&quot; value=\&quot;1\&quot; style=\&quot;curved=1;startArrow=none;endArrow=block;exitX=0.9967187734750601;exitY=0.6767594265243215;entryX=0.49849759615384615;entryY=-0.0060605713815400095;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YPAxg7wEys1kg9rIgMSj-1\&quot; target=\&quot;YPAxg7wEys1kg9rIgMSj-3\&quot;&gt;\n &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n &lt;Array as=\&quot;points\&quot;&gt;\n &lt;mxPoint x=\&quot;947\&quot; y=\&quot;88\&quot; /&gt;\n &lt;/Array&gt;\n &lt;/mxGeometry&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-14\&quot; value=\&quot;1\&quot; style=\&quot;curved=1;startArrow=none;endArrow=block;exitX=-0.0018870427058293269;exitY=0.6706988551427815;entryX=0.49754349226804123;entryY=-0.012121142763080019;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YPAxg7wEys1kg9rIgMSj-2\&quot; target=\&quot;YPAxg7wEys1kg9rIgMSj-4\&quot;&gt;\n &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n &lt;Array as=\&quot;points\&quot;&gt;\n &lt;mxPoint x=\&quot;68\&quot; y=\&quot;189\&quot; /&gt;\n &lt;/Array&gt;\n &lt;/mxGeometry&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-15\&quot; value=\&quot;1\&quot; style=\&quot;curved=1;startArrow=none;endArrow=block;exitX=-0.0018870427058293269;exitY=0.8413976524871195;entryX=0.4926304768041237;entryY=-0.012121142763080019;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YPAxg7wEys1kg9rIgMSj-2\&quot; target=\&quot;YPAxg7wEys1kg9rIgMSj-5\&quot;&gt;\n &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n &lt;Array as=\&quot;points\&quot;&gt;\n &lt;mxPoint x=\&quot;215\&quot; y=\&quot;189\&quot; /&gt;\n &lt;/Array&gt;\n &lt;/mxGeometry&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-16\&quot; value=\&quot;1\&quot; style=\&quot;curved=1;startArrow=none;endArrow=block;exitX=0.49705528846153846;exitY=1.0060606869784268;entryX=0.49802673969072164;entryY=-0.012121142763080019;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YPAxg7wEys1kg9rIgMSj-2\&quot; target=\&quot;YPAxg7wEys1kg9rIgMSj-6\&quot;&gt;\n &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n &lt;Array as=\&quot;points\&quot; /&gt;\n &lt;/mxGeometry&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-17\&quot; value=\&quot;1\&quot; style=\&quot;curved=1;startArrow=none;endArrow=block;exitX=0.9959976196289062;exitY=0.8413976524871195;entryX=0.4931137242268041;entryY=-0.012121142763080019;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YPAxg7wEys1kg9rIgMSj-2\&quot; target=\&quot;YPAxg7wEys1kg9rIgMSj-7\&quot;&gt;\n &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n &lt;Array as=\&quot;points\&quot;&gt;\n &lt;mxPoint x=\&quot;508\&quot; y=\&quot;189\&quot; /&gt;\n &lt;/Array&gt;\n &lt;/mxGeometry&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-18\&quot; value=\&quot;1\&quot; style=\&quot;curved=1;startArrow=none;endArrow=block;exitX=0.9959976196289062;exitY=0.6706988551427815;entryX=0.49850998711340205;entryY=-0.012121142763080019;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YPAxg7wEys1kg9rIgMSj-2\&quot; target=\&quot;YPAxg7wEys1kg9rIgMSj-8\&quot;&gt;\n &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n &lt;Array as=\&quot;points\&quot;&gt;\n &lt;mxPoint x=\&quot;654\&quot; y=\&quot;189\&quot; /&gt;\n &lt;/Array&gt;\n &lt;/mxGeometry&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-19\&quot; value=\&quot;1\&quot; style=\&quot;curved=1;startArrow=none;endArrow=block;exitX=-0.00044473501352163463;exitY=0.8413976524871195;entryX=0.4935969716494845;entryY=-0.012121142763080019;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YPAxg7wEys1kg9rIgMSj-3\&quot; target=\&quot;YPAxg7wEys1kg9rIgMSj-9\&quot;&gt;\n &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n &lt;Array as=\&quot;points\&quot;&gt;\n &lt;mxPoint x=\&quot;801\&quot; y=\&quot;189\&quot; /&gt;\n &lt;/Array&gt;\n &lt;/mxGeometry&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-20\&quot; value=\&quot;1\&quot; style=\&quot;curved=1;startArrow=none;endArrow=block;exitX=0.49849759615384615;exitY=1.0060606869784268;entryX=0.49899323453608246;entryY=-0.012121142763080019;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YPAxg7wEys1kg9rIgMSj-3\&quot; target=\&quot;YPAxg7wEys1kg9rIgMSj-10\&quot;&gt;\n &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n &lt;Array as=\&quot;points\&quot; /&gt;\n &lt;/mxGeometry&gt;\n &lt;/mxCell&gt;\n &lt;mxCell id=\&quot;YPAxg7wEys1kg9rIgMSj-21\&quot; value=\&quot;1\&quot; style=\&quot;curved=1;startArrow=none;endArrow=block;exitX=0.9974399273212139;exitY=0.8413976524871195;entryX=0.49408021907216493;entryY=-0.012121142763080019;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;YPAxg7wEys1kg9rIgMSj-3\&quot; target=\&quot;YPAxg7wEys1kg9rIgMSj-11\&quot;&gt;\n &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n &lt;Array as=\&quot;points\&quot;&gt;\n &lt;mxPoint x=\&quot;1094\&quot; y=\&quot;189\&quot; /&gt;\n &lt;/Array&gt;\n &lt;/mxGeometry&gt;\n &lt;/mxCell&gt;\n &lt;/root&gt;\n &lt;/mxGraphModel&gt;\n &lt;/diagram&gt;\n&lt;/mxfile&gt;\n&quot;}"></div>
  <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
- ![[8teilnehmer.drawio.svg]]
+![img](./8teilnehmer.drawio.svg)
 
 
 - 300 Teilnehmer?
@@ -92,7 +92,7 @@ Bestimmt. Dabei bezieht sich $e$ auf die Anzahl der vollständigen Ebenen unterh
 >\text{Oktalsystem} & \text{acht} & 0 \ | \ 1 \ | \ 2 \ | \ 3 \ | \ 4 \ | \ 5 \ | \ 6 \ | \ 7 \ | \ - \ | \ - \\
 >\text{Dualsystem/Binärsystem} & \text{zwei} & 0 \ | \ 1 \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \ | \ - \\
 >\hline
->\end{array}
+\end{array}
 >$$
 >
 >Tabelle 1: Zahlensysteme werden häufig entsprechend der Mächtigkeit ihres Alphabets benannt.
@@ -116,40 +116,44 @@ $0→1→2→3→4→5→6→7→8→9→A→B→C→D→E→F$
 
 - 16
 	- Binär:
-	$$
-\begin{aligned}
-16 \div 2 &= 8 \quad R \quad 0 \\
-8 \div 2 &= 4 \quad R \quad 0 \\
-4 \div 2 &= 2 \quad R \quad 0 \\
-2 \div 2 &= 1 \quad R \quad 0 \\
-1 \div 2 &= 0 \quad R \quad 1 \\
-\end{aligned}
-\quad\Bigg\uparrow
-$$
-	$Binär: \ 10000$
+		$$
+		\begin{aligned}
+		16 \div 2 &= 8 \quad R \quad 0 \\
+		8 \div 2 &= 4 \quad R \quad 0 \\
+		4 \div 2 &= 2 \quad R \quad 0 \\
+		2 \div 2 &= 1 \quad R \quad 0 \\
+		1 \div 2 &= 0 \quad R \quad 1 \\
+		\end{aligned}
+		\quad\Bigg\uparrow
+		$$
+		$Binär: \ 10000$
 
 	- Hexadezimal:
-$$
-\begin{aligned}
-16 \div 16 &= 1 \quad R \quad 0 \\
-1 \div 16 &= 0 \quad R \quad 1 \\
-\end{aligned}
-\quad\Bigg\uparrow
-$$
-	$Hexadezimal: \ 10$
+		$$
+		\begin{aligned}
+		16 \div 16 &= 1 \quad R \quad 0 \\
+		1 \div 16 &= 0 \quad R \quad 1 \\
+		\end{aligned}
+		\quad\Bigg\uparrow
+		$$
+		$Hexadezimal: \ 10$
 
 - 127
 	- Binär: 1111111
 	- Hexa: 7F
+
 - 168
 	- Binär: 10101000
 	- Hexa: A8
+
 - 172
 	- Binär: 10101100
 	- Hexa: AC
+
 - 192
 	- Binär: 11000000
 	- Hexa: C0
+
 - 255
 	- Binär: 11111111
 	- Hexa: FF
