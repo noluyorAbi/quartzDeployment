@@ -5,9 +5,11 @@ tags:
   - "#BaySta"
 fach: "[[BaySta]]"
 date created: Monday, 22. April 2024, 23:34
-date modified: Thursday, 25. April 2024, 22:39
+date modified: Friday, 26. April 2024, 00:34
 ---
 
+>[!quote] Laplace, Ramsey, de Finetti:
+>” Die Wahrscheinlichkeit eines Ereignisses ist der Grad der Überzeugung, mit der ein Beobachter aufgrund eines bestimmten Informationsstandes an das Eintreten eines Ereignisses glaubt"
 # [Kapitel-Webseite](http://bayeskurs.volkerschmid.de/)
 # [[BaySta-Kapitel]]
 
