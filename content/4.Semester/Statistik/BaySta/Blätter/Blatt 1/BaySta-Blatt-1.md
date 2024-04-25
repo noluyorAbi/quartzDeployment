@@ -6,8 +6,10 @@ tags:
   - Übungsblatt
 fach: "[[BaySta]]"
 Thema:
+  - "[[Unterschied zwischen Stetigkeit und Diskretheit]]"
+  - "[[Priori und Posteriori Wahrscheinlichkeit]]"
 date created: Monday, 22. April 2024, 23:35
-date modified: Thursday, 25. April 2024, 18:55
+date modified: Thursday, 25. April 2024, 22:41
 ---
 
 # TODO:
@@ -242,6 +244,7 @@ P_{AG}(\overline{T} | K) = 0.10
 $$
 
 # Aufgabe 3
+## [[Unterschied zwischen Stetigkeit und Diskretheit]]
 
 >[!note] Aufgabenstellung
 Wir betrachten ein Binomial-Experiment. Sei $x \sim B(n, \pi)$. Wir betrachten im Folgenden zwei Ansätze:
@@ -251,7 +254,15 @@ Wir betrachten ein Binomial-Experiment. Sei $x \sim B(n, \pi)$. Wir betrachten i
 
 ## (a) Ausgehend von Laplace' Prinzip vom unzureichenden Grund: Wie sieht in beiden Fällen die Priori von $\pi$ aus?
 
+*1.Fall:*
+- $\pi$ ist stetig 
+
+
 ## (b) Leiten Sie jeweils die Posteriori für $\pi|x$ her.
+
+$$
+p(\pi|x)=\frac{f(x|\pi)f(\pi)}{f(x)}
+$$
 
 ## (c) Berechnen Sie jeweils den Posteriori-Erwartungswert und den Posteriori-Median für folgende Daten:
 

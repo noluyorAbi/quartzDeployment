@@ -5,15 +5,13 @@ tags:
   - "#BaySta"
 fach: "[[BaySta]]"
 date created: Monday, 22. April 2024, 23:34
-date modified: Thursday, 25. April 2024, 16:07
+date modified: Thursday, 25. April 2024, 22:39
 ---
 
 # [Kapitel-Webseite](http://bayeskurs.volkerschmid.de/)
 # [[BaySta-Kapitel]]
 
 ## [[BaySta-Verzeichnis-Erklärungen]]
-
-# [Moodle](https://moodle.lmu.de/course/view.php?id=32800)
 
 # Zeitplan
 

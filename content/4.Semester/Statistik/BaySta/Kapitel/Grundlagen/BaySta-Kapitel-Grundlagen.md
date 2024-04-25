@@ -7,7 +7,7 @@ tags:
 fach: "[[BaySta]]"
 Thema:
 date created: Wednesday, 24. April 2024, 23:58
-date modified: Thursday, 25. April 2024, 15:42
+date modified: Thursday, 25. April 2024, 22:24
 ---
 
 # Grundlagen
@@ -464,7 +464,7 @@ Im weiteren Verlauf des Kurses werden wir folgende Themen vertiefen:
 > - lässt keine Aussage über die Information ihrer Verteilung zu.
 > - deutet auf wenig Information hin.
 > - deutet auf viel Information hin.
->>[!success] - Lösung
+>>[!success]- Lösung
 >> deutet auf wenig Information hin.
 
 >[!faq] Für die Bayes-Formel braucht man…
@@ -472,26 +472,26 @@ Im weiteren Verlauf des Kurses werden wir folgende Themen vertiefen:
 > - eine Daten-Dichte
 > - eine Priori-Dichte
 > - eine Kanten-Dichte
->>[!success] - Lösung
+>>[!success]- Lösung
 >> eine Daten-Dichte und eine Priori-Dichte
 
 >[!faq] Das Zeichen $\propto$ bedeutet…
 > - approximativ gleich
 > - proportional gleich
 > - in etwa gleich
->>[!success] - Lösung
+>>[!success]- Lösung
 >> proportional gleich
 
 >[!faq] In der Bayes-Statistik kann ein Parameter einer Datenverteilung…
 > - eine Zufallszahl sein.
 > - unbekannt sein.
 > - gegeben sein.
->>[!success] - Lösung
+>>[!success]- Lösung
 >> unbekannt sein.
 
 >[!faq] Wie lautet die Bayes-Formel?
 > - $\text{Posteriori} = \frac{\text{Likelihood} \cdot \text{Normalisierungskonstante}}{\text{Priori}}$
 > - $\text{Posteriori} = \frac{\text{Likelihood} \cdot \text{Priori}}{\text{Normalisierungskonstante}}$
 > - $\text{Posteriori} = \frac{\text{Priori} \cdot \text{Normalisierungskonstante}}{\text{Likelihood}}$
->>[!success] - Lösung
+>>[!success]- Lösung
 >> $\text{Posteriori} = \frac{\text{Likelihood} \cdot \text{Priori}}{\text{Normalisierungskonstante}}$

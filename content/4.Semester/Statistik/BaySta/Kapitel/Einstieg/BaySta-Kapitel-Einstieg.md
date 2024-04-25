@@ -7,7 +7,7 @@ fach: "[[BaySta]]"
 Thema:
   - "[[Priori und Posteriori Wahrscheinlichkeit]]"
 date created: Wednesday, 24. April 2024, 21:17
-date modified: Wednesday, 24. April 2024, 23:56
+date modified: Thursday, 25. April 2024, 22:23
 ---
 
 # Kurze Wiederholung der Theorie der Wahrscheinlichkeit
@@ -641,3 +641,5 @@ Sei $D$ die Zufallsvariable: _Der Sportler ist gedopt_ und $T$ die Zufalls
 > - Satz von Pythagoras
 >>[!success]- Lösung
 >> Satz von Bayes
+
+# Nächstes Kapitel: [[BaySta-Kapitel-Grundlagen]]
