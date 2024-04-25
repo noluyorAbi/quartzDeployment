@@ -7,9 +7,12 @@ tags:
 fach: "[[BaySta]]"
 Thema:
 date created: Monday, 22. April 2024, 23:35
-date modified: Thursday, 25. April 2024, 18:32
+date modified: Thursday, 25. April 2024, 18:55
 ---
 
+# TODO:
+
+- [ ] [[BaySta-Blatt-1#Aufgabe 2#(e) Wie hoch ist die Wahrscheinlichkeit, dass eine Person bei der bei diesem Vorgehen der PCR-Test positiv ist, tatsächlich Corona-infiziert ist?|BaySta-Aufgabe2-2e nochmal machen]]
 
 # Aufgabe 1
 
@@ -143,11 +146,14 @@ $$
 P(\text{"Krank" | "Starke Symptome"})=0.01
 $$
 
-## (e) Wie hoch ist die Wahrscheinlichkeit, dass eine Person bei der bei diesem Vorgehen der PCR-Test positiv ist, tatsächlich Corona-infiziert ist? 
+## (e) Wie hoch ist die Wahrscheinlichkeit, dass eine Person bei der bei diesem Vorgehen der PCR-Test positiv ist, tatsächlich Corona-infiziert ist?
 
 #Frage 
 
->[!bug] Saß zu lange an dieser Aufgabe, hab aufgegeben 🪦
+>[!bug] Saß zu lange an dieser Aufgabe, hab aufgegeben (easily 1.5h+ input) 🪦
+>- Welche Schritte wie das ganze angehen? 
+>- Meine probierte Lösung ist unter dem Trennstrich
+>- Es fehlt $P(K)$ bzw $P( K | \overline S )$
 ### Gesucht
 
 Die Wahrscheinlichkeit $P(\text{Krank} | T)$, dass eine Person, die einen positiven PCR-Test hat, tatsächlich mit Corona infiziert ist, nachdem zuvor ein positiver Antigen-Test vorliegt.
@@ -219,6 +225,21 @@ P_{AG}(K\space|\space T) &= \frac{P_{AG}(T | K) \cdot P(K)}{P_{AG}(T)}\\
 $$
 
 ## (f) Wie hoch ist die Wahrscheinlichkeit, dass eine infizierte Person nicht erkannt wird?
+
+#Frage Ist das nicht gleich zur Teilaufgabe davor?
+
+### Gesucht:
+
+$$
+P(\text{"Test negativ" | "Krank"})=P_{AG}(\overline T|K)
+$$
+
+$$
+P_{AG}(\overline{T} | K) = 1 - P_{AG}(T | K) = 1 - 0.90 = 0.10
+$$
+$$
+P_{AG}(\overline{T} | K) = 0.10
+$$
 
 # Aufgabe 3
 
