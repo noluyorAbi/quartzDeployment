@@ -9,7 +9,7 @@ Thema:
   - "[[Unterschied zwischen Stetigkeit und Diskretheit]]"
   - "[[Priori und Posteriori Wahrscheinlichkeit]]"
 date created: Monday, 22. April 2024, 23:35
-date modified: Friday, 26. April 2024, 01:12
+date modified: Friday, 26. April 2024, 01:30
 ---
 
 # TODO:
@@ -539,11 +539,14 @@ $$
 E[\pi] = \frac{a}{a+b} = \frac{34}{968} \approx0.0351
 $$
 
+### Posteriori-Median
+
+
 ## Fall 2: Diskrete Gleichverteilung von $\pi$
 
 ### Priori
 
-$\pi \space diskret \space verteilt \space auf \space [0,0.01,0.02,...,0.99,1] \space und \space jeder \space Wert \space gleich \space verteilt$
+$\pi \space diskret \space verteilt \space auf \space [0,0.01,0.02,…,0.99,1] \space und \space jeder \space Wert \space gleich \space verteilt$
 
 ### Likelihood
 
@@ -553,11 +556,111 @@ $$
 ### Posteriori
 
 $$
-E[\pi] \approx \sum\limits^{100}_{k=0}\pi_{k}\cdot P(\pi =\pi_{k}|x=33,n=1000)
+\pi_{k}^{33}(1-\pi_{k})^{967}
 $$
+### Posteriori-Erwartungswert
+
+$$
+\begin{aligned}
+E[\pi] &\approx \sum\limits^{100}_{k=0}\pi_{k}\cdot P(\pi =\pi_{k}|x=33,n=1000)\\
+&\approx 0.03382706
+\end{aligned}
+$$
+>[!info]- R-Code zur Berechnung
+> #Frage gibt es einen anderen Weg zur Berechnung?
+> ```r
+> # Angenommene Werte
+> x <- 33  # Anzahl der Erfolge
+> n <- 1000  # Gesamtzahl der Versuche
+> 
+> # Diskrete Werte für pi
+> pi_values <- seq(0, 1, by = 0.01)
+> 
+> # Priori-Wahrscheinlichkeiten (gleich für alle Werte)
+> prior_probs <- rep(1/length(pi_values), length(pi_values))
+> 
+> # Likelihood-Funktion für jeden Wert von pi berechnen
+> likelihoods <- dbinom(x, size = n, prob = pi_values)
+> 
+> # Posteriori-Wahrscheinlichkeiten berechnen
+> post_probs <- likelihoods * prior_probs
+> post_probs <- post_probs / sum(post_probs)  # Normalisierung
+> 
+> # Posteriori-Erwartungswert berechnen
+> posterior_mean <- sum(pi_values * post_probs)
+> 
+> # Ausgabe des Posteriori-Erwartungswertes
+> print(posterior_mean)
+> ```
+
+### Posteriori-Median
+
+$$
+\begin{aligned}
+\text{Median}[\pi] &= \pi_{k} \text{, für das gilt } \sum\limits_{i=0}^{k}P(\pi =\pi_{i}|x=33,n=1000) \geq 0.5\\
+&= 0.03
+\end{aligned}
+$$
+
+Hierbei repräsentiert $pi_{k}$ den Wert der diskreten Zufallsvariablen $pi$ an der Stelle $k$ auf dem Gitter, und $P(\pi =\pi_{i}|x=33,n=1000)$ sind die Posteriori-Wahrscheinlichkeiten, kumuliert bis zum Punkt, wo die Summe zum ersten Mal $0,5$ übersteigt, was den Median definiert.
+
+>[!info]- R-Code zur Berechnung
+> #Frage gibt es einen anderen Weg zur Berechnung?
+> ```r
+> # Kumulative Posteriori-Wahrscheinlichkeiten berechnen
+> cumulative_post_probs <- cumsum(post_probs)
+> 
+> # Finde den Posteriori-Median
+> # Dies ist der erste Wert von pi, bei dem die kumulative Wahrscheinlichkeit >= 0.5 ist.
+> posterior_median <- pi_values[which(cumulative_post_probs >= 0.5)[1]]
+> 
+> # Ausgabe des Posteriori-Medians
+> print(posterior_median)
+> ```
 
 ## (d) Vergleichen Sie die Posteriori-Erwartungswerte und -Mediane mit beiden Ansätzen.
 
+>[!success] Lösung
+> 
+> ### Stetige Gleichverteilung (Fall 1)
+> 
+> Für den stetigen Fall haben wir eine Beta-Verteilung als Priori genommen und aufgrund der beobachteten Daten die Parameter aktualisiert. Wir hatten dabei angenommen, dass $n = 1000$ und $x = 33$. Die Posteriori-Verteilung wäre dementsprechend eine $\text{Beta}(34, 968)$-Verteilung.
+> 
+> - **Posteriori-Erwartungswert:**
+> $$
+> E[\pi] = \frac{\alpha}{\alpha + \beta} = \frac{34}{34 + 968} = \frac{34}{1002} \approx 0.0339
+> $$
+> 
+> - **Posteriori-Median:**
+> Für Beta-Verteilungen ist eine geschlossene Form für den Median nicht einfach zu berechnen, aber der Median einer \( \text{Beta}(34, 968) \)-Verteilung liegt nahe am Erwartungswert und ist wegen der Schiefe der Verteilung etwas niedriger als der Erwartungswert.
+> 
+> ### Diskrete Gleichverteilung (Fall 2)
+> 
+> Im diskreten Fall haben wir ein Gitter von möglichen Werten für \( \pi \) betrachtet und für jeden dieser Werte die Posteriori-Wahrscheinlichkeiten berechnet.
+> 
+> - **Posteriori-Erwartungswert:**
+> $$
+> E[\pi] \approx 0.03382706
+> $$
+> 
+> - **Posteriori-Median:**
+> $$
+> \text{Median}[\pi] = 0.03
+> $$
+> 
+> ### Vergleich der Ansätze
+> 
+> - **Erwartungswerte:**
+> Die Posteriori-Erwartungswerte sind sehr ähnlich, aber nicht identisch, was auf die diskrete Natur des zweiten Ansatzes zurückzuführen ist.
+> 
+> - **Mediane:**
+> Der Median im diskreten Fall ist explizit angegeben und etwas niedriger als der Erwartungswert. Im stetigen Fall haben wir den genauen Median nicht berechnet, aber aufgrund der Schiefe der Beta-Verteilung können wir erwarten, dass er ebenfalls etwas niedriger als der Erwartungswert ist.
+> 
+> ### Interpretation
+> 
+> In beiden Fällen spiegeln die Posteriori-Erwartungswerte und -Mediane die aktualisierte Überzeugung über die Erfolgswahrscheinlichkeit nach Berücksichtigung der beobachteten Daten wider. Der Erwartungswert gibt dabei einen zentralen Tendenzpunkt an, während der Median eine alternative punktuelle Schätzung ist, die von Extremwerten weniger beeinflusst wird.
+> 
+> Die Nähe der Ergebnisse zeigt, dass beide Ansätze zu ähnlichen Schlussfolgerungen führen, was die Robustheit der Bayesschen Analyse unterstreicht. In der Praxis würde die Wahl zwischen den Ansätzen von der Art der verfügbaren Informationen und der gewünschten Feinheit der Analyse abhängen.
 ## (e) Welchen Ansatz würden Sie eher bevorzugen?
 
 # Aufgabe 4
