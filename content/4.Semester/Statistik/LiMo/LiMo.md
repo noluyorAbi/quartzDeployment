@@ -1,10 +1,11 @@
 ---
+Thema:
 tags:
   - 4semester
   - statistik
 fach: 
 date created: Tuesday, 16. April 2024, 11:12
-date modified: Monday, 22. April 2024, 23:01
+date modified: Friday, 26. April 2024, 21:47
 ---
 
 # Übersicht der Studieninhalte
