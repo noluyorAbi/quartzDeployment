@@ -1,11 +1,12 @@
 ---
+Thema:
 tags:
   - 4semester
   - statistik
   - "#BaySta"
 fach: "[[BaySta]]"
 date created: Monday, 22. April 2024, 23:34
-date modified: Friday, 26. April 2024, 00:34
+date modified: Friday, 26. April 2024, 13:37
 ---
 
 >[!quote] Laplace, Ramsey, de Finetti:
@@ -14,6 +15,8 @@ date modified: Friday, 26. April 2024, 00:34
 # [[BaySta-Kapitel]]
 
 ## [[BaySta-Verzeichnis-Erklärungen]]
+
+## [[BaySta-Übungsblätter]]
 
 # Zeitplan
 
