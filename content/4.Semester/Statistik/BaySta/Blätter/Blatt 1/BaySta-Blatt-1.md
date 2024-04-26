@@ -9,7 +9,7 @@ Thema:
   - "[[Unterschied zwischen Stetigkeit und Diskretheit]]"
   - "[[Priori und Posteriori Wahrscheinlichkeit]]"
 date created: Monday, 22. April 2024, 23:35
-date modified: Friday, 26. April 2024, 13:52
+date modified: Friday, 26. April 2024, 13:48
 ---
 
 # TODO:
@@ -140,8 +140,6 @@ Diese Wahrscheinlichkeit gibt an, dass 10 % der tatsächlich infizierten Person
 
 >[!note] Aufgabenstellung
 >Alternativ ist folgendes Vorgehen üblich: Es werden nur Personen mit starken Symptomen getestet. Das betrifft etwa 2% der Personen. Wir können annehmen, dass unter diesen etwa 1% der Personen infiziert sind.
-
->[!warning] Es ändert sich nur die Prävalenz auf 0.01 ist einfach mies formuliert in der Aufgabenstellung
 ## (d) Formulieren Sie die hier dargestellten Ereignisse und Wahrscheinlichkeiten.
 
 $$
