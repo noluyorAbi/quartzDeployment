@@ -7,9 +7,10 @@ tags:
 fach: "[[Semester/4.Semester/Informatik/RNVS/RNVS]]"
 Thema: 
 date created: Friday, 19. April 2024, 09:18
-date modified: Monday, 22. April 2024, 23:31
+date modified: Friday, 26. April 2024, 09:31
 ---
 
+Gekommen bis: S.31
 # TODO
 
 - [x] Skript heraussuchen [completion:: 2024-04-25]
@@ -66,3 +67,16 @@ date modified: Monday, 22. April 2024, 23:31
 	- VS ist das Drumherum mit dem kommuniziert wird statt der Grundlage wie beim Rechnernetz
 - $Rechnernetz \subset Verteiltes \ System$ aber auch $Verteiltes \ System \subset  Rechnernetz$
 - Rechnernetz vs. Verteilte Systeme
+
+
+## Wer ist für den Datentransfer verantwortlich?
+- **In einem Rechnernetz:** Im Rechnernetz erfolgt der Datentransfer typischerweise durch die Geräte und Protokolle, die das Netzwerk bilden. Die Endgeräte (wie Computer und Server) und die Netzwerkinfrastruktur (wie Router und Switches) sind zusammen verantwortlich für den Datentransfer.
+- **In einem verteilten System:** In verteilten Systemen wird der Datentransfer oft vom System selbst initiiert und gesteuert. Das heißt, die Software, die das verteilte System bildet, bestimmt, wann und wie Daten zwischen den Komponenten des Systems übertragen werden.
+
+### Ist das Münchner Wissenschaftsnetz (MWN), das World Wide Web (WWW), SETI@HOME, das ARPANET, das X-WIN, Amazon ein Rechnernetz oder ein verteiltes System?
+- **Münchner Wissenschaftsnetz (MWN):** Das MWN ist ein Rechnernetz. Es stellt die physische und netzwerktechnische Infrastruktur zur Verfügung, die es Institutionen ermöglicht, miteinander zu kommunizieren und Ressourcen zu teilen.
+- **World Wide Web (WWW):** Das WWW ist ein verteiltes System. Es besteht aus Webseiten und Webservern, die über das Internet (ein Rechnernetz) verbunden sind und bei denen das System (Webserver und Browser) den Datentransfer automatisch handhabt.
+- **SETI@HOME:** SETI@HOME ist ein verteiltes System. Es nutzt die Rechenkapazität von Freiwilligen über das Internet, um Daten zu analysieren, die im Rahmen der Suche nach außerirdischem Leben gesammelt wurden. Die Koordination der Datendistribution und -verarbeitung wird von der zentralen SETI@HOME-Software gesteuert.
+- **ARPANET:** Das ARPANET war ein Rechnernetz, das als Vorläufer des Internets diente. Es verband Computer direkt miteinander und erlaubte den Austausch von Daten durch definierte Protokolle und Netzwerktechniken.
+- **X-WIN:** Ohne spezifische Informationen im Dokument ist es schwierig zu sagen, ob X-WIN als Rechnernetz oder verteiltes System eingestuft wird. Typischerweise würde dies aber als ein Rechnernetz betrachtet, wenn es eine Infrastruktur für Netzwerkkommunikation bietet.
+- **Amazon:** Amazon als Unternehmen nutzt verteilte Systeme, insbesondere in Bezug auf seine Cloud-Services und E-Commerce-Plattformen, die auf einer umfangreichen Rechnernetzinfrastruktur aufbauen. Amazon Web Services (AWS) zum Beispiel ist ein klar definiertes verteiltes System, das auf Rechnernetztechnologien basiert.
