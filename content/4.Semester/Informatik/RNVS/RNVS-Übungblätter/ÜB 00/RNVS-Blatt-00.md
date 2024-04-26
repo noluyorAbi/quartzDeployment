@@ -7,7 +7,7 @@ tags:
 fach: "[[Semester/4.Semester/Informatik/RNVS/RNVS]]"
 Thema: 
 date created: Friday, 19. April 2024, 01:50
-date modified: Thursday, 25. April 2024, 00:36
+date modified: Saturday, 27. April 2024, 00:33
 ---
 
 # Aufgabe 1: Anforderungen des Internets (H)
