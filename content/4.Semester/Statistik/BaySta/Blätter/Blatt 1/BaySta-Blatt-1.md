@@ -9,7 +9,7 @@ Thema:
   - "[[Unterschied zwischen Stetigkeit und Diskretheit]]"
   - "[[Priori und Posteriori Wahrscheinlichkeit]]"
 date created: Monday, 22. April 2024, 23:35
-date modified: Friday, 26. April 2024, 02:00
+date modified: Friday, 26. April 2024, 13:48
 ---
 
 # TODO:
@@ -121,6 +121,9 @@ Die Wahrscheinlichkeit, dass eine Person tatsächlich Corona-infiziert ist, nach
 >Es ist wichtig, den Unterschied zu verstehen: $P(\overline{T} | K)$ gibt die Wahrscheinlichkeit an, dass der Test negativ ist, obwohl die Person infiziert ist. Dies ist relevant, um die Zuverlässigkeit des Tests zu bewerten. Hingegen bedeutet $P(K | \overline{T})$, dass eine Person tatsächlich infiziert ist, obwohl ihr Test negativ ausgefallen ist. Diese Wahrscheinlichkeit ist wichtig, um das Risiko einer unerkannten Infektion bei einem negativen Testergebnis einzuschätzen.
 
 Die Wahrscheinlichkeit, dass der Antigen-Test negativ ist, obwohl die Person infiziert ist (Fehlalarmrate oder Fehler 2. Art), ist das Komplement der Sensitivität des Tests:
+
+- [ ] Baysta-Blatt-1-2c ausbessern
+>[!warning] Der Fall Antigen positiv PCR negativ fehlt
 
 $$
 P_{AG}(\overline{T} | K) = 1 - P_{AG}(T | K) = 1 - 0.90 = 0.10
