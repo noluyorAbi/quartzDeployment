@@ -282,7 +282,7 @@ Berechnet die Hälfte eines vollständigen Binärbaumes ohne Wurzelknoten
 
 - 16
 
-#### Wie man die Aufgabe löst:
+>[!note] #### Wie man die Aufgabe löst:
 
 **Beispiel an i:**
 
