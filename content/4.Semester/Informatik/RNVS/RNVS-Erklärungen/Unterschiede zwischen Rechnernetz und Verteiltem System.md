@@ -13,6 +13,15 @@ date modified: Friday, 26. April 2024, 22:42
 
 # Unterschiede zwischen Rechnernetz und Verteiltem System
 
+>[!tip] Merkhilfe
+>**Rechnernetz:**
+>- keine gemeinsame Aufgabe
+>- unabhängig voneinander
+>
+>**Verteiltes System:**
+>- gemeinsame Aufgabe
+>- abhängig
+
 In der Welt der Informationstechnologie sind "Rechnernetz" und "Verteiltes System" zwei fundamentale Konzepte, die oft miteinander verwechselt werden. Obwohl beide Konzepte Netzwerktechnologien involvieren, unterscheiden sie sich in ihrer Struktur, ihrem Zweck und ihrer Funktionsweise.
 
 ## Rechnernetz (Computer-Netzwerk)
@@ -40,7 +49,9 @@ Der Hauptunterschied zwischen einem Rechnernetz und einem verteilten System lieg
 - **Kommunikation vs. Kooperation**: Ein Rechnernetz ermöglicht vor allem die Kommunikation zwischen den angeschlossenen Geräten, ohne eine gemeinsame Aufgabe zu erfüllen. Ein verteiltes System hingegen nutzt die Verbindung zwischen den Computern, um eine spezifische, oft komplexe Aufgabe gemeinsam zu bearbeiten und zu lösen.
 - **Unabhängigkeit vs. Abhängigkeit**: In einem Netzwerk operiert jedes Gerät unabhängig, während in einem verteilten System die Computer voneinander abhängig sind, um die gemeinsame Aufgabe zu erfüllen.
 
-**Rechnernet**
+
+
+
 
 ### Fazit
 
