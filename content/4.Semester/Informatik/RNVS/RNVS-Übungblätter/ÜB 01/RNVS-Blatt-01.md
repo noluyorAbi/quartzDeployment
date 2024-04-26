@@ -8,7 +8,7 @@ fach: "[[RNVS]]"
 Thema: 
 Benötigte Zeit:
 date created: Friday, 26. April 2024, 21:46
-date modified: Friday, 26. April 2024, 22:23
+date modified: Friday, 26. April 2024, 22:36
 ---
 
 # 1. Rechnernetze und verteilte Systeme (H)
@@ -27,6 +27,11 @@ date modified: Friday, 26. April 2024, 22:23
 ## (c) Das World Wide Web
 ## (d) Der SuperMUC-NG
 ## (e) Ihr eigenes Beispiel
+
+
+**Rechnernetz:** Ein Rechnernetz ist eine Sammlung von Computern, Servern, Hauptrechnern oder anderen Geräten, die miteinander verbunden sind, um Ressourcen auszutauschen und Kommunikation zu ermöglichen. Die Verbindungen können über Kabel, Telefonleitungen, Funkwellen, Satelliten oder andere Übertragungsmedien erfolgen. Ein Rechnernetz ermöglicht den Austausch von Daten und Ressourcen zwischen den angeschlossenen Geräten.
+
+**Verteiltes System:** Ein verteiltes System ist eine Gruppe von unabhängigen Computern, die dem Benutzer gegenüber als ein kohärentes System erscheinen. Diese Systeme arbeiten zusammen, um gemeinsame Ziele zu erreichen, und teilen sich dabei Ressourcen oder Aufgaben über ein Netzwerk. Verteilte Systeme sind darauf ausgelegt, Effizienz, Skalierbarkeit und Zuverlässigkeit zu verbessern, indem sie Aufgaben und Ressourcen über mehrere Knoten verteilen, die geografisch getrennt sein können.
 
 # 2. Grundlagen (H)
 
