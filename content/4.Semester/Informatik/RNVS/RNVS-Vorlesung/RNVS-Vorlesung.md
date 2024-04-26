@@ -3,8 +3,8 @@ tags:
   - 4semester
   - RNVS
   - vorlesung
-fach: "[[RNVS]]"
-Thema:
+fach: "[[Semester/4.Semester/Informatik/RNVS/RNVS]]"
+Thema: 
 date created: Sunday, 21. April 2024, 15:32
 date modified: Sunday, 21. April 2024, 15:34
 ---

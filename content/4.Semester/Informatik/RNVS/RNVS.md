@@ -3,7 +3,7 @@ tags:
   - 4semester
   - RNVS
   - informatik
-fach: "[[RNVS]]"
+fach: "[[Semester/4.Semester/Informatik/RNVS/RNVS]]"
 date created: Friday, 19. April 2024, 02:28
 date modified: Wednesday, 24. April 2024, 19:15
 ---

@@ -18,7 +18,7 @@ date modified: Wednesday, 24. April 2024, 18:24
 - [[DBS|Datenbanksysteme (DBS)]]
 - [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/) *(another site created by a fellow student)*
 - [[FSK|Formale Sprachen und Komplexität (FSK)]] (active)
-- [[RNVS|Rechnernetze und Verteilte Systeme (RNVS)]] (active)
+- [[Semester/4.Semester/Informatik/RNVS/RNVS|Rechnernetze und Verteilte Systeme (RNVS)]] (active)
 - [[Bachelorseminar-Software Security]] (active)
 ### Statistik
 - [[Uni2/Semester/4.Semester/Statistik/BaySta/Vorlesung/LiMo|LiMo]] 
