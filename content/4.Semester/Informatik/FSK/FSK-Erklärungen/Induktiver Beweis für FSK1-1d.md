@@ -4,10 +4,10 @@ tags:
   - FSK
   - informatik
   - Übungsblatt
-fach: "[[FSK-Template|FSK-Template]]"
+fach: "[[FSK]]"
 Thema: 
 date created: Wednesday, 24. April 2024, 00:14
-date modified: Wednesday, 24. April 2024, 00:14
+date modified: Friday, 26. April 2024, 02:05
 ---
 
 # Beweis der Eigenschaft $L^* \subseteq L$

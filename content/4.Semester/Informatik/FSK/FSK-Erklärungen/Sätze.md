@@ -4,10 +4,10 @@ tags:
   - FSK
   - informatik
   - Erklaerung
-fach: "[[FSK-Template|FSK-Template]]"
+fach: "[[FSK]]"
 Thema: 
 date created: Wednesday, 24. April 2024, 01:02
-date modified: Wednesday, 24. April 2024, 01:04
+date modified: Friday, 26. April 2024, 02:07
 ---
 
 # Sätze in der Theorie Formaler Sprachen

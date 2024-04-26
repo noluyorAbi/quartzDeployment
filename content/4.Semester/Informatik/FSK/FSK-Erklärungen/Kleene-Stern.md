@@ -4,10 +4,10 @@ tags:
   - FSK
   - informatik
   - Erklaerung
-fach: "[[FSK-Template|FSK-Template]]"
+fach: "[[FSK]]"
 Thema: 
 date created: Wednesday, 24. April 2024, 00:05
-date modified: Wednesday, 24. April 2024, 00:07
+date modified: Friday, 26. April 2024, 02:05
 ---
 
 # Der Kleene-Stern und die Sprache L

@@ -9,14 +9,13 @@ Thema:
   - "[[Unterschied zwischen Stetigkeit und Diskretheit]]"
   - "[[Priori und Posteriori Wahrscheinlichkeit]]"
 date created: Monday, 22. April 2024, 23:35
-date modified: Friday, 26. April 2024, 01:30
+date modified: Friday, 26. April 2024, 02:00
 ---
 
 # TODO:
 
 - [ ] [[BaySta-Blatt-1#Aufgabe 2#(e) Wie hoch ist die Wahrscheinlichkeit, dass eine Person bei der bei diesem Vorgehen der PCR-Test positiv ist, tatsächlich Corona-infiziert ist?|BaySta-1-2e nochmal machen]]
 - [ ] [[BaySta-Blatt-1#Aufgabe 3|BaySta 1-3 checken]]
-- [ ] 
 
 # Aufgabe 1
 
@@ -230,7 +229,7 @@ $$
 
 ## (f) Wie hoch ist die Wahrscheinlichkeit, dass eine infizierte Person nicht erkannt wird?
 
-#Frage Ist das nicht gleich zur Teilaufgabe davor?
+Frage:: #Frage Ist das nicht gleich zur Teilaufgabe davor?
 
 ### Gesucht:
 
@@ -620,7 +619,15 @@ Hierbei repräsentiert $pi_{k}$ den Wert der diskreten Zufallsvariablen $pi$ an 
 
 ## (d) Vergleichen Sie die Posteriori-Erwartungswerte und -Mediane mit beiden Ansätzen.
 
->[!success] Lösung
+> [!summary] Zusammenfassung der Lösung
+> 
+> ### Vergleich von Posteriori-Erwartungswerten und Medianen
+> 
+> Die Analyse für $n = 1000$ und $x = 33$ ergibt sowohl im stetigen als auch im diskreten Fall ähnliche Posteriori-Erwartungswerte, mit einem geringfügig höheren Wert im stetigen Fall ($E[\pi] \approx 0.0339$) verglichen mit dem diskreten Fall ($E[\pi] \approx 0.03382706$). Der Posteriori-Median im diskreten Fall ($\text{Median}[\pi] = 0.03$) fällt niedriger aus, was typisch ist, da Mediane durch Extremwerte weniger beeinflusst werden. Im stetigen Fall wurde der Median nicht direkt berechnet, würde aber ähnlich liegen und leicht unter dem Erwartungswert, aufgrund der Schiefe der Beta-Verteilung.
+> 
+> Diese Ergebnisse illustrieren die Konsistenz der Bayesschen Methodik, da beide Ansätze trotz ihrer Unterschiede in Stetigkeit und Diskretheit zu vergleichbaren Schlüssen führen. Die Wahl des Ansatzes sollte auf den spezifischen Kontext der verfügbaren Daten und den gewünschten Detaillierungsgrad der Analyse abgestimmt werden. 
+
+>[!success] Ausführliche Lösung
 > 
 > ### Stetige Gleichverteilung (Fall 1)
 > 
@@ -632,11 +639,11 @@ Hierbei repräsentiert $pi_{k}$ den Wert der diskreten Zufallsvariablen $pi$ an 
 > $$
 > 
 > - **Posteriori-Median:**
-> Für Beta-Verteilungen ist eine geschlossene Form für den Median nicht einfach zu berechnen, aber der Median einer \( \text{Beta}(34, 968) \)-Verteilung liegt nahe am Erwartungswert und ist wegen der Schiefe der Verteilung etwas niedriger als der Erwartungswert.
+> Für Beta-Verteilungen ist eine geschlossene Form für den Median nicht einfach zu berechnen, aber der Median einer $\text{Beta}(34, 968)$-Verteilung liegt nahe am Erwartungswert und ist wegen der Schiefe der Verteilung etwas niedriger als der Erwartungswert.
 > 
 > ### Diskrete Gleichverteilung (Fall 2)
 > 
-> Im diskreten Fall haben wir ein Gitter von möglichen Werten für \( \pi \) betrachtet und für jeden dieser Werte die Posteriori-Wahrscheinlichkeiten berechnet.
+> Im diskreten Fall haben wir ein Gitter von möglichen Werten für $\pi$ betrachtet und für jeden dieser Werte die Posteriori-Wahrscheinlichkeiten berechnet.
 > 
 > - **Posteriori-Erwartungswert:**
 > $$
@@ -661,8 +668,47 @@ Hierbei repräsentiert $pi_{k}$ den Wert der diskreten Zufallsvariablen $pi$ an 
 > In beiden Fällen spiegeln die Posteriori-Erwartungswerte und -Mediane die aktualisierte Überzeugung über die Erfolgswahrscheinlichkeit nach Berücksichtigung der beobachteten Daten wider. Der Erwartungswert gibt dabei einen zentralen Tendenzpunkt an, während der Median eine alternative punktuelle Schätzung ist, die von Extremwerten weniger beeinflusst wird.
 > 
 > Die Nähe der Ergebnisse zeigt, dass beide Ansätze zu ähnlichen Schlussfolgerungen führen, was die Robustheit der Bayesschen Analyse unterstreicht. In der Praxis würde die Wahl zwischen den Ansätzen von der Art der verfügbaren Informationen und der gewünschten Feinheit der Analyse abhängen.
+
+
 ## (e) Welchen Ansatz würden Sie eher bevorzugen?
 
+
+---
+# Aufgabe 4
+
+>[!note] Aufgabenstellung
+>Betrachten Sie das Poisson-Modell, d.h. $X \sim Po(\lambda)$ und für den Parameter $\lambda$ wird eine $Ga(\alpha, \beta)$-Priori-Verteilung angenommen.
+
+## (a) Berechnen sie die Posteriori-Verteilung $p(\lambda|X)$ explizit, d.h. inklusive Normierungskonstante.
+
+>[!tip] Hinweis
+> $\Gamma(x) = \int_{0}^{\infty} t^{x-1} e^{-t} \, dt$.
+
+Die Posteriori-Verteilung ergibt sich aus dem Produkt der Likelihood-Funktion des Poisson-Modells und der Gamma-Priori-Verteilung. Für eine gegebene Anzahl von Ereignissen $x$ ist die Likelihood $L(\lambda) = \frac{e^{-\lambda} \lambda^x}{x!}$. Die Priori-Verteilung ist gegeben durch die Dichtefunktion der Gamma-Verteilung $f(\lambda) = \frac{\beta^\alpha}{\Gamma(\alpha)} \lambda^{\alpha - 1} e^{-\beta \lambda}$. 
+
+Das Produkt aus Likelihood und Priori ergibt die nicht normierte Posteriori-Verteilung:
+
+$$
+p(\lambda|X) \propto \lambda^{\alpha + x - 1} e^{-\lambda(\beta + 1)}
+$$
+
+Um die Normierungskonstante zu bestimmen, nutzen wir die Definition der Gamma-Funktion:
+
+$$
+\Gamma(\alpha + x) = \int_{0}^{\infty} t^{\alpha + x - 1} e^{-t} \, dt
+$$
+
+Die Posteriori-Verteilung, inklusive der Normierungskonstante, ist daher eine Gamma-Verteilung $Ga(\alpha + x, \beta + 1)$:
+
+$$
+p(\lambda|X) = \frac{(\beta + 1)^{\alpha + x}}{\Gamma(\alpha + x)} \lambda^{\alpha + x - 1} e^{-(\beta + 1)\lambda}
+$$
+
+## (b) Warum genügt es, die Posteriori nur bis auf eine multiplikative Konstante zu bestimmen?
+
+Es genügt, die Posteriori nur bis auf eine multiplikative Konstante zu bestimmen, weil wir meistens an den relativen Wahrscheinlichkeiten von $\lambda$ interessiert sind und nicht an den absoluten Wahrscheinlichkeiten. Für die meisten bayesianischen Inferenzprobleme, wie die Berechnung von Erwartungswerten oder die Bestimmung von Konfidenzintervallen, kürzt sich die Konstante heraus. Außerdem kann die Konstante oft komplex sein und ihre explizite Berechnung kann unnötig aufwändig sein, insbesondere wenn nur der Posteriori-Modus oder -Median und nicht die vollständige Posteriori-Verteilung von Interesse ist.
+
+---
 # Aufgabe 4
 
 >[!note] Aufgabenstellung

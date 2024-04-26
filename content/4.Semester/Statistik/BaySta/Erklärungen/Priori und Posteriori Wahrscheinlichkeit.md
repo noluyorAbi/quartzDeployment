@@ -1,4 +1,5 @@
 ---
+Benötigte Zeit:
 tags:
   - 4semester
   - BaySta
@@ -8,7 +9,7 @@ fach: "[[BaySta]]"
 Thema:
   - "[[BaySta-Kapitel-Einstieg]]"
 date created: Wednesday, 24. April 2024, 23:23
-date modified: Wednesday, 24. April 2024, 23:23
+date modified: Friday, 26. April 2024, 02:02
 ---
 
 # Priori und Posteriori Wahrscheinlichkeit
