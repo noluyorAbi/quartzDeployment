@@ -22,7 +22,6 @@ function coerceDate(fp: string, d: any): Date {
       ),
     )
   }
-
   return invalidDate ? new Date() : dt
 }
 

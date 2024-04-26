@@ -8,7 +8,7 @@ fach: "[[RNVS]]"
 Thema: "[[RNVS-Blatt-01]]"
 Benötigte Zeit:
 date created: Friday, 26. April 2024, 22:36
-date modified: Friday, 26. April 2024, 22:42
+date modified: Friday, 26. April 2024, 22:57
 ---
 
 # Unterschiede zwischen Rechnernetz und Verteiltem System
@@ -22,7 +22,7 @@ date modified: Friday, 26. April 2024, 22:42
 >- gemeinsame Aufgabe
 >- abhängig
 
-In der Welt der Informationstechnologie sind "Rechnernetz" und "Verteiltes System" zwei fundamentale Konzepte, die oft miteinander verwechselt werden. Obwohl beide Konzepte Netzwerktechnologien involvieren, unterscheiden sie sich in ihrer Struktur, ihrem Zweck und ihrer Funktionsweise.
+In der Welt der Informationstechnologie sind „Rechnernetz“ und „Verteiltes System“ zwei fundamentale Konzepte, die oft miteinander verwechselt werden. Obwohl beide Konzepte Netzwerktechnologien involvieren, unterscheiden sie sich in ihrer Struktur, ihrem Zweck und ihrer Funktionsweise.
 
 ## Rechnernetz (Computer-Netzwerk)
 
