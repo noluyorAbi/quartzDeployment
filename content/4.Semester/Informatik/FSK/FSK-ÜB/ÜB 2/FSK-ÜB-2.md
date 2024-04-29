@@ -95,6 +95,14 @@ P = \{A \rightarrow aBbc, A \rightarrow AaA, B \rightarrow CC, C \rightarrow BB\
 $$
 ### 3. Schritt ($\varepsilon$-kompensieren)
 
+$$
+\begin{aligned}
+P = \{A &\rightarrow aBbc \space|\space AaA \space|\space abc, \\
+B &\rightarrow CC\space|\space C,\\
+C &\rightarrow BB\}
+\end{aligned}
+$$
+
 # FSK2-2 DFAs und Minimierung (2 Punkte)
 
 ## a) Geben Sie DFAs an, die folgende Sprachen über dem Alphabet Σ = {a, b} erkennen:
