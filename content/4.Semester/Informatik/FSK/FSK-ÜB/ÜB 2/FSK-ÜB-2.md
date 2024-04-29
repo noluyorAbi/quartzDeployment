@@ -7,7 +7,10 @@ tags:
 fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
+date created: Monday, 29. April 2024, 11:52
+date modified: Monday, 29. April 2024, 12:14
 ---
+
 > [!info] 
 > Wenn Sie Automaten angeben, tun Sie dies immer in Form eines Zustandsgraphen. Andere Formen der Darstellung (z.B. als Liste von Übergängen) werden nicht gewertet, da sie sehr viel aufwändiger zu korrigieren sind. Vergessen Sie nicht, im Zustandsgraph Start- und Endzustände zu markieren.
 # FSK2-1 Grammatik und Elimination von ε-Produktionen (2 Punkte)
@@ -26,9 +29,9 @@ Geben Sie eine zu $G$ äquivalente Grammatik $G'$ ohne ε-Produktionen an. Verwe
 
 ## a) Geben Sie DFAs an, die folgende Sprachen über dem Alphabet Σ = {a, b} erkennen:
 
-### i) $L_1 = \{a^n w \ | \ c \in \Sigma^*, w \in \Sigma^*\}$
+### i) $L_1 = \{a^n W \ | \ c \in \Sigma^*, w \in \Sigma^*\}$
 
-### ii) $L_2 = \{a^n w b^n \ | \ w \in \Sigma^*\}$
+### ii) $L_2 = \{a^n W b^n \ | \ w \in \Sigma^*\}$
 
 (Das sind die gleichen Sprachen wie in Aufgabe FSK2-1.)
 
