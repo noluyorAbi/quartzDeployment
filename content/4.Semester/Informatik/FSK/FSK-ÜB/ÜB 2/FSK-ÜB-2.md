@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Monday, 29. April 2024, 23:35
+date modified: Tuesday, 30. April 2024, 00:27
 ---
 
 > [!info] 
@@ -41,26 +41,59 @@ $$
 
 - Alphabet: $\Sigma = \{a,b\}$
 - 4-Tupel Grammatikform $G = (N, \Sigma, P, S)$
-- $N: \{S,C,B\}$
+- $N: \{S,W,B\}$
+- $S:S$
+
+#### Erste Idee
 $$
 \begin{aligned}
 P: \{\\
-S &\rightarrow aa\space w\space \\
-S &\rightarrow A\space w\space B \\
-A &\rightarrow aA\space|\space bA \space|\space\varepsilon \\
-B &\rightarrow aB\space|\space bB \space|\space\varepsilon \\
+S &\rightarrow aaW \\
+W &\rightarrow aW \ | \ bW\ |\ B\ |\ \varepsilon \\
+B &\rightarrow bb\\
 \}
 \end{aligned}
 $$
-- $S:S$
+
 $$
-G = \{S,\{a,b\},\{\quad S \rightarrow A\space a\space B,\quad C \rightarrow aA\space|\space bA \space|\space\varepsilon, \quad B \rightarrow aB\space|\space bB \space|\space\varepsilon \quad \},S\}
+G = \{S,\{a,b\},\{\quad S \rightarrow aaW,\quad W \rightarrow aW \ | \ bW\ |\ B\ |\ \varepsilon, \quad B \rightarrow bb  \quad \},S\}
 $$
 
+#### Zweite Idee (Besser?)
 
-## b) Betrachten Sie die Grammatik $G = (\{A, B, C\}, \{a, b\}, P, A)$ mit Produktionen $P = \{A \rightarrow abBc, A \rightarrow AaA, B \rightarrow \varepsilon, B \rightarrow CC, C \rightarrow BB\}$
+$$
+\begin{aligned}
+P: \{\\
+S &\rightarrow aaWbb \\
+W &\rightarrow aW \ | \ bW\ |\ \varepsilon \\
+\}
+\end{aligned}
+$$
+$$
+G = \{S,\{a,b\},\{\quad S \rightarrow aaWbb,\quad W \rightarrow aW \ | \ bW\ |\ \varepsilon \quad \},S\}
+$$
+## b) Betrachten Sie die Grammatik $G = (\{A, B, C\}, \{a, b\}, P, A)$ mit Produktionen 
 
-Geben Sie eine zu $G$ äquivalente Grammatik $G'$ ohne ε-Produktionen an. Verwenden Sie den Algorithmus zur Elimination von ε-Produktionen aus der Vorlesung und geben Sie die Zwischenschritte Ihrer Berechnung an. (Das ermöglicht uns, Ihnen bei kleinen Fehlern noch Teilpunkte zu geben.)
+
+>[!info] Aufgabenstellung
+>
+>$$
+>P = \{A \rightarrow aBbc, A \rightarrow AaA, B \rightarrow \varepsilon, B \rightarrow CC, C \rightarrow BB\}
+>$$
+>Geben Sie eine zu $G$ äquivalente Grammatik $G'$ ohne ε-Produktionen an. Verwenden Sie den Algorithmus zur Elimination von ε-Produktionen aus der Vorlesung und geben Sie die Zwischenschritte Ihrer Berechnung an. (Das ermöglicht uns, Ihnen bei kleinen Fehlern noch Teilpunkte zu geben.)
+
+**Ziel: $\varepsilon$ eliminieren** 
+### 1. Schritt (ausfindig machen was $\varepsilon$ bildet)
+
+$$
+M=\{B,C\}
+$$
+### 2. Schritt ($\varepsilon$-freie Grammatik bilden -- $\varepsilon$ entfernen)
+
+$$
+P = \{A \rightarrow aBbc, A \rightarrow AaA, B \rightarrow CC, C \rightarrow BB\}
+$$
+### 3. Schritt ($\varepsilon$-kompensieren)
 
 # FSK2-2 DFAs und Minimierung (2 Punkte)
 
