@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Monday, 29. April 2024, 21:30
+date modified: Monday, 29. April 2024, 21:49
 ---
 
 > [!info] 
@@ -18,6 +18,17 @@ date modified: Monday, 29. April 2024, 21:30
 ## a) Geben Sie kontextfreie Grammatiken (ggf. mit ε-Produktionen) an, die folgende Sprachen über dem Alphabet Σ = {a, b} erkennen:
 
 ### i) $L_1 = \{a^n W \ | \ c \in \Sigma^*, w \in \Sigma^*\}$
+
+- Alphabet: $\Sigma = \{a,b\}$
+- 4-Tupel Grammatikform $G = (N, \Sigma, P, S)$
+- $N: \{S\}$
+- $P: \{S \rightarrow aS|bS|a|b\}$ 
+- $S:S$
+$$
+G = \{S,\{a,b\},\{S \rightarrow aS|bS|a|b\},S\}
+$$
+- reguläre Grammatik, da sie rechtslineare Produktionen verwendet.
+- a und b produzieren und Aneinanderreihungen von a und b 
 
 ### i) $L_2 = \{a^n W b^n \ | \ w \in \Sigma^*\}$
 
