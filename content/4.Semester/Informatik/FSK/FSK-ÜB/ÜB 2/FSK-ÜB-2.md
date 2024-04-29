@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Monday, 29. April 2024, 23:29
+date modified: Monday, 29. April 2024, 23:35
 ---
 
 > [!info] 
@@ -20,25 +20,43 @@ date modified: Monday, 29. April 2024, 23:29
 ### i) $L_1 = \{caw \ | \ c \in \Sigma^*, w \in \Sigma^*\}$
 
 - Alphabet: $\Sigma = \{a,b\}$
-- 
 - 4-Tupel Grammatikform $G = (N, \Sigma, P, S)$
-- $N: \{\}$
+- $N: \{S,C,B\}$
 $$
 \begin{aligned}
-P: \{
-C &\rightarrow aC|bC|A|E \\
-
-
+P: \{\\
+S &\rightarrow A\space a\space B \\
+C &\rightarrow aA\space|\space bA \space|\space\varepsilon \\
+B &\rightarrow aB\space|\space bB \space|\space\varepsilon \\
 \}
 \end{aligned}
 $$
 - $S:S$
 $$
-G = \{S,\{a,b\},\{S \rightarrow aS|bS|a|b\},S\}
+G = \{S,\{a,b\},\{\quad S \rightarrow A\space a\space B,\quad C \rightarrow aA\space|\space bA \space|\space\varepsilon, \quad B \rightarrow aB\space|\space bB \space|\space\varepsilon \quad \},S\}
 $$
 
 
-### i) $L_2 = \{aawbb \ | \ W \in \Sigma^*\}$
+### i) $L_2 = \{aawbb \ | \ w \in \Sigma^*\}$
+
+- Alphabet: $\Sigma = \{a,b\}$
+- 4-Tupel Grammatikform $G = (N, \Sigma, P, S)$
+- $N: \{S,C,B\}$
+$$
+\begin{aligned}
+P: \{\\
+S &\rightarrow aa\space w\space \\
+S &\rightarrow A\space w\space B \\
+A &\rightarrow aA\space|\space bA \space|\space\varepsilon \\
+B &\rightarrow aB\space|\space bB \space|\space\varepsilon \\
+\}
+\end{aligned}
+$$
+- $S:S$
+$$
+G = \{S,\{a,b\},\{\quad S \rightarrow A\space a\space B,\quad C \rightarrow aA\space|\space bA \space|\space\varepsilon, \quad B \rightarrow aB\space|\space bB \space|\space\varepsilon \quad \},S\}
+$$
+
 
 ## b) Betrachten Sie die Grammatik $G = (\{A, B, C\}, \{a, b\}, P, A)$ mit Produktionen $P = \{A \rightarrow abBc, A \rightarrow AaA, B \rightarrow \varepsilon, B \rightarrow CC, C \rightarrow BB\}$
 
