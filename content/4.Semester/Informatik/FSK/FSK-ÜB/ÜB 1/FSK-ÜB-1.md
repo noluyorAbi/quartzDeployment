@@ -4,12 +4,13 @@ tags:
   - Übungsblatt
   - FSK
   - informatik
-fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
+fach: "[[FSK]]"
 Thema:
   - "[[Beweisen]]"
   - "[[Endliche Geometrische Reihe]]"
+  - "[[Grammatiken]]"
 date created: Tuesday, 23. April 2024, 11:29
-date modified: Monday, 29. April 2024, 13:07
+date modified: Monday, 29. April 2024, 23:22
 ---
 
 # TODO:
