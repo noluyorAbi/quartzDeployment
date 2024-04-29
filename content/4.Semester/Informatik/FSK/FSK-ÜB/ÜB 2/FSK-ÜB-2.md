@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Tuesday, 30. April 2024, 00:27
+date modified: Tuesday, 30. April 2024, 01:25
 ---
 
 > [!info] 
@@ -78,9 +78,18 @@ $$
 >[!info] Aufgabenstellung
 >
 >$$
->P = \{A \rightarrow aBbc, A \rightarrow AaA, B \rightarrow \varepsilon, B \rightarrow CC, C \rightarrow BB\}
+>P = \{A \rightarrow aBbC, A \rightarrow AaA, B \rightarrow \varepsilon, B \rightarrow CC, C \rightarrow BB\}
 >$$
 >Geben Sie eine zu $G$ äquivalente Grammatik $G'$ ohne ε-Produktionen an. Verwenden Sie den Algorithmus zur Elimination von ε-Produktionen aus der Vorlesung und geben Sie die Zwischenschritte Ihrer Berechnung an. (Das ermöglicht uns, Ihnen bei kleinen Fehlern noch Teilpunkte zu geben.)
+
+<div style="position: relative; width: 100%; padding-top: 56.25%; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/7xL6JMaB5-A?si=pkFeeuZs08tEFAuf" title="YouTube video player" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+</div>
+
 
 **Ziel: $\varepsilon$ eliminieren** 
 ### 1. Schritt (ausfindig machen was $\varepsilon$ bildet)
@@ -91,15 +100,15 @@ $$
 ### 2. Schritt ($\varepsilon$-freie Grammatik bilden -- $\varepsilon$ entfernen)
 
 $$
-P = \{A \rightarrow aBbc, A \rightarrow AaA, B \rightarrow CC, C \rightarrow BB\}
+P = \{A \rightarrow aBbC, A \rightarrow AaA, B \rightarrow CC, C \rightarrow BB\}
 $$
 ### 3. Schritt ($\varepsilon$-kompensieren)
 
 $$
 \begin{aligned}
-P = \{A &\rightarrow aBbc \space|\space AaA \space|\space abc, \\
-B &\rightarrow CC\space|\space C,\\
-C &\rightarrow BB\}
+P = \{A &\rightarrow aBbC \space|\space AaA \space|\space abC \space|\space aBb , \\
+B &\rightarrow CC \space|\space C,\\
+C &\rightarrow BB \space |\space B\}
 \end{aligned}
 $$
 
@@ -107,12 +116,17 @@ $$
 
 ## a) Geben Sie DFAs an, die folgende Sprachen über dem Alphabet Σ = {a, b} erkennen:
 
-### i) $L_1 = \{a^n W \ | \ c \in \Sigma^*, w \in \Sigma^*\}$
+### i) $L_1 = \{caw \ | \ c \in \Sigma^*, w \in \Sigma^*\}$
 
-### ii) $L_2 = \{a^n W b^n \ | \ w \in \Sigma^*\}$
+```mermaid
+flowchart LR
+	id1(( )) --> id2((z0)) 
+	id2((z0)) --> id3((z1)) 
+```
+
+### ii) $L_2 = \{aawbb \ | \ w \in \Sigma^*\}$
 
 (Das sind die gleichen Sprachen wie in Aufgabe FSK2-1.)
-
 ## b) Minimieren Sie die folgenden DFAs. Verwenden Sie die tabellarische Variante des Algorithmus zur Minimierung von DFAs aus der Vorlesung (nicht die grafische Variante und nicht den Algorithmus von letztem Jahr!). Geben Sie die Partitionstabelle und den minimalen DFA an.
 
 ### i) DFA A1 über dem Alphabet $Σ = \{a\}$:
