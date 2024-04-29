@@ -1,4 +1,5 @@
 ---
+Thema:
 tags:
   - 4semester
   - informatik
@@ -6,7 +7,7 @@ tags:
   - vorlesung
 fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
 date created: Tuesday, 16. April 2024, 11:25
-date modified: Sunday, 21. April 2024, 15:14
+date modified: Monday, 29. April 2024, 21:30
 ---
 
 # TODO
@@ -140,16 +141,16 @@ Die theoretische Informatik umfasst drei große Themenbereiche:
 > Beachte: $\mathbb{N} = \{0, 1, 2, \ldots\}$ und $\mathbb{N}_{>0} = \{1, 2, \ldots\}$.
 
 **Beispiele für Konkatenation und Kleene-Stern:**
-### $\Sigma^0$
+## $\Sigma^0$
 - $\Sigma^0$ ist definiert also die Menge, die nur das leere Wort $\epsilon$ enthält. Da das leere Wort kein Zeichen enthält, ist es das "neutrale Element" der Wortkonkatenation. Für $\Sigma = \{a, b\}$ erhalten wir $\Sigma^0 = \{\epsilon\}$.
-### $\Sigma^i$
+## $\Sigma^i$
 - $\Sigma^i$, für ein gegebenes $i > 0$, enthält alle Wörter der Länge $i$. Das bedeutet, dass wir jede Kombination von Zeichen aus $\Sigma$ nehmen und diese zu Wörtern der Länge $i$ zusammensetzen. Zum Beispiel:
 
   - Für $\Sigma^1 = \{a, b\}$, weil wir jedes Zeichen aus $\Sigma$ nehmen, das ein Wort der Länge 1 bildet.
   - Für $\Sigma^2$ bilden wir alle möglichen Kombinationen von zwei Zeichen: $\Sigma^2 = \{aa, ab, ba, bb\}$.
-### $\Sigma^*$
+## $\Sigma^*$
 - $\Sigma^*$ ist die Kleene-Stern-Operation und umfasst alle Wörter beliebiger Länge, einschließlich des leeren Wortes $\epsilon$. Es ist die Vereinigung aller $\Sigma^i$ für $i \geq 0$. Für $\Sigma = \{a, b\}$ enthält $\Sigma^*$ also alle möglichen Wörter, die mit 'a' und 'b' gebildet werden können, wie $\{\epsilon, a, b, aa, ab, ba, bb, aaa, …\}$.
-### $\Sigma^+$
+## $\Sigma^+$
 - $\Sigma^+$ ist ähnlich wie $\Sigma^*$, enthält jedoch nicht das leere Wort $\epsilon$. Es umfasst alle nicht-leeren Wörter, die aus dem Alphabet $\Sigma$ gebildet werden können. Für $\Sigma = \{a, b\}$ beinhaltet $\Sigma^+$ die Mengen $\Sigma^i$ für alle $i \geq 1$. Das bedeutet, wir haben alle Wörter wie $\{a, b, aa, ab, ba, bb, aaa, …\}$, aber nicht $\epsilon$.
 
 Beachten Sie, dass beim Übergang von $\Sigma^i$ zu $\Sigma^{i+1}$, jedes Wort aus $\Sigma^i$ mit jedem Zeichen aus $\Sigma$ konkateniert wird, um die Wörter der Länge $i+1$ zu bilden.
