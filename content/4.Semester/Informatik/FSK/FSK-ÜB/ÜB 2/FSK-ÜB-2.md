@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Tuesday, 30. April 2024, 01:25
+date modified: Tuesday, 30. April 2024, 01:38
 ---
 
 > [!info] 
@@ -118,12 +118,27 @@ $$
 
 ### i) $L_1 = \{caw \ | \ c \in \Sigma^*, w \in \Sigma^*\}$
 
+#### Erster Versuch (unfinished)
 ```mermaid
-flowchart LR
+flowchart TB
 	id1(( )) --> id2((z0)) 
-	id2((z0)) --> id3((z1)) 
+	id2((z0)) --A--> id3((z1))
+		 
+	id2((z0)) --B--> id4((z2)) 
 ```
 
+#### zweiter Versuch (unfinished)
+
+```mermaid
+flowchart TB
+    z0((z0)) -- a --> z1((z1*))
+    z0 -- b --> z0
+    z1 -- a --> z1
+    z1 -- b --> z1
+```
+
+
+- [ ] Ab hier [[FSK-ÜB-2]] weitermachen
 ### ii) $L_2 = \{aawbb \ | \ w \in \Sigma^*\}$
 
 (Das sind die gleichen Sprachen wie in Aufgabe FSK2-1.)
@@ -133,7 +148,7 @@ flowchart LR
 
 ```mermaid
 graph LR
-
+	id1(( )) --> circleId0(("`z0`"))
     circleId0(("`z0`")) -->|a| circleId1(("`z1`"))
 
     circleId1(("`z1`")) -->|a| circleId2(("`z2`"))
