@@ -7,72 +7,88 @@ tags:
 fach: "[[BaySta]]"
 Thema:
 date created: Thursday, 25. April 2024, 15:42
-date modified: Thursday, 25. April 2024, 16:07
+date modified: Monday, 29. April 2024, 11:10
 ---
 
 # Kapitel Einstieg
-
-# TODO
-
-- [ ] LaTeX richtig formatieren 
 
 # Formelsammlung
 
 ## Axiome von Kolmogorov
 Die Grundlagen der Wahrscheinlichkeitstheorie basieren auf den Axiomen von Kolmogorov, die besagen, dass für ein Ereignis \(A\):
 
-1. \(0 \leq P(A) \leq 1\)
-2. \(P(\Omega) = 1\)
-3. Für disjunkte Ereignisse \(A\) und \(B\): \(P(A \cup B) = P(A) + P(B)\)
+1. $0 \leq P(A) \leq 1$
+2. $P(\Omega) = 1$
+3. Für disjunkte Ereignisse \(A\) und \(B\): $P(A \cup B) = P(A) + P(B)$
 
 ## Laplace-Wahrscheinlichkeit
 Die Laplace-Wahrscheinlichkeit für ein Ereignis \(A\) in einem diskreten Ergebnisraum \(\Omega\) ist:
 
-\[ P(A) = \frac{\text{Anzahl der günstigen Ergebnisse}}{\text{Anzahl der möglichen Ergebnisse}} \]
+$$
+ P(A) = \frac{\text{Anzahl der günstigen Ergebnisse}}{\text{Anzahl der möglichen Ergebnisse}} 
+$$
 
 ## Odds oder Chance
 Die Odds eines Ereignisses \(A\) sind:
 
-\[ \text{Odds}(A) = \frac{P(A)}{P(\bar{A})} \]
+$$
+ \text{Odds}(A) = \frac{P(A)}{P(\bar{A})} 
+$$
 
 ## Wahrscheinlichkeiten und Unabhängigkeit
 Für stochastisch unabhängige Ereignisse \(A\) und \(B\) gilt:
 
-\[ P(A \cap B) = P(A) \cdot P(B) \]
+$$
+ P(A \cap B) = P(A) \cdot P(B) 
+$$
 
 Für unabhängige Zufallsvariablen \(X\) und \(Y\):
 
-\[ P(X = x, Y = y) = P(X = x) \cdot P(Y = y) \]
+$$
+ P(X = x, Y = y) = P(X = x) \cdot P(Y = y) 
+$$
 
 ## Bedingte Wahrscheinlichkeit
 Die bedingte Wahrscheinlichkeit von \(A\) gegeben \(B\) ist:
 
-\[ P(A|B) = \frac{P(A \cap B)}{P(B)} \]
+$$
+ P(A|B) = \frac{P(A \cap B)}{P(B)} 
+$$
 
 ## Satz von Bayes
 Der Satz von Bayes ermöglicht das Umkehren der bedingten Wahrscheinlichkeit:
 
-\[ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} \]
+$$
+ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} 
+$$
 
 ## Satz von der totalen Wahrscheinlichkeit
 Die marginale Wahrscheinlichkeit von \(B\) kann mittels des Satzes von der totalen Wahrscheinlichkeit berechnet werden:
 
-\[ P(B) = P(B|A)P(A) + P(B|\bar{A})P(\bar{A}) \]
+$$
+ P(B) = P(B|A)P(A) + P(B|\bar{A})P(\bar{A}) 
+$$
 
 ## Posteriori-Wahrscheinlichkeit
 Die Posteriori-Wahrscheinlichkeit \(P(A|B)\) nach Beobachtung \(B\) ist:
 
-\[ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B|A)P(A) + P(B|\bar{A})P(\bar{A})} \]
+$$
+ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B|A)P(A) + P(B|\bar{A})P(\bar{A})} 
+$$
 
 ## Binomialverteilung
 Die Wahrscheinlichkeit für \(y\) Erfolge in \(n\) Bernoulli-Versuchen mit Erfolgswahrscheinlichkeit \(p\) ist:
 
-\[ P(Y = y) = \binom{n}{y} p^y (1 - p)^{n-y} \]
+$$
+ P(Y = y) = \binom{n}{y} p^y (1 - p)^{n-y} 
+$$
 
 ## Relative Häufigkeit
 Die relative Häufigkeit eines Ereignisses \(A\) bei \(n\) Versuchen ist:
 
-\[ P_n(A) = \frac{h_n}{n} \]
+$$
+ P_n(A) = \frac{h_n}{n} 
+$$
 
 wo \(h_n\) die Anzahl der Versuche ist, in denen \(A\) eingetreten ist.
 

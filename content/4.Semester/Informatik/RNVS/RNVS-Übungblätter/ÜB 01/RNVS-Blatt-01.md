@@ -5,10 +5,10 @@ tags:
   - 4semester
   - Übungsblatt
 fach: "[[RNVS]]"
-Thema: 
+Thema:
 Benötigte Zeit: 2h 15m (spät nachts geworden)
 date created: Friday, 26. April 2024, 21:46
-date modified: Saturday, 27. April 2024, 01:34
+date modified: Monday, 29. April 2024, 10:38
 ---
 
 # 1. Rechnernetze und verteilte Systeme (H)
@@ -47,6 +47,8 @@ date modified: Saturday, 27. April 2024, 01:34
 - Verteiltes System:
   - gemeinsame Aufgabe: Berechnungen
   - abhängig voneinander: Rechenleistung entsteht durch Zusammenarbeit der einzelnen Rechner
+- Eventuell auch rechnernetz
+  - viele verschiedene verbundene Knoten
 
 ## (e) Ihr eigenes Beispiel
 
@@ -69,7 +71,7 @@ date modified: Saturday, 27. April 2024, 01:34
 - Keine Zustellgarantie $\rightarrow$ Spiel endet nie
 - Wegwahl der Taube $\rightarrow$ Verzögerung des Spielverlaufs bei unnötiger langen Routenwahl
 - Verfälschung der Daten $\rightarrow$ Jemand ändert, dass was auf dem Zettel steht (Sabotage)
-- Aufbau $\rightarrow$ Unbekannt wer anfängt bzw. weiße Figuren hat
+- Aufbau $\rightarrow$ unbekannt wer anfängt bzw. weiße Figuren hat
 - Falscher Empfänger $\rightarrow$ Spiel endet nie
 
 ## (b) Geben Sie für jeden der Störfälle einen Vorschlag zu seiner Vermeidung an!
@@ -132,6 +134,23 @@ graph TD
     E -->G(0)
 ```
 
+```mermaid
+---
+title: Binärbaum mit nummerierten Pfaden
+---
+graph TD
+    A("Wurzel") -->|0| B("Linkes Kind")
+    A -->|1| C("Rechtes Kind")
+    B -->|0| D("Linkes Linkes Kind")
+    B -->|1| E("Linkes Rechtes Kind")
+    C -->|0| F("Rechtes Linkes Kind")
+    C -->|1| G("Rechtes Rechtes Kind")
+    D -->|0| H("LLL Kind")
+    D -->|1| I("LLR Kind")
+```
+
+-
+
 ## (a) Wieviele Blätter hat jeder der Bäume im Beispiel?
 
 $$
@@ -156,8 +175,7 @@ $$
 
 ## (e) Was haben die Pfade aller Nachfahren eines Knotens mit Abstand 8 im Hinblick auf die Pfadstruktur gemein? (Baum mit benannten Kanten)
 
-- Linke Kante von Knoten immer 0
-- Rechte Kante von Knoten immer 1
+- 8 stellen vor der letzten Zahl ist gleich
 
 ## (f) In einem vollständigen Binärbaum der Höhe 16 mit benannten Kanten gibt es ein Blatt, das mit dem Pfad 1100000010101000 adressiert wird. Interpretieren Sie diesen Pfad als Zahl im Binärsystem und wandeln Sie diese um in:
 
@@ -249,13 +267,13 @@ graph TD
 ## (a) Wie viele Pfade von der Wurzel zu einem Blatt mit dem Präfix 0 gibt es in dem in Abbildung 2 dargestellten Baum?
 
 $$
-15, \text{Die ganze linke Seite}
+8
 $$
 
 ## (b) Wie viele Pfade von der Wurzel zu einem Blatt gibt es mit dem Präfix 0, wenn man den in der Abbildung dargestellten Binärbaum bis auf Höhe n fortführt?
 
 $$
-2^{n}-1
+2^{n} \div 2
 $$
 
 Berechnet die Hälfte eines vollständigen Binärbaumes ohne Wurzelknoten
@@ -282,7 +300,7 @@ Berechnet die Hälfte eines vollständigen Binärbaumes ohne Wurzelknoten
 
 - 16
 
->[!note] #### Wie man die Aufgabe löst:
+> [!note] #### Wie man die Aufgabe löst:
 
 **Beispiel an i:**
 
