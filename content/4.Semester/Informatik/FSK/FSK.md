@@ -6,13 +6,14 @@ tags:
   - "#FSK"
 fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
 date created: Tuesday, 16. April 2024, 11:20
-date modified: Monday, 29. April 2024, 21:48
+date modified: Tuesday, 30. April 2024, 15:01
 ---
 
 # Übersicht der Studieninhalte
 
 ## Wichtige Themen:
 - Grammatiken bilden (siehe Blatt 1 und 2)
+- NFA und DFA konstruieren (NFA lecihter als DFA)
 
 ## [[FSK-Vorlesung]]
 
