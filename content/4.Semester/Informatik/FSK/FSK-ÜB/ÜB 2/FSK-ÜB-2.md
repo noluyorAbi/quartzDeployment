@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Wednesday, 1. May 2024, 06:50
+date modified: Wednesday, 1. May 2024, 07:42
 ---
 
 > [!info] 
@@ -155,8 +155,8 @@ flowchart LR
 - Pfade von $z_0$ bis $z_2$ stellt $aa$ im Wort da
 - Pfade zwischen $z_2,z_3$ und $z_4$ stellen das Wort $w$ dar
 - Die $b$ Pfade ab $z_3$ und $z_4$ bis $z_6$ stellen das $bb$ nach dem $w$ dar
+- $z_6$ ist ein akzeptierender Zustand, da das Wort ab da immer garantiert mit $bb$
 
-(Das sind die gleichen Sprachen wie in Aufgabe FSK2-1.)
 ## b) Minimieren Sie die folgenden DFAs. Verwenden Sie die tabellarische Variante des Algorithmus zur Minimierung von DFAs aus der Vorlesung (nicht die grafische Variante und nicht den Algorithmus von letztem Jahr!). Geben Sie die Partitionstabelle und den minimalen DFA an.
 
 ### i) DFA A1 über dem Alphabet $Σ = \{a\}$:
@@ -181,14 +181,84 @@ graph LR
     doubleCircleId7((("`z7`"))) -->|a| circleId0(("`z0`"))
 ```
 
+- Endzustände $z_3$ und $z_7$ werden getrennt
+
+$$
+z_0 \quad z_1 \quad z_2  \quad z_4 \quad z_5 \quad z_{6}\quad |\quad z_3 \quad z_7
+$$ 
+- $z_2$ und $z_6$ führen in Klasse 2 bzw. in andere Partition, deswegen teilen wird diese
+
+$$
+z_0 \quad z_1  \quad z_4 \quad z_{5}\quad | \quad z_{2} \quad z_{6}\quad |\quad z_3 \quad z_7
+$$
+
+- Jetzt führen aber $z_{1}$ und $z_{5}$ auch in andere Partitionen und müssen geteilt werden 
+
+$$
+z_0  \quad z_{4}\quad| \quad z_{1} \quad z_{5}\quad | \quad z_{2} \quad z_{6}\quad |\quad z_3 \quad z_7
+$$
+
+
+```mermaid
+---
+title: Graphische Darstellung der Partitionen
+---
+graph LR
+    id1(( )) --> circleId0(("`P0`"))
+    circleId0(("`P0`")) -->|a| circleId1(("`P1`"))
+    circleId1(("`P1`")) -->|a| circleId2(("`P2`"))
+    circleId2(("`P2`")) -->|a| doubleCircleId3((("`P3`")))
+    doubleCircleId3((("`P3`"))) -->|a| circleId0(("`P0`"))
+```
+
 
 ### ii) DFA A2 aber dem Alphabet $Σ = {+, −, ., 0, … , 9}$ (bekannt aus der Vorlesung)
 
 >[!info] Bild aus Blatt entnehmen
 
+$$
+z_0 \quad z_1 \quad z_2 \quad z_3 \quad z_4 \quad z_5 \quad z_6 \quad z_{7 \quad}z_8 \quad z_9
+$$
+
+- Endzustände $z_{3},z_{4},z_{5},z_{7},z_{8}, z_{9}$
+
+$$
+z_{0} \quad z_{1} \quad z_{2}    \quad z_{6}   \quad | \quad z_{3} \quad z_{4} \quad z_{5} \quad z_{7} \quad z_{8} \quad z_{9}
+$$
+
+- $z_{6}$ und $z_{2}$ führen in andere Partition werden deswegen getrennt
+
+$$
+z_{0} \quad z_{1}\quad | \quad z_{2}    \quad z_{6}   \quad | \quad z_{3} \quad z_{4} \quad z_{5} \quad z_{7} \quad z_{8} \quad z_{9}
+$$
+
+- $z_{1}$ führt in 2 andere Partition deswegen trennen
+
+$$
+z_{0}\quad | \quad z_{1}\quad | \quad z_{2}    \quad z_{6}   \quad | \quad z_{3} \quad z_{4} \quad z_{5} \quad z_{7} \quad z_{8} \quad z_{9}
+$$
+
+
 # FSK2-3 Kleine Automaten (0 Punkte)
 
 ## a) Sei $A_1$ ein DFA mit Alphabet $\Sigma$ und genau einem Zustand. Zeigen oder widerlegen Sie: Es ist entweder $L(A_1) = \Sigma^*$ oder $L(A_1) = \emptyset$.
+
+**Gedankengang:**
+- Wenn das DFA nur einen Zustand hat, kann dieser entweder akzeptieren sein oder nicht 
+
+**Beweis:**
+- Es gibt 2 Fälle für $A_1$:
+	- Der Zustand von $A_1$ ist ein akzeptierender Zustand
+	- Der Zustand von $A_1$ ist *kein* akzeptierender Zustand
+- Der Zustand von $A_1$ sei deklariert als $z_0$
+- Alle Pfade von $z_0$ führen zurück zu $z_0$
+```mermaid
+graph LR
+id1((z1)) --\Sigma--> id1((z1))
+```
+- *Erster Fall: akzeptierender Zustand*
+
+
 
 ## b) Sei $A_2$ ein DFA mit Alphabet $\Sigma = \{a, b\}$ und genau zwei Zuständen. Angenommen es gibt ein Wort $z \notin L(A_2)$ und für alle $i \in \mathbb{N}$ ist $a^i \in L(A_2)$. Zeigen oder widerlegen Sie: Für jeden solchen Automaten $A_2$ ist $bb \notin L(A_2)$.
 
