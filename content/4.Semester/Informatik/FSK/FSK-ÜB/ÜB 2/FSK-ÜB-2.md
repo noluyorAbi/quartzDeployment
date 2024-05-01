@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Tuesday, 30. April 2024, 01:38
+date modified: Wednesday, 1. May 2024, 06:50
 ---
 
 > [!info] 
@@ -118,28 +118,43 @@ $$
 
 ### i) $L_1 = \{caw \ | \ c \in \Sigma^*, w \in \Sigma^*\}$
 
-#### Erster Versuch (unfinished)
 ```mermaid
-flowchart TB
+flowchart LR
 	id1(( )) --> id2((z0)) 
-	id2((z0)) --A--> id3((z1))
-		 
-	id2((z0)) --B--> id4((z2)) 
+	id2((z0)) --a,b--> id3((z1))
+	id3((z1)) --a--> id5(((z2)))
+	id3((z1)) --a,b--> id2((z0))
+	id5(((z2))) --a,b--> id6(((z3)))
+	id6(((z3))) --a,b--> id5(((z2)))
 ```
 
-#### zweiter Versuch (unfinished)
+**Erklärung des Gedankenganges, warum so dargestellt:**
+- Pfade zwischen $z_0$ und $z_1$ stellen $c$ dar, was eine Kette von Buchstaben vor $a$ ist
+- Der Pfad von $z_1$ zu $z_2$ stellt $a$ dar, was immer steht
+- $z_{2}$ ist ein akzeptierender Zustand, da $w \in \Sigma^*$ und auf das $a$ das leere Wort $\varepsilon$ folgen kann
+- Es kann aber auch eine Zeichenkette nach $a$ kommen, was mit den Pfaden zwischen $z_2$ und $z_3$ dargestellt wird
+- $z_3$ ist ein Endzustand, für alle ungerade Anzahlen von Buchstaben nach $a$
+
+### ii) $L_2 = \{aawbb \ | \ w \in \Sigma^*\}$
 
 ```mermaid
-flowchart TB
-    z0((z0)) -- a --> z1((z1*))
-    z0 -- b --> z0
-    z1 -- a --> z1
-    z1 -- b --> z1
+flowchart LR
+	id0(( )) --> id1((z0)) 
+	id1((z0)) --a--> id2((z1))
+	id2((z1)) --a--> id3((z2))
+	id3((z2)) --a--> id4((z3))
+	id4((z3)) --a,b--> id3((z2))
+	id3((z2)) --b-->id5((z4))
+	id5((z4)) --a,b--> id3((z2))
+	id4((z3)) --b--> id6((z5))
+	id5((z4)) --b--> id6((z5))
+	id6((z5)) --b--> id7(((z6)))
 ```
 
-
-- [ ] Ab hier [[FSK-ÜB-2]] weitermachen
-### ii) $L_2 = \{aawbb \ | \ w \in \Sigma^*\}$
+**Erklärung des Gedankenganges, warum so dargestellt:**
+- Pfade von $z_0$ bis $z_2$ stellt $aa$ im Wort da
+- Pfade zwischen $z_2,z_3$ und $z_4$ stellen das Wort $w$ dar
+- Die $b$ Pfade ab $z_3$ und $z_4$ bis $z_6$ stellen das $bb$ nach dem $w$ dar
 
 (Das sind die gleichen Sprachen wie in Aufgabe FSK2-1.)
 ## b) Minimieren Sie die folgenden DFAs. Verwenden Sie die tabellarische Variante des Algorithmus zur Minimierung von DFAs aus der Vorlesung (nicht die grafische Variante und nicht den Algorithmus von letztem Jahr!). Geben Sie die Partitionstabelle und den minimalen DFA an.
