@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Wednesday, 1. May 2024, 08:51
+date modified: Wednesday, 1. May 2024, 09:17
 ---
 
 > [!info] 
@@ -21,19 +21,19 @@ date modified: Wednesday, 1. May 2024, 08:51
 
 - Alphabet: $\Sigma = \{a,b\}$
 - 4-Tupel Grammatikform $G = (N, \Sigma, P, S)$
-- $N: \{S,C,B\}$
+- $N: \{S,A,B\}$
 $$
 \begin{aligned}
 P: \{\\
 S &\rightarrow A\space a\space B \\
-C &\rightarrow aA\space|\space bA \space|\space\varepsilon \\
+A &\rightarrow aA\space|\space bA \space|\space\varepsilon \\
 B &\rightarrow aB\space|\space bB \space|\space\varepsilon \\
 \}
 \end{aligned}
 $$
 - $S:S$
 $$
-G = \{S,\{a,b\},\{\quad S \rightarrow A\space a\space B,\quad C \rightarrow aA\space|\space bA \space|\space\varepsilon, \quad B \rightarrow aB\space|\space bB \space|\space\varepsilon \quad \},S\}
+G = \{S,\{a,b\},\{\quad S \rightarrow A\space a\space B,\quad A \rightarrow aA\space|\space bA \space|\space\varepsilon, \quad B \rightarrow aB\space|\space bB \space|\space\varepsilon \quad \},S\}
 $$
 
 
@@ -59,7 +59,7 @@ $$
 G = \{S,\{a,b\},\{\quad S \rightarrow aaW,\quad W \rightarrow aW \ | \ bW\ |\ B\ |\ \varepsilon, \quad B \rightarrow bb  \quad \},S\}
 $$
 
-#### Zweite Idee (Besser?)
+#### Zweite Idee <span style="color:red">Bitte nur kurz Feeback ob das besser ist als die erste Idee :) </span>
 
 $$
 \begin{aligned}
@@ -292,13 +292,14 @@ $$
 n=1 : a^{1^{2}} = a^{1}
 \end{aligned}
 $$
-*Induktionsschritt:*
+
+*Indutktionsannahme:*
 Gilt die Aussage für eine beliebige Zahl, so gilt sie auch für deren Nachfolge
 $$
 n\rightarrow n+1
 $$
 
-*Induktion:*
+*Induktionsschritt:*
 
 $$
 \begin{aligned}
@@ -307,6 +308,13 @@ a^{(n+1)^{2}} &=a^{n^{2}+2n+1} \\
 &=a^{n^{2}} \cdot a^{2n+1}
 \end{aligned}
 $$
+Da nach der Induktionsannahme $a^{n^{2}}$ wahr ist, und weil $a^{2n+1}$ eine korrekte Anwendung der Potenzgesetze ist, ist auch $a^{(n+1)^{2}}$ wahr.
+$$
+\tag*{$\blacksquare$}
+$$
+**Zusammenfassung:**
+Durch den Induktionsanfang und den Induktionsschritt haben wir gezeigt, dass $a^{k^2}$ für alle natürlichen Zahlen $k$ gilt, beginnend bei $k = 1$. Somit gilt die Aussage auch für $a^{12}$
+
 
 
 # FSK2-4 Grammatik-Konkatenation (0 Punkte)
@@ -315,13 +323,18 @@ $$
 > Seien $G$ und $G'$ Typ-i-Grammatiken (für $i \in \{0, \ldots, 3\}$), sodass $\varepsilon \notin L(G)$ und $\varepsilon \notin L(G')$. Zeigen oder widerlegen Sie für alle $i$: Es gibt eine Grammatik $G''$ vom Typ $i$, sodass $L(G'') = L(G)L(G')$.
 
 
+Die Aufgabenstellung erfordert den Nachweis, dass für jede Typ-i-Grammatik (wobei $i \in \{0, 1, 2, 3\}$) $G$ und $G'$, die $\varepsilon$ nicht enthalten, eine entsprechende Grammatik $G''$ existiert, deren Sprache der Konkatenation der Sprachen von $G$ und $G'$ entspricht, also $L(G'') = L(G)L(G')$.
 
+## Typ-0 (Rekursiv aufzählbare Grammatiken):
+- Typ-0-Grammatiken können jede berechenbare Sprache generieren, einschließlich der Konkatenation zweier Sprachen. Dies wird erreicht, indem die Produktionen von $G$ mit denen von $G'$ kombiniert werden, wobei das Ende der Produktionen von $G$ direkt zum Beginn der Produktionen von $G'$ übergeht.
 
+## Typ-1 (Kontextsensitive Grammatiken):
+- Für Typ-1-Grammatiken kann eine Grammatik $G''$ konstruiert werden, die zuerst ein Wort aus $L(G)$ und dann aus $L(G')$ erzeugt, ohne die Kontextsensitivität zu verletzen.
 
+## Typ-2 (Kontextfreie Grammatiken):
+- Die Konstruktion von $G''$ für kontextfreie Grammatiken umfasst die Einführung eines neuen Startsymbols und Regeln, die zuerst ein Wort aus $L(G)$ und anschließend aus $L(G')$ generieren.
 
+## Typ-3 (Reguläre Grammatiken):
+- Reguläre Grammatiken unterstützen die Konkatenation, indem das Endsymbol der Regeln von $G$, das sonst auf das leere Wort führt, durch das Startsymbol von $G'$ ersetzt wird.
 
----
-$$
-L \subseteq \Sigma^{*}\text{ heisst } \underline{erkennbar}, \ falls \quad \exists \mathscr{A} \ mit \ L(\mathscr{A})=L
-$$
----
+Zusammengefasst ist es für alle Grammatiktypen möglich, die Konkatenation ihrer Sprachen durch eine Grammatik des gleichen Typs zu realisieren.

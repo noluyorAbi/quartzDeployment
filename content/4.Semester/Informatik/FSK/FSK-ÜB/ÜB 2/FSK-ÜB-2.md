@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Wednesday, 1. May 2024, 08:32
+date modified: Wednesday, 1. May 2024, 09:13
 ---
 
 > [!info] 
@@ -289,17 +289,60 @@ Dieser Automat kann das Wort $bb$ Produzieren und besteht aus genau zwei Zustän
 
 ## c) Zeigen Sie: Für jeden DFA mit Alphabet $\Sigma = \{a, b\}$ und genau vier Zuständen gilt: Wenn für jede natürliche Zahl $n \geq 1$ das Wort $a^{n^2}$ in $L(A)$ ist, dann ist auch $a^{12} \in L(A)$.
 
+### Erster Ansatz Induktion
+
+**Beweis durch Induktion:**
+*Induktionsanfang:* 
+Es wird bewiesen, dass die Aussage für die kleinste Zahl, den Startwert, gilt.
+$$
+\begin{aligned}
+n=1 : a^{1^{2}} = a^{1}
+\end{aligned}
+$$
+
+*Indutktionsannahme:*
+Gilt die Aussage für eine beliebige Zahl, so gilt sie auch für deren Nachfolge
+$$
+n\rightarrow n+1
+$$
+
+*Induktionsschritt:*
+
+$$
+\begin{aligned}
+
+a^{(n+1)^{2}} &=a^{n^{2}+2n+1} \\
+&=a^{n^{2}} \cdot a^{2n+1}
+\end{aligned}
+$$
+Da nach der Induktionsannahme $a^{n^{2}}$ wahr ist, und weil $a^{2n+1}$ eine korrekte Anwendung der Potenzgesetze ist, ist auch $a^{(n+1)^{2}}$ wahr.
+
+**Zusammenfassung:**
+Durch den Induktionsanfang und den Induktionsschritt haben wir gezeigt, dass $a^{k^2}$ für alle natürlichen Zahlen $k$ gilt, beginnend bei $k = 1$. Somit gilt die Aussage auch für $a^{12}$
+
+
 
 # FSK2-4 Grammatik-Konkatenation (0 Punkte)
+- [ ] FSK 2-4 verstehen was abgeht
 
 > [!note] Aufgabenstellung 
 > Seien $G$ und $G'$ Typ-i-Grammatiken (für $i \in \{0, \ldots, 3\}$), sodass $\varepsilon \notin L(G)$ und $\varepsilon \notin L(G')$. Zeigen oder widerlegen Sie für alle $i$: Es gibt eine Grammatik $G''$ vom Typ $i$, sodass $L(G'') = L(G)L(G')$.
 
+Die Aufgabenstellung erfordert den Nachweis, dass für jede Typ-i-Grammatik (wobei $i \in \{0, 1, 2, 3\}$) $G$ und $G'$, die $\varepsilon$ nicht enthalten, eine entsprechende Grammatik $G''$ existiert, deren Sprache der Konkatenation der Sprachen von $G$ und $G'$ entspricht, also $L(G'') = L(G)L(G')$.
 
+## Typ-0 (Rekursiv aufzählbare Grammatiken):
+- Typ-0-Grammatiken können jede berechenbare Sprache generieren, einschließlich der Konkatenation zweier Sprachen. Dies wird erreicht, indem die Produktionen von $G$ mit denen von $G'$ kombiniert werden, wobei das Ende der Produktionen von $G$ direkt zum Beginn der Produktionen von $G'$ übergeht.
 
+## Typ-1 (Kontextsensitive Grammatiken):
+- Für Typ-1-Grammatiken kann eine Grammatik $G''$ konstruiert werden, die zuerst ein Wort aus $L(G)$ und dann aus $L(G')$ erzeugt, ohne die Kontextsensitivität zu verletzen.
 
+## Typ-2 (Kontextfreie Grammatiken):
+- Die Konstruktion von $G''$ für kontextfreie Grammatiken umfasst die Einführung eines neuen Startsymbols und Regeln, die zuerst ein Wort aus $L(G)$ und anschließend aus $L(G')$ generieren.
 
+## Typ-3 (Reguläre Grammatiken):
+- Reguläre Grammatiken unterstützen die Konkatenation, indem das Endsymbol der Regeln von $G$, das sonst auf das leere Wort führt, durch das Startsymbol von $G'$ ersetzt wird.
 
+Zusammengefasst ist es für alle Grammatiktypen möglich, die Konkatenation ihrer Sprachen durch eine Grammatik des gleichen Typs zu realisieren.
 
 ---
 $$
