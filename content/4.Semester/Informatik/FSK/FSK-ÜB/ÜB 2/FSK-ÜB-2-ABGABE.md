@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Wednesday, 1. May 2024, 08:32
+date modified: Wednesday, 1. May 2024, 08:51
 ---
 
 > [!info] 
@@ -81,15 +81,6 @@ $$
 >P = \{A \rightarrow aBbC, A \rightarrow AaA, B \rightarrow \varepsilon, B \rightarrow CC, C \rightarrow BB\}
 >$$
 >Geben Sie eine zu $G$ äquivalente Grammatik $G'$ ohne ε-Produktionen an. Verwenden Sie den Algorithmus zur Elimination von ε-Produktionen aus der Vorlesung und geben Sie die Zwischenschritte Ihrer Berechnung an. (Das ermöglicht uns, Ihnen bei kleinen Fehlern noch Teilpunkte zu geben.)
-
-<div style="position: relative; width: 100%; padding-top: 56.25%; overflow: hidden;">
-    <iframe src="https://www.youtube.com/embed/7xL6JMaB5-A?si=pkFeeuZs08tEFAuf" title="YouTube video player" 
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
-    </iframe>
-</div>
-
 
 **Ziel: $\varepsilon$ eliminieren** 
 ### 1. Schritt (ausfindig machen was $\varepsilon$ bildet)
@@ -284,10 +275,38 @@ id0(( )) --> id1((z1))
 id1((z1)) --a,b--> id2(((z2)))
 id2((z2)) --a,b--> id2(((z2)))
 ```
-Dieser Automat kann das Wort $bb$ Produzieren und besteht aus genau zwei Zuständen. Also gilt $bb\ \in L(A_2)$
+Dieser Automat kann das Wort $bb$ Produzieren und besteht aus genau zwei Zuständen. Zudem gilt:
+$$
+\forall{i \in \mathbb{N}: a^{i}\in L(A_{2})} 
+$$
+$\Longrightarrow$ Daraus folgt, dass $bb\ \in L(A_2)$ gilt
 
 
 ## c) Zeigen Sie: Für jeden DFA mit Alphabet $\Sigma = \{a, b\}$ und genau vier Zuständen gilt: Wenn für jede natürliche Zahl $n \geq 1$ das Wort $a^{n^2}$ in $L(A)$ ist, dann ist auch $a^{12} \in L(A)$.
+
+**Beweis durch Induktion:**
+*Induktionsanfang:* 
+Es wird bewiesen, dass die Aussage für die kleinste Zahl, den Startwert, gilt.
+$$
+\begin{aligned}
+n=1 : a^{1^{2}} = a^{1}
+\end{aligned}
+$$
+*Induktionsschritt:*
+Gilt die Aussage für eine beliebige Zahl, so gilt sie auch für deren Nachfolge
+$$
+n\rightarrow n+1
+$$
+
+*Induktion:*
+
+$$
+\begin{aligned}
+
+a^{(n+1)^{2}} &=a^{n^{2}+2n+1} \\
+&=a^{n^{2}} \cdot a^{2n+1}
+\end{aligned}
+$$
 
 
 # FSK2-4 Grammatik-Konkatenation (0 Punkte)
