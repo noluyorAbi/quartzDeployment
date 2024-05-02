@@ -8,7 +8,7 @@ fach: "[[BaySta]]"
 Thema: 
 Benötigte Zeit:
 date created: Thursday, 2. May 2024, 13:50
-date modified: Thursday, 2. May 2024, 15:29
+date modified: Thursday, 2. May 2024, 16:43
 ---
 
 # Prinzip
@@ -297,3 +297,9 @@ Dies entspricht der Dichte einer Beta$(x, n - x)$-Verteilung, wenn $x > 0$ und $
 - Aus einer uneigentlichen Posterioriverteilung können wir keine Schlüsse ziehen: weder können wir eine Posterioriwahrscheinlichkeit berechnen noch einen Posteriori-Erwartungswert.
 - Die uneigentliche Priori führt aber im Regelfall zu einer eigentlichen oder properen Posterioriverteilung, aus der wir Schlüsse ziehen können.
 - Nur in Ausnahmefällen kann eine uneigentliche Posterioriverteilung resultieren – dies muss man im Einzelfall überprüfen.
+
+## Laplace-Priori
+
+
+
+<iframe src="https://www.desmos.com/calculator/kjguvzutvi?lang=de" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
