@@ -43,9 +43,9 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
 
 This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science.
 
-<img src="http://ghchart.rshah.org/noluyorAbi" alt="2016rshah's Github chart" />
+<img src="http://ghchart.rshah.org/noluyorAbi" alt="MyUniNotes Changes Activity Chart" />
 
-test 
+
 
 
 <!-- There are scripts below this tag -->
