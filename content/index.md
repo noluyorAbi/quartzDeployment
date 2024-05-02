@@ -45,7 +45,7 @@ This graph shows the fluctuating activity on the website over time. It reflects 
 
 <img src="http://ghchart.rshah.org/noluyorAbi" alt="2016rshah's Github chart" />
 
-abc 
+test 
 
 
 <!-- There are scripts below this tag -->
