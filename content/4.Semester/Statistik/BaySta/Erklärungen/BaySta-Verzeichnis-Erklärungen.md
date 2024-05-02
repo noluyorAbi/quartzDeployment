@@ -7,7 +7,7 @@ tags:
 fach: "[[BaySta]]"
 Thema:
 date created: Thursday, 25. April 2024, 15:43
-date modified: Thursday, 2. May 2024, 13:49
+date modified: Thursday, 2. May 2024, 15:10
 ---
 
 # Verzeichnis
@@ -16,3 +16,5 @@ date modified: Thursday, 2. May 2024, 13:49
 - ## [[Priori und Posteriori Wahrscheinlichkeit]]
 - ## [[Posteriori-Erwartungswert]]
 - ## [[Unterschied zwischen Stetigkeit und Diskretheit]]
+- ## [[Erlang-Verteilung]]
+- 
