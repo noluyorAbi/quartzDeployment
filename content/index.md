@@ -35,7 +35,7 @@ date modified: Friday, 3. May 2024, 01:15
 
 This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science.
 
-<img src="http://ghchart.rshah.org/noluyorAbi" alt="MyUniNotes Changes Activity Chart" />
+<img src="http://ghchart.rshah.org/teal/noluyorAbi" alt="MyUniNotes Changes Activity Chart" />
 
 ### About This Site
 
