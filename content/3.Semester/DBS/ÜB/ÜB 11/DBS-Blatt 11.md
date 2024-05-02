@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
 fach: "[[DBS]]"
 date created: Friday, 5. April 2024, 23:02
-date modified: Monday, 8. April 2024, 12:23
+date modified: Thursday, 2. May 2024, 23:05
 ---
 
 # Aufgabe 11-1 [[Normalformen und Synthesealgorithmus#Synthesealgorithmus]]
@@ -77,11 +77,17 @@ Es gibt hier nichts zu ändern, da links jeweils nur ein Attribute steht
 
 ### Relationsschema erzeugen
 
-$$R_1(\underline{ChefPersNr},ChefName)$$
+$$
+R_1(\underline{ChefPersNr},ChefName)
+$$
 
-$$~{R_2(\underline{PersNr},Name, Fachgebiet, ChefPersNr, ChefName)}$$
+$$
+~{R_2(\underline{PersNr},Name, Fachgebiet, ChefPersNr, ChefName)}
+$$
 
-$$~{R_3(\underline{MatrNr},PersNr, Name, Fachgebiet, ChefPersNr, ChefName, StudName, Semester, StudWohnOrt)}$$
+$$
+~{R_3(\underline{MatrNr},PersNr, Name, Fachgebiet, ChefPersNr, ChefName, StudName, Semester, StudWohnOrt)}
+$$
 
 ### Rekonstruktion eines Schlüsselkandidaten:
 
@@ -96,15 +102,15 @@ $$~{R_3(\underline{MatrNr},PersNr, Name, Fachgebiet, ChefPersNr, ChefName, StudN
 # Aufgabe 11-2 **Kombinatorik von** [[Schedules]]
 
 >[!note] Aufgabenstellung
->Gegeben sei eine Menge von n Transaktionen $\{T_1, ..., T_n\}$, wobei jede Transaktion $T_i$ aus vielen Einzeloperationen besteht:
->$T_i = \langle A_{i,1}, A_{i,2}, ..., A_{i,in} \rangle$
+>Gegeben sei eine Menge von n Transaktionen $\{T_1, …, T_n\}$, wobei jede Transaktion $T_i$ aus vielen Einzeloperationen besteht:
+>$T_i = \langle A_{i,1}, A_{i,2}, …, A_{i,in} \rangle$
 >
 >**Beispiel:**
 >- $T_1 = \langle A_{1,1}, A_{1,2}, A_{1,3}, A_{1,4} \rangle$
 >- $T_2 = \langle A_{2,1}, A_{2,2}, A_{2,3} \rangle$
 >- $T_3 = \langle A_{3,1}, A_{3,2}, A_{3,3} \rangle$
 >
->Erläutern Sie für das Beispiel $\{T_1, T_2, T_3\}$ sowie für den allgemeinen Fall $\{T_1, ..., T_n\}$:
+>Erläutern Sie für das Beispiel $\{T_1, T_2, T_3\}$ sowie für den allgemeinen Fall $\{T_1, …, T_n\}$:
 
 ## (a) Wieviele beliebige Schedules gibt es?
 

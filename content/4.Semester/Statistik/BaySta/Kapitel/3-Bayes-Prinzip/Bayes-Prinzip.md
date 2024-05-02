@@ -8,8 +8,12 @@ fach: "[[BaySta]]"
 Thema: 
 Benötigte Zeit:
 date created: Thursday, 2. May 2024, 13:50
-date modified: Thursday, 2. May 2024, 16:43
+date modified: Thursday, 2. May 2024, 22:50
 ---
+
+# TODO
+
+- [ ] Bayes Laplace Priori weitermachen
 
 # Prinzip
 
