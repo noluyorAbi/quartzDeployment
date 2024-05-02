@@ -39,12 +39,12 @@ This website serves as a centralized archive, offering you structured access to 
 
 Here, you’ll find detailed notes covering a range of topics, from the basics of programming to the complexities of algorithms and data structures, all tailored to support and enhance your understanding of this dynamic field. This page is updated frequently throughout the semester, with new topics being added regularly to enrich the content and ensure it reflects the latest developments in the field.
 
+## Website Activity Changes
 
-
-
-
+This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science.
 
 <img src="http://ghchart.rshah.org/noluyorAbi" alt="2016rshah's Github chart" />
+
 
 
 

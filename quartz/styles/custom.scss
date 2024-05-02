@@ -37,17 +37,6 @@ td,
   scrollbar-color: #555 #2e2e2e; // Scrollbar-Farbe für ein dunkles Thema in Firefox
 }
 
-.ghcalendarDIV {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('URL_DEINES_BILDES'); /* Hier fügst du die URL deines Bildes ein */
-  background-size: contain; /* stellt sicher, dass das gesamte Bild sichtbar ist */
-  background-repeat: no-repeat; /* verhindert das Wiederholen des Bildes */
-  width: 100%; /* Breite des div anpassen */
-  height: 100%; /* Höhe des div anpassen */
-}
-
 
 
 /* ------------------------------------------------------------------------------------------- */
