@@ -14,7 +14,6 @@ date modified: Thursday, 2. May 2024, 16:43
 # Prinzip
 
 In den letzten beiden Kapiteln haben wir einfache Anwendungen der Bayes-Formel kennen gelernt. Wir erweitern diese Anwendung nun auf allgemeinere stochastische Modelle. Um daraus Schlüsse zu ziehen, verwenden wir das **Bayes-Prinzip**
-
 # Bayes-Prinzip
 
 ## Bayesianische Inferenz
