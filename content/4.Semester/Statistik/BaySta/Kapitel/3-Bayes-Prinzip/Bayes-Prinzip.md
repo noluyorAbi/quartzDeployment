@@ -301,5 +301,3 @@ Dies entspricht der Dichte einer Beta$(x, n - x)$-Verteilung, wenn $x > 0$ und $
 ## Laplace-Priori
 
 
-
-<iframe src="https://www.desmos.com/calculator/kjguvzutvi?lang=de" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
