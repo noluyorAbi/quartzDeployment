@@ -39,60 +39,12 @@ This website serves as a centralized archive, offering you structured access to 
 
 Here, you’ll find detailed notes covering a range of topics, from the basics of programming to the complexities of algorithms and data structures, all tailored to support and enhance your understanding of this dynamic field. This page is updated frequently throughout the semester, with new topics being added regularly to enrich the content and ensure it reflects the latest developments in the field.
 
-# Welcome to MyUniNotes
 
-## 📚 Modules
 
-### Informatik
-- [[DBS|Datenbanksysteme (DBS)]]
-- [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/) *(another site created by a fellow student)*
-- [[FSK|Formale Sprachen und Komplexität (FSK)]] (active)
-- [[RNVS |Rechnernetze und Verteilte Systeme (RNVS)]] (active)
-- [[Bachelorseminar-Software Security]] (active)
 
-### Statistik
-- [[LiMo]] 
-- [[BaySta]] (active)
-- [[I2ML]]
 
-## 🗓️ Semester
 
-- [[3.Semester]]
-- [[4.Semester]] (currently active)
-
-### About This Site
-
-This website serves as a centralized archive, offering you structured access to a wealth of study materials that I’ve gathered and written in the language of the module (mostly German). It’s designed to provide a clear, organized, and comprehensive resource for anyone interested in the intricacies of computer science, as seen through my personal academic lens. If necessary, the website can be translated into any required language using a browser’s built-in translator.
-
-### What You’ll Find Here
-
-Here, you’ll find detailed notes covering a range of topics, from the basics of programming to the complexities of algorithms and data structures, all tailored to support and enhance your understanding of this dynamic field. This page is updated frequently throughout the semester, with new topics being added regularly to enrich the content and ensure it reflects the latest developments in the field.
-
-# Activity of the Site 
-<div>
-    <script>
-        // Function to base64 encode the username
-        function base64Encode(str) {
-            return btoa(str);
-        }
-
-        window.onload = function() {
-            var username = "noluyorAbi";  // Your GitHub username
-            var encodedUsername = base64Encode(username);
-
-            // Create the image element
-            var img = document.createElement("img");
-            img.src = `http://ghchart.rshah.org/${encodedUsername}`;  // Set the source to the encoded username
-            img.alt = `${username}'s Github chart`;
-
-            // Append the image to the div below
-            document.getElementById("github-chart").appendChild(img);
-        }
-    </script>
-    <div id="github-chart">
-        <!-- The chart will load here -->
-    </div>
-</div>
+<img src="http://ghchart.rshah.org/noluyorAbi" alt="2016rshah's Github chart" />
 
 
 
