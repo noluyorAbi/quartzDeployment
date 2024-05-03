@@ -6,7 +6,7 @@ tags:
   - "#BaySta"
 fach: "[[BaySta]]"
 date created: Monday, 22. April 2024, 23:34
-date modified: Friday, 26. April 2024, 13:37
+date modified: Friday, 3. May 2024, 19:46
 ---
 
 >[!quote] Laplace, Ramsey, de Finetti:

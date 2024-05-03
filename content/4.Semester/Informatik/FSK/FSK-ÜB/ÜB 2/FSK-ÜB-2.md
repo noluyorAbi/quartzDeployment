@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Wednesday, 1. May 2024, 09:13
+date modified: Friday, 3. May 2024, 21:16
 ---
 
 > [!info] 

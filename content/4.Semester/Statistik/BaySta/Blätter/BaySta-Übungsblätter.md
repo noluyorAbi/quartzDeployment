@@ -7,9 +7,10 @@ tags:
 fach: "[[BaySta]]"
 Thema:
 date created: Tuesday, 23. April 2024, 00:07
-date modified: Thursday, 25. April 2024, 22:40
+date modified: Friday, 3. May 2024, 18:12
 ---
 
 # Blätter
 
 - [[BaySta-Blatt-1]]
+- [[BaySta-Blatt-2]]

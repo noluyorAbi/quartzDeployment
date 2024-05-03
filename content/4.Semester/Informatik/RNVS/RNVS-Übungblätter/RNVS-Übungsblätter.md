@@ -3,13 +3,14 @@ Thema:
 tags: 
 fach: 
 date created: Tuesday, 16. April 2024, 11:22
-date modified: Friday, 26. April 2024, 21:01
+date modified: Friday, 3. May 2024, 21:28
 ---
 
 # Übungsblatt
 
 - [[RNVS-Blatt-00]]
 - [[RNVS-Blatt-01]]
+- [[RNVS-Blatt-02]]
 
 
 

@@ -8,7 +8,7 @@ fach: "[[BaySta]]"
 Thema: 
 Benötigte Zeit:
 date created: Thursday, 2. May 2024, 13:50
-date modified: Thursday, 2. May 2024, 22:50
+date modified: Friday, 3. May 2024, 17:00
 ---
 
 # TODO

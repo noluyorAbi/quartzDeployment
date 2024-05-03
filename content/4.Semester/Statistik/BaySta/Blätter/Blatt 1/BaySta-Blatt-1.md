@@ -9,7 +9,7 @@ Thema:
   - "[[Unterschied zwischen Stetigkeit und Diskretheit]]"
   - "[[Priori und Posteriori Wahrscheinlichkeit]]"
 date created: Monday, 22. April 2024, 23:35
-date modified: Friday, 26. April 2024, 13:52
+date modified: Friday, 3. May 2024, 18:49
 ---
 
 # TODO:
@@ -51,7 +51,9 @@ P({\text{"Kein Kirschkern landet im Verkauf"}}) &= 1- P(\text{"Kirschkern landet
 &\approx 99.6 \space \%
 \end{aligned}
 $$
-
+$$
+P (\text{"Nur gute Pralinen in 100 Packungen"})= \frac{0.99645^{100}}{0.99645+0.00355}
+$$
 # Aufgabe 2
 
 >[!note] Aufgabenstellung
