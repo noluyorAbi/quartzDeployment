@@ -31,7 +31,7 @@ date modified: Friday, 3. May 2024, 02:40
 - [[3.Semester]]
 - [[4.Semester]] (currently active)
 
-## Website Activity Changes
+## Website Changes Graph
 
 This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science.
 
