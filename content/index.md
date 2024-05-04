@@ -5,7 +5,7 @@ fach:
 title: Studying made easy.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Saturday, 4. May 2024, 21:29
+date modified: Saturday, 4. May 2024, 22:09
 ---
 
 # Welcome to MyUniNotes
@@ -28,7 +28,7 @@ date modified: Saturday, 4. May 2024, 21:29
 - [[3.Semester]]
 - [[4.Semester]] (currently active)
 
-## Website Changes Graph
+## Website Update Graph
 
 This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science.
 
@@ -134,21 +134,35 @@ var asciiArt2 = undefined;
 // ASCII art of the best superhero
  asciiArt1 = `
  
-                                  ⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
-                                  ⠀⣸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡄⠀
-                                  ⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀
-                                  ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀
-                                  ⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆
-                                  ⣿⣿⡟⠉⢹⣿⣿⣿⣿⣿⣿⣿⠉⠙⣿⣿⡇
-                                  ⢸⣿⠿⠶⣿⣿⣿⣿⣿⣿⣿⣿⣶⠶⢿⣿⠁
-                                  ⠀⠻⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⣸⠏⠀
-                                  ⠀⠀⠀⢈⠰⢦⣤⣤⣤⣤⣤⠶⠈⠁⠀⠀⠀
-                                  ⢀⢀⠂⠀⠀⠀⠤⣄⣄⡤⠀⠀⠀⠑⢄⠀⠀
-                                  ⣼⣿⣶⣴⣇⠀⠀⠀⠀⠀⠀⢰⣦⣤⣶⣿⠀
-                                  ⢬⣿⡿⣿⡧⢼⣤⣿⣯⣥⡥⢼⣿⣿⣿⣏⠀
-                                  ⠀⣿⣿⡟⣀⠀⠈⣿⣿⡁⠀⢀⠹⣿⣿⡇⠀
-                                  ⢰⠿⠻⣿⣿⣿⣶⠿⡿⢷⣿⣿⣿⡿⠿⡇⠀
-                                  ⠀⠐⠛⠻⠿⠛⠛⠀⠀⠛⠻⠿⠿⠿⠆⠀⠀⠀
+⠀⠀⠀⢀⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀       ⣴⡀⠀⠀⠀
+⠀⠀⠀⣼⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀       ⣼⣿⣷⡀⠀⠀
+⠀⠀⢠⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀    ⣸⣿⣿⣿⣇⠀⠀
+⠀⠀⣾⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣿⣿⣿⣿⣿⡀⠀
+⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀
+⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀
+⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀
+⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
+⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
+⢸⣿⣿⣿⣿⡟⠋⠉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⠛⢿⣿⣿⣿⣿⡇
+⢸⣿⣿⣿⣿⡀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀   ⣿⣿⣿⣿⡇
+⠸⣿⣿⣿⣿⣷⣦⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣀⣠⣴⣿⣿⣿⣿⡇
+⠀⢿⣿⣿⡟⠛⠛⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠿⠛⢻⣿⣿⣿⠁
+⠀⠘⢿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠛⠋⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠏⠀
+⠀⠀⠀⠙⠧⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣸⠿⠋⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠓⠢⢤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⡤⠴⠒⠋⠉⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣀⡤⠒⠙⠿⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⡿⠟⠓⠢⣀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠉⣉⠁⠀⠀⠈⢉⠉⠀⠀⠀⠀⠀    ⠑⢄⠀⠀⠀⠀⠀
+⠀⣄⠀⡴⠁⠀⠀⠀  ⡆⠀⠀⠀⠾⠿⣶⣾⣷⣶⡿⠷⠀⠀ ⠇⠀⠀⠀  ⠳⡀⠀⠀⠀
+⢰⣿⡿⣱⣦⣄⡀⣠⣷⠀⠀⠀⠀⠀⠀⠈⠃⠀⠀⠀⠀⠀⠀⢸⣄⡀⠀⣀⣤⣜⣶⣃⠀
+⢳⣿⣱⣿⣿⣿⣿⣿⣿⣆⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣿⣿⣿⣿⣿⣿⣿⡞⣯⠆
+⢀⣇⣿⣿⣿⣿⣿⣿⣿⡇⠀⢸⠀⠉⡏⣟⣿⡏⠏⠉⢹⠉⠈⣿⣿⣿⣿⣿⣿⣿⣿⢡⠀
+⠸⣜⡿⣿⣿⢹⣿⣿⡿⠛⠻⠿⣿⣿⣿⣶⣶⣾⣷⣿⡿⠟⠛⢿⣿⣿⣿⡫⣿⣿⢿⣫⠀
+⠀⠈⣽⣶⣾⣿⣿⡿⠁⠀⠀⠀⠀⠙⢿⣿⣿⣟⠋⠁⠀⠀⠀⠀⠻⣿⣿⣿⣮⣷⡏⠁⠀
+⠀⢠⣿⣿⣿⣿⡿⢁⣀⣄⡀⠀⠀⢀⣾⣿⣿⣿⣧⠀⠀⠀⣀⣀⡀⢹⣿⣿⣿⣿⣿⠀⠀
+⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣼⣿⣿⣿⣿⣿⣤⣶⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⠀⠀
+⠀⢸⠟⠉⠈⢙⣿⣿⣿⣿⣿⣿⣿⣿⠙⠻⣿⠟⢹⣿⣿⣿⣿⣿⣿⣿⣿⠛⠉⠙⢿⡆⠀
+⠀⠀⠀⢠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠁⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠁⠀
+⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠛⠛⠉⠉⠉⠁⠀⠀⠀⠀⠀
 
 
 `;
