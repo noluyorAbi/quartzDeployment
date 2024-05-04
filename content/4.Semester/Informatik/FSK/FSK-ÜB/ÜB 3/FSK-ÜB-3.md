@@ -8,8 +8,9 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Saturday, 4. May 2024, 20:06
-date modified: Saturday, 4. May 2024, 23:33
+date modified: Saturday, 4. May 2024, 23:50
 ---
+
 # TODOs
 
 - [ ] [[FSK-ÜB-3]] ab 3-2 fortsetzen
@@ -90,7 +91,7 @@ Entschuldigung für das Missverständnis. Hier ist der Text in der ursprünglich
 > **Geben Sie für jedes $n$ einen NFA $A_n$ an, der $L_n$ erkennt. Beschreiben Sie ausnahmsweise $A_n$ nicht durch einen Zustandsgraph, sondern geben Sie die Zustandsmenge, Start- und Endzustände und Übergänge (in Abhängigkeit von $n$) explizit an. Geben Sie außerdem den Zustandsgraph von $A_3$ an.**
 
 **Gedankengang:**
--  $2012323 \in L_3$ weil alle jede Ziffer kommt weniger als 2 mal vor $L_{3}=\{0,1,2\}$
+- $2012323 \in L_3$ weil alle jede Ziffer kommt weniger als 2 mal vor $L_{3}=\{0,1,2\}$
 - $0112223 \notin L_3$ weil die 2 drei-mal vorkommt $3 \notin L_{3}$
 
 >[!summary]
