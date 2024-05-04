@@ -8,7 +8,7 @@ fach: "[[BaySta]]"
 Thema: 
 Benötigte Zeit: ∞
 date created: Friday, 3. May 2024, 18:13
-date modified: Friday, 3. May 2024, 19:44
+date modified: Saturday, 4. May 2024, 17:38
 ---
 
 # Aufgabe 1
@@ -184,7 +184,9 @@ date modified: Friday, 3. May 2024, 19:44
 >
 >Dies zeigt, dass die Familie der Gamma-Verteilungen konjugiert zur Exponentialverteilung ist, weil das Posterior dieselbe Form wie der Prior hat, lediglich mit aktualisierten Parametern.
 
-## (c) Berechnen Sie den theoretischen Posteriori-Erwartungswert $\mathbb{E}(\lambda|x)$ und den Posteriori-Modus $\arg\max_{\lambda} p(\lambda|x)$. Vergleichen Sie die Bayesianschen Schätzer mit dem ML-Schätzer.
+## (c) Berechnen Sie den [[theoretischen Posteriori-Erwartungswert]] $\mathbb{E}(\lambda|x)$ und den Posteriori-Modus $\arg\max_{\lambda} p(\lambda|x)$. Vergleichen Sie die Bayesianischen Schätzer mit dem ML-Schätzer.
+
+
 
 ## (d) Zeichnen Sie die Posteriori für den `babyboom` Datensatz, wenn als Priori-Parameter $a = b = 10^{-3}$ gewählt werden. Visualisieren Sie die drei Schätzer aus Aufgabe c).
 
