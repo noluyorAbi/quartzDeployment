@@ -8,7 +8,7 @@ fach: "[[RNVS]]"
 Thema: 
 Benötigte Zeit: 3h
 date created: Friday, 3. May 2024, 20:08
-date modified: Friday, 3. May 2024, 23:11
+date modified: Saturday, 4. May 2024, 22:33
 ---
 
 # TODOs
