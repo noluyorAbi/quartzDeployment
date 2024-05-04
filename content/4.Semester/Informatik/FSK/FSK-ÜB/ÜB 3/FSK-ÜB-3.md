@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Saturday, 4. May 2024, 20:06
-date modified: Saturday, 4. May 2024, 22:33
+date modified: Saturday, 4. May 2024, 23:33
 ---
 # TODOs
 
@@ -94,53 +94,109 @@ Entschuldigung für das Missverständnis. Hier ist der Text in der ursprünglich
 - $0112223 \notin L_3$ weil die 2 drei-mal vorkommt $3 \notin L_{3}$
 
 >[!summary]
+> ### Definition des NFA $A_n$
+>
+> Für die Definition eines Nichtdeterministischen Endlichen Automaten (NFA), der die Sprache $L_n$ erkennt, gehen wir wie folgt vor:
+>
+> #### Zustandsmenge:
+>
+> - Die Zustandsmenge $Q$ von $A_n$ besteht aus allen möglichen Zählerkonfigurationen für jedes Symbol in $\Sigma_n$, die angeben, wie oft jedes Symbol bis zu einem bestimmten Punkt im Wort erschienen ist. Zusätzlich gibt es einen besonderen Startzustand $q_0$ und Fehlerzustände für unerlaubte Symbolzählungen.
+> - Jeder Zustand $q$ in $Q$ kann durch ein Tupel $(c_0, c_1, \ldots, c_n)$ repräsentiert werden, wobei $c_i$ die Anzahl des Symbols $i$ in $\Sigma_n$ ist, das bis jetzt gelesen wurde. Jedes $c_i$ kann Werte von 0 bis $n$ annehmen, wobei Werte größer als $n$ zu einem Fehlerzustand führen.
+>
+> #### Startzustand:
+>
+> - Der Startzustand ist $q_0 = (0, 0, \ldots, 0)$, was bedeutet, dass noch kein Symbol gelesen wurde.
+>
+> #### Akzeptierende Zustände:
+>
+> - Ein Zustand $(c_0, c_1, \ldots, c_n)$ ist ein akzeptierender Zustand, wenn genau eine der Zählungen $c_i = i$ ist und alle anderen $c_j$ (für $j \neq i$) kleiner als $j$ sind. Das heißt, genau ein Symbol $i$ kommt genau $i$-mal vor, und kein anderes Symbol kommt öfter vor, als es seine Ziffer erlaubt.
+>
+> #### Übergänge:
+>
+> - Von jedem Zustand $(c_0, c_1, \ldots, c_n)$ gibt es einen Übergang zum Zustand $(c_0, c_1, \ldots, c_i+1, \ldots, c_n)$ beim Lesen des Symbols $i$. Wenn $c_i+1 > n$, führt der Übergang in einen Fehlerzustand.
+>
+> #### Fehlerzustände:
+>
+> - Fehlerzustände werden erreicht, wenn eine Zählung $c_i$ größer als $n$ wird. Alle Übergänge von Fehlerzuständen führen wieder in Fehlerzustände.
+>
+> ### Zustandsgraph für $A_3$
+>
+> Für den speziellen Fall von $n = 3$ erstellen wir einen Zustandsgraphen:
+>
+> - **Zustände**: Jeder Zustand ist ein Tupel $(c_0, c_1, c_2, c_3)$, wobei jedes $c_i$ von 0 bis 3 reichen kann. Zustände, in denen $c_i > i$ sind nicht Teil unseres Automaten.
+> - **Akzeptierende Zustände**: Zustände wie $(0, 1, 0, 0)$, $(0, 0, 2, 0)$ und $(0, 0, 0, 3)$.
+> - **Startzustand**: $(0, 0, 0, 0)$
+> - **Übergänge**: Basierend auf der obigen Beschreibung.
+>
+> Lassen Sie uns eine detaillierte grafische Darstellung des Nichtdeterministischen Endlichen Automaten $A_3$ erstellen, der die Sprache $L_3$ erkennt. Diese Visualisierung wird die Zustandsmenge, akzeptierende Zustände, Startzustand und Übergänge für $n=3$ enthalten. Beachten Sie, dass ich zur Vereinfachung nur relevante Teile des Automaten zeige, da die vollständige Darstellung sehr umfangreich wäre.
+>
+> Hier ist die grafische Darstellung von $A_3$:
+>
+> ### Zustandsgraph von $A_3$
+>
+> 1. **Zustände**:
+>     
+>     - Jeder Zustand ist ein Tupel $(c_0, c_1, c_2, c_3)$, wobei $c_i$ die Anzahl der Male darstellt, dass das Symbol $i$ gelesen wurde. Nur diejenigen Zustände, bei denen keine $c_i$ die Bedingung $c_i > i$ erfüllt, sind gültig.
+>     - Fehlerzustände sind solche, bei denen mindestens ein $c_i > i$.
+> 2. **Startzustand**:
+>     
+>     - Der Startzustand ist $(0, 0, 0, 0)$.
+> 3. **Akzeptierende Zustände**:
+>     
+>     - $(0, 1, 0, 0)$: Symbol 1 kommt genau einmal vor.
+>     - $(0, 0, 2, 0)$: Symbol 2 kommt genau zweimal vor.
+>     - $(0, 0, 0, 3)$: Symbol 3 kommt genau dreimal vor.
+> 4. **Übergänge**:
+>     
+>     - Von jedem Zustand $(c_0, c_1, c_2, c_3)$ gibt es Übergänge zu $(c_0+1, c_1, c_2, c_3)$, $(c_0, c_1+1, c_2, c_3)$, $(c_0, c_1, c_2+1, c_3)$ und $(c_0, c_1, c_2, c_3+1)$ beim Lesen der entsprechenden Symbole 0, 1, 2, bzw. 3. Übergänge, die zu ungültigen Zuständen führen, werden nicht gezeigt.
 
-### Definition des NFA \( A_n \)
 
-Für die Definition eines Nichtdeterministischen Endlichen Automaten (NFA), der die Sprache \( L_n \) erkennt, gehen wir wie folgt vor:
+### Definition des NFA $A_n$
+
+Für die Definition eines Nichtdeterministischen Endlichen Automaten (NFA), der die Sprache $ L_n $ erkennt, gehen wir wie folgt vor:
 
 #### Zustandsmenge:
-- Die Zustandsmenge \( Q \) von \( A_n \) besteht aus allen möglichen Zählerkonfigurationen für jedes Symbol in \( \Sigma_n \), die angeben, wie oft jedes Symbol bis zu einem bestimmten Punkt im Wort erschienen ist. Zusätzlich gibt es einen besonderen Startzustand \( q_0 \) und Fehlerzustände für unerlaubte Symbolzählungen.
-- Jeder Zustand \( q \) in \( Q \) kann durch ein Tupel \( (c_0, c_1, \ldots, c_n) \) repräsentiert werden, wobei \( c_i \) die Anzahl des Symbols \( i \) in \( \Sigma_n \) ist, das bis jetzt gelesen wurde. Jedes \( c_i \) kann Werte von 0 bis \( n \) annehmen, wobei Werte größer als \( n \) zu einem Fehlerzustand führen.
+- Die Zustandsmenge $ Q $ von $ A_n $ besteht aus allen möglichen Zählerkonfigurationen für jedes Symbol in $ \Sigma_n $, die angeben, wie oft jedes Symbol bis zu einem bestimmten Punkt im Wort erschienen ist. Zusätzlich gibt es einen besonderen Startzustand $ q_0 $ und Fehlerzustände für unerlaubte Symbolzählungen.
+- Jeder Zustand $ q $ in $ Q $ kann durch ein Tupel $ (c_0, c_1, \ldots, c_n) $ repräsentiert werden, wobei $ c_i $ die Anzahl des Symbols $ i $ in $ \Sigma_n $ ist, das bis jetzt gelesen wurde. Jedes $ c_i $ kann Werte von 0 bis $ n $ annehmen, wobei Werte größer als $ n $ zu einem Fehlerzustand führen.
 
 #### Startzustand:
-- Der Startzustand ist \( q_0 = (0, 0, \ldots, 0) \), was bedeutet, dass noch kein Symbol gelesen wurde.
+- Der Startzustand ist $ q_0 = (0, 0, \ldots, 0) $, was bedeutet, dass noch kein Symbol gelesen wurde.
 
 #### Akzeptierende Zustände:
-- Ein Zustand \( (c_0, c_1, \ldots, c_n) \) ist ein akzeptierender Zustand, wenn genau eine der Zählungen \( c_i = i \) ist und alle anderen \( c_j \) (für \( j \neq i \)) kleiner als \( j \) sind. Das heißt, genau ein Symbol \( i \) kommt genau \( i \)-mal vor, und kein anderes Symbol kommt öfter vor, als es seine Ziffer erlaubt.
+- Ein Zustand $ (c_0, c_1, \ldots, c_n) $ ist ein akzeptierender Zustand, wenn genau eine der Zählungen $ c_i = i $ ist und alle anderen $ c_j $ (für $ j \neq i $) kleiner als $ j $ sind. Das heißt, genau ein Symbol $ i $ kommt genau $ i $-mal vor, und kein anderes Symbol kommt öfter vor, als es seine Ziffer erlaubt.
 
 #### Übergänge:
-- Von jedem Zustand \( (c_0, c_1, \ldots, c_n) \) gibt es einen Übergang zum Zustand \( (c_0, c_1, \ldots, c_i+1, \ldots, c_n) \) beim Lesen des Symbols \( i \). Wenn \( c_i+1 > n \), führt der Übergang in einen Fehlerzustand.
+- Von jedem Zustand $ (c_0, c_1, \ldots, c_n) $ gibt es einen Übergang zum Zustand $ (c_0, c_1, \ldots, c_i+1, \ldots, c_n) $ beim Lesen des Symbols $ i $. Wenn $ c_i+1 > n $, führt der Übergang in einen Fehlerzustand.
 
 #### Fehlerzustände:
-- Fehlerzustände werden erreicht, wenn eine Zählung \( c_i \) größer als \( n \) wird. Alle Übergänge von Fehlerzuständen führen wieder in Fehlerzustände.
+- Fehlerzustände werden erreicht, wenn eine Zählung $ c_i $ größer als $ n $ wird. Alle Übergänge von Fehlerzuständen führen wieder in Fehlerzustände.
 
-### Zustandsgraph für \( A_3 \)
+### Zustandsgraph für $ A_3 $
 
-Für den speziellen Fall von \( n = 3 \) erstellen wir einen Zustandsgraphen:
+Für den speziellen Fall von $ n = 3 $ erstellen wir einen Zustandsgraphen:
 
-- **Zustände**: Jeder Zustand ist ein Tupel \( (c_0, c_1, c_2, c_3) \), wobei jedes \( c_i \) von 0 bis 3 reichen kann. Zustände, in denen \( c_i > i \) sind nicht Teil unseres Automaten.
-- **Akzeptierende Zustände**: Zustände wie \( (0, 1, 0, 0) \), \( (0, 0, 2, 0) \) und \( (0, 0, 0, 3) \).
-- **Startzustand**: \( (0, 0, 0, 0) \)
+- **Zustände**: Jeder Zustand ist ein Tupel $ (c_0, c_1, c_2, c_3) $, wobei jedes $ c_i $ von 0 bis 3 reichen kann. Zustände, in denen $ c_i > i $ sind nicht Teil unseres Automaten.
+- **Akzeptierende Zustände**: Zustände wie $ (0, 1, 0, 0) $, $ (0, 0, 2, 0) $ und $ (0, 0, 0, 3) $.
+- **Startzustand**: $ (0, 0, 0, 0) $
 - **Übergänge**: Basierend auf der obigen Beschreibung.
 
-Lassen Sie uns eine detaillierte grafische Darstellung des Nichtdeterministischen Endlichen Automaten \(A_3\) erstellen, der die Sprache \(L_3\) erkennt. Diese Visualisierung wird die Zustandsmenge, akzeptierende Zustände, Startzustand und Übergänge für \(n=3\) enthalten. Beachten Sie, dass ich zur Vereinfachung nur relevante Teile des Automaten zeige, da die vollständige Darstellung sehr umfangreich wäre.
+Lassen Sie uns eine detaillierte grafische Darstellung des Nichtdeterministischen Endlichen Automaten $A_3$ erstellen, der die Sprache $L_3$ erkennt. Diese Visualisierung wird die Zustandsmenge, akzeptierende Zustände, Startzustand und Übergänge für $n=3$ enthalten. Beachten Sie, dass ich zur Vereinfachung nur relevante Teile des Automaten zeige, da die vollständige Darstellung sehr umfangreich wäre.
 
-Hier ist die grafische Darstellung von \(A_3\):
+Hier ist die grafische Darstellung von $A_3$:
 
-### Zustandsgraph von \(A_3\)
+### Zustandsgraph von $A_3$
 
 1. **Zustände**:
-   - Jeder Zustand ist ein Tupel \((c_0, c_1, c_2, c_3)\), wobei \(c_i\) die Anzahl der Male darstellt, dass das Symbol \(i\) gelesen wurde. Nur diejenigen Zustände, bei denen keine \(c_i\) die Bedingung \(c_i > i\) erfüllt, sind gültig.
-   - Fehlerzustände sind solche, bei denen mindestens ein \(c_i > i\).
+   - Jeder Zustand ist ein Tupel $(c_0, c_1, c_2, c_3)$, wobei $c_i$ die Anzahl der Male darstellt, dass das Symbol $i$ gelesen wurde. Nur diejenigen Zustände, bei denen keine $c_i$ die Bedingung $c_i > i$ erfüllt, sind gültig.
+   - Fehlerzustände sind solche, bei denen mindestens ein $c_i > i$.
 
 2. **Startzustand**:
-   - Der Startzustand ist \((0, 0, 0, 0)\).
+   - Der Startzustand ist $(0, 0, 0, 0)$.
 
 3. **Akzeptierende Zustände**:
-   - \((0, 1, 0, 0)\): Symbol 1 kommt genau einmal vor.
-   - \((0, 0, 2, 0)\): Symbol 2 kommt genau zweimal vor.
-   - \((0, 0, 0, 3)\): Symbol 3 kommt genau dreimal vor.
+   - $(0, 1, 0, 0)$: Symbol 1 kommt genau einmal vor.
+   - $(0, 0, 2, 0)$: Symbol 2 kommt genau zweimal vor.
+   - $(0, 0, 0, 3)$: Symbol 3 kommt genau dreimal vor.
 
 4. **Übergänge**:
-   - Von jedem Zustand \( (c_0, c_1, c_2, c_3) \) gibt es Übergänge zu \( (c_0+1, c_1, c_2, c_3) \), \( (c_0, c_1+1, c_2, c_3) \), \( (c_0, c_1, c_2+1, c_3) \) und \( (c_0, c_1, c_2, c_3+1) \) beim Lesen der entsprechenden Symbole 0, 1, 2, bzw. 3. Übergänge, die zu ungültigen Zuständen führen, werden nicht gezeigt.
+   - Von jedem Zustand $(c_0, c_1, c_2, c_3)$ gibt es Übergänge zu $(c_0+1, c_1, c_2, c_3)$, $(c_0, c_1+1, c_2, c_3)$, $(c_0, c_1, c_2+1, c_3)$ und $(c_0, c_1, c_2, c_3+1)$ beim Lesen der entsprechenden Symbole 0, 1, 2, bzw. 3. Übergänge, die zu ungültigen Zuständen führen, werden nicht gezeigt.
