@@ -8,7 +8,7 @@ fach: "[[BaySta]]"
 Thema: 
 Benötigte Zeit: ∞
 date created: Friday, 3. May 2024, 18:13
-date modified: Saturday, 4. May 2024, 19:54
+date modified: Sunday, 5. May 2024, 20:29
 ---
 
 # Aufgabe 1
@@ -99,7 +99,7 @@ date modified: Saturday, 4. May 2024, 19:54
 >print(lambda_hat)
 >```
 >
->Die letzte Zeile gibt den Schätzwert für $\lambda$ zurück, welcher die erwartete Anzahl von Geburten pro Minute angibt, basierend auf den beobachteten Intervallen. Ich werde den Code nun ausführen, um den genauen Wert zu erhalten.
+>Die letzte Zeile gibt den Schätzwert für $\lambda$ zurück, welcher die erwartete Anzahl von Geburten pro Minute angibt, basierend auf den beobachteten Intervallen.
 >
 >Der berechnete Maximum-Likelihood-Schätzer $\hat{\lambda}$ für den Parameter $\lambda$ der Exponentialverteilung, basierend auf den gegebenen Geburtszeiten, beträgt etwa 0.0307. Dieser Wert repräsentiert die geschätzte Rate der Geburten pro Minute, d.h., es wird im Durchschnitt alle $\frac{1}{0.0307} \approx 32.6$ Minuten eine Geburt erwartet.
 
@@ -184,7 +184,7 @@ date modified: Saturday, 4. May 2024, 19:54
 >
 >Dies zeigt, dass die Familie der Gamma-Verteilungen konjugiert zur Exponentialverteilung ist, weil das Posterior dieselbe Form wie der Prior hat, lediglich mit aktualisierten Parametern.
 
-## (c) Berechnen Sie den [[theoretischen Posteriori-Erwartungswert]] $\mathbb{E}(\lambda|x)$ und den Posteriori-Modus $\arg\max_{\lambda} p(\lambda|x)$. Vergleichen Sie die Bayesianischen Schätzer mit dem ML-Schätzer.
+## (c) Berechnen Sie den [[Theoretischen Posteriori-Erwartungswert]]] $\mathbb{E}(\lambda|x)$ und den Posteriori-Modus $\arg\max_{\lambda} p(\lambda|x)$. Vergleichen Sie die Bayesianischen Schätzer mit dem ML-Schätzer.
 
 
 
