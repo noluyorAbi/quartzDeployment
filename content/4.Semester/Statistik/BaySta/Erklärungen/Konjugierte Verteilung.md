@@ -7,7 +7,7 @@ fach: "[[BaySta]]"
 Thema: "[[BaySta-Blatt-2]]"
 Benötigte Zeit: 
 date created: Friday, 3. May 2024, 19:39
-date modified: Friday, 3. May 2024, 19:41
+date modified: Sunday, 5. May 2024, 20:41
 ---
 
 Eine konjugierte Verteilung, genauer gesagt eine konjugierte Prior-Verteilung, spielt eine wichtige Rolle im Rahmen der Bayesianischen Statistik. Sie ermöglicht eine elegante mathematische Handhabung und Interpretation von Posterior-Verteilungen, wenn man Vorwissen oder Annahmen über die Parameter einer Wahrscheinlichkeitsverteilung einbringen möchte.
