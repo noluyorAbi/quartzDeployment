@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 29. April 2024, 11:52
-date modified: Saturday, 4. May 2024, 20:07
+date modified: Monday, 6. May 2024, 16:07
 ---
 
 > [!info] 
@@ -25,7 +25,7 @@ date modified: Saturday, 4. May 2024, 20:07
 $$
 \begin{aligned}
 P: \{\\
-S &\rightarrow A\space a\space B \\
+S &\rightarrow C\space a\space B \\
 C &\rightarrow aA\space|\space bA \space|\space\varepsilon \\
 B &\rightarrow aB\space|\space bB \space|\space\varepsilon \\
 \}
@@ -33,7 +33,7 @@ B &\rightarrow aB\space|\space bB \space|\space\varepsilon \\
 $$
 - $S:S$
 $$
-G = \{S,\{a,b\},\{\quad S \rightarrow A\space a\space B,\quad C \rightarrow aA\space|\space bA \space|\space\varepsilon, \quad B \rightarrow aB\space|\space bB \space|\space\varepsilon \quad \},S\}
+G = \{S,\{a,b\},\{\quad S \rightarrow C\space a\space B,\quad C \rightarrow aA\space|\space bA \space|\space\varepsilon, \quad B \rightarrow aB\space|\space bB \space|\space\varepsilon \quad \},S\}
 $$
 
 
@@ -111,7 +111,7 @@ B &\rightarrow CC \space|\space C,\\
 C &\rightarrow BB \space |\space B\}
 \end{aligned}
 $$
-
+→ $A \rightarrow ab$ fehlt muss noch hinzugefügt werden 
 # FSK2-2 DFAs und Minimierung (2 Punkte)
 
 ## a) Geben Sie DFAs an, die folgende Sprachen über dem Alphabet Σ = {a, b} erkennen:
@@ -127,6 +127,7 @@ flowchart LR
 	id5(((z2))) --a,b--> id6(((z3)))
 	id6(((z3))) --a,b--> id5(((z2)))
 ```
+**Falsch** siehe Lösung
 
 **Erklärung des Gedankenganges, warum so dargestellt:**
 - Pfade zwischen $z_0$ und $z_1$ stellen $c$ dar, was eine Kette von Buchstaben vor $a$ ist
@@ -150,6 +151,8 @@ flowchart LR
 	id5((z4)) --b--> id6((z5))
 	id6((z5)) --b--> id7(((z6)))
 ```
+
+$z_0$ und $z_1$ landen im Müllzustand
 
 **Erklärung des Gedankenganges, warum so dargestellt:**
 - Pfade von $z_0$ bis $z_2$ stellt $aa$ im Wort da
@@ -215,6 +218,9 @@ graph LR
 ### ii) DFA A2 aber dem Alphabet $Σ = {+, −, ., 0, … , 9}$ (bekannt aus der Vorlesung)
 
 >[!info] Graph aus Blatt entnehmen
+
+$z10$ Müllzustand fehlt muss als nicht Endzustand behandelt werden
+$z_4$ und $z_8$ müssen noch partitioniert werden, da sie in eine andere Partition führen, da jeweil 2 Pfeile von diesen Zuständen ausgehen, einmal auf sich selbst und einmal auf einen anderen Zustand
 
 $$
 z_0 \quad z_1 \quad z_2 \quad z_3 \quad z_4 \quad z_5 \quad z_6 \quad z_{7 \quad}z_8 \quad z_9

@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Saturday, 4. May 2024, 20:06
-date modified: Saturday, 4. May 2024, 23:50
+date modified: Monday, 6. May 2024, 14:19
 ---
 
 # TODOs
@@ -154,7 +154,7 @@ Entschuldigung für das Missverständnis. Hier ist der Text in der ursprünglich
 
 ### Definition des NFA $A_n$
 
-Für die Definition eines Nichtdeterministischen Endlichen Automaten (NFA), der die Sprache $ L_n $ erkennt, gehen wir wie folgt vor:
+Für die Definition eines Nichtdeterministischen Endlichen Automaten (NFA), der die Sprache $L_n$ erkennt, gehen wir wie folgt vor:
 
 #### Zustandsmenge:
 - Die Zustandsmenge $ Q $ von $ A_n $ besteht aus allen möglichen Zählerkonfigurationen für jedes Symbol in $ \Sigma_n $, die angeben, wie oft jedes Symbol bis zu einem bestimmten Punkt im Wort erschienen ist. Zusätzlich gibt es einen besonderen Startzustand $ q_0 $ und Fehlerzustände für unerlaubte Symbolzählungen.
@@ -172,11 +172,11 @@ Für die Definition eines Nichtdeterministischen Endlichen Automaten (NFA), der 
 #### Fehlerzustände:
 - Fehlerzustände werden erreicht, wenn eine Zählung $ c_i $ größer als $ n $ wird. Alle Übergänge von Fehlerzuständen führen wieder in Fehlerzustände.
 
-### Zustandsgraph für $ A_3 $
+### Zustandsgraph für $A_3$
 
-Für den speziellen Fall von $ n = 3 $ erstellen wir einen Zustandsgraphen:
+Für den speziellen Fall von $n = 3$ erstellen wir einen Zustandsgraphen:
 
-- **Zustände**: Jeder Zustand ist ein Tupel $ (c_0, c_1, c_2, c_3) $, wobei jedes $ c_i $ von 0 bis 3 reichen kann. Zustände, in denen $ c_i > i $ sind nicht Teil unseres Automaten.
+- **Zustände**: Jeder Zustand ist ein Tupel $(c_0, c_1, c_2, c_3)$, wobei jedes $ c_i$ von 0 bis 3 reichen kann. Zustände, in denen $c_i > i$ sind nicht Teil unseres Automaten.
 - **Akzeptierende Zustände**: Zustände wie $ (0, 1, 0, 0) $, $ (0, 0, 2, 0) $ und $ (0, 0, 0, 3) $.
 - **Startzustand**: $ (0, 0, 0, 0) $
 - **Übergänge**: Basierend auf der obigen Beschreibung.

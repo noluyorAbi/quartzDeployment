@@ -8,7 +8,7 @@ fach: "[[BaySta]]"
 Thema: 
 Benötigte Zeit: ∞
 date created: Friday, 3. May 2024, 18:13
-date modified: Sunday, 5. May 2024, 20:29
+date modified: Monday, 6. May 2024, 17:08
 ---
 
 # Aufgabe 1
@@ -23,13 +23,13 @@ date modified: Sunday, 5. May 2024, 20:29
 
 ## (a) Wie lautet die Likelihoodfunktion von $\lambda$ bezüglich der iid Stichprobe $x = (x_1, \ldots, x_n)^T$? Bestimmen Sie den ML-Schätzer von $\lambda$ zunächst allgemein und anschließend für den `babyboom`-Datensatz.
 
+
 >[!warning] GPT
 >
 >Die Aufgabe besteht darin, die Likelihood-Funktion für den Parameter $\lambda$ einer Exponentialverteilung zu formulieren und den Maximum-Likelihood-Schätzer (ML-Schätzer) für $\lambda$ zu finden.
 >
 >
 > ### Likelihood-Funktion
->
 >Die Wahrscheinlichkeitsdichte einer Exponentialverteilung für eine Beobachtung \(x\) ist gegeben durch:
 >
 >$$
@@ -40,6 +40,9 @@ date modified: Sunday, 5. May 2024, 20:29
 >
 >$$
 >L(\lambda; x_1, \ldots, x_n) = \prod_{i=1}^n \lambda e^{-\lambda x_i} = \lambda^n e^{-\lambda \sum_{i=1}^n x_i}
+>$$
+>$$
+>\lambda = \frac{1}{\overline{x}}
 >$$
 >
 >### Maximum-Likelihood-Schätzung von $\lambda$ 
@@ -102,6 +105,10 @@ date modified: Sunday, 5. May 2024, 20:29
 >Die letzte Zeile gibt den Schätzwert für $\lambda$ zurück, welcher die erwartete Anzahl von Geburten pro Minute angibt, basierend auf den beobachteten Intervallen.
 >
 >Der berechnete Maximum-Likelihood-Schätzer $\hat{\lambda}$ für den Parameter $\lambda$ der Exponentialverteilung, basierend auf den gegebenen Geburtszeiten, beträgt etwa 0.0307. Dieser Wert repräsentiert die geschätzte Rate der Geburten pro Minute, d.h., es wird im Durchschnitt alle $\frac{1}{0.0307} \approx 32.6$ Minuten eine Geburt erwartet.
+>
+>$$
+\hat{\lambda}_{ML}=\frac{1}{\Sigma x_i}
+$$
 
 
 ## (b) Zeigen Sie, dass die Familie der Gamma-Verteilungen
@@ -184,6 +191,10 @@ date modified: Sunday, 5. May 2024, 20:29
 >
 >Dies zeigt, dass die Familie der Gamma-Verteilungen konjugiert zur Exponentialverteilung ist, weil das Posterior dieselbe Form wie der Prior hat, lediglich mit aktualisierten Parametern.
 
+$$
+\hat{\lambda}_{ML}=\frac{n}{\Sigma x_i}
+$$
+
 ## (c) Berechnen Sie den [[Theoretischen Posteriori-Erwartungswert]]] $\mathbb{E}(\lambda|x)$ und den Posteriori-Modus $\arg\max_{\lambda} p(\lambda|x)$. Vergleichen Sie die Bayesianischen Schätzer mit dem ML-Schätzer.
 
 
@@ -197,3 +208,7 @@ date modified: Sunday, 5. May 2024, 20:29
 **Hinweis:** Die strukturierte Änderung von Priori-Parametern bezeichnet man als Sensitivitätsanalyse.
 
 ## (g) Bestimmen Sie die prädiktive Posteriori für eine neue Zwischenzeit $\tilde{x}$.
+
+
+
+

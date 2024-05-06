@@ -7,8 +7,12 @@ fach: "[[BaySta]]"
 Thema: "[[BaySta-Blatt-2]]"
 Benötigte Zeit: 
 date created: Friday, 3. May 2024, 19:39
-date modified: Sunday, 5. May 2024, 20:41
+date modified: Monday, 6. May 2024, 16:31
 ---
+
+>[!tip] Merkzettel
+> Posteriori ist gleiche Form wie Priori nur mit anderen Pararmetern
+
 
 Eine konjugierte Verteilung, genauer gesagt eine konjugierte Prior-Verteilung, spielt eine wichtige Rolle im Rahmen der Bayesianischen Statistik. Sie ermöglicht eine elegante mathematische Handhabung und Interpretation von Posterior-Verteilungen, wenn man Vorwissen oder Annahmen über die Parameter einer Wahrscheinlichkeitsverteilung einbringen möchte.
 
