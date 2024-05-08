@@ -8,7 +8,9 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Saturday, 4. May 2024, 20:06
+
 date modified: Wednesday, 8. May 2024, 02:27
+
 ---
 
 # TODOs
@@ -153,6 +155,7 @@ Entschuldigung für das Missverständnis. Hier ist der Text in der ursprünglich
 
 ---
 
+<<<<<<< HEAD
 # FSK3-2 Entfernen von $\epsilon$-Übergängen und Potenzmengenkonstruktion (2 Punkte)
 
 ## a) Sei $A_1$ der folgende NFA über dem Alphabet $\{a, b, c\}$:
@@ -185,3 +188,4 @@ graph LR
 ```
 >[!info] Aufgabenstellung
 >Die Suche wird wesentlich beschleunigt, wenn wir $A_2$ in einen DFA umwandeln. Verwenden Sie deshalb die Potenzmengenkonstruktion, um einen DFA $A_2'$ mit $L(A_2') = L(A_2)$ zu konstruieren. Geben Sie außer dem Zustandsgraph von $A_2'$ auch die Rechenschritte an, die Sie bei der Potenzmengenkonstruktion ausgeführt haben. Das erlaubt uns, Ihnen bei Folgefehlern noch Teilpunkte zu geben.
+
