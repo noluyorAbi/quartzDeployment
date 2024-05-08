@@ -8,7 +8,7 @@ fach: "[[RNVS]]"
 Thema:
 Benötigte Zeit: 2h 15m (spät nachts geworden)
 date created: Friday, 26. April 2024, 21:46
-date modified: Monday, 29. April 2024, 10:38
+date modified: Wednesday, 8. May 2024, 18:39
 ---
 
 # 1. Rechnernetze und verteilte Systeme (H)
@@ -149,8 +149,6 @@ graph TD
     D -->|1| I("LLR Kind")
 ```
 
--
-
 ## (a) Wieviele Blätter hat jeder der Bäume im Beispiel?
 
 $$
@@ -175,7 +173,7 @@ $$
 
 ## (e) Was haben die Pfade aller Nachfahren eines Knotens mit Abstand 8 im Hinblick auf die Pfadstruktur gemein? (Baum mit benannten Kanten)
 
-- 8 stellen vor der letzten Zahl ist gleich
+- 8 stellen vor der letzten Ziffer ist gleich
 
 ## (f) In einem vollständigen Binärbaum der Höhe 16 mit benannten Kanten gibt es ein Blatt, das mit dem Pfad 1100000010101000 adressiert wird. Interpretieren Sie diesen Pfad als Zahl im Binärsystem und wandeln Sie diese um in:
 
@@ -300,7 +298,7 @@ Berechnet die Hälfte eines vollständigen Binärbaumes ohne Wurzelknoten
 
 - 16
 
-> [!note] #### Wie man die Aufgabe löst:
+> [!note] Wie man die Aufgabe löst:
 
 **Beispiel an i:**
 

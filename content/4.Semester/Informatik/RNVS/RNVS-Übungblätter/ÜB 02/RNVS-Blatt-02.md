@@ -50,46 +50,46 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-	autonumber
+    autonumber
     Actor Kunde
     participant Telefonnetzwerk
     Actor PizzaService
 
-    rect rgb(235, 235, 235)
+    rect rgb(120, 120, 120)
     Kunde->>Telefonnetzwerk: (1) Anruf tätigen
     Telefonnetzwerk->>PizzaService: (1) Anruf weiterleiten
     end
 
-    rect rgb(255, 230, 230)
+    rect rgb(140, 100, 100)
     PizzaService->>Telefonnetzwerk: (2) Begrüßung und Bestellung anfordern
     Telefonnetzwerk->>Kunde: (2) Begrüßung empfangen
     end
 
-    rect rgb(230, 255, 230)
+    rect rgb(100, 140, 100)
     Kunde->>Telefonnetzwerk: (3) Wunschpizza nennen
     Telefonnetzwerk->>PizzaService: (3) Pizza weiterleiten
     end
 
-    rect rgb(255, 255, 200)
+    rect rgb(140, 140, 90)
     PizzaService->>Telefonnetzwerk: (4) Adresse anfordern
     Telefonnetzwerk->>Kunde: (4) Aufforderung empfangen
     Kunde->>Telefonnetzwerk: (5) Adresse nennen
     Telefonnetzwerk->>PizzaService: (5) Adresse weiterleiten
     end
 
-    rect rgb(200, 220, 255)
+    rect rgb(90, 110, 140)
     PizzaService->>Telefonnetzwerk: (6) Namen anfordern
     Telefonnetzwerk->>Kunde: (6) Aufforderung empfangen
     Kunde->>Telefonnetzwerk: (7) Namen nennen
     Telefonnetzwerk->>PizzaService: (7) Namen weiterleiten
     end
 
-    rect rgb(255, 240, 230)
+    rect rgb(140, 130, 110)
     PizzaService->>Telefonnetzwerk: (8) Bestellung bestätigen und Lieferzeit mitteilen
     Telefonnetzwerk->>Kunde: (8) Bestätigung empfangen
     end
 
-    rect rgb(240, 240, 240)
+    rect rgb(130, 130, 130)
     Kunde->>Telefonnetzwerk: (9) Verabschiedung
     Telefonnetzwerk->>PizzaService: (9) Verabschiedung weiterleiten
     PizzaService->>Telefonnetzwerk: (10) Gespräch beenden
