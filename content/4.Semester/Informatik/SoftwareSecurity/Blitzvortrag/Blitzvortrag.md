@@ -2,11 +2,11 @@
 tags:
   - 4semester
   - Seminar
-fach: "[[SoftwareSecurity]]"
+fach: "[[Bachelorseminar-Software Security]]"
 Thema: 
-Benötigte Zeit:
+Benötigte Zeit: 
 date created: Thursday, 9. May 2024, 15:11
-date modified: Thursday, 9. May 2024, 17:50
+date modified: Thursday, 9. May 2024, 18:50
 ---
 
 # Aufbau Kurzvortrag
@@ -43,10 +43,31 @@ date modified: Thursday, 9. May 2024, 17:50
 
 # What to Say
 
->[!info] Definition
+Die Callouts wurden nur zur farblichen Trennung der Themen genutzt und haben keine weitere Bedeutung.
+
+>[!danger] Definition
 > - kompakte, sichere mittel zur Übertragung von Information zwischen zwei Parteien als JSON-Objekte
 > - *Beispiel:* für zwei Parteien: Client und Server
 
->[!tip] Use-Case
->- Authentifizierung & Informationssicherung in Webanwendungen
+>[!success] Use-Case
+> Authentifizierung & Informationssicherung in Webanwendungen
+> <br/>
+>**Authentifizierung:** 
+> - JWTs ermöglichen nach dem Login den Zugriff auf autorisierte Ressourcen und werden häufig für Single Sign-On verwendet, dank ihrer Effizienz über verschiedene Domänen hinweg.
+> 
+> Beispiel: Ein Nutzer loggt sich auf einer E-Commerce-Plattform wie Amazon ein und navigiert sicher durch verschiedene Angebote und Bestellseiten, ohne sich erneut anmelden zu müssen, was durch den Einsatz von JWTs ermöglicht wird.
+> 
+> **Informationsaustausch:**
+>- JWTs bieten eine sichere Methode, Informationen zu übertragen, indem sie die Identität des Senders bestätigen und die Unversehrtheit der Daten sicherstellen.
+>
+> Beispiel: Ein Entwickler sendet Konfigurationsdaten von einem Backend-Server zu einem anderen über eine API. Der JWT stellt dabei sicher, dass die Daten echt sind und seit der Erstellung nicht verändert wurden, was die Integrität der übertragenen Konfiguration gewährleistet.
+
+>[!danger] JWT-Struktur
+> - Der **Header** besteht typischerweise aus zwei Teilen: dem Typ des Tokens, der JWT ist, und dem verwendeten Signaturalgorithmus, wie z.B. HMAC SHA256 oder RSA.
+> - Dann wird dieses JSON in Base64Url kodiert, um den ersten Teil des JWT zu bilden.
+> <br/>
+> - Der zweite Teil des Tokens ist der **Payload** (Nutzlast), das die *Claims* (Ansprüche) enthält. Claims sind Aussagen über eine Entität (typischerweise den Benutzer) und zusätzliche Daten. Es gibt drei Arten von Ansprüchen: registrierte, öffentliche und private Ansprüche.
+> 	- **Registrierte Claims** sind vordefiniert und empfohlen, aber nicht obligatorisch. Sie umfassen Aussteller, Ablaufzeit, Thema, Zielgruppe und andere.
+> 	- **Öffentliche Claims** können frei definiert werden, sollten jedoch im IANA JWT-Register oder als kollisionsresistenter URI angegeben werden, um Kollisionen zu vermeiden.
+> 	- **Private Claims** sind benutzerdefiniert und dienen dem Austausch von Informationen zwischen vereinbarten Parteien. Sie sind weder registriert noch öffentlich.
 
