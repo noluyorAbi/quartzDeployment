@@ -7,17 +7,17 @@ fach: "[[SoftwareSecurity]]"
 Thema: 
 Benötigte Zeit:
 date created: Thursday, 9. May 2024, 14:07
-date modified: Thursday, 9. May 2024, 14:10
+date modified: Thursday, 9. May 2024, 15:11
 ---
 
 # Organisatorisches 
 - Thema : "Representation of Claims" 
 	- Blitzvortrag am 10.05.2024, inhaltliche Kurzvorstellung des Themas in 90 Sekunden mit einer Folie
 	- Erstellung Ausarbeitung (Abgabe: Zwei Wochen vor Seminarvorträgen) 
-		-  Ausführliche Erklärung des Themas, verständlich für andere Teilnehmer 
+		- Ausführliche Erklärung des Themas, verständlich für andere Teilnehmer 
 		- 7000-14000 Zeichen
 - Anonyme Begutachtung der Ausarbeitungen zweier anderer Teilnehmer (Abgabe: Eine Woche vor Vorträgen)
--  Seminarvorträge (zwei Termine, gegen Ende des Semesters)
+- Seminarvorträge (zwei Termine, gegen Ende des Semesters)
 - Endabgabe Ausarbeitung (Zwei Wochen nach Vorträgen)
 # Anforderungen
 
