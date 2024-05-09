@@ -6,7 +6,7 @@ fach: "[[SoftwareSecurity]]"
 Thema: 
 Benötigte Zeit:
 date created: Thursday, 9. May 2024, 15:11
-date modified: Thursday, 9. May 2024, 16:06
+date modified: Thursday, 9. May 2024, 17:50
 ---
 
 # Aufbau Kurzvortrag
@@ -34,6 +34,19 @@ date modified: Thursday, 9. May 2024, 16:06
 
 # 1. Einleitung zu JWTs (ca. 20 Sekunden)
 
+>[!success] What to say
+> - kompakte, sichere mittel zur Übertragung von Information zwischen zwei Parteien als JSON-Objekte
+> - *Beispiel:* für zwei Parteien: Client und Server
+
 >[!info] Definition
->JSON Web Token (JWT) ist ein kompaktes, URL-sicheres Mittel, um Ansprüche zwischen zwei Parteien zu übertragen. Die in einem JWT enthaltenen Ansprüche sind als JSON-Objekt kodiert und werden in einer JSON Web Signature (JWS) oder JSON Web Encryption (JWE) Struktur genutzt, wodurch sie digital signiert, integritätsgeschützt mit einem MAC und/oder verschlüsselt werden können.
+>JSON Web Token (JWT) ist ein **kompaktes**, **URL-sicheres Mittel**, um **Ansprüche zwischen zwei Parteien zu übertragen**. Die in einem JWT enthaltenen Ansprüche sind als JSON-Objekt kodiert und werden in einer JSON Web Signature (JWS) oder JSON Web Encryption (JWE) Struktur genutzt, wodurch sie digital signiert, integritätsgeschützt mit einem MAC und/oder verschlüsselt werden können.
+
+# What to Say
+
+>[!info] Definition
+> - kompakte, sichere mittel zur Übertragung von Information zwischen zwei Parteien als JSON-Objekte
+> - *Beispiel:* für zwei Parteien: Client und Server
+
+>[!tip] Use-Case
+>- Authentifizierung & Informationssicherung in Webanwendungen
 
