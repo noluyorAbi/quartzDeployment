@@ -5,7 +5,10 @@ tags:
 fach: "[[SoftwareSecurity]]"
 Thema: 
 Benötigte Zeit:
+date created: Thursday, 9. May 2024, 15:11
+date modified: Thursday, 9. May 2024, 16:06
 ---
+
 # Aufbau Kurzvortrag
 
 1. **Einleitung zu JWTs (ca. 20 Sekunden)**
@@ -27,3 +30,10 @@ Benötigte Zeit:
 5. **Abschluss und Best Practices (ca. 10 Sekunden)**
    - Betonung der Bedeutung der Einhaltung von Best Practices, wie in den aktuellen Richtlinien zum Einsatz von JWTs empfohlen.
    - Verweis auf weiterführende Dokumente wie die JWT Best Current Practices.
+
+
+# 1. Einleitung zu JWTs (ca. 20 Sekunden)
+
+>[!info] Definition
+>JSON Web Token (JWT) ist ein kompaktes, URL-sicheres Mittel, um Ansprüche zwischen zwei Parteien zu übertragen. Die in einem JWT enthaltenen Ansprüche sind als JSON-Objekt kodiert und werden in einer JSON Web Signature (JWS) oder JSON Web Encryption (JWE) Struktur genutzt, wodurch sie digital signiert, integritätsgeschützt mit einem MAC und/oder verschlüsselt werden können.
+

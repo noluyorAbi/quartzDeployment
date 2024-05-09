@@ -7,7 +7,7 @@ fach: "[[SoftwareSecurity]]"
 Thema: 
 Benötigte Zeit:
 date created: Thursday, 9. May 2024, 14:07
-date modified: Thursday, 9. May 2024, 15:11
+date modified: Thursday, 9. May 2024, 16:53
 ---
 
 # Organisatorisches 
@@ -37,7 +37,7 @@ Explain JSON Web Tokens in detail, including the cryptographic concepts like mes
 - **JSON Web Token Best Current Practices:** [https://tools.ietf.org/html/draft-ietf-oauth-jwt-bcp-07](https://tools.ietf.org/html/draft-ietf-oauth-jwt-bcp-07)
 
 
->[!info] Kurzfassung
+>[!info] Erklärung
 > # Representation of Claims
 > 
 > ## JSON Web Tokens (JWT)
