@@ -8,12 +8,9 @@ fach: "[[RNVS]]"
 Thema: 
 Benötigte Zeit: 3h
 date created: Friday, 3. May 2024, 20:08
-date modified: Saturday, 4. May 2024, 22:33
+date modified: Wednesday, 8. May 2024, 19:15
 ---
 
-# TODOs
-
-- [ ] Aufgabe FSK02-2&3 nochmal überfliegen
 # 1. Der Pizzadienst (H)
 
 >[!note] Aufgabenstellung
@@ -103,63 +100,65 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-	autonumber
- rect rgb(191, 223, 255)
+    autonumber
+    rect rgb(110, 143, 175)
     Actor Kunde
-	note right of Kunde: Bestellaufnahme
+    note right of Kunde: Bestellaufnahme
     participant Telefonnetzwerk
     Actor PizzaService
     Actor Lieferant
+    end
 
-    rect rgb(235, 235, 235)
+    rect rgb(135, 135, 135)
     Kunde->>Telefonnetzwerk: (1) Anruf tätigen
     Telefonnetzwerk->>PizzaService: (1) Anruf weiterleiten
     end
 
-    rect rgb(255, 230, 230)
+    rect rgb(155, 130, 130)
     PizzaService->>Telefonnetzwerk: (2) Begrüßung und Bestellung anfordern
     Telefonnetzwerk->>Kunde: (2) Begrüßung und Aufforderung empfangen
     end
 
-    rect rgb(230, 255, 230)
+    rect rgb(130, 155, 130)
     Kunde->>Telefonnetzwerk: (3) Wunschpizza nennen
     Telefonnetzwerk->>PizzaService: (3) Pizza weiterleiten
     end
 
-    rect rgb(255, 255, 200)
+    rect rgb(155, 155, 100)
     PizzaService->>Telefonnetzwerk: (4) Adresse anfordern
     Telefonnetzwerk->>Kunde: (4) Aufforderung empfangen
     Kunde->>Telefonnetzwerk: (5) Adresse nennen
     Telefonnetzwerk->>PizzaService: (5) Adresse weiterleiten
     end
 
-    rect rgb(200, 220, 255)
+    rect rgb(100, 120, 155)
     PizzaService->>Telefonnetzwerk: (6) Namen anfordern
     Telefonnetzwerk->>Kunde: (6) Aufforderung empfangen
     Kunde->>Telefonnetzwerk: (7) Namen nennen
     Telefonnetzwerk->>PizzaService: (7) Namen weiterleiten
     end
 
-    rect rgb(255, 240, 230)
+    rect rgb(155, 140, 130)
     PizzaService->>Telefonnetzwerk: (8) Bestellung bestätigen und Lieferzeit mitteilen
     Telefonnetzwerk->>Kunde: (8) Bestätigung empfangen
     end
 
-    rect rgb(240, 240, 240)
+    rect rgb(140, 140, 140)
     Kunde->>Telefonnetzwerk: (9) Verabschiedung
     Telefonnetzwerk->>PizzaService: (9) Verabschiedung weiterleiten
     PizzaService->>Telefonnetzwerk: (10) Gespräch beenden
     Telefonnetzwerk->>Kunde: (10) Gesprächsende
     end
-end
- rect rgb(229, 204, 255)
- 	note right of Kunde: Liefererung
-	PizzaService->>Lieferant: (11) Lieferung anfragen mit allen Infos
-	Lieferant->>PizzaService: (11) Lieferung annehmen
-	PizzaService->>Lieferant: (12) Lieferung Übergeben
-	Lieferant->>Kunde: (13) Lieferung ausliefern
-	Kunde->>Lieferant: (13) Lieferung annehmen
-end
+
+    rect rgb(129, 104, 155)
+    note right of Kunde: Liefererung
+    PizzaService->>Lieferant: (11) Lieferung anfragen mit allen Infos
+    Lieferant->>PizzaService: (11) Lieferung annehmen
+    PizzaService->>Lieferant: (12) Lieferung Übergeben
+    Lieferant->>Kunde: (13) Lieferung ausliefern
+    Kunde->>Lieferant: (13) Lieferung annehmen
+    end
+
 ```
 
 ## (c) In der Vorlesung wurde die Unterscheidung in Steuerdaten und Nutzdaten diskutiert. Finden Sie hierzu Beispiele im Pizza-Service-Modell.
@@ -168,11 +167,17 @@ end
 **Steuerdaten:** Name und Adresse
 ## (d) Wie wirkt es sich auf die anderen Schichten aus, wenn Sie über einen Messengerdienst wie Signal oder WhatsApp statt einem Telefonanruf bestellen? Erläutern Sie außerdem kurz, inwiefern die Schichtentrennung hiervon betroffen ist.
 
-**Anwendungsschicht:** Änderung von Telefonprotkoll zu Nachrichtenprotokoll
+>[!success] Lösung
+> Das wirkt sich nicht aus, da das Dienstkonzept unabhängig von der Implementierung ist. Genau darauf zielt die Schichtentrennung
+
+>[!fail] Falsch
+>**Anwendungsschicht:** Änderung von Telefonprotkoll zu Nachrichtenprotokoll
 **Transport der Nachricht:**  
-- Telefone verwenden (PSTN) Protokoll
-- Messenger verwenden Internetprotokoll
-**Datenübertragung:** Findet verschlüsselt statt zwischen dem Absender und Empfänger nicht wie beim Telefonat
+> - Telefone verwenden (PSTN) Protokoll
+> - Messenger verwenden Internetprotokoll
+>
+> **Datenübertragung:** Findet verschlüsselt statt zwischen dem Absender und Empfänger nicht wie beim Telefonat
+
 
 ---
 
@@ -189,7 +194,7 @@ $$
 $$
 \text{SDU}= \text{UD} 
 $$
-→ PCI + UD = PDU
+→ $PCI + UD = PDU$
 
 Eine Protocol Data Unit (PDU) entsteht aus einer Service Data Unit (SDU) durch den Prozess der Encapsulation, bei dem die SDU von einer höheren Schicht an eine niedrigere Schicht übergeben und mit zusätzlichen Steuerungsinformationen, wie Headern und Trailern, ergänzt wird. Diese zusätzlichen Informationen sind notwendig, um die Daten korrekt nach den Anforderungen des verwendeten Netzwerkprotokolls zu übertragen und zu verarbeiten.
 
@@ -197,8 +202,9 @@ Eine Protocol Data Unit (PDU) entsteht aus einer Service Data Unit (SDU) durch d
    1. Auf welcher Schicht befindet sich die Peer-Entity?
 	   - Schicht N
    2. Wie ist der Zusammenhang zwischen PDU und SDU auf den Schichten N und N – 1?
-	   - [ ] <span style="color:red">??? Aufgabe 2bi RNVS 02</span> 
-   3. Beschreiben Sie den Weg einer Nutzlast jeweils vertikal durch die Schichten in eigenen Worten.
+	2.1: (N-1)-SDU = (N)-PDU, daraus ergibt sich
+	2.2: (N-1)-PDU = (N)-PDU + (N-1)-PCI
+   1. Beschreiben Sie den Weg einer Nutzlast jeweils vertikal durch die Schichten in eigenen Worten.
 	   - Nutzlast beinhaltet Nutzerdaten oder Informationen
 	   - Jede Schicht wie TCP/IP fügt ihre eigene Steuerungsinformationen zu den Nutzdaten hinzu bevor diese an die nächste Schicht weitergegeben werden, damit die nächste Schicht weiß was mit der Nutzlast (=Payload) zu tun ist 
 	   - Nutzlast ist der Hauptgrund für die Datenübertragung
