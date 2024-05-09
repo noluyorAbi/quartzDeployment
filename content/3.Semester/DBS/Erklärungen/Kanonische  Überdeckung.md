@@ -4,8 +4,9 @@ tags:
   - Erklaerung
 fach: "[[DBS]]"
 date created: Wednesday, 10. April 2024, 21:58
-date modified: Wednesday, 10. April 2024, 21:58
+date modified: Thursday, 9. May 2024, 22:09
 ---
+
 # [ !! Perfektes Video (*Youtube*)](https://www.youtube.com/watch?v=YiO8sO6KBIs)
 # Kanonische Überdeckung in Relationalen Datenbanken
 

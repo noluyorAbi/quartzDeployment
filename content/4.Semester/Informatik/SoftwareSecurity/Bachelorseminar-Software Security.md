@@ -7,7 +7,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema: 
 Benötigte Zeit: 
 date created: Thursday, 9. May 2024, 14:07
-date modified: Thursday, 9. May 2024, 21:38
+date modified: Thursday, 9. May 2024, 22:22
 ---
 
 # Organisatorisches 
@@ -70,3 +70,13 @@ Explain JSON Web Tokens in detail, including the cryptographic concepts like mes
 > - [JWT-Spezifikation (RFC 7519)](https://tools.ietf.org/html/rfc7519)
 > - Detering et al. "On The (In-)Security Of JavaScript Object Signing And Encryption." 2017.
 > - [JSON Web Token Best Current Practices](https://tools.ietf.org/html/draft-ietf-oauth-jwt-bcp-07)
+
+# Referenzen
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/UBUNrFtufWo?si=0xbCzV4hgcwJtml1" title=" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/qVG4o6Nskzg?si=fSxgwKL7cyR2_aqR" title=" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
