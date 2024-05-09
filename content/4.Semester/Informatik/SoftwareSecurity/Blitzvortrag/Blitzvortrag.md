@@ -81,16 +81,21 @@ Die Callouts wurden nur zur farblichen Trennung der Themen genutzt und haben kei
 > <br/>
 >- Der Output besteht aus drei Base64-URL-Strings, die durch Punkte getrennt sind und leicht in HTML- und HTTP-Umgebungen übergeben werden können. Dabei sind sie im Vergleich zu anderen Standards deutlich kompakter.
 
+>[!success] Vorteile
+> - **Zustandslosigkeit**: JWTs speichern alle benötigten Informationen im Token selbst, wodurch keine serverseitige Sitzungsspeicherung benötigt wird. Dies vereinfacht die Architektur und Skalierung von Anwendungen.
+> - **Single Sign-On (SSO)**: Mit JWTs können Nutzer einmalig anmelden und diesen Authentifizierungsstatus nahtlos auf verschiedene Dienste innerhalb desselben Ökosystems übertragen.
+> - **Bessere Performance**: Da JWTs alle notwendigen Informationen enthalten, sind weniger Datenbankabfragen nötig, was die Serverleistung und die Antwortzeiten verbessert.
+> - **Cross-Origin Resource Sharing (CORS)**: JWTs erleichtern die Handhabung von CORS, da sie leicht in HTTP-Headern übertragen werden können und nicht an Same-Origin-Policy gebunden sind wie Cookies.
+
+>[!danger] Nachteile
+> - **Tokengröße**: JWTs können bei vielen Claims groß werden, was die Größe der HTTP-Header erhöht und die Netzwerkleistung beeinträchtigen kann.
+> - **Sicherheitsrisiken**: Wenn der geheime Schlüssel kompromittiert wird, kann die Sicherheit aller damit signierten JWTs gefährdet sein, was das gesamte System beeinträchtigt.
+> - **Schwierige Verwaltung**: Die Ungültigkeitserklärung von JWTs ist problematisch, da sie bis zum Ablauf gültig bleiben, selbst wenn die Benutzerberechtigungen widerrufen werden.
+> - **Mangelnde Anpassungsfähigkeit**: Server können aktive Sitzungen nicht verwalten oder überwachen, weil JWTs keine Sitzungsinformationen speichern.
+
+
+
 ---
-
->[!success]  Sicherheit
->- **Sicherheitsvorkehrungen:** Da Token als Anmeldedaten fungieren, ist größte Sorgfalt geboten, um Sicherheitsprobleme zu vermeiden. Token sollten nicht länger als notwendig aufbewahrt werden und sensible Sitzungsdaten sollten nicht im Browser-Speicher aufgrund mangelnder Sicherheit gespeichert werden.
-
->[!danger] Effizienz und Anwendungsbereich
->**Zugriff auf geschützte Routen:** Wenn der Nutzer auf eine geschützte Route oder Ressource zugreifen möchte, sollte der JWT im Authorization-Header gesendet werden. Dies ermöglicht eine potenziell zustandslose Autorisierung, bei der der Server prüft, ob ein gültiger JWT vorhanden ist, um Zugriff auf geschützte Ressourcen zu gewähren.
-><br/>
->**Verminderung von Datenbankabfragen:** Wenn der JWT die notwendigen Daten enthält, kann die Notwendigkeit, die Datenbank für bestimmte Operationen zu befragen, reduziert werden. Es ist jedoch zu beachten, dass übermäßig große JWTs vermieden werden sollten, da einige Server keine Header über 8 KB akzeptieren.
-
 >[!info] Strukturelle Einsichten und Übertragung
 >- **Transparenz und Sicherheit:** Trotz der Signatur, die sicherstellt, dass der Inhalt des Tokens nicht verändert wurde, sind alle im Token enthaltenen Informationen für den Nutzer oder andere Parteien sichtbar. Daher sollten keine geheimen Informationen innerhalb des Tokens gespeichert werden.
 >- **Cross-Origin Resource Sharing (CORS):** Bei der Übermittlung in HTTP-Headern über das Authorization-Header verursacht CORS kein Problem, da keine Cookies verwendet werden. Dies unterscheidet sich von anderen Authentifizierungsmethoden, die möglicherweise anfällig für Cross-Site-Tracking oder andere Sicherheitsrisiken sind.
