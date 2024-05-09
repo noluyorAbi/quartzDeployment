@@ -7,7 +7,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema: 
 Benötigte Zeit: 
 date created: Thursday, 9. May 2024, 14:07
-date modified: Thursday, 9. May 2024, 17:54
+date modified: Thursday, 9. May 2024, 21:38
 ---
 
 # Organisatorisches 
@@ -19,6 +19,7 @@ date modified: Thursday, 9. May 2024, 17:54
 - Anonyme Begutachtung der Ausarbeitungen zweier anderer Teilnehmer (Abgabe: Eine Woche vor Vorträgen)
 - Seminarvorträge (zwei Termine, gegen Ende des Semesters)
 - Endabgabe Ausarbeitung (Zwei Wochen nach Vorträgen)
+
 # Anforderungen
 
 - **Blitzvortrag 90 Sekunden:** Inhaltsübersicht, eine Folie
@@ -26,7 +27,11 @@ date modified: Thursday, 9. May 2024, 17:54
 - **Begutachtung der Ausarbeitungen zweier anderer Teilnehmer**
 - **Vortrag: 30 Minuten (plus Diskussion)**
 
-## Anforderungen zum Thema
+# [[Blitzvortrag]]
+
+90 sekündiger Vortrag zum Thema mit einer Folie
+
+# Anforderungen zum Thema
 
 ## 10. Representation of Claims
 

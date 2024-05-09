@@ -6,7 +6,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema: 
 Benötigte Zeit: 
 date created: Thursday, 9. May 2024, 15:11
-date modified: Thursday, 9. May 2024, 19:28
+date modified: Thursday, 9. May 2024, 21:37
 ---
 
 # Aufbau Kurzvortrag
@@ -32,14 +32,14 @@ date modified: Thursday, 9. May 2024, 19:28
    - Verweis auf weiterführende Dokumente wie die JWT Best Current Practices.
 
 
-# 1. Einleitung zu JWTs (ca. 20 Sekunden)
-
->[!success] What to say
-> - kompakte, sichere mittel zur Übertragung von Information zwischen zwei Parteien als JSON-Objekte
-> - *Beispiel:* für zwei Parteien: Client und Server
-
->[!info] Definition
->JSON Web Token (JWT) ist ein **kompaktes**, **URL-sicheres Mittel**, um **Ansprüche zwischen zwei Parteien zu übertragen**. Die in einem JWT enthaltenen Ansprüche sind als JSON-Objekt kodiert und werden in einer JSON Web Signature (JWS) oder JSON Web Encryption (JWE) Struktur genutzt, wodurch sie digital signiert, integritätsgeschützt mit einem MAC und/oder verschlüsselt werden können.
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="eager" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGEvse55hg&#x2F;hDKrRWXW4w64qj6LweKhCQ&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGEvse55hg&#x2F;hDKrRWXW4w64qj6LweKhCQ&#x2F;view?utm_content=DAGEvse55hg&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Representation of Claims</a> 
 
 # What to Say
 
@@ -57,7 +57,7 @@ Die Callouts wurden nur zur farblichen Trennung der Themen genutzt und haben kei
 > <br/>
 > - **JWTs und Authentifizierung:** Nach erfolgreicher Anmeldung eines Nutzers mit seinen Anmeldedaten wird ein JSON Web Token (JWT) zurückgegeben. Dieses Token ermöglicht es dem Nutzer, auf geschützte Ressourcen zuzugreifen, indem es typischerweise im Authorization-Header unter Verwendung des HTTP-Authentifizierung-Schemas übermittelt wird.
 > <br/>
-> -  werden häufig für Single Sign-On verwendet, dank ihrer Effizienz über verschiedene Domänen hinweg.
+> - werden häufig für Single Sign-On verwendet, dank ihrer Effizienz über verschiedene Domänen hinweg.
 > 
 > Beispiel: Ein Nutzer loggt sich auf einer E-Commerce-Plattform zum Online-Shopping ein und navigiert sicher durch verschiedene Angebote und Bestellseiten, ohne sich erneut anmelden zu müssen, was durch den Einsatz von JWTs ermöglicht wird.
 > 
@@ -88,11 +88,10 @@ Die Callouts wurden nur zur farblichen Trennung der Themen genutzt und haben kei
 > - **Cross-Origin Resource Sharing (CORS)**: JWTs erleichtern die Handhabung von CORS, da sie leicht in HTTP-Headern übertragen werden können und nicht an Same-Origin-Policy gebunden sind wie Cookies.
 
 >[!danger] Nachteile
-> - **Tokengröße**: JWTs können bei vielen Claims groß werden, was die Größe der HTTP-Header erhöht und die Netzwerkleistung beeinträchtigen kann.
-> - **Sicherheitsrisiken**: Wenn der geheime Schlüssel kompromittiert wird, kann die Sicherheit aller damit signierten JWTs gefährdet sein, was das gesamte System beeinträchtigt.
-> - **Schwierige Verwaltung**: Die Ungültigkeitserklärung von JWTs ist problematisch, da sie bis zum Ablauf gültig bleiben, selbst wenn die Benutzerberechtigungen widerrufen werden.
-> - **Mangelnde Anpassungsfähigkeit**: Server können aktive Sitzungen nicht verwalten oder überwachen, weil JWTs keine Sitzungsinformationen speichern.
-
+> - **Token-Größe**: JWTs können groß werden, wenn sie umfangreiche Benutzerdaten enthalten, was zu erhöhtem Netzwerkverkehr führt. Ein Gleichgewicht zwischen Token-Größe und notwendigen Informationen ist wichtig.
+> - **Begrenzte Kontrolle über das Token-Verfallsdatum**: Einmal ausgestellt, bleiben JWTs bis zu ihrem Ablaufdatum gültig. Eine vorzeitige Ungültigkeitserklärung erfordert zusätzliche Maßnahmen wie das Blacklisting von Token.
+> - **Sicherheitsrisiken**: Wenn der geheime Schlüssel, der zur Signatur von JWTs verwendet wird, kompromittiert wird, können Angreifer gefälschte Token erstellen. Es ist entscheidend, diesen Schlüssel zu schützen.
+> - **Begrenzte Token-Aktualisierungen**: JWTs sind in der Regel unveränderlich, sobald sie ausgestellt sind. Ändern sich die Rolle oder Berechtigungen eines Benutzers, muss er sich möglicherweise erneut anmelden, um ein aktualisiertes Token zu erhalten.
 
 
 ---
