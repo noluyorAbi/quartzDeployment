@@ -11,14 +11,16 @@ date modified: Thursday, 9. May 2024, 22:22
 ---
 
 # Organisatorisches 
-- Thema : "Representation of Claims" 
-	- Blitzvortrag am 10.05.2024, inhaltliche Kurzvorstellung des Themas in 90 Sekunden mit einer Folie
-	- Erstellung Ausarbeitung (Abgabe: Zwei Wochen vor Seminarvorträgen) 
-		- Ausführliche Erklärung des Themas, verständlich für andere Teilnehmer 
-		- 7000-14000 Zeichen
-- Anonyme Begutachtung der Ausarbeitungen zweier anderer Teilnehmer (Abgabe: Eine Woche vor Vorträgen)
-- Seminarvorträge (zwei Termine, gegen Ende des Semesters)
-- Endabgabe Ausarbeitung (Zwei Wochen nach Vorträgen)
+
+>[!info]
+> - Thema : "Representation of Claims" 
+> 	- Blitzvortrag am 10.05.2024, inhaltliche Kurzvorstellung des Themas in 90 Sekunden mit einer Folie
+> 	- Erstellung Ausarbeitung (Abgabe: Zwei Wochen vor Seminarvorträgen) 
+> 		- Ausführliche Erklärung des Themas, verständlich für andere Teilnehmer 
+> 		- 7000-14000 Zeichen
+> - Anonyme Begutachtung der Ausarbeitungen zweier anderer Teilnehmer (Abgabe: Eine Woche vor Vorträgen)
+> - Seminarvorträge (zwei Termine, gegen Ende des Semesters)
+> - Endabgabe Ausarbeitung (Zwei Wochen nach Vorträgen)
 
 # Anforderungen
 
@@ -73,10 +75,18 @@ Explain JSON Web Tokens in detail, including the cryptographic concepts like mes
 
 # Referenzen
 
+## Erklärungen
+
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
     <iframe src="https://www.youtube.com/embed/UBUNrFtufWo?si=0xbCzV4hgcwJtml1" title=" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
     <iframe src="https://www.youtube.com/embed/qVG4o6Nskzg?si=fSxgwKL7cyR2_aqR" title=" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+## Disadvantages of JWT
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/I7gQTBYmEEg?si=MTIdVwOogFGGUu-9" title=" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>

@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: "[[Semester/4.Semester/Informatik/RNVS/RNVS]]"
 date created: Friday, 19. April 2024, 09:30
-date modified: Friday, 19. April 2024, 09:42
+date modified: Thursday, 9. May 2024, 23:19
 ---
 
 # Das Border Gateway Protocol (BGP)

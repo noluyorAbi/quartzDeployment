@@ -15,7 +15,7 @@ date modified: Wednesday, 8. May 2024, 17:55
 
 # TODOs
 
-- [ ] [[FSK-ÜB-3]] ab 3-2 fortsetzen
+- [x] [[FSK-ÜB-3]] ab 3-2 fortsetzen [completion:: 2024-05-09]
 
 > [!info] 
 > Wenn Sie Automaten angeben, tun Sie dies immer in Form eines Zustandsgraphen. Andere Formen der Darstellung (z.B. als Liste von Übergängen) werden nicht gewertet, da sie sehr viel aufwändiger zu korrigieren sind. Vergessen Sie nicht, im Zustandsgraph Start- und Endzustände zu markieren.
