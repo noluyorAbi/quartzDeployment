@@ -84,7 +84,7 @@ Explain JSON Web Tokens in detail, including the cryptographic concepts like mes
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
     <iframe src="https://www.youtube.com/embed/qVG4o6Nskzg?si=fSxgwKL7cyR2_aqR" title=" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
+1
 ## Disadvantages of JWT
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
