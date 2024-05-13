@@ -7,7 +7,7 @@ fach: "[[RNVS]]"
 Thema: 
 Benötigte Zeit:
 date created: Wednesday, 8. May 2024, 19:15
-date modified: Monday, 13. May 2024, 01:40
+date modified: Monday, 13. May 2024, 02:23
 ---
 
 # Protokollschichtung (H)
@@ -266,10 +266,16 @@ $$
 >5. OSI criticism
 
 ## (a) Welche Schichten sind in ISO/OSI besonders umstritten? Warum?
-## (b) Was sind die wesentlichen Kritikpunkte von ISO/OSI im Vergleich zum Internetmodell?
-## (c) Was ist aus Ihrer Sicht der Wert des ISO/OSI Modells?
-## (d) Welches Modell sollte Ihrer Meinung nach vornehmlich gelehrt werden?
+Die Komplexität des OSI-Referenzmodells und der empfundene Mangel an praktischer Relevanz bestimmter Schichten wie der Sitzungs- und Präsentationsschicht werden oft kritisiert. Speziell die Sitzungsschicht wird als überflüssig angesehen, da "the session layer should better be a part of the application layer and isn't of much use at the current position."
 
+## (b) Was sind die wesentlichen Kritikpunkte von ISO/OSI im Vergleich zum Internetmodell?
+Die Hauptkritikpunkte am OSI-Modell sind, dass die Protokolle "haven't been tested widely before being standardized" und nicht auf "existing practice in large-scale computer networking (e.g., Arpanet)" basieren. Darüber hinaus sind die OSI-Standards "very expensive and difficult to obtain", und das Modell selbst wird als "too complex" mit "too many layers" kritisiert.
+
+## (c) Was ist aus Ihrer Sicht der Wert des ISO/OSI Modells?
+Trotz der Kritik liegt der Wert des OSI-Modells in seinem Ansatz, als "the first successful worldwide attempt to develop a set of comprehensive standards for computer communications" zu dienen, mit dem Ziel, herstellerabhängige Spezifikationen zu ersetzen und weltweit einfache und flexible Computerkommunikation zu ermöglichen.
+
+## (d) Welches Modell sollte Ihrer Meinung nach vornehmlich gelehrt werden?
+Angesichts der praktischen Dominanz und der umfangreichen Implementierung von TCP/IP wäre es pragmatisch, sich hauptsächlich auf die Vermittlung dieses Modells zu konzentrieren. Wie im Text erwähnt, "In practice, TCP/IP is much more widely implemented and deployed, so you are much more likely to find TCP/IP products to suit your needs."
 
 ---
 
@@ -282,16 +288,40 @@ $$
 ## (a) Melden Sie sich zunächst mit Ihrer Benutzerkennung und Ihrem Passwort an einem Rechner des CIP-Pools an und öffnen Sie eine Konsole. Sollte Sie die Aufgaben von außerhalb des Universitätsgebäudes erledigen wollen, können Sie sich alternativ via SSH von einem beliebigen Rechner Ihrer Wahl einloggen. Voraussetzung ist ein installierter SSH Client. Eine ausführliche Anleitung bietet Ihnen die Seite der Rechnerbetriebsgruppe.
 
    1. Ermitteln Sie den absoluten Pfad Ihres Home-Verzeichnisses und zeigen Sie dessen Inhalt an!
+```zsh
+> echo $HOME
+> ls
+```
    2. Wechseln Sie in das Wurzelverzeichnis und dann zurück in Ihr Home-Verzeichnis!
+```zsh
+> cd /
+> cd
+```
    3. Was ist eine „man-Page“? Hinweis: Benutzen Sie den Befehl `man man`!
+	- Linux Hilffseite mit wichtigen Commands etc 
    4. Mit welchem Parameter zeigt `ls` auch versteckte Dateien an? Hinweis: man-Page: `ls(1)`!
+```zsh
+> ls -a
+```
 
 ## (b) Der `ping`-Befehl schickt Anfragen zu dem per Hostname oder IP-Adresse spezifizierten Zielrechner, um festzustellen ob der Zielrechner erreichbar ist. Mit dem Erhalt einer Antwort zeigt ping die RTD (roundtrip delay) an. Beachten Sie die `man-page` des Befehls: (`man ping`).
+
    1. Was versteht man unter roundtrip delay?
-   2. Versuchen Sie den Host `www.nm.if.lmu.de` mit dem Programm `ping` zu erreichen! Dabei sollen 10 Anfragen im Abstand von 2 Sekunden und je 100 Bytes Nutzdaten verschickt werden.
+	- Roundtrip Delay ist die Zeit, die ein Datenpaket benötigt, um von der Quelle zum Ziel zu gelangen und wieder zurück zur Quelle. Dies wird gemessen, um die Verbindungsgeschwindigkeit und -stabilität zu testen.
+   2. Versuchen Sie den Host `www.nm.ifi.lmu.de` mit dem Programm `ping` zu erreichen! Dabei sollen 10 Anfragen im Abstand von 2 Sekunden und je 100 Bytes Nutzdaten verschickt werden.
+```zsh
+> ping -c 10 -i 2 -s 100 www.nm.ifi.lmu.de
+```
+
    3. Wie sind die einzelnen Spalten in der Ausgabe des `ping`-Befehls zu interpretieren?
+	   - Die Ausgabe von `ping` enthält Informationen wie die IP-Adresse des Zielrechners, die Zeit jedes einzelnen Ping-Vorgangs (in Millisekunden), und gegebenenfalls Fehlermeldungen. 
 
 ## (c) Der `traceroute`-Befehl zeigt den Pfad von der Quelle bis zur Senke durch ein Rechnernetz und misst die RTD zu jedem einzelnen Knoten auf diesem Pfad. Beachten Sie die `man-page` des Befehls: (`man traceroute`).
    1. Interpretieren Sie die Ausgabe von `traceroute` zum Zielrechner `www.nm.if.lmu.de`! Welche Informationen beinhaltet die erste Zeile der Ausgabe?
+	   - Die erste Zeile der Ausgabe von `traceroute` beinhaltet normalerweise die IP-Adresse des Zielrechners und den Hostnamen, falls verfügbar.  
    2. In den darauffolgenden Zeilen stehen je drei Werte, meist in Millisekunden angegeben. Wofür stehen diese Werte?
-   3. Die häufige Überprüfung des Pfades zu einem bestimmten Zielrechner mit `traceroute` zeigt manchmal andere Einträge mit einem verschiedenen Pfad. Was kann diese Beobachtung bedeuten?
+	   - Die Werte in Millisekunden in den Zeilen nach der ersten repräsentieren die Roundtrip Delays für jeden einzelnen Hop oder Knotenpunkt auf dem Weg zum Zielrechner.
+   1. Die häufige Überprüfung des Pfades zu einem bestimmten Zielrechner mit `traceroute` zeigt manchmal andere Einträge mit einem verschiedenen Pfad. Was kann diese Beobachtung bedeuten?
+	   - Wenn `traceroute` manchmal unterschiedliche Pfade anzeigt, kann das auf dynamische Routenänderungen im Netzwerk hindeuten, bedingt durch Auslastung, Störungen oder Routenoptimierungen.  
+
+
