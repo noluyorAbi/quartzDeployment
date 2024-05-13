@@ -6,7 +6,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema: 
 Benötigte Zeit: 
 date created: Thursday, 9. May 2024, 15:11
-date modified: Monday, 13. May 2024, 01:55
+date modified: Monday, 13. May 2024, 23:04
 ---
 
 # Aufbau Kurzvortrag

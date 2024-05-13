@@ -6,13 +6,13 @@ tags:
   - informatik
 fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
 date created: Thursday, 18. April 2024, 15:01
-date modified: Thursday, 18. April 2024, 15:05
+date modified: Monday, 13. May 2024, 23:03
 ---
 
 
 Ein gut strukturierter mathematischer Beweis folgt einer logischen Abfolge von Schritten, um eine Behauptung zu verifizieren oder zu widerlegen. Hier ist eine allgemeine Anleitung, wie man einen mathematischen Beweis schreiben kann, einschließlich eines Templates, das du für eine Vielzahl von Beweisaufgaben anwenden kannst:
 
-### Anleitung zum Schreiben eines mathematischen Beweises
+# Anleitung zum Schreiben eines mathematischen Beweises
 
 **1. Behauptung klar definieren:**
    - **Was beweist du?** Beginne damit, die Behauptung, die du beweisen möchtest, klar und präzise zu formulieren. Dies kann eine Gleichung, eine Ungleichung, eine Identität oder eine Eigenschaft sein.
@@ -39,7 +39,7 @@ Ein gut strukturierter mathematischer Beweis folgt einer logischen Abfolge von S
 **6. Überprüfung und Revision:**
    - **Korrekturlesen:** Überprüfe deinen Beweis auf logische Fehler, Sprung in der Argumentation, oder mathematische Ungenauigkeiten. Es kann hilfreich sein, den Beweis jemand anderem zu erklären oder ihn laut vorzulesen.
 
-### Template für einen mathematischen Beweis
+# Template für einen mathematischen Beweis
 
 ```
 Behauptung: [Formuliere die zu beweisende Behauptung]

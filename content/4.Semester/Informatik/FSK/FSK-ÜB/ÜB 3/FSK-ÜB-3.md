@@ -9,13 +9,10 @@ Thema:
 Benötigte Zeit:
 date created: Saturday, 4. May 2024, 20:06
 
-date modified: Monday, 13. May 2024, 14:53
+date modified: Monday, 13. May 2024, 22:00
 
 ---
 
-# TODOs
-
-- [x] [[FSK-ÜB-3]] ab 3-2 fortsetzen [completion:: 2024-05-09]
 
 > [!info] 
 > Wenn Sie Automaten angeben, tun Sie dies immer in Form eines Zustandsgraphen. Andere Formen der Darstellung (z.B. als Liste von Übergängen) werden nicht gewertet, da sie sehr viel aufwändiger zu korrigieren sind. Vergessen Sie nicht, im Zustandsgraph Start- und Endzustände zu markieren.
@@ -29,6 +26,7 @@ date modified: Monday, 13. May 2024, 14:53
 $$
 L = \{u\ v\  w \ | \ v,w \in \Sigma^{*},\ v\in \{bab,aa\} \}
 $$
+Wörter dürfen nicht auf pfad stehen, nur Buchstaben
 
 ```mermaid
 graph LR
@@ -73,11 +71,6 @@ id0((z0)) --u--> id2((z2))
 	- Beispielname für z2: "\_" → nicht erlaubt
 - z3 ist ein Endzustand, da unterstrich am Anfang aber danach Zeichen folgt
 	- Beispielname für z3: "\_a" danach rekursiv "\_asdf123"
-
-
-Entschuldigung für das Missverständnis. Hier ist der Text in der ursprünglichen Sprache, formatiert für Markdown:
-
-
 
 ## c) Sei $n$ eine natürliche Zahl, $\Sigma_n = \{0, \dots, n\}$ und
 
@@ -174,8 +167,11 @@ graph LR
 >[!info] Aufgabenstellung
 >Geben Sie einen NFA $A_1'$ ohne $\epsilon$-Übergänge mit $L(A_1') = L(A_1)$ an. Verwenden Sie den Algorithmus zum Entfernen von $\epsilon$-Übergängen aus der Vorlesung. Geben Sie die Zwischenschritte Ihrer Berechnung an. Das erlaubt uns, Ihnen für Folgefehler Teiilpunkte zu geben.
 
-
 Alle Knoten die von $z_0$ ausgehend mit dem leeren Wort erreicht werden können sind Startzustände und müssen behandelt werden. Dies ist nur bei $z_1$ der Fall.
+
+Muss mit einem Zeichen aus $\Sigma$ beginnen und dann nur noch Epsilon Ketten. Kann von jedem Knoten Anfangen nicht nur von Startzuständen. 
+
+$\epsilon$ - Übergänge implizieren nicht das $\epsilon$ in der Sprache ist
 $$
 z_{0}\overset{a}{\rightarrow}z_{2} \quad 
 z_{2}\overset{\epsilon}{\rightarrow}z_{3}\quad 
@@ -362,7 +358,7 @@ q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{[}{\right
 $$
 - Erkannter Token: `"a[0]"`
 
-## b) Bestimmen Sie asymptotisch (in O-Notation), wie viele Schritte der TokenizerAutomat braucht, um ein Token aus einem String der Länge $n$ zu extrahieren
+## b) Bestimmen Sie asymptotisch (in O-Notation), wie viele Schritte der Tokenizer Automat braucht, um ein Token aus einem String der Länge $n$ zu extrahieren
 
 O(n), da die Verarbeitung von einem Zeichen ( O(1) ) ist und zweimal über den String gelaufen werden muss: Einmal zur Verarbeitung des Strings und einmal bei der Suche nach dem letzten Zustand, der ein Endzustand ist. (Man kann sich den jeweils letzten Endzustand natürlich auch merken, dann muss man nur einmal über den String laufen. Das ändert aber an der asymptotischen Laufzeit nichts.)
 
@@ -514,7 +510,7 @@ q1((q1)) --b-->qm(((qm)))
 qm(((qm))) --a,b--> qm(((qm)))
 ```
 
-## c) Zeigen Sie: Für jeden NFA $A$ ist $L(T(A)) = \{w \,|\, w \in L(A)\}$. Dabei steht $w$ wie in der Vorlesung für das rückwärts gelesene Wort $w$.
+## c) Zeigen Sie: Für jeden NFA $A$ ist $L(T(A)) = \{\overline{w} \,|\, w \in L(A)\}$. Dabei steht $w$ wie in der Vorlesung für das rückwärts gelesene Wort $w$.
 
 Wir zeigen für alle $q, p \in Z$ und alle $w \in \Sigma^*$:
 
@@ -554,3 +550,19 @@ $$\begin{aligned}
 \text{g.d.w. } &\exists q \in E, p \in S : p \in \hat{\delta'}(q, w) & (\text{mit Gleichung (1)}) \\
 \text{g.d.w. } &w \in L(T(A))
 \end{aligned}$$
+
+>[!tip] Erklärung
+> Der gegebene Beweis zeigt die Äquivalenz der Sprachen eines nichtdeterministischen endlichen Automaten (NFA) $A$ und seines transformierten Automaten $T(A)$. Die Transformation besteht darin, die Übergangsfunktion $\delta$ so zu ändern, dass sie Wörter rückwärts akzeptiert. Hier wird gezeigt, dass das Rückwärtslesen eines Wortes in $A$ dem Vorwärtslesen in $T(A)$ entspricht.
+> 
+> Der Beweis nutzt eine Induktion über die Länge eines Wortes $w$ und verwendet eine umgekehrte Übergangsfunktion $\delta'$, die im rückwärts transformierten Automaten $T(A)$ verwendet wird. Der Hauptansatz besteht darin, die Äquivalenz der Übergänge zwischen den Zuständen in $A$ und $T(A)$ für alle Zustände $q, p \in Z$ und alle Wörter $w \in \Sigma^*$ zu zeigen.
+> 
+> ### Basisfall
+> Der Basisfall betrachtet das leere Wort $\epsilon$. Die Übergangsfunktion $\delta$ eines jeden NFA definiert, dass $\delta(q, \epsilon) = \{q\}$. Da $\delta'$ analog definiert ist, gilt auch $\delta'(q, \epsilon) = \{q\}$. Damit ist der Basisfall bestätigt: Für das leere Wort bleibt man im gleichen Zustand, sowohl in $A$ als auch in $T(A)$.
+> 
+> ### Induktionsschritt
+> Im Induktionsschritt wird die Behauptung von Wörtern der Länge $n$ auf Wörter der Länge $n+1$ erweitert. Wir betrachten ein Wort $a_{n+1} \cdot \ldots \cdot a_1$. Der Beweis geht davon aus, dass der Übergang von einem Zustand $p$ zu einem Zustand $q$ in $A$ mittels des Wortes $a_{n+1} \cdot \ldots \cdot a_1$ einem Übergang in $T(A)$ entspricht, wenn das Wort $a_1 \cdot \ldots \cdot a_{n+1}$ betrachtet wird. Durch die Induktionshypothese und die Definition der Übergangsfunktion $\delta'$ wird gezeigt, dass diese beiden Übergänge äquivalent sind.
+> 
+> ### Zusammenfassung des Beweises
+> Der Beweis schließt mit dem Nachweis, dass ein Wort $w$ von $A$ akzeptiert wird, wenn und nur wenn das rückwärts gelesene Wort $\overline{w}$ von $T(A)$ akzeptiert wird. Dies geschieht durch den Zusammenhang der anfänglichen und endgültigen Zustände und deren Erreichbarkeit über die Übergangsfunktionen $\delta$ und $\delta'$.
+> 
+> Durch diesen Beweis wird etabliert, dass $L(T(A)) = \{\overline{w} \,|\, w \in L(A)\}$ gilt. Dies bedeutet, dass die Sprache von $T(A)$ genau aus den umgekehrten Wörtern der Sprache von $A$ besteht, was zeigt, dass das Rückwärtslesen der Wörter in $A$ äquivalent zum Vorwärtslesen in $T(A) ist.

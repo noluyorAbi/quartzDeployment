@@ -7,14 +7,25 @@ tags:
   - informatik
 fach: "[[FSK]]"
 date created: Thursday, 18. April 2024, 16:21
-date modified: Monday, 29. April 2024, 23:13
+date modified: Monday, 13. May 2024, 23:04
 ---
 
 # Erklärungen
 
 - [[Beweisen]]
+- [[Endliche Geometrische Reihe]]
+- [[Grammatiken]]
+- [[Grundlegende Operationen auf formalen Sprachen]]
+- [[Induktion]]
+- [[Induktiver Beweis für FSK1-1d]]
+- [[Kleene-Stern]]
+- [[Minimierung von DFAs]]
+- [[Potenzmengenkonstruktion]]
+- [[Pumping-Lemma]]
 - [[Satz des Euklids]]
+- [[Sätze]]
 - [[Sprachen]]
+
 
 # [YT-Playlist Für Formale Sprachen](https://youtube.com/playlist?list=PLG_1tsKrsKVO2ANHX68UbrNgt7gZuH37H&si=P7VkP7JsWEl-4oLo)
 
