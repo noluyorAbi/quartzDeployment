@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 13. May 2024, 22:00
-date modified: Monday, 13. May 2024, 23:54
+date modified: Tuesday, 14. May 2024, 00:34
 ---
 
 # FSK4-1 [[Pumping-Lemma]] für reguläre Sprachen (2 Punkte)
@@ -86,7 +86,7 @@ $$
 - Da $xy^0z \notin L_2$ für $i = 0$, und das Wort $w$ gemäß den Vorgaben des Pumping-Lemmas gewählt wurde, folgt daraus, dass $L_2$ nicht regulär sein kann, da es das Pumping-Lemma verletzt.
 
 ---
-
+TEST
 # FSK4-2 Reguläre Ausdrücke und Abschlusseigenschaften (2 Punkte)
 
 ## a) Betrachten Sie den regulären Ausdruck $\alpha = (a|b)*(ab|ba)(a|b)*$.

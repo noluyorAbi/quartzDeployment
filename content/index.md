@@ -28,8 +28,9 @@ date modified: Thursday, 9. May 2024, 23:21
 
 # Website Update Graph
 
-This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science.
+This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science. 
 
+fhhgj
 
 <!-- IMPORT SVG HERE -->
 
