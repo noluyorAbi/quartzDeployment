@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 13. May 2024, 22:00
-date modified: Tuesday, 14. May 2024, 12:33
+date modified: Tuesday, 14. May 2024, 14:17
 ---
 
 # FSK4-1 [[Pumping-Lemma]] für reguläre Sprachen (2 Punkte)

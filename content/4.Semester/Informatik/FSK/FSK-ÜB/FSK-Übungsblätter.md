@@ -1,9 +1,13 @@
 ---
-Thema:
-tags: 
-fach: 
+Thema: 
+tags:
+  - FSK
+  - 4semester
+  - informatik
+  - Übungsblatt
+fach: "[[FSK]]"
 date created: Tuesday, 16. April 2024, 11:22
-date modified: Monday, 13. May 2024, 13:11
+date modified: Tuesday, 14. May 2024, 14:40
 ---
 
 # Übungsblatt
