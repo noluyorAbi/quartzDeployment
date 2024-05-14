@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 13. May 2024, 22:00
-date modified: Tuesday, 14. May 2024, 00:34
+date modified: Tuesday, 14. May 2024, 12:33
 ---
 
 # FSK4-1 [[Pumping-Lemma]] für reguläre Sprachen (2 Punkte)
@@ -85,15 +85,39 @@ $$
 - Da $n > 0$, gilt $p-n < p$, und somit passt das Wort $([)^{p-n} ]^p$ nicht in die Form, die eine gleiche Anzahl von zueinander passenden Klammern erfordert, weil die Anzahl der öffnenden Klammern $([$) geringer ist als die Anzahl der schließenden Klammern $]$.
 - Da $xy^0z \notin L_2$ für $i = 0$, und das Wort $w$ gemäß den Vorgaben des Pumping-Lemmas gewählt wurde, folgt daraus, dass $L_2$ nicht regulär sein kann, da es das Pumping-Lemma verletzt.
 
+>[!summary]
+>Um zu zeigen, dass die Sprache $L_2$, die korrekt gepaarte Klammern enthält, nicht regulär ist, verwenden wir das Pumping-Lemma für reguläre Sprachen. Hier ist eine noch kürzere und einfachere Zusammenfassung des Beweises:
+>1. **Annahme**: Angenommen $L_2$ ist regulär.
+>2. **Wortwahl**: Wir wählen ein Wort $w$, bestehend aus $p$ öffnenden gefolgt von $p$ schließenden Klammern, z.B. $w = ([)^p ]^p$.
+>3. **Zerlegung und Pumping**: Das Pumping-Lemma sagt, dass man $w$ in Teile $x, y, z$ zerlegen kann, wobei $y$ wiederholbar ist. Wichtig ist, dass $y$ nur aus öffnenden Klammern besteht.
+>4. **Abpumpen**: Wenn wir $y$ beim Pumpen entfernen, sind weniger öffnende als schließende Klammern im Wort $xz$, was zu einem Ungleichgewicht führt. 
+>
+>**Fazit**: $xz$ hat nicht mehr die gleiche Anzahl öffnender und schließender Klammern, was es ungültig für $L_2$ macht. Das zeigt, dass $L_2$ nicht regulär sein kann.
+
 ---
-TEST
+
 # FSK4-2 Reguläre Ausdrücke und Abschlusseigenschaften (2 Punkte)
 
 ## a) Betrachten Sie den regulären Ausdruck $\alpha = (a|b)*(ab|ba)(a|b)*$.
 
 ### i) Geben Sie einen NFA ohne $\epsilon$-Übergänge an, der $L(\alpha)$ erkennt. Sie können die Algorithmen aus der Vorlesung zur Konstruktion eines NFA aus einem regulären Ausdruck und zur Elimination von $\epsilon$-Übergängen verwenden, müssen aber nicht.
 
+```mermaid
+graph LR
+start(( )) --> q0((q0))
+    q0((q0)) -- a,b --> q1((q1))
+    q1((q1)) -- a,b --> q0((q0))
+    q0((q0)) -- a --> q2((q2))
+    q2((q2)) -- b --> q5((q5))
+    q0((q0)) -- b --> q3((q3))
+    q3((q3)) -- a --> q5(((q5)))
+    q5(((q5))) -- a,b --> q0((q0))
+```
+
 ### ii) Geben Sie einen DFA an, der $L(\alpha)$ erkennt. Sie können die Potenzmengenkonstruktion verwenden, müssen aber nicht.
+
+
+
 
 ## b) Geben Sie reguläre Ausdrücke an, die die folgenden Sprachen erkennen.
 

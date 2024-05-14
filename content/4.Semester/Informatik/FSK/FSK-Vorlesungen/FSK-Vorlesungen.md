@@ -6,7 +6,7 @@ tags:
   - vorlesung
 fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
 date created: Tuesday, 16. April 2024, 14:04
-date modified: Wednesday, 8. May 2024, 18:02
+date modified: Tuesday, 14. May 2024, 12:07
 ---
 
 # Liste aller VL
