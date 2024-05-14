@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: "[[FSK-ÜB-4]]"
 Benötigte Zeit:
 date created: Tuesday, 14. May 2024, 17:49
-date modified: Tuesday, 14. May 2024, 17:52
+date modified: Tuesday, 14. May 2024, 21:43
 ---
 
 # Reguläre Ausdrücke in FSK
@@ -25,10 +25,10 @@ Reguläre Ausdrücke (RegEx) sind ein mächtiges Werkzeug zur Mustererkennung in
 - **ab**: Zeichen `a` gefolgt von Zeichen `b`.
 
 ### Alternation (ODER)
-- **a|b**: Zeichen `a` oder Zeichen `b`.
+- **a\|b**: Zeichen `a` oder Zeichen `b`.
 
 ### Kleene-Stern
-- **a***: Null oder mehr Wiederholungen von `a`.
+- a\*: Null oder mehr Wiederholungen von `a`.
 
 ### Plus-Operator
 - **a+**: Eine oder mehr Wiederholungen von `a`.
@@ -38,7 +38,7 @@ Reguläre Ausdrücke (RegEx) sind ein mächtiges Werkzeug zur Mustererkennung in
 
 ### Zeichenklassen
 - **[abc]**: Ein `a`, `b` oder `c`.
-- **[a-z]**: Ein beliebiges Kleinbuchstaben von `a` bis `z`.
+- **[a-z]**: Ein beliebiger Kleinbuchstabe von `a` bis `z`.
 
 ### Negation
 - **[^abc]**: Kein `a`, `b` oder `c`.
@@ -56,7 +56,7 @@ Reguläre Ausdrücke (RegEx) sind ein mächtiges Werkzeug zur Mustererkennung in
 ## Anwendungsbeispiele
 
 ### Beispiel 1: Wörter, die mit `a` oder `b` anfangen und mindestens ein `c` enthalten
-Für das Alphabet $Sigma = \{a, b, c\}$:
+Für das Alphabet \(\Sigma = \{a, b, c\}\):
 
 $$
  (a|b)(a|b|c)^*c(a|b|c)^* 
@@ -66,7 +66,7 @@ $$
 Ein regulärer Ausdruck, der Wörter mit einer geraden Anzahl von `a`s beschreibt:
 
 $$
- (b|ab*ab*)* 
+ (b\|ab*ab*)* 
 $$
 
 ### Beispiel 3: Telefonnummern im Format `(123) 456-7890`

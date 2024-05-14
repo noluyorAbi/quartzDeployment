@@ -8,7 +8,7 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 13. May 2024, 22:00
-date modified: Tuesday, 14. May 2024, 17:56
+date modified: Tuesday, 14. May 2024, 23:25
 ---
 
 bbbbbbbb
@@ -43,7 +43,7 @@ $$
 $$
 
 **Abpumpen:**
-- Das gepumpte Wort wird $xy^0z = xa^{0}z = a^{m}a^{p-m-n}b^1c^1d^p = a^{p-n}b^1c^1d^p$.
+- Das gepumpte Wort wird $xy^0z = xa^\{S\}z = a^{m}a^{p-m-n}b^1c^1d^p = a^{p-n}b^1c^1d^p$.
 - Das resultierende Wort hat $p-n$ $a$'s und $p$ $d$'s.
 - Da $n > 0$, gilt $p-n \neq p$, und somit passt das Wort $a^{p-n}b^1c^1d^p$ nicht in die Form $a^i b^j c^k d^i$, weil die Anzahl der $a$'s und $d$'s nicht mehr übereinstimmt.
 
@@ -142,10 +142,10 @@ $$
 $$
 
 **Erklärung des regulären Ausdrucks:**
-- **\[ab\]:** Das Wort beginnt mit $a$ oder $b$.
-- \[abc\]^\*: Nach dem Anfangsbuchstaben können beliebige Zeichen aus dem Alphabet $\{a, b, c\}$ folgen, und zwar beliebig oft, auch gar nicht.
-- **c:** Es muss mindestens ein $c$ im Wort vorkommen.
-- \[abc\]^\*: Nach dem ersten $c$ können wieder beliebige Zeichen aus dem Alphabet $\{a, b, c\}$ beliebig oft folgen.
+- \[ab\]: Das Wort beginnt mit $a$ oder $b$.
+- \[abc\]\*: Nach dem Anfangsbuchstaben können beliebige Zeichen aus dem Alphabet $\{a, b, c\}$ folgen, und zwar beliebig oft, auch gar nicht.
+- c: Es muss mindestens ein $c$ im Wort vorkommen.
+- \[abc\]\*: Nach dem ersten $c$ können wieder beliebige Zeichen aus dem Alphabet $\{a, b, c\}$ beliebig oft folgen.
 
 ### ii) Die Sprache $L_4$ der Wörter über dem Alphabet $\Sigma_2 = \{a, b\}$, die keine zwei $a$'s hintereinander enthalten.
 
@@ -154,8 +154,8 @@ b^*(ab^*)^*
 $$
 
 **Erklärung des regulären Ausdrucks:**
-- b^\*:Das Wort kann mit beliebig vielen $b$'s beginnen, einschließlich keinem $b$.
-- (ab^\*)^\*: Nach jedem $a$ darf kein weiteres $a$ direkt folgen. Stattdessen kann ein $a$ von beliebig vielen $b$'s gefolgt werden (einschließlich keinem), und diese Sequenz aus einem $a$ und den darauf folgenden $b$'s kann beliebig oft wiederholt werden, einschließlich gar nicht.
+- b\*:Das Wort kann mit beliebig vielen $b$'s beginnen, einschließlich keinem $b$.
+- (ab\*)\*: Nach jedem $a$ darf kein weiteres $a$ direkt folgen. Stattdessen kann ein $a$ von beliebig vielen $b$'s gefolgt werden (einschließlich keinem), und diese Sequenz aus einem $a$ und den darauf folgenden $b$'s kann beliebig oft wiederholt werden, einschließlich gar nicht.
 
 ## c) Zeigen Sie mithilfe der Abschlusseigenschaften regulärer Sprachen, dass die Sprache $L_5 = \{a^i w d^{i+1} \mid i \in \mathbb{N}, w \in \Sigma_3^*\}$ über dem Alphabet $\Sigma_3 = \{a, b, c, d\}$ nicht regulär ist. Sie dürfen annehmen, dass die Sprache $L_1$ aus Aufgabe FSK4-1a nicht regulär ist.
 
@@ -172,25 +172,114 @@ Um zu zeigen, dass die Sprache $L_5 = \{a^i w d^{i+1} \mid i \in \mathbb{N}, w \
 
 # FSK4-3 Grammatik über Automaten zu Grammatik (0 Punkte)
 
-Gegeben sei die reguläre Grammatik
-
-$$
-G = (\{S, A, B, C\}, \{a, b\}, \{S \rightarrow aA \mid bB, A \rightarrow bB, B \rightarrow bC, C \rightarrow aC \mid a\}, S)
-$$
+>[!info] Aufgabenstellung
+>Gegeben sei die reguläre Grammatik
+>$$
+>G = (\{S, A, B, C\}, \{a, b\}, \{S \rightarrow aA \mid bB, A \rightarrow bB, B
+>\rightarrow bC, C \rightarrow aC \mid a\}, S)
+>$$
 
 ## a) Erzeugen Sie gemäß der Konstruktion aus der Vorlesung aus $G$ einen NFA $A$ mit $L(G) = L(A)$.
 
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+ <iframe src="https://www.youtube.com/embed/QlGLIHumqvw?si=t34WsURhvajWDVLO" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+```mermaid
+graph LR
+start(( ))-->S((S))
+	S((S)) --a--> A((A))
+	S((S)) --b--> B((B))
+		A((A))--b--->B((B))
+			B((B))--b-->C((C))
+				C((C)) --a-->C(((C)))
+
+textC[C ist ein Endzustand]
+
+```
+ 
 ## b) Erzeugen Sie mit der Potenzmengenkonstruktion aus $A$ einen DFA $B$ mit $L(B) = L(A)$. Geben Sie nur den vom Startzustand erreichbaren Teil von $A$ an.
+
+|  Start  | $\rightarrow$ |    Ziel     |
+| :-----: | :-----------: | :---------: |
+| $\{S\}$ |      $a$      |   $\{A\}$   |
+| $\{S\}$ |      $b$      |   $\{B\}$   |
+| $\{A\}$ |      $a$      | $\emptyset$ |
+| $\{A\}$ |      $b$      |   $\{B\}$   |
+| $\{B\}$ |      $a$      | $\emptyset$ |
+| $\{B\}$ |      $b$      |   $\{C\}$   |
+| $\{C\}$ |      $a$      |   $\{C\}$   |
+| $\{C\}$ |      $b$      | $\emptyset$ |
+```mermaid
+flowchart LR
+start(( ))-->S((S))
+	S((S)) --a--> A((A))
+	S((S)) --b--> B((B))
+		A((A))--b--->B((B))
+		A((A))--a-->M((M))
+			B((B))--b-->C((C))
+			B((B))--a-->M((M))
+				C(((C))) --a-->C(((C)))
+				C(((C))) --b-->M((M))
+
+M((M)) --a,b-->M((M))
+textMuell["M = Müllzustand"]
+```
 
 ## c) Erzeugen Sie gemäß der Konstruktion aus der Vorlesung aus $B$ eine Grammatik $H$ mit $L(B) = L(H)$.
 
+### Erste Option:
+
+$$
+\begin{aligned}
+H = (\{S, A, B, C, M\}, \{a, b\}, \{\\ S &\rightarrow aA \mid bB,\\
+A &\rightarrow aM\ |\ bB,\\
+B &\rightarrow aM \ | \ bC,\\
+C &\rightarrow aC \mid a \mid bM \\
+\}, S)
+\end{aligned}
+$$
+Die Grammatik wurde um den Müllzustand erweitert
+
+### Zweite Option: (inkorrekt?)
+
+$$
+\begin{aligned}
+H' = (\{S, A, B, C\}, \{a, b\}, \{\\
+S &\rightarrow aA \mid bB,\\
+A &\rightarrow bB,\\
+B &\rightarrow bC,\\
+C &\rightarrow aC \mid a \\
+\}, S)
+\end{aligned}
+$$
+
+Die **Grammatik** $H'$ entspricht der vom **DFA** $B$ akzeptierten **Sprache**, da sie durch eine direkte Überführung der **Zustände** und **Übergänge** des DFA in **Nichtterminale** und **Produktionsregeln** entsteht, die die **Akzeptanzbedingungen** des DFA genau abbilden.
 ## d) Vergleichen Sie die Grammatiken $G$ und $H$. Beschreiben Sie die Gemeinsamkeiten dieser Grammatiken, sowie ihre Unterschiede. Überlegen Sie sich, wodurch diese Effekte zustande kommen.
+
+### Gemeinsamkeiten:
+1. **Nichtterminale und Terminale:** Beide Grammatiken nutzen $\{S, A, B, C\}$ und $\{a, b\}$.
+2. **Startsymbol:** Beide haben $S$ als Startsymbol.
+3. **Ähnliche Produktionen:** Produktionen wie $S \rightarrow aA \mid bB$ und $B \rightarrow bC$ sind identisch.
+
+### Unterschiede:
+1. **Müllzustand:** $H$ führt den Müllzustand $M$ ein, den $G$ nicht hat.
+2. **Zusätzliche Produktionen:** $H$ enthält Produktionen wie $A \rightarrow aM$ und $B \rightarrow aM$, die den Müllzustand reflektieren.
+3. **Endproduktion:** In $H$ hat $C$ eine Endproduktion $a$, die in $G$ fehlt.
+
+### Ursachen der Unterschiede:
+- **Müllzustand:** $H$ modelliert explizit den Müllzustand für die DFA-Vollständigkeit, während $G$ sich auf die Sprachgenerierung konzentriert.
+- **Automatenlogik:** $H$ spiegelt die vollständige DFA-Struktur wider, während $G$ nur die akzeptierten Sprachelemente darstellt.
+
+Zusammenfassend modelliert $H$ den vollständigen DFA, inklusive ungültiger Eingaben, während $G$ die Sprache direkt generiert.
 
 ---
 
 # FSK4-4 DNA-Analyse mit NFA (0 Punkte)
 
-Diese Aufgabe handelt von der Analyse von Desoxyribonukleinsäure (DNS/DNA) mithilfe von NFA. DNA ist eine Abfolge der Basen Adenin, Thymin, Guanin und Cytosin, typischerweise mit A, T, G und C abgekürzt. Dementsprechend ist das Alphabet aller Automaten in dieser Aufgabe $\Sigma = \{A, C, G, T\}$.
+>[!info] Aufgabenstellung
+>Diese Aufgabe handelt von der Analyse von Desoxyribonukleinsäure (DNS/DNA) mithilfe von NFA. DNA ist eine Abfolge der Basen Adenin, Thymin, Guanin und Cytosin, typischerweise mit A, T, G und C abgekürzt. Dementsprechend ist das Alphabet aller Automaten in dieser Aufgabe $\Sigma = \{A, C, G, T\}$.
 
 ## a) Um das Vorkommen einer Basensequenz zu finden, wird aus dieser Sequenz ein NFA erzeugt, der alle Wörter akzeptiert, in denen diese Sequenz als Teilwort vorkommt.
 
