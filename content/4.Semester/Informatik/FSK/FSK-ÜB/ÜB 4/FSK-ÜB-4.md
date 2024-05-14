@@ -8,9 +8,10 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 13. May 2024, 22:00
-date modified: Tuesday, 14. May 2024, 14:17
+date modified: Tuesday, 14. May 2024, 17:56
 ---
 
+bbbbbbbb
 # FSK4-1 [[Pumping-Lemma]] für reguläre Sprachen (2 Punkte)
 
 Zeigen Sie mit dem Pumping-Lemma für reguläre Sprachen, dass die folgenden Sprachen nicht regulär sind.
@@ -116,16 +117,56 @@ start(( )) --> q0((q0))
 
 ### ii) Geben Sie einen DFA an, der $L(\alpha)$ erkennt. Sie können die Potenzmengenkonstruktion verwenden, müssen aber nicht.
 
+```mermaid
+graph LR
+    start(( )) --> S0((S0))
+    S0((S0)) -- a --> S1((S1))
+    S0((S0)) -- b --> S2((S2))
+    S1((S1)) -- a --> S1((S1))
+    S1((S1)) -- b --> S3((S3))
+    S2((S2)) -- a --> S4((S4))
+    S2((S2)) -- b --> S2((S2))
+    S3((S3)) -- a --> S4((S4))
+    S3((S3)) -- b --> S3((S3))
+    S4((S4)) -- a --> S4(((S4)))
+    S4(((S4))) -- b --> S3(((S3)))
+```
 
-
-
-## b) Geben Sie reguläre Ausdrücke an, die die folgenden Sprachen erkennen.
+## b) Geben Sie [[Reguläre Ausdrücke]] an, die die folgenden Sprachen erkennen.
 
 ### i) Die Sprache $L_3$ der Wörter über dem Alphabet $\Sigma_1 = \{a, b, c\}$, die mit $a$ oder $b$ anfangen und mindestens ein $c$ enthalten.
 
+
+$$
+[ab][abc]^*c[abc]^*
+$$
+
+**Erklärung des regulären Ausdrucks:**
+- **\[ab\]:** Das Wort beginnt mit $a$ oder $b$.
+- \[abc\]^\*: Nach dem Anfangsbuchstaben können beliebige Zeichen aus dem Alphabet $\{a, b, c\}$ folgen, und zwar beliebig oft, auch gar nicht.
+- **c:** Es muss mindestens ein $c$ im Wort vorkommen.
+- \[abc\]^\*: Nach dem ersten $c$ können wieder beliebige Zeichen aus dem Alphabet $\{a, b, c\}$ beliebig oft folgen.
+
 ### ii) Die Sprache $L_4$ der Wörter über dem Alphabet $\Sigma_2 = \{a, b\}$, die keine zwei $a$'s hintereinander enthalten.
 
+$$
+b^*(ab^*)^*
+$$
+
+**Erklärung des regulären Ausdrucks:**
+- b^\*:Das Wort kann mit beliebig vielen $b$'s beginnen, einschließlich keinem $b$.
+- (ab^\*)^\*: Nach jedem $a$ darf kein weiteres $a$ direkt folgen. Stattdessen kann ein $a$ von beliebig vielen $b$'s gefolgt werden (einschließlich keinem), und diese Sequenz aus einem $a$ und den darauf folgenden $b$'s kann beliebig oft wiederholt werden, einschließlich gar nicht.
+
 ## c) Zeigen Sie mithilfe der Abschlusseigenschaften regulärer Sprachen, dass die Sprache $L_5 = \{a^i w d^{i+1} \mid i \in \mathbb{N}, w \in \Sigma_3^*\}$ über dem Alphabet $\Sigma_3 = \{a, b, c, d\}$ nicht regulär ist. Sie dürfen annehmen, dass die Sprache $L_1$ aus Aufgabe FSK4-1a nicht regulär ist.
+
+Um zu zeigen, dass die Sprache $L_5 = \{a^i w d^{i+1} \mid i \in \mathbb{N}, w \in \Sigma_3^*\}$ nicht regulär ist, gehen wir wie folgt vor:
+
+1. **Annahme:** $L_5$ ist regulär.
+2. **Konstruktion:** Betrachte die reguläre Sprache $R = a^*d^*$, die durch den regulären Ausdruck beschrieben wird und alle Wörter mit beliebigen Anzahlen von $a$'s gefolgt von $d$'s enthält.
+3. **Durchschnitt:** Der Durchschnitt $L_5 \cap R$ ergibt die Sprache $\{a^i d^{i+1} \mid i \in \mathbb{N}\}$, die die Struktur von $L_1$ widerspiegelt und nach Annahme nicht regulär ist.
+4. **Widerspruch:** Da der Durchschnitt zweier regulärer Sprachen regulär sein sollte, der erhaltene Durchschnitt jedoch nicht regulär ist, führt dies zu einem Widerspruch.
+
+**Schlussfolgerung:** $L_5$ kann nicht regulär sein, da dies zu einem Widerspruch führt.
 
 ---
 

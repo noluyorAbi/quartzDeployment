@@ -1,0 +1,91 @@
+---
+tags:
+  - 4semester
+  - FSK
+  - informatik
+  - Erklaerung
+fach: "[[FSK]]"
+Thema: "[[FSK-ÜB-4]]"
+Benötigte Zeit:
+date created: Tuesday, 14. May 2024, 17:49
+date modified: Tuesday, 14. May 2024, 17:52
+---
+
+# Reguläre Ausdrücke in FSK
+
+## Einleitung
+Reguläre Ausdrücke (RegEx) sind ein mächtiges Werkzeug zur Mustererkennung in Zeichenketten. Sie werden häufig in der Informatik, Linguistik und Textverarbeitung verwendet, um Textmuster zu suchen, zu extrahieren und zu manipulieren. In der formalen Sprachen- und Automaten-Theorie (FSK - Formale Sprachen und Komplexität) spielen reguläre Ausdrücke eine zentrale Rolle, da sie die Grundlage für die Definition regulärer Sprachen bilden.
+
+## Grundlegende Syntax
+### Zeichen
+- **a, b, c, …**: Ein einzelnes Zeichen im Alphabet.
+- **.**: Ein Platzhalter für ein beliebiges Zeichen.
+
+### Verkettung
+- **ab**: Zeichen `a` gefolgt von Zeichen `b`.
+
+### Alternation (ODER)
+- **a|b**: Zeichen `a` oder Zeichen `b`.
+
+### Kleene-Stern
+- **a***: Null oder mehr Wiederholungen von `a`.
+
+### Plus-Operator
+- **a+**: Eine oder mehr Wiederholungen von `a`.
+
+### Option (Fragezeichen)
+- **a?**: Null oder eine Wiederholung von `a`.
+
+### Zeichenklassen
+- **[abc]**: Ein `a`, `b` oder `c`.
+- **[a-z]**: Ein beliebiges Kleinbuchstaben von `a` bis `z`.
+
+### Negation
+- **[^abc]**: Kein `a`, `b` oder `c`.
+- **[^a-z]**: Kein Kleinbuchstabe von `a` bis `z`.
+
+## Erweiterte Konstruktionen
+### Gruppierung
+- **(ab)**: Gruppierung von Zeichen oder Ausdrücken.
+
+### Quantifizierer
+- **a{2}**: Genau zwei `a`.
+- **a{2,4}**: Zwei bis vier `a`.
+- **a{2,}**: Zwei oder mehr `a`.
+
+## Anwendungsbeispiele
+
+### Beispiel 1: Wörter, die mit `a` oder `b` anfangen und mindestens ein `c` enthalten
+Für das Alphabet $Sigma = \{a, b, c\}$:
+
+$$
+ (a|b)(a|b|c)^*c(a|b|c)^* 
+$$
+
+### Beispiel 2: Wörter mit gerader Anzahl von `a`s
+Ein regulärer Ausdruck, der Wörter mit einer geraden Anzahl von `a`s beschreibt:
+
+$$
+ (b|ab*ab*)* 
+$$
+
+### Beispiel 3: Telefonnummern im Format `(123) 456-7890`
+Ein regulärer Ausdruck zur Erkennung eines spezifischen Telefonnummernformats:
+
+$$
+ \\(\\d{3}\\) \\d{3}-\\d{4} 
+$$
+
+## RegEx in der formalen Sprachen-Theorie
+In der Theorie der formalen Sprachen entsprechen reguläre Ausdrücke genau den regulären Sprachen, die von endlichen Automaten (DFA/NFA) erkannt werden können. Reguläre Ausdrücke sind daher ein essenzielles Werkzeug zur Beschreibung und Analyse dieser Sprachen.
+
+## Abschluss-Eigenschaften regulärer Sprachen
+Reguläre Sprachen sind unter verschiedenen Operationen abgeschlossen, einschließlich:
+- **Vereinigung**: Wenn $L_1$ und $L_2$ regulär sind, ist $L_1 \cup L_2$ auch regulär.
+- **Konkatenation**: Wenn $L_1$ und $L_2$ regulär sind, ist $L_1 \cdot L_2$ auch regulär.
+- **Kleene-Stern**: Wenn $L$ regulär ist, ist $L^*$ auch regulär.
+- **Komplement**: Wenn $L$ regulär ist, ist $\overline{L}$ auch regulär.
+- **Schnitt**: Wenn $L_1$ und $L_2$ regulär sind, ist $L_1 \cap L_2$ auch regulär.
+
+## Fazit
+Reguläre Ausdrücke bieten eine präzise und kompakte Methode zur Beschreibung regulärer Sprachen. Sie sind ein fundamentales Konzept in der formalen Sprachen- und Automaten-Theorie und haben zahlreiche praktische Anwendungen in der Computerwissenschaft und darüber hinaus.
