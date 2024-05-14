@@ -8,7 +8,6 @@ date created: Thursday, 21. March 2024, 01:39
 date modified: Tuesday, 14. May 2024, 00:57
 ---
 
-
 # 📚 Modules
 
 ## Informatik
