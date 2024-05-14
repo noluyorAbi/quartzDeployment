@@ -8,10 +8,10 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 13. May 2024, 22:00
-date modified: Wednesday, 15. May 2024, 01:39
+date modified: Wednesday, 15. May 2024, 01:37
 ---
 
-
+bbbbbbbb
 # FSK4-1 [[Pumping-Lemma]] für reguläre Sprachen (2 Punkte)
 
 Zeigen Sie mit dem Pumping-Lemma für reguläre Sprachen, dass die folgenden Sprachen nicht regulär sind.
@@ -43,7 +43,7 @@ $$
 $$
 
 **Abpumpen:**
-- Das gepumpte Wort wird $xy^0z = xa^\{S\}z = a^{m}a^{p-m-n}b^1c^1d^p = a^{p-n}b^1c^1d^p$.
+- Das gepumpte Wort wird $xy^0z = xa^{0}z = a^{m}a^{p-m-n}b^1c^1d^p = a^{p-n}b^1c^1d^p$.
 - Das resultierende Wort hat $p-n$ $a$'s und $p$ $d$'s.
 - Da $n > 0$, gilt $p-n \neq p$, und somit passt das Wort $a^{p-n}b^1c^1d^p$ nicht in die Form $a^i b^j c^k d^i$, weil die Anzahl der $a$'s und $d$'s nicht mehr übereinstimmt.
 
@@ -180,11 +180,6 @@ Um zu zeigen, dass die Sprache $L_5 = \{a^i w d^{i+1} \mid i \in \mathbb{N}, w \
 >$$
 
 ## a) Erzeugen Sie gemäß der Konstruktion aus der Vorlesung aus $G$ einen NFA $A$ mit $L(G) = L(A)$.
-
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
- <iframe src="https://www.youtube.com/embed/QlGLIHumqvw?si=t34WsURhvajWDVLO" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
 
 ```mermaid
 graph LR
@@ -402,23 +397,6 @@ Um zu bestimmen, ob die gegebenen Wörter von dem NFA $H$ akzeptiert werden, pr�
 
 >[!warning] Hinweis
 >  Sie können auch als Vorüberlegung dies erst für den NFA $H$ zeigen.
-
->[!warning] Nur ein Ansatz
->Die Korrektheit der Konstruktion des NFA $F$ aus einem NFA $D$ zur Akzeptanz von Wörtern mit bis zu $k$ Ersetzungsfehlern lässt sich formal durch folgende Argumente beweisen:
->
->1. **Erweiterter Zustandsraum**: Der Zustandsraum von $F$, dargestellt als $Z' = Z \times \{0, \ldots, k\}$, kombiniert jeden Zustand $q$ aus $D$ mit einem Fehlerzähler $i$. Dieser Zähler verfolgt, wie viele Fehler (bis zu einem Maximum von $k$) bereits aufgetreten sind.
->
->2. **Transitionsfunktion $\delta'$**: Die Transitionsfunktion für $F$ definiert zwei Arten von Übergängen für jeden Zustand $(q, i)$:
->   - **Normale Übergänge**: Wenn das Eingabezeichen $a$ exakt dem erwarteten Zeichen entspricht, erfolgt der Übergang von $(q, i)$ zu $(q', i)$, wobei $q'$ direkt aus der Transitionsfunktion $\delta$ von $D$ für das Zeichen $a$ folgt. Dies repräsentiert einen korrekten Leseschritt ohne zusätzlichen Fehler.
->   - **Fehlerhafte Übergänge**: Wenn das Eingabezeichen $a$ nicht dem erwarteten Zeichen entspricht, kann der Automat auch zu $(q', i+1)$ übergehen, vorausgesetzt $i+1 \leq k$. Dieser Übergang bedeutet, dass ein beliebiges Zeichen $b \neq a$ aus $\Sigma$ gelesen wird, was als Fehler gezählt wird.
->
->3. **Beweis durch Induktion (Korrekte Akzeptanz)**: Wir können beweisen, dass $F$ ein Wort genau dann akzeptiert, wenn es durch bis zu $k$ Ersetzungsfehler aus einem Wort entsteht, das $D$ akzeptiert.
->   - **Basisfall**: Für $k=0$, $F$ verhält sich genau wie $D$, da keine fehlerhaften Übergänge möglich sind.
->   - **Induktionsschritt**: Nehmen wir an, $F$ akzeptiert Wörter mit bis zu $k-1$ Fehlern korrekt. Ein Wort $w$ mit genau $k$ Fehlern wird akzeptiert, wenn es einen Pfad von $(s, 0)$ (wobei $s$ ein Startzustand von $D$ ist) zu einem Endzustand $(e, k)$ in $F$ gibt, wobei der letzte Schritt genau der $k$-te Fehler ist.
->
->4. **Übereinstimmung von Start- und Endzuständen**: Startzustände von $F$ sind $(s, 0)$, für jeden Startzustand $s$ in $D$. Endzustände in $F$ sind $(e, i)$ für jeden Endzustand $e$ in $D$ und jedes $i$ zwischen 0 und $k$, was sicherstellt, dass $F$ auch Wörter akzeptiert, die korrekt enden, aber fehlerhaft begonnen haben.
->
->Durch diese Überlegungen ist gesichert, dass $F$ genau die Wörter akzeptiert, die aus den von $D$ akzeptierten Wörtern durch bis zu $k$ Ersetzungsfehler entstehen. Damit ist die Konstruktion von $F$ formal korrekt in der Modellierung von Fehlertoleranzen bis zum Grad $k$
 
 Die Konstruktion eines NFA $F$ aus einem NFA $D$ zur Akzeptanz von Wörtern mit bis zu $k$ Ersetzungsfehlern lässt sich durch folgende Schritte begründen:
 
