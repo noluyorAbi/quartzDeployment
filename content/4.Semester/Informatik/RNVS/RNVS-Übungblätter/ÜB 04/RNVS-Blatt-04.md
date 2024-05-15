@@ -20,7 +20,7 @@ date modified: Wednesday, 15. May 2024, 21:51
 
 - **Verbindungslose**
 	- Keine feste Verbindung zwischen Absender und Empfänger
-	- Daten werden in ein einzelnen Paketen abgeschickt, die unabhängig voneinander das Ziel erreichen können in beliebiger Reihenfolge
+	- Daten werden in einzelnen Paketen abgeschickt, die unabhängig voneinander das Ziel erreichen können in möglicherweise unterschiedlicher Reihenfolge
 - **Verbindungsorientiert**
 	- feste Verbindung zwischen Sender und Empfänger
 	- Bestätigung über Erhalt der Nachricht
@@ -28,13 +28,13 @@ date modified: Wednesday, 15. May 2024, 21:51
 
 - **Verbindungslose** (UDP)
 	- DNS
-	- VoIP
+	- SNMP
 - **Verbindungsorientiert** (TCP)
 	- HTTP
 	- FTP
 ## Unter welchen Bedingungen ist eine verbindungslose Kommunikation von Vorteil?
 
-Bei Services, wo der Verlust von einzelnen Datenpaketen nicht allzu schlimm ist. Zum Beispiel bei Streaming-Diensten, wo die Geschwindigkeit wichtiger ist. 
+Bei Services, bei denen der Verlust von einzelnen Datenpaketen nicht kritisch ist, wie z.B. Streaming-Diensten, wo Geschwindigkeit wichtiger ist als vollständige Datenintegrität.
 
 >[!info]- Warum Datenpaketverluste bei Streamingdiensten tolerierbar sind
 > Bei Streaming-Diensten wie Video- oder Audio-Streaming ist es oft akzeptabel, wenn einzelne Datenpakete verloren gehen, da die Priorität auf der Kontinuität und Geschwindigkeit der Übertragung liegt. Hier sind einige Gründe, warum diese Verluste meist tolerierbar sind:
