@@ -8,7 +8,7 @@ fach: "[[RNVS]]"
 Thema: 
 Benötigte Zeit:
 date created: Wednesday, 15. May 2024, 19:25
-date modified: Wednesday, 15. May 2024, 20:41
+date modified: Wednesday, 15. May 2024, 21:42
 ---
 
 # 1. Verbindungslose und verbindungsorientierte Kommunikation (H)
@@ -152,16 +152,75 @@ Der 3-Wege-Handshake ist trotzdem weit verbreitet. Warum ist dieser in der Reali
 
 ```mermaid
 sequenceDiagram
-	participant S as Sender
-	participant E as Empfänger
+    participant S as Sender
+    participant E as Empfänger
 
-	S ->> E: SYN
-	E ->> S: SYNB
+    S ->> E: SYN
+    E ->> S: SYNB
+    S ->> E: SYNBP
+    S ->> E: Nachricht A
+    E ->> S: ACK
+    S ->> E: Nachricht B
+    E ->> S: ACK
+    E ->> S: CLS
+    S ->> E: ACK
+
 ```
 
 ## (c) Zeichnen Sie ein Sequenzdiagramm, in dem der Sender 3 weitere Nachrichten sendet, aber die folgenden Fehlerfälle eintreten:
 
-- Die Quittung für die erste Nachricht geht auf dem Weg zum Sender verloren.
-- Die zweite Nachricht kommt beim Empfänger beschädigt an und wird deswegen verworfen.
+>[!note] Aufgabenstellung
+>- Die Quittung für die erste Nachricht geht auf dem Weg zum Sender verloren.
+>- Die zweite Nachricht kommt beim Empfänger beschädigt an und wird deswegen verworfen.
+>
+>Geben Sie für jeden dieser Fehlerfälle an, wie der Fehler jeweils auf Sender- und Empfängerseite erkannt wird!
 
-Geben Sie für jeden dieser Fehlerfälle an, wie der Fehler jeweils auf Sender- und Empfängerseite erkannt wird!
+```mermaid
+sequenceDiagram
+    participant S as Sender
+    participant E as Empfänger
+
+    S ->> E: Nachricht 1
+    note right of E: Empfänger erhält Nachricht 1
+    E --x S: ACK 1
+    note right of S: ACK 1 geht verloren
+
+    S ->> E: Nachricht 2
+    note right of E: Nachricht 2 kommt beschädigt an
+    E --x S: NAK 2
+    note right of S: Sender empfängt NAK 2
+
+    S ->> E: Nachricht 2 (erneut)
+    E ->> S: ACK 2
+    S ->> E: Nachricht 3
+    E ->> S: ACK 3
+```
+
+---
+# 4. Rollenwechsel
+
+>[!note] Aufgabenstellung
+>Die Kapitel 1 und 2 der Vorlesung wurden nun vollständig behandelt. Entwerfen Sie für den Stoff der beiden Kapitel **drei Quizfragen**, die Ihre Kommilitoninnen und Kommilitonen beantworten können sollten, nachdem sie die Kapitel bearbeitet haben. Geben Sie auch jeweils eine richtige und mindestens zwei falsche Antwortalternativen an.
+>
+>Achten Sie dabei besonders auf die richtige Wortwahl, so dass die Fragen nicht missverstanden werden können.
+
+### Frage 1: Grundlagen von Netzwerken
+
+**Frage:** Was ist der Unterschied zwischen einem Rechnernetz und einem verteilten System?
+- **Richtige Antwort:** Ein Rechnernetz ist ein Zusammenschluss von Computern, die Informationen austauschen können, während ein verteiltes System darüber hinaus Dienste über diese Netzwerkverbindung anbietet.
+- **Falsche Antwort 1:** In einem verteilten System können keine Informationen zwischen Computern ausgetauscht werden.
+- **Falsche Antwort 2:** Ein Rechnernetz kann keine Verbindung zu anderen Computern herstellen, es dient nur der internen Datenverarbeitung.
+
+### Frage 2: Datenübertragung und Protokolle
+
+**Frage:** Welche der folgenden Aussagen beschreibt die Funktion eines Protokolls in einem Computernetzwerk?
+- **Richtige Antwort:** Ein Protokoll definiert die Regeln für den Datenaustausch, einschließlich der Datenstrukturierung und Synchronisation.
+- **Falsche Antwort 1:** Ein Protokoll ist eine physische Verbindung zwischen zwei Computern, die den Datenaustausch ermöglicht.
+- **Falsche Antwort 2:** Protokolle sind ausschließlich für die Speicherung von Daten auf einem einzelnen Computer verantwortlich, nicht für die Übertragung.
+
+### Frage 3: Konzepte der Internetarchitektur
+
+**Frage:** Was versteht man unter dem Ende-zu-Ende-Prinzip im Kontext der Internetkommunikation?
+- **Richtige Antwort:** Funktionen sollten am Endpunkt einer Kommunikation implementiert werden, um die Effizienz und Leistung zu optimieren.
+- **Falsche Antwort 1:** Alle Daten müssen über einen zentralen Knoten laufen, bevor sie ihr Ziel erreichen.
+- **Falsche Antwort 2:** Jeder Knoten im Netzwerk muss sämtliche Daten verarbeiten, die durch ihn hindurchgehen.
