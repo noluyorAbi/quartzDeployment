@@ -28,17 +28,12 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
 | **Statistik**  | [[LiMo]]                                                |        |
 |                | [[BaySta]]                                              | active |
 |                | [[I2ML]]                                                |        |
-# 🗓️ Semester
-
-- [[3.Semester]]
-- [[4.Semester]] (active)
-
+| **Semester**   | [[3.Semester]]                                          |        |
+|                | [[4.Semester]]                                          |        |
 
 # Website Update Graph
 
 This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science. 
-
-
 
 <!-- IMPORT SVG HERE -->
 
