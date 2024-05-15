@@ -8,7 +8,7 @@ fach: "[[RNVS]]"
 Thema: 
 Benötigte Zeit:
 date created: Wednesday, 15. May 2024, 19:25
-date modified: Wednesday, 15. May 2024, 21:42
+date modified: Wednesday, 15. May 2024, 21:51
 ---
 
 # 1. Verbindungslose und verbindungsorientierte Kommunikation (H)
@@ -204,21 +204,21 @@ sequenceDiagram
 >
 >Achten Sie dabei besonders auf die richtige Wortwahl, so dass die Fragen nicht missverstanden werden können.
 
-### Frage 1: Grundlagen von Netzwerken
+## Frage 1: Grundlagen von Netzwerken
 
 **Frage:** Was ist der Unterschied zwischen einem Rechnernetz und einem verteilten System?
 - **Richtige Antwort:** Ein Rechnernetz ist ein Zusammenschluss von Computern, die Informationen austauschen können, während ein verteiltes System darüber hinaus Dienste über diese Netzwerkverbindung anbietet.
 - **Falsche Antwort 1:** In einem verteilten System können keine Informationen zwischen Computern ausgetauscht werden.
 - **Falsche Antwort 2:** Ein Rechnernetz kann keine Verbindung zu anderen Computern herstellen, es dient nur der internen Datenverarbeitung.
 
-### Frage 2: Datenübertragung und Protokolle
+## Frage 2: Datenübertragung und Protokolle
 
 **Frage:** Welche der folgenden Aussagen beschreibt die Funktion eines Protokolls in einem Computernetzwerk?
 - **Richtige Antwort:** Ein Protokoll definiert die Regeln für den Datenaustausch, einschließlich der Datenstrukturierung und Synchronisation.
 - **Falsche Antwort 1:** Ein Protokoll ist eine physische Verbindung zwischen zwei Computern, die den Datenaustausch ermöglicht.
 - **Falsche Antwort 2:** Protokolle sind ausschließlich für die Speicherung von Daten auf einem einzelnen Computer verantwortlich, nicht für die Übertragung.
 
-### Frage 3: Konzepte der Internetarchitektur
+## Frage 3: Konzepte der Internetarchitektur
 
 **Frage:** Was versteht man unter dem Ende-zu-Ende-Prinzip im Kontext der Internetkommunikation?
 - **Richtige Antwort:** Funktionen sollten am Endpunkt einer Kommunikation implementiert werden, um die Effizienz und Leistung zu optimieren.
