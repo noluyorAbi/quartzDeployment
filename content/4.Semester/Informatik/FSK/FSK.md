@@ -6,7 +6,7 @@ tags:
   - "#FSK"
 fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
 date created: Tuesday, 16. April 2024, 11:20
-date modified: Tuesday, 14. May 2024, 14:38
+date modified: Wednesday, 15. May 2024, 13:33
 ---
 
 # Übersicht der Studieninhalte
@@ -15,6 +15,8 @@ date modified: Tuesday, 14. May 2024, 14:38
 - Grammatiken bilden (siehe Blatt 1 und 2)
 - NFA und DFA konstruieren (NFA leichter als DFA)
 - Beweise Myhill und Nerode sind nicht klaussurrelevant (in 5.VL gesagt)
+- Pumping Lemma wichtig (3.ZÜ gesagt)
+	- Lemma verstehen, auswendig können und anwenden können
 
 ## [[FSK-Vorlesungen]]
 

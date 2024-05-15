@@ -6,10 +6,10 @@ tags:
   - vorlesung
 fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
 date created: Tuesday, 16. April 2024, 14:04
-date modified: Tuesday, 14. May 2024, 14:37
+date modified: Wednesday, 15. May 2024, 13:33
 ---
 
-# Liste aller VL
+# Liste aller VL & ZÜ
 
 - [[FSK-1-VL (16.04.2024)]]
 	- [[FSK-1-VL (16.04.2024)#Inhalte der Veranstaltung]]
@@ -28,3 +28,4 @@ date modified: Tuesday, 14. May 2024, 14:37
 	- [[FSK-5VL-14-05-2024#VL 05-a]]
 	- [[FSK-5VL-14-05-2024#VL 05-b]]
 	- [[FSK-5VL-14-05-2024#VL 05-c]]
+- [[FSK-03-ZÜ-15-05-2024]]

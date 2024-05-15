@@ -8,10 +8,10 @@ fach: "[[FSK]]"
 Thema: 
 Benötigte Zeit:
 date created: Monday, 13. May 2024, 22:00
-date modified: Wednesday, 15. May 2024, 01:37
+date modified: Wednesday, 15. May 2024, 02:04
 ---
 
-bbbbbbbb
+
 # FSK4-1 [[Pumping-Lemma]] für reguläre Sprachen (2 Punkte)
 
 Zeigen Sie mit dem Pumping-Lemma für reguläre Sprachen, dass die folgenden Sprachen nicht regulär sind.
