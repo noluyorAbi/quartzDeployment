@@ -5,7 +5,7 @@ tags:
   - 4semester
   - informatik
   - Übungsblatt
-fach: "[[FSK]]"
+fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Tuesday, 16. April 2024, 11:22
 date modified: Tuesday, 14. May 2024, 14:40
 ---

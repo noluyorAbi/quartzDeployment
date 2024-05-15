@@ -1,8 +1,9 @@
 ---
 created: 2024-03-11 20:37
 last modified: 2024-03-11 20:37
-fach: "[[DBS]]"
-tags: [DBS]
+fach: "[[Datenbanksysteme (DBS)]]"
+tags:
+  - DBS
 date created: Monday, 11. March 2024, 20:37
 date modified: Tuesday, 16. April 2024, 11:02
 ---

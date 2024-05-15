@@ -4,7 +4,7 @@ tags:
   - RNVS
   - vorlesung
   - informatik
-fach: "[[Semester/4.Semester/Informatik/RNVS/RNVS]]"
+fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: 
 date created: Friday, 19. April 2024, 09:18
 date modified: Friday, 26. April 2024, 09:31

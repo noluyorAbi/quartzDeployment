@@ -3,7 +3,7 @@ tags:
   - 4semester
   - RNVS
   - vorlesung
-fach: "[[RNVS]]"
+fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
   - "[[TCP]]"
   - "[[UDP]]"

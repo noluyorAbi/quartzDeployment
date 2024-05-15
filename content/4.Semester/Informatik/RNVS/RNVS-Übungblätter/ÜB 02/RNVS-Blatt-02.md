@@ -4,7 +4,7 @@ tags:
   - informatik
   - RNVS
   - Übungsblatt
-fach: "[[RNVS]]"
+fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: 
 Benötigte Zeit: 3h
 date created: Friday, 3. May 2024, 20:08

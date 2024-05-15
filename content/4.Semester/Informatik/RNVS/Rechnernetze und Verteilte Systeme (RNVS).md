@@ -1,10 +1,10 @@
 ---
-Thema:
+Thema: 
 tags:
   - 4semester
   - RNVS
   - informatik
-fach: "[[Semester/4.Semester/Informatik/RNVS/RNVS]]"
+fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 date created: Friday, 19. April 2024, 02:28
 date modified: Friday, 26. April 2024, 21:36
 ---

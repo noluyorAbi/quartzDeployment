@@ -4,8 +4,8 @@ tags:
   - informatik
   - 4semester
   - Übungsblatt
-fach: "[[RNVS]]"
-Thema:
+fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
+Thema: 
 Benötigte Zeit: 2h 15m (spät nachts geworden)
 date created: Friday, 26. April 2024, 21:46
 date modified: Wednesday, 8. May 2024, 18:39

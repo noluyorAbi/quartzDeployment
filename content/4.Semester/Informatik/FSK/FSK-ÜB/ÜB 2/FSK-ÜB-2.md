@@ -4,9 +4,9 @@ tags:
   - FSK
   - informatik
   - Übungsblatt
-fach: "[[FSK]]"
+fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
-Benötigte Zeit:
+Benötigte Zeit: 
 date created: Monday, 29. April 2024, 11:52
 date modified: Wednesday, 8. May 2024, 13:25
 ---

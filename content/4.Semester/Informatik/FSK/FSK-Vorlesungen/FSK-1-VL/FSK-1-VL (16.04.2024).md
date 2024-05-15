@@ -1,11 +1,11 @@
 ---
-Thema:
+Thema: 
 tags:
   - 4semester
   - informatik
   - FSK
   - vorlesung
-fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
+fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Tuesday, 16. April 2024, 11:25
 date modified: Monday, 29. April 2024, 21:30
 ---

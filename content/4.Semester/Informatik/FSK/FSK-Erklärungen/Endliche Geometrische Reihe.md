@@ -3,7 +3,7 @@ tags:
   - 4semester
   - FSK
   - informatik
-fach: "[[FSK]]"
+fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
   - "[[FSK-ÜB-1]]"
 date created: Tuesday, 23. April 2024, 23:41

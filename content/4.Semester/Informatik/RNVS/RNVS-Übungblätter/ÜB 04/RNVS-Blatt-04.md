@@ -4,11 +4,11 @@ tags:
   - FSK
   - informatik
   - Übungsblatt
-fach: "[[RNVS]]"
+fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: 
-Benötigte Zeit:
+Benötigte Zeit: 
 date created: Wednesday, 15. May 2024, 19:25
-date modified: Wednesday, 15. May 2024, 21:51
+date modified: Thursday, 16. May 2024, 00:07
 ---
 
 # 1. Verbindungslose und verbindungsorientierte Kommunikation (H)

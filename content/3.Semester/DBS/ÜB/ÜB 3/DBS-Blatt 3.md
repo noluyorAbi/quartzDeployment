@@ -1,8 +1,10 @@
 ---
 created: 2024-03-20 17:22
 last modified: 2024-03-20 17:22
-tags: [DBS, Übungsblatt]
-fach: "[[DBS]]"
+tags:
+  - DBS
+  - Übungsblatt
+fach: "[[Datenbanksysteme (DBS)]]"
 date created: Wednesday, 20. March 2024, 17:22
 date modified: Saturday, 20. April 2024, 01:54
 ---

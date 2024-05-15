@@ -4,9 +4,9 @@ tags:
   - informatik
   - RNVS
   - Erklaerung
-fach: "[[RNVS]]"
+fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: 
-Benötigte Zeit:
+Benötigte Zeit: 
 date created: Sunday, 12. May 2024, 23:46
 date modified: Sunday, 12. May 2024, 23:53
 ---

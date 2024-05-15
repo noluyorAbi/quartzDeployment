@@ -4,7 +4,7 @@ tags:
   - FSK
   - informatik
   - Erklaerung
-fach: "[[FSK]]"
+fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: "[[FSK-ÜB-3]]"
 Benötigte Zeit: 
 date created: Monday, 13. May 2024, 12:45

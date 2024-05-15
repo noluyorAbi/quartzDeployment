@@ -4,7 +4,7 @@ tags:
   - informatik
   - RNVS
   - Erklaerung
-fach: "[[RNVS]]"
+fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: "[[RNVS-4VL-10-05-2024]]"
 Benötigte Zeit: 
 date created: Thursday, 9. May 2024, 23:47

@@ -4,7 +4,7 @@ tags:
   - Übungsblatt
   - FSK
   - informatik
-fach: "[[FSK]]"
+fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
   - "[[Beweisen]]"
   - "[[Endliche Geometrische Reihe]]"

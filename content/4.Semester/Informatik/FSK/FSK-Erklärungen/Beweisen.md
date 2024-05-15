@@ -4,7 +4,7 @@ tags:
   - FSK
   - Erklaerung
   - informatik
-fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
+fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Thursday, 18. April 2024, 15:01
 date modified: Monday, 13. May 2024, 23:03
 ---

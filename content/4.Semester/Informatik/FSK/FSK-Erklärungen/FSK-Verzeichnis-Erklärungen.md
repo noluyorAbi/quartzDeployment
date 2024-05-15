@@ -5,7 +5,7 @@ tags:
   - Erklaerung
   - FSK
   - informatik
-fach: "[[FSK]]"
+fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Thursday, 18. April 2024, 16:21
 date modified: Monday, 13. May 2024, 23:04
 ---

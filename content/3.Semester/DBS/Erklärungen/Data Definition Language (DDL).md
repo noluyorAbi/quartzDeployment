@@ -1,8 +1,10 @@
 ---
 created: 2024-03-20 18:09
 last modified: 2024-03-20 18:09
-tags: [DBS, Erklaerung]
-fach: "[[DBS]]"
+tags:
+  - DBS
+  - Erklaerung
+fach: "[[Datenbanksysteme (DBS)]]"
 date created: Wednesday, 20. March 2024, 18:09
 date modified: Tuesday, 9. April 2024, 16:59
 ---

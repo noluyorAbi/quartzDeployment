@@ -3,9 +3,9 @@ tags:
   - 4semester
   - FSK
   - informatik
-fach: "[[FSK]]"
+fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
-Benötigte Zeit:
+Benötigte Zeit: 
 date created: Wednesday, 1. May 2024, 07:33
 date modified: Wednesday, 1. May 2024, 07:37
 ---

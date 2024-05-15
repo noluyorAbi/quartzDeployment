@@ -2,7 +2,7 @@
 tags:
   - DBS
   - "#Klausuraufgabe"
-fach: "[[DBS]]"
+fach: "[[Datenbanksysteme (DBS)]]"
 date created: Tuesday, 9. April 2024, 16:22
 date modified: Tuesday, 16. April 2024, 11:02
 ---

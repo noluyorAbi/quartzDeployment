@@ -2,7 +2,7 @@
 tags:
   - DBS
   - Übungsblatt
-fach: "[[DBS]]"
+fach: "[[Datenbanksysteme (DBS)]]"
 date created: Friday, 5. April 2024, 23:02
 date modified: Thursday, 2. May 2024, 23:05
 ---

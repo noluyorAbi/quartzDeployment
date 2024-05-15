@@ -4,9 +4,9 @@ tags:
   - FSK
   - informatik
   - vorlesung
-fach: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK]]"
+fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Tuesday, 16. April 2024, 14:04
-date modified: Wednesday, 15. May 2024, 13:33
+date modified: Thursday, 16. May 2024, 00:07
 ---
 
 # Liste aller VL & ZÜ

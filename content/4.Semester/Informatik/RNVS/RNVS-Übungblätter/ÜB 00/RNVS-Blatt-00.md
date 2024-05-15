@@ -4,7 +4,7 @@ tags:
   - 4semester
   - informatik
   - Übungsblatt
-fach: "[[Semester/4.Semester/Informatik/RNVS/RNVS]]"
+fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: 
 date created: Friday, 19. April 2024, 01:50
 date modified: Saturday, 27. April 2024, 00:33

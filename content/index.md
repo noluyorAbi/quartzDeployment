@@ -5,8 +5,9 @@ fach:
 title: Studying made easy.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Wednesday, 15. May 2024, 02:04
+date modified: Thursday, 16. May 2024, 00:09
 ---
+
 # About This Site
 
 This website serves as a centralized archive, offering you structured access to a wealth of study materials that I’ve gathered and written in the language of the module (mostly German). It’s designed to provide a clear, organized, and comprehensive resource for anyone interested in the intricacies of computer science, as seen through my personal academic lens. If necessary, the website can be translated into any required language using a browser’s built-in translator.
@@ -17,33 +18,20 @@ Here, you’ll find detailed notes covering a range of topics, from the basics o
 
 # 📚 Modules
 
-## Informatik
-- [[DBS|Datenbanksysteme (DBS)]]
-- [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/) 
-- [[FSK|Formale Sprachen und Komplexität (FSK)]] (active)
-- [[RNVS |Rechnernetze und Verteilte Systeme (RNVS)]] (active)
-- [[Bachelorseminar-Software Security]] (active)
-## Statistik
-- [[LiMo]] 
-- [[BaySta]] (active)
-- [[I2ML]]
-
+| Bereich        | Kurse                                                   | Status |
+| -------------- | ------------------------------------------------------- | ------ |
+| **Informatik** | [[Datenbanksysteme (DBS)]]                              |        |
+|                | [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/) |        |
+|                | [[Formale Sprachen und Komplexität (FSK)]]              | active |
+|                | [[Rechnernetze und Verteilte Systeme (RNVS)]]           | active |
+|                | [[Bachelorseminar-Software Security]]                   | active |
+| **Statistik**  | [[LiMo]]                                                |        |
+|                | [[BaySta]]                                              | active |
+|                | [[I2ML]]                                                |        |
 # 🗓️ Semester
 
 - [[3.Semester]]
-- [[4.Semester]] (currently active)
-
-
-| Bereich       | Kurse                                                        |
-|---------------|--------------------------------------------------------------|
-| **Informatik**| [[DBS\|Datenbanksysteme (DBS)]]                              |
-|               | [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/)      |
-|               | [[FSK\|Formale Sprachen und Komplexität (FSK)]] (active)     |
-|               | [[RNVS \|Rechnernetze und Verteilte Systeme (RNVS)]] (active)|
-|               | [[Bachelorseminar-Software Security]] (active)               |
-| **Statistik** | [[LiMo]]                                                     |
-|               | [[BaySta]] (active)                                          |
-|               | [[I2ML]]                                                     |
+- [[4.Semester]] (active)
 
 
 # Website Update Graph

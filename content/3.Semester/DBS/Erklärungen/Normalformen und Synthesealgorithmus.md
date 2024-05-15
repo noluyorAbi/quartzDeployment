@@ -2,7 +2,7 @@
 tags:
   - DBS
   - Erklaerung
-fach: "[[DBS]]"
+fach: "[[Datenbanksysteme (DBS)]]"
 date created: Monday, 11. March 2024, 16:07
 date modified: Saturday, 20. April 2024, 01:28
 ---

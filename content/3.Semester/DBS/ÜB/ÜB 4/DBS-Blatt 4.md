@@ -2,7 +2,7 @@
 tags:
   - DBS
   - Übungsblatt
-fach: "[[DBS]]"
+fach: "[[Datenbanksysteme (DBS)]]"
 Thema:
   - Relationale Algebra
 date created: Thursday, 21. March 2024, 14:54
