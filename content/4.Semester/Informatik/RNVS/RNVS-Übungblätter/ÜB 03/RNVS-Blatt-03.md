@@ -7,7 +7,7 @@ fach: "[[RNVS]]"
 Thema: 
 Benötigte Zeit:
 date created: Wednesday, 8. May 2024, 19:15
-date modified: Monday, 13. May 2024, 23:04
+date modified: Wednesday, 15. May 2024, 18:29
 ---
 
 # Protokollschichtung (H)
@@ -163,10 +163,13 @@ Das OSI Modell unterteilt die Anwendung von dem IP-Protokoll in 3 Schichten (*An
 
 ## (a) Interpretieren Sie die an `sendto` übergebenen Argumente als Nutzdaten und Steuerinformationen. Ordnen Sie die Dateneinheiten aus dem Schema der Vorlesung entsprechend zu.
 
-- bytes sind die Nutzdaten (ICI) → msg eine nachricht
-- addr_tupel die Steuerinformation (ID) → Adresse und port an den geschickt wird  
+- bytes sind die Nutzdaten (ID) → msg eine nachricht
+- addr_tupel die Steuerinformation (ICI) → Adresse und port an den geschickt wird  
 
 ## (b) Welche Aussage können Sie über die (N)-PDU treffen?
+
+
+Keine Aussage treffbar, da wir nur die Schnittstelle gegeben haben
 
 Die (N)-PDU besteht aus Nutzdaten (ICI), die das Byte-Array "Hello" enthalten, und Protokollsteuerinformationen (PCI), repräsentiert durch das `addr_tuple` mit IP-Adresse und Port.
 
