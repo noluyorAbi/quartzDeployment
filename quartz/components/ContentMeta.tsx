@@ -31,6 +31,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
       if (fileData.dates) {
         segments.push(formatDate(getDate(cfg, fileData)!, cfg.locale))
+        segments.push(formatDate(fileData.dates.modified))
       }
 
       // Display reading time if enabled, using 150 WPM
@@ -47,9 +48,26 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       const segmentsElements = segments.map((segment) => <span>{segment}</span>)
 
       return (
-        <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
-          {segmentsElements}
-        </p>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            marginTop: "0.25rem",
+          }}
+        >
+          <span className="content-meta">Created: {segments[0]}</span>
+          <span className="content-meta" style={{ margin: "0 10px" }}>
+            |
+          </span>{" "}
+          {/* Adjust margin as needed */}
+          <span className="content-meta">Last modified: {segments[1]}</span>
+          <span className="content-meta" style={{ margin: "0 10px" }}>
+            |
+          </span>{" "}
+          {/* Adjust margin as needed */}
+          <span className="content-meta">{segments[2]}</span>
+        </div>
       )
     } else {
       return null

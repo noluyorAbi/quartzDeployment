@@ -1,3 +1,5 @@
+//lastmod.ts
+
 import fs from "fs"
 import path from "path"
 import { Repository } from "@napi-rs/simple-git"
@@ -5,11 +7,11 @@ import { QuartzTransformerPlugin } from "../types"
 import chalk from "chalk"
 
 export interface Options {
-  priority: ("git" | "frontmatter" | "filesystem")[]
+  priority: ("frontmatter" | "git" | "filesystem")[]
 }
 
 const defaultOptions: Options = {
-  priority: ["git", "frontmatter", "filesystem"],
+  priority: ["frontmatter", "git", "filesystem"],
 }
 
 function coerceDate(fp: string, d: any): Date {
@@ -49,10 +51,10 @@ export const CreatedModifiedDate: QuartzTransformerPlugin<Partial<Options> | und
                 created ||= st.birthtimeMs
                 modified ||= st.mtimeMs
               } else if (source === "frontmatter" && file.data.frontmatter) {
-                created ||= file.data.frontmatter.date as MaybeDate
+                created ||= file.data.frontmatter["date created"] as MaybeDate
                 modified ||= file.data.frontmatter.lastmod as MaybeDate
                 modified ||= file.data.frontmatter.updated as MaybeDate
-                modified ||= file.data.frontmatter["last-modified"] as MaybeDate
+                modified ||= file.data.frontmatter["date modified"] as MaybeDate
                 published ||= file.data.frontmatter.publishDate as MaybeDate
               } else if (source === "git") {
                 if (!repo) {
@@ -86,7 +88,6 @@ export const CreatedModifiedDate: QuartzTransformerPlugin<Partial<Options> | und
     },
   }
 }
-
 declare module "vfile" {
   interface DataMap {
     dates: {
