@@ -11,7 +11,14 @@ date modified: Thursday, 16. May 2024, 17:02
 # About This Site
 This website serves as a centralized archive, offering you structured access to a wealth of study materials that I’ve gathered and written in the language of the module (mostly German). It’s designed to provide a clear, organized, and comprehensive resource for anyone interested in the intricacies of computer science, as seen through my personal academic lens. If necessary, the website can be translated into any required language using a browser’s built-in translator.
 
-Here, you’ll find detailed notes covering a range of topics, from the basics of programming to the complexities of algorithms and data structures, all tailored to support and enhance your understanding of this dynamic field. This page is updated frequently throughout the semester, with new topics being added regularly to enrich the content and ensure it reflects the latest developments in the field.
+<!-- Scroll Indicator-->
+<div class="container">
+<div class="chevron"></div>
+<div class="chevron"></div>
+<div class="chevron"></div>
+<span class="text">Scroll down</span>
+</div>
+<!-- Scroll Indicator END -->
 
 # 📚 Modules
 
