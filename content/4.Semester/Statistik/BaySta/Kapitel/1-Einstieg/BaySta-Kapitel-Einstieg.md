@@ -7,7 +7,7 @@ fach: "[[BaySta]]"
 Thema:
   - "[[Priori und Posteriori Wahrscheinlichkeit]]"
 date created: Wednesday, 24. April 2024, 21:17
-date modified: Thursday, 25. April 2024, 22:23
+date modified: Thursday, 16. May 2024, 14:53
 ---
 
 # Kurze Wiederholung der Theorie der Wahrscheinlichkeit
@@ -53,8 +53,7 @@ $$
 
 Wobei $|A|$ die „Mächtigkeit“ von $A$, also die Anzahl der Elemente in $A$ ist. Man nennt diese Definition einer Wahrscheinlichkeit auch _Laplace-Wahrscheinlichkeit._ 
 
-## Odds
-Alternativ lassen sich Wahrscheinlichkeiten auch als _Odds_ oder _Chance_ darstellen:
+## OddsAlternativ lassen sich Wahrscheinlichkeiten auch als _Odds_ oder _Chance_ darstellen:
 
 ### Definition
 

@@ -9,7 +9,7 @@ Thema:
   - "[[Unterschied zwischen Stetigkeit und Diskretheit]]"
   - "[[Priori und Posteriori Wahrscheinlichkeit]]"
 date created: Monday, 22. April 2024, 23:35
-date modified: Friday, 3. May 2024, 18:49
+date modified: Thursday, 16. May 2024, 16:59
 ---
 
 # TODO:
@@ -41,6 +41,8 @@ P(\text{"Kirschkern landet im Verkauf"}) &= (0.7\cdot0.08+0.3\cdot0.05) \cdot 0.
 $$
 
 ## (b) Ein Kunde kauft eine Packung mit 100 Pralinen. Wie groß ist die Wahrscheinlichkeit, dass nur gute Pralinen, also Pralinen ohne Kirschkern, in der Packung sind?
+
+>[!danger] Muss noch aussgebessert werden vergleiche ML
 
 $$
 \begin{aligned}
@@ -109,6 +111,7 @@ $$
 P_{AG \cap PCR}(T) = P_{AG \cap PCR}(T | K) \times P(K) + P_{AG \cap PCR}(T | \overline{K}) \times P(\overline{K}) = 0.882 \times 0.0002 + 0.0002 \times 0.9998 = 0.0003764
 $$
 
+
 ### Anwendung der Bayes-Formel:
 $$
 P(K | T_{AG \cap PCR}) = \frac{P_{AG \cap PCR}(T | K) \times P(K)}{P_{AG \cap PCR}(T)} = \frac{0.882 \times 0.0002}{0.0003764} \approx 0.468
@@ -126,6 +129,8 @@ Die Wahrscheinlichkeit, dass der Antigen-Test negativ ist, obwohl die Person inf
 
 - [ ] Baysta-Blatt-1-2c ausbessern
 >[!warning] Der Fall Antigen positiv PCR negativ fehlt
+
+>[!danger] Spezifität benutzen nicht Sensitivität
 
 $$
 P_{AG}(\overline{T} | K) = 1 - P_{AG}(T | K) = 1 - 0.90 = 0.10
@@ -255,7 +260,7 @@ $$
 ## [[Unterschied zwischen Stetigkeit und Diskretheit]]
 
 >[!note] Aufgabenstellung
-Wir betrachten ein Binomial-Experiment. Sei $x \sim B(n, \pi)$. Wir betrachten im Folgenden zwei Ansätze:
+>Wir betrachten ein Binomial-Experiment. Sei $x \sim B(n, \pi)$. Wir betrachten im Folgenden zwei Ansätze:
 >
 >1. $\pi$ ist stetig
 >2. $\pi$ sei diskret und nehme Werte auf einem Gitter $[0, 0.01, 0.02, …, 0.99, 1]$ an.
@@ -286,7 +291,9 @@ $$
 > Für eine diskrete Gleichverteilung, bei der die Zufallsvariable $\pi$ nur bestimmte Werte annehmen kann (hier ein Gitter von 0 bis 1 in Schritten von 0.01), wird jedem dieser Punkte die gleiche Wahrscheinlichkeit zugeordnet. Da es 101 solche Punkte gibt, ist die Wahrscheinlichkeit für jeden Punkt $1/101$.
 > In beiden Fällen geht man davon aus, dass man keine Informationen über $\pi$ hat, außer dass es zwischen 0 und 1 liegt. Daher behandelt man alle möglichen Werte von $\pi$ als gleich wahrscheinlich.
 > In der Bayes-Statistik werden diese Priori-Verteilungen genutzt, um sie mit den Daten zu kombinieren und so eine Posteriori-Verteilung zu erhalten. Diese reflektiert dann sowohl das Vorwissen (die Priori-Verteilung) als auch die Informationen aus den Daten.
-## (b) Leiten Sie jeweils die Posteriori für $\pi|x$ her. [[Erstellung der Posteriori-Verteilung im Bayes'schen Kontext|(Erstellung der Posteriori-Verteilung im Bayes'schen Kontext)]]
+## (b) Leiten Sie jeweils die Posteriori für $\pi|x$ her. [[Erstellung der Posteriori-Verteilung im Bayes'schen Kontext|(Erstellung der Posteriori-Verteilung im Bayes'schen Kontext)
+
+>[!danger] k auswechseln mit x
 
 >[!success] Lösung
 > Die Posteriori-Wahrscheinlichkeit $p(\pi|x)$ ist die Wahrscheinlichkeit für den Parameter $\pi$ gegeben die beobachteten Daten $x$. Um diese zu berechnen, verwenden wir das Bayes'sche Theorem:

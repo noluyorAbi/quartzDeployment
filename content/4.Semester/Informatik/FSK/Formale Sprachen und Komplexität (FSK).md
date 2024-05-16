@@ -6,7 +6,7 @@ tags:
   - "#FSK"
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Tuesday, 16. April 2024, 11:20
-date modified: Wednesday, 15. May 2024, 13:33
+date modified: Thursday, 16. May 2024, 17:02
 ---
 
 # Übersicht der Studieninhalte
