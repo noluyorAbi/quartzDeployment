@@ -128,7 +128,36 @@ td,
 }
  */
 
+/* CENTERED TABLES */
 
+ .table-container {
+  overflow-x: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & > table {
+    margin: 1rem;
+    padding: 1.5rem;
+    border-collapse: collapse;
+
+    th,
+    td {
+      min-width: 75px;
+    }
+
+    & > * {
+      line-height: 2rem;
+    }
+  }
+}
+
+/* CENTERED TABLES END */
+
+
+
+/* SCROLL INDICATOR */
 
 /* Hide the container by default */
 .container {
@@ -143,7 +172,7 @@ td,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -60px;
+    margin-top: -80px;
   }
 
   .chevron {
@@ -220,3 +249,23 @@ td,
     }
   }
 }
+
+@media (max-width: 600px) and (prefers-color-scheme: light) {
+  .chevron:before,
+  .chevron:after {
+    background: #000; /* Black for light mode */
+  }
+  .text {
+    display: block;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    color: #000;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+    margin-top: 140px; /* Adjust this value based on your animation’s translateY */
+  }
+}
+
+/* SCROLL INDICATOR END*/
