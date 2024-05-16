@@ -4,9 +4,7 @@ tags:
   - RNVS
   - vorlesung
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
-Thema:
-  - "[[TCP]]"
-  - "[[UDP]]"
+Thema: []
 date created: Sunday, 21. April 2024, 15:32
 date modified: Thursday, 9. May 2024, 23:21
 ---
@@ -17,3 +15,4 @@ date modified: Thursday, 9. May 2024, 23:21
 - [[RNVS-2VL-26-04-2024]]
 - [[RNVS-3VL-03-05-2024]]
 - [[RNVS-4VL-10-05-2024]]
+- [[RNVS-5VL-17-05-2024]]
