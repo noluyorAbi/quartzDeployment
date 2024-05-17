@@ -33,7 +33,7 @@ const config: QuartzConfig = {
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
           dark: "#2b2b2b",
-          secondary: "#284b63",
+          secondary: "#00bee9",
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
         },
@@ -54,7 +54,7 @@ const config: QuartzConfig = {
     transformers: [
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem","git"],
+        priority: ["frontmatter", "filesystem", "git"],
       }),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.SyntaxHighlighting({
