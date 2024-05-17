@@ -37,8 +37,6 @@ td,
   scrollbar-color: #555 #2e2e2e; // Scrollbar-Farbe für ein dunkles Thema in Firefox
 }
 
-
-
 /* ------------------------------------------------------------------------------------------- */
 
 /* [saved-theme="dark"] {
@@ -130,7 +128,7 @@ td,
 
 /* CENTERED TABLES */
 
- .table-container {
+.table-container {
   overflow-x: auto;
   display: flex;
   position: relative;
@@ -155,7 +153,23 @@ td,
 
 /* CENTERED TABLES END */
 
+/* Define colors for light and dark themes */
+/* Define colors for light and dark themes */
+html[saved-theme="light"] .svg-icon path {
+  stroke: #292d32; /* Dark color for light mode */
+}
 
+html[saved-theme="dark"] .svg-icon path {
+  stroke: #ffffff; /* Light color for dark mode */
+}
+
+html[saved-theme="light"] .svg-icon-book {
+  fill: #292d32; /* Dark color for light mode */
+}
+
+html[saved-theme="dark"] .svg-icon-book {
+  fill: #ffffff; /* Light color for dark mode */
+}
 
 /* SCROLL INDICATOR */
 

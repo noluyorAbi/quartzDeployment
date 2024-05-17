@@ -11,7 +11,6 @@ date created: Monday, 13. May 2024, 22:00
 date modified: Wednesday, 15. May 2024, 01:39
 ---
 
-
 # FSK4-1 [[Pumping-Lemma]] für reguläre Sprachen (2 Punkte)
 
 Zeigen Sie mit dem Pumping-Lemma für reguläre Sprachen, dass die folgenden Sprachen nicht regulär sind.
@@ -37,13 +36,13 @@ $$
 &1. \ \text{Gemäß Pumping-Lemma gibt es eine Pumping-Länge } p \in \mathbb{N}. \\
 &2. \ \text{Wähle } w = a^p b^1 c^1 d^p \text{ aus } L_1, \text{ wobei } |w| = 2p + 2 \geq p. \\
 &3. \ \text{Zerlege } w = xyz, \text{ wobei } |xy| \leq p \text{ und } |y| > 0. \\
-&4. \ \text{Wähle } x = a^m, \ y = a^n \text{ und } z = a^{p-m-n}b^1c^1d^p, \text{ wobei } m+n \leq p \text{ und } n > 0. \\
+&4. \ \xcancel{Wähle} \text{ Daraus folgt: } x = a^m, \ y = a^n \text{ und } z = a^{p-m-n}b^1c^1d^p, \text{ wobei } m+n \leq p \text{ und } n > 0. \\
 &5. \ \text{Setze } i = 0. \\
 \end{aligned}
 $$
 
 **Abpumpen:**
-- Das gepumpte Wort wird $xy^0z = xa^\{S\}z = a^{m}a^{p-m-n}b^1c^1d^p = a^{p-n}b^1c^1d^p$.
+- Das gepumpte Wort wird $xy^0z = xa^{S}z = a^{m}a^{p-m-n}b^1c^1d^p = a^{p-n}b^1c^1d^p$.
 - Das resultierende Wort hat $p-n$ $a$'s und $p$ $d$'s.
 - Da $n > 0$, gilt $p-n \neq p$, und somit passt das Wort $a^{p-n}b^1c^1d^p$ nicht in die Form $a^i b^j c^k d^i$, weil die Anzahl der $a$'s und $d$'s nicht mehr übereinstimmt.
 
