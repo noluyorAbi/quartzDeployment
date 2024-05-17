@@ -1,9 +1,9 @@
 ---
-Thema: 
+Thema:
 tags:
   - informatik
   - statistik
-fach: 
+fach:
 title: Studying made easy.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
@@ -18,9 +18,9 @@ date modified: Friday, 17. May 2024, 12:43
 <span class="text">Scroll down</span>
 </div>
 <!-- Scroll Indicator END -->
-<br/>
 
 # About This Site
+
 This website serves as a centralized archive, offering you structured access to a wealth of study materials that I’ve gathered and written in the language of the module (mostly German). It’s designed to provide a clear, organized, and comprehensive resource for anyone interested in the intricacies of computer science, as seen through my personal academic lens. If necessary, the website can be translated into any required language using a browser’s built-in translator.
 
 # 📚 Modules
@@ -39,7 +39,8 @@ This website serves as a centralized archive, offering you structured access to 
 |                | [[4.Semester]]                                          |        |
 
 # Website Update Graph
-This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science. 
+
+This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science.
 
 <!-- IMPORT SVG HERE -->
 
@@ -47,49 +48,8 @@ This graph shows the fluctuating activity on the website over time. It reflects 
 
 <!-- IMPORT SVG HERE END -->
 
-
-
-
-
-
 <!-- There are scripts below this tag -->
 <!-- linter-disable -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Google tag (gtag.js) -->
 
@@ -163,5 +123,3 @@ var asciiArt2 = undefined;
 console.log(asciiArt1); 
 console.log(asciiArt2); 
 </script>
-
-
