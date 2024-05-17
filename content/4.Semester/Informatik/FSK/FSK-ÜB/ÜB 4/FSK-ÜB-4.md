@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit: 
 date created: Monday, 13. May 2024, 22:00
-date modified: Wednesday, 15. May 2024, 01:39
+date modified: Friday, 17. May 2024, 17:36
 ---
 
 # FSK4-1 [[Pumping-Lemma]] für reguläre Sprachen (2 Punkte)
