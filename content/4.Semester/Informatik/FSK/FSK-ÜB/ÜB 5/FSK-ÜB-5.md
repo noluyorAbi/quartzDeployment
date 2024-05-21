@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit:
 date created: Tuesday, 21. May 2024, 16:56
-date modified: Tuesday, 21. May 2024, 23:25
+date modified: Tuesday, 21. May 2024, 23:53
 ---
 
 # FSK5-1 Myhill und Nerode (2 Punkte)
@@ -82,13 +82,10 @@ $$
 
 ### Lösung für Sprache L_1$
 
-**Sprache**: $$
-L_1 = \{aaab, aabb, abab, abbb, baab, bbab, bbbb\}
-$$
-**Alphabet**: $$
-\Sigma_1 = \{a, b\}
-$$
-#### Nerode-Index und Äquivalenzklassen
+**Sprache**: $L_1 = \{aaab, aabb, abab, abbb, baab, bbab, bbbb\}$
+**Alphabet**: $\Sigma_1 = \{a, b\}$
+#### Nerode-Index und Ä quivalenzklassen
+
 **Bestimmung**: Der Nerode-Index von $L_1$ wird durch Analyse der rechtsinvarianten Äquivalenzrelation bestimmt, bei der zwei Wörter $x$ und $y$ äquivalent sind, wenn für alle $z$ gilt, dass $xz \in L_1$ genau dann, wenn $yz \in L_1$.
 
 **Äquivalenzklassen**:
@@ -98,6 +95,7 @@ $$
 **Anzahl der Äquivalenzklassen**: 2 (endlich)
 
 #### Regulärität der Sprache
+
 Nach dem Satz von Myhill-Nerode ist eine Sprache regulär, wenn die Anzahl ihrer Äquivalenzklassen endlich ist. Da $L_1$ genau zwei Äquivalenzklassen hat, ist $L_1$ regulär.
 
 **Fazit**: $L_1$ ist eine reguläre Sprache und kann durch einen endlichen Automaten mit zwei Zuständen dargestellt werden.
@@ -195,7 +193,9 @@ Dieses Beispiel zeigt, dass die Sprache die Pumping-Eigenschaft erfüllt, solang
 1. $L_1 = \{ac^{i} ba^{j}b \mid i, j \in \mathbb{N}\}$ mit $\Sigma_1 = \{a, b, c\}$
 
    **Lösung:** $L_1$ ist regulär. Ein regulärer Ausdruck, der $L_1$ erkennt, ist: 
-   $$ a c^* b a^* b $$
+   $$
+ a c^* b a^* b 
+$$
 
 2. $L_2 = \{a^p b^p \mid p \in \mathbb{N} \text{ ist prim}\}$ mit $\Sigma_2 = \{a, b\}$
 
@@ -211,7 +211,9 @@ Dieses Beispiel zeigt, dass die Sprache die Pumping-Eigenschaft erfüllt, solang
 3. $L_3 = \{a^{2n+1} \mid n \in \mathbb{N}\}$ mit $\Sigma_3 = \{a\}$.
 
    **Lösung:** $L_3$ ist regulär. Ein regulärer Ausdruck, der $L_3$ erkennt, ist:
-   $$ a (aa)^* $$
+   $$
+ a (aa)^* 
+$$
 
 ---
 
