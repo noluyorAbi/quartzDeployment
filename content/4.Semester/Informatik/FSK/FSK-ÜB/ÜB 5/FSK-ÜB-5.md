@@ -3,10 +3,10 @@ tags:
   - 4semester
   - FSK
   - informatik
-  - vorlesung
+  - Übungsblatt
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
-Benötigte Zeit:
+Benötigte Zeit: 6h
 date created: Tuesday, 21. May 2024, 16:56
 date modified: Tuesday, 21. May 2024, 23:53
 ---
