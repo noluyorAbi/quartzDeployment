@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit: 6h
 date created: Tuesday, 21. May 2024, 16:56
-date modified: Tuesday, 21. May 2024, 23:53
+date modified: Wednesday, 22. May 2024, 19:04
 ---
 
 # FSK5-1 Myhill und Nerode (2 Punkte)
