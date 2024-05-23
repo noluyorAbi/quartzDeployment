@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit: 6h
 date created: Tuesday, 21. May 2024, 16:56
-date modified: Wednesday, 22. May 2024, 19:04
+date modified: Friday, 24. May 2024, 00:45
 ---
 
 # FSK5-1 Myhill und Nerode (2 Punkte)
@@ -193,7 +193,7 @@ Dieses Beispiel zeigt, dass die Sprache die Pumping-Eigenschaft erfüllt, solang
 1. $L_1 = \{ac^{i} ba^{j}b \mid i, j \in \mathbb{N}\}$ mit $\Sigma_1 = \{a, b, c\}$
 
    **Lösung:** $L_1$ ist regulär. Ein regulärer Ausdruck, der $L_1$ erkennt, ist: 
-   $$
+$$
  a c^* b a^* b 
 $$
 
@@ -211,7 +211,7 @@ $$
 3. $L_3 = \{a^{2n+1} \mid n \in \mathbb{N}\}$ mit $\Sigma_3 = \{a\}$.
 
    **Lösung:** $L_3$ ist regulär. Ein regulärer Ausdruck, der $L_3$ erkennt, ist:
-   $$
+$$
  a (aa)^* 
 $$
 
