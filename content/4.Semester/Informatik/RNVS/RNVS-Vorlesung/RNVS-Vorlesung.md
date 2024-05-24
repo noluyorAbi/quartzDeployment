@@ -6,7 +6,7 @@ tags:
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: []
 date created: Sunday, 21. April 2024, 15:32
-date modified: Thursday, 16. May 2024, 18:10
+date modified: Friday, 24. May 2024, 12:21
 ---
 
 # Vorlesungen
@@ -16,3 +16,4 @@ date modified: Thursday, 16. May 2024, 18:10
 - [[RNVS-3VL-03-05-2024]]
 - [[RNVS-4VL-10-05-2024]]
 - [[RNVS-5VL-17-05-2024]]
+- [[RNVS-6VL-24-05-2024]]
