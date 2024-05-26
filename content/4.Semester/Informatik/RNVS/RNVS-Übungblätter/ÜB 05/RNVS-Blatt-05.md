@@ -10,9 +10,6 @@ Benötigte Zeit:
 date created: Sunday, 26. May 2024, 16:05
 date modified: Sunday, 26. May 2024, 18:07
 ---
-
-Hier sind die Korrekturen der Rechtschreibfehler im Text:
-
 # Aufgabe 5-1 Aktuelle Produktivnetze (H)
 
 >[!info] Info
@@ -32,13 +29,13 @@ Hier sind die Korrekturen der Rechtschreibfehler im Text:
 
 ## (b) Diskutieren Sie die Verwendung von Kupfer- gegenüber Glasfaserkabeln innerhalb von Gebäuden.
 
-Laut Gastvortrag sind Kupferkabel innerhalb eines Gebäudes vorzuziehen, da diese auch Strom liefern können und den Access Points nicht extra ein Stromkabel gelegt werden muss.
+Laut Gastvortrag sind Kupferkabel innerhalb eines Gebäudes vorzuziehen, da diese auch Strom liefern können und den Access Points kein extra Stromkabel gelegt werden muss.
 
 Für Glasfaserkabel spricht jedoch eine höhere Bandbreite und höhere Übertragungsgeschwindigkeiten. Zudem sind sie immun gegen elektromagnetische Störungen aus der Umgebung.
 
-$\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Stromversorgung und günstigeren Umsetzung zu bevorzugen. Es muss jedoch je nach Einsatzgebiet abgewogen werden, was zu bevorzugen ist.
+$\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Stromversorgung und günstigere Umsetzung zu bevorzugen. Es muss jedoch je nach Einsatzgebiet abgewogen werden, was zu bevorzugen ist.
 
-## (c) Diskutieren Sie Vor- und Nachteile von modularen Netztechniksysten.
+## (c) Diskutieren Sie Vor- und Nachteile von modularen Netztechniksystemen.
 
 >[!info]
 >## Was sind modulare Netztechniksysteme?
@@ -114,7 +111,7 @@ $\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Strom
 - Prüfnummer (checksum)
 
 **ICI besteht aus:**
-- `adress_bytes` aus dem route_packet also die Zieladresse
+- `address_bytes` aus dem route_packet also die Zieladresse
 
 $$
 address\_{bytes}\neq destination\_port
