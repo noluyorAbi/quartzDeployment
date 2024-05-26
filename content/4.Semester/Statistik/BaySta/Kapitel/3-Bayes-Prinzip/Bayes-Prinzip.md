@@ -13,7 +13,7 @@ date modified: Saturday, 4. May 2024, 17:09
 
 # TODO
 
-- [ ] Bayes Laplace Priori weitermachen
+- [x] Bayes Laplace Priori weitermachen [completion:: 2024-05-26]
 
 # Prinzip
 
