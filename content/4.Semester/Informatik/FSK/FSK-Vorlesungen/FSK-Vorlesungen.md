@@ -6,7 +6,7 @@ tags:
   - vorlesung
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Tuesday, 16. April 2024, 14:04
-date modified: Thursday, 16. May 2024, 00:07
+date modified: Monday, 27. May 2024, 21:28
 ---
 
 # Liste aller VL & ZÜ
@@ -29,3 +29,4 @@ date modified: Thursday, 16. May 2024, 00:07
 	- [[FSK-5VL-14-05-2024#VL 05-b]]
 	- [[FSK-5VL-14-05-2024#VL 05-c]]
 - [[FSK-03-ZÜ-15-05-2024]]
+- [[FSK-6VL-28-05-2024]]
