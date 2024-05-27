@@ -8,7 +8,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: 
 Benötigte Zeit: 
 date created: Wednesday, 15. May 2024, 19:25
-date modified: Sunday, 26. May 2024, 18:07
+date modified: Monday, 27. May 2024, 10:46
 ---
 
 # 1. Verbindungslose und verbindungsorientierte Kommunikation (H)
@@ -23,6 +23,7 @@ date modified: Sunday, 26. May 2024, 18:07
 	- Daten werden in einzelnen Paketen abgeschickt, die unabhängig voneinander das Ziel erreichen können in möglicherweise unterschiedlicher Reihenfolge
 - **Verbindungsorientiert**
 	- feste Verbindung zwischen Sender und Empfänger
+	- Verbindung muss erstmal hergestellt werden
 	- Bestätigung über Erhalt der Nachricht
 ## Nennen Sie je zwei Beispieldienste!
 
@@ -64,9 +65,8 @@ stateDiagram
     
 
 ```
-
-## (a)
-Ein möglicher Fehler während des 2-Wege-Handshake ist bereits bekannt: der Verlust der zweiten Nachricht, der Bestätigung des Verbindungsaufbaus, führt zu einem Problem. Zeigen Sie anhand des Zustandsdiagramms in welchem Zustand die Teilnehmer sich befinden.
+(Zustandsdiagramm)
+## (a) Ein möglicher Fehler während des 2-Wege-Handshake ist bereits bekannt: der Verlust der zweiten Nachricht, der Bestätigung des Verbindungsaufbaus, führt zu einem Problem. Zeigen Sie anhand des Zustandsdiagramms in welchem Zustand die Teilnehmer sich befinden.
 
 Im Zustand Aufbauwunsch
 
@@ -81,8 +81,8 @@ sequenceDiagram
     note right of Bob: wird ignoriert, da erster Versuch noch aktiv
 
 ```
-## (b)
-Skizzieren Sie ein weiteres Szenario, in dem die Verbindung beim 2-Wege-Handshake nicht erfolgreich aufgebaut wird.
+(Sequenzdiagramm)
+## (b) Skizzieren Sie ein weiteres Szenario, in dem die Verbindung beim 2-Wege-Handshake nicht erfolgreich aufgebaut wird.
 
 ```mermaid
 stateDiagram
@@ -95,9 +95,8 @@ stateDiagram
     note right of WarteAufBestätigung : Warte auf Bestätigung
     note right of Timeout : Timeout beim Warten auf Bestätigung
 ```
-
-## (c)
-In der Vorlesung wurde das vorgestellte Protokoll zu einem 3-Wege-Handshake und um einen Verbindungsabbau erweitert. Zeichnen Sie dazu ein Zustandsdiagramm.
+- Kann zudem sein, dass beide gleichzeitig ein `SYN` senden
+## (c) In der Vorlesung wurde das vorgestellte Protokoll zu einem 3-Wege-Handshake und um einen Verbindungsabbau erweitert. Zeichnen Sie dazu ein Zustandsdiagramm.
 
 ```mermaid
 sequenceDiagram
@@ -109,13 +108,35 @@ sequenceDiagram
     S->>E: SYNBP 
 ```
 
-## (d)
-Auch der 3-Wege-Handshake kann den erfolgreichen Verbindungsaufbau nicht garantieren. Um genau zu sein, gibt es keinen Handshake der eine vollständige Garantie gibt. Begründen Sie warum es keinen solchen Handshake geben kann.
+**Verbindungsabbau**:
+```mermaid
+sequenceDiagram
+    participant S as Sender
+    participant E as Empfänger
 
-Handshakes sind nur ein Protokoll um die Kommunikation miteinander aufzustellen, bei nicht aufstellen dieser Kommunikation(z.B. schickst der Sender immer wieder Anfragen (SYN) aber bekommt keine Antwort drauf (SYNB) kann nie ein erfolgreicher Verbindungsaufbau stattfinden). Das Protokoll ist da, um die Parteien von einem erfolgreichen gegenseitigen Verbindungsaufbau zu informieren, nicht um direkt einen herzustellen.
+    S->>E: CLS 
+    E->>S: CLSB
+    S->>E: CLSB 
+```
 
-## (e)
-Der 3-Wege-Handshake ist trotzdem weit verbreitet. Warum ist dieser in der Realität ausreichend für einen Verbindungsaufbau?
+```mermaid
+graph
+    direction TB
+    closed --> SYN_SENT
+    closed --> SYNB_SENT
+    SYN_SENT --> established
+	established --ACK--> established
+	established --CLSB sent--> close_Empfänger
+	established --CLS sent--> close_Sender
+	close_Sender --CLSB sent--> close
+	close_Empfänger --CLS sent--> close
+```
+
+## (d) Auch der 3-Wege-Handshake kann den erfolgreichen Verbindungsaufbau nicht garantieren. Um genau zu sein, gibt es keinen Handshake der eine vollständige Garantie gibt. Begründen Sie warum es keinen solchen Handshake geben kann.
+
+Handshakes sind nur ein Protokoll um die Kommunikation miteinander aufzustellen, bei nicht aufstellen dieser Kommunikation(z.B. schickt der Sender immer wieder Anfragen (SYN) aber bekommt keine Antwort drauf (SYNB) kann nie ein erfolgreicher Verbindungsaufbau stattfinden). Das Protokoll ist da, um die Parteien von einem erfolgreichen gegenseitigen Verbindungsaufbau zu informieren, nicht um direkt einen herzustellen.
+
+## (e) Der 3-Wege-Handshake ist trotzdem weit verbreitet. Warum ist dieser in der Realität ausreichend für einen Verbindungsaufbau?
 
 - Er ist zuverlässig genug, da sich Sender und Empfänger darauf einigen, nun Daten auszutauschen, wenn das Protokoll erfolgreich abgeschlossen wird.
 - Er hilft bei der Initialisierung und Synchronisation der Sequenznummern, die notwendig sind, um die Pakete in der richtigen Reihenfolge zu empfangen und sicherzustellen, dass keine Daten verloren gehen.
@@ -159,9 +180,9 @@ sequenceDiagram
     E ->> S: SYNB
     S ->> E: SYNBP
     S ->> E: Nachricht A
-    E ->> S: ACK
+    E ->> S: ACK A
     S ->> E: Nachricht B
-    E ->> S: ACK
+    E ->> S: ACK B
     E ->> S: CLS
     S ->> E: ACK
 
@@ -184,6 +205,9 @@ sequenceDiagram
     note right of E: Empfänger erhält Nachricht 1
     E --x S: ACK 1
     note right of S: ACK 1 geht verloren
+    S ->> E: Nachricht 1
+    note right of S: S schickt Nachricht 1 erneut    
+    E ->> S: ACK 1
 
     S ->> E: Nachricht 2
     note right of E: Nachricht 2 kommt beschädigt an

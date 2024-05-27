@@ -8,8 +8,9 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: 
 Benötigte Zeit:
 date created: Sunday, 26. May 2024, 16:05
-date modified: Sunday, 26. May 2024, 18:07
+date modified: Monday, 27. May 2024, 11:02
 ---
+
 # Aufgabe 5-1 Aktuelle Produktivnetze (H)
 
 >[!info] Info
@@ -22,16 +23,19 @@ date modified: Sunday, 26. May 2024, 18:07
 ## (a) Nennen Sie einen Vor- und Nachteil von Ringstrukturen in Produktivnetzen.
 
 **Vorteil:**
-- *Einfache Fehlererkennung*: Wenn ein Knoten oder eine Verbindung ausfällt, ist der Fehler leicht zu lokalisieren, da der Ring unterbrochen wird.
+- *Resistent gegen Umwelteinflüsse:* Zwischen zwei Knoten gibt es 2 Verbindungen, wenn eine Ausfällt, gibt es eine Weitere zum Informationsaustausch
+- Ein Sender kann beide Verbindungen nutzen um Informationen schneller zu versenden
 
 **Nachteil:**
-- *Ausfallanfälligkeit*: Der Ausfall eines Knotens oder einer Verbindung kann das gesamte Netzwerk lahmlegen.
+- höhere Kosten (zwei Verbindungen statt nur einer)
 
 ## (b) Diskutieren Sie die Verwendung von Kupfer- gegenüber Glasfaserkabeln innerhalb von Gebäuden.
 
 Laut Gastvortrag sind Kupferkabel innerhalb eines Gebäudes vorzuziehen, da diese auch Strom liefern können und den Access Points kein extra Stromkabel gelegt werden muss.
 
 Für Glasfaserkabel spricht jedoch eine höhere Bandbreite und höhere Übertragungsgeschwindigkeiten. Zudem sind sie immun gegen elektromagnetische Störungen aus der Umgebung.
+
+Kupferkabel sind biegsamer um Ecken in Gebäuden, das würde mit Glasfaserkabeln nicht funktionieren
 
 $\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Stromversorgung und günstigere Umsetzung zu bevorzugen. Es muss jedoch je nach Einsatzgebiet abgewogen werden, was zu bevorzugen ist.
 
@@ -41,16 +45,19 @@ $\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Strom
 >## Was sind modulare Netztechniksysteme?
 >
 >Modulare Netztechniksysteme beziehen sich im Allgemeinen auf Netzwerklösungen, die aus verschiedenen austauschbaren Komponenten oder Modulen bestehen. Diese Module können je nach den spezifischen Anforderungen und Gegebenheiten des Netzwerks angepasst, hinzugefügt oder entfernt werden. Ein solch modularer Aufbau ermöglicht es, das Netzwerk flexibel zu gestalten und auf Veränderungen oder Erweiterungen der Netzwerkinfrastruktur einfach zu reagieren.
+>
+>z.B. Switches und Router
 
 **Vorteile:**
 - *Flexibilität*: Modulare Systeme sind anpassbar, Komponenten können nach Bedarf hinzugefügt oder entfernt werden.
 - *Bessere Wartbarkeit*: Bei Fehlern müssen nur die betroffenen Module auf Fehler analysiert werden, anstatt komplexe Abhängigkeiten. Dies resultiert in einer schnelleren und deswegen auch kostengünstigeren Fehlerbehebung.
+- Redundanter
 
 **Nachteile:**
 - **Geringere Leistungseffizienz:** Aufgrund von mehr Schnittstellen zwischen den Modulen kann es zu geringerer Leistungseffizienz kommen.
 - **Kompatibilitätsprobleme:** Bei eventuell falsch gewählten Modulen oder Modulen mit falschen Versionsabhängigkeiten könnte es zu technischen Problemen und Inkompatibilität kommen.
-
-
+- Mehr Platzverbrauch
+- Fehleranfälliger
 
 ## 2. Transportschicht in Pseudocode (H)
 
@@ -105,14 +112,22 @@ $\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Strom
 >Interface Control Information, beinhaltet Daten zur Steuerung der Netzwerkschnittstelle, wie zum Beispiel die IP-Adresse für das Routing und andere netzwerkspezifische Steuerinformationen, die nicht direkt zur Struktur oder Integrität der übermittelten Daten gehören.
 
 **PCI besteht aus:** (alles wie bei PDU bis auf Nutzdaten)
-- Länge (length)
-- Zielport (destination port)
-- Quellport (source port)
-- Prüfnummer (checksum)
 
+>[!fail] Falsch
+>- Länge (length)
+>- Zielport (destination port)
+>- Quellport (source port)
+>- Prüfnummer (checksum)
+
+>[!success] Richtig
+>- source_port
+>- length
+>- checksum
+
+
+- [ ] Muss eventuell noch korrigiert werden [[RNVS-Blatt-05]]
 **ICI besteht aus:**
 - `address_bytes` aus dem route_packet also die Zieladresse
-
 $$
 address\_{bytes}\neq destination\_port
 $$
@@ -134,6 +149,7 @@ $\Longrightarrow$ Die PCI beinhaltet spezifische Übertragungsdaten wie den Dest
 
 
 ## (d) Handelt es sich um ein verbindungsorientiertes oder -loses Protokoll?
+
 - **Vorgriff**: Welches Protokoll wird hier skizziert? Mögliche Protokolle lernen Sie in der nächsten Vorlesung am 24.05. kennen.
 
 Die Implementierung der Funktion `sendto` deutet auf ein verbindungsloses Protokoll hin. Es wird keine Verbindung vor dem Senden der Daten hergestellt, und die Funktion sendet die Daten direkt an den angegebenen Empfänger. Dies entspricht dem Verhalten von UDP (User Datagram Protocol), das verbindungslos arbeitet.
