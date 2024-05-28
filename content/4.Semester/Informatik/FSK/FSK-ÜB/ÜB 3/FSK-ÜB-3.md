@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit: 
 date created: Saturday, 4. May 2024, 20:06
-date modified: Tuesday, 14. May 2024, 22:29
+date modified: Tuesday, 28. May 2024, 18:28
 ---
 
 
@@ -321,37 +321,43 @@ Da $q_2$ akzeptierend ist (aber $q_m$ nicht), ist das erkannte Token $'=='$.
 Notieren Sie bei folgenden Strings die Zustände, die A bei Verarbeitung dieser Strings annehmen wird (die Läufe) und geben Sie je die Ausgabe des Tokenizers an. Bezüglich der Ausgabe reicht es, sofern der Tokenizer keinen Fehler zurückgibt, nur das erste erkannte Token anzugeben.
 
 ### aa\==aa:
-- Pfad: $$
+- Pfad: 
+$$
 q_0 \overset{a}{\rightarrow} q_4 \overset{a}{\rightarrow} q_4 \overset{=}{\rightarrow} q_5 \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
 $$
 - Erkanntes Token: `aa`
 
 ### a\[0\]:
-- Pfad: $$
+- Pfad: 
+$$
 q_0 \overset{a}{\rightarrow} q_4 \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m
 $$
 - Erkanntes Token: `a`
 
 ### a\[\[\[\[\]:
-- Pfad: $$
+- Pfad: 
+$$
 q_0 \overset{a}{\rightarrow} q_4 \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{]}{\rightarrow} q_m
 $$
 - Erkanntes Token: `a`
 
 ### "a\[0]"ax":
-- Pfad: $$
+- Pfad: 
+$$
 q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{[}{\rightarrow} q_5 \overset{0}{\rightarrow} q_5 \overset{]}{\rightarrow} q_7 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{x}{\rightarrow} q_7
 $$
 - Erkanntes Token: `"a[0]"ax"`
 
 ### "a=\[0]"ax":
-- Pfad: $$
+- Pfad: 
+$$
 q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{=}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{x}{\rightarrow} q_m
 $$
 - Kein erkannter Token: Fehler
 
 ### "a\[0]"a=x":
-- Pfad: $$
+- Pfad: 
+$$
 q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{[}{\rightarrow} q_5 \overset{0}{\rightarrow} q_5 \overset{]}{\rightarrow} q_7 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{x}{\rightarrow} q_m
 $$
 - Erkannter Token: `"a[0]"`
@@ -369,35 +375,40 @@ Zerlegen Sie mit diesem Algorithmus den String a="ax0"aa\[0]=a in alle Tokens.
 ### String: `a:="ax0"aa[0]=a`
 
 #### Automat für `a:="ax0"aa[0]=a`
-- Pfad: $$
+- Pfad: 
+$$
 q_0 \overset{a}{\rightarrow} q_4 \overset{:}{\rightarrow} q_7 \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{x}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
 $$
 - Token: `a`
 - Reststring: `"ax0"aa[0]=a`
 
 #### Automat für `:="ax0"aa[0]=a`
-- Pfad: $$
+- Pfad: 
+$$
 q_0 \overset{:}{\rightarrow} q_2 \overset{=}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{x}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m
 $$
 - Token: `:=`
 - Reststring: `"ax0"aa[0]=a`
 
 #### Automat für `"ax0"`
-- Pfad: $$
+- Pfad: 
+$$
 q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{x}{\rightarrow} q_5 \overset{0}{\rightarrow} q_5 \overset{"}{\rightarrow} q_7
 $$
 - Token: `"ax0"`
 - Reststring: `aa[0]=a`
 
 #### Automat für `aa`
-- Pfad: $$
+- Pfad: 
+$$
 q_0 \overset{a}{\rightarrow} q_4 \overset{a}{\rightarrow} q_4 \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
 $$
 - Token: `aa`
 - Reststring: `[0]=a`
 
 #### Automat für `[`
-- Pfad: $$
+- Pfad: 
+$$
 q_0 \overset{[}{\rightarrow} q_1 \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
 $$
 - Token: `[`
@@ -405,21 +416,24 @@ $$
 
 #### Weitere Token
 - `0`
-  - Pfad: $$
+  - Pfad: 
+$$
 q_0 \overset{0}{\rightarrow} q_3 \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
 $$
   - Token: `0`
   - Reststring: `]=a`
 
 - `]`
-  - Pfad: $$
+  - Pfad: 
+$$
 q_0 \overset{]}{\rightarrow} q_1 \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
 $$
   - Token: `]`
   - Reststring: `=a`
 
 - `=`
-  - Pfad: $$
+  - Pfad:
+$$
 q_0 \overset{=}{\rightarrow} q_2 \overset{a}{\rightarrow} q_m
 $$
   - Token: `=`
@@ -427,7 +441,8 @@ $$
 
 #### Abschluss
 - `a`
-  - Pfad: $$
+  - Pfad: 
+$$
 q_0 \overset{a}{\rightarrow} q_4
 $$
   - Token: `a`
