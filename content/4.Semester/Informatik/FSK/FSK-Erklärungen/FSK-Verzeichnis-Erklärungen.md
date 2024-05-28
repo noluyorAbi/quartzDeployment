@@ -7,7 +7,7 @@ tags:
   - informatik
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Thursday, 18. April 2024, 16:21
-date modified: Monday, 13. May 2024, 23:04
+date modified: Tuesday, 28. May 2024, 14:37
 ---
 
 # Erklärungen
