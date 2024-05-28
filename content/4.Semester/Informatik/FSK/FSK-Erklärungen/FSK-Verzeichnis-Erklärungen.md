@@ -7,7 +7,7 @@ tags:
   - informatik
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Thursday, 18. April 2024, 16:21
-date modified: Tuesday, 28. May 2024, 14:57
+date modified: Tuesday, 28. May 2024, 21:23
 ---
 
 # Erklärungen
@@ -25,5 +25,5 @@ date modified: Tuesday, 28. May 2024, 14:57
 - [[Satz des Euklids]]
 - [[Sätze]]
 - [[Sprachen]]
-
+- [[Kellerautomaten]]
 
