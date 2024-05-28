@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
   - "[[FSK-ÜB-1#FSK1-2 Grammatiken angeben (2 Punkte)]]"
 date created: Wednesday, 24. April 2024, 00:46
-date modified: Friday, 26. April 2024, 02:06
+date modified: Tuesday, 28. May 2024, 18:29
 ---
 
 # Grammatiken

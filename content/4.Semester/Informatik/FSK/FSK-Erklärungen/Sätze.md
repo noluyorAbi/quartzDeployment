@@ -7,7 +7,7 @@ tags:
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 date created: Wednesday, 24. April 2024, 01:02
-date modified: Friday, 26. April 2024, 02:07
+date modified: Tuesday, 28. May 2024, 18:29
 ---
 
 # Sätze in der Theorie Formaler Sprachen

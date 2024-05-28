@@ -10,13 +10,9 @@ Thema:
   - "[[Endliche Geometrische Reihe]]"
   - "[[Grammatiken]]"
 date created: Tuesday, 23. April 2024, 11:29
-date modified: Monday, 29. April 2024, 23:22
+date modified: Tuesday, 28. May 2024, 18:31
 ---
 
-# TODO:
-
-- [x] [[FSK-ÜB-1#FSK1-4 Spracheigenschaft per Induktion beweisen (0 Punkte)|Aufgabe FSK1-4 verstehen]] [completion:: 2024-05-09]
-- [ ] Linksableitung bedeutet, wir leiten die linkeste Variable ab, Nichttetminale werden ignoriert (Links und rechtsableitung richtig lernen)
 # FSK1-1 Operationen auf formalen Sprachen (2 Punkte)
 
 >[!note] Aufgabenstellung
