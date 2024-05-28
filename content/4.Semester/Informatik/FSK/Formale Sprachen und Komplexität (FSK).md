@@ -6,7 +6,7 @@ tags:
   - "#FSK"
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Tuesday, 16. April 2024, 11:20
-date modified: Tuesday, 28. May 2024, 14:47
+date modified: Tuesday, 28. May 2024, 14:57
 ---
 
 # Übersicht der Studieninhalte
@@ -27,3 +27,8 @@ date modified: Tuesday, 28. May 2024, 14:47
 | [[FSK-Klausuraufgaben]]                     | Archiv von Klausuraufgaben zur Prüfungsvorbereitung      |
 | [[FSK-1-VL (16.04.2024)#Organisatorisches]] | Informationen zu organisatorischen Details der Vorlesung |
 
+## [YT-Playlist Für Formale Sprachen](https://youtube.com/playlist?list=PLG_1tsKrsKVO2ANHX68UbrNgt7gZuH37H&si=P7VkP7JsWEl-4oLo)
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=OI_p_Q84Zi8xFs0U&amp;list=PLG_1tsKrsKVO2ANHX68UbrNgt7gZuH37H" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>

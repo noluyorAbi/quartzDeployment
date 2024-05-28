@@ -6,7 +6,7 @@ tags:
   - vorlesung
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Tuesday, 16. April 2024, 14:04
-date modified: Tuesday, 28. May 2024, 14:49
+date modified: Tuesday, 28. May 2024, 14:59
 ---
 
 # Liste aller VL & ZÜ
@@ -30,6 +30,6 @@ date modified: Tuesday, 28. May 2024, 14:49
 - [[FSK-5VL-14-05-2024#VL 05-c]]
 ## [[FSK-03-ZÜ-15-05-2024]]
 ## [[FSK-6VL-28-05-2024]]
-- [[FSK-6VL-28-05-2024#VL 0-6a **Die Greibach-Normalform und Eigenschaften von kontextfreien Sprachen**]]
-- [[FSK-6VL-28-05-2024#VL0-6b **CYK-Algorithmus**]]
-- [[FSK-6VL-28-05-2024#VL0-6c **Kellerautomaten**]]
+- [[FSK-6VL-28-05-2024#VL 0-6a Die Greibach-Normalform und Eigenschaften von kontextfreien Sprachen]]
+- [[FSK-6VL-28-05-2024#VL0-6b CYK-Algorithmus]]
+- [[FSK-6VL-28-05-2024#VL0-6c Kellerautomaten]]
