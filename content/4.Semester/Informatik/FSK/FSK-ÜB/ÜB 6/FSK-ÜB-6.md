@@ -8,10 +8,8 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 18:03
-date modified: Wednesday, 29. May 2024, 19:15
+date modified: Wednesday, 29. May 2024, 19:27
 ---
-
-https://www.tcs.ifi.lmu.de/lehre/ss-2024/fsk_de/fsk_blatt-06.pdf
 
 # FSK6-1 Kontextfreie Grammatiken und Kellerautomaten (2 Punkte)
 
@@ -528,12 +526,12 @@ $$
 **Beweis:**
 
 1. **Definition des Konkatens von Sprachen:**
-   $$
+$$
  L_1 \circ L_2 = \{ u \circ v \mid u \in L_1 \text{ und } v \in L_2 \} 
 $$
 
 2. **Bild der Konkatens zweier Sprachen unter $h$:**
-   $$
+$$
  h(L_1 \circ L_2) = \{ h(w) \mid w \in L_1 \circ L_2 \} 
 $$
 Da $w \in L_1 \circ L_2$, gibt es $u \in L_1$ und $v \in L_2$ mit $w = u \circ v$. Somit:
@@ -542,7 +540,7 @@ Da $w \in L_1 \circ L_2$, gibt es $u \in L_1$ und $v \in L_2$ mit $w = u \circ v
 $$
 
 3. **Eigenschaft des Homomorphismus:**
-   $$
+$$
  h(u \circ v) = h(u) \circ h(v) 
 $$
    Also:
@@ -551,16 +549,16 @@ $$
 $$
 
 4. **Ersetzung in der Menge:**
-   $$
+$$
  h(L_1 \circ L_2) = \{ h(u) \circ h(v) \mid u \in L_1, v \in L_2 \} 
 $$
    Dies ist per Definition:
-   $$
+$$
  h(L_1) \circ h(L_2) = \{ x \circ y \mid x \in h(L_1), y \in h(L_2) \} 
 $$
 
 5. **Folgerung:**
-   $$
+$$
  h(L_1 \circ L_2) = h(L_1) \circ h(L_2) 
 $$
 
@@ -586,18 +584,18 @@ $$
    wobei $L_1^0 = \{\epsilon\}$ und $L_1^{k+1} = L_1^k \circ L_1$.
 
 2. **Bild unter $h$:**
-   $$
+ $$
  h(L_1^*) = h\left(\bigcup_{k=0}^\infty L_1^k\right) = \bigcup_{k=0}^\infty h(L_1^k) 
 $$
 
 3. **Eigenschaft des Homomorphismus für Konkatens:**
-   $$
+$$
  h(L_1^k) = (h(L_1))^k 
 $$
    Beweis durch Induktion über \(k\):
    
    - **Induktionsanfang:**
-     $$
+$$
  k=0: \quad h(L_1^0) = h(\{\epsilon\}) = \{\epsilon\} = (h(L_1))^0 
 $$
    
@@ -605,19 +603,19 @@ $$
 Angenommen, es gilt $h(L_1^k) = (h(L_1))^k$.
    
    - **Induktionsschritt:**
-     $$
+$$
  h(L_1^{k+1}) = h(L_1^k \circ L_1) = h(L_1^k) \circ h(L_1) = (h(L_1))^k \circ h(L_1) = (h(L_1))^{k+1} 
 $$
    
 Daher gilt $h(L_1^k) = (h(L_1))^k$ für alle $k$.
 
 4. **Zusammensetzung der Kleene-Sterns:**
-   $$
+$$
  h(L_1^*) = \bigcup_{k=0}^\infty h(L_1^k) = \bigcup_{k=0}^\infty (h(L_1))^k = (h(L_1))^* 
 $$
 
 5. **Folgerung:**
-   $$
+$$
  h(L_1^*) = (h(L_1))^* 
 $$
 
@@ -677,23 +675,39 @@ Um zu zeigen, dass die Sprache $L = \{ a^n b^i c^n d^j \mid n, i, j \in \mathbb{
 ### Schritt-für-Schritt Beweis:
 
 1. **Definition der Sprache $L$:**
-   $$ L = \{ a^n b^i c^n d^j \mid n, i, j \in \mathbb{N} \} $$
+$$
+ L = \{ a^n b^i c^n d^j \mid n, i, j \in \mathbb{N} \} 
+$$
 
 2. **Homomorphismus $h$:**
    Wir definieren $h: \Sigma^* \to \{a, b\}^*$ mit dem Alphabet $\Sigma = \{a, b, c, d\}$ wie folgt:
-   $$ h(a) = a $$
-   $$ h(b) = \epsilon $$  (das leere Wort)
-   $$ h(c) = b $$
-   $$ h(d) = \epsilon $$
+$$
+ h(a) = a 
+$$
+$$
+ h(b) = \epsilon 
+$$ (das leere Wort)
+$$
+ h(c) = b 
+$$
+$$
+ h(d) = \epsilon 
+$$
 
 3. **Bild der Sprache $L$ unter $h$:**
-   $$ h(L) = \{ h(a^n b^i c^n d^j) \mid n, i, j \in \mathbb{N} \} $$
+$$
+ h(L) = \{ h(a^n b^i c^n d^j) \mid n, i, j \in \mathbb{N} \} 
+$$
 
    Da $h(b) = \epsilon$ und $h(d) = \epsilon$, vereinfacht sich das zu:
-   $$ h(a^n b^i c^n d^j) = h(a^n) h(b^i) h(c^n) h(d^j) = a^n \epsilon^i b^n \epsilon^j = a^n b^n $$
+$$
+ h(a^n b^i c^n d^j) = h(a^n) h(b^i) h(c^n) h(d^j) = a^n \epsilon^i b^n \epsilon^j = a^n b^n 
+$$
 
    Also:
-   $$ h(L) = \{ a^n b^n \mid n \in \mathbb{N} \} $$
+$$
+ h(L) = \{ a^n b^n \mid n \in \mathbb{N} \} 
+$$
 
 4. **Nicht-Regulärität von $h(L)$:**
    Es ist bekannt, dass die Sprache $\{ a^n b^n \mid n \in \mathbb{N} \}$ nicht regulär ist.
