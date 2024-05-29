@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 18:03
-date modified: Wednesday, 29. May 2024, 18:51
+date modified: Wednesday, 29. May 2024, 19:15
 ---
 
 https://www.tcs.ifi.lmu.de/lehre/ss-2024/fsk_de/fsk_blatt-06.pdf
@@ -462,6 +462,15 @@ Kellerautomaten mit $k$-begrenztem Keller beschreiben genau die regulären Sprac
 
 # FSK6-4 [[Homomorphismen]]
 
+>[!quote] Bin bei den Aufgaben sehr unsicher deswegen mit Vorsicht genießen
+> Ich glaube nach dieser Aufgabe brauche ich einen Psychiater 
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/l9JMZ9tCX4M?playlist=l9JMZ9tCX4M&loop=1&controls=1&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+
 >[!note] Aufgabenstellung
 > Gegeben Alphabete $\Sigma$ und $\Delta$ bezeichnen wir eine Abbildung $h : \Sigma^* \to \Delta^*$ als (Monoid-)Homomorphismus, wenn sie struktur­erhaltend ist, d.h. wenn gilt:
 >
@@ -492,10 +501,206 @@ $$
 h(L_1^*) = (h(L_1))^*
 $$
 
+Um die Aussagen zu beweisen, dass für alle Sprachen $L_1, L_2 \subseteq \Sigma^*$ und Homomorphismen $h$ gilt:
+
+$$
+h(L_1 \circ L_2) = h(L_1) \circ h(L_2)
+$$
+$$
+h(L_1^*) = (h(L_1))^*
+$$
+
+gehen wir schrittweise vor.
+
+### Beweis für $h(L_1 \circ L_2) = h(L_1) \circ h(L_2)$
+
+**Gegeben:**
+
+- Zwei Sprachen $L_1, L_2 \subseteq \Sigma^*$
+- Ein Homomorphismus $h: \Sigma^* \to \Delta^*$
+
+**Behauptung:**
+
+$$
+ h(L_1 \circ L_2) = h(L_1) \circ h(L_2) 
+$$
+
+**Beweis:**
+
+1. **Definition des Konkatens von Sprachen:**
+   $$
+ L_1 \circ L_2 = \{ u \circ v \mid u \in L_1 \text{ und } v \in L_2 \} 
+$$
+
+2. **Bild der Konkatens zweier Sprachen unter $h$:**
+   $$
+ h(L_1 \circ L_2) = \{ h(w) \mid w \in L_1 \circ L_2 \} 
+$$
+Da $w \in L_1 \circ L_2$, gibt es $u \in L_1$ und $v \in L_2$ mit $w = u \circ v$. Somit:
+   $$
+ h(w) = h(u \circ v) 
+$$
+
+3. **Eigenschaft des Homomorphismus:**
+   $$
+ h(u \circ v) = h(u) \circ h(v) 
+$$
+   Also:
+   $$
+ h(w) = h(u) \circ h(v) 
+$$
+
+4. **Ersetzung in der Menge:**
+   $$
+ h(L_1 \circ L_2) = \{ h(u) \circ h(v) \mid u \in L_1, v \in L_2 \} 
+$$
+   Dies ist per Definition:
+   $$
+ h(L_1) \circ h(L_2) = \{ x \circ y \mid x \in h(L_1), y \in h(L_2) \} 
+$$
+
+5. **Folgerung:**
+   $$
+ h(L_1 \circ L_2) = h(L_1) \circ h(L_2) 
+$$
+
+### Beweis für $h(L_1^*) = (h(L_1))^*$
+
+**Gegeben:**
+
+- Eine Sprache $L_1 \subseteq \Sigma^*$
+- Ein Homomorphismus $h: \Sigma^* \to \Delta^*$
+
+**Behauptung:**
+
+$$
+ h(L_1^*) = (h(L_1))^* 
+$$
+
+**Beweis:**
+
+1. **Definition des Kleene-Sterns:**
+$$
+ L_1^* = \bigcup_{k=0}^\infty L_1^k 
+$$
+   wobei $L_1^0 = \{\epsilon\}$ und $L_1^{k+1} = L_1^k \circ L_1$.
+
+2. **Bild unter $h$:**
+   $$
+ h(L_1^*) = h\left(\bigcup_{k=0}^\infty L_1^k\right) = \bigcup_{k=0}^\infty h(L_1^k) 
+$$
+
+3. **Eigenschaft des Homomorphismus für Konkatens:**
+   $$
+ h(L_1^k) = (h(L_1))^k 
+$$
+   Beweis durch Induktion über \(k\):
+   
+   - **Induktionsanfang:**
+     $$
+ k=0: \quad h(L_1^0) = h(\{\epsilon\}) = \{\epsilon\} = (h(L_1))^0 
+$$
+   
+   - **Induktionsannahme:**
+Angenommen, es gilt $h(L_1^k) = (h(L_1))^k$.
+   
+   - **Induktionsschritt:**
+     $$
+ h(L_1^{k+1}) = h(L_1^k \circ L_1) = h(L_1^k) \circ h(L_1) = (h(L_1))^k \circ h(L_1) = (h(L_1))^{k+1} 
+$$
+   
+Daher gilt $h(L_1^k) = (h(L_1))^k$ für alle $k$.
+
+4. **Zusammensetzung der Kleene-Sterns:**
+   $$
+ h(L_1^*) = \bigcup_{k=0}^\infty h(L_1^k) = \bigcup_{k=0}^\infty (h(L_1))^k = (h(L_1))^* 
+$$
+
+5. **Folgerung:**
+   $$
+ h(L_1^*) = (h(L_1))^* 
+$$
+
+Damit sind beide Aussagen bewiesen:
+
+$$
+ h(L_1 \circ L_2) = h(L_1) \circ h(L_2) 
+$$
+$$
+ h(L_1^*) = (h(L_1))^* 
+$$
+
+
 ## b) Beweisen Sie für alle regulären Sprachen $L$ und Homomorphismen $h$: Wenn $L$ regulär ist, dann ist auch $h(L)$ regulär.
+
+Um zu beweisen, dass für alle regulären Sprachen $L$ und Homomorphismen $h$ gilt: Wenn $L$ regulär ist, dann ist auch $h(L)$ regulär, gehen wir wie folgt vor:
+
+### Beweis:
+
+1. **Gegeben:**
+   $L$ ist eine reguläre Sprache über dem Alphabet $\Sigma$.
+
+2. **Eigenschaft regulärer Sprachen:**
+   Da $L$ regulär ist, existiert ein deterministischer endlicher Automat (DFA) $A = (Q, \Sigma, \delta, q_0, F)$, der $L$ erkennt.
+
+3. **Homomorphismus $h$:**
+   Der Homomorphismus $h: \Sigma^* \to \Delta^*$ ist eine Abbildung, die struktur­erhaltend ist:
+$$
+h(u \circ v) = h(u) \circ h(v) \quad \forall u, v \in \Sigma^*
+$$
+
+4. **Transformation des Automaten:**
+   Wir konstruieren einen neuen Automaten $A_h = (Q, \Delta, \delta_h, q_0, F)$, der $h(L)$ erkennt. Dabei wird die Übergangsfunktion $\delta$ so angepasst, dass sie auf die Bilder der Symbole unter $h$ angewendet wird.
+
+5. **Konstruktion von $A_h$:**
+   - Der neue Automat $A_h$ hat denselben Zustandsraum $Q$, Startzustand $q_0$, und Endzustände $F$ wie $A$.
+   - Die Übergangsfunktion $\delta_h$ wird so definiert, dass sie den Übergängen von $A$ folgt, aber für die Symbole in $\Delta$, die durch $h$ abgebildet werden.
+
+6. **Erkennung von $h(L)$:**
+   Da $A_h$ durch die Anwendung von $h$ auf die Übergangsfunktion von $A$ konstruiert wird, erkennt $A_h$ die Sprache $h(L)$.
+
+### Schlussfolgerung:
+Da $A_h$ ein DFA ist und DFA's genau die regulären Sprachen erkennen, ist $h(L)$ ebenfalls regulär.
+
+**Zusammenfassung:**
+Wenn $L$ regulär ist, gibt es einen DFA, der $L$ erkennt. Durch Transformation dieses DFA unter dem Homomorphismus $h$ erhält man einen neuen DFA, der $h(L)$ erkennt. Daher ist $h(L)$ regulär.
+
 
 ## c) Zeigen Sie, dass über dem Alphabet $\Sigma = \{ a, b, c, d \}$ die Sprache
 $$
 L = \{ a^n b^i c^n d^j \mid n, i, j \in \mathbb{N} \}
 $$
 nicht regulär ist. Geben Sie zu diesem Zweck einen Homomorphismus $h$ an, so dass $h(L) = \{ a^n b^n \mid n \in \mathbb{N} \}$ ist. Da $h(L)$ bekanntlich nicht regulär ist, kann dann auch $L$ nicht regulär sein.
+
+Um zu zeigen, dass die Sprache $L = \{ a^n b^i c^n d^j \mid n, i, j \in \mathbb{N} \}$ nicht regulär ist, verwenden wir einen Homomorphismus $h$, der $L$ auf eine bekannte nicht-reguläre Sprache abbildet.
+
+### Schritt-für-Schritt Beweis:
+
+1. **Definition der Sprache $L$:**
+   $$ L = \{ a^n b^i c^n d^j \mid n, i, j \in \mathbb{N} \} $$
+
+2. **Homomorphismus $h$:**
+   Wir definieren $h: \Sigma^* \to \{a, b\}^*$ mit dem Alphabet $\Sigma = \{a, b, c, d\}$ wie folgt:
+   $$ h(a) = a $$
+   $$ h(b) = \epsilon $$  (das leere Wort)
+   $$ h(c) = b $$
+   $$ h(d) = \epsilon $$
+
+3. **Bild der Sprache $L$ unter $h$:**
+   $$ h(L) = \{ h(a^n b^i c^n d^j) \mid n, i, j \in \mathbb{N} \} $$
+
+   Da $h(b) = \epsilon$ und $h(d) = \epsilon$, vereinfacht sich das zu:
+   $$ h(a^n b^i c^n d^j) = h(a^n) h(b^i) h(c^n) h(d^j) = a^n \epsilon^i b^n \epsilon^j = a^n b^n $$
+
+   Also:
+   $$ h(L) = \{ a^n b^n \mid n \in \mathbb{N} \} $$
+
+4. **Nicht-Regulärität von $h(L)$:**
+   Es ist bekannt, dass die Sprache $\{ a^n b^n \mid n \in \mathbb{N} \}$ nicht regulär ist.
+
+5. **Schlussfolgerung:**
+   Da $h(L)$ nicht regulär ist und $h$ ein Homomorphismus ist, muss auch die ursprüngliche Sprache $L$ nicht regulär sein.
+
+### Fazit:
+Durch die Abbildung der Sprache $L$ auf die bekannte nicht-reguläre Sprache $\{ a^n b^n \mid n \in \mathbb{N} \}$ mittels des Homomorphismus $h$, haben wir gezeigt, dass $L$ nicht regulär ist.
+
