@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 18:03
-date modified: Wednesday, 29. May 2024, 15:18
+date modified: Wednesday, 29. May 2024, 16:14
 ---
 
 https://www.tcs.ifi.lmu.de/lehre/ss-2024/fsk_de/fsk_blatt-06.pdf
@@ -134,7 +134,7 @@ $$
 |     4     | $A_{1}, A_{2}, A_{5}$ |                |           -           |       -        |       -        |
 |     5     |                       |       -        |           -           |       -        |       -        |
 **Fazit:**
-- Das Wort $w_1 = \$\#\$\#\#$ ist in $L(G)$
+- Das Wort $w_1 = \$\#\$\#\#$ ist nicht in $L(G)$
 
 >[!fail] Falsche Lösung zum Verständnis worauf zu achten ist
 > - Fehler tritt schon in Zeile 2 auf, wo nur $A_{1}$ als Option betrachtet wird, wobei $A_{4}$ auch legitim wäre
@@ -177,7 +177,83 @@ $$
 > 	- $(V_{1,3}) \ \text{und} \ (V_{4,2})$ bilden $A_{1}$ und $A_5$ was nicht abgebildet werden kann 
 > 	- $(V_{1,4}) \ \text{und} \ (V_{5,1})$ bilden $\emptyset$ und $A_{4},A_{5}$ was nicht abgebildet werden kann 
 
-### ii) $w_2 = \$\$\$\#\#$
+### ii) $w_2 = \$\$\$\#\#$ xxxyy
 
 
+**Gegebene Grammatik $G$:**
+$$
+\begin{aligned}
+P = \{ & A_1 \rightarrow A_3 A_4 \mid A_3 A_2, \\
+       & A_2 \rightarrow A_2 A_3 \mid A_4 A_4, \\
+       & A_3 \rightarrow \$, \\
+       & A_4 \rightarrow \# \mid A_3 A_4, \\
+       & A_5 \rightarrow A_4 A_4 \mid \# \}
+\end{aligned}
+$$
 
+**Eingabewort:** $w_2 = \$\$\$\#\#$
+
+**Schritt 1: Initialisierung der Tabelle**
+
+$$
+\begin{array}{|c|c|c|c|c|}
+\hline
+1 & 2 & 3 & 4 & 5 \\
+\hline
+\$ & \$ & \$ & \# & \# \\
+\hline
+A_3 & A_3 & A_3 & A_4, A_5 & A_4, A_5 \\
+\hline
+\end{array}
+$$
+
+
+**Schritt 2: Rekursion**
+
+| $V_{i,j}$ |          1          |          2          |          3          |       4        |       5        |
+| :-------: | :-----------------: | :-----------------: | :-----------------: | :------------: | :------------: |
+|     1     |        $A_3$        |        $A_3$        |        $A_3$        | $A_{4}, A_{5}$ | $A_{4}, A_{5}$ |
+|     2     |                     |                     |    $A_{1},A_{4}$    | $A_{2},A_{5}$  |       -        |
+|     3     |                     |    $A_{1},A_{4}$    | $A_{1},A_{2},A_{5}$ |       -        |       -        |
+|     4     |    $A_{1},A_{4}$    | $A_{1},A_{2},A_{5}$ |          -          |       -        |       -        |
+|     5     | $A_{1},A_{2},A_{5}$ |          -          |          -          |       -        |       -        |
+
+**Zeile 2:**
+- $V_{1,2}$ = $(V_{1,1} \times V_{2,1}) = A_{3}A_{3} \Longrightarrow \emptyset$ 
+- $V_{2,2}$ = $(V_{2,1} \times V_{3,1}) = A_{3}A_{3} \Longrightarrow \emptyset$ 
+- $V_{3,2}$ = $(V_{3,1} \times V_{4,1}) = A_{3}A_{4},A_{3}A_{5} \overset{A_{3}A_{4}}{\Longrightarrow} A_{1},A_{4}$ 
+- $V_{4,2}$ = $(V_{4,1} \times V_{5,1}) = A_{4}A_{4},A_{4}A_{5},A_{5}A_{4},A_{5}A_{5} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$ 
+
+**Zeile 3:**
+- $V_{1,3} = \emptyset$ 
+	- $V_{1,1}\times V_{2,2} = A_{3}\times \emptyset \Longrightarrow \emptyset$  
+	- $V_{1,2}\times V_{3,2} = \emptyset \times A_{3} \Longrightarrow \emptyset$  
+
+- $V_{2,3} = A_{1},A_{4}$ 
+	- $V_{2,1}\times V_{3,2} = A_{3}\times A_{1},A_{4}  = A_{3}A_{1},A_{3}A_{4} \overset{A_{3}A_{4}}{\Longrightarrow} A_{1},A_{4}$ 
+	- $V_{4,1}\times V_{2,2} = A_{4}A_{5}\times \emptyset   \Longrightarrow \emptyset$ 
+
+- $V_{3,3} = A_{1},A_{2},A_{5}$ 
+	- $V_{3,1}\times V_{4,2} = A_{3}\times A_{2},A_{5}  = A_{3}A_{2},A_{3}A_{5} \overset{A_{3}A_{2}}{\Longrightarrow} A_{1}$ 
+	- $V_{5,1}\times V_{3,2} = A_{4}A_{5}\times A_{1},A_{4}  = A_{4}A_{1},A_{4}A_{4},A_{5}A_{1},A_{5}A_{4} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$ 
+
+**Zeile 4:**
+- $V_{1,4} = A_{1},A_{4}$ 
+	- $V_{1,1}\times V_{2,3} = A_{3}\times A_{1},A_{4} = A_{3}A_{1},A_{3}A_{4} \overset{A_{3}A_{4}}{\Longrightarrow} A_{1},A_{4}$  
+	- $V_{1,2}\times V_{3,2} = \emptyset \times A_{1},A_{4} \Longrightarrow \emptyset$  
+	- $V_{1,3}\times V_{4,2} = \emptyset \times A_{4},A_{5} \Longrightarrow \emptyset$  
+
+- $V_{2,4} = A_{1},A_{2},A_{5}$ 
+	- $V_{2,1}\times V_{3,3} = A_{3}\times A_{1},A_{2},A_{5} = A_{3}A_{1},A_{3}A_{2},A_{3}A_{5} \overset{A_{3}A_{2}}{\Longrightarrow} A_{1}$  
+	- $V_{2,2}\times V_{4,2} = \emptyset \times A_{2},A_{5} \Longrightarrow \emptyset$  
+	- $V_{2,3}\times V_{5,1} = A_{1},A_{4}\times A_{4},A_{5} = A_{1}A_{4},A_{1}A_{5},A_{4}A_{4},A_{4}A_{5} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$  
+
+
+**Zeile 5:**
+- $V_{1,5} = A_{1},A_{2},A_{5}$ 
+	- $V_{1,1}\times V_{2,4} = A_{3}\times A_{1},A_{2},A_{5} = A_{3}A_{1},A_{3}A_{2},A_{3}A_{5} \overset{A_{3}A_{2}}{\Longrightarrow} A_{1}$  
+	- $V_{1,2}\times V_{3,3} = \emptyset \times A_{1},A_{2},A_{5} \Longrightarrow \emptyset$  
+	- $V_{1,3}\times V_{4,2} = \emptyset \times A_{2},A_{5} \Longrightarrow \emptyset$  
+	- $V_{1,4}\times V_{5,1} = A_{1},A_{4}\times A_{4},A_{5} = A_{1}A_{4},A_{1}A_{5},A_{4}A_{4},A_{4},A_{5} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$  
+**Fazit:**
+- Das Wort $w_1 = \$\#\$\#\#$ ist in $L(G)$
