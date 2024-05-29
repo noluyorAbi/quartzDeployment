@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 18:03
-date modified: Wednesday, 29. May 2024, 16:14
+date modified: Wednesday, 29. May 2024, 16:44
 ---
 
 https://www.tcs.ifi.lmu.de/lehre/ss-2024/fsk_de/fsk_blatt-06.pdf
@@ -134,7 +134,7 @@ $$
 |     4     | $A_{1}, A_{2}, A_{5}$ |                |           -           |       -        |       -        |
 |     5     |                       |       -        |           -           |       -        |       -        |
 **Fazit:**
-- Das Wort $w_1 = \$\#\$\#\#$ ist nicht in $L(G)$
+- Das Wort $w_1 = \$\#\$\#\#$ ist nicht in $L(G)$,  da Startsymbol $A_{1} \notin V_{1,5}$
 
 >[!fail] Falsche Lösung zum Verständnis worauf zu achten ist
 > - Fehler tritt schon in Zeile 2 auf, wo nur $A_{1}$ als Option betrachtet wird, wobei $A_{4}$ auch legitim wäre
@@ -177,7 +177,7 @@ $$
 > 	- $(V_{1,3}) \ \text{und} \ (V_{4,2})$ bilden $A_{1}$ und $A_5$ was nicht abgebildet werden kann 
 > 	- $(V_{1,4}) \ \text{und} \ (V_{5,1})$ bilden $\emptyset$ und $A_{4},A_{5}$ was nicht abgebildet werden kann 
 
-### ii) $w_2 = \$\$\$\#\#$ xxxyy
+### ii) $w_2 = \$\$\$\#\#$
 
 
 **Gegebene Grammatik $G$:**
@@ -255,5 +255,27 @@ $$
 	- $V_{1,2}\times V_{3,3} = \emptyset \times A_{1},A_{2},A_{5} \Longrightarrow \emptyset$  
 	- $V_{1,3}\times V_{4,2} = \emptyset \times A_{2},A_{5} \Longrightarrow \emptyset$  
 	- $V_{1,4}\times V_{5,1} = A_{1},A_{4}\times A_{4},A_{5} = A_{1}A_{4},A_{1}A_{5},A_{4}A_{4},A_{4},A_{5} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$  
+
 **Fazit:**
-- Das Wort $w_1 = \$\#\$\#\#$ ist in $L(G)$
+- Das Wort $w_1 = \$\#\$\#\#$ ist in $L(G)$, da Startsymbol $A_{1} \in V_{1,5}$
+
+
+
+## b) Geben Sie alle weiteren Wörter $w$ an, für die sich aus den Tabellen ergibt, dass $w \in L(G)$ ist.  
+
+>[!bug] Unsicher
+### Identifikation weiterer Wörter $w$ in $L(G)$
+Die Tabellen zeigen, dass die Grammatik die folgenden Kombinationen von \$ und \# zulässt:
+
+2. **Länge 2:**
+   - \$ \#
+
+3. **Länge 3:**
+   - \$ \# \#
+
+4. **Länge 4 und mehr:**
+   - \$ \# \$ \#
+   - \$ \$ \# \#
+   - \# \$ \$ \#
+### Schlussfolgerung
+Die Grammatik $G$ erlaubt Kombinationen von \$ und \#, die den Ableitungsregeln entsprechen. Insbesondere alle Wörter, die durch Kombinationen und Anwendungen der Produktionen von $A_3$, $A_4$, $A_5$, $A_1$ und $A_2$ entstehen, sind Teil der Sprache $L(G)$.

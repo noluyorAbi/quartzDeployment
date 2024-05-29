@@ -8,10 +8,10 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: "[[FSK-ÜB-6]]"
 Benötigte Zeit: 
 date created: Tuesday, 28. May 2024, 22:03
-date modified: Tuesday, 28. May 2024, 22:26
+date modified: Wednesday, 29. May 2024, 16:46
 ---
 
-# [Anwenden und Üben des CYK](https://www.cip.ifi.lmu.de/~lindebar/)
+# [Gute Seite zum verstehen des CYK](https://www.cip.ifi.lmu.de/~lindebar/)
 # CYK-Algorithmus
 
 >[!info] Kurzerklärung
@@ -40,69 +40,116 @@ Der CYK-Algorithmus wird in drei Hauptschritten durchgeführt:
 3. **Akzeptanz**:
    - Überprüfe, ob das Startsymbol $S$ in der oberen rechten Ecke der Tabelle enthalten ist. Wenn ja, gehört die Eingabezeichenkette zur Sprache der Grammatik.
 
-## Beispiel
+---
+# CYK-Algorithmus anwenden
 
-Angenommen, wir haben die Grammatik in CNF:
+>[!tip] Ablauf zur Anwendung des CYK-Algorithmus
+>
+> 1. **Konvertieren Sie die Grammatik in Chomsky-Normalform (CNF)**: Stellen Sie sicher, dass die gegebene Grammatik in CNF vorliegt.
+> 
+> 2. **Initialisierung der Tabelle**: Erstellen Sie eine Tabelle $T$ mit der Größe $n \times n$, wobei $n$ die Länge der Eingabezeichenkette ist.
+> 
+> 3. **Füllen der Diagonale**: Füllen Sie die Diagonale der Tabelle mit den Nichtterminalen, die die entsprechenden Terminale ableiten.
+> 
+> 4. **Füllen der restlichen Tabelle**: Verwenden Sie die Produktionsregeln, um die restlichen Zellen der Tabelle zu füllen. Kombinieren Sie die Einträge gemäß der Produktionsregeln.
+> 
+> 5. **Überprüfung**: Überprüfen Sie, ob das Startsymbol in der oberen rechten Ecke der Tabelle enthalten ist. Wenn ja, gehört das Wort zur Sprache.
 
-$S \rightarrow AB \mid BC$  
-$A \rightarrow BA \mid a$  
-$B \rightarrow CC \mid b$  
-$C \rightarrow AB \mid a$  
+## Beispiel zur Anwendung des CYK-Algorithmus auf $w_1 = \$\#\$\#\#$ [[FSK-ÜB-6#FSK6-2 CYK-Algorithmus (2 Punkte)#ii) $w_2 = $ $ $ $]]
 
-Und die Eingabezeichenkette ist $baaba$.
+>[!note] Aufgabenstellung
+>Sei $G$ die Grammatik $({A_1, A_2, A_3, A_4, A_5}, \{\$, \#\}, P, A_1)$ mit
+>
+>$$
+>\begin{aligned}
+>P = \{&A_1 \rightarrow A_3 A_4 \mid A_3 A_2, \\
+>&A_2 \rightarrow A_2 A_3 \mid A_4 A_4, \\
+>&A_3 \rightarrow \$, \\
+>&A_4 \rightarrow \# \mid A_3 A_4, \\
+>&A_5 \rightarrow A_4 A_4 \mid \# \}
+>\end{aligned}
+>$$
 
-### Schritt-für-Schritt-Darstellung:
+### ii) $w_2 = \$\$\$\#\#$
 
-1. **Initialisierung**:
-   - Erstelle die Tabelle $T$ und fülle die Diagonale basierend auf den Terminalen:
+**Gegebene Grammatik $G$:**
+$$
+\begin{aligned}
+P = \{ & A_1 \rightarrow A_3 A_4 \mid A_3 A_2, \\
+       & A_2 \rightarrow A_2 A_3 \mid A_4 A_4, \\
+       & A_3 \rightarrow \$, \\
+       & A_4 \rightarrow \# \mid A_3 A_4, \\
+       & A_5 \rightarrow A_4 A_4 \mid \# \}
+\end{aligned}
+$$
+
+**Eingabewort:** $w_2 = \$\$\$\#\#$
+
+**Schritt 1: Initialisierung der Tabelle**
 
 $$
 \begin{array}{|c|c|c|c|c|}
 \hline
-\text{} & \text{} & \text{} & \text{} & \text{T} \\
+1 & 2 & 3 & 4 & 5 \\
 \hline
-\text{} & \text{} & \text{} & \text{} & \text{T} \\
+\$ & \$ & \$ & \# & \# \\
 \hline
-\text{} & \text{} & \text{} & \text{T} & \text{T} \\
-\hline
-\text{} & \text{} & \text{T} & \text{T} & \text{T} \\
-\hline
-\text{} & \text{T} & \text{T} & \text{T} & \text{T} \\
-\hline
-\text{T} & \text{T} & \text{T} & \text{T} & \text{T} \\
+A_3 & A_3 & A_3 & A_4, A_5 & A_4, A_5 \\
 \hline
 \end{array}
 $$
 
-2. **Rekursion**:
-   - Fülle die restlichen Zellen, indem du überprüfst, welche Kombinationen von Nichtterminalen in den Produktionsregeln vorkommen.
+**Schritt 2: Rekursion**
 
-3. **Akzeptanz**:
-   - Überprüfe, ob das Startsymbol $S$ in der oberen rechten Ecke der Tabelle enthalten ist.
+| $V_{i,j}$ |          1          |          2          |          3          |       4        |       5        |
+| :-------: | :-----------------: | :-----------------: | :-----------------: | :------------: | :------------: |
+|     1     |        $A_3$        |        $A_3$        |        $A_3$        | $A_{4}, A_{5}$ | $A_{4}, A_{5}$ |
+|     2     |                     |                     |    $A_{1},A_{4}$    | $A_{2},A_{5}$  |       -        |
+|     3     |                     |    $A_{1},A_{4}$    | $A_{1},A_{2},A_{5}$ |       -        |       -        |
+|     4     |    $A_{1},A_{4}$    | $A_{1},A_{2},A_{5}$ |          -          |       -        |       -        |
+|     5     | $A_{1},A_{2},A_{5}$ |          -          |          -          |       -        |       -        |
 
-### Beispiel-Tabelle (vereinfacht):
+**Zeile 2:**
+- $V_{1,2}$ = $(V_{1,1} \times V_{2,1}) = A_{3}A_{3} \Longrightarrow \emptyset$ 
+- $V_{2,2}$ = $(V_{2,1} \times V_{3,1}) = A_{3}A_{3} \Longrightarrow \emptyset$ 
+- $V_{3,2}$ = $(V_{3,1} \times V_{4,1}) = A_{3}A_{4},A_{3}A_{5} \overset{A_{3}A_{4}}{\Longrightarrow} A_{1},A_{4}$ 
+- $V_{4,2}$ = $(V_{4,1} \times V_{5,1}) = A_{4}A_{4},A_{4}A_{5},A_{5}A_{4},A_{5}A_{5} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$ 
 
-$$
-\begin{array}{|c|c|c|c|c|}
-\hline
-S & \text{} & \text{} & \text{} & \text{} \\
-\hline
-\text{B} & \text{S} & \text{} & \text{} & \text{} \\
-\hline
-\text{A, C} & \text{B} & \text{S} & \text{} & \text{} \\
-\hline
-\text{B} & \text{A, C} & \text{B} & \text{S} & \text{} \\
-\hline
-a & b & a & a & b \\
-\hline
-\end{array}
-$$
+**Zeile 3:**
+- $V_{1,3} = \emptyset$ 
+	- $V_{1,1}\times V_{2,2} = A_{3}\times \emptyset \Longrightarrow \emptyset$  
+	- $V_{1,2}\times V_{3,2} = \emptyset \times A_{3} \Longrightarrow \emptyset$  
 
-### Fazit
+- $V_{2,3} = A_{1},A_{4}$ 
+	- $V_{2,1}\times V_{3,2} = A_{3}\times A_{1},A_{4}  = A_{3}A_{1},A_{3}A_{4} \overset{A_{3}A_{4}}{\Longrightarrow} A_{1},A_{4}$ 
+	- $V_{4,1}\times V_{2,2} = A_{4}A_{5}\times \emptyset   \Longrightarrow \emptyset$ 
 
-Der CYK-Algorithmus ist ein effizienter Parsing-Algorithmus für kontextfreie Grammatiken in Chomsky-Normalform. Durch die dynamische Programmierung kann er in $O(n^3 \cdot |G|)$-Zeit überprüft werden, ob eine Zeichenkette zu einer gegebenen kontextfreien Sprache gehört, wobei $n$ die Länge der Zeichenkette und $|G|$ die Anzahl der Produktionsregeln der Grammatik ist.
+- $V_{3,3} = A_{1},A_{2},A_{5}$ 
+	- $V_{3,1}\times V_{4,2} = A_{3}\times A_{2},A_{5}  = A_{3}A_{2},A_{3}A_{5} \overset{A_{3}A_{2}}{\Longrightarrow} A_{1}$ 
+	- $V_{5,1}\times V_{3,2} = A_{4}A_{5}\times A_{1},A_{4}  = A_{4}A_{1},A_{4}A_{4},A_{5}A_{1},A_{5}A_{4} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$ 
 
+**Zeile 4:**
+- $V_{1,4} = A_{1},A_{4}$ 
+	- $V_{1,1}\times V_{2,3} = A_{3}\times A_{1},A_{4} = A_{3}A_{1},A_{3}A_{4} \overset{A_{3}A_{4}}{\Longrightarrow} A_{1},A_{4}$  
+	- $V_{1,2}\times V_{3,2} = \emptyset \times A_{1},A_{4} \Longrightarrow \emptyset$  
+	- $V_{1,3}\times V_{4,2} = \emptyset \times A_{4},A_{5} \Longrightarrow \emptyset$  
 
+- $V_{2,4} = A_{1},A_{2},A_{5}$ 
+	- $V_{2,1}\times V_{3,3} = A_{3}\times A_{1},A_{2},A_{5} = A_{3}A_{1},A_{3}A_{2},A_{3}A_{5} \overset{A_{3}A_{2}}{\Longrightarrow} A_{1}$  
+	- $V_{2,2}\times V_{4,2} = \emptyset \times A_{2},A_{5} \Longrightarrow \emptyset$  
+	- $V_{2,3}\times V_{5,1} = A_{1},A_{4}\times A_{4},A_{5} = A_{1}A_{4},A_{1}A_{5},A_{4}A_{4},A_{4}A_{5} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$  
+
+**Zeile 5:**
+- $V_{1,5} = A_{1},A_{2},A_{5}$ 
+	- $V_{1,1}\times V_{2,4} = A_{3}\times A_{1},A_{2},A_{5} = A_{3}A_{1},A_{3}A_{2},A_{3}A_{5} \overset{A_{3}A_{2}}{\Longrightarrow} A_{1}$  
+	- $V_{1,2}\times V_{3,3} = \emptyset \times A_{1},A_{2},A_{5} \Longrightarrow \emptyset$  
+	- $V_{1,3}\times V_{4,2} = \emptyset \times A_{2},A_{5} \Longrightarrow \emptyset$  
+	- $V_{1,4}\times V_{5,1} = A_{1},A_{4}\times A_{4},A_{5} = A_{1}A_{4},A_{1}A_{5},A_{4}A_{4},A_{4},A_{5} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$  
+
+**Fazit:**
+- Das Wort $w_1 = \$\#\$\#\#$ ist in $L(G)$, da Startsymbol $A_{1} \in V_{1,5}$
+
+--- 
 ## Algorithmus zur Worterkennung in einer kontextfreien Grammatik
 
 ### Eingabe
@@ -127,84 +174,7 @@ Der CYK-Algorithmus ist ein effizienter Parsing-Algorithmus für kontextfreie Gr
 ### Ende
 
 
+# Fazit
 
----
-
-# CYK-Algorithmus anwenden
-
->[!tip] Ablauf zur Anwendung des CYK-Algorithmus
->
-> 1. **Konvertieren Sie die Grammatik in Chomsky-Normalform (CNF)**: Stellen Sie sicher, dass die gegebene Grammatik in CNF vorliegt.
-> 
-> 2. **Initialisierung der Tabelle**: Erstellen Sie eine Tabelle $T$ mit der Größe $n \times n$, wobei $n$ die Länge der Eingabezeichenkette ist.
-> 
-> 3. **Füllen der Diagonale**: Füllen Sie die Diagonale der Tabelle mit den Nichtterminalen, die die entsprechenden Terminale ableiten.
-> 
-> 4. **Füllen der restlichen Tabelle**: Verwenden Sie die Produktionsregeln, um die restlichen Zellen der Tabelle zu füllen. Kombinieren Sie die Einträge gemäß der Produktionsregeln.
-> 
-> 5. **Überprüfung**: Überprüfen Sie, ob das Startsymbol in der oberen rechten Ecke der Tabelle enthalten ist. Wenn ja, gehört das Wort zur Sprache.
-
-
-## Beispiel zur Anwendung des CYK-Algorithmus auf $w_1 = \$\#\$\#\#$ [[FSK-ÜB-6#FSK6-2 CYK-Algorithmus (2 Punkte)]]
-
->[!note] Aufgabenstellung
->Sei $G$ die Grammatik $({A_1, A_2, A_3, A_4, A_5}, \{\$, \#\}, P, A_1)$ mit
->
->$$
->\begin{aligned}
->P = \{&A_1 \rightarrow A_3 A_4 \mid A_3 A_2, \\
->&A_2 \rightarrow A_2 A_3 \mid A_4 A_4, \\
->&A_3 \rightarrow \$, \\
->&A_4 \rightarrow \# \mid A_3 A_4, \\
->&A_5 \rightarrow A_4 A_4 \mid \# \}
->\end{aligned}
->$$
-
-1. **Gegebene Grammatik in CNF überprüfen**:
-   Die Grammatik $G$ ist bereits in Chomsky-Normalform.
-
-2. **Initialisierung der Tabelle**:
-   Erstellen Sie eine Tabelle $T$ der Größe $5 \times 5$, da das Wort $w_1$ fünf Zeichen enthält.
-
-3. **Füllen der Diagonale**:
-
-$$
-\begin{array}{|c|c|c|c|c|}
-\hline
-\$ & \# & \$ & \# & \# \\
-\hline
-A_3 & A_4, A_5 & A_3 & A_4, A_5 & A_4, A_5 \\
-\hline
-\end{array}
-$$
-
-4. **Füllen der restlichen Tabelle**:
-
-$$
-\begin{array}{|c|c|c|c|c|}
-\hline
- &  &  &  & A_1 \\
-\hline
- &  &  & A_1 & \\
-\hline
- &  & A_1 &  & \\
-\hline
- & A_1 &  &  & \\
-\hline
-A_3 & A_4, A_5 & A_3 & A_4, A_5 & A_4, A_5 \\
-\hline
-\end{array}
-$$
-
-Erklärung der Befüllung:
-- Für Zelle (1,2) prüfen wir Kombinationen der Diagonalen $A_3$ und $A_4, A_5$, was zu $A_3 A_4$ und $A_3 A_5$ führt, was mit den Regeln von $P$ übereinstimmt und $A_1$ ergibt.
-- Wiederholen Sie dies für alle Zellen, indem Sie Kombinationen und Regeln von $P$ anwenden.
-
-5. **Überprüfung**:
-   - Überprüfen Sie die obere rechte Ecke der Tabelle.
-   - Wenn das Startsymbol $A_1$ enthalten ist, gehört das Wort zur Sprache $L(G)$.
-
-In diesem Fall:
-- Das Startsymbol $A_1$ befindet sich in der oberen rechten Ecke der Tabelle.
-- Daraus folgt, dass das Wort $w_1 = \$\#\$\#\#$ in der Sprache $L(G)$ enthalten ist.
+Der CYK-Algorithmus ist ein effizienter Parsing-Algorithmus für kontextfreie Grammatiken in Chomsky-Normalform. Durch die dynamische Programmierung kann er in $O(n^3 \cdot |G|)$-Zeit überprüft werden, ob eine Zeichenkette zu einer gegebenen kontextfreien Sprache gehört, wobei $n$ die Länge der Zeichenkette und $|G|$ die Anzahl der Produktionsregeln der Grammatik ist.
 
