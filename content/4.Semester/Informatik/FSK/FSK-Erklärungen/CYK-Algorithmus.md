@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: "[[FSK-ÜB-6]]"
 Benötigte Zeit: 
 date created: Tuesday, 28. May 2024, 22:03
-date modified: Wednesday, 29. May 2024, 16:46
+date modified: Wednesday, 29. May 2024, 18:25
 ---
 
 # [Gute Seite zum verstehen des CYK](https://www.cip.ifi.lmu.de/~lindebar/)
