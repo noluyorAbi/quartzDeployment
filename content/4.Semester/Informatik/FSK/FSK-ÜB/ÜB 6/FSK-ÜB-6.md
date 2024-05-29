@@ -8,9 +8,10 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 18:03
-date modified: Tuesday, 28. May 2024, 22:30
+date modified: Wednesday, 29. May 2024, 15:18
 ---
 
+https://www.tcs.ifi.lmu.de/lehre/ss-2024/fsk_de/fsk_blatt-06.pdf
 
 # FSK6-1 Kontextfreie Grammatiken und Kellerautomaten (2 Punkte)
 
@@ -109,6 +110,7 @@ $$
 **Eingabewort:** $w_1 = \$\#\$\#\#$
 
 **Schritt 1: Initialisierung der Tabelle**
+
 $$
 \begin{array}{|c|c|c|c|c|}
 \hline
@@ -121,33 +123,61 @@ A_3 & A_4, A_5 & A_3 & A_4, A_5 & A_4, A_5 \\
 \end{array}
 $$
 
+
 **Schritt 2: Rekursion**
 
-$$
-\begin{array}{|c|c|c|c|c|}
-\hline
-A_1 & A_1 & A_1, A_2, A_5 & A_1 & A_1 \\
-\hline
- & A_1, A_2, A_5 & A_1 & A_1 & A_1 \\
-\hline
- &  & A_1 & A_1 & A_1 \\
-\hline
- &  &  & A_1 & A_1 \\
-\hline
-A_3 & A_4, A_5 & A_3 & A_4, A_5 & A_4, A_5 \\
-\hline
-\end{array}
-$$
-
-**Erklärung der Tabelle:**
-- **Diagonale:** Terminale werden den entsprechenden Nichtterminalen zugeordnet.
-- **Zellen (i, j):** Kombinationen von Nichtterminalen werden überprüft und gemäß Produktionsregeln ergänzt.
-
-**Schritt 3: Überprüfung**
-- Das Startsymbol $A_1$ ist in der oberen rechten Ecke der Tabelle enthalten.
-
+| $V_{i,j}$ |           1           |       2        |           3           |       4        |       5        |
+| :-------: | :-------------------: | :------------: | :-------------------: | :------------: | :------------: |
+|     1     |         $A_3$         | $A_{4}, A_{5}$ |         $A_3$         | $A_{4}, A_{5}$ | $A_{4}, A_{5}$ |
+|     2     |      $A_1, A_4$       |                |    $A_{1}, A_{4}$     | $A_{2}, A_{5}$ |       -        |
+|     3     |                       | $A_{2}, A_{5}$ | $A_{1}, A_{2}, A_{5}$ |       -        |       -        |
+|     4     | $A_{1}, A_{2}, A_{5}$ |                |           -           |       -        |       -        |
+|     5     |                       |       -        |           -           |       -        |       -        |
 **Fazit:**
-- Das Wort $w_1 = \$\#\$\#\#$ ist in $L(G)$.
+- Das Wort $w_1 = \$\#\$\#\#$ ist in $L(G)$
+
+>[!fail] Falsche Lösung zum Verständnis worauf zu achten ist
+> - Fehler tritt schon in Zeile 2 auf, wo nur $A_{1}$ als Option betrachtet wird, wobei $A_{4}$ auch legitim wäre
+> - $V_{2,2}$ ist nicht korrekt da man immer das Kreuzprodukt aus den ausgewählten Zeilen bilden muss z.B ($V_{2,1} \times V_{3,1} = A_{4}A_{3},A_{5}A_{3}$) und $A_{4}A_{3}$ oder $A_{5}A_{3}$ beide nicht dargestellt werden können
+>
+> | $V_{i,j}$ |      1      |       2       |   3   |       4       |       5       |
+> | :-------: | :---------: | :-----------: | :---: | :-----------: | :-----------: |
+> |     1     |    $A_3$    | $A_{4},A_{5}$ | $A_3$ | $A_{4},A_{5}$ | $A_{4},A_{5}$ |
+> |     2     |    $A_1$    |     $A_4$     | $A_4$ |     $A_5$     |       -       |
+> |     3     |    $A_1$    |     $A_5$     | $A_5$ |       -       |       -       |
+> |     4     | $\emptyset$ |  $\emptyset$  |   -   |       -       |       -       |
+> |     5     | $\emptyset$ |       -       |   -   |       -       |       -       |
+>
+> **Zeile 2:**
+> - $V_{1,2} = A_{1}$, da $A_1$ $A_3$ und $A_4$ bilden kann 
+> - $V_{2,2} = A_{4}$, da $A_4$ $A_4$ und $A_3$ bilden kann 
+> - $V_{3,2} = A_{4}$, da $A_4$ $A_4$ und $A_3$ bilden kann 
+> - $V_{4,2} = A_{5}$, da $A_{5}$ $A_{4}$ und $A_{4}$ bilden kann 
+>
+> **Zeile 3:**
+> - $V_{1,3} = A_{1}$, da $A_1$ $A_3$ ($V_{1,1}$) und $A_4$ ($V_{2,2}$) bilden kann 
+> - $V_{2,3} = A_{5}$, da $A_5$ $A_4$ ($V_{1,2}$) und $A_4$ ($V_{2,3}$) bilden kann 
+> - $V_{3,3} = A_{5}$, da $A_5$ $A_4$ ($V_{3,2}$) und $A_4$ ($V_{5,1}$) bilden kann 
+>
+> **Zeile 4:**
+> - $V_{1,4} = \emptyset$
+> 	- $(V_{1,1}) \ \text{und} \ (V_{2,3})$ bilden $A_{3}A_{5}$ was nicht abgebildet werden kann 
+> 	- $(V_{1,2}) \ \text{und} \ (V_{3,2})$ bilden $A_{1}A_{4}$ was nicht abgebildet werden kann 
+> 	- $(V_{1,3}) \ \text{und} \ (V_{4,1})$ bilden $A_{1} \ A_{4},A_{5}$ was nicht abgebildet werden kann 
+> 
+> - $V_{2,4} = \emptyset$
+> 	- $(V_{2,1}) \ \text{und} \ (V_{3,3})$ bilden $A_{4},A_{5} \ A_{5}$ was nicht abgebildet werden kann 
+> 	- $(V_{2,2}) \ \text{und} \ (V_{4,2})$ bilden $A_{4}A_{5}$ was nicht abgebildet werden kann 
+> 	- $(V_{2,3}) \ \text{und} \ (V_{5,1})$ bilden $A_{4},A_{5} \ A_{5}$ was nicht abgebildet werden kann 
+>
+> **Zeile 5:**
+> - $V_{1,5} = \emptyset$
+> 	- $(V_{1,1}) \ \text{und} \ (V_{2,4})$ bilden $A_{3}$ und $\emptyset$ was nicht abgebildet werden kann 
+> 	- $(V_{1,2}) \ \text{und} \ (V_{3,3})$ bilden $A_{1}$ und $A_5$ was nicht abgebildet werden kann 
+> 	- $(V_{1,3}) \ \text{und} \ (V_{4,2})$ bilden $A_{1}$ und $A_5$ was nicht abgebildet werden kann 
+> 	- $(V_{1,4}) \ \text{und} \ (V_{5,1})$ bilden $\emptyset$ und $A_{4},A_{5}$ was nicht abgebildet werden kann 
 
 ### ii) $w_2 = \$\$\$\#\#$
+
+
 
