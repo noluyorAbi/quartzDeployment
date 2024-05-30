@@ -14,7 +14,7 @@ date modified: Sunday, 26. May 2024, 18:07
 - [[RNVS-Blatt-03]]
 - [[RNVS-Blatt-04]]
 - [[RNVS-Blatt-05]]
-
+- [[RNVS-Blatt-06]]
 
 
 # Übungen (Amalienstr.)

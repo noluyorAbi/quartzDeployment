@@ -8,7 +8,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: 
 Benötigte Zeit:
 date created: Thursday, 30. May 2024, 16:06
-date modified: Thursday, 30. May 2024, 23:51
+date modified: Friday, 31. May 2024, 00:12
 ---
 
 # 1. Fenstergröße beim Sliding-Window-Verfahren (H)
@@ -737,18 +737,26 @@ $\Longrightarrow$ verbindungslos ist $2.5$x schneller als verbindungsorientiert
 3. **ACK**: 150 ms
 
 Gesamtzeit: 
-$$ 150 \, \text{ms} + 150 \, \text{ms} + 150 \, \text{ms} = 450 \, \text{ms} $$
+$$
+ 150 \, \text{ms} + 150 \, \text{ms} + 150 \, \text{ms} = 450 \, \text{ms} 
+$$
 
 #### Versand der Anfrage (Request) und Empfang der Antwort (Response)
 4. **Request**: 150 ms
 5. **Response**: 150 ms
 
 Gesamtzeit: 
-$$ 150 \, \text{ms} + 150 \, \text{ms} = 300 \, \text{ms} $$
+$$
+ 150 \, \text{ms} + 150 \, \text{ms} = 300 \, \text{ms} 
+$$
 
 #### Gesamte Zeit
 Verbindungsaufbau + Versand der Anfrage + Empfang der Antwort:
-$$ 450 \, \text{ms} + 300 \, \text{ms} = 750 \, \text{ms} $$
+$$
+ 450 \, \text{ms} + 300 \, \text{ms} = 750 \, \text{ms} 
+$$
 
 Die gesamte Zeit beträgt also:
-$$ 750 \, \text{ms} $$
+$$
+ 750 \, \text{ms} 
+$$
