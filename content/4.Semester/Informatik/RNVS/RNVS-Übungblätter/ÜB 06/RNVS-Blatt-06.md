@@ -8,7 +8,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: 
 Benötigte Zeit:
 date created: Thursday, 30. May 2024, 16:06
-date modified: Thursday, 30. May 2024, 19:55
+date modified: Thursday, 30. May 2024, 23:51
 ---
 
 # 1. Fenstergröße beim Sliding-Window-Verfahren (H)
@@ -546,3 +546,188 @@ Ja, SSHv2 nutzt TCP.
 - **Standardport**: SSH verwendet standardmäßig TCP-Port 22.
 
 Kurz gesagt: SSHv2 verwendet TCP wegen der Zuverlässigkeit und der verbindungsorientierten Kommunikation, was im Wireshark-Mitschnitt ersichtlich ist.
+
+
+---
+
+
+# 4. TCP Sequenznummern (H)
+
+>[!note] Aufgabenstellung
+> Zwei Hosts A und B kommunizieren über eine TCP Verbindung. Host B hat bereits 126 Bytes von Host A vollständig empfangen und Host A sendet zwei weitere Segmente der Größen 80 sowie 40 Bytes. Die Sequenznummer des ersten Segments ist 127, der Quellport ist 302 und der Zielport ist 80. Host B sendet ein Acknowledgement immer, sobald es ein Segment von Host A empfangen hat.
+
+## (a) Wie lauten Sequenznummer, Quell- sowie Zielport des zweiten Segments von Host A an B?
+
+- Sequenznummer: $127+80 = 207$
+- Quellport : 302
+- Zielport: 80
+
+## (b) Falls das erste Segment vor dem zweiten Segment bei B eintritt, wie lauten im ACK (Quittung) die ACK-Nr., Quell- und Zielport?
+
+$$
+\text(ACK-NUMMER) = \text{(Sequenznummer)}+\text{(Bytes die versendet werden)}
+$$
+- Sequenznummer: $127$
+- ACK-Nummer: $127+80 = 207$
+- Quellport : 302
+- Zielport: 80
+
+## (c) Falls das erste Segment nach dem zweiten Segment bei B eintritt, wie lauten im ACK (Quittung) die ACK-Nr., Quell- und Zielport?
+### Für das erste Segment
+- Sequenznummer: $127$
+- ACK-Nummer: $127+80 =207$
+- Quellport : 302
+- Zielport: 80
+
+### Für das zweite Segment
+- Sequenznummer: $207$
+- ACK-Nummer: $207+40 =247$
+- Quellport : 302
+- Zielport: 80
+
+## (d) Angenommen, beide Segmente kommen in der richtigen Reihenfolge von A zu B. Das erste ACK von B geht verloren und das zweite ACK erreicht A nach dem ersten Timeout-Intervall. Zeichnen Sie ein Sequenzdiagramm und beschriften Sie jedes versendete Segment vollständig mit Sequenznummer, Anzahl der Nutzdaten-Bytes. Beschriften Sie des Weiteren alle Quittungen (ACKs) mit der korrekten ACK Nummer.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant S as A
+    participant E as B
+
+    rect rgb(191, 223, 255)
+        S->>E: erste Segment [seq=127, bytes=80]
+    end
+    rect rgb(200, 150, 255)
+        E--xS: ACK erstes Segment [ack-nr=207]
+        Note right of E: ACK verloren
+    end
+    rect rgb(191, 223, 255)
+        S->>E: zweites Segment [seq=207, bytes=40]
+    end
+    rect rgb(191, 223, 255)
+        S->>E: erste Segment [seq=127, bytes=80]
+        Note right of E: Timeout fertig
+    end
+    rect rgb(200, 150, 255)
+        E->>S: ACK erstes Segment [ack-nr=207]
+        E->>S: ACK zweites Segment [ack-nr=247]
+        Note right of E: Zweite ACK nach<br/> dem ersten Timeout
+    end
+
+```
+
+
+---
+
+
+# 5. TCP-Verbindung (H)
+
+>[!note] Aufgabenstellung
+> Ein Protokoll der Anwendungsschicht (z.B. HTTP) führt einen Anfrage-Antwort-Dialog aus, der über eine TCP-Verbindung zwischen einem Client- und einem Serverprozess transportiert werden soll. Die Netzverzögerung zwischen Client und Server beträgt 150 ms, unabhängig von der Nachrichtenlänge. Ferner betragen die Größe der Anfrage (Request) 50 Byte und die Größe der Antwort (Response) 1000 Byte.
+
+## (a) Zeichnen Sie ein Sequenzdiagramm des gesamten TCP-Austausches zwischen Client und Server! Beschriften Sie dabei die Pfeile mit den dabei relevanten Teilen der TCP-Segmentstruktur (relevante Flags, Sequenznummer, ACK-Nummer). Initiale Sequenznummern seien 6000 für den Client und 9000 für den Server.
+
+```mermaid
+sequenceDiagram
+autonumber
+
+	participant C as Client
+	participant S as Server
+	
+rect rgb(191, 223, 255)
+C->>S: SYN [SeqNr=6000]
+end
+rect rgb(200, 150, 255)
+S->>C: SYNB [SeqNr=9000, ACK=6050]
+end
+rect rgb(191, 223, 255)
+C->>S: SYNBP[SeqNr=6001, ACK=10000]
+C->>S: Anfrage[SeqNr=6001]
+end
+rect rgb(200, 150, 255)
+S->>C: Antwort [SeqNr=9001, ACK=6051]
+end
+rect rgb(191, 223, 255)
+C->>S: CLS[SeqNr=6002, ACK=10001]
+end
+rect rgb(200, 150, 255)
+S->>C: CLSB [SeqNr=9001, ACK=6051]
+S->>C: CLS [SeqNr=9001, ACK=6051]
+end
+rect rgb(191, 223, 255)
+C->>S: CLSB[SeqNr=6002, ACK=10001]
+end
+```
+
+## ODER SO?
+
+```mermaid
+sequenceDiagram
+autonumber
+
+participant C as Client
+participant S as Server
+
+%% Verbindungsaufbau
+rect rgb(191, 223, 255)
+C->>S: [SeqNr=6000, SYN]
+end
+rect rgb(200, 150, 255)
+S->>C: [SeqNr=9000, ACK=6001, SYN]
+end
+rect rgb(191, 223, 255)
+C->>S: [SeqNr=6001, ACK=9001]
+end
+
+%% Anfrage senden
+rect rgb(200, 150, 255)
+C->>S: [SeqNr=6001, ACK=9001, Request (50 Bytes)]
+Note right of C: 150 ms Verzögerung
+end
+rect rgb(191, 223, 255)
+S->>C: [SeqNr=9001, ACK=6051, Response (1000 Bytes)]
+Note right of S: 150 ms Verzögerung
+end
+rect rgb(200, 150, 255)
+C->>S: [SeqNr=6051, ACK=10001]
+end
+
+%% Verbindung beenden
+rect rgb(191, 223, 255)
+C->>S: [SeqNr=6051, FIN]
+end
+rect rgb(200, 150, 255)
+S->>C: [SeqNr=10001, ACK=6052]
+end
+rect rgb(191, 223, 255)
+S->>C: [SeqNr=10001, FIN]
+end
+rect rgb(200, 150, 255)
+C->>S: [SeqNr=6052, ACK=10002]
+end
+
+```
+
+## (b) Zeitverhältnisse
+### i. Wie lange dauert es, bis die Antwort (Response) beim Client angekommen ist?
+
+- Handshake besteht aus 3 Nachrichten : $3 \cdot 150ms =450ms$
+- Anfrage $450ms+150ms =600ms$ 
+- Response: $600ms+150ms=750ms$
+
+$\Longrightarrow \text{Gesamtzeit bis die Antwort beim Client ankommt: } 750ms$
+### ii. Um welchen Faktor schneller wäre der Austausch von Anfrage/Antwort mittels eines verbindungslosen Protokolls?
+
+- Sparen uns den Handshake
+- Anfrage = $150ms$
+- Respose = $150ms$
+- Insgesamt = $150ms+150ms=300ms$
+$$
+\begin{aligned}
+\text{(Zeit Faktor)} &= \frac{verbindungsorientiert}{verbindunglos}\\
+&=\frac{750ms}{300ms}\\
+&=2.5
+\end{aligned}
+$$
+$\Longrightarrow$ verbindungslos ist $2.5$x schneller als verbindungsorientiert 
+### iii. Wie viel Zeit vergeht vom Versand des ersten bis zum Empfang des letzten Segments?
+

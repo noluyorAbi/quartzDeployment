@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 18:03
-date modified: Thursday, 30. May 2024, 23:51
+date modified: Thursday, 30. May 2024, 23:56
 ---
 
 # FSK6-1 Kontextfreie Grammatiken und Kellerautomaten (2 Punkte)
