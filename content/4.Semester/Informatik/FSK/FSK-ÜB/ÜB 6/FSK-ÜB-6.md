@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 18:03
-date modified: Thursday, 30. May 2024, 23:51
+date modified: Thursday, 30. May 2024, 23:57
 ---
 
 # FSK6-1 Kontextfreie Grammatiken und Kellerautomaten (2 Punkte)
@@ -88,8 +88,8 @@ Ein Kellerautomat $M$, der die Sprache $L = \{a^{2n}\$a^n \mid n \in \mathbb{N}_
 
 # FSK6-2 CYK-Algorithmus (2 Punkte)
 
->[!note] **Aufgabenstellung:**  
->Sei $G$ die Grammatik $({A_1, A_2, A_3, A_4, A_5}, \{\$, \#\}, P, A_1)$ mit:
+>[!note] Aufgabenstellung
+>Sei $G$ die Grammatik $({A_1, A_2, A_3, A_4, A_5}, \{\$, \#\}, P, A_1)$ mit
 >
 >$$
 >\begin{aligned}
@@ -101,9 +101,9 @@ Ein Kellerautomat $M$, der die Sprache $L = \{a^{2n}\$a^n \mid n \in \mathbb{N}_
 >\end{aligned}
 >$$
 
-## a) Prüfen Sie mit dem CYK-Algorithmus, ob die folgenden Wörter $w_1$ und $w_2$ in $L(G)$ sind. Erstellen Sie dazu für jedes Wort die entsprechende Tabelle des Algorithmus und erklären Sie anhand der Tabelle, ob das Wort in $L(G)$ ist.
+## a) Prüfen Sie mit dem [[CYK-Algorithmus]], ob die folgenden Wörter $w_1$ und $w_2$ in $L(G)$ sind. Erstellen Sie dazu für jedes Wort die entsprechende Tabelle des Algorithmus und erklären Sie anhand der Tabelle, ob das Wort in $L(G)$ ist.
 
-### i) $w_1 = \$\#\$\#\#$
+### i) $w_1 =  \$\#\$\#\#$
 
 #### CYK-Algorithmus zur Überprüfung von $w_1 = \$\#\$\#\#$
 
@@ -145,12 +145,50 @@ $$
 |     5     |                       |       -        |           -           |       -        |       -        |
 
 **Fazit:**
+- Das Wort $w_1 = \$\#\$\#\#$ ist nicht in $L(G)$,  da Startsymbol $A_{1} \notin V_{1,5}$
 
-- Das Wort $w_1 = \$\#\$\#\#$ ist nicht in $L(G)$, da das Startsymbol $A_1 \notin V_{1,5}$.
+>[!fail] Falsche Lösung zum Verständnis worauf zu achten ist
+> - Fehler tritt schon in Zeile 2 auf, wo nur $A_{1}$ als Option betrachtet wird, wobei $A_{4}$ auch legitim wäre
+> - $V_{2,2}$ ist nicht korrekt da man immer das Kreuzprodukt aus den ausgewählten Zeilen bilden muss z.B ($V_{2,1} \times V_{3,1} = A_{4}A_{3},A_{5}A_{3}$) und $A_{4}A_{3}$ oder $A_{5}A_{3}$ beide nicht dargestellt werden können
+>
+> | $V_{i,j}$ |      1      |       2       |   3   |       4       |       5       |
+> | :-------: | :---------: | :-----------: | :---: | :-----------: | :-----------: |
+> |     1     |    $A_3$    | $A_{4},A_{5}$ | $A_3$ | $A_{4},A_{5}$ | $A_{4},A_{5}$ |
+> |     2     |    $A_1$    |     $A_4$     | $A_4$ |     $A_5$     |       -       |
+> |     3     |    $A_1$    |     $A_5$     | $A_5$ |       -       |       -       |
+> |     4     | $\emptyset$ |  $\emptyset$  |   -   |       -       |       -       |
+> |     5     | $\emptyset$ |       -       |   -   |       -       |       -       |
+>
+> **Zeile 2:**
+> - $V_{1,2} = A_{1}$, da $A_1$ $A_3$ und $A_4$ bilden kann 
+> - $V_{2,2} = A_{4}$, da $A_4$ $A_4$ und $A_3$ bilden kann 
+> - $V_{3,2} = A_{4}$, da $A_4$ $A_4$ und $A_3$ bilden kann 
+> - $V_{4,2} = A_{5}$, da $A_{5}$ $A_{4}$ und $A_{4}$ bilden kann 
+>
+> **Zeile 3:**
+> - $V_{1,3} = A_{1}$, da $A_1$ $A_3$ ($V_{1,1}$) und $A_4$ ($V_{2,2}$) bilden kann 
+> - $V_{2,3} = A_{5}$, da $A_5$ $A_4$ ($V_{1,2}$) und $A_4$ ($V_{2,3}$) bilden kann 
+> - $V_{3,3} = A_{5}$, da $A_5$ $A_4$ ($V_{3,2}$) und $A_4$ ($V_{5,1}$) bilden kann 
+>
+> **Zeile 4:**
+> - $V_{1,4} = \emptyset$
+> 	- $(V_{1,1}) \ \text{und} \ (V_{2,3})$ bilden $A_{3}A_{5}$ was nicht abgebildet werden kann 
+> 	- $(V_{1,2}) \ \text{und} \ (V_{3,2})$ bilden $A_{1}A_{4}$ was nicht abgebildet werden kann 
+> 	- $(V_{1,3}) \ \text{und} \ (V_{4,1})$ bilden $A_{1} \ A_{4},A_{5}$ was nicht abgebildet werden kann 
+> 
+> - $V_{2,4} = \emptyset$
+> 	- $(V_{2,1}) \ \text{und} \ (V_{3,3})$ bilden $A_{4},A_{5} \ A_{5}$ was nicht abgebildet werden kann 
+> 	- $(V_{2,2}) \ \text{und} \ (V_{4,2})$ bilden $A_{4}A_{5}$ was nicht abgebildet werden kann 
+> 	- $(V_{2,3}) \ \text{und} \ (V_{5,1})$ bilden $A_{4},A_{5} \ A_{5}$ was nicht abgebildet werden kann 
+>
+> **Zeile 5:**
+> - $V_{1,5} = \emptyset$
+> 	- $(V_{1,1}) \ \text{und} \ (V_{2,4})$ bilden $A_{3}$ und $\emptyset$ was nicht abgebildet werden kann 
+> 	- $(V_{1,2}) \ \text{und} \ (V_{3,3})$ bilden $A_{1}$ und $A_5$ was nicht abgebildet werden kann 
+> 	- $(V_{1,3}) \ \text{und} \ (V_{4,2})$ bilden $A_{1}$ und $A_5$ was nicht abgebildet werden kann 
+> 	- $(V_{1,4}) \ \text{und} \ (V_{5,1})$ bilden $\emptyset$ und $A_{4},A_{5}$ was nicht abgebildet werden kann 
 
 ### ii) $w_2 = \$\$\$\#\#$
-
-#### CYK-Algorithmus zur Überprüfung von $w_2 = \$\$\$\#\#$
 
 **Gegebene Grammatik $G$:**
 $$
@@ -189,26 +227,65 @@ $$
 |     4     |    $A_{1},A_{4}$    | $A_{1},A_{2},A_{5}$ |          -          |       -        |       -        |
 |     5     | $A_{1},A_{2},A_{5}$ |          -          |          -          |       -        |       -        |
 
+**Zeile 2:**
+- $V_{1,2}$ = $(V_{1,1} \times V_{2,1}) = A_{3}A_{3} \Longrightarrow \emptyset$ 
+- $V_{2,2}$ = $(V_{2,1} \times V_{3,1}) = A_{3}A_{3} \Longrightarrow \emptyset$ 
+- $V_{3,2}$ = $(V_{3,1} \times V_{4,1}) = A_{3}A_{4},A_{3}A_{5} \overset{A_{3}A_{4}}{\Longrightarrow} A_{1},A_{4}$ 
+- $V_{4,2}$ = $(V_{4,1} \times V_{5,1}) = A_{4}A_{4},A_{4}A_{5},A_{5}A_{4},A_{5}A_{5} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$ 
+
+**Zeile 3:**
+- $V_{1,3} = \emptyset$ 
+	- $V_{1,1}\times V_{2,2} = A_{3}\times \emptyset \Longrightarrow \emptyset$  
+	- $V_{1,2}\times V_{3,2} = \emptyset \times A_{3} \Longrightarrow \emptyset$  
+
+- $V_{2,3} = A_{1},A_{4}$ 
+	- $V_{2,1}\times V_{3,2} = A_{3}\times A_{1},A_{4}  = A_{3}A_{1},A_{3}A_{4} \overset{A_{3}A_{4}}{\Longrightarrow} A_{1},A_{4}$ 
+	- $V_{4,1}\times V_{2,2} = A_{4}A_{5}\times \emptyset   \Longrightarrow \emptyset$ 
+
+- $V_{3,3} = A_{1},A_{2},A_{5}$ 
+	- $V_{3,1}\times V_{4,2} = A_{3}\times A_{2},A_{5}  = A_{3}A_{2},A_{3}A_{5} \overset{A_{3}A_{2}}{\Longrightarrow} A_{1}$ 
+	- $V_{5,1}\times V_{3,2} = A_{4}A_{5}\times A_{1},A_{4}  = A_{4}A_{1},A_{4}A_{4},A_{5}A_{1},A_{5}A_{4} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$ 
+
+**Zeile 4:**
+- $V_{1,4} = A_{1},A_{4}$ 
+	- $V_{1,1}\times V_{2,3} = A_{3}\times A_{1},A_{4} = A_{3}A_{1},A_{3}A_{4} \overset{A_{3}A_{4}}{\Longrightarrow} A_{1},A_{4}$  
+	- $V_{1,2}\times V_{3,2} = \emptyset \times A_{1},A_{4} \Longrightarrow \emptyset$  
+	- $V_{1,3}\times V_{4,2} = \emptyset \times A_{4},A_{5} \Longrightarrow \emptyset$  
+
+- $V_{2,4} = A_{1},A_{2},A_{5}$ 
+	- $V_{2,1}\times V_{3,3} = A_{3}\times A_{1},A_{2},A_{5} = A_{3}A_{1},A_{3}A_{2},A_{3}A_{5} \overset{A_{3}A_{2}}{\Longrightarrow} A_{1}$  
+	- $V_{2,2}\times V_{4,2} = \emptyset \times A_{2},A_{5} \Longrightarrow \emptyset$  
+	- $V_{2,3}\times V_{5,1} = A_{1},A_{4}\times A_{4},A_{5} = A_{1}A_{4},A_{1}A_{5},A_{4}A_{4},A_{4}A_{5} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$  
+
+**Zeile 5:**
+- $V_{1,5} = A_{1},A_{2},A_{5}$ 
+	- $V_{1,1}\times V_{2,4} = A_{3}\times A_{1},A_{2},A_{5} = A_{3}A_{1},A_{3}A_{2},A_{3}A_{5} \overset{A_{3}A_{2}}{\Longrightarrow} A_{1}$  
+	- $V_{1,2}\times V_{3,3} = \emptyset \times A_{1},A_{2},A_{5} \Longrightarrow \emptyset$  
+	- $V_{1,3}\times V_{4,2} = \emptyset \times A_{2},A_{5} \Longrightarrow \emptyset$  
+	- $V_{1,4}\times V_{5,1} = A_{1},A_{4}\times A_{4},A_{5} = A_{1}A_{4},A_{1}A_{5},A_{4}A_{4},A_{4},A_{5} \overset{A_{4}A_{4}}{\Longrightarrow} A_{2},A_{5}$  
+
 **Fazit:**
+- Das Wort $w_1 = \$\#\$\#\#$ ist in $L(G)$, da Startsymbol $A_{1} \in V_{1,5}$
 
-- Das Wort $w_2 = \$\$\$\#\#$ ist in $L(G)$, da das Startsymbol $A_1 \in V_{1,5}$ enthalten ist.
+## b) Geben Sie alle weiteren Wörter $w$ an, für die sich aus den Tabellen ergibt, dass $w \in L(G)$ ist.  
 
-## b) Geben Sie alle weiteren Wörter $w$ an, für die sich aus den Tabellen ergibt, dass $w \in L(G)$ ist.
-
+>[!bug] Unsicher wie zu lösen ist
 ### Identifikation weiterer Wörter $w$ in $L(G)$
+Die Tabellen zeigen, dass die Grammatik die folgenden Kombinationen von \$ und \# zulässt:
 
-Die Tabellen zeigen, dass die Grammatik die folgenden Kombinationen von $\$$ und $\#$ zulässt:
+2. **Länge 2:**
+   - \$ \#
 
-- $\$$
-- $\#$
-- $\#\#$
-- $\$\#$
-- $\$\$\#$
-- $\#\$\#$
+3. **Länge 3:**
+   - \$ \# \#
 
+4. **Länge 4 und mehr:**
+   - \$ \# \$ \#
+   - \$ \$ \# \#
+   - \# \$ \$ \#
 ### Schlussfolgerung
+Die Grammatik $G$ erlaubt Kombinationen von \$ und \#, die den Ableitungsregeln entsprechen. Insbesondere alle Wörter, die durch Kombinationen und Anwendungen der Produktionen von $A_3$, $A_4$, $A_5$, $A_1$ und $A_2$ entstehen, sind Teil der Sprache $L(G)$.
 
-Die Grammatik $G$ erlaubt Kombinationen von $\$$ und $\#$, die den Ableitungsregeln entsprechen. Insbesondere alle Wörter, die durch Kombinationen und Anwendungen der Produktionen von $A_3$, $A_4$, $A_5$, $A_1$ und $A_2$ entstehen, sind Teil der Sprache $L(G)$.
 
 # FSK6-3 Begrenzter Keller
 
