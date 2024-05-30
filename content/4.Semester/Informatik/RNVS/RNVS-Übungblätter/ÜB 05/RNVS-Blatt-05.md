@@ -8,7 +8,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: 
 Benötigte Zeit:
 date created: Sunday, 26. May 2024, 16:05
-date modified: Monday, 27. May 2024, 11:02
+date modified: Thursday, 30. May 2024, 16:10
 ---
 
 # Aufgabe 5-1 Aktuelle Produktivnetze (H)
@@ -59,7 +59,7 @@ $\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Strom
 - Mehr Platzverbrauch
 - Fehleranfälliger
 
-## 2. Transportschicht in Pseudocode (H)
+# 2. Transportschicht in Pseudocode (H)
 
 >[!note] Aufgabenstellung
 > Auf [[RNVS-Blatt-03|Übungsblatt 3]] haben wir die Signatur der Funktion `sendto` behandelt. 
