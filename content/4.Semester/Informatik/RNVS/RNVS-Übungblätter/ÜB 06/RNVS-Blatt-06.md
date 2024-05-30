@@ -658,7 +658,7 @@ C->>S: CLSB[SeqNr=6002, ACK=10001]
 end
 ```
 
-## ODER SO?
+### ODER SO?
 
 ```mermaid
 sequenceDiagram
@@ -667,46 +667,46 @@ autonumber
 participant C as Client
 participant S as Server
 
-%% Verbindungsaufbau
+%% Establishing the connection (Three-way handshake)
 rect rgb(191, 223, 255)
-C->>S: [SeqNr=6000, SYN]
-end
-rect rgb(200, 150, 255)
-S->>C: [SeqNr=9000, ACK=6001, SYN]
-end
-rect rgb(191, 223, 255)
-C->>S: [SeqNr=6001, ACK=9001]
+C->>S: SYN [SeqNr=6000]
 end
 
-%% Anfrage senden
 rect rgb(200, 150, 255)
-C->>S: [SeqNr=6001, ACK=9001, Request (50 Bytes)]
-Note right of C: 150 ms Verzögerung
-end
-rect rgb(191, 223, 255)
-S->>C: [SeqNr=9001, ACK=6051, Response (1000 Bytes)]
-Note right of S: 150 ms Verzögerung
-end
-rect rgb(200, 150, 255)
-C->>S: [SeqNr=6051, ACK=10001]
+S->>C: SYN, ACK [SeqNr=9000, ACK=6001]
 end
 
-%% Verbindung beenden
 rect rgb(191, 223, 255)
-C->>S: [SeqNr=6051, FIN]
+C->>S: ACK [SeqNr=6001, ACK=9001]
 end
-rect rgb(200, 150, 255)
-S->>C: [SeqNr=10001, ACK=6052]
-end
+
+%% Request-Response Exchange
 rect rgb(191, 223, 255)
-S->>C: [SeqNr=10001, FIN]
+C->>S: Request [SeqNr=6001, ACK=9001, Data=50 Bytes]
 end
+
 rect rgb(200, 150, 255)
-C->>S: [SeqNr=6052, ACK=10002]
+S->>C: Response [SeqNr=9001, ACK=6051, Data=1000 Bytes]
+end
+
+%% Terminating the connection (Four-way handshake)
+rect rgb(191, 223, 255)
+C->>S: FIN [SeqNr=6051, ACK=10001]
+end
+
+rect rgb(200, 150, 255)
+S->>C: ACK [SeqNr=10001, ACK=6052]
+end
+
+rect rgb(200, 150, 255)
+S->>C: FIN [SeqNr=10001, ACK=6052]
+end
+
+rect rgb(191, 223, 255)
+C->>S: ACK [SeqNr=6052, ACK=10002]
 end
 
 ```
-
 ## (b) Zeitverhältnisse
 ### i. Wie lange dauert es, bis die Antwort (Response) beim Client angekommen ist?
 
@@ -731,3 +731,24 @@ $$
 $\Longrightarrow$ verbindungslos ist $2.5$x schneller als verbindungsorientiert 
 ### iii. Wie viel Zeit vergeht vom Versand des ersten bis zum Empfang des letzten Segments?
 
+#### Verbindungsaufbau (Three-Way Handshake)
+1. **SYN**: 150 ms
+2. **SYN-ACK**: 150 ms
+3. **ACK**: 150 ms
+
+Gesamtzeit: 
+$$ 150 \, \text{ms} + 150 \, \text{ms} + 150 \, \text{ms} = 450 \, \text{ms} $$
+
+#### Versand der Anfrage (Request) und Empfang der Antwort (Response)
+4. **Request**: 150 ms
+5. **Response**: 150 ms
+
+Gesamtzeit: 
+$$ 150 \, \text{ms} + 150 \, \text{ms} = 300 \, \text{ms} $$
+
+#### Gesamte Zeit
+Verbindungsaufbau + Versand der Anfrage + Empfang der Antwort:
+$$ 450 \, \text{ms} + 300 \, \text{ms} = 750 \, \text{ms} $$
+
+Die gesamte Zeit beträgt also:
+$$ 750 \, \text{ms} $$
