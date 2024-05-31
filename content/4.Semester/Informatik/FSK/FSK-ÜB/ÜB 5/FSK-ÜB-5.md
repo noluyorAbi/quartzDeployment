@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: 
 Benötigte Zeit: 6h
 date created: Tuesday, 21. May 2024, 16:56
-date modified: Friday, 24. May 2024, 00:45
+date modified: Friday, 31. May 2024, 20:46
 ---
 
 # FSK5-1 Myhill und Nerode (2 Punkte)
@@ -59,16 +59,35 @@ $$
  [abb] = \{ v \in \Sigma^* \mid \forall x \in \Sigma^* : vx \in L \leftrightarrow x = c \} 
 $$
 
+>[!success] Musterlösung
+>Präfix suchen was muss nach dem Wort stehen, damit es regulär ist
+>Danach: Präfix damit das Wort gebildet werden kann 
+>$$
+>u_{1}=ab^*c
+>$$
+
 ### 2. $u_2 = \epsilon$
 
 $$
 [\varepsilon] = \{ab^{*}c\}
 $$
-### 3. $u_3 = c$
 
+>[!success] Musterlösung
+>$$
+>[\varepsilon]=\{\varepsilon\}
+>$$
+
+### 3. $u_3 = c$
+Suffix
 $$
 [c] = \emptyset
 $$
+Präfix 
+
+>[!success] Musterlösung
+>$$
+>[c]=\{ L((c\mid b\mid aa) \Sigma^{*})\mid (ab^{*}a\Sigma^{*})\mid ab^{*}c\Sigma \Sigma^*) \}
+>$$
 
 ## b) Bestimmen Sie den Nerode-Index folgender Sprachen $L_i, i \in \{1, 2, 3\}$, über Alphabeten $\Sigma_i$ und entscheiden Sie mit dem Satz von Myhill und Nerode, welche der Sprachen regulär sind. Geben Sie für jede Sprache mit endlichem Nerode-Index alle paarweise verschiedenen Äquivalenzklassen an (1 Repräsentant pro Klasse).
 
@@ -77,10 +96,9 @@ $$
 >2. $L_2 = \{w\overline{w}w \mid w \in \Sigma_2^*\}$ mit $\Sigma_2 = \{a, b\}$
 >3. $L_3 = \{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und } i = 2, \text{ dann } j < k\}$ mit $\Sigma_3 = \{a, b, c\}$
 
-
 ### 1. $L_1 = \{aaab, aabb, abab, abbb, baab, bbab, bbbb\}$ mit $\Sigma_1 = \{a, b\}$
 
-### Lösung für Sprache L_1$
+### Lösung für Sprache $L_1$
 
 **Sprache**: $L_1 = \{aaab, aabb, abab, abbb, baab, bbab, bbbb\}$
 **Alphabet**: $\Sigma_1 = \{a, b\}$
