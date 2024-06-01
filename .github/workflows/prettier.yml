@@ -19,8 +19,6 @@ jobs:
 
       - name: Install dependencies using npm
         run: npm install
-        working-directory: swt-ueberblick-app
 
       - name: Run Prettier
         run: npx prettier --check '**/*.{js,jsx,ts,tsx}' --ignore-path .prettierignore
-        working-directory: swt-ueberblick-app
