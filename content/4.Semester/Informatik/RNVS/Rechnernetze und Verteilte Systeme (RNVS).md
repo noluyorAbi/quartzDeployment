@@ -1,5 +1,5 @@
 ---
-Thema: 
+Thema:
 tags:
   - 4semester
   - RNVS
@@ -16,27 +16,14 @@ date modified: Tuesday, 28. May 2024, 14:26
 **Klausur:**
 26.07.2024 in Großhadern
 
-| Kategorie                          | Beschreibung                                              |
-|------------------------------------|-----------------------------------------------------------|
-| [[RNVS-Vorlesung]]                 | Zugang zu aufgezeichneten Vorlesungen und Materialien     |
-| [[RNVS-Verzeichnis-Erklärungen]]   | Detaillierte Erklärungen zu Fachspezifischen Konzepten    |
-| [[RNVS-Übungsblätter]]             | Sammlung von Übungsblättern für das Selbststudium         |
-| [[RNVS-Klausuraufgaben]]           | Archiv von Klausuraufgaben zur Prüfungsvorbereitung       |
-
-
-
-
-
-
-
-
+| Kategorie                        | Beschreibung                                           |
+| -------------------------------- | ------------------------------------------------------ |
+| [[RNVS-Vorlesung]]               | Zugang zu aufgezeichneten Vorlesungen und Materialien  |
+| [[RNVS-Verzeichnis-Erklärungen]] | Detaillierte Erklärungen zu Fachspezifischen Konzepten |
+| [[RNVS-Übungsblätter]]           | Sammlung von Übungsblättern für das Selbststudium      |
+| [[RNVS-Klausuraufgaben]]         | Archiv von Klausuraufgaben zur Prüfungsvorbereitung    |
 
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -59,15 +46,4 @@ date modified: Tuesday, 28. May 2024, 14:26
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

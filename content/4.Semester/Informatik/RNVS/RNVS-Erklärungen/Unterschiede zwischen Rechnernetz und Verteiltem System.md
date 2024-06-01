@@ -6,21 +6,23 @@ tags:
   - Erklaerung
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: "[[RNVS-Blatt-01]]"
-Benötigte Zeit: 
+Benötigte Zeit:
 date created: Friday, 26. April 2024, 22:36
 date modified: Friday, 26. April 2024, 22:57
 ---
 
 # Unterschiede zwischen Rechnernetz und Verteiltem System
 
->[!tip] Merkhilfe
->**Rechnernetz:**
->- keine gemeinsame Aufgabe
->- unabhängig voneinander
+> [!tip] Merkhilfe
+> **Rechnernetz:**
 >
->**Verteiltes System:**
->- gemeinsame Aufgabe
->- abhängig
+> - keine gemeinsame Aufgabe
+> - unabhängig voneinander
+>
+> **Verteiltes System:**
+>
+> - gemeinsame Aufgabe
+> - abhängig
 
 In der Welt der Informationstechnologie sind „Rechnernetz“ und „Verteiltes System“ zwei fundamentale Konzepte, die oft miteinander verwechselt werden. Obwohl beide Konzepte Netzwerktechnologien involvieren, unterscheiden sie sich in ihrer Struktur, ihrem Zweck und ihrer Funktionsweise.
 
@@ -49,26 +51,11 @@ Der Hauptunterschied zwischen einem Rechnernetz und einem verteilten System lieg
 - **Kommunikation vs. Kooperation**: Ein Rechnernetz ermöglicht vor allem die Kommunikation zwischen den angeschlossenen Geräten, ohne eine gemeinsame Aufgabe zu erfüllen. Ein verteiltes System hingegen nutzt die Verbindung zwischen den Computern, um eine spezifische, oft komplexe Aufgabe gemeinsam zu bearbeiten und zu lösen.
 - **Unabhängigkeit vs. Abhängigkeit**: In einem Netzwerk operiert jedes Gerät unabhängig, während in einem verteilten System die Computer voneinander abhängig sind, um die gemeinsame Aufgabe zu erfüllen.
 
-
-
-
-
 ### Fazit
 
 Während ein **Rechnernetz** hauptsächlich für die Kommunikation zwischen Computern dient, zielt ein **verteiltes System** darauf ab, diese Computer auf ein gemeinsames Ziel auszurichten und sie als einheitliches Ganzes arbeiten zu lassen.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -91,15 +78,4 @@ Während ein **Rechnernetz** hauptsächlich für die Kommunikation zwischen Comp
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

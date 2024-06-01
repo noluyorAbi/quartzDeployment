@@ -13,9 +13,8 @@ date modified: Tuesday, 28. May 2024, 18:29
 
 # Grammatiken
 
->[!info] Kurzerklärung
->Eine Grammatik in der formalen Sprachtheorie ist ein Regelwerk, das definiert, wie [[Sätze]] einer Sprache korrekt aufgebaut sind. Sie besteht aus einem Alphabet und Regeln, die angeben, wie Wörter und Sätze geformt werden dürfen. Das Ziel einer Grammatik ist es, eine strukturierte und präzise Beschreibung einer Sprache zu bieten, sodass klar ist, welche Zeichenfolgen zur Sprache gehören. Sie ermöglicht es, die Syntax einer Sprache sowohl für menschliche als auch maschinelle Verarbeitung klar festzulegen und wird daher in Bereichen wie der Computerprogrammierung und Datenanalyse eingesetzt.
-
+> [!info] Kurzerklärung
+> Eine Grammatik in der formalen Sprachtheorie ist ein Regelwerk, das definiert, wie [[Sätze]] einer Sprache korrekt aufgebaut sind. Sie besteht aus einem Alphabet und Regeln, die angeben, wie Wörter und Sätze geformt werden dürfen. Das Ziel einer Grammatik ist es, eine strukturierte und präzise Beschreibung einer Sprache zu bieten, sodass klar ist, welche Zeichenfolgen zur Sprache gehören. Sie ermöglicht es, die Syntax einer Sprache sowohl für menschliche als auch maschinelle Verarbeitung klar festzulegen und wird daher in Bereichen wie der Computerprogrammierung und Datenanalyse eingesetzt.
 
 In der Theorie der formalen Sprachen ist eine Grammatik ein Mittel, um die Syntax einer Sprache präzise zu beschreiben. Eine formale Grammatik ist typischerweise ein 4-Tupel, nicht ein 5-Tupel, aber wir können über eine erweiterte Form sprechen, die zusätzliche Informationen wie Einschränkungen oder Aktionen beinhaltet. Doch zuerst konzentrieren wir uns auf die Standardform.
 
@@ -72,7 +71,7 @@ Formale Grammatiken sind entscheidend, um Computer „beizubringen“, was korre
 
 Stellen Sie sich vor, die Grammatik ist das Rezeptbuch und die Sprache ist das Menü. Ohne das Rezeptbuch könnten Sie nicht bestimmen, welche Zutaten (Symbole) zusammengehören und wie sie kombiniert werden sollten, um ein
 
- Gericht (Satz) aus dem Menü (der Sprache) zu kochen (erzeugen).
+Gericht (Satz) aus dem Menü (der Sprache) zu kochen (erzeugen).
 
 #### Formale Grammatiken in der Informatik:
 
@@ -82,33 +81,25 @@ In der Informatik dienen Grammatiken dazu, formale Sprachen zu definieren, die f
 
 Formale Grammatiken sind ein mächtiges Werkzeug, um die Syntax einer Sprache genau zu definieren. Sie ermöglichen es uns, maschinelle Prozesse wie das Parsen und die Syntaxanalyse von Codes und Daten durchzuführen. Sie sind nicht nur in der Informatik, sondern auch in der Linguistik von zentraler Bedeutung, um die Struktur natürlicher Sprachen zu verstehen. Sie stellen sicher, dass die Sprache, die wir verwenden – sei es in Code oder im täglichen Sprechen – einer logischen Struktur folgt und von anderen verstanden werden kann.
 
-----
+---
 
 # Kochrezept
 
->[!tip] Ablauf für das Aufstellen einer Grammatik
+> [!tip] Ablauf für das Aufstellen einer Grammatik
 >
 > 1. **Bestimmen Sie das Alphabet**: Legen Sie die Menge der Terminalsymbole fest, die in der Sprache verwendet werden können.
-> 
 > 2. **Identifizieren Sie die Sprachstruktur**: Überlegen Sie, welche Muster und Strukturen in der Sprache vorhanden sein sollen. Handelt es sich um einfache Wiederholungen, Verschachtelungen, spezielle Sequenzen?
-> 
 > 3. **Wählen Sie das Startsymbol**: Bestimmen Sie das Nichtterminal, das als Ausgangspunkt für Ableitungen in Ihrer Grammatik dient.
-> 
 > 4. **Definieren Sie die Nichtterminale**: Erstellen Sie eine Menge von Nichtterminalsymbolen, die die strukturellen Komponenten Ihrer Sprache repräsentieren.
-> 
 > 5. **Entwickeln Sie die Produktionsregeln**: Schreiben Sie eine Reihe von Regeln, die festlegen, wie Nichtterminale durch eine Kombination aus Terminalen und Nichtterminalen ersetzt werden können, um gültige Sätze der Sprache zu erzeugen.
-> 
 > 6. **Stellen Sie die Grammatik zusammen**: Fügen Sie die definierten Elemente zu einem 4-Tupel $G = (N, \Sigma, P, S)$ zusammen, das Ihre Grammatik repräsentiert.
-> 
 > 7. **Überprüfen Sie die Grammatik**:
 >    - Stellen Sie sicher, dass die Grammatik alle Wörter der Sprache generieren kann.
 >    - Prüfen Sie, ob die Grammatik keine Wörter erzeugt, die nicht zur Sprache gehören.
-> 
 > 8. **Klassifizieren Sie die Grammatik**: Bestimmen Sie, ob Ihre Grammatik regulär, kontextfrei, kontextsensitiv oder rekursiv enumerable ist, basierend auf den Merkmalen der Produktionsregeln.
-> 
 > 9. **Dokumentieren Sie Ihre Grammatik**: Erklären Sie die Funktion jeder Regel und wie sie zur Struktur der Sprache beiträgt.
-> 
-Indem Sie diesen Ablauf befolgen, können Sie eine klare und präzise Grammatik erstellen, die eine formale Sprache innerhalb des Rahmens der formalen Sprachtheorie definiert.
+>
+> Indem Sie diesen Ablauf befolgen, können Sie eine klare und präzise Grammatik erstellen, die eine formale Sprache innerhalb des Rahmens der formalen Sprachtheorie definiert.
 
 # Beispiel aus [[FSK-ÜB-1#FSK1-2 Grammatiken angeben (2 Punkte)]]
 
@@ -129,7 +120,7 @@ Um die angegebene Aufgabe zu lösen, bei der eine Grammatik für die Sprache $L_
 
    - $S \rightarrow aS | bS | a | b$
 
->[!help]- Erklärung der Schreibweise
+> [!help]- Erklärung der Schreibweise
 >
 > - **$S$**: Das ist das Startsymbol oder Nichtterminal. Es ist der Ausgangspunkt, von dem aus wir beginnen, Sätze der Sprache zu generieren.
 > - **$\rightarrow$**: Dieses Symbol bedeutet "kann ersetzt werden durch". Es leitet eine Produktionsregel ein, die besagt, wie das Nichtterminal auf der linken Seite durch die Folge von Symbolen auf der rechten Seite ersetzt werden kann.
@@ -138,17 +129,17 @@ Um die angegebene Aufgabe zu lösen, bei der eine Grammatik für die Sprache $L_
 > - **$a$**: Das Terminal 'a' kann auch für sich allein stehen, um das Nichtterminal $S$ zu ersetzen. Dies ermöglicht die Erzeugung eines Wortes, das mit dem Buchstaben 'a' endet.
 > - **$b$**: Genauso wie bei 'a', kann das Terminal 'b' auch $S$ ersetzen, was ein Wort erzeugt, das mit 'b' endet.
 > - **$|$**: Das vertikale Balkenzeichen fungiert als logisches "oder" und trennt verschiedene Ersetzungsmöglichkeiten. Es gibt an, dass das Nichtterminal $S$ durch **jedes** der aufgelisteten Elemente rechts vom Pfeil ersetzt werden kann.
-> <br/>
-> >[!help]- Erklärung für $aS$ und $bS$ in den Produktionsregeln
->> - **Rekursion mit $aS$**: Die Verwendung von $aS$ in der Produktionsregel ermöglicht die rekursive Erzeugung von Sätzen, die mit einem oder mehreren 'a's beginnen. Wenn $S$ durch $aS$ ersetzt wird, fügt man ein 'a' hinzu und lässt das Nichtterminal $S$ stehen, was eine erneute Anwendung der Regel ermöglicht. Dies ist die Basis für die Erzeugung von Wörtern beliebiger Länge mit 'a's im Wort.
->>
->> - **Rekursion mit $bS$**: Analog dazu ermöglicht die Verwendung von $bS$, dass Wörter mit einem oder mehreren 'b's gebildet werden können. Die Regel $S \rightarrow bS$ bedeutet, dass nach einem 'b' das Nichtterminal $S$ steht, welches dann wiederum durch die Regeln ersetzt werden kann, was zu weiteren 'b's führt.
->>
->>Die rekursiven Regeln $aS$ und $bS$ sind entscheidend für die Generierung von Wörtern, die aus einer beliebigen Anzahl von 'a's und 'b's bestehen, und stellen sicher, dass die Grammatik nicht nur einzelne Zeichen, sondern auch längere Sequenzen erzeugen kann, entsprechend der Sprache $L_1 = \{a, b\}^+$.
+>   <br/>
+>   > [!help]- Erklärung für $aS$ und $bS$ in den Produktionsregeln
+>   >
+>   > - **Rekursion mit $aS$**: Die Verwendung von $aS$ in der Produktionsregel ermöglicht die rekursive Erzeugung von Sätzen, die mit einem oder mehreren 'a's beginnen. Wenn $S$ durch $aS$ ersetzt wird, fügt man ein 'a' hinzu und lässt das Nichtterminal $S$ stehen, was eine erneute Anwendung der Regel ermöglicht. Dies ist die Basis für die Erzeugung von Wörtern beliebiger Länge mit 'a's im Wort.
+>   > - **Rekursion mit $bS$**: Analog dazu ermöglicht die Verwendung von $bS$, dass Wörter mit einem oder mehreren 'b's gebildet werden können. Die Regel $S \rightarrow bS$ bedeutet, dass nach einem 'b' das Nichtterminal $S$ steht, welches dann wiederum durch die Regeln ersetzt werden kann, was zu weiteren 'b's führt.
+>   >
+>   > Die rekursiven Regeln $aS$ und $bS$ sind entscheidend für die Generierung von Wörtern, die aus einer beliebigen Anzahl von 'a's und 'b's bestehen, und stellen sicher, dass die Grammatik nicht nur einzelne Zeichen, sondern auch längere Sequenzen erzeugen kann, entsprechend der Sprache $L_1 = \{a, b\}^+$.
 
 Zusammengenommen bedeuten diese Regeln, dass Sie beginnen können, ein Wort zu bilden, indem Sie mit $S$ starten und es dann durch 'a' oder 'b' ersetzen, gefolgt von einem weiteren $S$, was Ihnen erlaubt, weitere 'a's oder 'b's hinzuzufügen. Sie können diesen Prozess so lange fortsetzen, wie Sie möchten, und abschließen, indem Sie $S$ einfach durch 'a' oder 'b' ersetzen. Auf diese Weise können Sie Sätze erzeugen, die aus einer beliebigen Anzahl von 'a's und 'b's bestehen, aber mindestens ein Zeichen lang sein müssen, da $\varepsilon$-Produktionen nicht erlaubt sind.
 
-   Dies bedeutet, dass das Startsymbol $S$ entweder durch 'a' oder 'b' gefolgt von $S$ (was eine Wiederholung von 'a's oder 'b's ermöglicht) oder direkt durch 'a' oder 'b' ersetzt werden kann.
+Dies bedeutet, dass das Startsymbol $S$ entweder durch 'a' oder 'b' gefolgt von $S$ (was eine Wiederholung von 'a's oder 'b's ermöglicht) oder direkt durch 'a' oder 'b' ersetzt werden kann.
 
 5. **Typ der Grammatik angeben:** Diese spezielle Grammatik ist eine reguläre Grammatik, da sie die Form einer rechtslinearen Grammatik hat (jede Regel hat höchstens ein Nichtterminal, und es steht am Ende). Reguläre Grammatiken generieren reguläre Sprachen, die von endlichen Automaten akzeptiert werden können und sich für einfache Muster eignen.
 
@@ -163,20 +154,7 @@ Zusammengefasst sähe das vollständige 4-Tupel für die Grammatik $G_1$ so aus:
 
 Und Sie würden es als reguläre Grammatik klassifizieren, da sie rechtslineare Produktionen verwendet.
 
-
-
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -199,15 +177,4 @@ Und Sie würden es als reguläre Grammatik klassifizieren, da sie rechtslineare 
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

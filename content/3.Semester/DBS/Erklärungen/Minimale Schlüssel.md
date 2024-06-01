@@ -16,6 +16,7 @@ Minimale Schlüssel spielen eine entscheidende Rolle in der Struktur von Datenba
 ## Definition und Bedeutung
 
 - **Minimaler Schlüssel:**
+
   - Ein Attribut oder eine Kombination von Attributen, die einen Datensatz in einer Tabelle einzigartig identifizieren können.
   - Der Schlüssel ist minimal, wenn die Entfernung eines beliebigen Attributs die Eindeutigkeit der Identifikation beeinträchtigt.
 
@@ -26,6 +27,7 @@ Minimale Schlüssel spielen eine entscheidende Rolle in der Struktur von Datenba
 ## Identifizierung minimaler Schlüssel
 
 - **Analyse der Attribute:**
+
   - Untersuchung aller möglichen Attributkombinationen, um diejenigen zu ermitteln, die zur eindeutigen Identifizierung von Datensätzen erforderlich sind.
   - Berücksichtigung von Geschäftsregeln und Datenmodellierungsanforderungen, um relevante Schlüsselkandidaten zu identifizieren.
 
@@ -36,6 +38,7 @@ Minimale Schlüssel spielen eine entscheidende Rolle in der Struktur von Datenba
 ## Implikationen für Datenbankdesign und -integrität
 
 - **Datenintegrität:**
+
   - Sicherstellung, dass jede Zeile in der Tabelle eindeutig identifizierbar ist, was die Datenkonsistenz und -korrektheit erhält.
   - Vermeidung von Duplikaten, die zu Datenverfälschungen und inkonsistenten Analysen führen können.
 
@@ -45,18 +48,7 @@ Minimale Schlüssel spielen eine entscheidende Rolle in der Struktur von Datenba
 
 Die korrekte Bestimmung und Verwendung minimaler Schlüssel ist entscheidend für das effektive Datenbankmanagement. Sie unterstützen nicht nur die Integrität und Effizienz der Datenverwaltung, sondern auch die strukturelle Logik des gesamten Datenbanksystems.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -79,15 +71,4 @@ Die korrekte Bestimmung und Verwendung minimaler Schlüssel ist entscheidend fü
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

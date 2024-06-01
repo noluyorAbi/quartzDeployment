@@ -1,7 +1,7 @@
 ---
 Thema:
-tags: 
-fach: 
+tags:
+fach:
 date created: Saturday, 30. March 2024, 01:12
 date modified: Saturday, 4. May 2024, 21:29
 ---
@@ -33,17 +33,7 @@ In essence, "The value of the cloak is known in the rain" transcends its literal
 
 Go back to the [[index|Homepage]]
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -66,15 +56,4 @@ Go back to the [[index|Homepage]]
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

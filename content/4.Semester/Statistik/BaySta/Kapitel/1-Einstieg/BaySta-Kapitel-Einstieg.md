@@ -11,7 +11,9 @@ date modified: Thursday, 16. May 2024, 14:53
 ---
 
 # Kurze Wiederholung der Theorie der Wahrscheinlichkeit
+
 ## Wahrscheinlichkeiten
+
 Dieses Kapitel gibt eine kurze Einführung bzw. Wiederholung in die Theorie der Wahrscheinlichkeit.
 
 Wir interessieren uns (vorerst) für _zufällige Ergebnisse_ in einem Ergebnisraum $Ω$. Jedem _Ereignis_ $A⊆Ω$ kann eine _Wahrscheinlichkeit_ $𝑃(𝐴)$ zugeordnet werden, für die die Axiome von Kolmogorov gelten:
@@ -51,16 +53,18 @@ $$
 P(A) = \frac{|A|}{|\Omega|}
 $$
 
-Wobei $|A|$ die „Mächtigkeit“ von $A$, also die Anzahl der Elemente in $A$ ist. Man nennt diese Definition einer Wahrscheinlichkeit auch _Laplace-Wahrscheinlichkeit._ 
+Wobei $|A|$ die „Mächtigkeit“ von $A$, also die Anzahl der Elemente in $A$ ist. Man nennt diese Definition einer Wahrscheinlichkeit auch _Laplace-Wahrscheinlichkeit._
 
 ## OddsAlternativ lassen sich Wahrscheinlichkeiten auch als _Odds_ oder _Chance_ darstellen:
 
 ### Definition
 
 Die Odds eines Ereignisses $A$ sind definiert als:
+
 $$
 \text{Odds}(A) = \frac{P(A)}{P(\bar{A})}
 $$
+
 wobei $\bar{A}$ das Gegenereignis zu $A$ ist. Es gilt $P(\bar{A}) = 1 - P(A)$.
 
 Ein Odds von 1 entspricht also einer Wahrscheinlichkeit von 50%.
@@ -68,9 +72,11 @@ Ein Odds von 1 entspricht also einer Wahrscheinlichkeit von 50%.
 ### Fortsetzung Beispiel: Würfel
 
 Der Odds für $A$: "Der Würfel zeigt die Zahl 6" ist:
+
 $$
 \text{Odds}(A) = \frac{1/6}{5/6} = 1 : 5
 $$
+
 Man kennt den Odds auch als Wettquote. Bei einer Wahrscheinlichkeit $P(A) = 1/6$ ist die Wettquote für das Eintreten von $A$ dementsprechend $5 : 1$. Wettet man auf $A$, erhält man - neben dem Einsatz - das Fünffache des Einsatzes zurück, zusammen also das Sechsfache des Einsatzes.
 
 ## Interpretation
@@ -108,8 +114,7 @@ Die persönliche Überzeugung wird dabei durch Informationen gebildet. Das kann 
 
 Der Bayessche Wahrscheinlichkeitsbegriff ist nicht notwendig für die Benutzung Bayesischer Statistik. Aber er verdeutlicht schon einen ersten Aspekt der Bayesischen Statistik:
 
-_Wahrscheinlichkeit_ entspricht *Wissen* gleich *Information*.
-
+_Wahrscheinlichkeit_ entspricht _Wissen_ gleich _Information_.
 
 ## Verteilung und Zufallsvariablen
 
@@ -154,7 +159,6 @@ P(Y = y) = \binom{n}{y}p^y(1 - p)^{n-y}
 $$
 
 wobei hier $p = \frac{1}{6}$.
-
 
 # Bedingten Wahrscheinlichkeiten
 
@@ -285,83 +289,91 @@ So erhalten wir $P(A|B) = 1$, was bedeutet, dass unter der Bedingung, dass B ein
 
 ## Aufgabe 1
 
->[!faq] Auf einem Campus gibt es 250 Mathematik-Studierende und 750 Soziologie-Studierenden. Sie begegnen zufällig einer Person auf dem Campus. Ohne weiteres Wissen, wie groß ist die Wahrscheinlichkeit, dass die Person Mathematik studiert?
+> [!faq] Auf einem Campus gibt es 250 Mathematik-Studierende und 750 Soziologie-Studierenden. Sie begegnen zufällig einer Person auf dem Campus. Ohne weiteres Wissen, wie groß ist die Wahrscheinlichkeit, dass die Person Mathematik studiert?
+>
 > - 0.5
 > - 0.25
 > - 5
 > - 25
 > - 0
->>[!success]- Lösung
->> 0.25
+>   > [!success]- Lösung
+>   > 0.25
 
 ## Aufgabe 2
 
->[!faq] Sie wissen, dass 50 der Mathematik-Studierenden weiblich sind. Sie begegnen zufällig einer Person auf dem Campus. Wie groß ist die Wahrscheinlichkeit, dass es sich um eine Mathematikerin handelt?
+> [!faq] Sie wissen, dass 50 der Mathematik-Studierenden weiblich sind. Sie begegnen zufällig einer Person auf dem Campus. Wie groß ist die Wahrscheinlichkeit, dass es sich um eine Mathematikerin handelt?
+>
 > - 0.5
 > - 0
 > - 0.25
 > - 0.05
->>[!success]- Lösung
->> 0.05
+>   > [!success]- Lösung
+>   > 0.05
 
->[!faq] Sie begegnen auf dem Campus zufällig einer Person, die Mathematik studiert. Wie groß ist die Wahrscheinlichkeit, dass diese weiblich ist?
+> [!faq] Sie begegnen auf dem Campus zufällig einer Person, die Mathematik studiert. Wie groß ist die Wahrscheinlichkeit, dass diese weiblich ist?
+>
 > - 0.25
 > - 0.05
 > - 0.5
 > - 0.2
 > - 0
->>[!success]- Lösung
->> 0.2
+>   > [!success]- Lösung
+>   > 0.2
 
->[!faq] Dabei handelt es sich um eine:
+> [!faq] Dabei handelt es sich um eine:
+>
 > - marginale Wahrscheinlichkeit
 > - bedingte Wahrscheinlichkeit
 > - inverse Wahrscheinlichkeit
->>[!success]- Lösung
->> bedingte Wahrscheinlichkeit
+>   > [!success]- Lösung
+>   > bedingte Wahrscheinlichkeit
 
 ## Frage 3
 
->[!faq] Sie wissen, dass 450 der Soziologie-Studierenden weiblich sind. Sie begegnen zufällig einer Person auf dem Campus. Wie groß ist die Wahrscheinlichkeit, dass es sich um eine Soziologin handelt?
+> [!faq] Sie wissen, dass 450 der Soziologie-Studierenden weiblich sind. Sie begegnen zufällig einer Person auf dem Campus. Wie groß ist die Wahrscheinlichkeit, dass es sich um eine Soziologin handelt?
+>
 > - 0.05
 > - 0.6
 > - 0.75
 > - 0.45
->>[!success]- Lösung
->> 0.6
+>   > [!success]- Lösung
+>   > 0.6
 
->[!faq] Sie begegnen zufällig einer Person auf dem Campus. Wie groß ist die Wahrscheinlichkeit, dass diese Person weiblich ist?
+> [!faq] Sie begegnen zufällig einer Person auf dem Campus. Wie groß ist die Wahrscheinlichkeit, dass diese Person weiblich ist?
+>
 > - 0.75
 > - 0.05
 > - 0.45
 > - 0.5
->>[!success]- Lösung
->> 0.5
+>   > [!success]- Lösung
+>   > 0.5
 
->[!faq] Dabei handelt es sich um eine:
+> [!faq] Dabei handelt es sich um eine:
+>
 > - bedingte Wahrscheinlichkeit
 > - marginale Wahrscheinlichkeit
 > - inverse Wahrscheinlichkeit
->>[!success]- Lösung
->> marginale Wahrscheinlichkeit
+>   > [!success]- Lösung
+>   > marginale Wahrscheinlichkeit
 
 ## Frage 4
 
->[!faq] Sie begegnen zufällig einer weiblichen Person auf dem Campus. Wie groß ist die Wahrscheinlichkeit, dass es sich um eine Mathematikerin handelt?
+> [!faq] Sie begegnen zufällig einer weiblichen Person auf dem Campus. Wie groß ist die Wahrscheinlichkeit, dass es sich um eine Mathematikerin handelt?
+>
 > - 0.5
 > - 0.25
 > - 0.75
 > - 0.1
->>[!success]- Lösung
->> 0.1
+>   > [!success]- Lösung
+>   > 0.1
 
->[!faq] Um das zu berechnen, benutzen wir den:
+> [!faq] Um das zu berechnen, benutzen wir den:
+>
 > - Satz von Gauss
 > - Satz von Bayes
 > - Satz von Pythagoras
->>[!success]- Lösung
->> Satz von Bayes
-
+>   > [!success]- Lösung
+>   > Satz von Bayes
 
 # Der Satz von Bayes
 
@@ -495,23 +507,28 @@ Der Term $P(B|A)P(A)$ gibt uns die Wahrscheinlichkeit, dass jemand, der krank is
 
 # Bayesianisches Lernen
 
->[!summary] Zusammenfassung
->In der Anwendung des Satzes von Bayes auf medizinische Tests und Qualitätskontrolle lernen wir, wie man anhand von Daten Wahrscheinlichkeiten aktualisiert. Im medizinischen Kontext helfen uns _a priori_ und _a posteriori_ Wahrscheinlichkeiten zu verstehen, wie sich die Einschätzung der Krankheitswahrscheinlichkeit eines Patienten nach einem Testergebnis ändert. In der Qualitätskontrolle nutzen wir den Satz von Bayes, um die Wahrscheinlichkeit zu bestimmen, dass ein Produkt von einer bestimmten Firma stammt, basierend auf der Anzahl der gefundenen Ausschussstücke. Diese fortgeschrittenen Bayesianischen Methoden ermöglichen es uns, unsere Schätzungen zu verfeinern und zu verbessern, während wir mehr Daten sammeln, und illustrieren die dynamische Natur von Wahrscheinlichkeiten in der statistischen Inferenz.
+> [!summary] Zusammenfassung
+> In der Anwendung des Satzes von Bayes auf medizinische Tests und Qualitätskontrolle lernen wir, wie man anhand von Daten Wahrscheinlichkeiten aktualisiert. Im medizinischen Kontext helfen uns _a priori_ und _a posteriori_ Wahrscheinlichkeiten zu verstehen, wie sich die Einschätzung der Krankheitswahrscheinlichkeit eines Patienten nach einem Testergebnis ändert. In der Qualitätskontrolle nutzen wir den Satz von Bayes, um die Wahrscheinlichkeit zu bestimmen, dass ein Produkt von einer bestimmten Firma stammt, basierend auf der Anzahl der gefundenen Ausschussstücke. Diese fortgeschrittenen Bayesianischen Methoden ermöglichen es uns, unsere Schätzungen zu verfeinern und zu verbessern, während wir mehr Daten sammeln, und illustrieren die dynamische Natur von Wahrscheinlichkeiten in der statistischen Inferenz.
 
 Der Satz von Bayes hilft also, aus $B$ für $A$ zu lernen. Beim Beispiel "medizinischer Test" war
+
 - _a priori_, also vor dem Test die Wahrscheinlichkeit, dass der Patient krank ist, bei 2%,
 - _a Posteriori_, also nach positivem Testergebnis, lag die Wahrscheinlichkeit, dass der Patient krank ist, bei 16,2%.
 
 Durch die Beobachtung (des Testergebnisses) haben wir Wissen (Information) hinzugewonnen. Information wird durch eine Wahrscheinlichkeitsverteilung ausgedrückt.
 
 Wir können allerdings nur dann Wissen hinzugewinnen, wenn $A$ und $B$ nicht (stochastisch) unabhängig sind. Sind $A$ und $B$ unabhängig, gilt nämlich
+
 $$
 P(A \cap B) = P(A)P(B)
 $$
+
 und nach Definition der bedingten Wahrscheinlichkeit
+
 $$
 P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)P(B)}{P(B)} = P(A)
 $$
+
 Das heißt, das Eintreten (oder Nicht-Eintreten) von $B$ ändert die Wahrscheinlichkeit von $A$ nicht, liefert also keine Information über $A$.
 
 ## Qualitätskontrolle
@@ -519,31 +536,39 @@ Das heißt, das Eintreten (oder Nicht-Eintreten) von $B$ ändert die Wahrscheinl
 Wir sehen uns ein weiteres Beispiel aus der Qualitätskontrolle an:
 
 In einer Fabrik werden Vorprodukte von zwei verschiedenen Firmen (A Productions und B-warez) weiterverarbeitet. Dabei stammen 70% der Vorprodukte von Firma A und 30% von Firma B. Aus langjähriger Erfahrung wissen die Arbeiter der Fabrik:
+
 - Die Ausschussquoten betragen 1% bei Firma A und 5% bei Firma B.
 
 Die Arbeiter finden eine neutrale Kiste des Vorprodukts (mit sehr vielen Teilen) ohne weitere Information über den Hersteller. Sie kontrollieren $n = 100$ Stück und entdecken $y$ Ausschussstücke. Ist aus diesem Ergebnis ein Rückschluss auf den Produzenten möglich?
 
 Sei also:
+
 - Ereignis $A$: Los kommt von Firma A Productions
 - Zufallsvariable $Y$: "Anzahl der Ausschussstücke" bei $n = 100$
 
 Für unsere Beobachtung können wir eine Verteilung angeben, die jedoch vom Eintreten von $A$ abhängt. Es handelt sich um eine Binomial-Verteilung mit $n = 100$, wobei die Wahrscheinlichkeit des Eintretens von $A$ abhängt:
+
 - Ist $A$ eingetreten, also die Kiste kommt von Firma A, dann ist die Wahrscheinlichkeit für die Produktion eines Ausschussstückes $p_A = 0.01$
 - Ist dagegen $\bar{A}$ eingetreten, also die Kiste kommt aus Firma B, dann ist die Wahrscheinlichkeit $p_B = 0.05$
 
 Bemerkung: Eigentlich wird hier Ziehen ohne Zurücklegen gemacht, sprich wir müssten die Hypergeometrische Verteilung benutzen. Da wir aber keine Angabe über die Anzahl der Teile in der Kiste haben (nur "sehr viele"), nehmen wir die Binomialverteilung als Annäherung.
 
 Dementsprechend ergibt sich die bedingte Verteilung bzw. Datenverteilung von $Y$:
+
 $$
 Y|A \sim B(n, p_A)
 $$
+
 $$
 Y|\bar{A} \sim B(n, p_B)
 $$
+
 mit der Wahrscheinlichkeit der Binomialverteilung:
+
 $$
 P(Y = y|A) = \binom{n}{y} p_A^y (1 - p_A)^{n-y}
 $$
+
 ## Satz von Bayes
 
 Der Satz von Bayes lässt sich analog wie zuvor anwenden:
@@ -556,10 +581,10 @@ $$
 
 Es ergeben sich folgende Posteriori-Wahrscheinlichkeiten:
 
-| y     | 0      | 1      | 2      | 3      | 4      | 5      | 6      |
-|-------|--------|--------|--------|--------|--------|--------|--------|
-| P(A &#124; Y = y) | 0.993  | 0.965  | 0.842  | 0.505  | 0.164  | 0.036  | 0.007  |
-| P(¬A &#124; Y = y) | 0.007  | 0.035  | 0.158  | 0.495  | 0.836  | 0.964  | 0.993  |
+| y                  | 0     | 1     | 2     | 3     | 4     | 5     | 6     |
+| ------------------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| P(A &#124; Y = y)  | 0.993 | 0.965 | 0.842 | 0.505 | 0.164 | 0.036 | 0.007 |
+| P(¬A &#124; Y = y) | 0.007 | 0.035 | 0.158 | 0.495 | 0.836 | 0.964 | 0.993 |
 
 Je nach Höhe von y können wir also mehr oder weniger gut angeben, aus welcher Firma das Los wahrscheinlich kommt.
 
@@ -576,12 +601,15 @@ ist kleiner als unsere ursprüngliche Priori-Wahrscheinlichkeit $P(A) = 0.7$.
 In diesem Fall können wir die Posteriori-Wahrscheinlichkeit $P(A|Y = y)$ wiederum als Priori für eine neue Stichprobe verwenden.
 
 Sei nun:
+
 - Zufallsvariable $Z$: "Anzahl der Ausschussstücke" bei weiteren $n = 100$
 
 Offensichtlich gilt wieder $Z \sim B(n,p)$. Nun lässt sich $P(A|Z = z, Y = y)$ wie folgt berechnen:
+
 $$
 P(A|Z = z, Y = y) = \frac{P(Z = z|A) \cdot P(A|Y = y)}{P(Z =z)}
 $$
+
 Die Wahrscheinlichkeitsverteilung $P(Z = z|A)$ der Daten hängt nicht von $Y$ ab. Als Priori benutzen wir hier die vorherige Posteriori-Wahrscheinlichkeit.
 
 ## Neue Posteriori-Wahrscheinlichkeiten
@@ -589,6 +617,7 @@ Die Wahrscheinlichkeitsverteilung $P(Z = z|A)$ der Daten hängt nicht von $Y$ ab
 Sehen wir nach den $y = 3$ Stücken Ausschuss unter den ersten 100 untersuchten Stücken erneut $z$ Stücke Ausschuss, so erhalten wir folgende Posteriori-Wahrscheinlichkeiten:
 
 Für $z$ Stücke Ausschuss erhalten wir neue Posteriori-Wahrscheinlichkeiten:
+
 $$
 P(A | Z = z, Y = y) = \ldots
 $$
@@ -599,61 +628,55 @@ Zum Beispiel geht bei erneut $z = 3$ Ausschussstücken unsere Tendenz nun klarer
 
 Bei einem Radrennen wird ein Doping-Test durchgeführt. Die Firma, die den Test herstellt, gibt an, dass der Test zu 99.5% positiv ausfällt, falls ein Sportler gedopt ist. Ist ein Sportler nicht gedopt, so beträgt die Wahrscheinlichkeit für einen positiven Test 1%. Aus Erfahrung schätzt man, dass ein Viertel der Sportler gedopt ist.
 
-Sei $D$ die Zufallsvariable: _Der Sportler ist gedopt_ und $T$ die Zufallsvariable: _Der Test fällt positiv aus_.
+Sei $D$ die Zufallsvariable: *Der Sportler ist gedopt* und $T$ die Zufallsvariable: *Der Test fällt positiv aus*.
 
-
->[!faq] Welche der folgenden Aussagen sind richtig? (Mehrere Antworten können richtig sein)
+> [!faq] Welche der folgenden Aussagen sind richtig? (Mehrere Antworten können richtig sein)
+>
 > - P(D)=0.01
 > - P(D¯)=0.75
 > - P(D)=0.995
 > - P(D¯)=0.995
->>[!success]- Lösung
->> P(D¯)=0.75
+>   > [!success]- Lösung
+>   > P(D¯)=0.75
 
->[!faq] Welche der folgenden Aussagen sind richtig? (Mehrere Antworten können richtig sein)
+> [!faq] Welche der folgenden Aussagen sind richtig? (Mehrere Antworten können richtig sein)
+>
 > - P(T|D)=0.995
 > - P(T|D¯)=0.01
 > - P(T|D)=0.01
 > - P(T|D)=0.25
->>[!success]- Lösung
->> P(T|D)=0.995
->> P(T|D¯)=0.01
+>   > [!success]- Lösung
+>   > P(T|D)=0.995
+>   > P(T|D¯)=0.01
 
->[!faq] Wie groß ist die Wahrscheinlichkeit, dass der Test positiv ausfällt?
+> [!faq] Wie groß ist die Wahrscheinlichkeit, dass der Test positiv ausfällt?
+>
 > - P(T|D)=0.48
 > - P(T)=0.48
 > - P(T)=0.25625
 > - P(T)=0.995
->>[!success]- Lösung
->> P(T)=0.25625
+>   > [!success]- Lösung
+>   > P(T)=0.25625
 
->[!faq] Wie groß ist die Wahrscheinlichkeit, dass ein Sportler nicht gedopt ist, obwohl der Test positiv ausfällt?
+> [!faq] Wie groß ist die Wahrscheinlichkeit, dass ein Sportler nicht gedopt ist, obwohl der Test positiv ausfällt?
+>
 > - P(D¯|T)≈0.168
 > - P(D¯|T)≈0.039
 > - P(D¯|T)≈0.029
->>[!success]- Lösung
->> P(D¯|T)≈0.168
+>   > [!success]- Lösung
+>   > P(D¯|T)≈0.168
 
->[!faq] Um das zu berechnen, benutzen wir den:
+> [!faq] Um das zu berechnen, benutzen wir den:
+>
 > - Satz von Gauss
 > - Satz von Bayes
 > - Satz von Pythagoras
->>[!success]- Lösung
->> Satz von Bayes
+>   > [!success]- Lösung
+>   > Satz von Bayes
 
 # Nächstes Kapitel: [[BaySta-Kapitel-Grundlagen]]
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -676,15 +699,4 @@ Sei $D$ die Zufallsvariable: _Der Sportler ist gedopt_ und $T$ die Zufalls
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

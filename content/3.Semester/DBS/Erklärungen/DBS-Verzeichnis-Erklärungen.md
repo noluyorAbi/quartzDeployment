@@ -12,7 +12,6 @@ date modified: Tuesday, 16. April 2024, 11:02
 
 Entdecke einen umfassenden Leitfaden, der speziell darauf ausgerichtet ist, die komplexe Welt der Datenbanksysteme zu erschließen. Diese Sammlung ist sorgfältig strukturiert, um durch Schlüsselkonzepte und fortgeschrittene Techniken in die Kunst des Datenbankmanagements einzuführen. Hier findest du detaillierte Informationen und erläuternde Darstellungen zu einer Vielzahl von Themen, darunter Datenbankstrukturen, SQL-Befehle und vieles mehr. Tauche ein und nutze diese Ressourcen, um dein Verständnis zu vertiefen und define Fähigkeiten in der Datenbankverwaltung zu erweitern.
 
-
 ## Gesamtindex
 
 - [[3 - Ebenenarchitektur|Drei Ebenenarchitektur]]
@@ -68,23 +67,7 @@ Entdecke einen umfassenden Leitfaden, der speziell darauf ausgerichtet ist, die 
 
 - [[ER-Modell|ER-Modell]]
 
-
-
-
-
-
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -107,15 +90,4 @@ Entdecke einen umfassenden Leitfaden, der speziell darauf ausgerichtet ist, die 
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

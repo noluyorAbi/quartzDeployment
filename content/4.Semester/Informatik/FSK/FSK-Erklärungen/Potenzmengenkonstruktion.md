@@ -6,7 +6,7 @@ tags:
   - Erklaerung
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: "[[FSK-ÜB-3]]"
-Benötigte Zeit: 
+Benötigte Zeit:
 date created: Monday, 13. May 2024, 12:45
 date modified: Monday, 13. May 2024, 12:51
 ---
@@ -47,38 +47,32 @@ Betrachten wir einen NFA mit den Zuständen $\{Q_0, Q_1, Q_2\}$ und Übergängen
 ## Schritt-für-Schritt-Konstruktion des DFA
 
 ### Startzustand
+
 - Beginne mit $\epsilon$-Schließung($Q_0$), die hier nur $\{Q_0\}$ ist.
 
 ### Übergänge von $\{Q_0\}$
+
 - **Auf 'a'**: $\{Q_0, Q_1\}$ (da $Q_0 \xrightarrow{a} \{Q_0, Q_1\}$)
 - **Auf 'b'**: $\{Q_0\}$ (da $Q_0 \xrightarrow{b} \{Q_0\}$)
 
 ### Erkunden von $\{Q_0, Q_1\}$
+
 - **Auf 'a'**: Wieder $\{Q_0, Q_1\}$
 - **Auf 'b'**: $\{Q_0, Q_2\}$ (da $Q_1 \xrightarrow{b} \{Q_2\}$ und $Q_0 \xrightarrow{b} \{Q_0\}$)
 
 ### Erkunden von $\{Q_0, Q_2\}$
+
 - Dieser Schritt setzt sich fort, basierend auf vorhandenen Übergängen.
 
 ## Endzustände
+
 Wenn $Q_2$ ein Endzustand im NFA ist, dann ist jeder DFA-Zustand, der $Q_2$ enthält (wie $\{Q_0, Q_2\}$), ein Endzustand im DFA.
 
 ## Zusammenfassung
 
 Die Potenzmengenkonstruktion ermöglicht die systematische Erstellung eines DFA aus einem gegebenen NFA. Sie stellt sicher, dass der DFA deterministisch ist und die gleiche Sprache akzeptiert wie der NFA, wodurch er einfacher zu analysieren und zu implementieren ist.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -101,15 +95,4 @@ Die Potenzmengenkonstruktion ermöglicht die systematische Erstellung eines DFA 
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

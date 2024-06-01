@@ -17,12 +17,13 @@ Thema:
 ## Was sind formale Sprachen?
 
 In der theoretischen Informatik und Mathematik ist eine formale Sprache eine Menge von Zeichenketten, die aus Symbolen eines bestimmten Alphabets gebildet werden. Diese Zeichenketten (auch Wörter genannt) entsprechen den Regeln, die von einer bestimmten formalen Grammatik definiert werden. Formale Sprachen sind ein fundamentales Thema in der Disziplin der Formale Sprachen und Automatentheorie, welche sich mit der Klassifizierung und dem Verhalten verschiedener Sprachklassen und den zugehörigen Automaten beschäftigt.
+
 ## Definition einer formalen Sprache
 
 Eine formale Sprache $L$ über einem Alphabet $\Sigma$ ist definiert also eine beliebige Teilmenge von $\Sigma^*$, der Menge aller möglichen Wörter (einschließlich des leeren Wortes $\epsilon$), die aus den Symbolen von $\Sigma$ gebildet werden können. Mathematisch kann dies ausgedrückt werden also:
 
 $$
- L \subseteq \Sigma^* 
+ L \subseteq \Sigma^*
 $$
 
 Hier ist $\Sigma$ eine nichtleere Menge, die also Alphabet bekannt ist, und $\Sigma^*$ repräsentiert die Kleene-Stern-Operation, die alle möglichen Zeichenketten (einschließlich des leeren Strings) umfasst, die aus den Symbolen des Alphabets gebildet werden können.
@@ -32,7 +33,6 @@ Hier ist $\Sigma$ eine nichtleere Menge, die also Alphabet bekannt ist, und $\Si
 Formale Sprachen können nach ihrer Komplexität oder den Regeln, die sie generieren, klassifiziert werden. Die Chomsky-Hierarchie, benannt nach Noam Chomsky, ist eine bekannte Method zur Klassifikation formaler Sprachen und umfasst vier Typen:
 
 1. **Typ 0 (Rekursiv aufzählbare Sprachen):** Die allgemeinste Klasse von Sprachen, die von einer Turingmaschine erkannt werden können. Sie sind nicht notwendigerweise entscheidbar.
-   
 2. **Typ 1 (Kontextsensitive Sprachen):** Diese Sprachen benötigen Regeln, bei denen die Länge der Ausgabe immer größer oder gleich der Länge der Eingabe ist. Sie können von einer linear beschränkten Automaten erkannt werden.
 
 3. **Typ 2 (Kontextfreie Sprachen):** Diese Sprachen können durch eine kontextfreie Grammatik erzeugt werden und sind durch Pushdown-Automaten entscheidbar. Ein bekanntes Beispiel ist die Sprache der korrekt verschachtelten Klammern.
@@ -67,17 +67,7 @@ Die berühmte Frage "P vs. NP" fragt, ob diese beiden Klassen tatsächlich gleic
 
 Formale Sprachen und die Komplexitätstheorie bieten ein tiefes Verständnis der theoretischen Grundlagen der Informatik. Sie ermöglichen es uns, die Grenzen von dem, was mit Computern erreicht werden kann, zu erkunden und zu definieren, und sind entscheidend für die Entwicklung von Algorithmen, die effizient und effektiv sind.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -100,15 +90,4 @@ Formale Sprachen und die Komplexitätstheorie bieten ein tiefes Verständnis der
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

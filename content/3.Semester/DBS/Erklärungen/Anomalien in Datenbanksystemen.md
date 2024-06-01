@@ -44,18 +44,7 @@ In Datenbanksystemen können Anomalien auftreten, wenn die Datenstruktur nicht s
 
 Das Verständnis und die Vermeidung dieser Anomalien sind entscheidend für die Aufrechterhaltung der Datenintegrität, der Effizienz der Datenmanipulation und der allgemeinen Zuverlässigkeit eines Datenbanksystems.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -78,15 +67,4 @@ Das Verständnis und die Vermeidung dieser Anomalien sind entscheidend für die 
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

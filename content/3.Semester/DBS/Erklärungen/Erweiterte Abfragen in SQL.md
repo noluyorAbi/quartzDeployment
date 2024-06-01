@@ -11,11 +11,9 @@ date modified: Thursday, 4. April 2024, 15:24
 
 # Unterabfragen in SQL in „FROM“
 
-
 - In `FROM` können Unterabfragen verwendet werden, um dynamische Relationen zu erzeugen. Das Ergebnis dieser Unterabfragen wird behandelt, als wäre es eine eigenständige Tabelle.
-  - Wichtig: Jede Unterabfrage in einem `FROM`-Block muss mit einem Alias versehen werden, z.B. `(SELECT … FROM … ) AS xy`. 
+  - Wichtig: Jede Unterabfrage in einem `FROM`-Block muss mit einem Alias versehen werden, z.B. `(SELECT … FROM … ) AS xy`.
   - Der Alias dient als temporärer Name für die Ergebnistabelle und darf nicht mit dem Namen einer existierenden Tabelle oder Spalte in der Datenbank übereinstimmen.
-  
 
 # Unterabfragen in SQL in „WHERE“
 
@@ -47,7 +45,6 @@ date modified: Thursday, 4. April 2024, 15:24
 - Syntax: `WHERE [NOT] EXISTS (SELECT … FROM …)`
 - Diese Konstruktion prüft, ob die Unterabfrage Ergebnisse liefert oder nicht. Es ist eine direkte Umsetzung des Existenzquantors, oft genutzt, um Zusammenhänge zwischen verschiedenen Tabellen auszudrücken.
 
-
 # Sortierung und Gruppierung der Ergebnisse
 
 ## Sortierung der Ergebnisrelation
@@ -60,7 +57,6 @@ date modified: Thursday, 4. April 2024, 15:24
 - Mit `GROUP BY attribute_1 [, attribute_2, …]` können Ergebnisse in Gruppen sortiert werden, um Aggregatfunktionen wie `AVG()`, `COUNT()`, `MAX()`, `MIN()`, und `SUM()` anzuwenden.
 - Wichtig: Alle in der `SELECT`-Klausel aufgeführten Attribute, die nicht Teil einer Aggregatfunktion sind, müssen in der `GROUP BY`-Klausel enthalten sein.
 - Die `HAVING`-Klausel erlaubt es, Bedingungen auf die Gruppen anzuwenden, im Gegensatz zur `WHERE`-Klausel, die vor der Gruppierung angewendet wird.
-
 
 # Reihenfolge
 
@@ -76,7 +72,8 @@ In SQL bestimmt die Reihenfolge der Klauseln, wie die Abfrage verarbeitet wird. 
 8. **ORDER BY**: Sortiert die Ergebnisse der Abfrage in aufsteigender oder absteigender Reihenfolge basierend auf einer oder mehreren Spalten.
 9. **LIMIT** (oder in einigen Datenbanksystemen `FETCH FIRST`/`TOP`): Begrenzt die Anzahl der zurückgegebenen Zeilen.
 
-*Beispiel:*
+_Beispiel:_
+
 ```sql
 SELECT Kategorie, AVG(Preis) AS Durchschnittspreis
 FROM Verkaeufe
@@ -87,17 +84,7 @@ ORDER BY Durchschnittspreis DESC;
 
 Es ist wichtig zu beachten, dass nicht alle diese Klauseln in jeder Abfrage vorhanden sein müssen, aber wenn sie verwendet werden, sollte ihre Reihenfolge der oben genannten Liste entsprechen, um Syntaxfehler zu vermeiden.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -120,15 +107,4 @@ Es ist wichtig zu beachten, dass nicht alle diese Klauseln in jeder Abfrage vorh
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

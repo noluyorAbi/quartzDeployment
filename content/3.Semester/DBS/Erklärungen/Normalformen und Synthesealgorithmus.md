@@ -10,12 +10,12 @@ date modified: Saturday, 20. April 2024, 01:28
 # Warum Normalformen?
 
 - **Redundanzen im DB-Schema erzeugen [[Anomalien in Datenbanksystemen]]**
-	- [[Anomalien in Datenbanksystemen#Änderungsanomalie]] → Wenn eine Änderung vergessen wird, entsteht eine Inkonsistenz.
-	- [[Anomalien in Datenbanksystemen#Einfügeanomalie]] → Das Einfügen eines partiellen Eintrags ist nicht möglich.
-	- [[Anomalien in Datenbanksystemen#Entfernungsanomalie]] → Das Entfernen des letzten Eintrags löscht ungewollt Informationen.
-- **Ziele**: 
-	- Vermeidung von Redundanzen und Anomalien.
-	- Schrittweise Beseitigung funktionaler Abhängigkeiten (außer vom gesamten Schlüssel).
+  - [[Anomalien in Datenbanksystemen#Änderungsanomalie]] → Wenn eine Änderung vergessen wird, entsteht eine Inkonsistenz.
+  - [[Anomalien in Datenbanksystemen#Einfügeanomalie]] → Das Einfügen eines partiellen Eintrags ist nicht möglich.
+  - [[Anomalien in Datenbanksystemen#Entfernungsanomalie]] → Das Entfernen des letzten Eintrags löscht ungewollt Informationen.
+- **Ziele**:
+  - Vermeidung von Redundanzen und Anomalien.
+  - Schrittweise Beseitigung funktionaler Abhängigkeiten (außer vom gesamten Schlüssel).
 
 → Zerlegen des Schemas in ein äquivalentes Schema ohne Redundanzen und Anomalien ist gleichbedeutend mit der Normalisierung.
 
@@ -37,9 +37,10 @@ Seien 𝑋, 𝑌 Attributmengen des Relationenschemas 𝑅, d.h. 𝑋, 𝑌 ⊆ 
 # Schlüssel
 
 Eine Teilmenge 𝑆 der Attribute eines Relationenschemas 𝑅 heißt Schlüssel, falls gilt:
+
 1. **Eindeutigkeit**: Keine mögliche Ausprägung von 𝑅 kann zwei verschiedene Tuple enthalten, die sich in allen Attribute von 𝑆 gleichen.
 2. **Minimalität**: Keine echte Teilmenge von 𝑆 erfüllt bereits Bedingung (1).
-Ein Attribute heißt primär, falls es Teil eines Schlüsselkandidaten ist.
+   Ein Attribute heißt primär, falls es Teil eines Schlüsselkandidaten ist.
 
 ---
 
@@ -53,6 +54,7 @@ Ein Attribute heißt primär, falls es Teil eines Schlüsselkandidaten ist.
 # Zerlegung von Relationen
 
 Eine Zerlegung von Relation 𝑅 in 𝑅1, … , 𝑅𝑛 ist:
+
 - **Verlustlos**, falls gilt: Jede mögliche Ausprägung 𝑟 von 𝑅 lässt sich durch den natürlichen Join der Ausprägungen 𝑟1, … , 𝑟𝑛 konstruieren: 𝑟 = 𝑟1 ⋈ ⋯ ⋈ 𝑟𝑛.
 - **Abhängigkeitserhaltend**, falls gilt: Alle FD ∈ F auf 𝑅 bleiben in den lokalen funktionalen Abhängigkeiten Fi bewahrt: F = F1 ∪ ⋯ ∪ Fn.
 
@@ -65,7 +67,8 @@ Eine Zerlegung von Relation 𝑅 in 𝑅1, … , 𝑅𝑛 ist:
 > [!tip] Merkhilfe
 > Alle Attribute sind atomar
 
->[!warning] Was die 1NF bricht
+> [!warning] Was die 1NF bricht
+>
 > - Die Verwendung der Zeilenreihenfolge zur Übermittlung von Informationen verstößt gegen die 1.NF.
 > - Gemischte Datentypen innerhalb von Spalten.
 > - Eine Tabelle ohne Primärschlüssel.
@@ -82,36 +85,39 @@ Alle Attribute enthalten atomare Werte (String, Integer, …) und keine Tuple, L
 ## 2. Normalform (2NF)
 
 > [!tip] Merkhilfe
-> *1.NF* + 
+> _1.NF_ +
+>
 > - jedes Nicht-Schlüssel-Attribut (NSA) ist voll funktional abhängig von jedem Schlüsselkandidaten
-> 
+>
 > $\Longrightarrow$ **! Transitive Abhängigkeiten zwischen nicht Schlüsselkandidaten sind erlaubt**, nur falls eine Abhängigkeit zu einem Schlüsselkandidaten besteht muss eine Abhängigkeit zu allen Schlüsselkandidaten auch bestehen!
-> 
+>
 > <span style="color:orange">(Each non-key attribute must depend on the entire primary key)</span>
 
->[!warning] Was die 2NF bricht
+> [!warning] Was die 2NF bricht
+>
 > - Nicht alle Nicht-Primärattribute hängen vollständig von jedem Teil des Schlüssels ab.
 > - Attribute, die nicht vom Schlüssel abhängen, sollten nicht in der gleichen Tabelle sein.
 
 ### Erklärung:
 
 Für jedes Attribute A in einer Relation gilt in der 2. Normalform, dass:
+
 - A ein Primärattribut ist (also Teil eines Schlüsselkandidaten) oder
 - A voll funktional abhängig von jedem Schlüsselkandidaten ist.
 
 **Primärattribut** bedeutet, dass das Attribute Teil eines Schlüsselkandidaten ist. Ein **Schlüsselkandidat** ist eine minimale Menge von Attribute, die eindeutig jede Tuple in einer Relation identifizieren kann.
 
-**Voll funktional abhängig** bedeutet, dass die Abhängigkeit zwischen einem Attribute und einem Schlüsselkandidaten komplett ist. Das heißt, das Attribute kann nur eindeutig identifiziert oder abgeleitet werden, wenn der gesamte Schlüsselkandidat bekannt ist, nicht nur ein Teil davon. 
+**Voll funktional abhängig** bedeutet, dass die Abhängigkeit zwischen einem Attribute und einem Schlüsselkandidaten komplett ist. Das heißt, das Attribute kann nur eindeutig identifiziert oder abgeleitet werden, wenn der gesamte Schlüsselkandidat bekannt ist, nicht nur ein Teil davon.
 
 Die 2NF beseitigt **partielle funktionale Abhängigkeiten** von Nicht-Primärattributen von einem Teil eines zusammengesetzten Schlüssels, indem sichergestellt wird, dass jedes Nicht-Primärattribut vollständig von jedem Schlüsselkandidaten abhängt. Das führt zu einer Reduzierung von Redundanzen und Anomalien bei der Datenmanipulation.
 
 Ein einfaches Beispiel für die 2. Normalform (2NF) in einer Datenbank könnte eine Tabelle für Studentenleistungen sein:
 
-| Student_ID | Vorname | Nachname | Kurs_ID | Kursname | Dozent_ID | Dozent_Name |
-|------------|---------|----------|---------|----------|-----------|-------------|
-| 001        | Max     | Mustermann| 101     | Mathematik| 201       | Dr. Schmidt |
-| 002        | Maria   | Müller   | 102     | Englisch | 202       | Prof. Wagner |
-| 003        | Ali     | Khan     | 101     | Mathematik| 201       | Dr. Schmidt |
+| Student_ID | Vorname | Nachname   | Kurs_ID | Kursname   | Dozent_ID | Dozent_Name  |
+| ---------- | ------- | ---------- | ------- | ---------- | --------- | ------------ |
+| 001        | Max     | Mustermann | 101     | Mathematik | 201       | Dr. Schmidt  |
+| 002        | Maria   | Müller     | 102     | Englisch   | 202       | Prof. Wagner |
+| 003        | Ali     | Khan       | 101     | Mathematik | 201       | Dr. Schmidt  |
 
 In diesem Beispiel ist die Spalte "Student_ID" ein Primärattribut, da sie Teil des Schlüssels ist und jede Zeile eindeutig identifiziert. Die Spalten "Kurs_ID" und "Dozent_ID" sind ebenfalls Teil des Primärschlüssels.
 
@@ -126,36 +132,43 @@ Die 2NF ist wichtig, um Redundanzen zu vermeiden und die Datenintegrität zu gew
 ## 3. Normalform (3NF)
 
 > [!tip] Merkhilfe
- >- Keine transitiven Abhängigkeiten (Kein Nichtschlüssel zu anderem Nichtschlüssel) wobei der eine Nichtschlüssel wiederum von einem Schlüsselkandidaten abhängt
-> - *"Vermittler"* hängt also von Schlüsselkandidat ab ist aber selber keiner und hat eine Abhängigkeit zu einem Nichtschlüsselkandidaten
-> - Reicht wenn ein Nichtschlüssel Attribute von *irgendeinem* Schlüsselkandidaten abhängig ist 
-> <br/>
-> 
-> Z.B. $R = (\underline A, B, C, D)$
-> Die 3.NF ist hier nicht gegeben, da es eine Abhängigkeit $A→B$ geben kann, und dann wiederum eine Abhängigkeit $B→C$ wo $B$ also der *Vermittler* dient [[Klausuraufgaben-WS-2023-24#(a) Können wir mit Sicherheit davon ausgehen, dass $R$ auch die zweite und dritte Normalform erfüllt? Begründen Sie Ihre Aussage jeweils in ein bis zwei Sätzen.|(Beispiel aus Klausur WS23-24)]]
 >
->- <span style="color:orange">Every non-key attribute in a table should depend on the key,the whole key, and nothing but the key</span>
->- BCNF: <span style="color:#32de84">Every ~~non-key~~ attribute in a table should depend on the key,the whole key, and nothing but the key </span>
+> - Keine transitiven Abhängigkeiten (Kein Nichtschlüssel zu anderem Nichtschlüssel) wobei der eine Nichtschlüssel wiederum von einem Schlüsselkandidaten abhängt
+> - _"Vermittler"_ hängt also von Schlüsselkandidat ab ist aber selber keiner und hat eine Abhängigkeit zu einem Nichtschlüsselkandidaten
+> - Reicht wenn ein Nichtschlüssel Attribute von _irgendeinem_ Schlüsselkandidaten abhängig ist
+>   <br/>
+>
+> Z.B. $R = (\underline A, B, C, D)$
+> Die 3.NF ist hier nicht gegeben, da es eine Abhängigkeit $A→B$ geben kann, und dann wiederum eine Abhängigkeit $B→C$ wo $B$ also der _Vermittler_ dient [[Klausuraufgaben-WS-2023-24#(a) Können wir mit Sicherheit davon ausgehen, dass $R$ auch die zweite und dritte Normalform erfüllt? Begründen Sie Ihre Aussage jeweils in ein bis zwei Sätzen.|(Beispiel aus Klausur WS23-24)]]
+>
+> - <span style="color:orange">Every non-key attribute in a table should depend on the key,the whole key, and nothing but the key</span>
+> - BCNF: <span style="color:#32de84">Every ~~non-key~~ attribute in a table should depend on the key,the whole key, and nothing but the key </span>
 
->[!warning] Was die 3NF bricht
+> [!warning] Was die 3NF bricht
+>
 > - Transitive Abhängigkeiten von Nicht-Schlüsselattributen.
 > - Nicht-Schlüsselattribute, die nicht direkt vom Primärschlüssel abhängen, sondern von anderen Nicht-Schlüsselattributen.
 > - Fehlende Normalisierung von wiederholten Gruppen von Attribute in separate Tabellen.
 
 > $$
-\underbrace{\underbrace{mnr,fznr}_{Schlüsselkandidaten}→ baujahr, km-stand, n-preis, h-preis, ek-preis}_{Erfüllt \ 3.NF}
+> \underbrace{\underbrace{mnr,fznr}_{Schlüsselkandidaten}→ baujahr, km-stand, n-preis, h-preis, ek-preis}_{Erfüllt \ 3.NF}
+> $$
+
 $$
 
-> $$
-\underbrace{hnr → hersteller}_{\text{Erfüllt nicht 3. NF, da linke Seite kein Schlüsselkandidat bzw. rechts kein primäres Attribut}}
+>
+$$
+
+\underbrace{hnr → hersteller}\_{\text{Erfüllt nicht 3. NF, da linke Seite kein Schlüsselkandidat bzw. rechts kein primäres Attribut}}
+
 $$
 
 ### Erklärung:
 
-**Nicht-triviale funktionale Abhängigkeiten 𝑋 → 𝑌** bedeuten, dass das Attribut-Set 𝑌 nicht vollständig innerhalb des Attribut-Sets 𝑋 enthalten ist und 𝑌 funktional von 𝑋 abhängt. Das heißt, die Kenntnis von 𝑋 ermöglicht es eindeutig, 𝑌 zu bestimmen, ohne dass 𝑌 ein Teil von 𝑋 ist. 
+**Nicht-triviale funktionale Abhängigkeiten 𝑋 → 𝑌** bedeuten, dass das Attribut-Set 𝑌 nicht vollständig innerhalb des Attribut-Sets 𝑋 enthalten ist und 𝑌 funktional von 𝑋 abhängt. Das heißt, die Kenntnis von 𝑋 ermöglicht es eindeutig, 𝑌 zu bestimmen, ohne dass 𝑌 ein Teil von 𝑋 ist.
 
 In der 3. Normalform (3NF) wird gefordert, dass:
-- *2.NF erfüllt ist* 
+- *2.NF erfüllt ist*
 - *Für alle nicht-trivialen funktionalen Abhängigkeiten 𝑋 → 𝑌 muss 𝑋 einen Schlüsselkandidaten enthalten (bzw. kein Nichtschlüsselattribut hängt von keinem anderen Nichtschlüsselattribut ab)*, oder
 - *𝑌 muss ein Primärattribut sein.*
 
@@ -164,7 +177,7 @@ Die **3NF** baut auf der **2. Normalform (2NF)** auf und zielt darauf ab, transi
 [[DBS-Blatt 10#Aufgabe 10-3 ** Normalformen und Synthesealgorithmus 3. Normalform (3NF) **|Anwendungsbeispiel]]
 
 
-<details> 
+<details>
 <summary>### Weiteres Beispiel</summary>
 
 Stellen wir uns eine Datenbanktabelle `Angestellter` vor, die folgende Spalten hat:
@@ -205,7 +218,7 @@ Jetzt hängt in jeder Tabelle jedes Nicht-Schlüsselattribut direkt vom Primärs
 >- Rechtsreduktion
 >- Entfernung von rechtsleeren Abhängigkeiten
 >- Zusammenfassen von Abhängigkeiten mit gleicher linker Seite
->- Neues Relationsschema erzeugen 
+>- Neues Relationsschema erzeugen
 >- Rekonstruktion eines Schlüsselkandidaten:
 >- Elimination überflüssiger Relationen
 
@@ -264,14 +277,20 @@ Der Synthesealgorithmus wird verwendet, um ein beliebiges Relationenschema R mit
 > [!tip] Merkhilfe
 > Jede Abhängigkeit schaut streng auf Superkeys. Jede linke Seite ist ein Superkey.
 > Also falls **X nicht primär** ist und ** Y primär** ist es **KEIN BCNF**
-> 
+>
 
-> $$
-\underbrace{SK \rightarrow A}_{\text{Erfüllt BCNF, da linke Seite ein Superkey}}
+>
 $$
 
-> $$
-\underbrace{X \rightarrow Y}_{\text{Erfüllt nicht BCNF, da X kein Superkey}}
+\underbrace{SK \rightarrow A}\_{\text{Erfüllt BCNF, da linke Seite ein Superkey}}
+
+$$
+
+>
+$$
+
+\underbrace{X \rightarrow Y}\_{\text{Erfüllt nicht BCNF, da X kein Superkey}}
+
 $$
 
 Die **Boyce-Codd-Normalform (BCNF)** ist eine Verschärfung der 3. Normalform, die zusätzlich verlangt, dass:
@@ -359,3 +378,4 @@ Durch diese Aufteilung wird sichergestellt, dass in jeder Relation alle nicht-tr
 
 
 
+$$

@@ -28,17 +28,7 @@ Das Bayes-Theorem ermöglicht es, die Posteriori-Wahrscheinlichkeit eines Ereign
 
 Insgesamt ermöglichen Priori- und Posteriori-Wahrscheinlichkeiten eine formale Methode, um vorhandenes Wissen oder Glauben über ein Ereignis mit neuen Beobachtungen zu kombinieren und die Wahrscheinlichkeit dieses Ereignisses zu aktualisieren.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -61,15 +51,4 @@ Insgesamt ermöglichen Priori- und Posteriori-Wahrscheinlichkeiten eine formale 
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

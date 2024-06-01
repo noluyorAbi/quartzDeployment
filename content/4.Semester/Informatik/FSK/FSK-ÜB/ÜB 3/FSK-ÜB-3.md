@@ -5,14 +5,13 @@ tags:
   - informatik
   - Übungsblatt
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
-Thema: 
-Benötigte Zeit: 
+Thema:
+Benötigte Zeit:
 date created: Saturday, 4. May 2024, 20:06
 date modified: Tuesday, 28. May 2024, 18:28
 ---
 
-
-> [!info] 
+> [!info]
 > Wenn Sie Automaten angeben, tun Sie dies immer in Form eines Zustandsgraphen. Andere Formen der Darstellung (z.B. als Liste von Übergängen) werden nicht gewertet, da sie sehr viel aufwändiger zu korrigieren sind. Vergessen Sie nicht, im Zustandsgraph Start- und Endzustände zu markieren.
 
 # FSK3-1 Konstruktion von NFAs (2 Punkte)
@@ -24,29 +23,31 @@ date modified: Tuesday, 28. May 2024, 18:28
 $$
 L = \{u\ v\  w \ | \ v,w \in \Sigma^{*},\ v\in \{bab,aa\} \}
 $$
+
 Wörter dürfen nicht auf pfad stehen, nur Buchstaben
 
 ```mermaid
 graph LR
 id-1(( )) --> id0((z0))
-id0((z0)) --a,b--> id0((z0)) 
+id0((z0)) --a,b--> id0((z0))
 id0((z0)) --a,b--> id1((z1))
-id1((z1)) --bab,aa--> id2(((z2)))  
-id2(((z2))) --a,b--> id2(((z2))) 
+id1((z1)) --bab,aa--> id2(((z2)))
+id2(((z2))) --a,b--> id2(((z2)))
 ```
-
 
 ## b) Viele Programmiersprachen erlauben nur Variablennamen, die Regeln wie diese erfüllen:
 
->[!info] Aufgabenstellung
->- Ein Variablenname kann Unterstriche, kleine und große Buchstaben (a–z, A–Z) und Ziffern enthalten.
->- Ein Variablenname muss mindestens ein Zeichen enthalten.
->- Ein Variablenname darf nicht mit einer Ziffer anfangen.
->- „_“ ist kein Variablenname.
+> [!info] Aufgabenstellung
 >
->**Geben Sie einen NFA an, der genau die Variablennamen erkennt, die diesen Regeln folgen.**
+> - Ein Variablenname kann Unterstriche, kleine und große Buchstaben (a–z, A–Z) und Ziffern enthalten.
+> - Ein Variablenname muss mindestens ein Zeichen enthalten.
+> - Ein Variablenname darf nicht mit einer Ziffer anfangen.
+> - „\_“ ist kein Variablenname.
+>
+> **Geben Sie einen NFA an, der genau die Variablennamen erkennt, die diesen Regeln folgen.**
 
 Für die Übersicht führe ich ein paar Variablen hinzu:
+
 - $c = \text{Buchstaben (a-z,A-Z)}$
 - $z = \text{Ziffer}$
 - $u = \text{Unterstrich (\_)}$
@@ -61,33 +62,37 @@ id0((z0)) --u--> id2((z2))
  id2((z2)) --c,z,u--> id3(((z3)))
  id3(((z3))) --c,z,u--> id3(((z3)))
 ```
+
 - z0 kein Endzustand weil mindestens ein Wort drin sein muss
-	- Beispielname für z0: ""
+  - Beispielname für z0: ""
 - z1 Endzustand Variablenname mit mindestens einem Buchstaben
-	- Beispielname für z1: "a" und danach rekursiv eventuell : "asdf123"
+  - Beispielname für z1: "a" und danach rekursiv eventuell : "asdf123"
 - z2 kein Endzustand weil nur Unterstrich
-	- Beispielname für z2: "\_" → nicht erlaubt
+  - Beispielname für z2: "\_" → nicht erlaubt
 - z3 ist ein Endzustand, da unterstrich am Anfang aber danach Zeichen folgt
-	- Beispielname für z3: "\_a" danach rekursiv "\_asdf123"
+  - Beispielname für z3: "\_a" danach rekursiv "\_asdf123"
 
 ## c) Sei $n$ eine natürliche Zahl, $\Sigma_n = \{0, \dots, n\}$ und
 
->[!note]
+> [!note]
+>
 > $$
 > L_n = \{w \in \Sigma_n^* \mid i \in \Sigma_n, \#_i(w) = i\}
 > $$
-> 
+>
 > **Das heißt, die Sprache $L$ enthält genau die Wörter $w$, für die gilt: Es gibt eine Zahl $i \in \{0, \dots, n\}$ sodass das Wort $w$ das Symbol $i$ genau $i$-mal enthält.**
-> 
+>
 > **Z.B. ist $2012323 \in L_3$, da dieses Wort genau 1-mal das Symbol 1 enthält. Ebenso ist $20311233 \in L_3$, da dieses Wort genau 2-mal das Symbol 2 enthält. Hingegen ist $0112223 \notin L_3$.**
-> 
+>
 > **Geben Sie für jedes $n$ einen NFA $A_n$ an, der $L_n$ erkennt. Beschreiben Sie ausnahmsweise $A_n$ nicht durch einen Zustandsgraph, sondern geben Sie die Zustandsmenge, Start- und Endzustände und Übergänge (in Abhängigkeit von $n$) explizit an. Geben Sie außerdem den Zustandsgraph von $A_3$ an.**
 
 **Gedankengang:**
+
 - $2012323 \in L_3$ weil alle jede Ziffer kommt weniger als 2 mal vor $L_{3}=\{0,1,2\}$
 - $0112223 \notin L_3$ weil die 2 drei-mal vorkommt $3 \notin L_{3}$
 
->[!summary]
+> [!summary]
+>
 > ### Definition des NFA $A_n$
 >
 > Für die Definition eines Nichtdeterministischen Endlichen Automaten (NFA), der die Sprache $L_n$ erkennt, gehen wir wie folgt vor:
@@ -129,27 +134,29 @@ id0((z0)) --u--> id2((z2))
 > ### Zustandsgraph von $A_3$
 >
 > 1. **Zustände**:
->     
->     - Jeder Zustand ist ein Tupel $(c_0, c_1, c_2, c_3)$, wobei $c_i$ die Anzahl der Male darstellt, dass das Symbol $i$ gelesen wurde. Nur diejenigen Zustände, bei denen keine $c_i$ die Bedingung $c_i > i$ erfüllt, sind gültig.
->     - Fehlerzustände sind solche, bei denen mindestens ein $c_i > i$.
+>
+>    - Jeder Zustand ist ein Tupel $(c_0, c_1, c_2, c_3)$, wobei $c_i$ die Anzahl der Male darstellt, dass das Symbol $i$ gelesen wurde. Nur diejenigen Zustände, bei denen keine $c_i$ die Bedingung $c_i > i$ erfüllt, sind gültig.
+>    - Fehlerzustände sind solche, bei denen mindestens ein $c_i > i$.
+>
 > 2. **Startzustand**:
->     
->     - Der Startzustand ist $(0, 0, 0, 0)$.
+>
+>    - Der Startzustand ist $(0, 0, 0, 0)$.
+>
 > 3. **Akzeptierende Zustände**:
->     
->     - $(0, 1, 0, 0)$: Symbol 1 kommt genau einmal vor.
->     - $(0, 0, 2, 0)$: Symbol 2 kommt genau zweimal vor.
->     - $(0, 0, 0, 3)$: Symbol 3 kommt genau dreimal vor.
+>
+>    - $(0, 1, 0, 0)$: Symbol 1 kommt genau einmal vor.
+>    - $(0, 0, 2, 0)$: Symbol 2 kommt genau zweimal vor.
+>    - $(0, 0, 0, 3)$: Symbol 3 kommt genau dreimal vor.
+>
 > 4. **Übergänge**:
->     
->     - Von jedem Zustand $(c_0, c_1, c_2, c_3)$ gibt es Übergänge zu $(c_0+1, c_1, c_2, c_3)$, $(c_0, c_1+1, c_2, c_3)$, $(c_0, c_1, c_2+1, c_3)$ und $(c_0, c_1, c_2, c_3+1)$ beim Lesen der entsprechenden Symbole 0, 1, 2, bzw. 3. Übergänge, die zu ungültigen Zuständen führen, werden nicht gezeigt.
+>
+>    - Von jedem Zustand $(c_0, c_1, c_2, c_3)$ gibt es Übergänge zu $(c_0+1, c_1, c_2, c_3)$, $(c_0, c_1+1, c_2, c_3)$, $(c_0, c_1, c_2+1, c_3)$ und $(c_0, c_1, c_2, c_3+1)$ beim Lesen der entsprechenden Symbole 0, 1, 2, bzw. 3. Übergänge, die zu ungültigen Zuständen führen, werden nicht gezeigt.
 
 ---
 
 # FSK3-2 Entfernen von $\epsilon$-Übergängen und Potenzmengenkonstruktion (2 Punkte)
 
 ## a) Sei $A_1$ der folgende NFA über dem Alphabet $\{a, b, c\}$:
-
 
 ```mermaid
 graph LR
@@ -162,55 +169,62 @@ graph LR
     z3(((Z3))) -->|ε| z0((Z0))
 ```
 
->[!info] Aufgabenstellung
->Geben Sie einen NFA $A_1'$ ohne $\epsilon$-Übergänge mit $L(A_1') = L(A_1)$ an. Verwenden Sie den Algorithmus zum Entfernen von $\epsilon$-Übergängen aus der Vorlesung. Geben Sie die Zwischenschritte Ihrer Berechnung an. Das erlaubt uns, Ihnen für Folgefehler Teiilpunkte zu geben.
+> [!info] Aufgabenstellung
+> Geben Sie einen NFA $A_1'$ ohne $\epsilon$-Übergänge mit $L(A_1') = L(A_1)$ an. Verwenden Sie den Algorithmus zum Entfernen von $\epsilon$-Übergängen aus der Vorlesung. Geben Sie die Zwischenschritte Ihrer Berechnung an. Das erlaubt uns, Ihnen für Folgefehler Teiilpunkte zu geben.
 
 Alle Knoten die von $z_0$ ausgehend mit dem leeren Wort erreicht werden können sind Startzustände und müssen behandelt werden. Dies ist nur bei $z_1$ der Fall.
 
-Muss mit einem Zeichen aus $\Sigma$ beginnen und dann nur noch Epsilon Ketten. Kann von jedem Knoten Anfangen nicht nur von Startzuständen. 
+Muss mit einem Zeichen aus $\Sigma$ beginnen und dann nur noch Epsilon Ketten. Kann von jedem Knoten Anfangen nicht nur von Startzuständen.
 
 $\epsilon$ - Übergänge implizieren nicht das $\epsilon$ in der Sprache ist
+
 $$
-z_{0}\overset{a}{\rightarrow}z_{2} \quad 
-z_{2}\overset{\epsilon}{\rightarrow}z_{3}\quad 
-z_{3}\overset{\epsilon}{\rightarrow}z_{0} \quad 
+z_{0}\overset{a}{\rightarrow}z_{2} \quad
+z_{2}\overset{\epsilon}{\rightarrow}z_{3}\quad
+z_{3}\overset{\epsilon}{\rightarrow}z_{0} \quad
 z_{0}\overset{\epsilon}{\rightarrow}z_{1}
 $$
+
 Kann vereinfacht werden zu:
+
 $$
-z_{0}\overset{a}{\rightarrow}z_{2} \quad 
-z_{0}\overset{a}{\rightarrow}z_{3}\quad 
-z_{0}\overset{a}{\rightarrow}z_{0} \quad 
+z_{0}\overset{a}{\rightarrow}z_{2} \quad
+z_{0}\overset{a}{\rightarrow}z_{3}\quad
+z_{0}\overset{a}{\rightarrow}z_{0} \quad
 z_{0}\overset{a}{\rightarrow}z_{1}
 $$
-Da der Pfad mit mit $z_{0}\overset{a}{\rightarrow}z_{2}$ beginnt, darf $z_{0}\overset{\epsilon}{\rightarrow}z_{1}$ zu $z_{0}\overset{a}{\rightarrow}z_{1}$ vereinfacht werden 
+
+Da der Pfad mit mit $z_{0}\overset{a}{\rightarrow}z_{2}$ beginnt, darf $z_{0}\overset{\epsilon}{\rightarrow}z_{1}$ zu $z_{0}\overset{a}{\rightarrow}z_{1}$ vereinfacht werden
 
 **Nun das gleiche für $z_1$**
 
 $$
-z_{1}\overset{b}{\rightarrow}z_{2} \quad 
-z_{2}\overset{\epsilon}{\rightarrow}z_{3}\quad 
-z_{3}\overset{\epsilon}{\rightarrow}z_{0} \quad 
+z_{1}\overset{b}{\rightarrow}z_{2} \quad
+z_{2}\overset{\epsilon}{\rightarrow}z_{3}\quad
+z_{3}\overset{\epsilon}{\rightarrow}z_{0} \quad
 z_{0}\overset{\epsilon}{\rightarrow}z_{1}
 $$
+
 Kann vereinfacht werden zu:
+
 $$
-z_{1}\overset{b}{\rightarrow}z_{2} \quad 
-z_{1}\overset{b}{\rightarrow}z_{3}\quad 
-z_{1}\overset{b}{\rightarrow}z_{0} \quad 
+z_{1}\overset{b}{\rightarrow}z_{2} \quad
+z_{1}\overset{b}{\rightarrow}z_{3}\quad
+z_{1}\overset{b}{\rightarrow}z_{0} \quad
 z_{1}\overset{b}{\rightarrow}z_{1}
 $$
 
 Leeren Knoten zu Z0 un Z1 sind Startknoten
+
 ```mermaid
 graph LR
     start(( )) --> z0((Z0))
 	    z0((Z0)) --a-->z2((Z2))
 	    z0((Z0)) --a-->z3(((Z3)))
 	    z0((Z0)) --a-->z0((Z0))
-	    z0((Z0)) --a-->z1((Z0))  
+	    z0((Z0)) --a-->z1((Z0))
 	start2(( )) --> z1((Z1))
-	    z1((Z1)) --b-->z2((Z2))		
+	    z1((Z1)) --b-->z2((Z2))
 	    z1((Z1)) --b-->z3(((Z3)))
 	    z1((Z1)) --b-->z0((Z0))
 	    z1((Z1)) --b-->z1((Z1))
@@ -229,8 +243,8 @@ graph LR
     z3((Z3)) -->|e| z4(((Z4)))
 ```
 
->[!info] Aufgabenstellung
->Die Suche wird wesentlich beschleunigt, wenn wir $A_2$ in einen DFA umwandeln. Verwenden Sie deshalb die [[Potenzmengenkonstruktion]], um einen DFA $A_2'$ mit $L(A_2') = L(A_2)$ zu konstruieren. Geben Sie außer dem Zustandsgraph von $A_2'$ auch die Rechenschritte an, die Sie bei der Potenzmengenkonstruktion ausgeführt haben. Das erlaubt uns, Ihnen bei Folgefehlern noch Teilpunkte zu geben.
+> [!info] Aufgabenstellung
+> Die Suche wird wesentlich beschleunigt, wenn wir $A_2$ in einen DFA umwandeln. Verwenden Sie deshalb die [[Potenzmengenkonstruktion]], um einen DFA $A_2'$ mit $L(A_2') = L(A_2)$ zu konstruieren. Geben Sie außer dem Zustandsgraph von $A_2'$ auch die Rechenschritte an, die Sie bei der Potenzmengenkonstruktion ausgeführt haben. Das erlaubt uns, Ihnen bei Folgefehlern noch Teilpunkte zu geben.
 
 |   Start   |          $\rightarrow$          |   Ziel    |
 | :-------: | :-----------------------------: | :-------: |
@@ -251,6 +265,7 @@ graph LR
 | $\{0,4\}$ |               $a$               | $\{0,1\}$ |
 | $\{0,4\}$ |               $u$               | $\{0,3\}$ |
 | $\{0,4\}$ | $\Sigma \ \backslash\  \{a,u\}$ |  $\{0\}$  |
+
 ```mermaid
 graph TD
     start(( )) --> q0{{"0"}}
@@ -286,176 +301,192 @@ Ich werde den Inhalt des Bildes, das eine Textseite zum Thema Tokenizer zeigt, i
 
 # FSK3-3 Tokenizer
 
->[!note] Aufgabenstellung
+> [!note] Aufgabenstellung
 > Ein Einsatzgebiet für endliche Automaten sind Tokenizer. Diese werden verwendet, um den Quelltext einer Programmiersprache in syntaktische Einheiten (Tokens) zu zerlegen. Ein Token ist beispielsweise ein Schlüsselwort, ein Bezeichner oder ein Operator.
-> 
+>
 > Zum Beispiel wird das Programm
-> 
+>
 > ```java
 > if (x==y) {z=x;}
 > ```
-> 
+>
 > zerlegt in
-> 
+>
 > ```plaintext
 > "if" "(" "x" "==" "y" ")" "{" "z" "=" "x" "}" ";"
 > ```
-> 
+>
 > In dieser Aufgabe erstellen wir einen Tokenizer, indem wir die möglichen Tokens als reguläre Sprache auffassen.
+
 ## a) Um alle Schritte sinnvoll per Hand rechnen zu können, arbeiten wir mit einem reduzierten Alphabet ($Σ$ statt $\Sigma$ oder {}, weniger Buchstaben aus dem Alphabet, nur eine Ziffer, …):
 
 $$
 Σ = \{a, x, o, [, ], -, '\,'\}
 $$
 
-
 Um das erste Token aus einem String zu identifizieren, wird A vom Anfang des Strings aus laufen gelassen. Wenn der Lauf nie in einen Endzustand kommt, meldet der Tokenizer einen Fehler. Ansonsten wird die letzte Position, in welcher der Automat in einem Endzustand war, als Token-Ende genommen.
 
+Zum Beispiel ist bei Eingabe $'==aa['$ der Lauf
 
-Zum Beispiel ist bei Eingabe $'==aa['$ der Lauf 
 $$
 q_0 \overset{=}{\rightarrow} q_2 \overset{=}{\rightarrow} q_2 \overset{a}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{[}{\rightarrow} q_m
 $$
+
 Da $q_2$ akzeptierend ist (aber $q_m$ nicht), ist das erkannte Token $'=='$.
 
 Notieren Sie bei folgenden Strings die Zustände, die A bei Verarbeitung dieser Strings annehmen wird (die Läufe) und geben Sie je die Ausgabe des Tokenizers an. Bezüglich der Ausgabe reicht es, sofern der Tokenizer keinen Fehler zurückgibt, nur das erste erkannte Token anzugeben.
 
 ### aa\==aa:
-- Pfad: 
-$$
-q_0 \overset{a}{\rightarrow} q_4 \overset{a}{\rightarrow} q_4 \overset{=}{\rightarrow} q_5 \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
-$$
+
+- Pfad:
+  $$
+  q_0 \overset{a}{\rightarrow} q_4 \overset{a}{\rightarrow} q_4 \overset{=}{\rightarrow} q_5 \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
+  $$
 - Erkanntes Token: `aa`
 
 ### a\[0\]:
-- Pfad: 
-$$
-q_0 \overset{a}{\rightarrow} q_4 \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m
-$$
+
+- Pfad:
+  $$
+  q_0 \overset{a}{\rightarrow} q_4 \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m
+  $$
 - Erkanntes Token: `a`
 
 ### a\[\[\[\[\]:
-- Pfad: 
-$$
-q_0 \overset{a}{\rightarrow} q_4 \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{]}{\rightarrow} q_m
-$$
+
+- Pfad:
+  $$
+  q_0 \overset{a}{\rightarrow} q_4 \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{]}{\rightarrow} q_m
+  $$
 - Erkanntes Token: `a`
 
 ### "a\[0]"ax":
-- Pfad: 
-$$
-q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{[}{\rightarrow} q_5 \overset{0}{\rightarrow} q_5 \overset{]}{\rightarrow} q_7 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{x}{\rightarrow} q_7
-$$
+
+- Pfad:
+  $$
+  q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{[}{\rightarrow} q_5 \overset{0}{\rightarrow} q_5 \overset{]}{\rightarrow} q_7 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{x}{\rightarrow} q_7
+  $$
 - Erkanntes Token: `"a[0]"ax"`
 
 ### "a=\[0]"ax":
-- Pfad: 
-$$
-q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{=}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{x}{\rightarrow} q_m
-$$
+
+- Pfad:
+  $$
+  q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{=}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{x}{\rightarrow} q_m
+  $$
 - Kein erkannter Token: Fehler
 
 ### "a\[0]"a=x":
-- Pfad: 
-$$
-q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{[}{\rightarrow} q_5 \overset{0}{\rightarrow} q_5 \overset{]}{\rightarrow} q_7 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{x}{\rightarrow} q_m
-$$
+
+- Pfad:
+  $$
+  q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{[}{\rightarrow} q_5 \overset{0}{\rightarrow} q_5 \overset{]}{\rightarrow} q_7 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{x}{\rightarrow} q_m
+  $$
 - Erkannter Token: `"a[0]"`
 
 ## b) Bestimmen Sie asymptotisch (in O-Notation), wie viele Schritte der Tokenizer Automat braucht, um ein Token aus einem String der Länge $n$ zu extrahieren
 
 O(n), da die Verarbeitung von einem Zeichen ( O(1) ) ist und zweimal über den String gelaufen werden muss: Einmal zur Verarbeitung des Strings und einmal bei der Suche nach dem letzten Zustand, der ein Endzustand ist. (Man kann sich den jeweils letzten Endzustand natürlich auch merken, dann muss man nur einmal über den String laufen. Das ändert aber an der asymptotischen Laufzeit nichts.)
 
-## c) Um mehrere Tokens zu extrahieren, wird das gefundene Token von dem String entfernt und wieder von vorne ein Token gesucht. Wenn der verbleibende String leer ist, ist der Tokenizer fertig. 
+## c) Um mehrere Tokens zu extrahieren, wird das gefundene Token von dem String entfernt und wieder von vorne ein Token gesucht. Wenn der verbleibende String leer ist, ist der Tokenizer fertig.
 
-Beispiel: Bei der oben genannten Eingabe =\=aa\[ mit dem ersten Token \==, ist der Reststring nach dem Entfernen aa\[, das zweite Token dann also aa. 
+Beispiel: Bei der oben genannten Eingabe =\=aa\[ mit dem ersten Token \==, ist der Reststring nach dem Entfernen aa\[, das zweite Token dann also aa.
 
 Zerlegen Sie mit diesem Algorithmus den String a="ax0"aa\[0]=a in alle Tokens.
 
 ### String: `a:="ax0"aa[0]=a`
 
 #### Automat für `a:="ax0"aa[0]=a`
-- Pfad: 
-$$
-q_0 \overset{a}{\rightarrow} q_4 \overset{:}{\rightarrow} q_7 \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{x}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
-$$
+
+- Pfad:
+  $$
+  q_0 \overset{a}{\rightarrow} q_4 \overset{:}{\rightarrow} q_7 \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{x}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
+  $$
 - Token: `a`
 - Reststring: `"ax0"aa[0]=a`
 
 #### Automat für `:="ax0"aa[0]=a`
-- Pfad: 
-$$
-q_0 \overset{:}{\rightarrow} q_2 \overset{=}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{x}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m
-$$
+
+- Pfad:
+  $$
+  q_0 \overset{:}{\rightarrow} q_2 \overset{=}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{x}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{"}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{a}{\rightarrow} q_m \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m
+  $$
 - Token: `:=`
 - Reststring: `"ax0"aa[0]=a`
 
 #### Automat für `"ax0"`
-- Pfad: 
-$$
-q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{x}{\rightarrow} q_5 \overset{0}{\rightarrow} q_5 \overset{"}{\rightarrow} q_7
-$$
+
+- Pfad:
+  $$
+  q_0 \overset{"}{\rightarrow} q_5 \overset{a}{\rightarrow} q_5 \overset{x}{\rightarrow} q_5 \overset{0}{\rightarrow} q_5 \overset{"}{\rightarrow} q_7
+  $$
 - Token: `"ax0"`
 - Reststring: `aa[0]=a`
 
 #### Automat für `aa`
-- Pfad: 
-$$
-q_0 \overset{a}{\rightarrow} q_4 \overset{a}{\rightarrow} q_4 \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
-$$
+
+- Pfad:
+  $$
+  q_0 \overset{a}{\rightarrow} q_4 \overset{a}{\rightarrow} q_4 \overset{[}{\rightarrow} q_m \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
+  $$
 - Token: `aa`
 - Reststring: `[0]=a`
 
 #### Automat für `[`
-- Pfad: 
-$$
-q_0 \overset{[}{\rightarrow} q_1 \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
-$$
+
+- Pfad:
+  $$
+  q_0 \overset{[}{\rightarrow} q_1 \overset{0}{\rightarrow} q_m \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
+  $$
 - Token: `[`
 - Reststring: `0]=a`
 
 #### Weitere Token
+
 - `0`
-  - Pfad: 
-$$
-q_0 \overset{0}{\rightarrow} q_3 \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
-$$
+
+  - Pfad:
+    $$
+    q_0 \overset{0}{\rightarrow} q_3 \overset{]}{\rightarrow} q_m \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
+    $$
   - Token: `0`
   - Reststring: `]=a`
 
 - `]`
-  - Pfad: 
-$$
-q_0 \overset{]}{\rightarrow} q_1 \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
-$$
+
+  - Pfad:
+    $$
+    q_0 \overset{]}{\rightarrow} q_1 \overset{=}{\rightarrow} q_m \overset{a}{\rightarrow} q_m
+    $$
   - Token: `]`
   - Reststring: `=a`
 
 - `=`
   - Pfad:
-$$
-q_0 \overset{=}{\rightarrow} q_2 \overset{a}{\rightarrow} q_m
-$$
+    $$
+    q_0 \overset{=}{\rightarrow} q_2 \overset{a}{\rightarrow} q_m
+    $$
   - Token: `=`
   - Reststring: `a`
 
 #### Abschluss
+
 - `a`
-  - Pfad: 
-$$
-q_0 \overset{a}{\rightarrow} q_4
-$$
+  - Pfad:
+    $$
+    q_0 \overset{a}{\rightarrow} q_4
+    $$
   - Token: `a`
   - Reststring: `\epsilon`
 
 #### Liste der Tokens:
+
 - `"`, `=`, `"ax0"`, `aa`, `[`, `0`, `]`, `=`, `a`
 
+## d) Tatsächlich müssen wir den String nicht verändern, sondern, wenn ein Token gefunden wurde, nur den Automaten an der nächsten Position im String starten. Wir „kürzen“ den String also in $O(1)$. Wie viele Schritte brauchen wir dann asymptotisch, um alle Tokens aus einem String der Länge $n$ zu finden?
 
-## d) Tatsächlich müssen wir den String nicht verändern, sondern, wenn ein Token gefunden wurde, nur den Automaten an der nächsten Position im String starten. Wir „kürzen“ den String also in $O(1)$. Wie viele Schritte brauchen wir dann asymptotisch, um alle Tokens aus einem String der Länge $n$ zu finden? 
-
->[!warning] Hinweis
->Es ist nicht $O(n)$. Man könnte das Verfahren aber optimieren, um eine Laufzeit von $O(n)$ zu erreichen
+> [!warning] Hinweis
+> Es ist nicht $O(n)$. Man könnte das Verfahren aber optimieren, um eine Laufzeit von $O(n)$ zu erreichen
 
 Um alle Tokens in einem String der Länge $n$ zu finden, indem wir einen Automaten verwenden, der an jeder Position im String startet, betrachten wir die folgenden Schritte:
 
@@ -465,24 +496,25 @@ Um alle Tokens in einem String der Länge $n$ zu finden, indem wir einen Automat
 4. **Ende**: Der Prozess endet, wenn der Automat an einer Position kein Token mehr erkennen kann oder das Ende des Strings erreicht ist.
 
 **Analyse der Laufzeit**:
+
 - In jedem Schritt startet der Automat neu und durchläuft den Teilstring, der beginnt an der aktuellen Position bis zum Ende des Strings. Die maximale Anzahl von Schritten, die der Automat in einem Durchlauf machen kann, ist proportional zur Länge des Strings, also $O(n)$ für jeden Startpunkt.
 - Da der Automat an jeder von $n$ Positionen im String startet, beträgt die Gesamtzahl der Schritte $n \times O(n) = O(n^2)$.
 
->[!tip] Optimierung (Zusatz)
->**Optimierung**:
->Um die Laufzeit auf $O(n)$ zu optimieren, können wir folgende Techniken anwenden:
->- **Überlappende Durchläufe vermeiden**: Anstatt den Automaten jedes Mal von vorne zu starten, können wir den verbleibenden Teil des Strings nach dem Erkennen eines Tokens weiterverarbeiten. Dies bedeutet, dass der Automat direkt an der Stelle fortsetzt, an der das letzte Token endete.
->- **Vorverarbeitung des Strings**: Durch die Verwendung von Datenstrukturen wie Suffixbäumen oder Suffixarrays können wir die Suche nach Tokens effizienter gestalten, da diese Strukturen es ermöglichen, schnell zu überprüfen, ob ein bestimmter Teilstring ein gültiges Token ist.
+> [!tip] Optimierung (Zusatz)
+> **Optimierung**:
+> Um die Laufzeit auf $O(n)$ zu optimieren, können wir folgende Techniken anwenden:
 >
->Durch die Anwendung dieser Optimierungen können wir die Anzahl der benötigten Schritte auf $O(n)$ reduzieren, was eine effiziente Lösung für das Problem darstellt.
-
+> - **Überlappende Durchläufe vermeiden**: Anstatt den Automaten jedes Mal von vorne zu starten, können wir den verbleibenden Teil des Strings nach dem Erkennen eines Tokens weiterverarbeiten. Dies bedeutet, dass der Automat direkt an der Stelle fortsetzt, an der das letzte Token endete.
+> - **Vorverarbeitung des Strings**: Durch die Verwendung von Datenstrukturen wie Suffixbäumen oder Suffixarrays können wir die Suche nach Tokens effizienter gestalten, da diese Strukturen es ermöglichen, schnell zu überprüfen, ob ein bestimmter Teilstring ein gültiges Token ist.
+>
+> Durch die Anwendung dieser Optimierungen können wir die Anzahl der benötigten Schritte auf $O(n)$ reduzieren, was eine effiziente Lösung für das Problem darstellt.
 
 ---
 
 # FSK3-4 Umgedrehte Sprache (0 Punkte)
 
->[!note] Aufgabenstellung
->Sei $T$ die Funktion, die aus einem NFA $A = (Z, \Sigma, \delta, S, E)$ einen NFA $T(A) = (Z, \Sigma, \delta_0, E, S)$ erzeugt, wobei $p \in \delta_0(q, a) \Leftrightarrow q \in \delta(p, a)$.
+> [!note] Aufgabenstellung
+> Sei $T$ die Funktion, die aus einem NFA $A = (Z, \Sigma, \delta, S, E)$ einen NFA $T(A) = (Z, \Sigma, \delta_0, E, S)$ erzeugt, wobei $p \in \delta_0(q, a) \Leftrightarrow q \in \delta(p, a)$.
 
 ## a) Automaten $B = T(A)$ berechnen
 
@@ -539,10 +571,13 @@ $$
 $$
 
 ## Basis:
+
 $w = \epsilon$: Die Definition von $\delta$ liefert sofort $\delta(q, \epsilon) = \{q\} = \delta'(q, \epsilon)$
 
 ## Schritt:
+
 $a_1 \cdot \ldots \cdot a_n \to a_1 \cdot \ldots \cdot a_{n+1}$:
+
 $$
 \begin{aligned}
 q &\in \hat{\delta}(p, a_{n+1} \cdot \ldots \cdot a_1) \\
@@ -557,40 +592,36 @@ q &\in \hat{\delta}(p, a_{n+1} \cdot \ldots \cdot a_1) \\
 $$
 
 ## Schließlich zeigen wir die Behauptung:
-$$\begin{aligned}
+
+$$
+\begin{aligned}
 \overline{w} &\in L(A) \\
 \text{g.d.w. } &\exists q \in E, p \in S : q \in \hat{\delta}(p, \overline{w}) \\
 \text{g.d.w. } &\exists q \in E, p \in S : p \in \hat{\delta'}(q, w) & (\text{mit Gleichung (1)}) \\
 \text{g.d.w. } &w \in L(T(A))
-\end{aligned}$$
+\end{aligned}
+$$
 
->[!tip] Erklärung
+> [!tip] Erklärung
 > Der gegebene Beweis zeigt die Äquivalenz der Sprachen eines nichtdeterministischen endlichen Automaten (NFA) $A$ und seines transformierten Automaten $T(A)$. Die Transformation besteht darin, die Übergangsfunktion $\delta$ so zu ändern, dass sie Wörter rückwärts akzeptiert. Hier wird gezeigt, dass das Rückwärtslesen eines Wortes in $A$ dem Vorwärtslesen in $T(A)$ entspricht.
-> 
+>
 > Der Beweis nutzt eine Induktion über die Länge eines Wortes $w$ und verwendet eine umgekehrte Übergangsfunktion $\delta'$, die im rückwärts transformierten Automaten $T(A)$ verwendet wird. Der Hauptansatz besteht darin, die Äquivalenz der Übergänge zwischen den Zuständen in $A$ und $T(A)$ für alle Zustände $q, p \in Z$ und alle Wörter $w \in \Sigma^*$ zu zeigen.
-> 
+>
 > ### Basisfall
+>
 > Der Basisfall betrachtet das leere Wort $\epsilon$. Die Übergangsfunktion $\delta$ eines jeden NFA definiert, dass $\delta(q, \epsilon) = \{q\}$. Da $\delta'$ analog definiert ist, gilt auch $\delta'(q, \epsilon) = \{q\}$. Damit ist der Basisfall bestätigt: Für das leere Wort bleibt man im gleichen Zustand, sowohl in $A$ als auch in $T(A)$.
-> 
+>
 > ### Induktionsschritt
+>
 > Im Induktionsschritt wird die Behauptung von Wörtern der Länge $n$ auf Wörter der Länge $n+1$ erweitert. Wir betrachten ein Wort $a_{n+1} \cdot \ldots \cdot a_1$. Der Beweis geht davon aus, dass der Übergang von einem Zustand $p$ zu einem Zustand $q$ in $A$ mittels des Wortes $a_{n+1} \cdot \ldots \cdot a_1$ einem Übergang in $T(A)$ entspricht, wenn das Wort $a_1 \cdot \ldots \cdot a_{n+1}$ betrachtet wird. Durch die Induktionshypothese und die Definition der Übergangsfunktion $\delta'$ wird gezeigt, dass diese beiden Übergänge äquivalent sind.
-> 
+>
 > ### Zusammenfassung des Beweises
+>
 > Der Beweis schließt mit dem Nachweis, dass ein Wort $w$ von $A$ akzeptiert wird, wenn und nur wenn das rückwärts gelesene Wort $\overline{w}$ von $T(A)$ akzeptiert wird. Dies geschieht durch den Zusammenhang der anfänglichen und endgültigen Zustände und deren Erreichbarkeit über die Übergangsfunktionen $\delta$ und $\delta'$.
-> 
+>
 > Durch diesen Beweis wird etabliert, dass $L(T(A)) = \{\overline{w} \,|\, w \in L(A)\}$ gilt. Dies bedeutet, dass die Sprache von $T(A)$ genau aus den umgekehrten Wörtern der Sprache von $A$ besteht, was zeigt, dass das Rückwärtslesen der Wörter in $A$ äquivalent zum Vorwärtslesen in $T(A) ist.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -613,15 +644,4 @@ $$\begin{aligned}
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

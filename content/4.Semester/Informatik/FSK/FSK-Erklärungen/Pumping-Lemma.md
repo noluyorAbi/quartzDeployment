@@ -6,7 +6,7 @@ tags:
   - Erklaerung
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: "[[FSK-ÜB-4]]"
-Benötigte Zeit: 
+Benötigte Zeit:
 date created: Monday, 13. May 2024, 22:45
 date modified: Monday, 13. May 2024, 23:23
 ---
@@ -73,17 +73,7 @@ Daher haben wir einen Widerspruch gefunden, der zeigt, dass unsere Annahme falsc
 
 Das Pumping-Lemma ist ein mächtiges Werkzeug in der Theorie der formalen Sprachen, um zu demonstrieren, dass bestimmte Sprachen die Eigenschaften regulärer Sprachen nicht erfüllen können. Es wird typischerweise verwendet, um die Grenzen von regulären Ausdrücken und endlichen Automaten aufzuzeigen.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -106,15 +96,4 @@ Das Pumping-Lemma ist ein mächtiges Werkzeug in der Theorie der formalen Sprach
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

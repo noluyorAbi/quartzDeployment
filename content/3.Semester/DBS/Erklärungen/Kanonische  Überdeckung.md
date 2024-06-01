@@ -7,7 +7,8 @@ date created: Wednesday, 10. April 2024, 21:58
 date modified: Thursday, 9. May 2024, 22:09
 ---
 
-# [ !! Perfektes Video (*Youtube*)](https://www.youtube.com/watch?v=YiO8sO6KBIs)
+# [ !! Perfektes Video (_Youtube_)](https://www.youtube.com/watch?v=YiO8sO6KBIs)
+
 # Kanonische Überdeckung in Relationalen Datenbanken
 
 ## Ziel der Kanonischen Überdeckung
@@ -38,6 +39,7 @@ Die kanonische Überdeckung \( F_c \) einer Menge funktionaler Abhängigkeiten \
 ### Algorithmus zur Bestimmung der Kanonischen Überdeckung
 
 1. **Zerlegung in triviale und nichttriviale funktionale Abhängigkeiten (FDs):**
+
    - Trivial: FDs, deren linke Seite ein Superkey ist.
    - Nichttrivial: FDs, deren linke Seite kein Superkey ist.
 
@@ -60,18 +62,7 @@ Nach dem Algorithmus könnten zwei mögliche kanonische Überdeckungen entstehen
 
 ## Fazit
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -94,15 +85,4 @@ Nach dem Algorithmus könnten zwei mögliche kanonische Überdeckungen entstehen
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

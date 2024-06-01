@@ -104,7 +104,7 @@ GROUP BY O.Land;
 
 ```sql
 CREATE VIEW Distanzen AS
-SELECT O1.Kuerzel AS vonOrt, O2.Kuerzel AS nachOrt, 
+SELECT O1.Kuerzel AS vonOrt, O2.Kuerzel AS nachOrt,
        ABS(O1.X - O2.X) + ABS(O1.Y - O2.Y) AS Distanz
 FROM Ort O1, Ort O2
 WHERE O1.Kuerzel <> O2.Kuerzel;
@@ -124,20 +124,7 @@ WHERE O1.Kuerzel <> O2.Kuerzel;
 πNID​((σUrlaubsziel=′MUC′​(Besucht))∩(σUrlaubsziel=′BER′​(Besucht)))
 ```
 
-
-
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -160,15 +147,4 @@ WHERE O1.Kuerzel <> O2.Kuerzel;
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

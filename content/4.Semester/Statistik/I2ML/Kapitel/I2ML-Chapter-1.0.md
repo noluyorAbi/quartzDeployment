@@ -5,12 +5,13 @@ tags:
   - statistik
   - vorlesung
 fach: "[[I2ML]]"
-Thema: 
+Thema:
 date created: Monday, 22. April 2024, 17:51
 date modified: Monday, 22. April 2024, 23:05
 ---
 
 # https://slds-lmu.github.io/i2ml/
+
 # Introduction to Machine Learning
 
 Welcome to this video on the basics of machine learning. In this session, we'll cover fundamental concepts essential for understanding supervised machine learning.
@@ -19,7 +20,7 @@ Welcome to this video on the basics of machine learning. In this session, we'll 
 
 Machine learning is defined more precisely than the broader concept of artificial intelligence. To encapsulate this, we use Tom Mitchell's definition:
 
->A computer program is said to learn from experience **E** with respect to some task **T** and some performance measure **P**, if its performance on **T**, as measured by **P**, improves with experience **E**.
+> A computer program is said to learn from experience **E** with respect to some task **T** and some performance measure **P**, if its performance on **T**, as measured by **P**, improves with experience **E**.
 
 This definition will guide our exploration of what tasks, experience, and performance measures mean in machine learning, particularly within the context of supervised learning.
 
@@ -44,11 +45,11 @@ Once trained, the model can predict labels for new, unlabeled images:
 In supervised learning, we often distinguish between two types of tasks:
 
 - **Regression**: Predicts a continuous numerical output. The goal is to find a function that best fits the data, expressed as:
-  
+
   $$
   y = f(x)
   $$
-  
+
   where $x$ are features and $y$ is the target variable.
 
 - **Classification**: Predicts categorical outputs. Here, the objective is to determine a decision boundary that best separates different classes.
@@ -91,19 +92,7 @@ The learner's goal is to minimize this empirical risk, effectively tuning the mo
 
 This video introduced the basic concepts of supervised machine learning, covering the definition, learning processes, tasks, and model evaluation techniques. These foundational elements set the stage for deeper exploration into machine learning methodologies and their applications.
 
-
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -126,15 +115,4 @@ This video introduced the basic concepts of supervised machine learning, coverin
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

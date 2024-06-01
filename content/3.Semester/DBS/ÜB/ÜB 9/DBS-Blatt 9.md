@@ -11,7 +11,7 @@ date modified: Tuesday, 16. April 2024, 11:03
 
 # Aufgabe 9-1: **Beziehungen**
 
-*Geben Sie für jeden der folgenden Beziehungstypen mindestens ein Beispiel an:*
+_Geben Sie für jeden der folgenden Beziehungstypen mindestens ein Beispiel an:_
 
 ### a) 1:1
 
@@ -26,6 +26,7 @@ Jeder Mensch hat eine Mutter, aber jede Mutter kann mehrere Kinder haben
 
 - In einer Abteilung sind mehrere Mitarbeiter angestellt
 - Person ist Halter von mehreren Autos
+
 ### c) m:n
 
 Ein Auto kann von mehreren Personen genutzt werden, mehrere personen können aber auch mehrere Autos benuzten
@@ -40,10 +41,12 @@ Mehrere Firmen können zum Mittagessen zu mehreren verschiedenen Restaurants geh
 - Lieferant liefert Artikel an Kunde
 - Person besucht Konzert in Stadt
 - Krankheit besitzt Symptom und wird behandelt mit Medikament
+
 ### e) 1:n Rekursiv, d. h. eine 1:n-Beziehung eines Entity-Sets zu sich selbs
 
 - Mitarbeiter ist Chef von Mitarbeiter
 - Person ist Mutter von Person
+
 ### f) m:n Rekursiv
 
 - Person ist Nachkomme von Person
@@ -52,23 +55,23 @@ Mehrere Firmen können zum Mittagessen zu mehreren verschiedenen Restaurants geh
 
 ---
 
->[!info]
->Die nachfolgenden Aufgaben erfordern graphische Darstellungen. Da das Hochladen von Lösungsbildern aus erster Quelle nicht bevorzugt wird, wurden die graphischen Lösungen in textueller Form beschrieben. Bitte beachten Sie, dass diese Beschreibungen möglicherweise nicht besonders präzise sind. Es wird empfohlen, die Lösungen in den Folien zu betrachten.
+> [!info]
+> Die nachfolgenden Aufgaben erfordern graphische Darstellungen. Da das Hochladen von Lösungsbildern aus erster Quelle nicht bevorzugt wird, wurden die graphischen Lösungen in textueller Form beschrieben. Bitte beachten Sie, dass diese Beschreibungen möglicherweise nicht besonders präzise sind. Es wird empfohlen, die Lösungen in den Folien zu betrachten.
 
---- 
+---
 
 # Aufgabe 9-2: **Ableitung eines ER-Diagramms** [[ER-Modell|ER-Modell]]
 
-*Gegeben sei die folgende relationale **Geschäftsdatenbank** einer Kaufhauskette:*
+_Gegeben sei die folgende relationale **Geschäftsdatenbank** einer Kaufhauskette:_
 
-- ***Angestellter** (`Nummer`, `Name`, `Gehalt`, `Abteilung`, `Geburtsjahr`, `Einstellungsdatum`)*
-- ***Abteilung** (`Nummer`, `Name`, `Filiale`, `Stock`, `Leiter` [Angestellter])*
-- ***Filiale** (`Nummer`, `Stadt`, `Land`)*
-- ***Lieferant** (`Nummer`, `Name`, `Stadt`, `Land`)*
-- ***Artikel** (`Nummer`, `Name`, `Abteilung`, `Preis`, `Bestand`, `Lieferant`)*
-- ***Verkauf** (`Nummer`, `Datum`, `Artikel`, `Anzahl`, `Angestellter`, `Betrag`)*
+- **\*Angestellter** (`Nummer`, `Name`, `Gehalt`, `Abteilung`, `Geburtsjahr`, `Einstellungsdatum`)\*
+- **\*Abteilung** (`Nummer`, `Name`, `Filiale`, `Stock`, `Leiter` [Angestellter])\*
+- **\*Filiale** (`Nummer`, `Stadt`, `Land`)\*
+- **\*Lieferant** (`Nummer`, `Name`, `Stadt`, `Land`)\*
+- **\*Artikel** (`Nummer`, `Name`, `Abteilung`, `Preis`, `Bestand`, `Lieferant`)\*
+- **\*Verkauf** (`Nummer`, `Datum`, `Artikel`, `Anzahl`, `Angestellter`, `Betrag`)\*
 
-*Leiten Sie für die **Geschäftsdatenbank** aus den Relationen ein vollständiges ER-Diagramm mit Entities, Relationships und Attribute ab.*
+_Leiten Sie für die **Geschäftsdatenbank** aus den Relationen ein vollständiges ER-Diagramm mit Entities, Relationships und Attribute ab._
 
 ### Entitäten und Attribute
 
@@ -86,25 +89,25 @@ Mehrere Firmen können zum Mittagessen zu mehreren verschiedenen Restaurants geh
 - **Artikel, Abteilung, und Lieferant**: Artikel sind einer Abteilung (1:n) und einem Lieferant (1:n) zugeordnet.
 - **Verkauf**: Repräsentiert Transaktionen zwischen Artikeln und Angestellten. Attribute wie Datum, Anzahl und Betrag kennzeichnen die Transaktion.
 
---- 
+---
 
 # Aufgabe 9-3 **Ableitung eines E/R Diagrams**
 
+_Für eine Nikolaus-Geschenkeaktion, die an unterschiedlichen Schulen stattfindet, wird ein E/R-Diagramm zur besseren Übersicht benötigt. Bei dieser Aktion können sich `Nikoläuse` anmelden, um eine oder mehrere `Klassen` zu besuchen, in der `Kinder` gespendete `Geschenke` erhalten._
 
-*Für eine Nikolaus-Geschenkeaktion, die an unterschiedlichen Schulen stattfindet, wird ein E/R-Diagramm zur besseren Übersicht benötigt. Bei dieser Aktion können sich `Nikoläuse` anmelden, um eine oder mehrere `Klassen` zu besuchen, in der `Kinder` gespendete `Geschenke` erhalten.*
+_Folgende Informationen sollen im Diagram enthalten sein:_
 
-*Folgende Informationen sollen im Diagram enthalten sein:*
-- *Jeder angemeldete Nikolaus gibt seinen `Namen` und seine `Kleidergröße` an.*
-- *Eine Klasse wird durch den `Namen` des `Klassenlehrers` und eine für die jeweilige Schule eindeutige `Zimmernummer` beschrieben.*
-- *Zusätzlich wird gespeichert, zu welcher Schule eine Klasse gehört. Eine `Schule` definiert sich durch einen `Namen` und eine `Adresse`.*
-- *Jede Klasse wird nur von einem Nikolaus an einem bestimmten `Datum` besucht.*
-- *Innerhalb der Klassen gibt es mehrere Kinder, die jeweils einen `Namen` und ein `Geburtsdatum` haben.*
-- *Die vorhandenen Geschenke können eindeutig durch die `Farbe` des `Geschenkbandes` und das `Motiv` des `Geschenkpapiers` zugeordnet werden. Außerdem besitzt jedes Geschenk ein `Gewicht`.*
-- *Ein Geschenk wird von einem oder mehreren `Spendern`, welche einen `Namen` und ein `Alter` haben, an ein bestimmtes Kind verschenkt.*
-- *Ein Spender kann mehrere Geschenke verschenken und Kinder können mehrere Geschenke erhalten.*
-- *Es soll angenommen werden, dass alle verwendeten `Namen` innerhalb einer Entity eindeutig sind.*
+- _Jeder angemeldete Nikolaus gibt seinen `Namen` und seine `Kleidergröße` an._
+- _Eine Klasse wird durch den `Namen` des `Klassenlehrers` und eine für die jeweilige Schule eindeutige `Zimmernummer` beschrieben._
+- _Zusätzlich wird gespeichert, zu welcher Schule eine Klasse gehört. Eine `Schule` definiert sich durch einen `Namen` und eine `Adresse`._
+- _Jede Klasse wird nur von einem Nikolaus an einem bestimmten `Datum` besucht._
+- _Innerhalb der Klassen gibt es mehrere Kinder, die jeweils einen `Namen` und ein `Geburtsdatum` haben._
+- _Die vorhandenen Geschenke können eindeutig durch die `Farbe` des `Geschenkbandes` und das `Motiv` des `Geschenkpapiers` zugeordnet werden. Außerdem besitzt jedes Geschenk ein `Gewicht`._
+- _Ein Geschenk wird von einem oder mehreren `Spendern`, welche einen `Namen` und ein `Alter` haben, an ein bestimmtes Kind verschenkt._
+- _Ein Spender kann mehrere Geschenke verschenken und Kinder können mehrere Geschenke erhalten._
+- _Es soll angenommen werden, dass alle verwendeten `Namen` innerhalb einer Entity eindeutig sind._
 
-*Geben Sie das entsprechende E/R-Diagramm mit den Funktionalitäten an. Unterstreichen Sie dabei Attribute, die zum `Primärschlüssel` gehören. Verwenden Sie für die Beziehungen die aus der Vorlesung bekannte `Pfeilnotation`.*
+_Geben Sie das entsprechende E/R-Diagramm mit den Funktionalitäten an. Unterstreichen Sie dabei Attribute, die zum `Primärschlüssel` gehören. Verwenden Sie für die Beziehungen die aus der Vorlesung bekannte `Pfeilnotation`._
 
 ### Beschreibung
 
@@ -130,10 +133,10 @@ In der Klausur sollte auch auf die Nutzung von Pfeilnotation hingewiesen werden,
 
 # Aufgabe 9-4 **Ableitung eines Relationenschemas**
 
-*Erzeugen Sie entsprechend der Vorlesung (Kapitel 6 Folien 16-24) aus dem gegebenen E/R-Diagramm eines Christkindlmarktes ein vollständiges Relationenschema. Unterstreichen Sie dabei in jeder Relation den Primärschlüssel und überstreichen Sie die Fremdschlüssel. Begründen Sie Ihre Umsetzung der Relationship 'freier Eintritt'.*
+_Erzeugen Sie entsprechend der Vorlesung (Kapitel 6 Folien 16-24) aus dem gegebenen E/R-Diagramm eines Christkindlmarktes ein vollständiges Relationenschema. Unterstreichen Sie dabei in jeder Relation den Primärschlüssel und überstreichen Sie die Fremdschlüssel. Begründen Sie Ihre Umsetzung der Relationship 'freier Eintritt'._
 
->[!info] 
->Darstellung bitte aus dem Blatt entnehmen.
+> [!info]
+> Darstellung bitte aus dem Blatt entnehmen.
 
 ## Lösung
 
@@ -150,32 +153,21 @@ ${Kaufen(\underline{\overline{SteuerId, PersNr, Bezeichnung}},Anzahl)}$
 #### Umsetzung „freier_Eintritt“
 
 1. **Integration einer Relation in die andere** – Wenn freier Eintritt häufig verwendet wird und Anfragen meist über Mitarbeiter oder Besucher gemacht werden:
-	- ${Mitarbeiter(\underline{PersNr}, Name, \overline{SteuerId}, Datum)}$
-	- ${Besucher(\underline{SteuerId}, Geb\text{-}Datum)}$
+
+   - ${Mitarbeiter(\underline{PersNr}, Name, \overline{SteuerId}, Datum)}$
+   - ${Besucher(\underline{SteuerId}, Geb\text{-}Datum)}$
 
    Alternativ:
-	- ${Mitarbeiter(\underline{PersNr}, Name)}$
-	- ${Besucher(\underline{SteuerId}, Geb\text{-}Datum, \overline{PersNr}, Datum)}$
+
+   - ${Mitarbeiter(\underline{PersNr}, Name)}$
+   - ${Besucher(\underline{SteuerId}, Geb\text{-}Datum, \overline{PersNr}, Datum)}$
 
 2. **Eigene Relation** – Wenn nur wenige Besucher den freien Eintritt nutzen und dadurch Speicher gespart werden soll (hierbei ist entweder `PersNr` oder `SteuerId` der Primärschlüssel von `freier_Eintritt`):
-	- ${Mitarbeiter(\underline{PersNr}, Name)}$
-	- ${Mitarbeiter(\underline{PersNr}, Name)}$
-	- ${freier\_Eintritt(\overline{PersNr}, \overline{SteuerId}, Datum)}$
-
-
-
-
-
-
-
-
+   - ${Mitarbeiter(\underline{PersNr}, Name)}$
+   - ${Mitarbeiter(\underline{PersNr}, Name)}$
+   - ${freier\_Eintritt(\overline{PersNr}, \overline{SteuerId}, Datum)}$
 
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -198,15 +190,4 @@ ${Kaufen(\underline{\overline{SteuerId, PersNr, Bezeichnung}},Anzahl)}$
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

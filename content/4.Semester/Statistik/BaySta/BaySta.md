@@ -9,9 +9,11 @@ date created: Monday, 22. April 2024, 23:34
 date modified: Wednesday, 8. May 2024, 18:01
 ---
 
->[!quote] Laplace, Ramsey, de Finetti:
->” Die Wahrscheinlichkeit eines Ereignisses ist der Grad der Überzeugung, mit der ein Beobachter aufgrund eines bestimmten Informationsstandes an das Eintreten eines Ereignisses glaubt"
+> [!quote] Laplace, Ramsey, de Finetti:
+> ” Die Wahrscheinlichkeit eines Ereignisses ist der Grad der Überzeugung, mit der ein Beobachter aufgrund eines bestimmten Informationsstandes an das Eintreten eines Ereignisses glaubt"
+
 # [Kapitel-Webseite](http://bayeskurs.volkerschmid.de/)
+
 # [[BaySta-Kapitel]]
 
 # [[BaySta-Verzeichnis-Erklärungen|BaySta-Erklärungen]]
@@ -66,7 +68,7 @@ Die Modelle werden nun immer komplexer. Wir erweitern erst Mal die Einfach-Regre
 
 ## Ergänzungen
 
-Die folgenden Abschnitte sind zur inhaltlichen Ergänzung und nicht prüfungsrelevant. 
+Die folgenden Abschnitte sind zur inhaltlichen Ergänzung und nicht prüfungsrelevant.
 
 - MCMC Diagnostik für MCMC
 - Hamiltonian MC mit Stan
@@ -78,19 +80,7 @@ Die folgenden Abschnitte sind zur inhaltlichen Ergänzung und nicht prüfungsrel
   - Bruchpunktmodelle
   - Modell für Mischverteilungen
 
-
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -113,15 +103,4 @@ Die folgenden Abschnitte sind zur inhaltlichen Ergänzung und nicht prüfungsrel
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

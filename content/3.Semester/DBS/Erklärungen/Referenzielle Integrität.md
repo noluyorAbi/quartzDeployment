@@ -16,12 +16,13 @@ Referenzielle Integrität ist ein fundamentales Konzept in relationalen Datenban
 ## [[DBS-Blatt 3#c) Was versteht man unter referenzieller Integrität?]]
 
 - Bedingungen zur Sicherung der Datenintegrität bei Nutzung relationaler Datenbanken
-	 1. Ein Datensatz mit Fremdschlüssel kann nur dann eingefügt werden, wenn in der referenzierter Tabelle ein Datensatz mit den entsprechenden Werten als Primärschlüssel oder einem eindeutigen Alternativschlüssel existiert. *(nur erstellbar falls referenz existiert)*
-	 2. Datensatzlöschung oder Änderung ist nur möglich falls zu diesem Datensatz keine abhängigen Datensätze in Beziehung stehen *(nur bearbeitbar falls keine abhängigen Daten in Beziehung)* **No dangeling references**
+  1. Ein Datensatz mit Fremdschlüssel kann nur dann eingefügt werden, wenn in der referenzierter Tabelle ein Datensatz mit den entsprechenden Werten als Primärschlüssel oder einem eindeutigen Alternativschlüssel existiert. _(nur erstellbar falls referenz existiert)_
+  2. Datensatzlöschung oder Änderung ist nur möglich falls zu diesem Datensatz keine abhängigen Datensätze in Beziehung stehen _(nur bearbeitbar falls keine abhängigen Daten in Beziehung)_ **No dangeling references**
 
 ## Grundlagen der referenziellen Integrität
 
 - **Definition:**
+
   - Referenzielle Integrität stellt sicher, dass eine Beziehung zwischen zwei Tabellen konsistent bleibt. Das bedeutet, dass jede Fremdschlüsselreferenz in einer Tabelle mit einem vorhandenen Primärschlüssel in einer anderen Tabelle übereinstimmen muss.
 
 - **Zweck:**
@@ -31,6 +32,7 @@ Referenzielle Integrität ist ein fundamentales Konzept in relationalen Datenban
 ## Umsetzung in Datenbanksystemen
 
 - **Fremdschlüssel:**
+
   - Ein Fremdschlüssel in einer Tabelle verweist auf den Primärschlüssel einer anderen Tabelle und etabliert so eine referenzielle Beziehung.
   - Die referenzielle Integrität wird durchgesetzt, indem sichergestellt wird, dass jeder Wert des Fremdschlüssels in der referenzierenden Tabelle in der referenzierten Tabelle existiert.
 
@@ -41,6 +43,7 @@ Referenzielle Integrität ist ein fundamentales Konzept in relationalen Datenban
 ## Bedeutung für das Datenbankdesign
 
 - **Datenkonsistenz:**
+
   - Sichert, dass alle referenzierten Daten gültig und konsistent bleiben, was für die Zuverlässigkeit von Datenbankabfragen und -operationen unerlässlich ist.
 
 - **Beziehungserhaltung:**
@@ -49,6 +52,7 @@ Referenzielle Integrität ist ein fundamentales Konzept in relationalen Datenban
 ## Herausforderungen und Lösungen
 
 - **Herausforderungen:**
+
   - Komplexität bei der Verwaltung von Datenintegrität über zahlreiche Tabellen und Beziehungen hinweg.
   - Leistungsüberlegungen, besonders in großen Datenbanksystemen mit intensiven Datenmanipulationsoperationen.
 
@@ -66,18 +70,7 @@ Referenzielle Integrität ist ein Eckpfeiler für die Zuverlässigkeit und Robus
 
 Die Einhaltung der referenziellen Integrität ist entscheidend für die Aufrechterhaltung einer fehlerfreien, zuverlässigen Datenstruktur, indem sie sicherstellt, dass jede Referenz über Fremdschlüssel auf ein tatsächlich existierendes, korrektes Datenelement zeigt.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -100,15 +93,4 @@ Die Einhaltung der referenziellen Integrität ist entscheidend für die Aufrecht
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

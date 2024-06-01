@@ -33,7 +33,7 @@ In diesem Beispiel kann die Tupelkalkül-Abfrage `TK` wie folgt interpretiert we
 
 $$~{Schema(ver) = Schema(Verkauf) \; \{ [ver.Nummer, ver.Datum] \mid ver \in Verkauf \land (\exists ab \in Abteilung, art \in Artikel, l \in Lieferant) (ver.Abteilung = ab.Nummer \land ver.Artikel = art.Nummer \land art.Lieferant = l.Nummer \land ab.Stock = 3 \land (l.Land = 'Italien' \lor l.Land = 'Frankreich'))\}}$$
 
-*Hinzufügen durch:* $(\exists ab \in Abteilung, art \in Artikel, l \in Lieferant)$
+_Hinzufügen durch:_ $(\exists ab \in Abteilung, art \in Artikel, l \in Lieferant)$
 
 In diesem komplexen Beispiel wird die Join-Operation im Tupelkalkül durch die Bedingungen innerhalb der Abfrage illustriert, die eine Verbindung zwischen den Tabellen `Verkauf`, `Abteilung`, `Artikel` und `Lieferant` herstellen.
 
@@ -53,17 +53,7 @@ Der Tupelkalkül ist aus mehreren Gründen wichtig in Datenbanksystemen:
 
 Das Schema des Tupelkalküls bietet eine leistungsstarke Method für die Formulierung von Datenbankabfragen, die sich direkt auf Tuple und deren Attribute bezieht. Diese Method ist besonders nützlich, wenn genaue und spezifische Datenanforderungen vorliegen. Durch die Kombination des Verständnisses von Bereichs- und Tupelkalkülen können Benutzer und Entwickler effektive und effiziente Datenabfragen in relationalen Datenbanksystemen erstellen.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -86,15 +76,4 @@ Das Schema des Tupelkalküls bietet eine leistungsstarke Method für die Formuli
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

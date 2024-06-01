@@ -9,7 +9,7 @@ date created: Monday, 11. March 2024, 17:10
 date modified: Tuesday, 16. April 2024, 11:02
 ---
 
-# Aufgabe 2-1 *Datenbanksysteme – Dateiverwaltungssysteme*
+# Aufgabe 2-1 _Datenbanksysteme – Dateiverwaltungssysteme_
 
 ## Erläutern Sie die Vorteile, die Datenbanksysteme gegenüber Dateiverwaltungssystemen durch die [[3 - Ebenenarchitektur]] (Externe, Interne, Konzeptionelle Ebene) besitzen. Insbesondere soll dabei auf folgende Punkte eingegangen werden: [[Unterschiede zwischen Datenbanksystemen und Dateiverwaltungssystemen]]
 
@@ -29,9 +29,9 @@ date modified: Tuesday, 16. April 2024, 11:02
 | Zusätzliche Indexdatei muss erstellt und gewartet werden            | Zusätzliche Indexstruktur auf der Internen Ebene                                                                                                                                    |
 | → Änderung aller Anwendungsprogramme die diesen Index nutzen wollen | → Anfragebearbeitung wird automatisch von Datenbankmanagementsystem gesteuert uns so fallen keine Änderungen für die Anwendungsprogramme an (aber dennoch schnellere Zugriffzeiten) |
 
---- 
+---
 
-# Aufgabe 2-2 *Relationales Datenmodell*
+# Aufgabe 2-2 _Relationales Datenmodell_
 
 Ein Computerspielegeschäft, das sich auf Klassiker spezialisiert hat, bietet Spiele verschiedener Studios zu bestimmten Preisen an. Interessanterweise wird zu jedem Studio auch die Anzahl der Mitarbeiter gespeichert, was einzig der Geschäftsinhaber zu wissen scheint.
 
@@ -73,15 +73,15 @@ Diese Datenbank dient dazu, einen Überblick über das Angebot des Geschäfts zu
 
 ### Tabelle Studios
 
-| Studio  (key)  | Mitarbeiteranzahl |
-| --------- | ----------------- |
-| LucasArts | 45                |
-| Atari     | 3                 |
-| Nintendo  | 72                |
+| Studio (key) | Mitarbeiteranzahl |
+| ------------ | ----------------- |
+| LucasArts    | 45                |
+| Atari        | 3                 |
+| Nintendo     | 72                |
 
 ### Tabelle Spiele
 
-| Studio | Spiel      (key)                 | Erscheinungsatum | Preis |
+| Studio | Spiel (key)                 | Erscheinungsatum | Preis |
 | ------ | --------------------------- | ---------------- | ----- |
 | 1      | The Secret of Monkey Island | 1990             | 49    |
 | 2      | E.T. the Extra-Terrestrial  | 1982             | 179   |
@@ -91,17 +91,7 @@ Diese Datenbank dient dazu, einen Überblick über das Angebot des Geschäfts zu
 
 Also nächstes: [[DBS-Blatt 3]]
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -124,15 +114,4 @@ Also nächstes: [[DBS-Blatt 3]]
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

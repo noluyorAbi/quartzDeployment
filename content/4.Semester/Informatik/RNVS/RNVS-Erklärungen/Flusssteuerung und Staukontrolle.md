@@ -6,7 +6,7 @@ tags:
   - Erklaerung
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema: "[[RNVS-4VL-10-05-2024]]"
-Benötigte Zeit: 
+Benötigte Zeit:
 date created: Thursday, 9. May 2024, 23:47
 date modified: Thursday, 16. May 2024, 18:03
 ---
@@ -16,6 +16,7 @@ date modified: Thursday, 16. May 2024, 18:03
 Die Flusssteuerung und Staukontrolle sind zwei wesentliche Mechanismen in Netzwerkprotokollen, die dazu beitragen, die Effizienz und Zuverlässigkeit der Datenübertragung zwischen Computern in einem Netzwerk zu gewährleisten. Diese Techniken sind besonders wichtig in Umgebungen, wo das Risiko von Datenverlust oder Netzwerküberlastung besteht.
 
 ## Flusssteuerung
+
 Die Flusssteuerung ist ein Verfahren zur Steuerung der Datenmenge, die zwischen zwei Geräten übertragen wird, um sicherzustellen, dass der Sender nicht mehr Daten sendet, als der Empfänger verarbeiten und bestätigen kann. Ziel ist es, eine Überflutung des Empfängerspeichers zu vermeiden, was zu Datenverlust führen könnte.
 
 - **Ziel**: Sicherstellen, dass der Empfänger nicht mehr Daten empfängt, als er verarbeiten kann, um Überflutung und Datenverlust zu vermeiden.
@@ -25,6 +26,7 @@ Die Flusssteuerung ist ein Verfahren zur Steuerung der Datenmenge, die zwischen 
   - **Ratenbasierte Steuerung (Rate Based Control)**: Bei dieser Methode wird die Übertragungsrate basierend auf der aktuellen Netzwerklast oder den Empfängerkapazitäten dynamisch angepasst.
 
 ## Staukontrolle
+
 Die Staukontrolle zielt darauf ab, Überlastungen im Netzwerk zu vermeiden. Sie regelt den Datenverkehr, um zu verhindern, dass zu viele Daten gleichzeitig gesendet werden und somit die Netzwerkleistung beeinträchtigen.
 
 - **Ziel**: Reduzierung der Netzwerküberlastung, um hohe Latenzzeiten und Paketverlust zu vermeiden und die Datenübertragungsqualität zu erhalten.
@@ -36,17 +38,7 @@ Die Staukontrolle zielt darauf ab, Überlastungen im Netzwerk zu vermeiden. Sie 
 
 Die Kombination aus Flusssteuerung und Staukontrolle ermöglicht eine effiziente und zuverlässige Netzwerkkommunikation, indem sie sicherstellt, dass Datenpakete weder verloren gehen noch das Netzwerk überlastet wird. Diese Techniken sind unerlässlich für die Aufrechterhaltung der Leistung und Stabilität von Netzwerken, besonders in hochvolumigen oder dynamischen Umgebungen.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -69,15 +61,4 @@ Die Kombination aus Flusssteuerung und Staukontrolle ermöglicht eine effiziente
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

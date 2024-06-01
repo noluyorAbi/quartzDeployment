@@ -5,7 +5,7 @@ tags:
   - informatik
   - Übungsblatt
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
-Thema: 
+Thema:
 date created: Wednesday, 24. April 2024, 00:14
 date modified: Friday, 26. April 2024, 02:05
 ---
@@ -76,18 +76,7 @@ Die Sprache $L$ besteht also aus allen Wörtern über $\Sigma$, in denen die Sum
 
 Da sowohl das leere Wort als auch jede Konkatenation von Wörtern aus $L$ die definierende Eigenschaft von $L$ erfüllen, haben wir gezeigt, dass $L^* \subseteq L$.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -110,15 +99,4 @@ Da sowohl das leere Wort als auch jede Konkatenation von Wörtern aus $L$ die de
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

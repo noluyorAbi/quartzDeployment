@@ -5,7 +5,7 @@ tags:
   - 4semester
   - Übungsblatt
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
-Thema: 
+Thema:
 Benötigte Zeit: 2h 15m (spät nachts geworden)
 date created: Friday, 26. April 2024, 21:46
 date modified: Wednesday, 8. May 2024, 18:39
@@ -316,18 +316,7 @@ _Betrachte alle Blätter unter diesem Knoten_
 
 Zähle diese: Es sind 8 Stück
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -350,15 +339,4 @@ Zähle diese: Es sind 8 Stück
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

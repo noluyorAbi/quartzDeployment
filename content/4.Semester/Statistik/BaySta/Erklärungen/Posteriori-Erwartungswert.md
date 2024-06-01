@@ -32,9 +32,11 @@ Wenn deine Priori-Verteilung eine stetige Gleichverteilung ist (z.B. $\pi \sim U
 Angenommen, du hast eine Münze geworfen und willst die Wahrscheinlichkeit eines Kopfes schätzen. Deine Priori-Verteilung ist $\pi \sim U(0, 1)$, und du beobachtest 3 Köpfe und 7 Zahlwürfe in 10 Würfen. Deine Posteriori-Verteilung wäre $\text{Beta}(1+3, 1+7) = \text{Beta}(4, 8)$.
 
 Der Posteriori-Erwartungswert berechnet sich dann als:
+
 $$
 E[\pi] = \frac{\alpha}{\alpha + \beta} = \frac{4}{4+8} = \frac{1}{3}
 $$
+
 Dieser Wert ist deine beste Schätzung der Kopfwahrscheinlichkeit nach dem Betrachten der Daten.
 
 ## Posteriori-Erwartungswert bei diskreten Gleichverteilungen
@@ -44,21 +46,26 @@ Für diskrete Gleichverteilungen, wo $\pi$ nur spezifische Werte annehmen kann (
 ### Beispiel
 
 Wenn $\pi$ die gleiche Münzwurfaufgabe wie oben auf einem Gitter annimmt, würdest du jede Gitterstelle $\pi_k$ evaluieren und die Posteriori-Wahrscheinlichkeiten berechnen:
+
 $$
 P(\pi_k \mid Daten) \propto \pi_k^{3} (1-\pi_k)^{7}
 $$
+
 Nach der Normalisierung dieser Wahrscheinlichkeiten erhältst du einen Posteriori-Erwartungswert durch Summierung:
+
 $$
 E[\pi] \approx \sum_{k=0}^{100} \pi_k \cdot P(\pi_k \mid Daten)
 $$
+
 ## Zusammenfassung
 
-Der Posteriori-Erwartungswert ist eine robuste Methode zur Schätzung von Wahrscheinlichkeiten, die dein Vorwissen und neue Daten kombiniert. Er hilft dir, Entscheidungen auf der Grundlage des aktualisierten Wissens zu treffen und ist besonders nützlich in Unsicherheitssituationen. Ob in stetigen oder diskreten Settings, das Prinzip bleibt das gleiche: aktualisiere deine Überzeugungen auf Basis neuer Beweise. 
+Der Posteriori-Erwartungswert ist eine robuste Methode zur Schätzung von Wahrscheinlichkeiten, die dein Vorwissen und neue Daten kombiniert. Er hilft dir, Entscheidungen auf der Grundlage des aktualisierten Wissens zu treffen und ist besonders nützlich in Unsicherheitssituationen. Ob in stetigen oder diskreten Settings, das Prinzip bleibt das gleiche: aktualisiere deine Überzeugungen auf Basis neuer Beweise.
 
 Für weiterführende praktische Übungen und vertiefende Erklärungen empfehlen wir, Softwaretools wie R oder Python zu verwenden, um reale Datensätze zu analysieren und deine theoretischen Kenntnisse anzuwenden.
 
->[!example]
->#### Beispiel R:
+> [!example]
+>
+> #### Beispiel R:
 >
 > Ein einfacher Weg, um den Umgang mit Posteriori-Erwartungswerten in R zu üben, ist die Verwendung eines simulierten Datensatzes für eine Binomialaufgabe. Nehmen wir an, du möchtest die Erfolgswahrscheinlichkeit eines Produkts auf der Basis von Verkaufsdaten schätzen.
 >
@@ -97,6 +104,7 @@ Für weiterführende praktische Übungen und vertiefende Erklärungen empfehlen 
 > ```
 >
 > ### Was dieser Code macht:
+>
 > 1. **Pakete und Bibliotheken laden:** Lädt `ggplot2` für die Visualisierung. Dieses Paket ist sehr beliebt für statistische Grafiken in R.
 > 2. **Daten Simulieren:** Erzeugt einen Datensatz, der annimmt, dass von 100 Versuchen 30 erfolgreich sind.
 > 3. **Priori festlegen:** Startet mit einer Gleichverteilung (Beta(1,1)), die eine nicht-informative Priori-Verteilung darstellt.
@@ -106,17 +114,7 @@ Für weiterführende praktische Übungen und vertiefende Erklärungen empfehlen 
 >
 > Dieser R-Code bietet eine einfache, praktische Anwendung der Bayesschen Statistik mit einem simulierten Beispiel, das die Theorie in einen realen Kontext setzt. Durch Anpassen der Daten oder der Priori-Verteilung können die Studierenden experimentieren und sehen, wie sich die Ergebnisse ändern.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -139,15 +137,4 @@ Für weiterführende praktische Übungen und vertiefende Erklärungen empfehlen 
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

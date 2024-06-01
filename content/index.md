@@ -1,9 +1,9 @@
 ---
-Thema: 
+Thema:
 tags:
   - informatik
   - statistik
-fach: 
+fach:
 title: Studying made easy.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
@@ -20,7 +20,12 @@ date modified: Wednesday, 29. May 2024, 13:37
 <!-- Scroll Indicator END -->
 
 # About This Site
+
 This website serves as a centralized archive, offering you structured access to a wealth of study materials that I’ve gathered and written in the language of the module (mostly German). It’s designed to provide a clear, organized, and comprehensive resource for anyone interested in the intricacies of computer science, as seen through my personal academic lens. If necessary, the website can be translated into any required language using a browser’s built-in translator.
+
+# 💬 Comments
+
+At the end of each chapter, there is a comment section where I invite open and respectful discussions. Please share your thoughts, feedback, and questions there. Your contributions helps me improve the content and create a vibrant learning community.
 
 # 📚 Modules
 
@@ -38,7 +43,8 @@ This website serves as a centralized archive, offering you structured access to 
 |                | [[4.Semester]]                                          | active |
 
 # Website Update Graph
-This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science. 
+
+This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science.
 
 <!-- IMPORT SVG HERE -->
 
@@ -46,49 +52,14 @@ This graph shows the fluctuating activity on the website over time. It reflects 
 
 <!-- IMPORT SVG HERE END -->
 
+<center>
 
+<h1 style="font-family: 'Arial', sans-serif; color: #333; font-size: 36px; font-weight: bold; margin-top: 40px;">↓ Guestbook ↓</h1>
 
-
-
+</center>
 
 <!-- There are scripts below this tag -->
 <!-- linter-disable -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Google tag (gtag.js) -->
 
@@ -163,20 +134,7 @@ console.log(asciiArt1);
 console.log(asciiArt2); 
 </script>
 
-
-
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -199,15 +157,4 @@ console.log(asciiArt2);
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

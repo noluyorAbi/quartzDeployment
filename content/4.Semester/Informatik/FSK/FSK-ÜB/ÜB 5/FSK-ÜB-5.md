@@ -5,7 +5,7 @@ tags:
   - informatik
   - Übungsblatt
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
-Thema: 
+Thema:
 Benötigte Zeit: 6h
 date created: Tuesday, 21. May 2024, 16:56
 date modified: Friday, 31. May 2024, 20:46
@@ -15,56 +15,69 @@ date modified: Friday, 31. May 2024, 20:46
 
 ## a) Sei $L = L(ab^*c)$ eine Sprache über dem Alphabet $\Sigma = \{a, b, c\}$. Geben Sie für jedes der folgenden Wörter $u_i, i \in \{1, 2, 3\}$, eine kompakte Beschreibung der Äquivalenzklasse $[u_i]$ der Nerode-Relation von $L$ an.
 
->[!note] Aufgabenstellung
->1. $u_1 = abb$
->2. $u_2 = \varepsilon$
->3. $u_3 = c$
+> [!note] Aufgabenstellung
+>
+> 1.  $u_1 = abb$
+> 2.  $u_2 = \varepsilon$
+> 3.  $u_3 = c$
 
->[!tip]- Anleitung zum lösen der Aufgabe
+> [!tip]- Anleitung zum lösen der Aufgabe
 > Um die Aufgabenstellung zu lösen, hier eine klare Anleitung, wie man die Äquivalenzklassen der Nerode-Relation für die Sprache $L = L(ab^*c)$ über das Alphabet $\Sigma = \{a, b, c\}$ bestimmt:
+>
 > ### Schritt 1: Verständnis der Sprache $L$
+>
 > Die Sprache $L$ umfasst alle Wörter, die mit dem Buchstaben 'a' beginnen, gefolgt von beliebig vielen 'b' (auch keinem) und einem abschließenden 'c'. Beispiele für Wörter in $L$ sind "ac", "abc", "abbc", usw.
 >
 > ### Schritt 2: Definition der Nerode-Relation
+>
 > Zwei Wörter $u$ und $v$ sind äquivalent bezüglich der Nerode-Relation einer Sprache $L$, wenn für jedes mögliche Anhängsel $x$ aus $\Sigma^*$ gilt:
+>
 > - $ux \in L$ genau dann, wenn $vx \in L$
 >
 > ### Schritt 3: Analyse der vorgegebenen Wörter
+>
 > Für jedes der vorgegebenen Wörter $u_i$ (in diesem Beispiel nur $u_1 = abb$), bestimmen wir die Äquivalenzklasse $[u_1]$, indem wir prüfen, welche Anhängsel $x$ das resultierende Wort $u_1x$ in $L$ liegen lassen.
 >
 > #### Beispiel $u_1 = abb$:
+>
 > - Wenn wir "c" an "abb" anhängen (d.h., $x = c$), erhalten wir "abbc", was in $L$ liegt.
 > - Wenn wir irgendein anderes Symbol oder eine Kombination aus Symbolen, die nicht mit "c" enden, an "abb" anhängen, liegt das resultierende Wort nicht in $L$.
 >
 > Daher ist die Äquivalenzklasse von $u_1$ definiert durch alle Wörter $v$, für die $vc$ das einzige Wort in $L$ ist. Dazu gehört jedes Wort, das "abb" voranstellt und mit "c" endet.
 >
 > ### Schritt 4: Formulierung der Äquivalenzklassen
+>
 > Die Äquivalenzklasse für $u_1$ ist:
->$$
->[abb] = \{ v \in \Sigma^* : vc \in L \text{ und kein anderes } vx \in L \text{
->für } x \neq c \}
->$$
+>
+> $$
+> [abb] = \{ v \in \Sigma^* : vc \in L \text{ und kein anderes } vx \in L \text{
+> für } x \neq c \}
+> $$
 >
 > ### Schritt 5: Generalisierung für weitere Wörter
+>
 > Diesen Prozess kann man für jedes andere Wort in ähnlicher Weise wiederholen, um die jeweilige Äquivalenzklasse bezüglich der Nerode-Relation der Sprache $L$ zu bestimmen.
 >
 > Dieser Ansatz nutzt das Prinzip, dass die Nerode-Relation eine Äquivalenzrelation ist und in Klassen einteilt, welche die Verhaltensmuster der Wörter gegenüber der Sprache $L$ abbilden. Durch das Verstehen, welche Anhängsel ein Wort in die Sprache einfügen oder ausschließen, kann man die Äquivalenzklassen strukturieren und definieren.
+
 ### 1. $u_1 = abb$
 
 $$
 [abb] = \{ v \in \Sigma^* : vc \in L \text{ und kein anderes } vx \in L \text{
 für } x \neq c \}
 $$
+
 $$
- [abb] = \{ v \in \Sigma^* \mid \forall x \in \Sigma^* : vx \in L \leftrightarrow x = c \} 
+ [abb] = \{ v \in \Sigma^* \mid \forall x \in \Sigma^* : vx \in L \leftrightarrow x = c \}
 $$
 
->[!success] Musterlösung
->Präfix suchen was muss nach dem Wort stehen, damit es regulär ist
->Danach: Präfix damit das Wort gebildet werden kann 
->$$
->u_{1}=ab^*c
->$$
+> [!success] Musterlösung
+> Präfix suchen was muss nach dem Wort stehen, damit es regulär ist
+> Danach: Präfix damit das Wort gebildet werden kann
+>
+> $$
+> u_{1}=ab^*c
+> $$
 
 ### 2. $u_2 = \epsilon$
 
@@ -72,29 +85,35 @@ $$
 [\varepsilon] = \{ab^{*}c\}
 $$
 
->[!success] Musterlösung
->$$
->[\varepsilon]=\{\varepsilon\}
->$$
+> [!success] Musterlösung
+>
+> $$
+> [\varepsilon]=\{\varepsilon\}
+> $$
 
 ### 3. $u_3 = c$
+
 Suffix
+
 $$
 [c] = \emptyset
 $$
-Präfix 
 
->[!success] Musterlösung
->$$
->[c]=\{ L((c\mid b\mid aa) \Sigma^{*})\mid (ab^{*}a\Sigma^{*})\mid ab^{*}c\Sigma \Sigma^*) \}
->$$
+Präfix
+
+> [!success] Musterlösung
+>
+> $$
+> [c]=\{ L((c\mid b\mid aa) \Sigma^{*})\mid (ab^{*}a\Sigma^{*})\mid ab^{*}c\Sigma \Sigma^*) \}
+> $$
 
 ## b) Bestimmen Sie den Nerode-Index folgender Sprachen $L_i, i \in \{1, 2, 3\}$, über Alphabeten $\Sigma_i$ und entscheiden Sie mit dem Satz von Myhill und Nerode, welche der Sprachen regulär sind. Geben Sie für jede Sprache mit endlichem Nerode-Index alle paarweise verschiedenen Äquivalenzklassen an (1 Repräsentant pro Klasse).
 
->[!note] Aufgabenstellung
->1. $L_1 = \{aaab, aabb, abab, abbb, baab, bbab, bbbb\}$ mit $\Sigma_1 = \{a, b\}$
->2. $L_2 = \{w\overline{w}w \mid w \in \Sigma_2^*\}$ mit $\Sigma_2 = \{a, b\}$
->3. $L_3 = \{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und } i = 2, \text{ dann } j < k\}$ mit $\Sigma_3 = \{a, b, c\}$
+> [!note] Aufgabenstellung
+>
+> 1.  $L_1 = \{aaab, aabb, abab, abbb, baab, bbab, bbbb\}$ mit $\Sigma_1 = \{a, b\}$
+> 2.  $L_2 = \{w\overline{w}w \mid w \in \Sigma_2^*\}$ mit $\Sigma_2 = \{a, b\}$
+> 3.  $L_3 = \{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und } i = 2, \text{ dann } j < k\}$ mit $\Sigma_3 = \{a, b, c\}$
 
 ### 1. $L_1 = \{aaab, aabb, abab, abbb, baab, bbab, bbbb\}$ mit $\Sigma_1 = \{a, b\}$
 
@@ -102,11 +121,13 @@ Präfix
 
 **Sprache**: $L_1 = \{aaab, aabb, abab, abbb, baab, bbab, bbbb\}$
 **Alphabet**: $\Sigma_1 = \{a, b\}$
+
 #### Nerode-Index und Ä quivalenzklassen
 
 **Bestimmung**: Der Nerode-Index von $L_1$ wird durch Analyse der rechtsinvarianten Äquivalenzrelation bestimmt, bei der zwei Wörter $x$ und $y$ äquivalent sind, wenn für alle $z$ gilt, dass $xz \in L_1$ genau dann, wenn $yz \in L_1$.
 
 **Äquivalenzklassen**:
+
 1. **Klasse 1**: Alle Wörter in $L_1$. Anhängen von Zeichen führt aus $L_1$ heraus.
 2. **Klasse 2**: Alle Wörter, die nicht in $L_1$ sind. Anhängen von Zeichen führt nicht in $L_1$ hinein.
 
@@ -120,30 +141,33 @@ Nach dem Satz von Myhill-Nerode ist eine Sprache regulär, wenn die Anzahl ihrer
 
 ### 2. $L_2 = \{w\overline{w}w \mid w \in \Sigma_2^*\}$ mit $\Sigma_2 = \{a, b\}$
 
->[!tip] Erklärung
-> 
-> 
+> [!tip] Erklärung
+>
 > #### Was ist $L_2$?
-> 
+>
 > Die Sprache $L_2$ besteht aus Wörtern der Form $w\overline{w}w$, wobei $w$ irgendein Wort über dem Alphabet $\{a, b\}$ ist, und $\overline{w}$ das „komplementäre Wort“ zu $w$ darstellt. Das heißt, in $\overline{w}$ ist jedes 'a' zu einem 'b' geändert und jedes 'b' zu einem 'a'.
-> 
+>
 > #### Warum ist $L_2$ keine reguläre Sprache?
-> 
+>
 > Reguläre Sprachen sind dadurch gekennzeichnet, dass sie eine endliche Anzahl von „Mustern“ oder Regeln haben, die durch einfache Automaten (endliche Automaten) verarbeitet werden können. Diese Automaten haben nur eine begrenzte Anzahl von Zuständen.
-> 
+>
 > #### Das Problem mit unendlich vielen Mustern:
-> In $L_2$ kann das Wort $w$ beliebig lang und komplex sein, was bedeutet, dass die Möglichkeiten für $w$ und somit für die Kombinationen von $w\overline{w}w$ unbegrenzt sind. 
-> 
+>
+> In $L_2$ kann das Wort $w$ beliebig lang und komplex sein, was bedeutet, dass die Möglichkeiten für $w$ und somit für die Kombinationen von $w\overline{w}w$ unbegrenzt sind.
+>
 > #### Beispiel zur Verdeutlichung:
+>
 > - Wenn $w = a$, dann ist $w\overline{w}w = abaa$.
 > - Wenn $w = ab$, dann ist $w\overline{w}w = abbaab$.
-> 
+>
 > Jedes unterschiedliche $w$ führt zu einem einzigartigen Muster von $w\overline{w}w$, das spezifisch nur für dieses $w$ gültig ist. Jedes Mal, wenn $w$ sich ändert, ändert sich das ganze Muster, was bedeutet, dass theoretisch unendlich viele unterschiedliche Muster möglich sind.
-> 
+>
 > #### Myhill-Nerode Theorem:
+>
 > Nach diesem Theorem ist eine Sprache genau dann regulär, wenn es eine endliche Anzahl von Äquivalenzklassen gibt, die beschreiben, wie man Wörter der Sprache durch das Anhängen von Suffixen unterscheiden kann. In $L_2$ führt jedoch jedes unterschiedliche $w$ zu einer neuen Äquivalenzklasse, da keine zwei verschiedenen $w$ das gleiche Muster von $w\overline{w}w$ ergeben können. Das bedeutet, dass es unendlich viele solcher Klassen gibt.
-> 
+>
 > ### Fazit:
+>
 > Da $L_2$ durch jede Variation von $w$ eine neue Äquivalenzklasse benötigt und da es unendlich viele mögliche $w$ gibt, gibt es auch unendlich viele Äquivalenzklassen. Ein endlicher Automat könnte nicht unendlich viele Zustände haben, um jedes mögliche Muster zu speichern oder zu verarbeiten. Deshalb ist $L_2$ keine reguläre Sprache.
 
 ### 3. $L_3 = \{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und } i = 2, \text{ dann } j < k\}$ mit $\Sigma_3 = \{a, b, c\}$
@@ -155,25 +179,28 @@ Nach dem Satz von Myhill-Nerode ist eine Sprache regulär, wenn die Anzahl ihrer
 **Begründung**: Die Sprache $L_3$ enthält eine kontextabhängige Bedingung, die verlangt, dass $j < k$, wenn $i = 2$. Diese Bedingung führt zu einer unendlichen Anzahl von Äquivalenzklassen, da für jedes $j$ ein $k$ existieren muss, das größer als $j$ ist. Ein endlicher Automat kann diese kontextabhängige Beziehung nicht verarbeiten, da er nur eine feste Anzahl von Zuständen und Übergängen hat, die keine unendlichen, von den Werten anderer Teile des Wortes abhängigen Bedingungen ausdrücken können.
 
 ### Schlussfolgerung:
+
 Die unendliche Anzahl und die Art der Äquivalenzklassen, die durch die Bedingung $j < k$ entstehen, überschreiten die Möglichkeiten eines endlichen Automaten, was gemäß dem Myhill-Nerode Theorem zur Nicht-Regulärität der Sprache führt.
 
 ---
 
 # FSK5-2 Pumping-Lemma für kontextfreie Sprachen (2 Punkte)
 
->[!note] Aufgabenstellung
->Zeigen Sie mit dem Pumping-Lemma für kontextfreie Sprachen, dass die Sprache $L_2 = \{w\overline{w}w \mid w \in \Sigma^*\}$ über dem Alphabet $\Sigma = \{a, b\}$ nicht kontextfrei ist.
+> [!note] Aufgabenstellung
+> Zeigen Sie mit dem Pumping-Lemma für kontextfreie Sprachen, dass die Sprache $L_2 = \{w\overline{w}w \mid w \in \Sigma^*\}$ über dem Alphabet $\Sigma = \{a, b\}$ nicht kontextfrei ist.
 
 **Sprache**: $L_2$ über $\Sigma = \{a, b\}$.
 
 **Lemma**: Das Pumping-Lemma für kontextfreie Sprachen besagt, dass für jede kontextfreie Sprache $L$ eine Pumping-Länge $p$ existiert, sodass jedes Wort $z$ in $L$ mit einer Länge von mindestens $p$ in fünf Teile $uvwxy$ zerlegt werden kann, wobei $|vwx| \leq p$, $|vx| > 0$ und $uv^iwx^iy$ für alle $i \geq 0$ in $L$ bleibt.
 
 **Anwendung des Lemmas**:
+
 1. **Wahl des Wortes**: Wähle $w = (ab)^p$ und damit $z = w\overline{w}w = (ab)^p(ba)^p(ab)^p$, wobei $z$ eine Länge von $6p$ hat.
 2. **Zerlegung**: $z$ wird gemäß dem Lemma in $uvwxy$ zerlegt, wobei $|vwx| \leq p$ und $|vx| > 0$.
 3. **Pumpen**: Betrachte $uv^2wx^2y$.
 
 **Widerspruch**:
+
 - Das Pumpen von $v$ und $x$ zerstört die spezifische Struktur $w\overline{w}w$ von $L_2$. Beispielsweise führt das Erhöhen der $ab$-Paare im ersten Segment, ohne die entsprechenden Änderungen in den $(ba)^p$ und $(ab)^p$ Segmenten, dazu, dass das gepumpte Wort nicht mehr die Form $w\overline{w}w$ hat und somit nicht in $L_2$ sein kann.
 
 **Schlussfolgerung**:
@@ -210,14 +237,16 @@ Dieses Beispiel zeigt, dass die Sprache die Pumping-Eigenschaft erfüllt, solang
 
 1. $L_1 = \{ac^{i} ba^{j}b \mid i, j \in \mathbb{N}\}$ mit $\Sigma_1 = \{a, b, c\}$
 
-   **Lösung:** $L_1$ ist regulär. Ein regulärer Ausdruck, der $L_1$ erkennt, ist: 
-$$
- a c^* b a^* b 
-$$
+   **Lösung:** $L_1$ ist regulär. Ein regulärer Ausdruck, der $L_1$ erkennt, ist:
+
+   $$
+    a c^* b a^* b
+   $$
 
 2. $L_2 = \{a^p b^p \mid p \in \mathbb{N} \text{ ist prim}\}$ mit $\Sigma_2 = \{a, b\}$
 
    **Lösung:** $L_2$ ist nicht regulär. Wir zeigen dies mit dem Pumping-Lemma:
+
    - Angenommen, $L_2$ sei regulär. Dann gibt es eine Pumping-Länge $p$.
    - Wähle $s = a^p b^p$, wobei $p$ eine Primzahl ist und $|s| \geq p$.
    - Zerlege $s$ in $xyz$, wobei $|xy| \leq p$ und $|y| > 0$.
@@ -229,16 +258,17 @@ $$
 3. $L_3 = \{a^{2n+1} \mid n \in \mathbb{N}\}$ mit $\Sigma_3 = \{a\}$.
 
    **Lösung:** $L_3$ ist regulär. Ein regulärer Ausdruck, der $L_3$ erkennt, ist:
-$$
- a (aa)^* 
-$$
+
+   $$
+    a (aa)^*
+   $$
 
 ---
 
 # FSK5-4 Konservative Erweiterungen regulärer Ausdrücke (0 Punkte)
 
->[!note] Aufgabenstellung
->In der Praxis werden reguläre Ausdrücke häufig mit weiteren Operatoren erweitert. Eine solche Erweiterung ist konservativ, wenn die erweiterten regulären Ausdrücke nur reguläre Sprachen beschreiben. Geben Sie in jeder Teilaufgabe an, ob die beschriebene Erweiterung konservativ ist, und beweisen Sie Ihre Antwort. Dabei sei $\alpha$ ein regulärer Ausdruck über einem beliebigen Alphabet.
+> [!note] Aufgabenstellung
+> In der Praxis werden reguläre Ausdrücke häufig mit weiteren Operatoren erweitert. Eine solche Erweiterung ist konservativ, wenn die erweiterten regulären Ausdrücke nur reguläre Sprachen beschreiben. Geben Sie in jeder Teilaufgabe an, ob die beschriebene Erweiterung konservativ ist, und beweisen Sie Ihre Antwort. Dabei sei $\alpha$ ein regulärer Ausdruck über einem beliebigen Alphabet.
 
 ## a) $\alpha?$: Teilwörter, die von $\alpha$ erkannt werden, dürfen vorkommen, müssen aber nicht. Die Semantik von $\alpha?$ ist also $L(\alpha?) = \{\epsilon\} \cup L(\alpha)$.
 
@@ -290,18 +320,7 @@ Ein Beispiel dafür ist der reguläre Ausdruck $(a|b)\backslash 1$, der die Spra
 
 Daher beschreibt $\backslash n$ nicht immer eine reguläre Sprache, und die Erweiterung ist nicht konservativ.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -324,15 +343,4 @@ Daher beschreibt $\backslash n$ nicht immer eine reguläre Sprache, und die Erwe
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

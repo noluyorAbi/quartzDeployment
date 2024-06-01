@@ -9,17 +9,18 @@ date created: Wednesday, 20. March 2024, 17:22
 date modified: Saturday, 20. April 2024, 01:54
 ---
 
-# Aufgabe 3-1 *Schlüssel und Fremdschlüssel*
+# Aufgabe 3-1 _Schlüssel und Fremdschlüssel_
 
 ## Aufgabe 3-1 Schlüssel und Fremdschlüssel
 
 **Ein Fremdschlüssel ist ein Attribute oder eine Attributkombination einer Relation, welches auf einen Primärschlüssel (bzw. Schlüsselkandidat) einer anderen oder der gleichen Relation verweist.**
 
 **Eine relationale Datenbank enthält alle Informationen über bereits gesehenen Serien einer Streamingplattform und die darin vorkommenden Rollen:**
+
 ### Series
 
 | SID | Sender | Serienname          |
-|-----|--------|---------------------|
+| --- | ------ | ------------------- |
 | 47  | HBO    | Game of Thrones     |
 | 59  | CBS    | The Big Bang Theory |
 
@@ -38,63 +39,62 @@ date modified: Saturday, 20. April 2024, 01:54
 
 ### a) Wie reagiert ein Datenbanksystem wenn Primärschlüssel definiert wurden?
 
- - Das Datenbanksystem achtet darauf das jeder Primärschlüssel einzigartig ist
- - verhindert das einfügen von Duplikaten 
+- Das Datenbanksystem achtet darauf das jeder Primärschlüssel einzigartig ist
+- verhindert das einfügen von Duplikaten
 
 ### b) Warum fordert man, dass Schlüssel minimal sein sollen? [[Minimale Schlüssel|(Minimale Schlüssel)]]
 
 - Effizientere Überprüfbarkeit von Schlüssel-/ Fremdschlüsselbedingungen  
-	- *Beispiel:*
-```Stellen Sie sich eine Tabelle vor, die Studenteninformationen an einer Universität speichert. Die Tabelle könnte folgende Spalten haben: `StudentenID`, `Name`, `Alter`, `Studiengang` und `E-Mail-Adresse`.
-	
+   - _Beispiel:_
+  ```Stellen Sie sich eine Tabelle vor, die Studenteninformationen an einer Universität speichert. Die Tabelle könnte folgende Spalten haben: `StudentenID`, `Name`, `Alter`, `Studiengang`und`E-Mail-Adresse`.
+
 In diesem Fall könnte die `StudentenID` ein minimaler Schlüssel sein, da jede `StudentenID` einzigartig ist und jeden Studenten eindeutig identifiziert. Kein anderes Attribute kann aus diesem Schlüssel entfernt werden, ohne seine Eindeutigkeit zu verlieren.
-	
 Hier ist ein einfaches Beispiel:
-	
 |StudentenID|Name|Alter|Studiengang|E-Mail-Adresse|
 |---|---|---|---|---|
 |12345|Max Mustermann|21|Informatik|max@uni.de|
 |67890|Erika Muster|22|Physik|erika@uni.de|
-	
 In dieser Tabelle ist `StudentenID` der minimale Schlüssel.```
-
 
 ### c) Was versteht man under referenzieller Integrität?
 
 - Bedingungen zur Sicherung der Datenintegrität bei Nutzung relationaler Datenbanken
-	 1. Ein Datensatz mit Fremdschlüssel kann nur dann eingefügt werden, wenn in der referenzierter Tabelle ein Datensatz mit den entsprechenden Werten also Primärschlüssel oder einem eindeutigen Alternativschlüssel existiert. *(nur erstellbar falls reference existiert)*
-	 2. Datensatzlöschung oder Änderung ist nur möglich falls zu diesem Datensatz keine abhängigen Datensätze in Beziehung stehen *(nur bearbeitbar falls keine abhängigen Daten in Beziehung)* **No dangeling references**
-
+  1. Ein Datensatz mit Fremdschlüssel kann nur dann eingefügt werden, wenn in der referenzierter Tabelle ein Datensatz mit den entsprechenden Werten also Primärschlüssel oder einem eindeutigen Alternativschlüssel existiert. _(nur erstellbar falls reference existiert)_
+  2. Datensatzlöschung oder Änderung ist nur möglich falls zu diesem Datensatz keine abhängigen Datensätze in Beziehung stehen _(nur bearbeitbar falls keine abhängigen Daten in Beziehung)_ **No dangeling references**
 
 ### d) Gehen Sie davon aus, dass sich nur die oben gezeigten Eintrage in der Datenbank befinden. Welche der Einfügeoperationen wird das Datenbanksystem erfolgreich verarbeiten können? Bitte begründen Sie Ihre Antwort kurz.
 
-*Gehe davon aus, dass sich nur die oben gezeigten Einträge in der Datenbank befinden. Welche der Einfügeoperationen wird das Datenbanksystem erfolgreich verarbeiten können? Bitte begründe define Antwort kurz.*
+_Gehe davon aus, dass sich nur die oben gezeigten Einträge in der Datenbank befinden. Welche der Einfügeoperationen wird das Datenbanksystem erfolgreich verarbeiten können? Bitte begründe define Antwort kurz._
 
 - [ ] Einfügen von (12, 'Harvey', 'Specter', 41) in Rolle **→ referenzierte SID existiert nicht**
 - [ ] Einfügen von (47, 'FOX', 'Suits') in Series **→ SID existiert bereits also nicht korrekt**
 - [x] Einfügen von (42, 'Leonard', 'Hofstadter', 59) in Rolle **→ Passt alles**
 
-
 ---
 
-# Aufgabe 3-2 *SQL-DDL* [[Data Definition Language (DDL)]]
+# Aufgabe 3-2 _SQL-DDL_ [[Data Definition Language (DDL)]]
 
 **Es ist die Datenbank eines Softwareunternehmens gegeben, welches spezielle Anwendungen für unterschiedliche Kunden entwickelt. Die Datenbank beinhaltet die Relationen Kunde K, Team T und Leistung L. Zusätzlich existiert die Relation KTL, welche die Aufträge beinhaltet und so die Beziehungen der vorgenannten Relationen modelliert.**
 
 ## Relationen
+
 - **Kunde (K):**
+
   - K (KNr, KName, Ansprechpartner)
 
 - **Team (T):**
+
   - T (TNr, TLeiter, TGröße, Stundensatz)
 
 - **Leistung (L):**
+
   - L (LNr, Bezeichnung, Komplexität)
 
 - **Kundenteamleistung (KTL):**
   - KTL (KNr, TNr, LNr, Volumen, Datum)
 
 ### Attribute und Beschränkungen
+
 - Die Schlüssel der jeweiligen Relationen sind integer Werte.
 - **TGröße** ist eine positive ganze Zahl.
 - **Komplexität** ist eine ganze Zahl kleiner oder gleich 10.
@@ -106,8 +106,9 @@ In dieser Tabelle ist `StudentenID` der minimale Schlüssel.```
 ### a) Geben sie mit `CREATE TABLE` Befehle mit den dafür notwendigen Constraints zur Definition des o.g. Datenbankschemas an. [[Data Definition Language (DDL)]]
 
 - **Kunde**
+
 ```sql
-CREATE TABLE Kunde 
+CREATE TABLE Kunde
 (
 KNr INTEGER primary key,
 KName VARCHAR(50) NOT NULL ,
@@ -115,7 +116,8 @@ Ansprechpartner VARCHAR(50),
 )
 ```
 
-- **Team** 
+- **Team**
+
 ```sql
 CREATE TABLE Team
 (
@@ -127,8 +129,9 @@ Stundensatz DECIMAL(5,2),
 ```
 
 - **Leistung**
+
 ```sql
-CREATE TABLE 
+CREATE TABLE
 (
 LNr INTEGER PRIMARY KEY,
 Bezeichnung VARCHAR(50) NOT NULL,
@@ -137,6 +140,7 @@ Komplexität INETEGER CHECK (Komplexität <= 10)
 ```
 
 - **KTL**
+
 ```sql
 KNr INTEGER REFERENCES Kunde(KNr),
 TNr INTEGER REFERENCES Team(TNr),
@@ -146,11 +150,10 @@ Datum CHAR(10),
 PRIMARY KEY (KNr, TNr, LNr)
 ```
 
-
 ### b) Fügen Sie in die Kunden-Relation “K” eine weitere Spalte “Branche” also variable Text der Länge 30 mit dem Default-Wert ‘Automobil’ ein
 
 ```sql
-ALTER TABLE Kunde 
+ALTER TABLE Kunde
 ADD(Branche VARCHAR(30) DEFAULT("Automobil"));
 ```
 
@@ -164,20 +167,21 @@ DROP(TGrösse);
 ### d) Ändern Sie den Datentyp des Attributes `Volumen` aus der Relation `KTL` in eine ganze Zahl, die größer also 0 ist.
 
 # FALSCH: X
+
 ```sql
 ALTER TABLE KTL
 MODIFY(Volumen INTEGER CHECK(Volumen > 0))
 ```
 
 # RICHTIG: V
+
 ```sql
-ALTER TABLE KTL 
+ALTER TABLE KTL
 MODIFY (Volumen INTEGER)
 
-ALTER TABLE KTL 
+ALTER TABLE KTL
 ADD CONSTRAINT volumen_constraint CHECK (Volumen > 0)
 ```
-
 
 → Die erste, also falsch markierte SQL-Anweisung hat ein paar Problem, die sie in den meisten SQL-Dialekten ungültig machen würden:
 
@@ -194,28 +198,17 @@ Zusammenfassend ist das "richtige" Statement korrekt, weil es die Syntax-Regeln 
 ### e) Nun sollen Sie alle Tabellen wieder loschen ohne die referenzielle Integrität zu verletzen.
 
 ```sql
-DROP TABLE KTL 
-DROP TABLE Kunde 
+DROP TABLE KTL
+DROP TABLE Kunde
 DROP TABLE Team
 DROP TABLE Leistung
 ```
-
 
 ---
 
 Also nächstes: [[DBS-Blatt 4]]
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -238,15 +231,4 @@ Also nächstes: [[DBS-Blatt 4]]
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

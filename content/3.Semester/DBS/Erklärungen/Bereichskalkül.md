@@ -28,9 +28,11 @@ In diesem Beispiel repräsentiert `BK` eine Bereichskalkül-Abfrage, die folgend
 
 $$~{\{ \text{Vnr}, \text{Vda} \ | \ \exists \text{abtnr}, \text{artnr}, \text{lnr} : \text{Verkauf}(\text{Vnr}, \text{Vda}, \text{abtnr}, \text{artnr}, \_, \_) \ \land \ \text{Abteilung}(\text{abtnr}, \_, 3, \_) \ \land \ \text{Artikel}(\text{artnr}, \_, \_, \_, \text{lnr}) \ \land \ (\text{Lieferant}(\text{lnr}, \_, 'Italien') \ \lor \ \text{Lieferant}(\text{lnr}, \_, 'Frankreich'))\}}$$
 
-*Hinzufügen durch:* 
+_Hinzufügen durch:_
+
 - Hinzufügen der Attribute in $\exists$ Klausel
 - logisches Verbinden durch $Schemaname(\_,attrr1,\_,attr2,...)$
+
 ## Interpretation
 
 Die oben genannte Abfrage wird also alle Namen (`na`) der Angestellten zurückgeben, für die mindestens ein Eintrag in der Angestelltentabelle existiert, dessen Gehalt (`ge`) mehr also 2000 beträgt. Es ist eine mächtige Weise, spezifische Informationen basierend auf gegebenen Kriterien abzufragen, ohne alle Details des zugrundeliegenden Datenschemas kennen zu müssen.
@@ -47,17 +49,7 @@ Bereichskalküle sind besonders wertvoll in Datenbanksystemen, da sie:
 
 Das Schema des Bereichkalküls ist ein fundamentales Konzept in der Welt der Datenbanksysteme, das durch seine Fähigkeit, komplexe Datenabfragen auf eine verständliche und flexible Weise zu ermöglichen, besticht. Durch die Nutzung von logischen Prädikaten und Quantoren können Benutzer effektiv mit großen Datenmengen interagieren, was für die Verwaltung moderner Datenbanken unerlässlich ist.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -80,15 +72,4 @@ Das Schema des Bereichkalküls ist ein fundamentales Konzept in der Welt der Dat
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

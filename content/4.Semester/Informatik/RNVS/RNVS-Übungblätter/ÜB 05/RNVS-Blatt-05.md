@@ -5,7 +5,7 @@ tags:
   - RNVS
   - Übungsblatt
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
-Thema: 
+Thema:
 Benötigte Zeit:
 date created: Sunday, 26. May 2024, 16:05
 date modified: Thursday, 30. May 2024, 16:10
@@ -13,20 +13,23 @@ date modified: Thursday, 30. May 2024, 16:10
 
 # Aufgabe 5-1 Aktuelle Produktivnetze (H)
 
->[!info] Info
->Aktuelle Produktivnetze, die in Unternehmen für alltägliche Aufgaben genutzt werden, umfassen Technologien wie 5G für schnelle mobile Verbindungen, IoT-Netzwerke für die Gerätevernetzung, Cloud-Netzwerke für den sicheren Zugriff auf Cloud-Ressourcen und softwaredefinierte Netzwerke (SDN), die eine flexible Netzwerkverwaltung ermöglichen. Diese Netzwerke sind essenziell für die moderne digitale Infrastruktur.
+> [!info] Info
+> Aktuelle Produktivnetze, die in Unternehmen für alltägliche Aufgaben genutzt werden, umfassen Technologien wie 5G für schnelle mobile Verbindungen, IoT-Netzwerke für die Gerätevernetzung, Cloud-Netzwerke für den sicheren Zugriff auf Cloud-Ressourcen und softwaredefinierte Netzwerke (SDN), die eine flexible Netzwerkverwaltung ermöglichen. Diese Netzwerke sind essenziell für die moderne digitale Infrastruktur.
 
->[!tip] Eigenschaften von Ringstrukturen:
+> [!tip] Eigenschaften von Ringstrukturen:
+>
 > - **Topologie**: In einem Ringnetzwerk ist jeder Knoten mit genau zwei anderen Knoten verbunden. Dies bildet einen geschlossenen Kreislauf oder Ring.
 > - **Datenübertragung**: Daten werden in einer vorbestimmten Richtung (entweder im Uhrzeigersinn oder gegen den Uhrzeigersinn) durch das Netzwerk gesendet, und jeder Knoten verstärkt das Signal und leitet es weiter, bis das Ziel erreicht ist.
 
 ## (a) Nennen Sie einen Vor- und Nachteil von Ringstrukturen in Produktivnetzen.
 
 **Vorteil:**
-- *Resistent gegen Umwelteinflüsse:* Zwischen zwei Knoten gibt es 2 Verbindungen, wenn eine Ausfällt, gibt es eine Weitere zum Informationsaustausch
+
+- _Resistent gegen Umwelteinflüsse:_ Zwischen zwei Knoten gibt es 2 Verbindungen, wenn eine Ausfällt, gibt es eine Weitere zum Informationsaustausch
 - Ein Sender kann beide Verbindungen nutzen um Informationen schneller zu versenden
 
 **Nachteil:**
+
 - höhere Kosten (zwei Verbindungen statt nur einer)
 
 ## (b) Diskutieren Sie die Verwendung von Kupfer- gegenüber Glasfaserkabeln innerhalb von Gebäuden.
@@ -41,19 +44,22 @@ $\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Strom
 
 ## (c) Diskutieren Sie Vor- und Nachteile von modularen Netztechniksystemen.
 
->[!info]
->## Was sind modulare Netztechniksysteme?
+> [!info]
 >
->Modulare Netztechniksysteme beziehen sich im Allgemeinen auf Netzwerklösungen, die aus verschiedenen austauschbaren Komponenten oder Modulen bestehen. Diese Module können je nach den spezifischen Anforderungen und Gegebenheiten des Netzwerks angepasst, hinzugefügt oder entfernt werden. Ein solch modularer Aufbau ermöglicht es, das Netzwerk flexibel zu gestalten und auf Veränderungen oder Erweiterungen der Netzwerkinfrastruktur einfach zu reagieren.
+> ## Was sind modulare Netztechniksysteme?
 >
->z.B. Switches und Router
+> Modulare Netztechniksysteme beziehen sich im Allgemeinen auf Netzwerklösungen, die aus verschiedenen austauschbaren Komponenten oder Modulen bestehen. Diese Module können je nach den spezifischen Anforderungen und Gegebenheiten des Netzwerks angepasst, hinzugefügt oder entfernt werden. Ein solch modularer Aufbau ermöglicht es, das Netzwerk flexibel zu gestalten und auf Veränderungen oder Erweiterungen der Netzwerkinfrastruktur einfach zu reagieren.
+>
+> z.B. Switches und Router
 
 **Vorteile:**
-- *Flexibilität*: Modulare Systeme sind anpassbar, Komponenten können nach Bedarf hinzugefügt oder entfernt werden.
-- *Bessere Wartbarkeit*: Bei Fehlern müssen nur die betroffenen Module auf Fehler analysiert werden, anstatt komplexe Abhängigkeiten. Dies resultiert in einer schnelleren und deswegen auch kostengünstigeren Fehlerbehebung.
+
+- _Flexibilität_: Modulare Systeme sind anpassbar, Komponenten können nach Bedarf hinzugefügt oder entfernt werden.
+- _Bessere Wartbarkeit_: Bei Fehlern müssen nur die betroffenen Module auf Fehler analysiert werden, anstatt komplexe Abhängigkeiten. Dies resultiert in einer schnelleren und deswegen auch kostengünstigeren Fehlerbehebung.
 - Redundanter
 
 **Nachteile:**
+
 - **Geringere Leistungseffizienz:** Aufgrund von mehr Schnittstellen zwischen den Modulen kann es zu geringerer Leistungseffizienz kommen.
 - **Kompatibilitätsprobleme:** Bei eventuell falsch gewählten Modulen oder Modulen mit falschen Versionsabhängigkeiten könnte es zu technischen Problemen und Inkompatibilität kommen.
 - Mehr Platzverbrauch
@@ -61,9 +67,9 @@ $\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Strom
 
 # 2. Transportschicht in Pseudocode (H)
 
->[!note] Aufgabenstellung
-> Auf [[RNVS-Blatt-03|Übungsblatt 3]] haben wir die Signatur der Funktion `sendto` behandelt. 
-> Diese implementiert einen Teil eines Protokolls des Internet-Modells der Schicht N. 
+> [!note] Aufgabenstellung
+> Auf [[RNVS-Blatt-03|Übungsblatt 3]] haben wir die Signatur der Funktion `sendto` behandelt.
+> Diese implementiert einen Teil eines Protokolls des Internet-Modells der Schicht N.
 > Sie verschickt `bytes` an einen in `addr_tuple` spezifizierten Empfänger.
 >
 > Die Implementierung sei durch folgenden Pseudocode gegeben.
@@ -84,7 +90,7 @@ $\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Strom
 >     return
 > ```
 >
-> Die Funktion `hton` konvertiert hier jeden beliebigen Typ zu einem für die Übertragung geeigneten Byte-Format („big-endian”). 
+> Die Funktion `hton` konvertiert hier jeden beliebigen Typ zu einem für die Übertragung geeigneten Byte-Format („big-endian”).
 > Gehen Sie wieder von dem folgenden Beispielaufruf aus.
 >
 > ```python
@@ -95,10 +101,11 @@ $\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Strom
 
 ## (a) Welche Aussage können Sie über die (N)-PDU treffen?
 
->[!info] 
->PDU = Nutzdaten (Payload) + PCI (Protocol Control Information)
+> [!info]
+> PDU = Nutzdaten (Payload) + PCI (Protocol Control Information)
 
 **Die PDU besteht aus:**
+
 - Länge (length)
 - Zielport (destination port)
 - Quellport (source port)
@@ -107,46 +114,48 @@ $\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Strom
 
 ## (b) Welche Informationen sind in der (N)-PCI enthalten? Stimmen diese mit der (N)-ICI überein?
 
->[!info] 
->**ICI = Zieladresse**
->Interface Control Information, beinhaltet Daten zur Steuerung der Netzwerkschnittstelle, wie zum Beispiel die IP-Adresse für das Routing und andere netzwerkspezifische Steuerinformationen, die nicht direkt zur Struktur oder Integrität der übermittelten Daten gehören.
+> [!info]
+> **ICI = Zieladresse**
+> Interface Control Information, beinhaltet Daten zur Steuerung der Netzwerkschnittstelle, wie zum Beispiel die IP-Adresse für das Routing und andere netzwerkspezifische Steuerinformationen, die nicht direkt zur Struktur oder Integrität der übermittelten Daten gehören.
 
 **PCI besteht aus:** (alles wie bei PDU bis auf Nutzdaten)
 
->[!fail] Falsch
->- Länge (length)
->- Zielport (destination port)
->- Quellport (source port)
->- Prüfnummer (checksum)
+> [!fail] Falsch
+>
+> - Länge (length)
+> - Zielport (destination port)
+> - Quellport (source port)
+> - Prüfnummer (checksum)
 
->[!success] Richtig
->- source_port
->- length
->- checksum
-
+> [!success] Richtig
+>
+> - source_port
+> - length
+> - checksum
 
 - [ ] Muss eventuell noch korrigiert werden [[RNVS-Blatt-05]]
-**ICI besteht aus:**
+      **ICI besteht aus:**
 - `address_bytes` aus dem route_packet also die Zieladresse
-$$
-address\_{bytes}\neq destination\_port
-$$
-Die **(N)-PCI** und **(N)-ICI** dienen unterschiedlichen Funktionen und enthalten daher nicht dieselben Informationen. Die PCI konzentriert sich auf die Formatierung und Integrität der Datenübertragung, während die ICI hauptsächlich das Routing und die Netzwerkschnittstellensteuerung behandelt.
+  $$
+  address\_{bytes}\neq destination\_port
+  $$
+  Die **(N)-PCI** und **(N)-ICI** dienen unterschiedlichen Funktionen und enthalten daher nicht dieselben Informationen. Die PCI konzentriert sich auf die Formatierung und Integrität der Datenübertragung, während die ICI hauptsächlich das Routing und die Netzwerkschnittstellensteuerung behandelt.
 
 $\Longrightarrow$ Die PCI beinhaltet spezifische Übertragungsdaten wie den Destination Port, während die ICI sich auf Netzwerk-Routing mit Elementen wie `adress_bytes` konzentriert
 
 ## (c) Was entspricht (N − 1)-ICI, -ID bzw. -IDU?
 
 1. **(N−1)-ICI (Inter-Carrier Interference)**
+
    - **Definition**: Interferenz zwischen Trägerfrequenzen in Mehrträger-Kommunikationssystemen.
    - **Bedeutung**: Berücksichtigt die Interferenz von allen anderen (N−1) Trägern.
 
 2. **-ID (Identifier)**
+
    - **Definition**: Eindeutige Kennzeichnung zur Identifikation von Datenpaketen, Geräten oder Verbindungen.
 
 3. **-IDU (Identifier Unit)**
    - **Definition**: Einheit oder Modul zur Erzeugung, Verwaltung oder Überprüfung von Identifikationsdaten.
-
 
 ## (d) Handelt es sich um ein verbindungsorientiertes oder -loses Protokoll?
 
@@ -154,17 +163,7 @@ $\Longrightarrow$ Die PCI beinhaltet spezifische Übertragungsdaten wie den Dest
 
 Die Implementierung der Funktion `sendto` deutet auf ein verbindungsloses Protokoll hin. Es wird keine Verbindung vor dem Senden der Daten hergestellt, und die Funktion sendet die Daten direkt an den angegebenen Empfänger. Dies entspricht dem Verhalten von UDP (User Datagram Protocol), das verbindungslos arbeitet.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -187,15 +186,4 @@ Die Implementierung der Funktion `sendto` deutet auf ein verbindungsloses Protok
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

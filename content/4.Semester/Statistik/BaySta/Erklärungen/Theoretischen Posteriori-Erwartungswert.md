@@ -5,24 +5,13 @@ tags:
   - statistik
   - Erklaerung
 fach: "[[BaySta]]"
-Thema: 
-Benötigte Zeit: 
+Thema:
+Benötigte Zeit:
 date created: Saturday, 4. May 2024, 17:38
 date modified: Saturday, 4. May 2024, 19:30
 ---
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -45,15 +34,4 @@ date modified: Saturday, 4. May 2024, 19:30
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

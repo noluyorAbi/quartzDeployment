@@ -17,7 +17,7 @@
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "vamos": "npx quartz build && npx quartz sync",
+    "vamos": "npx prettier . --write && npx quartz build && npx quartz sync",
     "dev": "npx quartz build --serve"
   },
   "engines": {
@@ -109,7 +109,7 @@
     "@types/ws": "^8.5.10",
     "@types/yargs": "^17.0.32",
     "esbuild": "^0.19.9",
-    "prettier": "^3.2.4",
+    "prettier": "^3.2.5",
     "tsx": "^4.7.1",
     "typescript": "^5.4.2"
   }

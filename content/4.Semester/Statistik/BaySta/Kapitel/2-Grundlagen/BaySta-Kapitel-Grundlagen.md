@@ -35,12 +35,11 @@ Testen Sie Ihr Verständnis der Bayes-Statistik durch das Quiz am Ende dieses Ka
 
 Etwas zur Geschichte der Bayes-Statistik wird abschließend beleuchtet.
 
-
 # Bayes’ Billardkugeln Teil 1
 
 ## Die Billardkugeln
 
-Das folgende Beispiel geht auf Thomas Bayes zurück und wird in *An Essay towards solving a Problem in the Doctrine of Chance* beschrieben (der Artikel wurde posthum zwei Jahre nach Bayes' Tod von Richard Price veröffentlicht).
+Das folgende Beispiel geht auf Thomas Bayes zurück und wird in _An Essay towards solving a Problem in the Doctrine of Chance_ beschrieben (der Artikel wurde posthum zwei Jahre nach Bayes' Tod von Richard Price veröffentlicht).
 
 Eine weiße Billardkugel wird auf eine Gerade der Länge 1 gerollt.
 
@@ -119,10 +118,10 @@ wobei $\binom{n}{x}$ der Binomialkoeffizient ist (auf wie viele verschiedene Art
 
 - Zur Vereinfachung schreiben wir $f(x|\pi)$ statt $P(X = x|\Pi = \pi)$: $f$ als Zeichen dafür, dass es sich um eine Dichte handelt; die Zufallszahlen $X$ und $\Pi$ lassen wir weg, weil wir wissen, dass $x$ und $\pi$ Realisationen der Zufallsgrößen $X$ und $\Pi$ sind.
 
-
 # Bayes’ Billardkugeln Teil 2
 
 ## Vorwissen
+
 Um nun mit dem Satz von Bayes eine Aussage über $\pi$ gegeben $x$ zu machen, brauchen wir eine Wahrscheinlichkeitsaussage für $\Pi$. Was wissen wir über $\pi$ vor der Beobachtung?
 
 Zur Erinnerung: $\Pi$ ist eine Zufallsvariable, $\pi$ deren Realisation. Lassen Sie sich nicht dadurch verwirren, dass wir hier den Buchstaben $\Pi$ für eine Zufallsvariable verwenden, statt wie üblich $X$ oder $Y$.
@@ -130,18 +129,18 @@ Zur Erinnerung: $\Pi$ ist eine Zufallsvariable, $\pi$ deren Realisation. Lassen 
 Wir nehmen an, dass die weiße Kugel keinen Ort bevorzugt, d.h., jeder Wert für $\pi$ ist gleich wahrscheinlich.
 
 ### Diskrete Gleichverteilung
+
 Lassen wir für $\pi$ z.B. nur die Werte 0, 0.01, 0.02,…, 0.99, 1 zu, dann wäre unsere Vorannahme, dass jeder dieser Werte gleich wahrscheinlich ist. Wir haben diesen Ansatz bereits als Laplace-Wahrscheinlichkeit kennengelernt.
 
 Unter dieser Annahme …
 
->[!faq] … ist die Wahrscheinlichkeit, dass $\pi$ gleich 0.5 ist gleich…
+> [!faq] … ist die Wahrscheinlichkeit, dass $\pi$ gleich 0.5 ist gleich…
+>
 > - ½
 > - 1/100
 > - 1/101
->>[!success]- Lösung
->> 1/101
-
-
+>   > [!success]- Lösung
+>   > 1/101
 
 Wir sagen, $\Pi$ ist diskret gleichverteilt oder auch Laplace-verteilt.
 
@@ -163,12 +162,13 @@ Da es aber (überabzählbar) unendlich viele mögliche reelle Werte zwischen 0 u
 
 Diese Aussage ist korrekt; für stetige Zufallsvariablen tritt jeder Wert mit Wahrscheinlichkeit 0 ein. Aber wir können diese Wahrscheinlichkeit natürlich nicht sinnvoll in den Satz von Bayes einsetzen.
 
->[!faq] Wenn $P(B|A)=0$ ist, dann gilt nach dem Satz von Bayes automatisch:
+> [!faq] Wenn $P(B|A)=0$ ist, dann gilt nach dem Satz von Bayes automatisch:
+>
 > - $P(A|B) = 1$
 > - $P(A|B) = 0$
 > - $P(A|B)$ lässt sich nicht berechnen
->>[!success]- Lösung
->> $P(A|B)$ = 0
+>   > [!success]- Lösung
+>   > $P(A|B)$ = 0
 
 ## Dichte
 
@@ -271,7 +271,6 @@ Nebenbemerkung: Die Schreibweise $f(\pi)$ für eine Dichte erscheint Ihnen event
 
 Vorwissen als Priori-Dichte: π liegt irgendwo zwischen 0 und 1
 
-
 # Bayes’ Billardkugeln Teil 3
 
 ## Die Bayes-Formel
@@ -336,7 +335,7 @@ $$
 
 Wir nennen den Teil der Dichte ohne Konstanten den Kern der Dichte. Da $p(\pi|x)$ eine Dichte ist, muss $\int p(\pi|x)d\pi = 1$ gelten. Die
 
- Dichte (und damit die Verteilung) ist also durch den Kern festgelegt, da gilt:
+Dichte (und damit die Verteilung) ist also durch den Kern festgelegt, da gilt:
 
 $$
 \text{Dichte} = \frac{\text{Kern}}{\text{Integral über Kern}}
@@ -460,54 +459,48 @@ Im weiteren Verlauf des Kurses werden wir folgende Themen vertiefen:
 
 # Quiz zu Bayes’ Billardkugeln
 
->[!faq] Eine flache Dichte …
+> [!faq] Eine flache Dichte …
+>
 > - lässt keine Aussage über die Information ihrer Verteilung zu.
 > - deutet auf wenig Information hin.
 > - deutet auf viel Information hin.
->>[!success]- Lösung
->> deutet auf wenig Information hin.
+>   > [!success]- Lösung
+>   > deutet auf wenig Information hin.
 
->[!faq] Für die Bayes-Formel braucht man…
+> [!faq] Für die Bayes-Formel braucht man…
+>
 > - eine Massen-Dichte
 > - eine Daten-Dichte
 > - eine Priori-Dichte
 > - eine Kanten-Dichte
->>[!success]- Lösung
->> eine Daten-Dichte und eine Priori-Dichte
+>   > [!success]- Lösung
+>   > eine Daten-Dichte und eine Priori-Dichte
 
->[!faq] Das Zeichen $\propto$ bedeutet…
+> [!faq] Das Zeichen $\propto$ bedeutet…
+>
 > - approximativ gleich
 > - proportional gleich
 > - in etwa gleich
->>[!success]- Lösung
->> proportional gleich
+>   > [!success]- Lösung
+>   > proportional gleich
 
->[!faq] In der Bayes-Statistik kann ein Parameter einer Datenverteilung…
+> [!faq] In der Bayes-Statistik kann ein Parameter einer Datenverteilung…
+>
 > - eine Zufallszahl sein.
 > - unbekannt sein.
 > - gegeben sein.
->>[!success]- Lösung
->> unbekannt sein.
+>   > [!success]- Lösung
+>   > unbekannt sein.
 
->[!faq] Wie lautet die Bayes-Formel?
+> [!faq] Wie lautet die Bayes-Formel?
+>
 > - $\text{Posteriori} = \frac{\text{Likelihood} \cdot \text{Normalisierungskonstante}}{\text{Priori}}$
 > - $\text{Posteriori} = \frac{\text{Likelihood} \cdot \text{Priori}}{\text{Normalisierungskonstante}}$
 > - $\text{Posteriori} = \frac{\text{Priori} \cdot \text{Normalisierungskonstante}}{\text{Likelihood}}$
->>[!success]- Lösung
->> $\text{Posteriori} = \frac{\text{Likelihood} \cdot \text{Priori}}{\text{Normalisierungskonstante}}$
-
-
-
-
-
-
+>   > [!success]- Lösung
+>   > $\text{Posteriori} = \frac{\text{Likelihood} \cdot \text{Priori}}{\text{Normalisierungskonstante}}$
 
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -530,15 +523,4 @@ Im weiteren Verlauf des Kurses werden wir folgende Themen vertiefen:
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

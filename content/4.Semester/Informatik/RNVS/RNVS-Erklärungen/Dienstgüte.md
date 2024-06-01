@@ -5,8 +5,8 @@ tags:
   - RNVS
   - Erklaerung
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
-Thema: 
-Benötigte Zeit: 
+Thema:
+Benötigte Zeit:
 date created: Sunday, 12. May 2024, 23:13
 date modified: Sunday, 12. May 2024, 23:46
 ---
@@ -15,18 +15,7 @@ date modified: Sunday, 12. May 2024, 23:46
 
 **Quality of Service** (**QoS**) oder **Dienstgüte** bezeichnet die Güte eines Kommunikationsdienstes aus der Sicht der Anwender. Das heißt, wie stark die Güte des Dienstes mit deren Anforderungen übereinstimmt. Formal ist QoS eine Menge von Qualitätsanforderungen an das gemeinsame Verhalten beziehungsweise Zusammenspiel von mehreren Objekten.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -49,15 +38,4 @@ date modified: Sunday, 12. May 2024, 23:46
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

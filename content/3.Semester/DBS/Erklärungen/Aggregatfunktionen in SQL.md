@@ -58,8 +58,7 @@ WHERE condition;
 ```
 
 - **Beispiel**: Berechnung des Durchschnittsgehalts der Mitarbeiter.
-- <b style="color:red;">Achtung!</b> Average benötigt bei mehr also einer Attribute im `SELECT` [[Aggregatfunktionen in SQL#GROUP BY|GROUP BY]]  
-
+- <b style="color:red;">Achtung!</b> Average benötigt bei mehr also einer Attribute im `SELECT` [[Aggregatfunktionen in SQL#GROUP BY|GROUP BY]]
 
 ```sql
 SELECT AVG(gehalt)
@@ -126,17 +125,7 @@ Aggregatfunktionen sind ein mächtiges Werkzeug in SQL, um komplexe Datenabfrage
 
 # [[Erweiterte Abfragen in SQL#Reihenfolge|Reihenfolge der Keywords]]
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -159,15 +148,4 @@ Aggregatfunktionen sind ein mächtiges Werkzeug in SQL, um komplexe Datenabfrage
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

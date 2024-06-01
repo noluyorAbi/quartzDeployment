@@ -9,7 +9,7 @@ date modified: Tuesday, 16. April 2024, 11:03
 
 # Aufgabe 8-1 **Anfragen in SQL** [[Aggregatfunktionen in SQL]]
 
->[!info]
+> [!info]
 > (<span style="color: red">!!!</span>) steht für Teilaufgaben mit hohem Schwierigkeitsgrad
 
 Gegeben seien die Relationen `Professoren`, `Personal`, `Studenten`, `Vorlesungen`, `Voraussetzungen`, `hoeren` und `Pruefungen` also Datenmodell für eine Universitätsdatenbank:
@@ -27,27 +27,28 @@ Hinweis: Am End des Übungsblattes finden Sie zum Verständnis eine passende Bei
 
 ### a) Bestimmen Sie für jede Vorlesung (Anzuzeigen: Nummer und Title) die Durchschnittsnote (gerundet auf drei Stellen) über alle in dem Fach stattgefundenen Prüfungen. [[Aggregatfunktionen in SQL#AVG()]]
 
-*Zum Runden können Sie die Function `ROUND` benutzen. Beispielsweise wird das Ergebnis der Berechnung in folgender Anfrage auf drei Nachkommastellen gerundet:*
+_Zum Runden können Sie die Function `ROUND` benutzen. Beispielsweise wird das Ergebnis der Berechnung in folgender Anfrage auf drei Nachkommastellen gerundet:_
 
 ```sql
 SELECT ROUND(menge*gewicht / 1000,3) FROM LTP NATURAL JOIN T
 ```
 
 Lösung:
+
 ```sql
-SELECT vorlNr,titel,ROUND(AVG(note),3) AS Durchschnittsnote FROM Pruefungen 
+SELECT vorlNr,titel,ROUND(AVG(note),3) AS Durchschnittsnote FROM Pruefungen
 NATURAL JOIN Vorlesungen
-GROUP BY titel,vorlNr 
+GROUP BY titel,vorlNr
 ```
 
 ### b) Bestimmen Sie Personalnummer und Namen eines jeden Professors, zusammen mit der Anzahl der unterschiedlichen Vorlesungen, die er hält. Professoren ohne Vorlesung sollen mit einer Vorlesungsanzahl von 0 angegeben werden.
 
-*Sortieren Sie das Ergebnis absteigend nach der Anzahl der Vorlesungen.*
+_Sortieren Sie das Ergebnis absteigend nach der Anzahl der Vorlesungen._
 
 ```sql
-SELECT persNr, name, COUNT(vorlNr) AS Anzahl_Vorlesungen FROM Professoren 
-LEFT JOIN Vorlesungen ON persNr = gelesenVon 
-GROUP BY persNr, name 
+SELECT persNr, name, COUNT(vorlNr) AS Anzahl_Vorlesungen FROM Professoren
+LEFT JOIN Vorlesungen ON persNr = gelesenVon
+GROUP BY persNr, name
 ORDER BY Anzahl DESC
 ```
 
@@ -64,7 +65,7 @@ HAVING COUNT(DISTINCT s2.matrNr) > 2;
 
 ### <span style="color: red">!!!</span> d) Bestimmen Sie die Professoren (Anzuzeigen: Personalnummer und Name), für die mindestens zwei Studenten mindestens drei Vorlesungen des jeweiligen Professors hören
 
-*Tipp: Erstellen Sie passende Views, um die Anfrage übersichtlicher zu gestalten. Benutzen Sie hierzu die Syntax aus der Vorlesung!*
+_Tipp: Erstellen Sie passende Views, um die Anfrage übersichtlicher zu gestalten. Benutzen Sie hierzu die Syntax aus der Vorlesung!_
 
 ```sql
 CREATE VIEW AZ AS
@@ -78,12 +79,13 @@ HAVING COUNT(*) >= 3
 
 ```sql
 SELECT persNr, name
-FROM Professoren JOIN AZ ON persNr = 
+FROM Professoren JOIN AZ ON persNr =
 GROUP BY persNr, namegelesenVon
 HAVING COUNT(*) >= 2
 ```
 
 #### Erklärung
+
 - **`CREATE VIEW AZ`**: Erstellt eine temporäre Tabelle zur Vereinfachung komplexer Abfragen.
 - **`SELECT matrNr, gelesenVon, COUNT(*) as anz`**: Wählt Studenten-ID, Professor-ID und zählt Vorlesungen.
 - **`FROM Vorlesungen NATURAL JOIN hoeren`**: Verbindet Vorlesungen mit gehörten Vorlesungen auf Basis gleicher Spalten.
@@ -95,14 +97,13 @@ HAVING COUNT(*) >= 2
 - **`GROUP BY persNr, name`**: Gruppiert nach Professor.
 - **`HAVING COUNT(*) >= 2`**: Filtert Professoren mit mindestens zwei zugehörigen Studenten.
 
-
 ### <span style="color: red">!!!</span> e) Bestimmen Sie für jede Vorlesung (anzuzeigen: Nummer und Title), welche mindestens eine andere Vorlesung voraussetzt, die prozentualen Anteile (gerundet auf zwei Nachkommastellen) der teilnehmenden Studenten pro Semester. Dabei interessieren uns nur Vorlesungen, die von Studenten aus unterschiedlichen Semestern gehört werden. Andere Vorlesungen sollen nicht in der Ergebnistabelle auftauchen.
 
-*Ein Beispiel: Die Vorlesung Softwaretechnik setzt eine andere Vorlesung voraus und wird von insgesamt 6 Studenten gehört. Davon stammt ein Student aus dem fünften Semester. Also macht dieser Fünftsemestler ein Sechstel aller Hörer aus. Das entsprechende Ergebnistupel ist somit (6, 'Softwaretechnik', 5, 16,67).*
+_Ein Beispiel: Die Vorlesung Softwaretechnik setzt eine andere Vorlesung voraus und wird von insgesamt 6 Studenten gehört. Davon stammt ein Student aus dem fünften Semester. Also macht dieser Fünftsemestler ein Sechstel aller Hörer aus. Das entsprechende Ergebnistupel ist somit (6, 'Softwaretechnik', 5, 16,67)._
 
-*Das Ergebnis soll sortiert werden: alphabetisch nach dem Vorlesungstitel, dann absteigend nach dem prozentualen Anteil, bei gleichem Anteil aufsteigend nach dem Semester.* 
+_Das Ergebnis soll sortiert werden: alphabetisch nach dem Vorlesungstitel, dann absteigend nach dem prozentualen Anteil, bei gleichem Anteil aufsteigend nach dem Semester._
 
-*Tipp: Erstellen Sie passende Views.*
+_Tipp: Erstellen Sie passende Views._
 
 ```sql
 CREATE VIEW Vorlesung_mit_Voraussetzung AS
@@ -158,9 +159,9 @@ Durch diesen schrittweisen Ansatz wird die Komplexität der Anfrage reduziert, u
 
 ---
 
-# Aufgabe 8-2 **Anfragen in SQL***
+# Aufgabe 8-2 **Anfragen in SQL\***
 
-*Diese Aufgabe bezieht sich auf das aus früheren Übungsblättern bekannte Möbel-Datenbankschema. Formulieren Sie die folgenden Anfragen in SQL. Auf der Vorlesungswebseite steht auch eine SQL-Schnittstelle für dieses Schema zur Verfügung:*
+_Diese Aufgabe bezieht sich auf das aus früheren Übungsblättern bekannte Möbel-Datenbankschema. Formulieren Sie die folgenden Anfragen in SQL. Auf der Vorlesungswebseite steht auch eine SQL-Schnittstelle für dieses Schema zur Verfügung:_
 
 - `Kunde` (kund_nr, kund_name, address, ort, plz)
 - `Personal` (pers_nr, nachname, vorname, einsatz, vorgesetzt, gehalt)
@@ -175,12 +176,13 @@ SELECT art_nr, art_bez, lagerort, lagerbest FROM Inventar
 WHERE lagerort = 'Hamburg' OR lagerort = 'Muenchen'
 ```
 
-ODER 
+ODER
 
 ```sql
-SELECT art_nr, art_bez, lagerort, lagerbest FROM Inventar 
+SELECT art_nr, art_bez, lagerort, lagerbest FROM Inventar
 WHERE lagerort IN (“Hamburg”, “Muenchen”)
 ```
+
 ### b) Finden Sie für alle in der Tabelle Auftragsposten gespeicherten Bestellungen des Artikels mit der Nummer 203333 die Auftragsnummer, die Artikelnummer, die bestellte Menge und alle Lagerbestände und Lagerorte, an denen eine ausreichende Stückzahl des Artikels 203333 vorhanden ist.
 
 ```sql
@@ -227,7 +229,6 @@ SELECT nachname,vorname,einsatz ,gehalt FROM Personal
 ORDER BY einsatz ASC, gehalt DESC
 ```
 
-
 ### g) Finden Sie die Personalnummern und das Gehalt der Angestellten mit minimalem oder maximalem Gehalt.
 
 ```sql
@@ -257,19 +258,9 @@ SELECT AVG(anzahl) FROM (
 SELECT art_nr,art_bez,SUM(lagerbest) as bestand FROM Inventar
 GROUP BY art_nr,art_bez
 HAVING bestand >10
-``` 
-
-
-
-
-
+```
 
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -292,15 +283,4 @@ HAVING bestand >10
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

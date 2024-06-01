@@ -16,19 +16,21 @@ Die 3-Ebenen-Architektur ist ein Rahmenwerk für Datenbanksysteme, das eine effi
 ## Ebenen der Architektur
 
 - **Externe Ebene (Benutzersicht):**
+
   - Individualisierte Ansicht der Daten für verschiedene Benutzer oder Benutzergruppen.
   - Ermöglicht die Anpassung der Datenpräsentation an die spezifischen Anforderungen der Endbenutzer.
-	  → *User-Interface*
+    → _User-Interface_
 
 - **Konzeptionelle Ebene (Gemeinsame Sicht):**
+
   - Zentrale Definition aller Daten, Beziehungen, Sicherheits- und Integritätsregeln.
   - Einheitliche und konsistente Sicht auf alle Daten im System.
-	  → *Schema*
+    → _Schema_
 
 - **Interne Ebene (Speicherungssicht):**
   - Betrifft die physische Speicherung der Daten auf Speichermedien.
   - Beinhaltet Datenstrukturen, Speicherorte, Indexierung und Zugriffspfade.
-	  → *Speicherart*
+    → _Speicherart_
 
 ## Logische Datenunabhängigkeit
 
@@ -46,17 +48,7 @@ Die 3-Ebenen-Architektur ist ein Rahmenwerk für Datenbanksysteme, das eine effi
 
 Durch die Implementierung dieser Architektur und die Einhaltung der Prinzipien der logischen und physischen Datenunabhängigkeit kann ein Datenbanksystem flexible, zuverlässig und wartungsfreundlich gestaltet werden, wobei es gleichzeitig eine hohe Datenqualität und Anwendungsfreundlichkeit bietet.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -79,15 +71,4 @@ Durch die Implementierung dieser Architektur und die Einhaltung der Prinzipien d
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

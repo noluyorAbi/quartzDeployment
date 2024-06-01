@@ -1,7 +1,7 @@
 ---
 Thema:
-tags: 
-fach: 
+tags:
+fach:
 date created: Monday, 11. March 2024, 14:20
 date modified: Friday, 26. April 2024, 21:42
 ---
@@ -30,18 +30,7 @@ Folgende Themen sind besonders relevant und werden häufig in Prüfungen abgefra
 - **[[ER-Modell]]**: Die Erstellung und Interpretation von ER-Diagrammen wird hier durch anschauliche Beispiele und Leitfäden vereinfacht.
 - **[[Schedules]]**: Verstehe und analysiere Schedules im Datenbankkontext, um die Ausführung und Koordination von Transaktionen zu optimieren.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -64,15 +53,4 @@ Folgende Themen sind besonders relevant und werden häufig in Prüfungen abgefra
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

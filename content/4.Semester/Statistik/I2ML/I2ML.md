@@ -3,13 +3,14 @@ tags:
   - 4semester
   - statistik
   - "#i2ml"
-fach: 
+fach:
 Thema:
 date created: Monday, 22. April 2024, 17:51
 date modified: Monday, 22. April 2024, 23:05
 ---
 
 # https://slds-lmu.github.io/i2ml/
+
 # Übersicht der Studieninhalte
 
 ## [[I2ML-Vorlesungen]]
@@ -28,19 +29,7 @@ Diese Sektion bietet Zugang zu allen aktuellen und vergangenen Übungsblättern 
 
 Hier wird eine Zusammenfassung aller relevanten Klausuraufgaben inklusive deren Lösungen bereitgestellt. Diese Inhalte sind besonders wertvoll zur Prüfungsvorbereitung und zum Verständnis der Anforderungen in den Abschlussprüfungen.
 
-
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -63,15 +52,4 @@ Hier wird eine Zusammenfassung aller relevanten Klausuraufgaben inklusive deren 
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

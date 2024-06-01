@@ -3,7 +3,7 @@ Thema:
 tags:
   - 4semester
   - statistik
-fach: 
+fach:
 date created: Tuesday, 16. April 2024, 11:12
 date modified: Friday, 26. April 2024, 21:47
 ---
@@ -22,20 +22,7 @@ Diese Sektion bietet Zugang zu allen aktuellen und vergangenen Übungsblättern 
 
 Hier wird eine Zusammenfassung aller relevanten Klausuraufgaben inklusive deren Lösungen bereitgestellt. Diese Inhalte sind besonders wertvoll zur Prüfungsvorbereitung und zum Verständnis der Anforderungen in den Abschlussprüfungen.
 
-
-
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -58,15 +45,4 @@ Hier wird eine Zusammenfassung aller relevanten Klausuraufgaben inklusive deren 
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

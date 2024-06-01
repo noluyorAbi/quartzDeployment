@@ -11,14 +11,14 @@ date modified: Wednesday, 24. April 2024, 00:46
 
 # Satz des Euklids
 
-Der **Satz des Euklids** besagt, dass es unendlich viele Primzahlen gibt. Dies ist eines der grundlegendsten Ergebnisse in der Zahlentheorie. Euklid bewies diesen Satz in seinem Werk *Elemente*, welches um 300 v. Chr. verfasst wurde.
+Der **Satz des Euklids** besagt, dass es unendlich viele Primzahlen gibt. Dies ist eines der grundlegendsten Ergebnisse in der Zahlentheorie. Euklid bewies diesen Satz in seinem Werk _Elemente_, welches um 300 v. Chr. verfasst wurde.
 
 ## [[Beweisen]]
 
 Euklids Beweis für die Unendlichkeit der Primzahlen ist überraschend einfach und elegant. Hier ist eine kurze Darstellung seines Beweises:
 
 1. Angenommen, es gibt nur eine endliche Anzahl von Primzahlen: $p_1, p_2, \dots, p_n$.
-2. Bilden Sie das Product dieser Primzahlen und addieren Sie 1: 
+2. Bilden Sie das Product dieser Primzahlen und addieren Sie 1:
    $$
    N = p_1 \cdot p_2 \cdot \dots \cdot p_n + 1
    $$
@@ -34,6 +34,7 @@ Euklids Beweis nutzt eine Form des Beweises durch Widerspruch, der auch also "Re
 ### Eigenschaften von $N$
 
 Die Zahl $N = p_1 \cdot p_2 \cdot \dots \cdot p_n + 1$ ist sehr speziell:
+
 - $N$ ist größer also jede der Primzahlen $p_1, p_2, \dots, p_n$.
 - Für jede Primzahl $p_i$ aus der Liste gilt $N \mod p_i = 1$. Das bedeutet, keine der Primzahlen $p_1, p_2, \dots, p_n$ kann $N$ teilen.
 
@@ -45,21 +46,9 @@ Der Beweis zeigt nicht nur, dass es unendlich viele Primzahlen gibt, sondern leg
 
 Der Satz des Euklids unterstreicht nicht nur die Unendlichkeit der Primzahlen, sondern auch die Bedeutung von Primzahlen in der Mathematik und ihre Rolle in verschiedenen Bereichen wie der Kryptographie. Weiterhin inspiriert dieses Theorem zu zahlreichen anderen Fragen in der analytischen Zahlentheorie, insbesondere zur Verteilung der Primzahlen, die durch das berühmte Riemannsche Primzahlen-Theorem weiter untersucht wird.
 
-
 # Wiki: [Satz des Euklids](https://de.wikipedia.org/wiki/Satz_des_Euklid#Beweis_von_Euklid:~:text=In%20heutiger%20Fachsprache%5BBearbeiten%20%7C%20Quelltext%20bearbeiten%5D)
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -82,15 +71,4 @@ Der Satz des Euklids unterstreicht nicht nur die Unendlichkeit der Primzahlen, s
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

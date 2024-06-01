@@ -9,19 +9,20 @@ date created: Monday, 11. March 2024, 17:05
 date modified: Tuesday, 16. April 2024, 11:02
 ---
 
-
 # Aufgabe 1-1
+
 ## a) Welche 9 Zentralen Anforderungen an Ein Datenbanksystem Definierte Edgar Codd?
- 
-- **Integration** → Verwaltung aller von Anwendung benötigten Daten 
-- **Operation** → Operation zur Speicherung, Manipulation der Daten müssen vorhanden sein 
+
+- **Integration** → Verwaltung aller von Anwendung benötigten Daten
+- **Operation** → Operation zur Speicherung, Manipulation der Daten müssen vorhanden sein
 - **Data Dictionary** → Katalog erlaubt Zugriff auf die die Beschreibung der Daten
 - **Benutzersichten** → Für unterschiedliche Anwendungen unterschiedliche Sicht auf Bestand
 - **Konsistenzüberwachung** → [[Datenbankmanagementsystem (DBMS)| DBMS]] überwacht Korrektheit der Daten bei Änderung
 - **Zugriffskontrolle** → Ausschluss unautorisierter Zugriffe
-- **Transaktionen** → Zusammenfassung von Änderungsoperationen zu einer Einheit 
+- **Transaktionen** → Zusammenfassung von Änderungsoperationen zu einer Einheit
 - **Synchronisation** → Arbeiten mehrerer Benutzer gleichzeitig mit der DB
 - **Datensicherung** → Widerherstellung des DB zu dem Zustand nach der Transaktion
+
 ## b) Was Versteht Man under Logischer Und Physischer Datenunabhängigkeit
 
 - **logische Datenunabhängigkeit:** Ändern des Schemas der Datenbank ohne zu ändern wie eine Anwendung auf diese Daten zugreift [[3 - Ebenenarchitektur#Logische Datenunabhängigkeit| (logische Datenunabhängigkeit)]]
@@ -35,16 +36,16 @@ date modified: Tuesday, 16. April 2024, 11:02
 
 ### a) Das Kartesische Product A × Z
 
-- Alles aus *A* mit allem aus *Z*
-$$
-M = \{(a,1),(a,2),(a,3),(a,4)(b,1),(b,2),(b,3),(b,4),(c,1),(c,2),(c,3),(c,4)\}
-$$
+- Alles aus _A_ mit allem aus _Z_
+  $$
+  M = \{(a,1),(a,2),(a,3),(a,4)(b,1),(b,2),(b,3),(b,4),(c,1),(c,2),(c,3),(c,4)\}
+  $$
 
 ### b) Eine Totale Function Von A Nach Z
 
-- Jedes Element in *A* hat genau einen Partner in Z (<u>nicht keinen, nicht mehrere</u>)
-- Elemente in *Z* dürfen keinen, einen oder mehrere Partner in *A* haben
-- → A hat mindestens ein Element aus Z 
+- Jedes Element in _A_ hat genau einen Partner in Z (<u>nicht keinen, nicht mehrere</u>)
+- Elemente in _Z_ dürfen keinen, einen oder mehrere Partner in _A_ haben
+- → A hat mindestens ein Element aus Z
 
 - $M = \{(a,1),(b,2),(c,1) \}$
 
@@ -56,17 +57,7 @@ $$
 
 Also nächstes: [[DBS-Blatt 2]]
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -89,15 +80,4 @@ Also nächstes: [[DBS-Blatt 2]]
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

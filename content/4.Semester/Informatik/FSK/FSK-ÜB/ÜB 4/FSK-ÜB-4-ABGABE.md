@@ -5,12 +5,11 @@ tags:
   - informatik
   - Übungsblatt
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
-Thema: 
-Benötigte Zeit: 
+Thema:
+Benötigte Zeit:
 date created: Monday, 13. May 2024, 22:00
 date modified: Wednesday, 15. May 2024, 02:04
 ---
-
 
 # FSK4-1 [[Pumping-Lemma]] für reguläre Sprachen (2 Punkte)
 
@@ -18,7 +17,8 @@ Zeigen Sie mit dem Pumping-Lemma für reguläre Sprachen, dass die folgenden Spr
 
 ## a) $L_1 = \{ a^i b^j c^k d^i \mid i, j, k \in \mathbb{N}_{>0} \}$ über dem Alphabet $\Sigma_1 = \{ a, b, c, d \}$.
 
->[!tip] [[Pumping-Lemma#Schema des Lemma-Beweises]]
+> [!tip] [[Pumping-Lemma#Schema des Lemma-Beweises]]
+>
 > $$
 > \begin{aligned}
 > \text{WENN} \quad & \forall p \in \mathbb{N} \text{ gilt:} \\
@@ -28,10 +28,13 @@ Zeigen Sie mit dem Pumping-Lemma für reguläre Sprachen, dass die folgenden Spr
 > \text{DANN} \quad & L \text{ nicht erkennbar}
 > \end{aligned}
 > $$
+
 ### Beweis
+
 $$
 \textbf{Annahme:} \quad L_1 \text{ ist regulär.}
 $$
+
 $$
 \begin{aligned}
 &1. \ \text{Gemäß Pumping-Lemma gibt es eine Pumping-Länge } p \in \mathbb{N}. \\
@@ -43,30 +46,36 @@ $$
 $$
 
 **Abpumpen:**
+
 - Das gepumpte Wort wird $xy^0z = xa^{0}z = a^{m}a^{p-m-n}b^1c^1d^p = a^{p-n}b^1c^1d^p$.
 - Das resultierende Wort hat $p-n$ $a$'s und $p$ $d$'s.
 - Da $n > 0$, gilt $p-n \neq p$, und somit passt das Wort $a^{p-n}b^1c^1d^p$ nicht in die Form $a^i b^j c^k d^i$, weil die Anzahl der $a$'s und $d$'s nicht mehr übereinstimmt.
 
 **Fazit:**
+
 - Da $xy^0z \notin L_1$ für $i = 0$, und das Wort $w$ beliebig gewählt wurde, folgt daraus, dass $L_1$ nicht regulär sein kann, da es das Pumping-Lemma verletzt.
 
 ## b) $L_2 = L(G_2)$, wobei $G_2$ eine kontextfreie Grammatik ist mit
 
->[!note] Aufgabenstellung
+> [!note] Aufgabenstellung
+>
 > $$
 > G_2 = (\{S, A, B\}, \{(), [], [, ]\}, P, S)
 > $$
+>
 > $$
 > P = \{ S \rightarrow (S), S \rightarrow [S], S \rightarrow A, S \rightarrow \epsilon, A \rightarrow B, A \rightarrow [], B \rightarrow S, B \rightarrow BB \}
 > $$
-> 
+>
 > $L_2$ ist die Sprache der zueinander passenden eckigen und runden Klammern, d.h. es sind z.B. $([][]) \in L_2$ und $()() \in L_2$, aber $([]) \notin L_2$ und $) \notin L_2$ (vgl. Aufgabe FSK1-3).
-Hier ist der umgewandelte Text mit den angepassten LaTeX-Syntax:
+> Hier ist der umgewandelte Text mit den angepassten LaTeX-Syntax:
 
 ### Beweis
+
 $$
 \textbf{Annahme:} \quad L_2 \text{ ist regulär.}
 $$
+
 $$
 \begin{aligned}
 &1. \ \text{Gemäß dem Pumping-Lemma gibt es eine Pumping-Länge } p \in \mathbb{N}. \\
@@ -78,22 +87,25 @@ $$
 $$
 
 **Abpumpen:**
+
 - Das gepumpte Wort wird $xy^0z = xz$.
 - Wenn $x = ([)^m$ und $z = ([)^{p-m-n} ]^p$, dann ist $xy^0z = ([)^{p-n} ]^p$.
 - Das resultierende Wort hat $p-n$ öffnende und $p$ schließende Klammern.
 
 **Fazit:**
+
 - Da $n > 0$, gilt $p-n < p$, und somit passt das Wort $([)^{p-n} ]^p$ nicht in die Form, die eine gleiche Anzahl von zueinander passenden Klammern erfordert, weil die Anzahl der öffnenden Klammern $([$) geringer ist als die Anzahl der schließenden Klammern $]$.
 - Da $xy^0z \notin L_2$ für $i = 0$, und das Wort $w$ gemäß den Vorgaben des Pumping-Lemmas gewählt wurde, folgt daraus, dass $L_2$ nicht regulär sein kann, da es das Pumping-Lemma verletzt.
 
->[!summary]
->Um zu zeigen, dass die Sprache $L_2$, die korrekt gepaarte Klammern enthält, nicht regulär ist, verwenden wir das Pumping-Lemma für reguläre Sprachen. Hier ist eine noch kürzere und einfachere Zusammenfassung des Beweises:
->1. **Annahme**: Angenommen $L_2$ ist regulär.
->2. **Wortwahl**: Wir wählen ein Wort $w$, bestehend aus $p$ öffnenden gefolgt von $p$ schließenden Klammern, z.B. $w = ([)^p ]^p$.
->3. **Zerlegung und Pumping**: Das Pumping-Lemma sagt, dass man $w$ in Teile $x, y, z$ zerlegen kann, wobei $y$ wiederholbar ist. Wichtig ist, dass $y$ nur aus öffnenden Klammern besteht.
->4. **Abpumpen**: Wenn wir $y$ beim Pumpen entfernen, sind weniger öffnende als schließende Klammern im Wort $xz$, was zu einem Ungleichgewicht führt. 
+> [!summary]
+> Um zu zeigen, dass die Sprache $L_2$, die korrekt gepaarte Klammern enthält, nicht regulär ist, verwenden wir das Pumping-Lemma für reguläre Sprachen. Hier ist eine noch kürzere und einfachere Zusammenfassung des Beweises:
 >
->**Fazit**: $xz$ hat nicht mehr die gleiche Anzahl öffnender und schließender Klammern, was es ungültig für $L_2$ macht. Das zeigt, dass $L_2$ nicht regulär sein kann.
+> 1.  **Annahme**: Angenommen $L_2$ ist regulär.
+> 2.  **Wortwahl**: Wir wählen ein Wort $w$, bestehend aus $p$ öffnenden gefolgt von $p$ schließenden Klammern, z.B. $w = ([)^p ]^p$.
+> 3.  **Zerlegung und Pumping**: Das Pumping-Lemma sagt, dass man $w$ in Teile $x, y, z$ zerlegen kann, wobei $y$ wiederholbar ist. Wichtig ist, dass $y$ nur aus öffnenden Klammern besteht.
+> 4.  **Abpumpen**: Wenn wir $y$ beim Pumpen entfernen, sind weniger öffnende als schließende Klammern im Wort $xz$, was zu einem Ungleichgewicht führt.
+>
+> **Fazit**: $xz$ hat nicht mehr die gleiche Anzahl öffnender und schließender Klammern, was es ungültig für $L_2$ macht. Das zeigt, dass $L_2$ nicht regulär sein kann.
 
 ---
 
@@ -136,12 +148,12 @@ graph LR
 
 ### i) Die Sprache $L_3$ der Wörter über dem Alphabet $\Sigma_1 = \{a, b, c\}$, die mit $a$ oder $b$ anfangen und mindestens ein $c$ enthalten.
 
-
 $$
 [ab][abc]^*c[abc]^*
 $$
 
 **Erklärung des regulären Ausdrucks:**
+
 - \[ab\]: Das Wort beginnt mit $a$ oder $b$.
 - \[abc\]\*: Nach dem Anfangsbuchstaben können beliebige Zeichen aus dem Alphabet $\{a, b, c\}$ folgen, und zwar beliebig oft, auch gar nicht.
 - c: Es muss mindestens ein $c$ im Wort vorkommen.
@@ -154,6 +166,7 @@ b^*(ab^*)^*
 $$
 
 **Erklärung des regulären Ausdrucks:**
+
 - b\*:Das Wort kann mit beliebig vielen $b$'s beginnen, einschließlich keinem $b$.
 - (ab\*)\*: Nach jedem $a$ darf kein weiteres $a$ direkt folgen. Stattdessen kann ein $a$ von beliebig vielen $b$'s gefolgt werden (einschließlich keinem), und diese Sequenz aus einem $a$ und den darauf folgenden $b$'s kann beliebig oft wiederholt werden, einschließlich gar nicht.
 
@@ -172,12 +185,13 @@ Um zu zeigen, dass die Sprache $L_5 = \{a^i w d^{i+1} \mid i \in \mathbb{N}, w \
 
 # FSK4-3 Grammatik über Automaten zu Grammatik (0 Punkte)
 
->[!note] Aufgabenstellung
->Gegeben sei die reguläre Grammatik
->$$
->G = (\{S, A, B, C\}, \{a, b\}, \{S \rightarrow aA \mid bB, A \rightarrow bB, B
->\rightarrow bC, C \rightarrow aC \mid a\}, S)
->$$
+> [!note] Aufgabenstellung
+> Gegeben sei die reguläre Grammatik
+>
+> $$
+> G = (\{S, A, B, C\}, \{a, b\}, \{S \rightarrow aA \mid bB, A \rightarrow bB, B
+> \rightarrow bC, C \rightarrow aC \mid a\}, S)
+> $$
 
 ## a) Erzeugen Sie gemäß der Konstruktion aus der Vorlesung aus $G$ einen NFA $A$ mit $L(G) = L(A)$.
 
@@ -193,7 +207,7 @@ start(( ))-->S((S))
 textC[C ist ein Endzustand]
 
 ```
- 
+
 ## b) Erzeugen Sie mit der Potenzmengenkonstruktion aus $A$ einen DFA $B$ mit $L(B) = L(A)$. Geben Sie nur den vom Startzustand erreichbaren Teil von $A$ an.
 
 |  Start  | $\rightarrow$ |    Ziel     |
@@ -206,6 +220,7 @@ textC[C ist ein Endzustand]
 | $\{B\}$ |      $b$      |   $\{C\}$   |
 | $\{C\}$ |      $a$      |   $\{C\}$   |
 | $\{C\}$ |      $b$      | $\emptyset$ |
+
 ```mermaid
 flowchart LR
 start(( ))-->S((S))
@@ -235,6 +250,7 @@ C &\rightarrow aC \mid a \mid bM \\
 \}, S)
 \end{aligned}
 $$
+
 Die Grammatik wurde um den Müllzustand erweitert
 
 ### Zweite Option: (inkorrekt?)
@@ -251,19 +267,23 @@ C &\rightarrow aC \mid a \\
 $$
 
 Die **Grammatik** $H'$ entspricht der vom **DFA** $B$ akzeptierten **Sprache**, da sie durch eine direkte Überführung der **Zustände** und **Übergänge** des DFA in **Nichtterminale** und **Produktionsregeln** entsteht, die die **Akzeptanzbedingungen** des DFA genau abbilden.
+
 ## d) Vergleichen Sie die Grammatiken $G$ und $H$. Beschreiben Sie die Gemeinsamkeiten dieser Grammatiken, sowie ihre Unterschiede. Überlegen Sie sich, wodurch diese Effekte zustande kommen.
 
 ### Gemeinsamkeiten:
+
 1. **Nichtterminale und Terminale:** Beide Grammatiken nutzen $\{S, A, B, C\}$ und $\{a, b\}$.
 2. **Startsymbol:** Beide haben $S$ als Startsymbol.
 3. **Ähnliche Produktionen:** Produktionen wie $S \rightarrow aA \mid bB$ und $B \rightarrow bC$ sind identisch.
 
 ### Unterschiede:
+
 1. **Müllzustand:** $H$ führt den Müllzustand $M$ ein, den $G$ nicht hat.
 2. **Zusätzliche Produktionen:** $H$ enthält Produktionen wie $A \rightarrow aM$ und $B \rightarrow aM$, die den Müllzustand reflektieren.
 3. **Endproduktion:** In $H$ hat $C$ eine Endproduktion $a$, die in $G$ fehlt.
 
 ### Ursachen der Unterschiede:
+
 - **Müllzustand:** $H$ modelliert explizit den Müllzustand für die DFA-Vollständigkeit, während $G$ sich auf die Sprachgenerierung konzentriert.
 - **Automatenlogik:** $H$ spiegelt die vollständige DFA-Struktur wider, während $G$ nur die akzeptierten Sprachelemente darstellt.
 
@@ -273,17 +293,17 @@ Zusammenfassend modelliert $H$ den vollständigen DFA, inklusive ungültiger Ein
 
 # FSK4-4 DNA-Analyse mit NFA (0 Punkte)
 
->[!note] Aufgabenstellung
->Diese Aufgabe handelt von der Analyse von Desoxyribonukleinsäure (DNS/DNA) mithilfe von NFA. DNA ist eine Abfolge der Basen Adenin, Thymin, Guanin und Cytosin, typischerweise mit A, T, G und C abgekürzt. Dementsprechend ist das Alphabet aller Automaten in dieser Aufgabe $\Sigma = \{A, C, G, T\}$.
+> [!note] Aufgabenstellung
+> Diese Aufgabe handelt von der Analyse von Desoxyribonukleinsäure (DNS/DNA) mithilfe von NFA. DNA ist eine Abfolge der Basen Adenin, Thymin, Guanin und Cytosin, typischerweise mit A, T, G und C abgekürzt. Dementsprechend ist das Alphabet aller Automaten in dieser Aufgabe $\Sigma = \{A, C, G, T\}$.
 
 ## a) Um das Vorkommen einer Basensequenz zu finden, wird aus dieser Sequenz ein NFA erzeugt, der alle Wörter akzeptiert, in denen diese Sequenz als Teilwort vorkommt.
 
->[!note] Aufgabenstellung
->Geben Sie einen NFA $B$ an, der genau diejenigen Wörter akzeptiert, in denen $ACTC$ als Teilwort vorkommt.
+> [!note] Aufgabenstellung
+> Geben Sie einen NFA $B$ an, der genau diejenigen Wörter akzeptiert, in denen $ACTC$ als Teilwort vorkommt.
 >
->**Hinweis:** Sie können (müssen aber nicht) dazu den regulären Ausdruck $(A|C|G|T)^* ACTC (A|C|G|T)^*$ verwenden, der genau diese Sprache akzeptiert.
+> **Hinweis:** Sie können (müssen aber nicht) dazu den regulären Ausdruck $(A|C|G|T)^* ACTC (A|C|G|T)^*$ verwenden, der genau diese Sprache akzeptiert.
 >
->**Hinweis:** Sie können auch einen DFA angeben, aber ein NFA ist übersichtlicher.
+> **Hinweis:** Sie können auch einen DFA angeben, aber ein NFA ist übersichtlicher.
 
 ```mermaid
 graph LR
@@ -298,27 +318,28 @@ z0((z0)) --Σ-->z0((z0))
 
 ## b) Beim Kopieren von DNA kann es vorkommen, dass Fehler auftreten. Zum Beispiel kann eine Base durch eine andere ersetzt werden; es kann eine Base ausgelassen werden; es kann eine zusätzliche Base eingefügt werden; und es können auch komplexere Fehler auftreten. Zur Vereinfachung behandeln wir hier nur den Fall, dass eine Base durch eine andere ersetzt wird.
 
->[!note] Aufgabenstellung
->Aus einem NFA $D = (Z, \Sigma, \delta, S, E)$ kann ein NFA $F = (Z', \Sigma, \delta', S', E')$ erzeugt werden, der alle Wörter akzeptiert, die durch höchstens $k$ fehlerhafte Ersetzungen aus $D$ entstehen.
+> [!note] Aufgabenstellung
+> Aus einem NFA $D = (Z, \Sigma, \delta, S, E)$ kann ein NFA $F = (Z', \Sigma, \delta', S', E')$ erzeugt werden, der alle Wörter akzeptiert, die durch höchstens $k$ fehlerhafte Ersetzungen aus $D$ entstehen.
 >
->Dabei sind:
+> Dabei sind:
 >
->- $Z' = Z \times \{0, \ldots, k\}$
->- $$
->\delta'((q, i), a) = \{(q', i) \mid q' \in \delta(q, a)\} \cup \{(q', i+1) \mid
->(\exists b \in \Sigma. q' \in \delta(q, b)) \land i + 1 \leq k\}
->$$
->- $S' = S \times \{0\} = \{(s, 0) \mid s \in S\}$
->- $E' = E \times \{0, \ldots, k\}$
+> - $Z' = Z \times \{0, \ldots, k\}$
+> - $$
+>   \delta'((q, i), a) = \{(q', i) \mid q' \in \delta(q, a)\} \cup \{(q', i+1) \mid
+>   (\exists b \in \Sigma. q' \in \delta(q, b)) \land i + 1 \leq k\}
+>   $$
+> - $S' = S \times \{0\} = \{(s, 0) \mid s \in S\}$
+> - $E' = E \times \{0, \ldots, k\}$
 >
->Berechnen Sie mit der obigen Konstruktion einen NFA $H$ aus $B$, der Wörter mit bis zu 2 Fehlern akzeptiert.
+> Berechnen Sie mit der obigen Konstruktion einen NFA $H$ aus $B$, der Wörter mit bis zu 2 Fehlern akzeptiert.
 
->[!tip] Erklärung $\delta'$
+> [!tip] Erklärung $\delta'$
 > Die **Transitionsfunktion** $\delta'$ definiert, wie der modifizierte Automat von einem **Zustand** zum anderen übergeht, unter Berücksichtigung möglicher **Fehler** in der Eingabe. Hier ist eine kurze und verständliche Erklärung:
+>
 > 1. **$\{(q', i) | q' \in \delta(q, a)\}$**: Diese Menge beschreibt **normale Übergänge** ohne Fehler. Wenn der Automat im Zustand **$(q, i)$** ist und das Zeichen **$a$** liest, kann er in den Zustand **$(q', i)$** übergehen, wenn **$q'$** ein gültiger Übergangszustand von **$q$** aus ist, gegeben das Zeichen **$a$** im ursprünglichen Automaten **$D$**. Das bedeutet, es wird kein **Fehler** gezählt und der **Fehlerindex** **$i$** bleibt unverändert.
-> <br/>
+>    <br/>
 > 2. **$\{(q', i+1) | (\exists b \in \Sigma. q' \in \delta(q, b) \land i+1 \leq k)\}$**: Diese Menge erlaubt **fehlerhafte Übergänge**, bei denen ein Zeichen falsch interpretiert wird. Wenn der Automat im Zustand **$(q, i)$** ist und das Zeichen **$a$** liest, kann er auch in den Zustand **$(q', i+1)$** übergehen, wenn es möglich ist, **$q'$** von **$q$** aus zu erreichen durch das Lesen eines beliebigen anderen Zeichens **$b$** (nicht notwendigerweise **$a$**). Dies zählt als ein **Fehler**, und der **Fehlerindex** **$i$** wird um 1 erhöht, solange die Gesamtzahl der **Fehler** **$i+1$** nicht größer als **$k$** ist.
-> 
+>
 > Zusammengefasst: $\delta'$ erlaubt sowohl **normale** als auch **fehlerhafte Übergänge**, wobei **fehlerhafte Übergänge** die Annahme eines falschen Zeichens unter der Bedingung beinhalten, dass die maximale erlaubte **Fehlerzahl** **$k$** noch nicht erreicht ist.
 
 ```mermaid
@@ -332,46 +353,50 @@ graph LR
     z01((z0,1)) --Σ--> z02((z0,2))
     z02((z0,2)) --Σ--> z02((z0,2))
     z02((z0,2)) --A--> z12((z1,2))
-    
+
     z10((z1,0)) --C--> z20((z2,0))
     z10((z1,0)) --Σ--> z11((z1,1))
     z11((z1,1)) --C--> z21((z2,1))
     z11((z1,1)) --Σ--> z12((z1,2))
     z12((z1,2)) --C--> z22((z2,2))
     z12((z1,2)) --Σ--> z12((z1,2))
-    
+
     z20((z2,0)) --T--> z30((z3,0))
     z20((z2,0)) --Σ--> z21((z2,1))
     z21((z2,1)) --T--> z31((z3,1))
     z21((z2,1)) --Σ--> z22((z2,2))
     z22((z2,2)) --T--> z32((z3,2))
     z22((z2,2)) --Σ--> z22((z2,2))
-    
+
     z30((z3,0)) --C--> z40(((z4,0)))
     z30((z3,0)) --Σ--> z31((z3,1))
     z31((z3,1)) --C--> z41(((z4,1)))
     z31((z3,1)) --Σ--> z32((z3,2))
     z32((z3,2)) --C--> z42(((z4,2)))
     z32((z3,2)) --Σ--> z32((z3,2))
-    
+
     z40(((z4,0))) --Σ--> z40(((z4,0)))
     z41(((z4,1))) --Σ--> z41(((z4,1)))
     z42(((z4,2))) --Σ--> z42(((z4,2)))
 
 ```
+
 ## c) Geben Sie an und begründen Sie, welche der folgenden Wörter von $H$ akzeptiert werden. Prüfen Sie, ob Ihr Ergebnis korrekt ist, also ob die erkannten Wörter tatsächlich diejenigen sind, bei denen bis auf höchstens 2 Fehler das Wort $ACTC$ als Teilwort vorkommt.
 
 $AAAAACCCAAA, GAGGCGT, TAGCA, TCTCA$
 
 Um zu bestimmen, ob die gegebenen Wörter von dem NFA $H$ akzeptiert werden, prüfen wir, ob das Wort "ACTC" mit höchstens zwei Fehlern in jedem Wort erscheinen kann.
+
 ### Wortanalyse:
 
 1. $AAAAACCCAAA$
+
    - **Suche nach "ACTC":** Kein Vorkommen von "ACTC".
    - **Mögliche Fehler:** Das nächste, was "ACTC" ähnlich sieht, wäre "ACCA" (zum Beispiel durch Ersetzung von 'T' durch 'A' und 'C' durch 'A').
    - $\Longrightarrow$ **Ergebnis:** Zwei Fehler, um von "ACCA" zu "ACTC" zu gelangen. **Wird akzeptiert.**
- 
+
 2. $GAGGCGT$
+
    - **Suche nach "ACTC":** Kein direktes Vorkommen von "ACTC".
    - **Mögliche Fehler:** Das nächste, was "ACTC" ähnlich sieht, wäre "GCGT" eine Korrektur würde 3 Korrekturen benötigen "`A`C`TC`"
    - $\Longrightarrow$ **Ergebnis:** Wort benötigt 3 Korrekturen **Wird nicht akzeptiert.**
@@ -379,12 +404,14 @@ Um zu bestimmen, ob die gegebenen Wörter von dem NFA $H$ akzeptiert werden, pr�
 3. **TAGCA**
    - **Suche nach "ACTC":** Kein direktes Vorkommen von "ACTC".
    - **Mögliche Fehler:** Das nächste, was "ACTC" ähnlich sieht, wäre "AGCA" eine Korrektur würde 3 Korrekturen benötigen "A`CTC`"
+
 - $\Longrightarrow$ **Ergebnis:** Wort hat 3 Fehler, **Wird nicht akzeptiert.**
 
 4. **TCTCA**
    - **Suche nach "ACTC":** Kein direktes Vorkommen von "ACTC".
    - **Mögliche Fehler:** Das nächste, was "ACTC" ähnlich sieht, wäre "TCTC" eine Korrektur würde 1 Korrektur benötigen "`A`CTC"
    - $\Longrightarrow$ **Ergebnis:** Nur ein Fehler , **wird akzeptiert.**
+
 ### Zusammenfassung:
 
 - **AAAAACCCAAA**: Akzeptiert (zwei Fehler )
@@ -392,11 +419,10 @@ Um zu bestimmen, ob die gegebenen Wörter von dem NFA $H$ akzeptiert werden, pr�
 - **TAGCA**: Nicht akzeptiert (drei Fehler)
 - **TCTCA**: Akzeptiert (ein Fehler)
 
-
 ## d) Begründen Sie, dass die Konstruktion aus b) korrekt ist, also tatsächlich für jeden NFA $D$ und jedes $k$ einen NFA $F$ liefert, der maximal $k$ Fehler zulässt.
 
->[!warning] Hinweis
->  Sie können auch als Vorüberlegung dies erst für den NFA $H$ zeigen.
+> [!warning] Hinweis
+> Sie können auch als Vorüberlegung dies erst für den NFA $H$ zeigen.
 
 Die Konstruktion eines NFA $F$ aus einem NFA $D$ zur Akzeptanz von Wörtern mit bis zu $k$ Ersetzungsfehlern lässt sich durch folgende Schritte begründen:
 
@@ -410,17 +436,7 @@ Die Konstruktion eines NFA $F$ aus einem NFA $D$ zur Akzeptanz von Wörtern mit 
 
 Damit akzeptiert $F$ genau die Wörter, die aus den von $D$ akzeptierten Wörtern durch bis zu $k$ Ersetzungsfehler entstehen.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -443,15 +459,4 @@ Damit akzeptiert $F$ genau die Wörter, die aus den von $D$ akzeptierten Wörter
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

@@ -1,6 +1,6 @@
 ---
-tags: 
-fach: 
+tags:
+fach:
 date created: Friday, 19. April 2024, 09:30
 date modified: Friday, 19. April 2024, 09:36
 ---
@@ -66,17 +66,7 @@ Zusammenfassend ist TCP ein grundlegender Ba
 
 ustein für eine Vielzahl von Internetanwendungen und -diensten, der eine zuverlässige Kommunikation zwischen verteilten Systemen ermöglicht. Es stellt sicher, dass alle Daten in der richtigen Reihenfolge und fehlerfrei ankommen, was für viele moderne IT-Anwendungen und Dienste unerlässlich ist.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -99,15 +89,4 @@ ustein für eine Vielzahl von Internetanwendungen und -diensten, der eine zuverl
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

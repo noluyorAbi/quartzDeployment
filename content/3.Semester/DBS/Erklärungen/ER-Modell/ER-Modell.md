@@ -11,23 +11,23 @@ date modified: Monday, 8. April 2024, 14:00
 
 - E/R steht für Entity/Relation
 - Modellierung eines Datenbankschemas:
-	- Attribute der jeweiligen 
-	- Zusammenhänge zwischen der jeweiligen Relation
-- Erst nach der Modellierung kommt die Implementierung 
+  - Attribute der jeweiligen
+  - Zusammenhänge zwischen der jeweiligen Relation
+- Erst nach der Modellierung kommt die Implementierung
 
-- Entity: *▭*
-	- Ein Entity existiert und ist unterscheidbar von anderen Entities
-- Attribute : *⬭*
-	- Charakteristische Eigenschaft von Entities, Schlüssel = identifiziert Entity eindeutig
-- Relation/Beziehung: *◇*
-	- Zusammenhänge zwischen Entities
-
+- Entity: _▭_
+  - Ein Entity existiert und ist unterscheidbar von anderen Entities
+- Attribute : _⬭_
+  - Charakteristische Eigenschaft von Entities, Schlüssel = identifiziert Entity eindeutig
+- Relation/Beziehung: _◇_
+  - Zusammenhänge zwischen Entities
 
 ## 1:1 - Beziehung
 
 ![1:1 - Beziehung](1zu1.png)
 
 → Zusammenfassung der beiden beteiligten Relationen zu einer
+
 ## 1:n - Beziehung
 
 ![1:n - Beziehung](1zuN.png)
@@ -40,17 +40,7 @@ date modified: Monday, 8. April 2024, 14:00
 
 → Erzeugen einer eigenen Relation, die die Schlüssel der beteiligen Relationen enthält
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -73,15 +63,4 @@ date modified: Monday, 8. April 2024, 14:00
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

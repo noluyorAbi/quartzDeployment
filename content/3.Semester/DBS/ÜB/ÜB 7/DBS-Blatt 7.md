@@ -19,19 +19,21 @@ Gegeben seien die Relationen `Kunde`, `Personal`, `Verkauf`, `Inventar` und `Auf
 
 # Aufgabe 7-1 Anfragen in SQL [[Erweiterte Abfragen in SQL]]
 
-*Formulieren Sie folgende Anfragen in der Datenbanksprache SQL. Formulieren Sie die Teilaufgaben a) und b) jeweils einmal mit Hilfe von Join-Operationen und einmal nur mittels Unterabfragen ohne Join oder Kreuzprodukt. Achten Sie darauf, Duplikate zu vermeiden.*
+_Formulieren Sie folgende Anfragen in der Datenbanksprache SQL. Formulieren Sie die Teilaufgaben a) und b) jeweils einmal mit Hilfe von Join-Operationen und einmal nur mittels Unterabfragen ohne Join oder Kreuzprodukt. Achten Sie darauf, Duplikate zu vermeiden._
 
-***Manchmal werden in SELECT-Abfragen anstelle der korrekten Attribute Sternchen (\*) verwendet. Dies geschieht, weil es beim Erlernen von Abfragen hilfreich ist, alle Attribute der Tuple zu sehen. Anstelle des Sternchens sollten jedoch die in der Aufgabenstellung geforderten Attribute explicit genannt werden. Das macht die Abfrage klarer und vermeidet unnötige Informationen.**
+**\*Manchmal werden in SELECT-Abfragen anstelle der korrekten Attribute Sternchen (\*) verwendet. Dies geschieht, weil es beim Erlernen von Abfragen hilfreich ist, alle Attribute der Tuple zu sehen. Anstelle des Sternchens sollten jedoch die in der Aufgabenstellung geforderten Attribute explicit genannt werden. Das macht die Abfrage klarer und vermeidet unnötige Informationen.**
 
 ### a) Finden Sie die Nummern und Bezeichnungen aller Artikel, deren Preis entweder dem Gehalt von Roswita Hartinger oder Margot Winter entspricht. (Zusatzanforderung oben beachten!)
 
-**JOIN:** 
+**JOIN:**
+
 ```sql
 SELECT DISTINCT art_nr,art_bez FROM Inventar JOIN Personal ON gehalt=preis
-WHERE  ((vorname = "Roswita" AND nachname = "Hartinger") OR (vorname = "Margot" AND nachname = "Winter")) 
+WHERE  ((vorname = "Roswita" AND nachname = "Hartinger") OR (vorname = "Margot" AND nachname = "Winter"))
 ```
 
 **UNTERABFRAGE (optimal)**
+
 ```sql
 SELECT DISTINCT art_nr, art_bez
 FROM Inventar
@@ -43,9 +45,10 @@ WHERE preis IN (
 );
 ```
 
-- WHERE preis und dann SELECT gehalt weil diese Attribute verknüpft werden sollen, da diese identisch sind 
+- WHERE preis und dann SELECT gehalt weil diese Attribute verknüpft werden sollen, da diese identisch sind
 
 **UNTERABFRAGE (nicht optimal)**
+
 ```sql
 SELECT DISTINCT art_nr,art_bez FROM Inventar I
 WHERE (
@@ -58,17 +61,20 @@ SELECT DISTINCT gehalt FROM Personal as RH
 WHERE vorname = "Margot" AND nachname = "Winter" )
 )
 ```
+
 ### b) Geben Sie alle Kundennamen an, die am 24.07.2023 etwas von einem Mitarbeiter mit dem Einsatzort Hamburg gekauft haben. (Zusatzanforderung oben beachten!)
 
 **JOIN:**
+
 ```sql
-SELECT DISTINCT kund_name FROM Kunde 
+SELECT DISTINCT kund_name FROM Kunde
 JOIN Verkauf ON Kunde.kund_nr=Verkauf.kund_nr
 JOIN Personal ON Personal.pers_nr=Verkauf.pers_nr
 WHERE bestelldatum = "2019-07-24" AND einsatz = "Hamburg"
 ```
 
 **UNTERABFRAGE:**
+
 ```sql
 SELECT DISTINCT kund_name
 FROM Kunde
@@ -85,6 +91,7 @@ WHERE kund_nr IN (
 ```
 
 - WHERE kund_nr und dann SELECT kund_nr da die Relationen mit dieser Attribute verknüpft werden soll
+
 ### c) Erzeugen Sie eine Liste aller Mitarbeiter Vornamen, Nachnamen und Gehalt und zwar absteigend sortiert nach Gehalt. Bei gleichem Gehalt wird alphabetisch aufsteigend zunächst nach Nachnamen und dann nach Vornamen sortiert.
 
 ```sql
@@ -93,8 +100,9 @@ ORDER BY gehalt DESC, nachname ASC, vorname ASC
 ```
 
 ### d) Bestimmen Sie die Artikelnummern, Artikelbezeichnung und Preise des Inventars, die den niedrigsten Preis aufweisen. D.h. es gibt keinen Artikel mit einem niedrigerem Preis.
+
 ```sql
-SELECT art_nr, art_bez,preis FROM Inventar 
+SELECT art_nr, art_bez,preis FROM Inventar
 ORDER BY preis ASC
 LIMIT 1
 ```
@@ -106,6 +114,7 @@ SELECT art_nr, art_bez, preis
 FROM Inventar
 WHERE preis = (SELECT MIN(preis) FROM Inventar);
 ```
+
 ### e) Finden Sie die Artikelnummern, die von mindestens zwei unterschiedlichen Kunden mit Wohnsitz in Stuttgart gekauft wurden. [[Erweiterte Abfragen in SQL#Reihenfolge]]
 
 ```sql
@@ -136,14 +145,14 @@ Die Aufgabe besteht darin, die Nummern und Nachnamen aller Angestellten (Tabelle
 Die Lösung verwendet eine SQL-Anfrage mit einer `NOT EXISTS`-Klausel, die eine verschachtelte Unterabfrage beinhaltet:
 
 ```sql
-SELECT P.pers_nr, P.nachname 
+SELECT P.pers_nr, P.nachname
 FROM Personal P
 WHERE NOT EXISTS (
     SELECT * FROM Kunde K
     WHERE K.ort = 'Landshut'
     AND NOT EXISTS (
         SELECT * FROM Verkauf V
-        WHERE V.pers_nr = P.pers_nr 
+        WHERE V.pers_nr = P.pers_nr
         AND V.kund_nr = K.kund_nr
     )
 );
@@ -173,17 +182,7 @@ Die Anfrage ermittelt Angestellte, die an jeden Kunden in Landshut mindestens ei
 
 Also nächstes: [[DBS-Blatt 8]]
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -206,15 +205,4 @@ Also nächstes: [[DBS-Blatt 8]]
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

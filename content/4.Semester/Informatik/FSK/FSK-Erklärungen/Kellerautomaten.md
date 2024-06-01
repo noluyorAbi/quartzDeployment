@@ -6,7 +6,7 @@ tags:
   - Erklaerung
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: "[[FSK-ÜB-6]]"
-Benötigte Zeit: 
+Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 21:20
 date modified: Tuesday, 28. May 2024, 21:40
 ---
@@ -15,8 +15,8 @@ date modified: Tuesday, 28. May 2024, 21:40
 
 # Kellerautomaten
 
->[!info] Kurzerklärung
->Ein Kellerautomat (Pushdown Automaton, PDA) ist ein spezieller Typ von endlichem Automaten, der zusätzlich einen Stack (Keller) als Speichermedium nutzt. Diese Erweiterung ermöglicht es dem Automaten, kontextfreie Sprachen zu akzeptieren. Der Kellerautomat kann auf Symbole auf dem Keller zugreifen und diese gemäß einer Übergangsfunktion manipulieren, um Eingaben zu verarbeiten und zu entscheiden, ob sie zu einer bestimmten Sprache gehören.
+> [!info] Kurzerklärung
+> Ein Kellerautomat (Pushdown Automaton, PDA) ist ein spezieller Typ von endlichem Automaten, der zusätzlich einen Stack (Keller) als Speichermedium nutzt. Diese Erweiterung ermöglicht es dem Automaten, kontextfreie Sprachen zu akzeptieren. Der Kellerautomat kann auf Symbole auf dem Keller zugreifen und diese gemäß einer Übergangsfunktion manipulieren, um Eingaben zu verarbeiten und zu entscheiden, ob sie zu einer bestimmten Sprache gehören.
 
 In der Theorie der formalen Sprachen wird ein Kellerautomat typischerweise als 6-Tupel definiert:
 
@@ -28,9 +28,9 @@ $$
 - **$\Sigma$** ist das (endliche) Eingabealphabet.
 - **$\Gamma$** ist das (endliche) Kelleralphabet.
 - **$\delta$** ist die Übergangsfunktion:
-$$
- \delta : Z \times (\Sigma \cup \{\varepsilon\}) \times \Gamma \rightarrow \mathcal{P}(Z \times \Gamma^*) 
-$$
+  $$
+   \delta : Z \times (\Sigma \cup \{\varepsilon\}) \times \Gamma \rightarrow \mathcal{P}(Z \times \Gamma^*)
+  $$
 - **$z_0$** ist der Startzustand.
 - **$\#$** ist das Startsymbol im Keller.
 
@@ -63,13 +63,16 @@ Ein Kellerautomat, der diese Sprache akzeptiert, könnte wie folgt definiert wer
 #### Übergangsfunktion ($\delta$):
 
 1. **Initiale Phase (Doppelte $a$s auf den Keller legen)**:
+
    - $\delta(q_0, a, \#) = \{(q_0, a\#)\}$
    - $\delta(q_0, a, a) = \{(q_0, aa)\}$
 
 2. **Dollarzeichen erkennen**:
+
    - $\delta(q_0, \$, a) = \{(q_1, a)\}$
 
 3. **$a$s nach dem Dollarzeichen verarbeiten**:
+
    - $\delta(q_1, a, a) = \{(q_1, \varepsilon)\}$
 
 4. **Keller entleeren und akzeptieren**:
@@ -78,12 +81,15 @@ Ein Kellerautomat, der diese Sprache akzeptiert, könnte wie folgt definiert wer
 #### Erklärung der Funktionsweise:
 
 1. **Phase 1 (Initiale Phase)**:
+
    - Der Automat beginnt im Zustand $q_0$ und liest $a$s, wobei er jedes $a$ auf den Keller legt. Dadurch wird sichergestellt, dass die Anzahl der $a$s im Keller doppelt so groß ist wie die Anzahl der $a$s, die nach dem Dollarzeichen gelesen werden müssen.
 
 2. **Phase 2 (Dollarzeichen erkennen)**:
+
    - Sobald der Automat das Dollarzeichen $\$$ liest, wechselt er in den Zustand $q_1$, um die nachfolgenden $a$s zu verarbeiten.
 
 3. **Phase 3 (Nachfolgende $a$s verarbeiten)**:
+
    - Im Zustand $q_1$ liest der Automat jedes $a$ und entfernt ein $a$ vom Keller. Dies stellt sicher, dass die Anzahl der $a$s nach dem Dollarzeichen korrekt ist.
 
 4. **Phase 4 (Akzeptieren)**:
@@ -95,31 +101,22 @@ Ein Kellerautomat erweitert die Fähigkeiten eines endlichen Automaten durch die
 
 Indem Sie diesen Aufbau und die Übergangsregeln verstehen, können Sie komplexe formale Sprachen definieren und Automaten entwickeln, die diese Sprachen korrekt akzeptieren.
 
-
 ---
 
 # Kellerautomat aufstellen
 
->[!tip] Ablauf zur Erstellung eines Kellerautomaten
+> [!tip] Ablauf zur Erstellung eines Kellerautomaten
 >
 > 1. **Bestimmen Sie das Eingabealphabet**: Legen Sie die Menge der Terminalsymbole fest, die in der Sprache verwendet werden können.
-> 
 > 2. **Identifizieren Sie die Sprachstruktur**: Überlegen Sie, welche Muster und Strukturen in der Sprache vorhanden sein sollen. Handelt es sich um einfache Wiederholungen, Verschachtelungen, spezielle Sequenzen oder andere Regularitäten?
-> 
 > 3. **Definieren Sie die Zustände**: Bestimmen Sie eine endliche Menge von Zuständen, die der Automat durchlaufen kann.
-> 
 > 4. **Bestimmen Sie das Kelleralphabet**: Legen Sie die Menge der Symbole fest, die im Keller verwendet werden können.
-> 
 > 5. **Wählen Sie den Startzustand und das Startkellersymbol**: Bestimmen Sie den Zustand, in dem der Automat beginnt, und das Symbol, das initial im Keller liegt.
-> 
 > 6. **Entwickeln Sie die Übergangsfunktion**: Schreiben Sie eine Reihe von Regeln, die festlegen, wie der Automat anhand des aktuellen Zustands, des gelesenen Eingabezeichens und des Kellersymbols den neuen Zustand und die Kelleroperation bestimmt.
-> 
 > 7. **Definieren Sie die akzeptierenden Zustände**: Bestimmen Sie, welche Zustände akzeptierend sind und unter welchen Bedingungen die Eingabe akzeptiert wird.
-> 
 > 8. **Überprüfen Sie den Automat**:
 >    - Stellen Sie sicher, dass der Automat alle Wörter der Sprache akzeptieren kann.
 >    - Prüfen Sie, ob der Automat keine Wörter akzeptiert, die nicht zur Sprache gehören.
-> 
 > 9. **Dokumentieren Sie den Automat**: Erklären Sie die Funktion jeder Übergangsregel und wie sie zur Verarbeitung der Sprache beiträgt.
 
 Indem Sie diesen Ablauf befolgen, können Sie einen klaren und präzisen Kellerautomaten erstellen, der eine formale Sprache innerhalb des Rahmens der formalen Sprachtheorie akzeptiert.
@@ -138,24 +135,21 @@ Um die angegebene Aufgabe zu lösen, bei der ein Kellerautomat für die Sprache 
 
 5. **Wählen Sie den Startzustand und das Startkellersymbol:** Der Startzustand ist $z_0 = q_0$ und das Startkellersymbol ist $\#$.
 
-6. **Entwickeln Sie die Übergangsfunktion:** 
+6. **Entwickeln Sie die Übergangsfunktion:**
 
    - **Initiale Phase (Doppelte $a$s auf den Keller legen)**:
      - $\delta(q_0, a, \#) = \{(q_0, a\#)\}$
      - $\delta(q_0, a, a) = \{(q_0, aa)\}$
-   
    - **Dollarzeichen erkennen**:
      - $\delta(q_0, \$, a) = \{(q_1, a)\}$
-   
    - **$a$s nach dem Dollarzeichen verarbeiten**:
      - $\delta(q_1, a, a) = \{(q_1, \varepsilon)\}$
-   
    - **Keller entleeren und akzeptieren**:
      - $\delta(q_1, \varepsilon, \#) = \{(q_f, \#)\}$
 
 7. **Definieren Sie die akzeptierenden Zustände:** Der akzeptierende Zustand ist $q_f$.
 
->[!help] Erklärung der Übergangsregeln
+> [!help] Erklärung der Übergangsregeln
 >
 > - **$\delta(q_0, a, \#) = \{(q_0, a\#)\}$**: Wenn der Automat im Zustand $q_0$ ist, ein 'a' liest und das Kellersymbol $\#$ sieht, dann bleibt er im Zustand $q_0$ und schiebt ein 'a' auf den Keller.
 > - **$\delta(q_0, a, a) = \{(q_0, aa)\}$**: Wenn der Automat im Zustand $q_0$ ist, ein 'a' liest und ein 'a' auf dem Keller liegt, dann bleibt er im Zustand $q_0$ und schiebt ein weiteres 'a' auf den Keller.
@@ -167,18 +161,7 @@ Zusammengenommen bedeuten diese Regeln, dass der Automat mit dem Lesen der $a$s 
 
 Indem Sie diesen Ablauf befolgen, können Sie einen Kellerautomaten erstellen, der die Sprache $L$ akzeptiert, indem er die Struktur der Eingabezeichenfolge überprüft und die korrekte Anzahl und Reihenfolge der Symbole sicherstellt.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -201,15 +184,4 @@ Indem Sie diesen Ablauf befolgen, können Sie einen Kellerautomaten erstellen, d
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

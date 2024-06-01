@@ -1,5 +1,5 @@
 ---
-Thema: 
+Thema:
 tags:
   - 4semester
   - "#informatik"
@@ -12,12 +12,13 @@ date modified: Tuesday, 28. May 2024, 14:57
 # Übersicht der Studieninhalte
 
 ## Wichtige Themen:
+
 - Grammatiken bilden (siehe Blatt 1 und 2)
 - NFA und DFA konstruieren (NFA leichter als DFA)
 - Übersetzung von verschiedenen Formalisten (4.VL gesagt)
 - Beweise Myhill und Nerode sind nicht klaussurrelevant (in 5.VL gesagt)
 - Pumping Lemma wichtig (3.ZÜ gesagt)
-	- Lemma verstehen, auswendig können und anwenden können
+  - Lemma verstehen, auswendig können und anwenden können
 
 | Kategorie                                   | Beschreibung                                             |
 | ------------------------------------------- | -------------------------------------------------------- |
@@ -33,18 +34,7 @@ date modified: Tuesday, 28. May 2024, 14:57
     <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=OI_p_Q84Zi8xFs0U&amp;list=PLG_1tsKrsKVO2ANHX68UbrNgt7gZuH37H" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -67,15 +57,4 @@ date modified: Tuesday, 28. May 2024, 14:57
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

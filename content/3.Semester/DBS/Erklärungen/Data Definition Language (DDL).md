@@ -16,6 +16,7 @@ Die DDL wird verwendet, um Tabellen in einer Datenbank anzulegen, zu verändern 
 ## Anlegen von Tabellen
 
 Um eine neue Tabelle zu erstellen, wird die `CREATE TABLE` Anweisung verwendet:
+
 ```sql
 CREATE TABLE tabellenname (
   attribut1 datentyp1 [constraint1],
@@ -34,7 +35,6 @@ CREATE TABLE tabellenname (
   - `INT` – Ganze Zahl (positive oder negative).
   - `DECIMAL(n, m)` – Festkommazahl mit n Stellen insgesamt, m davon hinter dem Komma.
   - `FLOAT` – Gleitkommazahl, Kommazahl equal wie viele Stellen vor oder hinter dem Komma.
-  
 - **`constraint` – Beschränkung für das Attribute.**
   - `NOT NULL` – Attribute muss gefüllt werden.
   - `UNIQUE` – Attribute darf nicht doppelt vorkommen.
@@ -80,17 +80,7 @@ Beim Löschen einer Tabelle muss auf referenzielle Integrität geachtet werden:
 
 Diese .md Datei fasst die Anweisungen der Daten Definition Language zusammen, einschließlich der Erstellung, Änderung und Löschung von Tabellen, sowie den Definitionen von Datentypen und Constraints.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -113,15 +103,4 @@ Diese .md Datei fasst die Anweisungen der Daten Definition Language zusammen, ei
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

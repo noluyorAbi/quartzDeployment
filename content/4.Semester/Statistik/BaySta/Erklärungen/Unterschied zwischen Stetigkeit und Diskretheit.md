@@ -20,11 +20,13 @@ In der Mathematik und in verwandten Disziplinen wie Statistik, Physik und Ingeni
 **Stetigkeit** bezieht sich auf eine ununterbrochene, nahtlose Veränderung innerhalb eines bestimmten Bereichs oder Intervalls. Eine stetige Variable kann jeden beliebigen Wert innerhalb eines spezifizierten Bereichs annehmen.
 
 ### Eigenschaften stetiger Variablen:
+
 - **Unendlich viele Werte**: Stetige Variablen können jeden Wert in einem kontinuierlichen Spektrum annehmen. Zum Beispiel kann die Temperatur, die als stetige Variable betrachtet wird, jeden Wert zwischen 20°C und 21°C annehmen, einschließlich 20.1°C, 20.01°C, 20.001°C und so weiter.
-- **Messbar**: Stetige Variablen werden oft durch Messung bestimmt, nicht durch Zählen. 
+- **Messbar**: Stetige Variablen werden oft durch Messung bestimmt, nicht durch Zählen.
 - **Beispiele**: Zeit, Gewicht, Länge und andere Messgrößen, die beliebig genau gemessen werden können.
 
 ### Mathematische Darstellung:
+
 In der Mathematik wird eine Funktion als stetig betrachtet, wenn kleine Änderungen in den Eingabewerten zu kleinen Änderungen in den Ausgabewerten führen. Dies bedeutet, dass es keine abrupten Sprünge oder Lücken in der Funktion gibt.
 
 ## Diskretheit
@@ -32,29 +34,20 @@ In der Mathematik wird eine Funktion als stetig betrachtet, wenn kleine Änderun
 **Diskretheit** beschreibt eine Variable oder Funktion, die nur spezifische, einzelne Werte innerhalb eines Bereichs annehmen kann. Diese Werte sind typischerweise isoliert und durch klare Abstände voneinander getrennt.
 
 ### Eigenschaften diskreter Variablen:
+
 - **Begrenzte Werte**: Diskrete Variablen können nur bestimmte Werte annehmen. Diese Werte sind oft durch Zählen ermittelbar.
 - **Zählbar**: Diskrete Variablen sind in der Regel durch das Zählen von Objekten oder Ereignissen definiert, wie zum Beispiel die Anzahl der Autos in einem Parkplatz oder die Anzahl der Schüler in einer Klasse.
 - **Beispiele**: Anzahl der Kinder in einer Familie, Anzahl der Bücher auf einem Regal, oder die Anzahl der Schritte, die jemand unternimmt.
 
 ### Mathematische Darstellung:
+
 In der Mathematik sind diskrete Funktionen solche, bei denen die Eingabe- und Ausgabewerte aus getrennten und abzählbaren Mengen bestehen. Beispielsweise kann die Anzahl der Kunden in einem Geschäft nur ganze Zahlen sein.
 
 ## Zusammenfassung
 
 Der Hauptunterschied zwischen Stetigkeit und Diskretheit liegt in der Art, wie Werte innerhalb eines Bereichs angenommen werden können. Stetige Variablen erlauben ein kontinuierliches Spektrum an Werten, während diskrete Variablen auf spezifische, getrennte Werte beschränkt sind. Beide Begriffe sind essentiell für das Verständnis und die Modellierung verschiedener Phänomene in Naturwissenschaften, Technik und Wirtschaft.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -77,15 +70,4 @@ Der Hauptunterschied zwischen Stetigkeit und Diskretheit liegt in der Art, wie W
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

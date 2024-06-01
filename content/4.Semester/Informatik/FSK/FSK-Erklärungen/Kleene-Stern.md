@@ -5,7 +5,7 @@ tags:
   - informatik
   - Erklaerung
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
-Thema: 
+Thema:
 date created: Wednesday, 24. April 2024, 00:05
 date modified: Friday, 26. April 2024, 02:05
 ---
@@ -58,17 +58,7 @@ Hierbei steht $LL$ für die Konkatenation von zwei Wörtern aus $L$, $LLL$ für 
 
 Der Kleene-Stern erweitert die Fähigkeit formaler Sprachen, durch seine Anwendung auf die Sprache $L$ unendliche und vielfältige Sprachmuster zu erfassen und zu generieren. Dieses Werkzeug ist entscheidend für die Entwicklung von regulären Ausdrücken, die Analyse von Automatenverhalten und die Erzeugung umfassender Testdaten in der Softwareentwicklung. Der Kleene-Stern zeigt somit seine vielseitige und mächtige Anwendung in der theoretischen und angewandten Informatik.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -91,15 +81,4 @@ Der Kleene-Stern erweitert die Fähigkeit formaler Sprachen, durch seine Anwendu
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

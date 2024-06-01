@@ -5,7 +5,7 @@ tags:
   - informatik
   - Erklaerung
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
-Thema: 
+Thema:
 date created: Wednesday, 24. April 2024, 01:02
 date modified: Tuesday, 28. May 2024, 18:29
 ---
@@ -64,17 +64,7 @@ Die Kenntnis der Grammatik ermöglicht es, zu erkennen, ob ein Satz zur Sprache 
 
 Durch die Analyse von Sätzen mit Hilfe von Grammatiken können wir besser verstehen, wie Sprachen strukturiert sind, und dies auf maschinelle Prozesse wie Übersetzung, Codegenerierung und künstliche Intelligenz anwenden.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -97,15 +87,4 @@ Durch die Analyse von Sätzen mit Hilfe von Grammatiken können wir besser verst
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

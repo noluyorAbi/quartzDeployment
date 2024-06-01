@@ -5,7 +5,7 @@ tags:
   - informatik
   - Übungsblatt
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
-Thema: 
+Thema:
 Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 18:03
 date modified: Thursday, 30. May 2024, 23:56
@@ -13,23 +13,27 @@ date modified: Thursday, 30. May 2024, 23:56
 
 # FSK6-1 Kontextfreie Grammatiken und Kellerautomaten (2 Punkte)
 
->[!note] **Aufgabenstellung:**  
->Sei $L = \{a^{2n}\$a^n \mid n \in \mathbb{N}_{\gt0}\}$ eine Sprache über dem Alphabet $\Sigma = \{a, $\}$.
+> [!note] **Aufgabenstellung:**  
+> Sei $L = \{a^{2n}\$a^n \mid n \in \mathbb{N}_{\gt0}\}$ eine Sprache über dem Alphabet $\Sigma = \{a, $\}$.
 
 ## a) Geben Sie eine kontextfreie Grammatik an, die $L$ erkennt.
 
 $$
 G = (N, \Sigma, P, S)
 $$
+
 $$
 N = \{S\}
 $$
+
 $$
 \Sigma = \{a, \$\}
 $$
+
 $$
 P = \{S \rightarrow aaSa \mid \$\}
 $$
+
 $$
 S
 $$
@@ -60,13 +64,16 @@ Ein Kellerautomat $M$, der die Sprache $L = \{a^{2n}\$a^n \mid n \in \mathbb{N}_
 ### Übergangsfunktion $\delta$:
 
 1. **Initiale Phase (Doppelte a's auf den Keller legen)**:
+
    - $\delta(q_0, a, \#) = \{(q_0, a\#)\}$
    - $\delta(q_0, a, a) = \{(q_0, aa)\}$
 
 2. **Dollarzeichen erkennen**:
+
    - $\delta(q_0, \$, a) = \{(q_1, a)\}$
 
 3. **a's nach dem Dollarzeichen verarbeiten**:
+
    - $\delta(q_1, a, a) = \{(q_1, \varepsilon)\}$
 
 4. **Keller entleeren und akzeptieren**:
@@ -75,12 +82,15 @@ Ein Kellerautomat $M$, der die Sprache $L = \{a^{2n}\$a^n \mid n \in \mathbb{N}_
 ### Erklärung:
 
 1. **Phase 1 (Initiale Phase)**:
+
    - Der Automat liest die a's und legt sie auf den Keller, sodass die Anzahl der a's im Keller doppelt so groß ist wie die Anzahl der a's, die nach dem Dollarzeichen gelesen werden müssen.
 
 2. **Phase 2 (Dollarzeichen erkennen)**:
+
    - Sobald das Dollarzeichen $\$$ gelesen wird, wechselt der Automat in den Zustand $q_1$.
 
 3. **Phase 3 (Nachfolgende a's verarbeiten)**:
+
    - Der Automat liest die a's nach dem Dollarzeichen und entfernt ein a vom Keller für jedes gelesene a.
 
 4. **Phase 4 (Akzeptieren)**:
@@ -88,18 +98,18 @@ Ein Kellerautomat $M$, der die Sprache $L = \{a^{2n}\$a^n \mid n \in \mathbb{N}_
 
 # FSK6-2 CYK-Algorithmus (2 Punkte)
 
->[!note] **Aufgabenstellung:**  
->Sei $G$ die Grammatik $({A_1, A_2, A_3, A_4, A_5}, \{\$, \#\}, P, A_1)$ mit:
+> [!note] **Aufgabenstellung:**  
+> Sei $G$ die Grammatik $({A_1, A_2, A_3, A_4, A_5}, \{\$, \#\}, P, A_1)$ mit:
 >
->$$
->\begin{aligned}
->P = \{&A_1 \rightarrow A_3 A_4 \mid A_3 A_2, \\
->&A_2 \rightarrow A_2 A_3 \mid A_4 A_4, \\
->&A_3 \rightarrow \$, \\
->&A_4 \rightarrow \# \mid A_3 A_4, \\
->&A_5 \rightarrow A_4 A_4 \mid \# \}
->\end{aligned}
->$$
+> $$
+> \begin{aligned}
+> P = \{&A_1 \rightarrow A_3 A_4 \mid A_3 A_2, \\
+> &A_2 \rightarrow A_2 A_3 \mid A_4 A_4, \\
+> &A_3 \rightarrow \$, \\
+> &A_4 \rightarrow \# \mid A_3 A_4, \\
+> &A_5 \rightarrow A_4 A_4 \mid \# \}
+> \end{aligned}
+> $$
 
 ## a) Prüfen Sie mit dem CYK-Algorithmus, ob die folgenden Wörter $w_1$ und $w_2$ in $L(G)$ sind. Erstellen Sie dazu für jedes Wort die entsprechende Tabelle des Algorithmus und erklären Sie anhand der Tabelle, ob das Wort in $L(G)$ ist.
 
@@ -108,6 +118,7 @@ Ein Kellerautomat $M$, der die Sprache $L = \{a^{2n}\$a^n \mid n \in \mathbb{N}_
 #### CYK-Algorithmus zur Überprüfung von $w_1 = \$\#\$\#\#$
 
 **Gegebene Grammatik $G$:**
+
 $$
 \begin{aligned}
 P = \{ & A_1 \rightarrow A_3 A_4 \mid A_3 A_2, \\
@@ -153,6 +164,7 @@ $$
 #### CYK-Algorithmus zur Überprüfung von $w_2 = \$\$\$\#\#$
 
 **Gegebene Grammatik $G$:**
+
 $$
 \begin{aligned}
 P = \{ & A_1 \rightarrow A_3 A_4 \mid A_3 A_2, \\
@@ -225,22 +237,27 @@ Hierbei nehmen wir an, dass $K$ mit leerem Keller akzeptiert.
 **Beweis:**
 
 1. **Definition der akzeptierten Sprache:**
+
    - Ein Kellerautomat $K$ akzeptiert ein Wort $w$, wenn durch Zustandsübergänge der Startzustand in einen akzeptierenden Zustand überführt wird und der Keller nach Verarbeitung von $w$ leer ist.
 
 2. **Eigenschaften des $k$-begrenzten Kellers:**
+
    - Ein Kellerautomat mit $k$-begrenztem Keller kann höchstens $k$ Symbole im Keller haben. Bei vollem Keller sind Übergänge, die Symbole hinzufügen, nicht möglich.
 
 3. **Behauptung:**
+
    - Jedes Wort, das vom $k$-begrenzten Kellerautomaten akzeptiert wird, wird auch vom ursprünglichen Kellerautomaten ohne Begrenzung akzeptiert:
      $$
      L(K \text{ mit } k\text{-begrenztem Keller}) \subseteq L(K).
      $$
 
 4. **Simulation von $K$ mit $k$-begrenztem Keller:**
+
    - Ein Wort $w$ wird vom $k$-begrenztem Kellerautomaten akzeptiert, wenn es eine Zustandsübergangsfolge $\delta$ gibt, die $w$ vollständig verarbeitet und den Keller leer macht, ohne jemals mehr als $k$ Symbole im Keller zu haben.
    - Diese Zustandsübergänge $\delta$ können auch im ursprünglichen Kellerautomaten $K$ (ohne Begrenzung) ausgeführt werden, da $K$ keine Begrenzung der Symbolanzahl im Keller hat.
 
 5. **Formalität des Beweises:**
+
    - Angenommen, $w \in L(K \text{ mit } k\text{-begrenztem Keller})$. Das bedeutet, dass es eine akzeptierende Berechnung des $k$-begrenzten Kellerautomaten für $w$ gibt, die den Keller nie mehr als $k$ Symbole enthalten lässt.
    - Da diese Berechnung auch im unbegrenzten Kellerautomaten $K$ möglich ist, akzeptiert $K$ ebenfalls $w$.
 
@@ -273,32 +290,34 @@ Kellerautomaten mit $k$-begrenztem Keller beschreiben genau die regulären Sprac
 
 # FSK6-4 Homomorphismen
 
->[!note] **Aufgabenstellung:**  
->Gegeben Alphabete $\Sigma$ und $\Delta$ bezeichnen wir eine Abbildung $h : \Sigma^* \to \Delta^*$ als (Monoid-)Homomorphismus, wenn sie strukturerhaltend ist, d.h. wenn gilt:
+> [!note] **Aufgabenstellung:**  
+> Gegeben Alphabete $\Sigma$ und $\Delta$ bezeichnen wir eine Abbildung $h : \Sigma^* \to \Delta^*$ als (Monoid-)Homomorphismus, wenn sie strukturerhaltend ist, d.h. wenn gilt:
 >
->$$
->\begin{aligned}
->h(\epsilon) &= \epsilon \\
->h(u \circ v) &= h(u) \circ h(v) \quad \forall u, v \in \Sigma^*
->\end{aligned}
->$$
+> $$
+> \begin{aligned}
+> h(\epsilon) &= \epsilon \\
+> h(u \circ v) &= h(u) \circ h(v) \quad \forall u, v \in \Sigma^*
+> \end{aligned}
+> $$
 >
->Für $L \subseteq \Sigma^*$ sei $h(L) = \{ h(u) \mid u \in L \}$.
+> Für $L \subseteq \Sigma^*$ sei $h(L) = \{ h(u) \mid u \in L \}$.
 >
->Man kann leicht zeigen, dass für alle Sprachen $L_1, L_2 \subseteq \Sigma^*$ und Homomorphismen $h$ gilt:
->$$
->\begin{aligned}
->h(\emptyset) &= \emptyset \\
->h(L_1 \cup L_2) &= h(L_1) \cup h(L_2) \\
->h(L_1 \cap L_2) &= h(L_1) \cap h(L_2)
->\end{aligned}
->$$
+> Man kann leicht zeigen, dass für alle Sprachen $L_1, L_2 \subseteq \Sigma^*$ und Homomorphismen $h$ gilt:
+>
+> $$
+> \begin{aligned}
+> h(\emptyset) &= \emptyset \\
+> h(L_1 \cup L_2) &= h(L_1) \cup h(L_2) \\
+> h(L_1 \cap L_2) &= h(L_1) \cap h(L_2)
+> \end{aligned}
+> $$
 
 ## a) Beweisen Sie für alle Sprachen $L_1, L_2 \subseteq \Sigma^*$ und Homomorphismen $h$:
 
 $$
 h(L_1 \circ L_2) = h(L_1) \circ h(L_2)
 $$
+
 $$
 h(L_1^*) = (h(L_1))^*
 $$
@@ -313,49 +332,57 @@ $$
 **Behauptung:**
 
 $$
- h(L_1 \circ L_2) = h(L_1) \circ h(L_2) 
+ h(L_1 \circ L_2) = h(L_1) \circ h(L_2)
 $$
 
 **Beweis:**
 
 1. **Definition der Konkatens von Sprachen:**
-$$
- L_1 \circ L_2 = \{ u \circ v \mid u \in L_1 \text{ und } v \in L_2 \} 
-$$
+
+   $$
+    L_1 \circ L_2 = \{ u \circ v \mid u \in L_1 \text{ und } v \in L_2 \}
+   $$
 
 2. **Bild der Konkatens zweier Sprachen unter $h$:**
-$$
- h(L_1 \circ L_2) = \{ h(w) \mid w \in L_1 \circ L_2 \} 
-$$
+   $$
+    h(L_1 \circ L_2) = \{ h(w) \mid w \in L_1 \circ L_2 \}
+   $$
    Da $w \in L_1 \circ L_2$, gibt es $u \in L_1$ und $v
 
- \in L_2$ mit $w = u \circ v$. Somit:
-   $$
- h(w) = h(u \circ v) 
+\in L_2$ mit $w = u \circ v$. Somit:
+
+$$
+h(w) = h(u \circ v)
 $$
 
 3. **Eigenschaft des Homomorphismus:**
-$$
- h(u \circ v) = h(u) \circ h(v) 
-$$
-   Also:
+
    $$
- h(w) = h(u) \circ h(v) 
-$$
+    h(u \circ v) = h(u) \circ h(v)
+   $$
+
+   Also:
+
+   $$
+   h(w) = h(u) \circ h(v)
+   $$
 
 4. **Ersetzung in der Menge:**
-$$
- h(L_1 \circ L_2) = \{ h(u) \circ h(v) \mid u \in L_1, v \in L_2 \} 
-$$
+
+   $$
+    h(L_1 \circ L_2) = \{ h(u) \circ h(v) \mid u \in L_1, v \in L_2 \}
+   $$
+
    Dies ist per Definition:
-$$
- h(L_1) \circ h(L_2) = \{ x \circ y \mid x \in h(L_1), y \in h(L_2) \} 
-$$
+
+   $$
+    h(L_1) \circ h(L_2) = \{ x \circ y \mid x \in h(L_1), y \in h(L_2) \}
+   $$
 
 5. **Folgerung:**
-$$
- h(L_1 \circ L_2) = h(L_1) \circ h(L_2) 
-$$
+   $$
+    h(L_1 \circ L_2) = h(L_1) \circ h(L_2)
+   $$
 
 **Beweis für $h(L_1^*) = (h(L_1))^*$**
 
@@ -367,60 +394,65 @@ $$
 **Behauptung:**
 
 $$
- h(L_1^*) = (h(L_1))^* 
+ h(L_1^*) = (h(L_1))^*
 $$
 
 **Beweis:**
 
 1. **Definition des Kleene-Sterns:**
-$$
- L_1^* = \bigcup_{k=0}^\infty L_1^k 
-$$
+
+   $$
+    L_1^* = \bigcup_{k=0}^\infty L_1^k
+   $$
+
    wobei $L_1^0 = \{\epsilon\}$ und $L_1^{k+1} = L_1^k \circ L_1$.
 
 2. **Bild unter $h$:**
- $$
- h(L_1^*) = h\left(\bigcup_{k=0}^\infty L_1^k\right) = \bigcup_{k=0}^\infty h(L_1^k) 
-$$
+
+   $$
+   h(L_1^*) = h\left(\bigcup_{k=0}^\infty L_1^k\right) = \bigcup_{k=0}^\infty h(L_1^k)
+   $$
 
 3. **Eigenschaft des Homomorphismus für Konkatens:**
-$$
- h(L_1^k) = (h(L_1))^k 
-$$
+   $$
+    h(L_1^k) = (h(L_1))^k
+   $$
    Beweis durch Induktion über \(k\):
-   
    - **Induktionsanfang:**
-$$
- k=0: \quad h(L_1^0) = h(\{\epsilon\}) = \{\epsilon\} = (h(L_1))^0 
-$$
-   
+
+     $$
+      k=0: \quad h(L_1^0) = h(\{\epsilon\}) = \{\epsilon\} = (h(L_1))^0
+     $$
+
    - **Induktionsannahme:**
-Angenommen, es gilt $h(L_1^k) = (h(L_1))^k$.
-   
+     Angenommen, es gilt $h(L_1^k) = (h(L_1))^k$.
+
    - **Induktionsschritt:**
-$$
- h(L_1^{k+1}) = h(L_1^k \circ L_1) = h(L_1^k) \circ h(L_1) = (h(L_1))^k \circ h(L_1) = (h(L_1))^{k+1} 
-$$
-   
+     $$
+      h(L_1^{k+1}) = h(L_1^k \circ L_1) = h(L_1^k) \circ h(L_1) = (h(L_1))^k \circ h(L_1) = (h(L_1))^{k+1}
+     $$
+
 Daher gilt $h(L_1^k) = (h(L_1))^k$ für alle $k$.
 
 4. **Zusammensetzung der Kleene-Sterns:**
-$$
- h(L_1^*) = \bigcup_{k=0}^\infty h(L_1^k) = \bigcup_{k=0}^\infty (h(L_1))^k = (h(L_1))^* 
-$$
+
+   $$
+    h(L_1^*) = \bigcup_{k=0}^\infty h(L_1^k) = \bigcup_{k=0}^\infty (h(L_1))^k = (h(L_1))^*
+   $$
 
 5. **Folgerung:**
-$$
- h(L_1^*) = (h(L_1))^* 
-$$
+   $$
+    h(L_1^*) = (h(L_1))^*
+   $$
 
 Damit sind beide Aussagen bewiesen:
 
 $$
- h(L_1 \circ L_2) = h(L_1) \circ h(L_2) 
+ h(L_1 \circ L_2) = h(L_1) \circ h(L_2)
 $$
+
 $$
- h(L_1^*) = (h(L_1))^* 
+ h(L_1^*) = (h(L_1))^*
 $$
 
 ## b) Beweisen Sie für alle regulären Sprachen $L$ und Homomorphismen $h$: Wenn $L$ regulär ist, dann ist auch $h(L)$ regulär.
@@ -435,14 +467,16 @@ $$
 
 3. **Homomorphismus $h$:**
    Der Homomorphismus $h: \Sigma^* \to \Delta^*$ ist eine Abbildung, die strukturerhaltend ist:
-$$
-h(u \circ v) = h(u) \circ h(v) \quad \forall u, v \in \Sigma^*
-$$
+
+   $$
+   h(u \circ v) = h(u) \circ h(v) \quad \forall u, v \in \Sigma^*
+   $$
 
 4. **Transformation des Automaten:**
    Wir konstruieren einen neuen Automaten $A_h = (Q, \Delta, \delta_h, q_0, F)$, der $h(L)$ erkennt. Dabei wird die Übergangsfunktion $\delta$ so angepasst, dass sie auf die Bilder der Symbole unter $h$ angewendet wird.
 
 5. **Konstruktion von $A_h$:**
+
    - Der neue Automat $A_h$ hat denselben Zustandsraum $Q$, Startzustand $q_0$, und Endzustände $F$ wie $A$.
    - Die Übergangsfunktion $\delta_h$ wird so definiert, dass sie den Übergängen von $A$ folgt, aber für die Symbole in $\Delta$, die durch $h$ abgebildet werden.
 
@@ -458,9 +492,11 @@ Da $A_h$ ein DFA ist und DFA's genau die regulären Sprachen erkennen, ist $h(L)
 Wenn $L$ regulär ist, gibt es einen DFA, der $L$ erkennt. Durch Transformation dieses DFA unter dem Homomorphismus $h$ erhält man einen neuen DFA, der $h(L)$ erkennt. Daher ist $h(L)$ regulär.
 
 ## c) Zeigen Sie, dass über dem Alphabet $\Sigma = \{ a, b, c, d \}$ die Sprache
+
 $$
 L = \{ a^n b^i c^n d^j \mid n, i, j \in \mathbb{N} \}
 $$
+
 nicht regulär ist. Geben Sie zu diesem Zweck einen Homomorphismus $h$ an, so dass $h(L) = \{ a^n b^n \mid n \in \mathbb{N} \}$ ist. Da $h(L)$ bekanntlich nicht regulär ist, kann dann auch $L$ nicht regulär sein.
 
 Um zu zeigen, dass die Sprache $L = \{ a^n b^i c^n d^j \mid n, i, j \in \mathbb{N} \}$ nicht regulär ist, verwenden wir einen Homomorphismus $h$, der $L$ auf eine bekannte nicht-reguläre Sprache abbildet.
@@ -468,39 +504,47 @@ Um zu zeigen, dass die Sprache $L = \{ a^n b^i c^n d^j \mid n, i, j \in \mathbb{
 ### Schritt-für-Schritt Beweis:
 
 1. **Definition der Sprache $L$:**
-$$
- L = \{ a^n b^i c^n d^j \mid n, i, j \in \mathbb{N} \} 
-$$
+
+   $$
+    L = \{ a^n b^i c^n d^j \mid n, i, j \in \mathbb{N} \}
+   $$
 
 2. **Homomorphismus $h$:**
    Wir definieren $h: \Sigma^* \to \{a, b\}^*$ mit dem Alphabet $\Sigma = \{a, b, c, d\}$ wie folgt:
-$$
- h(a) = a 
-$$
-$$
- h(b) = \epsilon 
-$$
-$$
- h(c) = b 
-$$
-$$
- h(d) = \epsilon 
-$$
+
+   $$
+    h(a) = a
+   $$
+
+   $$
+    h(b) = \epsilon
+   $$
+
+   $$
+    h(c) = b
+   $$
+
+   $$
+    h(d) = \epsilon
+   $$
 
 3. **Bild der Sprache $L$ unter $h$:**
-$$
- h(L) = \{ h(a^n b^i c^n d^j) \mid n, i, j \in \mathbb{N} \} 
-$$
+
+   $$
+    h(L) = \{ h(a^n b^i c^n d^j) \mid n, i, j \in \mathbb{N} \}
+   $$
 
    Da $h(b) = \epsilon$ und $h(d) = \epsilon$, vereinfacht sich das zu:
-$$
- h(a^n b^i c^n d^j) = h(a^n) h(b^i) h(c^n) h(d^j) = a^n \epsilon^i b^n \epsilon^j = a^n b^n 
-$$
+
+   $$
+    h(a^n b^i c^n d^j) = h(a^n) h(b^i) h(c^n) h(d^j) = a^n \epsilon^i b^n \epsilon^j = a^n b^n
+   $$
 
    Also:
-$$
- h(L) = \{ a^n b^n \mid n \in \mathbb{N} \} 
-$$
+
+   $$
+    h(L) = \{ a^n b^n \mid n \in \mathbb{N} \}
+   $$
 
 4. **Nicht-Regulärität von $h(L)$:**
    Es ist bekannt, dass die Sprache $\{ a^n b^n \mid n \in \mathbb{N} \}$ nicht regulär ist.
@@ -512,17 +556,7 @@ $$
 
 Durch die Abbildung der Sprache $L$ auf die bekannte nicht-reguläre Sprache $\{ a^n b^n \mid n \in \mathbb{N} \}$ mittels des Homomorphismus $h$, haben wir gezeigt, dass $L$ nicht regulär ist.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -545,15 +579,4 @@ Durch die Abbildung der Sprache $L$ auf die bekannte nicht-reguläre Sprache $\{
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

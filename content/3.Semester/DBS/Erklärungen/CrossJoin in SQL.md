@@ -47,17 +47,7 @@ Cross Joins werden selten in der Praxis verwendet, da sie oft zu großen und unh
 
 Es ist wichtig zu beachten, dass Cross Joins sehr ressourcenintensiv sein können und daher mit Vorsicht verwendet werden sollten, insbesondere bei großen Datenmengen.
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -80,15 +70,4 @@ Es ist wichtig zu beachten, dass Cross Joins sehr ressourcenintensiv sein könne
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-

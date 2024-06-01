@@ -5,7 +5,7 @@ tags:
   - statistik
   - vorlesung
 fach: "[[I2ML]]"
-Thema: 
+Thema:
 date created: Monday, 22. April 2024, 17:51
 date modified: Monday, 22. April 2024, 23:09
 ---
@@ -25,6 +25,7 @@ Machine Learning is now ubiquitous, significantly impacting various aspects of s
 AI is a broad and rapidly evolving field that lacks a strict, universally accepted definition. Generally, it encompasses any machine capability that mimics human cognitive functions such as learning, reasoning, and problem-solving. Historically, AI has included tasks thought to require human-like intelligence, but once these tasks are algorithmically mastered, they are often perceived as not requiring true intelligence.
 
 AI includes various subfields such as:
+
 - Natural Language Processing
 - Computer Vision
 - Robotics
@@ -38,9 +39,10 @@ AI might be informally defined as the creation of intelligent agents operating i
 
 ML is a well-defined subset of AI focused on developing algorithms that improve automatically through experience. ML models are not explicitly programmed but are trained using large amounts of data. A well-known definition by Tom Mitchell is:
 
->A computer program is said to learn from experience $E$ with respect to some task $T$ and performance measure $P$, if its performance on $T$, as measured by $P$, improves with experience $E$.
+> A computer program is said to learn from experience $E$ with respect to some task $T$ and performance measure $P$, if its performance on $T$, as measured by $P$, improves with experience $E$.
 
 ML can be subdivided into:
+
 - **Supervised Learning**: Focuses on predicting outputs from labeled data, including classification and regression tasks.
 - **Unsupervised Learning**: Deals with finding patterns in unlabeled data, such as clustering and dimensionality reduction.
 - **Reinforcement Learning**: Involves learning to make sequences of decisions.
@@ -64,18 +66,7 @@ The interaction between Machine Learning and Statistics is highlighted by their 
 
 This video sets the stage for a deeper exploration of Machine Learning, particularly through supervised learning. We will start with basic models like K-nearest neighbors and linear/logistic regression and gradually progress to more complex structures.
 
-
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT START -->
-
-
-
-
-
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
@@ -98,15 +89,4 @@ This video sets the stage for a deeper exploration of Machine Learning, particul
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-
-
-
-
-
 <!-- DISQUS SCRIPT COMMENT END -->
-
-
-
-
-
-
