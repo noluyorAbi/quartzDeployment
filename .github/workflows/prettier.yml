@@ -15,15 +15,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16" # Aktualisiert auf eine neuere Node-Version
+          node-version: "16" # Updated to use a newer Node version
 
-      - name: Install pnpm
-        run: npm install -g pnpm
-
-      - name: Install dependencies with pnpm
-        run: pnpm install
+      - name: Install dependencies using npm
+        run: npm install
         working-directory: swt-ueberblick-app
 
       - name: Run Prettier
-        run: pnpm prettier --check '**/*.{js,jsx,ts,tsx}' --ignore-path .prettierignore
+        run: npx prettier --check '**/*.{js,jsx,ts,tsx}' --ignore-path .prettierignore
         working-directory: swt-ueberblick-app
