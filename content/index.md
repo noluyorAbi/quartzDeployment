@@ -26,7 +26,9 @@ This website serves as a centralized archive, offering you structured access to 
 # 💬 Comments
 
 At the end of each chapter, there is a comment section where I invite open and respectful discussions. Please share your thoughts, feedback, and questions there. Your contributions help me improve the content and create a vibrant learning community. **To comment as a guest without creating an account, first click `I'd rather post as a guest`, then use a guest name and any gibberish email like `abc@def.com` when posting your comment.** You can also use the image upload function to share complex mathematical equations, diagrams, and other visual aids.
+
 (<a href="#disqus_thread">Leave a comment on the Guestbook!</a>)
+:
 
 # 📚 Modules
 
