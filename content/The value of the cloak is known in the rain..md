@@ -32,3 +32,49 @@ In essence, "The value of the cloak is known in the rain" transcends its literal
 "The value of the cloak is known in the rain." This proverb speaks volumes about the true test of worth and utility, which often comes only in times of need. It's a metaphorical statement emphasizing that the real value of something is realized not when conditions are favorable, but rather when they are adverse. This concept is universal, transcending cultures and contexts, and can be applied to various aspects of life, including education and personal growth. In the digital era, where information is abundant and resources are just a click away, the true value of educational content and tools becomes evident in moments of genuine need.
 
 Go back to the [[index|Homepage]]
+
+
+
+
+
+
+<!-- DISQUS SCRIPT COMMENT START -->
+
+
+
+
+
+
+<hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://myuninotes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+<!-- DISQUS SCRIPT COMMENT END -->
+
+
+
+
+
+
