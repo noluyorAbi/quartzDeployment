@@ -19,7 +19,7 @@ date modified: Wednesday, 29. May 2024, 13:37
 </div>
 <!-- Scroll Indicator END -->
 
-# About This Site
+# ℹ️ About This Site
 
 This website serves as a centralized archive, offering you structured access to a wealth of study materials that I’ve gathered and written in the language of the module (mostly German). It’s designed to provide a clear, organized, and comprehensive resource for anyone interested in the intricacies of computer science, as seen through my personal academic lens. If necessary, the website can be translated into any required language using a browser’s built-in translator.
 
