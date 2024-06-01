@@ -26,6 +26,7 @@ This website serves as a centralized archive, offering you structured access to 
 # 💬 Comments
 
 At the end of each chapter, there is a comment section where I invite open and respectful discussions. Please share your thoughts, feedback, and questions there. Your contributions help me improve the content and create a vibrant learning community. You can also `comment as a guest without creating an account.`
+(<a href="#disqus_thread">Leave a comment on the Guestbook!</a>)
 
 # 📚 Modules
 
@@ -42,7 +43,7 @@ At the end of each chapter, there is a comment section where I invite open and r
 | **Semester**   | [[3.Semester]]                                          | done   |
 |                | [[4.Semester]]                                          | active |
 
-# Website Update Graph
+# 🔄 Website Update Graph
 
 This graph shows the fluctuating activity on the website over time. It reflects my ongoing efforts to update and improve content, ensuring it remains relevant and informative in the field of computer science.
 
@@ -54,7 +55,7 @@ This graph shows the fluctuating activity on the website over time. It reflects 
 
 <center>
 
-<h1 style="font-family: 'Arial', sans-serif; color: #333; font-size: 36px; font-weight: bold; margin-top: 40px;">↓ Guestbook ↓</h1>
+<h1 style="font-family: 'Arial', sans-serif; color: #333; font-size: 36px; font-weight: bold; margin-top: 40px;">↓ 📖 Guestbook ↓</h1>
 
 </center>
 
