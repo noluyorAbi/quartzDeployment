@@ -678,49 +678,49 @@ end
 
 ```mermaid
 sequenceDiagram
-autonumber
+    autonumber
 
-participant C as Client
-participant S as Server
+    participant C as Client
+    participant S as Server
 
-%% Establishing the connection (Three-way handshake)
-rect rgb(191, 223, 255)
-C->>S: SYN [SeqNr=6000]
-end
+    %% Establishing the connection (Three-way handshake)
+    rect rgb(191, 223, 255)
+        C->>S: SYN [SeqNr=6000]
+    end
 
-rect rgb(200, 150, 255)
-S->>C: SYN, ACK [SeqNr=9000, ACK=6001]
-end
+    rect rgb(200, 150, 255)
+        S->>C: SYN, ACK [SeqNr=9000, ACK=6001]
+    end
 
-rect rgb(191, 223, 255)
-C->>S: ACK [SeqNr=6001, ACK=9001]
-end
+    rect rgb(191, 223, 255)
+        C->>S: ACK [SeqNr=6001, ACK=9001]
+    end
 
-%% Request-Response Exchange
-rect rgb(191, 223, 255)
-C->>S: Request [SeqNr=6001, ACK=9001, Data=50 Bytes]
-end
+    %% Request-Response Exchange
+    rect rgb(191, 223, 255)
+        C->>S: Request [SeqNr=6001, ACK=9001, Data=50 Bytes]
+    end
 
-rect rgb(200, 150, 255)
-S->>C: Response [SeqNr=9001, ACK=6051, Data=1000 Bytes]
-end
+    rect rgb(200, 150, 255)
+        S->>C: Response [SeqNr=9001, ACK=6051, Data=1000 Bytes]
+    end
 
-%% Terminating the connection (Four-way handshake)
-rect rgb(191, 223, 255)
-C->>S: FIN [SeqNr=6051, ACK=10001]
-end
+    %% Terminating the connection (Four-way handshake)
+    rect rgb(191, 223, 255)
+        C->>S: FIN [SeqNr=6051, ACK=10001]
+    end
 
-rect rgb(200, 150, 255)
-S->>C: ACK [SeqNr=10001, ACK=6052]
-end
+    rect rgb(200, 150, 255)
+        S->>C: ACK [SeqNr=10001, ACK=6052]
+    end
 
-rect rgb(200, 150, 255)
-S->>C: FIN [SeqNr=10001, ACK=6052]
-end
+    rect rgb(200, 150, 255)
+        S->>C: FIN [SeqNr=10001, ACK=6052]
+    end
 
-rect rgb(191, 223, 255)
-C->>S: ACK [SeqNr=6052, ACK=10002]
-end
+    rect rgb(191, 223, 255)
+        C->>S: ACK [SeqNr=6052, ACK=10002]
+    end
 
 ```
 
