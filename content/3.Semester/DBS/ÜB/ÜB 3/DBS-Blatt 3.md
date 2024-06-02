@@ -44,9 +44,9 @@ date modified: Saturday, 20. April 2024, 01:54
 
 ### b) Warum fordert man, dass Schlüssel minimal sein sollen? [[Minimale Schlüssel|(Minimale Schlüssel)]]
 
-- Effizientere Überprüfbarkeit von Schlüssel-/ Fremdschlüsselbedingungen
-  - _Beispiel:_
-    ```Stellen Sie sich eine Tabelle vor, die Studenteninformationen an einer Universität speichert. Die Tabelle könnte folgende Spalten haben: `StudentenID`, `Name`, `Alter`, `Studiengang`und`E-Mail-Adresse`.
+- Effizientere Überprüfbarkeit von Schlüssel-/ Fremdschlüsselbedingungen  
+   - _Beispiel:_
+  ```Stellen Sie sich eine Tabelle vor, die Studenteninformationen an einer Universität speichert. Die Tabelle könnte folgende Spalten haben: `StudentenID`, `Name`, `Alter`, `Studiengang`und`E-Mail-Adresse`.
 
 In diesem Fall könnte die `StudentenID` ein minimaler Schlüssel sein, da jede `StudentenID` einzigartig ist und jeden Studenten eindeutig identifiziert. Kein anderes Attribute kann aus diesem Schlüssel entfernt werden, ohne seine Eindeutigkeit zu verlieren.
 Hier ist ein einfaches Beispiel:

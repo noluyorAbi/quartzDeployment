@@ -68,7 +68,7 @@ $$σ_F(R) = { t | t ∈ R ∧ erfüllt F }$$
 $$\Pi_{a1, \ldots , am}(R) = \{t_{a1}, \ldots , t_{am} | t \in R\}$$
 
 - Zeigt nur die ausgewählten Spalten aus einer Relation
-- Z.B. _$\Pi_{TNr,Gewicht}$\_ zeigt die Tuple und jeweils deren spalten TNr und Gewicht keine anderen Spalten
+- Z.B. _$\Pi_{TNr,Gewicht}$_ zeigt die Tuple und jeweils deren spalten TNr und Gewicht keine anderen Spalten
 
 ---
 

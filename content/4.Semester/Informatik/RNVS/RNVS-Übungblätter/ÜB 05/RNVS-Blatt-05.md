@@ -114,7 +114,8 @@ $\Longrightarrow$ Für die meisten Fälle ist das Kupferkabel aufgrund der Strom
 
 ## (b) Welche Informationen sind in der (N)-PCI enthalten? Stimmen diese mit der (N)-ICI überein?
 
-> [!info] > **ICI = Zieladresse**
+> [!info]
+> **ICI = Zieladresse**
 > Interface Control Information, beinhaltet Daten zur Steuerung der Netzwerkschnittstelle, wie zum Beispiel die IP-Adresse für das Routing und andere netzwerkspezifische Steuerinformationen, die nicht direkt zur Struktur oder Integrität der übermittelten Daten gehören.
 
 **PCI besteht aus:** (alles wie bei PDU bis auf Nutzdaten)

@@ -25,10 +25,15 @@ This website serves as a centralized archive, offering you structured access to 
 
 # 💬 Comments
 
-At the end of each chapter, there is a comment section where I invite open and respectful discussions. Please share your thoughts, feedback, and questions there. Your contributions help me improve the content and create a vibrant learning community. **To comment as a guest without creating an account, first click `I'd rather post as a guest`, then use a guest name and any gibberish email like `abc@def.com` when posting your comment.** You can also use the image upload function to share complex mathematical equations, diagrams, and other visual aids.
+- Each chapter ends with a comment section for open, [[Comment Policy|respectful discussions]].
+- Readers are encouraged to share thoughts, feedback, and questions to enhance the content and community.
+- **Guest commenting:**
+  - Click `Name` next to the Google icon.
+  - Click `I'd rather post as a guest` to comment without an account.
+  - Use a guest name and a gibberish email (e.g., `abc@def.com`) for posting.
+- Image upload function available for sharing complex equations, diagrams, and visual aids.
 
 (<a href="#disqus_thread">Leave a comment on the Guestbook!</a>)
-:
 
 # 📚 Modules
 
@@ -57,7 +62,7 @@ This graph shows the fluctuating activity on the website over time. It reflects 
 
 <center>
 
-<h1 style="font-family: 'Arial', sans-serif; color: #333; font-size: 36px; font-weight: bold; margin-top: 40px;">↓ 📖 Guestbook ↓</h1>
+<h1 style="font-family: 'Arial', sans-serif; font-size: 36px; font-weight: bold; margin-top: 40px;">↓ 📖 Guestbook ↓</h1>
 
 </center>
 
@@ -139,11 +144,8 @@ console.log(asciiArt2);
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
-<hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 3rem; margin-bottom: 3rem;">
-
-<div id="disqus-wrapper">
+<hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
-</div>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.

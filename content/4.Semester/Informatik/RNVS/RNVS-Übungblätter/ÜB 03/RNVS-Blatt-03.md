@@ -316,6 +316,7 @@ Angesichts der praktischen Dominanz und der umfangreichen Implementierung von TC
 
 3.  Was ist eine „man-Page“? Hinweis: Benutzen Sie den Befehl `man man`!
 
+
     - Linux Hilffseite mit wichtigen Commands etc
 
 4.  Mit welchem Parameter zeigt `ls` auch versteckte Dateien an? Hinweis: man-Page: `ls(1)`!
@@ -327,6 +328,7 @@ Angesichts der praktischen Dominanz und der umfangreichen Implementierung von TC
 ## (b) Der `ping`-Befehl schickt Anfragen zu dem per Hostname oder IP-Adresse spezifizierten Zielrechner, um festzustellen ob der Zielrechner erreichbar ist. Mit dem Erhalt einer Antwort zeigt ping die RTD (roundtrip delay) an. Beachten Sie die `man-page` des Befehls: (`man ping`).
 
 1.  Was versteht man unter roundtrip delay?
+
 
     - Roundtrip Delay ist die Zeit, die ein Datenpaket benötigt, um von der Quelle zum Ziel zu gelangen und wieder zurück zur Quelle. Dies wird gemessen, um die Verbindungsgeschwindigkeit und -stabilität zu testen.
 

@@ -463,13 +463,10 @@ $$
    $$
 
 3. **Eigenschaft des Homomorphismus für Konkatens:**
-
    $$
     h(L_1^k) = (h(L_1))^k
    $$
-
    Beweis durch Induktion über \(k\):
-
    - **Induktionsanfang:**
 
      $$
