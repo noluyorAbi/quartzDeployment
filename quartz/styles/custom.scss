@@ -286,3 +286,17 @@ html[saved-theme="dark"] .text {
 }
 
 /* SCROLL INDICATOR END*/
+
+/* Disqus DARK*/
+#disqus_thread {
+  background-color: #faf8f8;
+  padding: 25px;
+  border-radius: 25px;
+}
+
+/* Disqus DARK*/
+html[saved-theme="dark"] #disqus_thread {
+  background-color: white;
+  padding: 25px;
+  border-radius: 25px;
+}

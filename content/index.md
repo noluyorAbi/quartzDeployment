@@ -139,8 +139,11 @@ console.log(asciiArt2);
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
-<hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
+<hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 3rem; margin-bottom: 3rem;">
+
+<div id="disqus-wrapper">
 <div id="disqus_thread"></div>
+</div>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.

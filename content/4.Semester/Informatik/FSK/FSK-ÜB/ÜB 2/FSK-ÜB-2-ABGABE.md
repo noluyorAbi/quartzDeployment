@@ -270,13 +270,13 @@ graph LR
 id0(( )) --> id1((z0)) --w∈Σ--> id1((z0))
 ```
 
-- Da $z_0$ _kein_ akzeptierender Zustand ist, landet der Automat beim lesen in keinen akzeptierenden Zustand, was dazu führt, dass kein Wort gültig ist  
-   - Es gilt also: $L(A_1) = \emptyset$
-  $$
-  \tag*{$\blacksquare$}
-  $$
-  **Schlussfolgerung:**
-  Die Behauptung ist wahr. Für einen DFA $𝐴1$ mit genau einem Zustand ist die von ihm akzeptierte Sprache entweder $Σ^*$ oder $∅$, abhängig davon, ob der einzige Zustand ein akzeptierender Zustand ist oder nicht.
+- Da $z_0$ _kein_ akzeptierender Zustand ist, landet der Automat beim lesen in keinen akzeptierenden Zustand, was dazu führt, dass kein Wort gültig ist
+  - Es gilt also: $L(A_1) = \emptyset$
+    $$
+    \tag*{$\blacksquare$}
+    $$
+    **Schlussfolgerung:**
+    Die Behauptung ist wahr. Für einen DFA $𝐴1$ mit genau einem Zustand ist die von ihm akzeptierte Sprache entweder $Σ^*$ oder $∅$, abhängig davon, ob der einzige Zustand ein akzeptierender Zustand ist oder nicht.
 
 ## b) Sei $A_2$ ein DFA mit Alphabet $\Sigma = \{a, b\}$ und genau zwei Zuständen. Angenommen es gibt ein Wort $z \notin L(A_2)$ und für alle $i \in \mathbb{N}$ ist $a^i \in L(A_2)$. Zeigen oder widerlegen Sie: Für jeden solchen Automaten $A_2$ ist $bb \notin L(A_2)$.
 
