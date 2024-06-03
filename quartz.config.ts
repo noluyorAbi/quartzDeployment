@@ -16,7 +16,13 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "www.myuninotes.com", // davor quartz.jzhao.xyz
-    ignorePatterns: ["private", "templates", ".obsidian", "JWT-Handbook"],
+    ignorePatterns: [
+      "private",
+      "templates",
+      ".obsidian",
+      "JWT-Handbook",
+      "content/4.Semester/Informatik/SoftwareSecurity/JWT-Handbook",
+    ],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",

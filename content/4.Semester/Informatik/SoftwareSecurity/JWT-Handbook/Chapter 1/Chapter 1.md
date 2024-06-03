@@ -7,7 +7,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 3. June 2024, 22:28
-date modified: Monday, 3. June 2024, 22:40
+date modified: Monday, 3. June 2024, 22:49
 ---
 
 # Introduction
@@ -40,3 +40,8 @@ While this looks like gibberish, it is actually a very compact, printable repres
 „Another key aspect of JWTs is the possiblity of signing them, using JSON Web Signatures (JWS, RFC 7515), and/or encrypting them, using JSON Web Encryption (JWE, RFC 7516). Together with JWS and JWE, JWTs provide a powerful, secure solution to many different problems.“
 
 ## 1.2 What problem does it solve?
+
+- Main purpose is to transfer claims between two parties
+- most important aspect is the _standardization effort_ in the form of _simple, optionally validated and/or encrypted, container_ format
+- JWT is a simple, useful standard container format
+  - $\Longrightarrow$ Older formats serving the same purpose are for example the [SAMPL](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language)
