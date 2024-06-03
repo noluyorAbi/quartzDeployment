@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "www.myuninotes.com", // davor quartz.jzhao.xyz
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian", "JWT-Handbook"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
