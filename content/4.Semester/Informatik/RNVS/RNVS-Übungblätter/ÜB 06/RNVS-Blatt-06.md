@@ -8,7 +8,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Thursday, 30. May 2024, 16:06
-date modified: Monday, 3. June 2024, 11:15
+date modified: Monday, 3. June 2024, 13:24
 ---
 
 # 1. Fenstergröße beim Sliding-Window-Verfahren (H)

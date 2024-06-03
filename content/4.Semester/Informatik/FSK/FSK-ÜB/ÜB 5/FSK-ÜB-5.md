@@ -8,19 +8,8 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit: 6h
 date created: Tuesday, 21. May 2024, 16:56
-date modified: Monday, 3. June 2024, 10:24
+date modified: Monday, 3. June 2024, 14:29
 ---
-
-> [!danger] ACHTUNG
-> Übungsblatt ist falsch muss überarbeitet werden!
-
-> [!fail]
-
-> [!fail]
-
-> [!fail]
-
-- [ ] ÜB-5 FSK überarbeiten
 
 # FSK5-1 Myhill und Nerode (2 Punkte)
 
@@ -32,69 +21,38 @@ date modified: Monday, 3. June 2024, 10:24
 > 2.  $u_2 = \varepsilon$
 > 3.  $u_3 = c$
 
-> [!tip]- Anleitung zum lösen der Aufgabe
-> Um die Aufgabenstellung zu lösen, hier eine klare Anleitung, wie man die Äquivalenzklassen der Nerode-Relation für die Sprache $L = L(ab^*c)$ über das Alphabet $\Sigma = \{a, b, c\}$ bestimmt:
+> [!tip] Anleitung zum lösen der Aufgabe
 >
-> ### Schritt 1: Verständnis der Sprache $L$
+> 1. **Suffix-Erweiterung:** Zunächst analysieren wir, um welchen Suffix das Wort erweitert werden muss, damit es in der gewünschten Sprache enthalten ist.
+> 2. **Präfix-Analyse:** Im nächsten Schritt betrachten wir den identifizierten Suffix und überlegen, um welchen Präfix dieser erweitert werden muss, damit der Suffix in der Sprache enthalten ist.
+> 3. **Äquivalenzklasse:** Der ermittelte Präfix bildet dann die entsprechende Äquivalenzklasse.
 >
-> Die Sprache $L$ umfasst alle Wörter, die mit dem Buchstaben 'a' beginnen, gefolgt von beliebig vielen 'b' (auch keinem) und einem abschließenden 'c'. Beispiele für Wörter in $L$ sind "ac", "abc", "abbc", usw.
->
-> ### Schritt 2: Definition der Nerode-Relation
->
-> Zwei Wörter $u$ und $v$ sind äquivalent bezüglich der Nerode-Relation einer Sprache $L$, wenn für jedes mögliche Anhängsel $x$ aus $\Sigma^*$ gilt:
->
-> - $ux \in L$ genau dann, wenn $vx \in L$
->
-> ### Schritt 3: Analyse der vorgegebenen Wörter
->
-> Für jedes der vorgegebenen Wörter $u_i$ (in diesem Beispiel nur $u_1 = abb$), bestimmen wir die Äquivalenzklasse $[u_1]$, indem wir prüfen, welche Anhängsel $x$ das resultierende Wort $u_1x$ in $L$ liegen lassen.
->
-> #### Beispiel $u_1 = abb$:
->
-> - Wenn wir "c" an "abb" anhängen (d.h., $x = c$), erhalten wir "abbc", was in $L$ liegt.
-> - Wenn wir irgendein anderes Symbol oder eine Kombination aus Symbolen, die nicht mit "c" enden, an "abb" anhängen, liegt das resultierende Wort nicht in $L$.
->
-> Daher ist die Äquivalenzklasse von $u_1$ definiert durch alle Wörter $v$, für die $vc$ das einzige Wort in $L$ ist. Dazu gehört jedes Wort, das "abb" voranstellt und mit "c" endet.
->
-> ### Schritt 4: Formulierung der Äquivalenzklassen
->
-> Die Äquivalenzklasse für $u_1$ ist:
->
-> $$
-> [abb] = \{ v \in \Sigma^* : vc \in L \text{ und kein anderes } vx \in L \text{
-> für } x \neq c \}
-> $$
->
-> ### Schritt 5: Generalisierung für weitere Wörter
->
-> Diesen Prozess kann man für jedes andere Wort in ähnlicher Weise wiederholen, um die jeweilige Äquivalenzklasse bezüglich der Nerode-Relation der Sprache $L$ zu bestimmen.
->
-> Dieser Ansatz nutzt das Prinzip, dass die Nerode-Relation eine Äquivalenzrelation ist und in Klassen einteilt, welche die Verhaltensmuster der Wörter gegenüber der Sprache $L$ abbilden. Durch das Verstehen, welche Anhängsel ein Wort in die Sprache einfügen oder ausschließen, kann man die Äquivalenzklassen strukturieren und definieren.
+> Durch diese methodische Herangehensweise wird sichergestellt, dass das Wort korrekt erweitert und in die richtige Äquivalenzklasse eingeordnet wird.
 
 ### 1. $u_1 = abb$
-
-$$
-[abb] = \{ v \in \Sigma^* : vc \in L \text{ und kein anderes } vx \in L \text{
-für } x \neq c \}
-$$
-
-$$
- [abb] = \{ v \in \Sigma^* \mid \forall x \in \Sigma^* : vx \in L \leftrightarrow x = c \}
-$$
 
 > [!success] Musterlösung
 > Präfix suchen was muss nach dem Wort stehen, damit es regulär ist
 > Danach: Präfix damit das Wort gebildet werden kann
 >
 > $$
-> u_{1}=ab^*c
+> [abb]=\{ab^*c\}
+> $$
+
+> [!fail]- Falscher Ansatz
+>
+> $$
+> [abb] = \{ v \in \Sigma^* : vc \in L \text{ und kein anderes } vx \in L>
+> \text{
+> für } x \neq c \}
+> $$
+>
+> $$
+>  [abb] = \{ v \in \Sigma^* \mid \forall x \in \Sigma^* : vx \in
+>   \leftrightarrow x = c \}
 > $$
 
 ### 2. $u_2 = \epsilon$
-
-$$
-[\varepsilon] = \{ab^{*}c\}
-$$
 
 > [!success] Musterlösung
 >
@@ -102,7 +60,52 @@ $$
 > [\varepsilon]=\{\varepsilon\}
 > $$
 
+> [!fail]- Falscher Ansatz
+>
+> $$
+> [\varepsilon] = \{ab^{*}c\}
+> $$
+
 ### 3. $u_3 = c$
+
+> [!success] Lösung
+>
+> ### Erklärung
+>
+> Das gegebene Problem bezieht sich auf die Bestimmung der Äquivalenzklasse $[u_3]$ mit $u_3 = c$.
+>
+> **Problemstellung:**
+>
+> $u_3 = c$
+>
+> **Lösungsvorschlag:**
+>
+> Es gibt kein $w$ sodass $cw \in L$ ist. Somit ist $[c]$ die Menge der Wörter $v \in \Sigma^*$, für die mit jedem $w$ gilt: $vw \notin L$. Das ist der Fall für $v \in L(b\Sigma^*)$, $v \in L(c\Sigma^*)$, $v \in L(aa\Sigma^*)$, $v \in L(ab^*a\Sigma^*)$ und $v \in L(ab^*c\Sigma\Sigma^*)$, wobei $\Sigma$ der reguläre Ausdruck $(a|b|c)$ ist. Somit ist
+>
+> $$
+> [c] = L((b|c|aa)\Sigma^* \mid ab^*a\Sigma^* \mid ab^*c\Sigma\Sigma^*)
+> $$
+>
+> ### Detaillierte Erklärung des Beweises
+>
+> Um die Äquivalenzklasse $[c]$ zu bestimmen, folgt man diesen Schritten:
+>
+> 1. **Definition der Sprache $L$:**
+>    - Die Sprache $L$ ist nicht explizit gegeben, aber wir müssen feststellen, dass für $u_3 = c$ kein Wort $w$ existiert, sodass $cw \in L$.
+> 2. **Bestimmung von $[c]$:**
+>    - $[c]$ umfasst alle Wörter $v \in \Sigma^*$, für die gilt: $vw \notin L$ für jedes $w \in \Sigma^*$. Dies bedeutet, dass das Wort $v$ nie zu einem Wort führt, das in $L$ liegt, egal welches $w$ hinzugefügt wird.
+> 3. **Analyse von $v$:**
+>    - Wenn $v$ aus der Sprache $L(b\Sigma^*)$ stammt, bedeutet das, dass $v$ mit $b$ beginnt und beliebige Zeichen aus $\Sigma$ folgen können.
+>    - Wenn $v$ aus der Sprache $L(c\Sigma^*)$ stammt, bedeutet das, dass $v$ mit $c$ beginnt und beliebige Zeichen aus $\Sigma$ folgen können.
+>    - Wenn $v$ aus der Sprache $L(aa\Sigma^*)$ stammt, bedeutet das, dass $v$ mit zwei $a$ beginnt und beliebige Zeichen aus $\Sigma$ folgen können.
+>    - Wenn $v$ aus der Sprache $L(ab^*a\Sigma^*)$ stammt, bedeutet das, dass $v$ mit einem $a$, gefolgt von beliebig vielen $b$ und einem weiteren $a$ beginnt, gefolgt von beliebigen Zeichen aus $\Sigma$.
+>    - Wenn $v$ aus der Sprache $L(ab^*c\Sigma\Sigma^*)$ stammt, bedeutet das, dass $v$ mit einem $a$, gefolgt von beliebig vielen $b$ und einem $c$ beginnt, gefolgt von zwei Zeichen aus $\Sigma$.
+> 4. **Regulärer Ausdruck für $[c]$:**
+>    - Der reguläre Ausdruck, der diese Bedingungen zusammenfasst, ist $(b|c|aa)\Sigma^* \mid ab^*a\Sigma^* \mid ab^*c\Sigma\Sigma^*$.
+>
+> **Schlussfolgerung:**
+>
+> Die Äquivalenzklasse $[c]$ besteht aus Wörtern, die nie zu einem Wort in $L$ führen, unabhängig von dem angehängten $w$.
 
 Suffix
 
@@ -111,6 +114,7 @@ $$
 $$
 
 Präfix
+ist trickier
 
 > [!success] Musterlösung
 >
@@ -128,70 +132,134 @@ Präfix
 
 ### 1. $L_1 = \{aaab, aabb, abab, abbb, baab, bbab, bbbb\}$ mit $\Sigma_1 = \{a, b\}$
 
-### Lösung für Sprache $L_1$
+> [!success] Lösung
+>
+> ### Erklärung
+>
+> Das gegebene Problem bezieht sich auf die Bestimmung der Regularität der Sprache $L_1$ über dem Alphabet $\Sigma_1 = \{a, b\}$.
+>
+> **Sprache $L_1$:**
+>
+> $L_1 = \{ aaab, aabb, abab, abbb, baab, babb, bbab, bbbb \}$
+>
+> **Lösungsvorschlag:**
+>
+> Die Lösung beinhaltet das Finden der verschiedenen Äquivalenzklassen der Myhill-Nerode-Relation für die gegebene Sprache. Äquivalenzklassen gruppieren Zeichenketten, die von der Sprache $L_1$ nicht unterschieden werden können.
+>
+> **Identifizierte Äquivalenzklassen:**
+>
+> 1. $[\varepsilon]$ - Die Klasse, die die leere Zeichenkette enthält.
+> 2. $[a]$ - Die Klasse, die die Zeichenkette "a" enthält.
+> 3. $[aa]$ - Die Klasse, die die Zeichenkette "aa" enthält.
+> 4. $[aaa]$ - Die Klasse, die die Zeichenkette "aaa" enthält.
+> 5. $[aaab]$ - Die Klasse, die die Zeichenkette "aaab" enthält.
+> 6. $[aaaa]$ - Die Klasse, die die Zeichenkette "aaaa" enthält.
+>
+> Der Nerode-Index, also die Anzahl dieser Äquivalenzklassen, beträgt 6.
+>
+> ### Detaillierte Erklärung zur Bestimmung der Äquivalenzklassen
+>
+> Um die Äquivalenzklassen der Myhill-Nerode-Relation zu bestimmen, folgt man diesen Schritten:
+>
+> 1. **Initiale Identifizierung:** Beginne mit der leeren Zeichenkette $\varepsilon$ und prüfe, welche Zeichenketten durch Anhängen von Symbolen aus $\Sigma_1$ entstehen können.
+> 2. **Prüfung der Verlängerungen:** Betrachte, wie verschiedene Präfixe von Zeichenketten in $L_1$ erweitert werden können, um entweder gültige Zeichenketten in $L_1$ oder andere Zeichenketten zu bilden, die von $L_1$ unterschieden werden können.
+> 3. **Äquivalenzklassen-Bildung:** Gruppiere Zeichenketten, die durch dieselben Erweiterungen in $L_1$ zu denselben Ergebnissen führen.
+>
+> **Beispiel für die Bestimmung:**
+>
+> - $\varepsilon$ (leere Zeichenkette) ist eine eigene Klasse: $[\varepsilon]$.
+> - "a" ist ein Präfix, das durch Anhängen von "a" oder "b" zu unterschiedlichen Ergebnissen führt, daher eine eigene Klasse: $[a]$.
+> - "aa" ist ein Präfix, das zu "aaab" führen kann, daher eine eigene Klasse: $[aa]$.
+> - "aaa" ist ein Präfix, das nur zu "aaab" erweitert werden kann, eine eigene Klasse: $[aaa]$.
+> - "aaab" ist eine vollständige Zeichenkette in $L_1$, eine eigene Klasse: $[aaab]$.
+> - "aaaa" ist eine weitere mögliche Erweiterung, eine eigene Klasse: $[aaaa]$.
+>
+> Jede dieser Klassen ist distinkt, weil Zeichenketten in verschiedenen Klassen zu unterschiedlichen Ergebnissen führen, wenn man weitere Symbole anhängt.
+>
+> **Schlussfolgerung:**
+>
+> Da die Anzahl der Äquivalenzklassen endlich ist, ist die Sprache $L_1$ regulär. Die Anmerkung besagt, dass jede endliche Sprache regulär sein muss, weil sie nur eine endliche Anzahl von Äquivalenzklassen haben kann.
+>
+> Diese Lösung bestätigt, dass $L_1$ eine reguläre Sprache mit einem Nerode-Index von 6 ist.
 
-**Sprache**: $L_1 = \{aaab, aabb, abab, abbb, baab, bbab, bbbb\}$
-**Alphabet**: $\Sigma_1 = \{a, b\}$
+Wir brauchen die Äquivalenzklasse von b nicht, da sie schon in a enthalten ist. Die Äquivalenzklasse von a = b
 
-#### Nerode-Index und Ä quivalenzklassen
+$$
+\begin{aligned}
+[\varepsilon ]_{~L} &=\{\varepsilon\} \\
+[a]_{\sim L} &=\{a,b\} \\
+[aa]_{\sim L} &=\{aa,ab,ba,bb\} \\
+...
+\end{aligned}
+$$
 
-**Bestimmung**: Der Nerode-Index von $L_1$ wird durch Analyse der rechtsinvarianten Äquivalenzrelation bestimmt, bei der zwei Wörter $x$ und $y$ äquivalent sind, wenn für alle $z$ gilt, dass $xz \in L_1$ genau dann, wenn $yz \in L_1$.
-
-**Äquivalenzklassen**:
-
-1. **Klasse 1**: Alle Wörter in $L_1$. Anhängen von Zeichen führt aus $L_1$ heraus.
-2. **Klasse 2**: Alle Wörter, die nicht in $L_1$ sind. Anhängen von Zeichen führt nicht in $L_1$ hinein.
-
-**Anzahl der Äquivalenzklassen**: 2 (endlich)
-
-#### Regulärität der Sprache
-
-Nach dem Satz von Myhill-Nerode ist eine Sprache regulär, wenn die Anzahl ihrer Äquivalenzklassen endlich ist. Da $L_1$ genau zwei Äquivalenzklassen hat, ist $L_1$ regulär.
-
-**Fazit**: $L_1$ ist eine reguläre Sprache und kann durch einen endlichen Automaten mit zwei Zuständen dargestellt werden.
+> [!fail]- Falscher Ansatz
+>
+> ### Lösung für Sprache $L_1$
+>
+> **Sprache**: $L_1 = \{aaab, aabb, abab, abbb, baab, bbab, bbbb\}$ > **Alphabet**: $\Sigma_1 = \{a, b\}$
+>
+> #### Nerode-Index und Äquivalenzklassen
+>
+> **Bestimmung**: Der Nerode-Index von $L_1$ wird durch Analyse der rechtsinvarianten Äquivalenzrelation bestimmt, bei der zwei Wörter $x$ und $y$ äquivalent sind, wenn für alle $z$ gilt, dass $xz \in L_1$ genau dann, wenn $yz \in L_1$.
+>
+> **Äquivalenzklassen**:
+>
+> 1. **Klasse 1**: Alle Wörter in $L_1$. Anhängen von Zeichen führt aus $L_1$ heraus.
+> 2. **Klasse 2**: Alle Wörter, die nicht in $L_1$ sind. Anhängen von Zeichen führt nicht in $L_1$ hinein.
+>
+> **Anzahl der Äquivalenzklassen**: 2 (endlich)
+>
+> #### Regulärität der Sprache
+>
+> Nach dem Satz von Myhill-Nerode ist eine Sprache regulär, wenn die Anzahl ihrer Äquivalenzklassen endlich ist. Da $L_1$ genau zwei Äquivalenzklassen hat, ist $L_1$ regulär.
+>
+> **Fazit**: $L_1$ ist eine reguläre Sprache und kann durch einen endlichen Automaten mit zwei Zuständen dargestellt werden.
 
 ### 2. $L_2 = \{w\overline{w}w \mid w \in \Sigma_2^*\}$ mit $\Sigma_2 = \{a, b\}$
 
-> [!tip] Erklärung
+> [!success] Lösung
 >
-> #### Was ist $L_2$?
+> ### Erklärung
 >
-> Die Sprache $L_2$ besteht aus Wörtern der Form $w\overline{w}w$, wobei $w$ irgendein Wort über dem Alphabet $\{a, b\}$ ist, und $\overline{w}$ das „komplementäre Wort“ zu $w$ darstellt. Das heißt, in $\overline{w}$ ist jedes 'a' zu einem 'b' geändert und jedes 'b' zu einem 'a'.
+> Das gegebene Problem bezieht sich auf die Bestimmung der Regularität der Sprache $L_2$ über dem Alphabet $\Sigma_2 = \{a, b\}$.
 >
-> #### Warum ist $L_2$ keine reguläre Sprache?
+> **Sprache $L_2$:**
 >
-> Reguläre Sprachen sind dadurch gekennzeichnet, dass sie eine endliche Anzahl von „Mustern“ oder Regeln haben, die durch einfache Automaten (endliche Automaten) verarbeitet werden können. Diese Automaten haben nur eine begrenzte Anzahl von Zuständen.
+> $L_2 = \{ w \overline{w} w \overline{w} \mid w \in \Sigma_2^* \}$ mit $\Sigma_2 = \{a, b\}$
 >
-> #### Das Problem mit unendlich vielen Mustern:
+> **Lösungsvorschlag:**
 >
-> In $L_2$ kann das Wort $w$ beliebig lang und komplex sein, was bedeutet, dass die Möglichkeiten für $w$ und somit für die Kombinationen von $w\overline{w}w$ unbegrenzt sind.
+> Der Nerode-Index ist unendlich. Betrachte für jedes $i \in \mathbb{N}$ die Wörter $u_i = a^i b$ und $w_i = ba^{2i}b$. Es ist $u_i w_i = a^i bba^{i}a^i b \in L_2$, aber $u_j w_i = a^j bba^{i}a^i b \notin L_2$ für jedes $j \ne i$. Somit ist $[u_i] \ne [u_j]$ für alle $i \ne j$ und es gibt unendlich viele verschiedene Äquivalenzklassen, d.h. $Index(\sim_{L_2}) = \infty$.
 >
-> #### Beispiel zur Verdeutlichung:
+> ### Detaillierte Erklärung zur Bestimmung der Äquivalenzklassen
 >
-> - Wenn $w = a$, dann ist $w\overline{w}w = abaa$.
-> - Wenn $w = ab$, dann ist $w\overline{w}w = abbaab$.
+> Um zu zeigen, dass der Nerode-Index unendlich ist, betrachte man die folgenden Schritte:
 >
-> Jedes unterschiedliche $w$ führt zu einem einzigartigen Muster von $w\overline{w}w$, das spezifisch nur für dieses $w$ gültig ist. Jedes Mal, wenn $w$ sich ändert, ändert sich das ganze Muster, was bedeutet, dass theoretisch unendlich viele unterschiedliche Muster möglich sind.
+> 1. **Definition der Wörter:** Wir definieren für jedes $i \in \mathbb{N}$ die Wörter $u_i = a^i b$ und $w_i = ba^{2i}b$.
+> 2. **Konstruktion von $u_i w_i$:** Das Produkt $u_i w_i$ ergibt $a^i bba^{i}a^i b$, welches in der Sprache $L_2$ liegt, da es die Form $w \overline{w} w \overline{w}$ hat.
+> 3. **Prüfung von $u_j w_i$:**
+>    - Wenn $j \ne i$, dann ist $u_j w_i = a^j bba^{i}a^i b$.
+>    - Dieses Wort liegt nicht in $L_2$, da die Struktur $w \overline{w} w \overline{w}$ nicht erfüllt ist.
+> 4. **Unterschiedlichkeit der Äquivalenzklassen:** Da $u_i w_i$ in $L_2$ liegt und $u_j w_i$ nicht in $L_2$ liegt für $j \ne i$, sind die Äquivalenzklassen $[u_i]$ und $[u_j]$ verschieden für alle $i \ne j$.
+> 5. **Unendlichkeit der Äquivalenzklassen:** Da es für jedes $i \in \mathbb{N}$ eine eigene Äquivalenzklasse gibt, gibt es unendlich viele Äquivalenzklassen.
 >
-> #### Myhill-Nerode Theorem:
+> **Schlussfolgerung:**
 >
-> Nach diesem Theorem ist eine Sprache genau dann regulär, wenn es eine endliche Anzahl von Äquivalenzklassen gibt, die beschreiben, wie man Wörter der Sprache durch das Anhängen von Suffixen unterscheiden kann. In $L_2$ führt jedoch jedes unterschiedliche $w$ zu einer neuen Äquivalenzklasse, da keine zwei verschiedenen $w$ das gleiche Muster von $w\overline{w}w$ ergeben können. Das bedeutet, dass es unendlich viele solcher Klassen gibt.
->
-> ### Fazit:
->
-> Da $L_2$ durch jede Variation von $w$ eine neue Äquivalenzklasse benötigt und da es unendlich viele mögliche $w$ gibt, gibt es auch unendlich viele Äquivalenzklassen. Ein endlicher Automat könnte nicht unendlich viele Zustände haben, um jedes mögliche Muster zu speichern oder zu verarbeiten. Deshalb ist $L_2$ keine reguläre Sprache.
+> Da die Anzahl der Äquivalenzklassen unendlich ist, ist die Sprache $L_2$ nicht regulär. Dies bestätigt, dass der Nerode-Index von $L_2$ unendlich ist und somit $L_2$ keine reguläre Sprache ist.
 
 ### 3. $L_3 = \{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und } i = 2, \text{ dann } j < k\}$ mit $\Sigma_3 = \{a, b, c\}$
 
-**Sprache**: $L_3 = \{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und wenn } i = 2, \text{ dann } j < k\}$
-
-**Regulärität**: $L_3$ ist nicht regulär.
-
-**Begründung**: Die Sprache $L_3$ enthält eine kontextabhängige Bedingung, die verlangt, dass $j < k$, wenn $i = 2$. Diese Bedingung führt zu einer unendlichen Anzahl von Äquivalenzklassen, da für jedes $j$ ein $k$ existieren muss, das größer als $j$ ist. Ein endlicher Automat kann diese kontextabhängige Beziehung nicht verarbeiten, da er nur eine feste Anzahl von Zuständen und Übergängen hat, die keine unendlichen, von den Werten anderer Teile des Wortes abhängigen Bedingungen ausdrücken können.
-
-### Schlussfolgerung:
-
-Die unendliche Anzahl und die Art der Äquivalenzklassen, die durch die Bedingung $j < k$ entstehen, überschreiten die Möglichkeiten eines endlichen Automaten, was gemäß dem Myhill-Nerode Theorem zur Nicht-Regulärität der Sprache führt.
+> [!fail]- Falscher Ansatz
+> **Sprache**: $L_3 = \{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und wenn } i = 2, \text{ dann } j < k\}$
+>
+> **Regulärität**: $L_3$ ist nicht regulär.
+>
+> **Begründung**: Die Sprache $L_3$ enthält eine kontextabhängige Bedingung, die verlangt, dass $j < k$, wenn $i = 2$. Diese Bedingung führt zu einer unendlichen Anzahl von Äquivalenzklassen, da für jedes $j$ ein $k$ existieren muss, das größer als $j$ ist. Ein endlicher Automat kann diese kontextabhängige Beziehung nicht verarbeiten, da er nur eine feste Anzahl von Zuständen und Übergängen hat, die keine unendlichen, von den Werten anderer Teile des Wortes abhängigen Bedingungen ausdrücken können.
+>
+> ### Schlussfolgerung:
+>
+> Die unendliche Anzahl und die Art der Äquivalenzklassen, die durch die Bedingung $j < k$ entstehen, überschreiten die Möglichkeiten eines endlichen Automaten, was gemäß dem Myhill-Nerode Theorem zur Nicht-Regulärität der Sprache führt.
 
 ---
 
@@ -200,22 +268,72 @@ Die unendliche Anzahl und die Art der Äquivalenzklassen, die durch die Bedingun
 > [!note] Aufgabenstellung
 > Zeigen Sie mit dem Pumping-Lemma für kontextfreie Sprachen, dass die Sprache $L_2 = \{w\overline{w}w \mid w \in \Sigma^*\}$ über dem Alphabet $\Sigma = \{a, b\}$ nicht kontextfrei ist.
 
-**Sprache**: $L_2$ über $\Sigma = \{a, b\}$.
+> [!success] Lösung
+>
+> ### Erklärung
+>
+> Das gegebene Problem bezieht sich auf die Bestimmung, ob die Sprache $L_2 = \{w\overline{w}w \mid w \in \Sigma^*\}$ über dem Alphabet $\Sigma = \{a, b\}$ kontextfrei ist.
+>
+> **Sprache $L_2$:**
+>
+> $L_2 = \{w\overline{w}w \mid w \in \Sigma^* \}$
+>
+> **Lösungsvorschlag:**
+>
+> Beweis mit dem Pumping-Lemma.
+>
+> Sei $n \in \mathbb{N}_{>0}$ beliebig.
+>
+> Wir wählen $z \in L_2$ als $z = a^n b^{2n} a^{2n} b^n$ mit $|z| \ge n$.
+>
+> Sei $z = uvwxy$ eine beliebige Zerlegung von $z$, sodass $|vx| \ge 1$, $|vwx| \le n$ und $uv^i wx^i y \in L$ für jedes $i \in \mathbb{N}$. Wir wählen $i = 0$. Sei $z' = u v^0 w x^0 y$. Sei $k = |vx|$.
+>
+> Wegen $|vwx| \le n$ sind nur folgende Fälle möglich:
+>
+> - $z' = a^{n-k_1} b^{2n-k_2} a^{2n} b^n$ mit $k_1 + k_2 = k \ge 1$. Da $z' \in L$ ist, gibt es ein $w$, sodass $z' = w\overline{w}w$ ist. Dieses $w$ muss von der Form $a^*b^*$ sein. Somit muss sowohl $2(n - k_1) = 2n$ gelten als auch $2n - k_2 = 2n$. Diese Aussagen können aber nicht beide wahr sein. Widerspruch.
+> - $z' = a^n b^{2n-k_1} a^{2n-k_2} b^n$ mit $k_1 + k_2 = k \ge 1$. Dann ist (mit der gleichen Begründung wie oben) $z' \in L$ nur wenn sowohl $2n = 2n - k_1$ als auch $2n = 2n - k_2$ gilt, aber diese Aussagen können nicht beide wahr sein. Widerspruch.
+> - $z' = a^n b^{2n} a^{2n-k_1} b^{n-k_2}$ mit $k_1 + k_2 = k \ge 1$. Dann ist $z' \in L$ nur wenn sowohl $2n = 2n - k_1$ als auch $2n = 2(n - k_2)$ gilt, aber diese Aussagen können nicht beide wahr sein. Widerspruch.
+>
+> ### Detaillierte Erklärung des Beweises
+>
+> Um zu zeigen, dass die Sprache $L_2$ nicht kontextfrei ist, benutzen wir das Pumping-Lemma für kontextfreie Sprachen. Das Pumping-Lemma besagt, dass für jede kontextfreie Sprache $L$ eine Konstante $n \in \mathbb{N}$ existiert, sodass jede Zeichenkette $z \in L$ mit $|z| \ge n$ in fünf Teile $z = uvwxy$ zerlegt werden kann, wobei:
+>
+> 1. $|vx| \ge 1$
+> 2. $|vwx| \le n$
+> 3. $uv^i wx^i y \in L$ für jedes $i \in \mathbb{N}$
+>
+> **Beweis:**
+>
+> 1. **Wahl der Zeichenkette $z$:** Wir wählen $z = a^n b^{2n} a^{2n} b^n$ mit $|z| \ge n$. Diese Wahl von $z$ liegt in $L_2$ und erfüllt die Bedingungen des Pumping-Lemmas.
+> 2. **Zerlegung von $z$:**
+>    - Sei $z = uvwxy$ eine beliebige Zerlegung von $z$, sodass $|vx| \ge 1$ und $|vwx| \le n$.
+>    - Da $|vwx| \le n$, kann $vx$ nur innerhalb eines Blocks von $a$s oder $b$s liegen oder an der Grenze zwischen zwei Blöcken, aber niemals den gesamten Block überschreiten.
+> 3. **Pumping und Widersprüche:**
+>    - **Fall 1:** $z' = a^{n-k_1} b^{2n-k_2} a^{2n} b^n$. Da $z' \in L$ sein soll, müsste $z'$ die Form $w\overline{w}w$ haben, was nicht möglich ist, da $2(n - k_1) = 2n$ und $2n - k_2 = 2n$ nicht gleichzeitig wahr sein können. Widerspruch.
+>    - **Fall 2:** $z' = a^n b^{2n-k_1} a^{2n-k_2} b^n$. Ähnlich wie oben, können $2n = 2n - k_1$ und $2n = 2n - k_2$ nicht gleichzeitig wahr sein. Widerspruch.
+>    - **Fall 3:** $z' = a^n b^{2n} a^{2n-k_1} b^{n-k_2}$. Auch hier können $2n = 2n - k_1$ und $2n = 2(n - k_2)$ nicht beide gleichzeitig wahr sein. Widerspruch.
+>
+> **Schlussfolgerung:**
+>
+> Da in allen möglichen Fällen ein Widerspruch entsteht, ist die Sprache $L_2$ nicht kontextfrei.
 
-**Lemma**: Das Pumping-Lemma für kontextfreie Sprachen besagt, dass für jede kontextfreie Sprache $L$ eine Pumping-Länge $p$ existiert, sodass jedes Wort $z$ in $L$ mit einer Länge von mindestens $p$ in fünf Teile $uvwxy$ zerlegt werden kann, wobei $|vwx| \leq p$, $|vx| > 0$ und $uv^iwx^iy$ für alle $i \geq 0$ in $L$ bleibt.
-
-**Anwendung des Lemmas**:
-
-1. **Wahl des Wortes**: Wähle $w = (ab)^p$ und damit $z = w\overline{w}w = (ab)^p(ba)^p(ab)^p$, wobei $z$ eine Länge von $6p$ hat.
-2. **Zerlegung**: $z$ wird gemäß dem Lemma in $uvwxy$ zerlegt, wobei $|vwx| \leq p$ und $|vx| > 0$.
-3. **Pumpen**: Betrachte $uv^2wx^2y$.
-
-**Widerspruch**:
-
-- Das Pumpen von $v$ und $x$ zerstört die spezifische Struktur $w\overline{w}w$ von $L_2$. Beispielsweise führt das Erhöhen der $ab$-Paare im ersten Segment, ohne die entsprechenden Änderungen in den $(ba)^p$ und $(ab)^p$ Segmenten, dazu, dass das gepumpte Wort nicht mehr die Form $w\overline{w}w$ hat und somit nicht in $L_2$ sein kann.
-
-**Schlussfolgerung**:
-Da das Pumpen von $v$ und $x$ dazu führt, dass das Wort $uv^2wx^2y$ nicht mehr in $L_2$ liegt, widerspricht dies dem Pumping-Lemma für kontextfreie Sprachen. Daher ist $L_2$ nicht kontextfrei.
+> [!fail]- Falscher Ansatz
+> **Sprache**: $L_2$ über $\Sigma = \{a, b\}$.
+>
+> **Lemma**: Das Pumping-Lemma für kontextfreie Sprachen besagt, dass für jede kontextfreie Sprache $L$ eine Pumping-Länge $p$ existiert, sodass jedes Wort $z$ in $L$ mit einer Länge von mindestens $p$ in fünf Teile $uvwxy$ zerlegt werden kann, wobei $|vwx| \leq p$, $|vx| > 0$ und $uv^iwx^iy$ für alle $i \geq 0$ in $L$ bleibt.
+>
+> **Anwendung des Lemmas**:
+>
+> 1. **Wahl des Wortes**: Wähle $w = (ab)^p$ und damit $z = w\overline{w}w = (ab)^p(ba)^p(ab)^p$, wobei $z$ eine Länge von $6p$ hat.
+> 2. **Zerlegung**: $z$ wird gemäß dem Lemma in $uvwxy$ zerlegt, wobei $|vwx| \leq p$ und $|vx| > 0$.
+> 3. **Pumpen**: Betrachte $uv^2wx^2y$.
+>
+> **Widerspruch**:
+>
+> - Das Pumpen von $v$ und $x$ zerstört die spezifische Struktur $w\overline{w}w$ von $L_2$. Beispielsweise führt das Erhöhen der $ab$-Paare im ersten Segment, ohne die entsprechenden Änderungen in den $(ba)^p$ und $(ab)^p$ Segmenten, dazu, dass das gepumpte Wort nicht mehr die Form $w\overline{w}w$ hat und somit nicht in $L_2$ sein kann.
+>
+> **Schlussfolgerung**:
+> Da das Pumpen von $v$ und $x$ dazu führt, dass das Wort $uv^2wx^2y$ nicht mehr in $L_2$ liegt, widerspricht dies dem Pumping-Lemma für kontextfreie Sprachen. Daher ist $L_2$ nicht kontextfrei.
 
 ---
 
@@ -243,6 +361,8 @@ Für $m \geq 0$, das Wort $xy^mz = a^2b^mc^2$ bleibt gültig in $L$ solange $m <
 **Fazit:**
 
 Dieses Beispiel zeigt, dass die Sprache die Pumping-Eigenschaft erfüllt, solange das gepumpte Wort $y$ die Bedingung $i = 2 \Rightarrow j < k$ nicht verletzt. Da das Pumping-Lemma für reguläre Sprachen nur fordert, dass es möglich sein muss, ein Wort zu pumpen und in der Sprache zu bleiben, reicht ein Beispiel, um die Erfüllung der Pumping-Eigenschaft zu demonstrieren.
+
+---
 
 ## b) Sind die folgenden Sprachen $L_i$, $i \in \{1, 2, 3\}$, über den Alphabeten $\Sigma_i$ regulär? Wenn ja, geben Sie einen regulären Ausdruck an, der $L_i$ erkennt. (Sie müssen nicht beweisen, dass der reguläre Ausdruck $L_i$ erkennt.) Wenn nein, zeigen Sie die Nichtregularität mit dem Pumping-Lemma für reguläre Sprachen.
 
