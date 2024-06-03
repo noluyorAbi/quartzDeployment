@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit: 6h
 date created: Tuesday, 21. May 2024, 16:56
-date modified: Monday, 3. June 2024, 14:29
+date modified: Monday, 3. June 2024, 19:21
 ---
 
 # FSK5-1 Myhill und Nerode (2 Punkte)
@@ -39,7 +39,7 @@ date modified: Monday, 3. June 2024, 14:29
 > [abb]=\{ab^*c\}
 > $$
 
-> [!fail]- Falscher Ansatz
+> [!fail]- Falscher Ansatz (aufklappbar)
 >
 > $$
 > [abb] = \{ v \in \Sigma^* : vc \in L \text{ und kein anderes } vx \in L>
@@ -60,7 +60,7 @@ date modified: Monday, 3. June 2024, 14:29
 > [\varepsilon]=\{\varepsilon\}
 > $$
 
-> [!fail]- Falscher Ansatz
+> [!fail]- Falscher Ansatz (aufklappbar)
 >
 > $$
 > [\varepsilon] = \{ab^{*}c\}
@@ -193,7 +193,7 @@ $$
 \end{aligned}
 $$
 
-> [!fail]- Falscher Ansatz
+> [!fail]- Falscher Ansatz (aufklappbar)
 >
 > ### Lösung für Sprache $L_1$
 >
@@ -250,7 +250,7 @@ $$
 
 ### 3. $L_3 = \{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und } i = 2, \text{ dann } j < k\}$ mit $\Sigma_3 = \{a, b, c\}$
 
-> [!fail]- Falscher Ansatz
+> [!fail]- Falscher Ansatz (aufklappbar)
 > **Sprache**: $L_3 = \{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und wenn } i = 2, \text{ dann } j < k\}$
 >
 > **Regulärität**: $L_3$ ist nicht regulär.
@@ -317,7 +317,7 @@ $$
 >
 > Da in allen möglichen Fällen ein Widerspruch entsteht, ist die Sprache $L_2$ nicht kontextfrei.
 
-> [!fail]- Falscher Ansatz
+> [!fail]- Falscher Ansatz (aufklappbar)
 > **Sprache**: $L_2$ über $\Sigma = \{a, b\}$.
 >
 > **Lemma**: Das Pumping-Lemma für kontextfreie Sprachen besagt, dass für jede kontextfreie Sprache $L$ eine Pumping-Länge $p$ existiert, sodass jedes Wort $z$ in $L$ mit einer Länge von mindestens $p$ in fünf Teile $uvwxy$ zerlegt werden kann, wobei $|vwx| \leq p$, $|vx| > 0$ und $uv^iwx^iy$ für alle $i \geq 0$ in $L$ bleibt.
@@ -341,26 +341,62 @@ $$
 
 ## a)Zeigen Sie, dass die Sprache $a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und wenn } i = 2, \text{ dann } j < k$ über dem Alphabet $\Sigma = \{a, b, c\}$ die Pumping-Eigenschaft erfüllt.
 
-Um zu zeigen, dass die Sprache $L = \{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und } i = 2 \Rightarrow j < k\}$ die Pumping-Eigenschaft erfüllt, nutzen wir das Pumping-Lemma für reguläre Sprachen. Dieses besagt, dass es eine Pumping-Länge $p$ gibt, so dass jedes Wort $s$ in $L$ mit einer Länge $\geq p$ so in drei Teile $x, y, z$ zerlegt werden kann, dass gilt:
+> [!success] Lösung
+>
+> ### Erklärung
+>
+> Das gegebene Problem bezieht sich auf die Überprüfung, ob die Sprache $\{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und wenn } i = 2, \text{ dann } j < k \}$ über dem Alphabet $\Sigma = \{a, b, c\}$ die Pumping-Eigenschaft für reguläre Sprachen erfüllt.
+>
+> **Sprache:**
+>
+> $\{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und wenn } i = 2, \text{ dann } j < k \}$
+>
+> **Lösungsvorschlag:**
+>
+> Wir wählen $n = 4$.
+>
+> Sei $z = a^i b^j c^k \in L$ mit $|z| \ge n$.
+>
+> Wir müssen für jedes solche $z$ eine Zerlegung $z = uvwxy$ angeben mit $|uvw| \le n$, $|vwx| \ge 1$ und $uv^iwx^iy \in L$ für alle $i \in \mathbb{N}$.
+>
+> **Vollständige Fallunterscheidung:**
+>
+> - **Fall 1:** $i < 4$ und $i \ne 2$. Wegen $|z| \ge 4$ ist $j \ge 1$ oder $k \ge 1$.
+>
+>   - **Unterfall 1.1:** $j \ge 1$: Wähle die Zerlegung $u = a^i$, $v = b$, $w = b^{j-1}c^k$ mit $|uv| \le 4$ und $|v| \ge 1$. Es ist $uv^iwx^i \in L$ für jedes $i \in \mathbb{N}$, da die Anzahl der $a$'s in $uv^iwx^i$ immer $i \ne 2$ bleibt und somit die Anzahl der $b$'s und $c$'s irrelevant ist.
+>   - **Unterfall 1.2:** $j = 0$: Wähle die Zerlegung $u = a^i$, $v = c$, $w = c^{k-1}$. Diese Zerlegung erfüllt mit analoger Begründung alle Bedingungen.
+>
+> - **Fall 2:** $i \ge 4$: Wähle die Zerlegung $u = a^3$, $v = a$, $w = a^{i-4}bjc^k$ mit $|uv| \le 4$ und $|v| \ge 1$. Es ist $uv^iwx^i \in L$ für jedes $i \in \mathbb{N}$, da die Anzahl der $a$'s in $uv^iwx^i$ immer mindestens 3 ist und somit die Anzahl der $b$'s und $c$'s irrelevant ist.
+> - **Fall 3:** $i = 2$: Wähle die Zerlegung $u = \varepsilon$, $v = aa$, $w = bjc^k$. Es ist $uv^iwx^i \in L$ für jedes $i \in \mathbb{N}$, denn:
+>
+>   - Für $i = 1$ ist $uv^1wx^1 = z \in L$.
+>   - Für $i \ne 1$ enthält $uv^iwx^i$ nicht genau 2 $a$'s und somit ist die Anzahl der $b$'s und $c$'s wieder irrelevant.
+>
+> **Schlussfolgerung:**
+>
+> Die Sprache erfüllt die Pumping-Eigenschaft für reguläre Sprachen, da in allen möglichen Fällen eine geeignete Zerlegung gefunden werden kann, sodass die Bedingungen des Pumping-Lemmas erfüllt sind.
 
-1. $xy^mz$ ist ein Wort in $L$ für alle $m \geq 0$,
-2. $|xy| \leq p$,
-3. $|y| > 0$.
-
-**Beispiel:**
-
-Wähle $i = 2, j = 1, k = 2$, dann ist $s = a^2 b^1 c^2$ ein gültiges Wort in $L$, da $i = 2$ und $j < k$.
-
-Teile $s$ in $x = a^2$, $y = b$, $z = c^2$:
-
-- $xy = a^2b$ und $|xy| = 3 \leq p$ (angenommen $p \geq 3$),
-- $|y| = 1 > 0$.
-
-Für $m \geq 0$, das Wort $xy^mz = a^2b^mc^2$ bleibt gültig in $L$ solange $m < 2$, weil wenn $i = 2$, dann $j = m < k = 2$ erfüllt sein muss.
-
-**Fazit:**
-
-Dieses Beispiel zeigt, dass die Sprache die Pumping-Eigenschaft erfüllt, solange das gepumpte Wort $y$ die Bedingung $i = 2 \Rightarrow j < k$ nicht verletzt. Da das Pumping-Lemma für reguläre Sprachen nur fordert, dass es möglich sein muss, ein Wort zu pumpen und in der Sprache zu bleiben, reicht ein Beispiel, um die Erfüllung der Pumping-Eigenschaft zu demonstrieren.
+> [!fail]- Falscher Ansatz (aufklappbar)
+> Um zu zeigen, dass die Sprache $L = \{a^i b^j c^k \mid i, j, k \in \mathbb{N} \text{ und } i = 2 \Rightarrow j < k\}$ die Pumping-Eigenschaft erfüllt, nutzen wir das Pumping-Lemma für reguläre Sprachen. Dieses besagt, dass es eine Pumping-Länge $p$ gibt, so dass jedes Wort $s$ in $L$ mit einer Länge $\geq p$ so in drei Teile $x, y, z$ zerlegt werden kann, dass gilt:
+>
+> 1. $xy^mz$ ist ein Wort in $L$ für alle $m \geq 0$,
+> 2. $|xy| \leq p$,
+> 3. $|y| > 0$.
+>
+> **Beispiel:**
+>
+> Wähle $i = 2, j = 1, k = 2$, dann ist $s = a^2 b^1 c^2$ ein gültiges Wort in $L$, da $i = 2$ und $j < k$.
+>
+> Teile $s$ in $x = a^2$, $y = b$, $z = c^2$:
+>
+> - $xy = a^2b$ und $|xy| = 3 \leq p$ (angenommen $p \geq 3$),
+> - $|y| = 1 > 0$.
+>
+> Für $m \geq 0$, das Wort $xy^mz = a^2b^mc^2$ bleibt gültig in $L$ solange $m < 2$, weil wenn $i = 2$, dann $j = m < k = 2$ erfüllt sein muss.
+>
+> **Fazit:**
+>
+> Dieses Beispiel zeigt, dass die Sprache die Pumping-Eigenschaft erfüllt, solange das gepumpte Wort $y$ die Bedingung $i = 2 \Rightarrow j < k$ nicht verletzt. Da das Pumping-Lemma für reguläre Sprachen nur fordert, dass es möglich sein muss, ein Wort zu pumpen und in der Sprache zu bleiben, reicht ein Beispiel, um die Erfüllung der Pumping-Eigenschaft zu demonstrieren.
 
 ---
 
