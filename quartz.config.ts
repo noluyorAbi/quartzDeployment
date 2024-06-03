@@ -20,8 +20,8 @@ const config: QuartzConfig = {
       "private",
       "templates",
       ".obsidian",
-      "JWT-Handbook",
-      "content/4.Semester/Informatik/SoftwareSecurity/JWT-Handbook",
+      "/JWT-Handbook",
+      "public/4.Semester/Informatik/SoftwareSecurity/JWT-Handbook",
     ],
     defaultDateType: "created",
     theme: {
