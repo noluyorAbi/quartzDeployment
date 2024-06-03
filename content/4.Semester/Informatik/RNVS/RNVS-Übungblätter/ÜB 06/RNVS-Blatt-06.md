@@ -8,7 +8,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Thursday, 30. May 2024, 16:06
-date modified: Friday, 31. May 2024, 00:12
+date modified: Monday, 3. June 2024, 11:15
 ---
 
 # 1. Fenstergröße beim Sliding-Window-Verfahren (H)
@@ -57,10 +57,6 @@ Geben Sie zusätzlich die Nutzungseffizienz des Kanals in Prozent an!
 > 6.  **Berechnung der Nutzungseffizienz des Kanals**:
 >     $$
 >     \text{Nutzungseffizienz (\%)} = \left( \frac{\text{Effektive Übertragungsrate}}{\text{Maximale Übertragungsrate}} \right) \times 100
->     $$
-> 7.  **Berechnung der minimalen Fenstergröße für 100\% Effizienz**:
->     $$
->     \text{Minimale Fenstergröße} = \left( \frac{\text{RTT}}{\text{Übertragungszeit für eine PDU}} \right) + 1
 >     $$
 
 ### 1. 1 PDU
@@ -170,15 +166,12 @@ $$
 $$
 
 $$
- \text{Übertragungszeit für eine PDU} = \frac{4096 \ Bits}{64000 \ \frac{Bits}{s}} = 0.064s
+ \text{Übertragungszeit für sieben PDUs} = \frac{7 \cdot 4096 \ Bits}{64000 \ \frac{Bits}{s}} = 0.448s
 $$
 
 <div style="border: 5px solid red; text-align: center; padding: 10px;">
   ↓ Musterlösung verwendet N = 1 für Gesamtzeit? ↓ Aber N = 7 für Effektive Übertragungsrate ↓ 
 </div>
-
-> [!question] Frage:: #Frage
-> warum nehmen wir aber direkt das erste ACK vom Sender und warten nicht auf alle 7?
 
 $$
  \text{Gesamtzeit} = 1 \times 0.064s + 0.54s + 1 \times 0.001s = 0.605s
@@ -199,10 +192,13 @@ $$
 <div style="border: 5px solid red; text-align: center; padding: 10px;">
   ↑ Musterlösung ende ↑
 </div>
-
+<br/>
 <div style="border: 5px dotted green; text-align: center; padding: 10px;">
   ↓ Meine Lösung mit N=7 für gesamtzeit ↓ 
 </div>
+
+> [!fail] Falsch
+> Das ist nicht korrekt, weil alle Nachrichten auf einmal gesendet werden und nicht nacheinander. Würden sie nacheinander gesendet werden, müsste man auf jede Quittung 64ms warten.
 
 $$
  \text{Gesamtzeit} = 7 \times 0.064s + 0.54s + 7 \times 0.001s = 0.995s
@@ -236,16 +232,24 @@ $$
 $$
 
 $$
- \text{Übertragungszeit für eine PDU} = \frac{4096 \ Bits}{64000 \ \frac{Bits}{s}} = 0.064s
+ \text{Übertragungszeit für fünfzehn PDUs} = \frac{15 \cdot4096 \ Bits}{64000 \ \frac{Bits}{s}} = 0.96s
 $$
 
 $$
  \text{Gesamtzeit} = 1 \times 0.064s + 0.54s + 1 \times 0.001s = 0.605s
 $$
 
-> [!danger] Wichtig
-
-- [ ] FORMEL FÜR GESAMTZEIT EVENTUELL AUSBESSERN UND N ENTFERNEN!
+> [!info] Info
+> Man kann die Nutzungseffizienz auch ohne die unteren zwei Formeln berechnen
+> inde man
+>
+> $$
+> \begin{aligned}
+> \text{Nutzungseffizienz} &= \frac{\text{Übertragungszeit für fünfzehn PDUs}}{Gesamtzeit} \\
+> &=\frac{0.96s}{0.605s} \\
+> &=158.68\%
+> \end{aligned}
+> $$
 
 $$
 \text{Effektive Übertragungsrate} = \frac{15 \times 4096 \ Bits}{0.605s} = 101553\frac{Bits}{s}
@@ -256,6 +260,8 @@ $$
 $$
 
 ## (b) Berechnen Sie die minimale Fenstergröße, mit der die Nutzungseffizienz des Kommunikationskanals zum Satelliten 100% erreicht!
+
+> [!success] Passt so
 
 ### Nutzungseffizienz umformen für Effektive Übertragungsrate
 
@@ -401,6 +407,8 @@ sequenceDiagram
 
 ## (c) Zeichnen Sie ein Sequenzdiagramm, in dem der Sender fünf Nachrichten sendet, aber die dritte Nachricht fehlerhaft beim Empfänger ankommt.
 
+> [!warning] NAK kommt nack ACK von 4 und 5 an
+
 ```mermaid
 sequenceDiagram
     autonumber
@@ -428,17 +436,18 @@ sequenceDiagram
         E->>S: NAK 3
     end
 
+    rect rgb(200, 150, 255)
+        E->>S: ACK 4
+        E->>S: ACK 5
+    end
     rect rgb(191, 223, 255)
         S->>E: Nachricht 3
         note right of E: Nachricht 3 erneut <br/> schicken
     end
-
     rect rgb(200, 150, 255)
-        E->>S: ACK 4
-        E->>S: ACK 5
         E->>S: ACK 3
         note right of E: Nachricht 3 ACK
-    end
+	end
 
 
     S->>E: CLS
@@ -451,10 +460,17 @@ sequenceDiagram
 
 ## (d) Welchen Vorteil haben negative Quittungen?
 
-- Schneller Abhandlung von fehlerhaften Nachrichten, da auf kein Timeout gewartet werden muss
-- Auf fehlerhafte Nachricht folgende Nachrichten müssen nicht erneut abgeschickt werden (keine doppelten Nachrichten)
+> [!success] Korrekt
+>
+> - Schneller Abhandlung von fehlerhaften Nachrichten, da auf kein Timeout gewartet werden muss
+
+> [!fail] Falsch
+>
+> - Auf fehlerhafte Nachricht folgende Nachrichten müssen nicht erneut abgeschickt werden (keine doppelten Nachrichten)
 
 ## (e) Wie könnte man den Umgang mit positiven Quittungen optimieren, wenn der Empfänger mehrere Nachrichten quittieren soll?
+
+> [!success] Korrekt
 
 - **Sammelquittungen**:
 
@@ -515,6 +531,10 @@ $$
 $$
 
 ## (d) Welche absoluten und relativen TCP-Sequenznummern besitzen diese Segmente?
+
+Absolute sind random Zahlen die als Sequenznummern eingeteilt werden
+
+relative sind die Sequenznummer die wir aus der VL kennen
 
 > [!tip] Absolute und relative TCP-Sequenznummern:
 >
@@ -653,86 +673,38 @@ rect rgb(191, 223, 255)
 C->>S: SYN [SeqNr=6000]
 end
 rect rgb(200, 150, 255)
-S->>C: SYNB [SeqNr=9000, ACK=6050]
+S->>C: SYNB [SeqNr=9000, ACK=6001]
 end
 rect rgb(191, 223, 255)
-C->>S: SYNBP[SeqNr=6001, ACK=10000]
+C->>S: SYNBP[SeqNr=6001, ACK=9001]
 C->>S: Anfrage[SeqNr=6001]
 end
 rect rgb(200, 150, 255)
 S->>C: Antwort [SeqNr=9001, ACK=6051]
 end
 rect rgb(191, 223, 255)
-C->>S: CLS[SeqNr=6002, ACK=10001]
+C->>S: CLS[SeqNr=6051, ACK=10001]
 end
 rect rgb(200, 150, 255)
-S->>C: CLSB [SeqNr=9001, ACK=6051]
-S->>C: CLS [SeqNr=9001, ACK=6051]
+S->>C: CLSB [SeqNr=10001, ACK=6052]
+S->>C: CLS [SeqNr=6052, ACK=11001]
 end
 rect rgb(191, 223, 255)
 C->>S: CLSB[SeqNr=6002, ACK=10001]
 end
 ```
 
-### ODER SO?
-
-```mermaid
-sequenceDiagram
-    autonumber
-
-    participant C as Client
-    participant S as Server
-
-    %% Establishing the connection (Three-way handshake)
-    rect rgb(191, 223, 255)
-        C->>S: SYN [SeqNr=6000]
-    end
-
-    rect rgb(200, 150, 255)
-        S->>C: SYN, ACK [SeqNr=9000, ACK=6001]
-    end
-
-    rect rgb(191, 223, 255)
-        C->>S: ACK [SeqNr=6001, ACK=9001]
-    end
-
-    %% Request-Response Exchange
-    rect rgb(191, 223, 255)
-        C->>S: Request [SeqNr=6001, ACK=9001, Data=50 Bytes]
-    end
-
-    rect rgb(200, 150, 255)
-        S->>C: Response [SeqNr=9001, ACK=6051, Data=1000 Bytes]
-    end
-
-    %% Terminating the connection (Four-way handshake)
-    rect rgb(191, 223, 255)
-        C->>S: FIN [SeqNr=6051, ACK=10001]
-    end
-
-    rect rgb(200, 150, 255)
-        S->>C: ACK [SeqNr=10001, ACK=6052]
-    end
-
-    rect rgb(200, 150, 255)
-        S->>C: FIN [SeqNr=10001, ACK=6052]
-    end
-
-    rect rgb(191, 223, 255)
-        C->>S: ACK [SeqNr=6052, ACK=10002]
-    end
-
-```
-
 ## (b) Zeitverhältnisse
 
 ### i. Wie lange dauert es, bis die Antwort (Response) beim Client angekommen ist?
 
-- Handshake besteht aus 3 Nachrichten : $3 \cdot 150ms =450ms$
-- Anfrage $450ms+150ms =600ms$
-- Response: $600ms+150ms=750ms$
+> [!warning] SYNBP und Anfrage werden gleichzeitig abgeschickt, deswegen spart man sich ein mal 150ms
 
-$\Longrightarrow \text{Gesamtzeit bis die Antwort beim Client ankommt: } 750ms$
+- Handshake besteht aus 3 Nachrichten : $3 \cdot 150ms =450ms$
+- Anfrage wird gleichzeitig abgeschickt wie mit SYNBP $450ms+0ms =450ms$
+- Response: $450+150ms=600ms$
+
+$\Longrightarrow \text{Gesamtzeit bis die Antwort beim Client ankommt: } 600ms$
 
 ### ii. Um welchen Faktor schneller wäre der Austausch von Anfrage/Antwort mittels eines verbindungslosen Protokolls?
 
@@ -743,11 +715,11 @@ $\Longrightarrow \text{Gesamtzeit bis die Antwort beim Client ankommt: } 750ms$
   $$
   \begin{aligned}
   \text{(Zeit Faktor)} &= \frac{verbindungsorientiert}{verbindunglos}\\
-  &=\frac{750ms}{300ms}\\
-  &=2.5
+  &=\frac{600ms}{300ms}\\
+  &=2
   \end{aligned}
   $$
-  $\Longrightarrow$ verbindungslos ist $2.5$x schneller als verbindungsorientiert
+  $\Longrightarrow$ verbindungslos ist $2$x schneller als verbindungsorientiert
 
 ### iii. Wie viel Zeit vergeht vom Versand des ersten bis zum Empfang des letzten Segments?
 
@@ -760,32 +732,13 @@ $\Longrightarrow \text{Gesamtzeit bis die Antwort beim Client ankommt: } 750ms$
 Gesamtzeit:
 
 $$
- 150 \, \text{ms} + 150 \, \text{ms} + 150 \, \text{ms} = 450 \, \text{ms}
+ 450 \, \text{ms} + 150 \, \text{ms} = 600 \, \text{ms}
 $$
 
-#### Versand der Anfrage (Request) und Empfang der Antwort (Response)
-
-4. **Request**: 150 ms
-5. **Response**: 150 ms
-
-Gesamtzeit:
+#### Verbindungsabbau
 
 $$
- 150 \, \text{ms} + 150 \, \text{ms} = 300 \, \text{ms}
-$$
-
-#### Gesamte Zeit
-
-Verbindungsaufbau + Versand der Anfrage + Empfang der Antwort:
-
-$$
- 450 \, \text{ms} + 300 \, \text{ms} = 750 \, \text{ms}
-$$
-
-Die gesamte Zeit beträgt also:
-
-$$
- 750 \, \text{ms}
+ 600 \, \text{ms} + 3 \cdot 150 \, \text{ms} = 1050 \, \text{ms}
 $$
 
 <!-- DISQUS SCRIPT COMMENT START -->
@@ -794,11 +747,11 @@ $$
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
