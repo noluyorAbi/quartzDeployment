@@ -45,3 +45,20 @@ While this looks like gibberish, it is actually a very compact, printable repres
 - most important aspect is the _standardization effort_ in the form of _simple, optionally validated and/or encrypted, container_ format
 - JWT is a simple, useful standard container format
   - $\Longrightarrow$ Older formats serving the same purpose are for example the [SAMPL](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language)
+
+**Used in:**
+
+- Authentication
+- Authorization
+- Federated identity
+- Client-side sessions (“stateless” sessions)
+- Client-side secrets
+
+## 1.3 A little bit of history
+
+- The JSON Object Signing and Encryption (JOSE) group was established in 2011.
+- Objective: Standardize integrity protection, encryption, and key/algorithm identification for JSON-based security protocols.
+- By 2013, produced drafts and a cookbook of examples.
+- Drafts became the JWT, JWS, JWE, JWK, and JWA RFCs.
+- As of 2016, these RFCs were on the standards track with no reported errata.
+- The group is currently inactive.
