@@ -7,7 +7,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 3. June 2024, 23:06
-date modified: Tuesday, 4. June 2024, 00:12
+date modified: Tuesday, 4. June 2024, 10:20
 ---
 
 # 2 Practical Applications
@@ -45,7 +45,7 @@ date modified: Tuesday, 4. June 2024, 00:12
 - bad JWT libraries can lead to unsigned tokens being accepted as signed tokens
   - easily solved by making sure that the server does not consider unsigned JWTs valid
 
-![[Pasted image 20240603235345.png]]
+![[Pasted image 20240603235305.png]]
 [Whiteboard](https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtL2FjMjM0NGY4NWQxYTQxOWI4ZmUwOWQyNWE2MTliYjFjX0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRF82ZDY1YjA2YS1jOGUyLTQxNjQtYTdiNS1kNWY5MDY4ODZkNWQ=)-Link
 
 ## 2.1.1.2 Cross-Site Request Forgery (CSRF)
