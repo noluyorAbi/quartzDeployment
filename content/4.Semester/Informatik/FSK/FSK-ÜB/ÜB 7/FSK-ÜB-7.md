@@ -7,7 +7,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 4. June 2024, 10:21
-date modified: Wednesday, 5. June 2024, 23:30
+date modified: Wednesday, 5. June 2024, 23:36
 ---
 
 # FSK7-1 Sprachen einordnen (2 Punkte)
@@ -131,6 +131,20 @@ $$
   nicht erfüllt ist.
 
 **$\Longrightarrow$ Daher liegt das gepumpte Wort $w'$ nicht in der Sprache $L_1$ und es ist gezeigt, dass die Sprache nicht regulär ist, da sie nicht die Bedingung des Pumping Lemmas erfüllt**
+
+### $L_2$
+
+- Regulär, da man es in einem [[Reguläre Ausdrücke|RegEx]] darstellen kann
+  $$
+  L_{2}=((ab)^*\$c^{*})
+  $$
+
+### $L_3$
+
+- Regulär, da man es in einem [[Reguläre Ausdrücke|RegEx]] darstellen kann
+  $$
+  L_{3}=(ab)^*\$(c^{*})\$(ab)^*
+  $$
 
 ## b) Beweisen oder widerlegen Sie, dass $L_i$ deterministisch kontextfrei ist.
 
