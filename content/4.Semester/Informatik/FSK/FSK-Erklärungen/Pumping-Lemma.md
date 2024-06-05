@@ -8,8 +8,10 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: "[[FSK-ÜB-4]]"
 Benötigte Zeit:
 date created: Monday, 13. May 2024, 22:45
-date modified: Monday, 13. May 2024, 23:23
+date modified: Wednesday, 5. June 2024, 21:57
 ---
+
+# [Pumping Lemma - Automaten & Formale (Simpleclub)](https://www.youtube.com/watch?v=TZOeXLWVer4&ab_channel=Informatik-simpleclub)
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
     <iframe src="https://www.youtube.com/embed/NFJtwpZs7BE?si=LyzNqT0igsCnNiyl" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -79,11 +81,11 @@ Das Pumping-Lemma ist ein mächtiges Werkzeug in der Theorie der formalen Sprach
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
