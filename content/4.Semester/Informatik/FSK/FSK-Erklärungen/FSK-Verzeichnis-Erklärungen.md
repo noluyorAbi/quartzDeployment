@@ -7,7 +7,7 @@ tags:
   - informatik
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Thursday, 18. April 2024, 16:21
-date modified: Tuesday, 4. June 2024, 12:26
+date modified: Thursday, 6. June 2024, 21:05
 ---
 
 # Erklärungen
@@ -27,6 +27,7 @@ date modified: Tuesday, 4. June 2024, 12:26
 - [[Sprachen]]
 - [[Kellerautomaten]]
 - [[CYK-Algorithmus]]
+- [[Deterministisch Kontextfreie Sprachen und Kontextfreie Sprachen]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
