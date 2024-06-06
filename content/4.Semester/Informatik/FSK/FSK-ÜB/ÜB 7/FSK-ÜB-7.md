@@ -254,13 +254,13 @@ $\Longrightarrow$ Zudem auch regulär. Deswegen ist $L_0$ deterministisch kontex
 
 - Nehmen wir an $L_1$ sei deterministisch kontextfrei.
 - Dann gibt es eine Pumping-Länge $p$.
-- Wähle das Wort $w = a^{p}b^{p+1}\$ $.
+- Wähle das Wort $w = a^{p}b^{p+1}\$$.
   - $w \in L_1$, da $\#_{a}(w) = p < \#_{b}(w) = p+1$.
 - Zerlege $w$ in $uvxyz$, wobei $|vxy|\leq p$, $|vy| \geq 1$ und $\text{für alle } k \geq 0$ ist $uv^{k}xy^{k}z \in L_1$.
 - Da $|vxy| \leq p$ und $v$ sowie $y$ nicht leer sein dürfen ($|vy| \geq 1$), muss $vxy$ vollständig innerhalb der ersten $p$ Zeichen von $w$ liegen, die nur 'a's enthalten. Das bedeutet, dass $v$ und $y$ ausschließlich aus 'a's bestehen.
 
 - Pumpe $v$ und $y$: Betrachte das Wort $w' = uv^2xy^2z$.
-  - $w' = a^i a^{2j} a^k a^{2l} a^{p-i-j-k-l} b^{p+1}\$ = a^{p+j+l} b^{p+1}\$ $.
+  - $w' = a^i a^{2j} a^k a^{2l} a^{p-i-j-k-l} b^{p+1}\$ = a^{p+j+l} b^{p+1}\$$.
 
 Nun enthält $w'$ mehr 'a's als 'b's, was bedeutet, dass $w' \notin L_1$ ist, da $\#_a(w') = p + j + l \geq p + 1 > p + 1 = \#_b(w') + \#_c(w')$.
 
@@ -320,7 +320,7 @@ Nun betrachten wir das gepumpte Wort $w' = uv^2xy^2z$:
 
 5. **Pumpen**: Betrachte das Wort $w' = uv^2xy^2z$:
 
-   - $w' = (ab)^i (ab)^{2j} (ab)^k (ab)^{2l} (ab)^{p-i-j-k-l}\$c^{p-1}\$(ab)^p = (ab)^{p+j+l}\$c^{p-1}\$(ab)^p$.
+   - $w' = (ab)^i (ab)^{2j} (ab)^k (ab)^{2l} (ab)^{p-i-j-k-l}\$c^{p-1}\$(ab)^p = (ab)^{p+j+l}\$c^{p-1}\$(ab)^p$
 
 6. **Widerspruch**: Das gepumpte Wort $w'$ hat mehr 'ab'-Paare im ersten Segment als im zweiten, was gegen die Struktur von $L_3$ verstößt, da $j < i$ nicht mehr erfüllt ist.
 
