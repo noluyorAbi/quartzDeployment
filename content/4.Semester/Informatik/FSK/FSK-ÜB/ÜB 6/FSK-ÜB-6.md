@@ -8,10 +8,11 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 18:03
-date modified: Monday, 3. June 2024, 13:24
+date modified: Thursday, 6. June 2024, 23:00
 ---
 
 > [!bug] Es gibt auf dieser Seite teilweise Fehler mit dem rendern von den LaTeX ausdrücken aufgrund der `$` und `#` ich bitte um Entschuldigung während ich nach einer Lösung suche
+> Falls dieses Problem noch länger besteht, bitte einen Kommentar schreiben um mich daran zu erinnen
 
 # FSK6-1 Kontextfreie Grammatiken und Kellerautomaten (2 Punkte)
 

@@ -7,10 +7,13 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 4. June 2024, 10:21
-date modified: Thursday, 6. June 2024, 22:43
+date modified: Thursday, 6. June 2024, 23:00
 ---
 
 - [ ] Pumping Lemma für kontextfreie Sprachen verstehen
+
+> [!bug] Es gibt auf dieser Seite teilweise Fehler mit dem rendern von den LaTeX ausdrücken aufgrund der `$` und `#` ich bitte um Entschuldigung während ich nach einer Lösung suche
+> Falls dieses Problem noch länger besteht, bitte einen Kommentar schreiben um mich daran zu erinnen
 
 # FSK7-1 Sprachen einordnen (2 Punkte)
 
