@@ -7,7 +7,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 4. June 2024, 10:21
-date modified: Thursday, 6. June 2024, 23:00
+date modified: Friday, 7. June 2024, 00:03
 ---
 
 - [ ] Pumping Lemma für kontextfreie Sprachen verstehen
@@ -638,6 +638,36 @@ Die Maschine beginnt im Startzustand $z_0$ und markiert jedes 'a' mit $\#_a$. Di
 Diese Markierungsschritte und die Rückkehr zum Anfang wiederholen sich, bis alle 'a', 'b' und 'c' markiert sind. Da diese Prozesse für jedes der $n$ Zeichen wiederholt werden, ergibt sich die Gesamtzahl der Schritte zu $O(n) \times n = O(n^2)$.
 
 Zusammengefasst benötigt die Turingmaschine $M$ also $O(n^2)$ Schritte, um das Wort $w = a^n b^n c^n$ zu erkennen.
+
+---
+
+# FSK7-3 Turingmaschinen erstellen (2 Punkte)
+
+> [!note] Aufgabenstellung
+> Wir betrachten die Sprache $L = \{ w \mid \#_b(w) > \#_c(w) \}$ über dem Alphabet $\{b, c\}$.
+
+## a) Erstellen Sie auf [https://turingmachinesimulator.com](https://turingmachinesimulator.com) eine TM, der L erkennt. Geben Sie sowohl einen Link zur Maschine an als auch den "Programmtext" der Maschine.
+
+## b) Geben Sie für Ihre TM aus Teilaufgabe a) einen Zustandsgraphen an.
+
+## c) Geben Sie die Läufe der folgenden Wörter auf Ihre TM aus Teilaufgabe a) an: $\varepsilon$, $c$, $bcc$, $cbcb$.
+
+> **Hinweis:** Wörter, die nicht in $L$ liegen, erzeugen eventuell unendliche Läufe. Geben Sie in solchen Fällen ein Präfix an, aus dem ersichtlich wird, dass der Lauf unendlich ist.
+
+---
+
+# FSK7-4 Konstruktion Grammatik zu PDA (0 Punkte)
+
+> [!note] Aufgabenstellung
+> Sei $G = (V, \{a, b\}, P, S)$ eine Grammatik in Greibach-Normalform mit Produktionen
+>
+> $P = \{S \rightarrow aBCD, B \rightarrow bB \mid bC, C \rightarrow cCD \mid cD, D \rightarrow d\}$
+
+## a) Erzeugen Sie gemäß der Konstruktion aus der Vorlesung aus $G$ einen PDA $M$ mit $L(M) = L(G)$, der mit leerem Keller akzeptiert.
+
+## b) Erzeugen Sie gemäß der sogenannten Tripelkonstruktion aus der Vorlesung aus $M$ eine kontextfreie Grammatik $H$ mit $L(H) = L(M)$.
+
+## c) Vergleichen Sie die Grammatiken $G$ und $H$. Beschreiben Sie die Gemeinsamkeiten dieser Grammatiken, sowie ihre Unterschiede.
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
