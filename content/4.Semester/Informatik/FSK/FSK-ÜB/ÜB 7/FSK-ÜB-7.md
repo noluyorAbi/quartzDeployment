@@ -7,7 +7,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 4. June 2024, 10:21
-date modified: Friday, 7. June 2024, 00:03
+date modified: Friday, 7. June 2024, 01:00
 ---
 
 - [ ] Pumping Lemma für kontextfreie Sprachen verstehen

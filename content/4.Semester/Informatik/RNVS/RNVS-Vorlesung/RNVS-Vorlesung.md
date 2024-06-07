@@ -17,6 +17,8 @@ date modified: Sunday, 26. May 2024, 16:00
 - [[RNVS-4VL-10-05-2024]]
 - [[RNVS-5VL-17-05-2024]]
 - [[RNVS-6VL-24-05-2024]]
+- [[RNVS-7VL-31-05-2024]]
+- [[RNVS-8VL-07-06-2024]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
