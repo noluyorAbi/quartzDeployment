@@ -7,7 +7,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 4. June 2024, 10:21
-date modified: Sunday, 9. June 2024, 17:57
+date modified: Sunday, 9. June 2024, 18:21
 ---
 
 # FSK7-1 Sprachen einordnen (2 Punkte)

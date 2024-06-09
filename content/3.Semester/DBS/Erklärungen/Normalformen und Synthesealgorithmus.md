@@ -338,6 +338,49 @@ Durch diese Aufteilung wird sichergestellt, dass in jeder Relation alle nicht-tr
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- DISQUS SCRIPT COMMENT START -->
 
 
@@ -372,6 +415,48 @@ Durch diese Aufteilung wird sichergestellt, dass in jeder Relation alle nicht-tr
 
 
 <!-- DISQUS SCRIPT COMMENT END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
