@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 18:03
-date modified: Thursday, 6. June 2024, 23:00
+date modified: Friday, 7. June 2024, 18:47
 ---
 
 > [!bug] Es gibt auf dieser Seite teilweise Fehler mit dem rendern von den LaTeX ausdrücken aufgrund der `$` und `#` ich bitte um Entschuldigung während ich nach einer Lösung suche
@@ -33,9 +33,17 @@ $$
 \Sigma = \{a, \$\}
 $$
 
-$$
-P = \{S \rightarrow aaSa \mid \$\}
-$$
+> [!fail] Falsch, da nicht N>0
+>
+> $$
+> P = \{S \rightarrow aaSa \mid \$\}
+> $$
+
+> [!success] Korrekt
+>
+> $$
+> P = \{\ S \rightarrow aaSa, D \rightarrow \$ \mid aaDa \ \}
+> $$
 
 $$
 S
@@ -442,16 +450,16 @@ $$
    $$
 
 2. **Bild der Konkatens zweier Sprachen unter $h$:**
+
    $$
     h(L_1 \circ L_2) = \{ h(w) \mid w \in L_1 \circ L_2 \}
    $$
-   Da $w \in L_1 \circ L_2$, gibt es $u \in L_1$ und $v
 
-\in L_2$ mit $w = u \circ v$. Somit:
+   Da $w \in L_1 \circ L_2$, gibt es $u \in L_1$ und $v\in L_2$ mit $w = u \circ v$. Somit:
 
-$$
-h(w) = h(u \circ v)
-$$
+   $$
+    h(w) = h(u \circ v)
+   $$
 
 3. **Eigenschaft des Homomorphismus:**
 

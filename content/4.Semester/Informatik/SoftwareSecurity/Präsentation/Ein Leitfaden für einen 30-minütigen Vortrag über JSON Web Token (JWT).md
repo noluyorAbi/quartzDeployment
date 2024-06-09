@@ -6,7 +6,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 3. June 2024, 20:16
-date modified: Monday, 3. June 2024, 20:52
+date modified: Friday, 7. June 2024, 19:02
 ---
 
 > [!summary] Resscouren

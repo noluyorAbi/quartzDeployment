@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: "[[FSK-ÜB-6]]"
 Benötigte Zeit:
 date created: Tuesday, 28. May 2024, 21:20
-date modified: Tuesday, 4. June 2024, 12:42
+date modified: Sunday, 9. June 2024, 17:43
 ---
 
 # [Wiederholung](https://www.youtube.com/watch?v=R86rOalCYCc&ab_channel=Informatik-simpleclub)
@@ -51,7 +51,7 @@ Ein Kellerautomat arbeitet, indem er die Eingabezeichen liest und gleichzeitig d
 
 ### Beispiel eines Kellerautomaten
 
-Angenommen, wir haben die Sprache $L = \{a^{2n}\$a^n \mid n \in \mathbb{N}_{\gt0}\}$, die aus Wörtern besteht, bei denen vor einem Dollarzeichen \$ doppelt so viele $a$s wie danach stehen.
+Angenommen, wir haben die Sprache $L = \{a^{2n}\$a^n \mid n \in\mathbb{N}_{\gt0}\}$, die aus Wörtern besteht, bei denen vor einem Dollarzeichen \$ doppelt so viele $a$s wie danach stehen.
 
 Ein Kellerautomat, der diese Sprache akzeptiert, könnte wie folgt definiert werden:
 

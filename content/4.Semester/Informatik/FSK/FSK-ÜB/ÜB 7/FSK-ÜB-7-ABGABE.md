@@ -7,13 +7,8 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 4. June 2024, 10:21
-date modified: Sunday, 9. June 2024, 17:50
+date modified: Sunday, 9. June 2024, 17:28
 ---
-
-- [ ] Pumping Lemma für kontextfreie Sprachen verstehen
-
-> [!bug] Es gibt auf dieser Seite teilweise Fehler mit dem rendern von den LaTeX ausdrücken aufgrund der `$` und `#` ich bitte um Entschuldigung während ich nach einer Lösung suche
-> Falls dieses Problem noch länger besteht, bitte einen Kommentar schreiben um mich daran zu erinnen
 
 # FSK7-1 Sprachen einordnen (2 Punkte)
 
@@ -641,21 +636,6 @@ Zusammengefasst benötigt die Turingmaschine $M$ also $O(n^2)$ Schritte, um das 
 
 ---
 
-# FSK7-3 Turingmaschinen erstellen (2 Punkte)
-
-> [!note] Aufgabenstellung
-> Wir betrachten die Sprache $L = \{ w \mid \#_b(w) > \#_c(w) \}$ über dem Alphabet $\{b, c\}$.
-
-## a) Erstellen Sie auf [https://turingmachinesimulator.com](https://turingmachinesimulator.com) eine TM, der L erkennt. Geben Sie sowohl einen Link zur Maschine an als auch den "Programmtext" der Maschine.
-
-## b) Geben Sie für Ihre TM aus Teilaufgabe a) einen Zustandsgraphen an.
-
-## c) Geben Sie die Läufe der folgenden Wörter auf Ihre TM aus Teilaufgabe a) an: $\varepsilon$, $c$, $bcc$, $cbcb$.
-
-> **Hinweis:** Wörter, die nicht in $L$ liegen, erzeugen eventuell unendliche Läufe. Geben Sie in solchen Fällen ein Präfix an, aus dem ersichtlich wird, dass der Lauf unendlich ist.
-
----
-
 # FSK7-4 Konstruktion Grammatik zu PDA (0 Punkte)
 
 > [!note] Aufgabenstellung
@@ -712,27 +692,17 @@ Produktionen $P'$:
 - Die Produktionsregeln von $G$ sind einfacher und direkter, während die von $H$ komplexere Strukturen und Zwischenzustände enthalten.
 - $H$ verwendet Tripel von Zuständen für die Nichtterminale, um die Übergänge des PDA zu modellieren, was in $G$ nicht nötig ist.
 
-<!-- DISQUS SCRIPT COMMENT START -->
+---
 
-<hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
-<div id="disqus_thread"></div>
-<script>
-    /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://myuninotes.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+# FSK7-3 Turingmaschinen erstellen (2 Punkte)
 
-<!-- DISQUS SCRIPT COMMENT END -->
+> [!note] Aufgabenstellung
+> Wir betrachten die Sprache $L = \{ w \mid \#_b(w) > \#_c(w) \}$ über dem Alphabet $\{b, c\}$.
+
+## a) Erstellen Sie auf [https://turingmachinesimulator.com](https://turingmachinesimulator.com) eine TM, der L erkennt. Geben Sie sowohl einen Link zur Maschine an als auch den "Programmtext" der Maschine.
+
+## b) Geben Sie für Ihre TM aus Teilaufgabe a) einen Zustandsgraphen an.
+
+## c) Geben Sie die Läufe der folgenden Wörter auf Ihre TM aus Teilaufgabe a) an: $\varepsilon$, $c$, $bcc$, $cbcb$.
+
+> **Hinweis:** Wörter, die nicht in $L$ liegen, erzeugen eventuell unendliche Läufe. Geben Sie in solchen Fällen ein Präfix an, aus dem ersichtlich wird, dass der Lauf unendlich ist.
