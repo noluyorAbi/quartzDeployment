@@ -22,6 +22,7 @@ const config: QuartzConfig = {
       ".obsidian",
       "**/JWT-Handbook/**",
       "public/4.Semester/Informatik/SoftwareSecurity/JWT-Handbook/**",
+      "**/*ABGABE*",
     ],
     defaultDateType: "created",
     theme: {
