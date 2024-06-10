@@ -6,7 +6,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 3. June 2024, 21:48
-date modified: Friday, 7. June 2024, 21:50
+date modified: Monday, 10. June 2024, 20:24
 ---
 
 Ein 30-minütiger Vortrag über JSON-Web-Tokens (JWT) im Kontext der Software Security sollte gut strukturiert und informativ sein, um sowohl die theoretischen Grundlagen als auch praktische Anwendungsfälle abzudecken. Hier ist ein detaillierter Vorschlag für den Aufbau deines Vortrags:
@@ -215,11 +215,11 @@ Durch die Kombination von theoretischer Erklärung und praktischer Demo wird dei
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */

@@ -7,7 +7,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Sunday, 9. June 2024, 22:36
-date modified: Monday, 10. June 2024, 00:42
+date modified: Monday, 10. June 2024, 14:47
 ---
 
 # 1. TCP Reno (H)
@@ -20,7 +20,7 @@ date modified: Monday, 10. June 2024, 00:42
 >
 > In dieser Aufgabe nehmen wir an, dass während Fast Recovery keine weiteren Duplikate auftreten. Das heißt, dass das erneut übertragene Segment – die Ursache für die ACK-Duplikate – erfolgreich quittiert wird.
 
-### Skizze des Graphen
+## Skizze des Graphen
 
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': { 'lineColor': '#00FFFF', 'titleColor': '#FFFFFF', 'xAxisLabelColor': '#FFFFFF', 'xAxisTitleColor': '#FFFFFF', 'yAxisLabelColor': '#FFFFFF', 'yAxisTitleColor': '#FFFFFF', 'chartBackground': '#000000', 'gridColor': '#444444', 'lineStrokeWidth': 2 }}}%%
@@ -146,8 +146,6 @@ $$
 > Protokollheader sowie den Verbindungsabbau. Gehen Sie also davon aus, dass die beiden TCP
 > Instanzen sofort nach dem Verbindungsaufbau die Übertragung beginnen und danach die
 > Slow-Start-Phase nicht verlassen.
-
-$\frac{1}{1}$
 
 ## (a) Sei die Übertragungsrate R = 20 kB/s. Erstellen Sie ein Sequenzdiagramm für die Übertragung und tragen Sie die Größe des jeweils aktuellen Überlastfensters (CongWin) in das Diagramm ein!
 

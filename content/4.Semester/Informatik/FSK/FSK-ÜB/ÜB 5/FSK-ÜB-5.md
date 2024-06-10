@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit: 6h
 date created: Tuesday, 21. May 2024, 16:56
-date modified: Monday, 3. June 2024, 19:21
+date modified: Monday, 10. June 2024, 14:48
 ---
 
 # FSK5-1 Myhill und Nerode (2 Punkte)
@@ -493,11 +493,11 @@ Daher beschreibt $\backslash n$ nicht immer eine reguläre Sprache, und die Erwe
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
