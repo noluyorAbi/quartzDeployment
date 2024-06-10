@@ -7,8 +7,10 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema:
 Benötigte Zeit:
 date created: Thursday, 9. May 2024, 14:07
-date modified: Monday, 10. June 2024, 15:50
+date modified: Monday, 10. June 2024, 21:18
 ---
+
+# [[Präsentation]]
 
 # Organisatorisches
 

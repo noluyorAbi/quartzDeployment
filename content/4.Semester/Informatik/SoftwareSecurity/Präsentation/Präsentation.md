@@ -6,9 +6,16 @@ tags:
 fach: "[[Bachelorseminar-Software Security]]"
 Thema:
 Benötigte Zeit:
+date created: Monday, 10. June 2024, 21:16
+date modified: Monday, 10. June 2024, 21:17
 ---
 
-<iframe src="https://onedrive.live.com/embed?resid=F55DE069DEFB8117%2118403&amp;authkey=!AJNrbIRvygDtczc&amp;em=2&amp;wdAr=1.7777777777777777&amp;wdEaa=0" width="476px" height="691px" frameborder="0">Dies ist ein eingebettetes <a target="_blank" href="https://office.com">Microsoft Office</a>-Präsentation, unterstützt von <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+  <iframe src="https://onedrive.live.com/embed?resid=F55DE069DEFB8117%2118403&amp;authkey=!AJNrbIRvygDtczc&amp;em=2&amp;wdAr=1.7777777777777777&amp;wdEaa=0" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          frameborder="0">Dies ist ein eingebettetes <a target="_blank" href="https://office.com">Microsoft Office</a>-Präsentation, unterstützt von <a target="_blank" href="https://office.com/webapps">Office</a>.
+  </iframe>
+</div>
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
