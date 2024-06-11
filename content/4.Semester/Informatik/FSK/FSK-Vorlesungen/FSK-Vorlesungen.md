@@ -48,6 +48,8 @@ date modified: Tuesday, 4. June 2024, 12:25
 
 ## [[FSK-7VL-04-06-2024]]
 
+# [[FSK-8VL-11-06-2024]]
+
 <!-- DISQUS SCRIPT COMMENT START -->
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
