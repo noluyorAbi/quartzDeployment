@@ -23,6 +23,7 @@ const config: QuartzConfig = {
       "**/JWT-Handbook/**",
       "public/4.Semester/Informatik/SoftwareSecurity/JWT-Handbook/**",
       "**/*ABGABE*",
+      "**/*TRANSKRIPT*",
     ],
     defaultDateType: "created",
     theme: {
