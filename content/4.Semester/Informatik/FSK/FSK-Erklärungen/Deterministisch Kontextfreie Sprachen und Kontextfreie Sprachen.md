@@ -4,7 +4,7 @@ tags:
   - FSK
   - informatik
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
-Thema: "[[FSK-ÜB-7]]"
+Thema: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK-ÜB/ÜB 7/FSK-ÜB-7]]"
 Benötigte Zeit:
 date created: Thursday, 6. June 2024, 21:04
 date modified: Friday, 7. June 2024, 09:19

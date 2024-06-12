@@ -19,7 +19,7 @@ date modified: Sunday, 9. June 2024, 17:00
 - [[FSK-ÜB-4]]
 - [[FSK-ÜB-5]]
 - [[FSK-ÜB-6]]
-- [[FSK-ÜB-7]]
+- [[Uni2/Semester/4.Semester/Informatik/FSK/FSK-ÜB/ÜB 7/FSK-ÜB-7]]
 - [[FSK-ÜB-8]]
 - [[FSK-ÜB-9]]
 - [[FSK-ÜB-10]]
