@@ -1,0 +1,171 @@
+---
+tags:
+  - 4semester
+  - informatik
+  - RNVS
+  - Übungsblatt
+fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
+Thema:
+Benötigte Zeit:
+date created: Thursday, 13. June 2024, 16:42
+date modified: Thursday, 13. June 2024, 20:16
+---
+
+# 1. Verzögerungszeiten (H)
+
+> [!note] Aufgabenstellung
+> Eine Nachricht wird auf dem Weg durch das Netz über verschiedene Knoten und Verbindungen geleitet. Die Übertragung der Daten erfolgt mit Hilfe von Signalen (z.B. elektrische bei Kupferkabeln, elektromagnetische bei der Funkübertragung und optische bei Lichtwellenleitern). Aufgrund von physikalischen Eigenschaften der Signale und Übertragungsmedien, aber auch in den Knoten (Switches, Router) und Endgeräten sowie aufgrund der allgemeinen Verkehrssituation im Netz treten bei der Übertragung von Daten verschiedene Arten von Verzögerungen auf. Wir unterscheiden u.a. folgende Verzögerungszeiten:
+>
+> - Signalverzögerung
+> - Verarbeitungsverzögerung
+> - Nachrichtendauer (auch: Übertragungsverzögerung)
+> - Warteverzögerung
+
+## (a) Zeigen Sie anhand der folgenden Skizze, wo diese Verzögerungen auftreten und erklären Sie jeweils kurz, wie sie entstehen!
+
+![[WhatsApp Image 2024-06-13 at 16.47.59.jpeg]]
+
+_Verarbeitungsverzögerung_
+
+- Lesen und auswerten der Steuerinformationen
+- Überprüfung von Bitübertragungsfehlern
+
+_Warteschlangenverzögerung_
+
+- Entsteht durch Länge der Schlange
+- Schlange hängt von Übertragungsrate der Leitung ab
+
+_Übertragungsverzögerung_
+
+- Abhängig von Paketlänge $L$ und Übertragungsrate $R$ (zum nächsten Transitsystem)
+- $\Longrightarrow$ Je größer das Paket, desto langsamer
+
+_Signalausbreitungsverzögerung_
+
+- Hängt von der Entfernung $d$ vom Sender und Empfänger und der Ausbreitungsgeschwindigkeit $s$ ab
+
+## (b) Erklären Sie den Unterschied zwischen der Nachrichtendauer und der Signalverzögerung!
+
+> [!tip] Erklärung von den beiden
+>
+> - Übertragungsrate bezieht sich auf die Menge an Daten, die pro Zeiteinheit übertragen werden. Wird in Bits pro Sekunde (bps) gemessen
+> - Ausbreitungsgeschwindigkeit bezieht sich auf die Geschwindigkeit, mit der eine elektromagnetische Welle oder ein Signal durch ein Medium (Kabel. Luft) reist. Wird in
+>   $\frac{Längeneinheit}{Zeit}$
+
+_Unterschiede_
+
+- Nachrichtendauer ist Abhängig von der Paketlänge $L$, während die Signalausbreitungsverzögerung von der Entfernung zwischen Sender und Empfänger ($d$) abhängig ist
+- Nachrichtendauer sind Bits pro Sekunde welche Abhängig von $R$ Sekunden abgeschickt werden, während bei der Signalverzögerung die Ausbreitungsgeschwindigkeit durch das Medium in $\frac{Entfernung}{Zeit}$ gemessen wird
+
+## (c) Zwei Rechner A und B sollen in einem Heim-Netz miteinander kommunizieren. Rechner A sei über ein 20 m langes Kupferkabel (Twisted-Pair-Kabel) an einen DSL-WLAN-Router angeschlossen; Rechner B kommuniziert per WLAN und befindet sich 10 m vom Router entfernt in Sichtweite von diesem. Berechnen Sie die Verzögerung für ein Paket der Größe 1500 B, welches von Rechner A an den Rechner B gesendet wird.
+
+> [!info] Hinweis:
+>
+> - $1 \text{ Mbit} = 1 \times 10^6 \text{ bit}$
+> - Vernachlässigen Sie die Warteverzögerungen, sowie alle Fehlereinwirkungen (Paketverlust, Übertragungsfehler etc).
+> - Die Verarbeitungsverzögerung im Router betrage $2 \mu s$.
+> - Die Ausbreitungsgeschwindigkeit von Signalen beträgt:
+> - $2 \times 10^8 \text{ m/s}$ im Kupferkabel
+> - $3 \times 10^8 \text{ m/s}$ bei Funksignalen
+> - Die Übertragungsraten betragen:
+> - $100 \text{ Mbit/s}$ auf dem Kupferkabel
+> - $54 \text{ Mbit/s}$ bei Funksignalen
+
+$$
+d_{nodal} = d_{proc} + d_{queue} + d_{trans} + d_{prop}
+$$
+
+- $d_{queue} = 0$
+- $d_{proc}= 2\mu s$
+
+### Kupferkabel
+
+$$
+d_{trans} = \frac{L}{R} = \frac{12000 \text{ Bit}}{100000000 \frac{Bit}{s}}=0,00012s = 120 \mu s
+$$
+
+$$
+\begin{aligned}
+d_{prop}= \frac{d}{s} = \frac{20 \ m}{200000000 \frac{m}{s}} &= 1\times10^{-7}s\\
+&=0,1\mu s \\
+&= 100 \text{ ns}
+\end{aligned}
+$$
+
+### Funksignale
+
+$$
+d_{trans} = \frac{L}{R} = \frac{12000 \text{ Bit}}{54000000 \frac{Bit}{s}}=0,0002 = 200 \mu s
+$$
+
+$$
+\begin{aligned}
+d_{prop}= \frac{d}{s} = \frac{10 \ m}{300000000 \frac{m}{s}} &= 1\times10^{-7}s\\
+&=0,033\mu s \\
+&= 33,33 \text{ ns}
+\end{aligned}
+$$
+
+### Ergebnis
+
+$$
+d_{nodal}^{Kupfer} = 2\mu s + 0 + 120\mu s + 100 \mu s =222\mu s
+$$
+
+$$
+d_{nodal}^{Funk} = 2\mu s + 0 + 200\mu s + 33,33 \mu s = 235,33\mu s
+$$
+
+$$
+\begin{aligned}
+d_{nodal}^{Kupfer} + d_{nodal}^{Funk} &= 222 \mu s + 235,33 \mu s\\ &= 457,33 \mu s
+\end{aligned}
+$$
+
+# 2. Paket- und Leitungsvermittlung (H)
+
+> [!note] Aufgabenstellung
+> Angenommen eine Applikation überträgt Daten mit einer festen Rate, beispielsweise $N$ Bit alle $k$ Zeiteinheiten – wobei $k$ klein ist. Die Applikation wird für eine längere Zeit ausgeführt. Beantworten Sie die folgenden Fragen und begründen Sie Ihre Antwort kurz.
+
+## (a) Ist eine Leitungsvermittlung oder die Paketvermittlung für dieses Szenario besser geeignet? Warum?
+
+- periodisches Abesenden von Datenpaketen mit $N$ Bit alle $k$ Zeiteinheiten
+- $\Longrightarrow$ Für dieses Szenario ist die Paketvermittlung besser geeignet, da bei dieser Pakete hintereinander geschickt werden können ohne auf eine Bestätigung warten zu müssen
+
+## (b) Betrachten Sie ein paketvermittelndes Netz dessen Endsysteme ausschließlich aus Applikationen wie oben beschrieben bestehen. Die Kapazität, d.h. die maximale Datenrate $R$, jedes einzelnen Links sei größer als die Summe der Datenraten aller Applikationen. In welchem Fall können Paketverluste auftauchen?
+
+_(Folie 50)_
+
+- **Paketverlust (Packet Loss, Drop)**
+
+  - Tritt auf, wenn die Schlange (Puffer) voll ist und weitere Pakete eintreffen.
+
+- **Zur Erinnerung (Transport Layer - TCP)**
+  - Aus Sicht der Endsysteme:
+    - Paket wurde verschickt, kam jedoch nicht beim Empfänger an.
+    - Konsequenz: Paket wird erneut verschickt.
+
+<!-- DISQUS SCRIPT COMMENT START -->
+
+<hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://myuninotes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!-- DISQUS SCRIPT COMMENT END -->
