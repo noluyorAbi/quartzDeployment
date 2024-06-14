@@ -7,7 +7,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Wednesday, 8. May 2024, 19:15
-date modified: Sunday, 26. May 2024, 16:46
+date modified: Friday, 14. June 2024, 12:51
 ---
 
 # Protokollschichtung (H)
@@ -327,19 +327,16 @@ Angesichts der praktischen Dominanz und der umfangreichen Implementierung von TC
 
 ## (b) Der `ping`-Befehl schickt Anfragen zu dem per Hostname oder IP-Adresse spezifizierten Zielrechner, um festzustellen ob der Zielrechner erreichbar ist. Mit dem Erhalt einer Antwort zeigt ping die RTD (roundtrip delay) an. Beachten Sie die `man-page` des Befehls: (`man ping`).
 
-1.  Was versteht man unter roundtrip delay?
-
-
-    - Roundtrip Delay ist die Zeit, die ein Datenpaket benötigt, um von der Quelle zum Ziel zu gelangen und wieder zurück zur Quelle. Dies wird gemessen, um die Verbindungsgeschwindigkeit und -stabilität zu testen.
-
-2.  Versuchen Sie den Host `www.nm.ifi.lmu.de` mit dem Programm `ping` zu erreichen! Dabei sollen 10 Anfragen im Abstand von 2 Sekunden und je 100 Bytes Nutzdaten verschickt werden.
+1. Was versteht man unter roundtrip delay?
+   - Roundtrip Delay ist die Zeit, die ein Datenpaket benötigt, um von der Quelle zum Ziel zu gelangen und wieder zurück zur Quelle. Dies wird gemessen, um die Verbindungsgeschwindigkeit und -stabilität zu testen.
+2. Versuchen Sie den Host `www.nm.ifi.lmu.de` mit dem Programm `ping` zu erreichen! Dabei sollen 10 Anfragen im Abstand von 2 Sekunden und je 100 Bytes Nutzdaten verschickt werden.
 
 ```zsh
 > ping -c 10 -i 2 -s 100 www.nm.ifi.lmu.de
 ```
 
-3.  Wie sind die einzelnen Spalten in der Ausgabe des `ping`-Befehls zu interpretieren?
-    - Die Ausgabe von `ping` enthält Informationen wie die IP-Adresse des Zielrechners, die Zeit jedes einzelnen Ping-Vorgangs (in Millisekunden), und gegebenenfalls Fehlermeldungen.
+3. Wie sind die einzelnen Spalten in der Ausgabe des `ping`-Befehls zu interpretieren?
+   - Die Ausgabe von `ping` enthält Informationen wie die IP-Adresse des Zielrechners, die Zeit jedes einzelnen Ping-Vorgangs (in Millisekunden), und gegebenenfalls Fehlermeldungen.
 
 ## (c) Der `traceroute`-Befehl zeigt den Pfad von der Quelle bis zur Senke durch ein Rechnernetz und misst die RTD zu jedem einzelnen Knoten auf diesem Pfad. Beachten Sie die `man-page` des Befehls: (`man traceroute`).
 
@@ -356,11 +353,11 @@ Angesichts der praktischen Dominanz und der umfangreichen Implementierung von TC
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */

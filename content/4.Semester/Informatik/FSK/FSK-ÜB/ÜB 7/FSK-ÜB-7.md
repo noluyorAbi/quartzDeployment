@@ -7,10 +7,8 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 4. June 2024, 10:21
-date modified: Wednesday, 12. June 2024, 14:26
+date modified: Friday, 14. June 2024, 12:26
 ---
-
-- [ ] Pumping Lemma für kontextfreie Sprachen verstehen
 
 > [!bug] Es gibt auf dieser Seite teilweise Fehler mit dem rendern von den LaTeX ausdrücken aufgrund der `$` und `#` ich bitte um Entschuldigung während ich nach einer Lösung suche
 > Falls dieses Problem noch länger besteht, bitte einen Kommentar schreiben um mich daran zu erinnen
@@ -49,6 +47,7 @@ Nicht regulär L1 wegen der #
 ### $L_1$
 
 [[Pumping-Lemma]]
+(Myhill-Nerode auch möglich)
 
 #### Gegeben:
 
@@ -250,6 +249,7 @@ stateDiagram-v2
 ```
 
 $\Longrightarrow$ Zudem auch regulär. Deswegen ist $L_0$ deterministisch kontextfrei.
+(Man hätte auch einfach sagen, dass aus Teilaufgabe _a)_ folgt, dass es deterministisch kontextfrei ist)
 
 ### $L_{1}$
 
@@ -371,6 +371,8 @@ Um zu beweisen, dass $L_0$ kontextfrei ist, konstruieren wir eine kontextfreie G
    - Die Regel $S \rightarrow aB \mid aC \mid aa$ erlaubt es, entweder mit einem 'a' zu beginnen und dann entweder in den 'b'- oder 'c'-Teil der Sprache zu wechseln, oder direkt mit 'aa' zu enden.
    - Die Regel $B \rightarrow bB \mid bC$ erzeugt die Folge von 'b's nach dem anfänglichen 'a', wobei sie entweder zu weiteren 'b's oder zu 'c's führt.
    - Die Regel $C \rightarrow cC \mid a$ erzeugt die Folge von 'c's gefolgt von einem abschließenden 'a'.
+
+(Man hätte auch einfach sagen, dass aus Teilaufgabe _a) und b)_ folgt, dass es kontextfrei ist)
 
 ### $L_1$
 
