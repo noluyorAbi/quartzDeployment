@@ -6,7 +6,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 3. June 2024, 20:26
-date modified: Monday, 10. June 2024, 20:24
+date modified: Wednesday, 19. June 2024, 14:02
 ---
 
 # https://jwt.io/libraries

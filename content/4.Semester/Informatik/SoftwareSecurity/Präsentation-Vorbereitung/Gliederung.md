@@ -7,7 +7,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 10. June 2024, 21:35
-date modified: Monday, 10. June 2024, 22:47
+date modified: Wednesday, 19. June 2024, 15:56
 ---
 
 Um eine 30-minütige Präsentation für ein Bachelor-Seminar im Bereich Software Security zu gestalten, sollten wir sicherstellen, dass die wichtigsten Aspekte von JWTs (JSON Web Tokens) abgedeckt werden, ohne zu sehr ins Detail zu gehen. Hier ist eine angepasste Gliederung mit geschätzten Zeitangaben für jede Sektion:
@@ -140,11 +140,11 @@ Diese Struktur stellt sicher, dass du die wichtigsten Aspekte von JWTs abdeckst 
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
