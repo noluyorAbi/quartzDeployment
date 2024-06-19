@@ -8,7 +8,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Thursday, 13. June 2024, 16:42
-date modified: Thursday, 13. June 2024, 22:03
+date modified: Wednesday, 19. June 2024, 20:42
 ---
 
 # 1. Verzögerungszeiten (H)
@@ -109,16 +109,16 @@ $$
 ### Ergebnis
 
 $$
-d_{nodal}^{Kupfer} = 2\mu s + 0 + 120\mu s + 100 \mu s =222\mu s
+d_{nodal}^{Kupfer} = 2\mu s + 0 + 120\mu s + 0,01 \mu s =122,01\mu s
 $$
 
 $$
-d_{nodal}^{Funk} = 2\mu s + 0 + 200\mu s + 33,33 \mu s = 235,33\mu s
+d_{nodal}^{Funk} = 2\mu s + 0 + 200\mu s + 0,033 \mu s = 202,033\mu s
 $$
 
 $$
 \begin{aligned}
-d_{nodal}^{Kupfer} + d_{nodal}^{Funk} &= 222 \mu s + 235,33 \mu s\\ &= 457,33 \mu s
+d_{nodal}^{Kupfer} + d_{nodal}^{Funk} &= 122,01 \mu s + 202,033 \mu s\\ &= 324,013 \mu s
 \end{aligned}
 $$
 
@@ -129,8 +129,29 @@ $$
 
 ## (a) Ist eine Leitungsvermittlung oder die Paketvermittlung für dieses Szenario besser geeignet? Warum?
 
-- periodisches Abesenden von Datenpaketen mit $N$ Bit alle $k$ Zeiteinheiten
-- $\Longrightarrow$ Für dieses Szenario ist die Paketvermittlung besser geeignet, da bei dieser Pakete hintereinander geschickt werden können ohne auf eine Bestätigung warten zu müssen
+> [!success] Richtige Lösung
+>
+> - Leitungsvermittlung, da konstante Übertragungsrate
+> - $\Longrightarrow$ Ressourcenreservierung sinnvoll
+
+> [!fail] Falsche Lösung
+>
+> - periodisches Abesenden von Datenpaketen mit $N$ Bit alle $k$ Zeiteinheiten
+> - $\Longrightarrow$ Für dieses Szenario ist die Paketvermittlung besser geeignet, da bei dieser Pakete hintereinander geschickt werden können ohne auf eine Bestätigung warten zu müssen
+
+> [!tip] Erklärung
+>
+> # Richtige Lösung
+>
+> ## Leitungsvermittlung:
+>
+> - **Warum geeignet:** Da die Applikation eine konstante Datenübertragungsrate hat und dies über eine längere Zeit beibehalten wird, ist eine Leitungsvermittlung besser geeignet. Dies liegt daran, dass durch die Reservierung der Ressourcen eine kontinuierliche und stabile Übertragungsrate gewährleistet werden kann.
+> - **Ressourcenreservierung:** In der Leitungsvermittlung werden die benötigten Ressourcen für die gesamte Dauer der Übertragung reserviert, was eine konstante Datenrate ermöglicht.
+>
+> ## Falsche Lösung:
+>
+> - **Paketvermittlung:** Obwohl Paketvermittlung in vielen modernen Netzwerken weit verbreitet ist, ist sie für dieses spezifische Szenario weniger geeignet. Dies liegt daran, dass die Übertragungsrate schwanken kann und die Pakete möglicherweise unterschiedliche Wege nehmen, was zu variabler Latenz und möglichen Verzögerungen führt.
+> - **Periodisches Senden von Datenpaketen:** Bei periodischem Senden von Datenpaketen kann es zu Verzögerungen und Unterbrechungen kommen, besonders wenn das Netzwerk stark ausgelastet ist.
 
 ## (b) Betrachten Sie ein paketvermittelndes Netz dessen Endsysteme ausschließlich aus Applikationen wie oben beschrieben bestehen. Die Kapazität, d.h. die maximale Datenrate $R$, jedes einzelnen Links sei größer als die Summe der Datenraten aller Applikationen. In welchem Fall können Paketverluste auftauchen?
 
