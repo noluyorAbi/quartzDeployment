@@ -8,7 +8,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Thursday, 13. June 2024, 16:42
-date modified: Wednesday, 19. June 2024, 20:42
+date modified: Wednesday, 19. June 2024, 21:11
 ---
 
 # 1. Verzögerungszeiten (H)

@@ -7,17 +7,32 @@ tags:
 fach: "[[BaySta]]"
 Thema:
 date created: Thursday, 25. April 2024, 15:43
-date modified: Thursday, 2. May 2024, 15:10
+date modified: Wednesday, 19. June 2024, 21:19
 ---
 
-# Verzeichnis
+# BaySta-Erklärungen Verzeichnis
+
+Willkommen zu den BaySta-Erklärungen. Hier findest du eine Liste aller Themen mit den zugehörigen Erklärungen. Klicke auf einen Themennamen, um direkt zu den Erklärungen zu gelangen.
+
+## Themen
+
+- ## [[BaySta-Verzeichnis-Erklärungen]]
+
+- ## [[Erlang-Verteilung]]
+
+- ## [[Erstellung der Posteriori-Verteilung im Bayes'schen Kontext]]
 
 - ## [[Formelsammlung]]
-- ## [[Priori und Posteriori Wahrscheinlichkeit]]
+
+- ## [[Konjugierte Verteilung]]
+
 - ## [[Posteriori-Erwartungswert]]
+
+- ## [[Priori und Posteriori Wahrscheinlichkeit]]
+
+- ## [[Theoretischen Posteriori-Erwartungswert]]
+
 - ## [[Unterschied zwischen Stetigkeit und Diskretheit]]
-- ## [[Erlang-Verteilung]]
--
 
 <!-- DISQUS SCRIPT COMMENT START -->
 

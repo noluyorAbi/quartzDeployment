@@ -7,17 +7,34 @@ tags:
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 date created: Friday, 19. April 2024, 09:30
-date modified: Friday, 10. May 2024, 00:15
+date modified: Wednesday, 19. June 2024, 21:17
 ---
 
-# Verzeichnis
+# RNVS-Erklärungen Verzeichnis
 
-- [[BGP]]
-- [[TCP]]
-- [[Netzunabhängiger Transport von Nachrichten zwischen Endsystemen]]
-- [[Unterschiede zwischen Rechnernetz und Verteiltem System]]
-- [[Protokolle]]
-- [[Flusssteuerung und Staukontrolle]]
+Willkommen zu den RNVS-Erklärungen. Hier findest du eine Liste aller Themen mit den zugehörigen Erklärungen. Klicke auf einen Themennamen, um direkt zu den Erklärungen zu gelangen.
+
+## Themen
+
+- ## [[BGP]]
+
+- ## [[Dienstgüte]]
+
+- ## [[Flusssteuerung und Staukontrolle]]
+
+- ## [[Internet-Modell vs. ISO-OSI Referenzmodell]]
+
+- ## [[Leitungsvermittlung vs Paketvermittlung]]
+
+- ## [[Netzunabhängiger Transport von Nachrichten zwischen Endsystemen]]
+
+- ## [[Protokolle]]
+
+- ## [[Schichtenarchitektur]]
+
+- ## [[TCP]]
+
+- ## [[Unterschiede zwischen Rechnernetz und Verteiltem System]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 

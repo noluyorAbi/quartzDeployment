@@ -7,27 +7,54 @@ tags:
   - informatik
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 date created: Thursday, 18. April 2024, 16:21
-date modified: Thursday, 6. June 2024, 21:05
+date modified: Wednesday, 19. June 2024, 21:18
 ---
 
-# Erklärungen
+# FSK-Erklärungen Verzeichnis
 
-- [[Beweisen]]
-- [[Endliche Geometrische Reihe]]
-- [[Grammatiken]]
-- [[Grundlegende Operationen auf formalen Sprachen]]
-- [[Induktion]]
-- [[Induktiver Beweis für FSK1-1d]]
-- [[Kleene-Stern]]
-- [[Minimierung von DFAs]]
-- [[Potenzmengenkonstruktion]]
-- [[Pumping-Lemma]]
-- [[Satz des Euklids]]
-- [[Sätze]]
-- [[Sprachen]]
-- [[Kellerautomaten]]
-- [[CYK-Algorithmus]]
-- [[Deterministisch Kontextfreie Sprachen und Kontextfreie Sprachen]]
+Willkommen zu den FSK-Erklärungen. Hier findest du eine Liste aller Themen mit den zugehörigen Erklärungen. Klicke auf einen Themennamen, um direkt zu den Erklärungen zu gelangen.
+
+## Themen
+
+- ## [[Beweisen]]
+
+- ## [[CYK-Algorithmus]]
+
+- ## [[Deterministisch Kontextfreie Sprachen und Kontextfreie Sprachen]]
+
+- ## [[Endliche Geometrische Reihe]]
+
+- ## [[FSK-Verzeichnis-Erklärungen]]
+
+- ## [[Grammatiken]]
+
+- ## [[Grundlegende Operationen auf formalen Sprachen]]
+
+- ## [[Homomorphismen]]
+
+- ## [[Induktion]]
+
+- ## [[Induktiver Beweis für FSK1-1d]]
+
+- ## [[Kellerautomaten]]
+
+- ## [[Kleene-Stern]]
+
+- ## [[Minimierung von DFAs]]
+
+- ## [[Potenzmengenkonstruktion]]
+
+- ## [[Pumping-Lemma]]
+
+- ## [[Reguläre Ausdrücke]]
+
+- ## [[Satz des Euklids]]
+
+- ## [[Sätze]]
+
+- ## [[Sprachen]]
+
+- ## [[Wortproblem]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 

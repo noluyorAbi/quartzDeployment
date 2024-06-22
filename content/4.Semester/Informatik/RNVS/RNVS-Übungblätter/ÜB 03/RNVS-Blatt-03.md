@@ -131,7 +131,7 @@ Zum Beispiel die _Transportschicht_ und _Sicherungsschicht_ sind beide für die 
 
 ## (d) Worin liegt der Unterschied zwischen der OSI- und der Internet-Anwendungsschicht? Welche Auswirkungen hat dies auf Applikationen, die sich an dem Internet Modell orientieren?
 
-### [[Internet-Modell vs.  ISO-OSI Referenzmodell]]
+### [[Internet-Modell vs. ISO-OSI Referenzmodell]]
 
 Das OSI Modell unterteilt die Anwendung von dem IP-Protokoll in 3 Schichten (_Anwendung,Darstellung,Kommunikationssteuerung_)
 

@@ -7,7 +7,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema:
 Benötigte Zeit:
 date created: Thursday, 9. May 2024, 14:07
-date modified: Wednesday, 19. June 2024, 17:24
+date modified: Friday, 21. June 2024, 22:50
 ---
 
 # [[Präsentation]]
@@ -102,6 +102,7 @@ Explain JSON Web Tokens in detail, including the cryptographic concepts like mes
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/SuDN35-aefY" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><br>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/GIq3naOLrTg" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><br>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/d-X9CmpnJdE" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><br>
+https://portswigger.net/web-security/jwt
 
 ## Implement JWT
 
