@@ -3,7 +3,7 @@ Thema:
 tags:
 fach:
 date created: Tuesday, 16. April 2024, 11:22
-date modified: Saturday, 22. June 2024, 17:12
+date modified: Sunday, 23. June 2024, 12:33
 ---
 
 # Übungsblatt
@@ -20,7 +20,6 @@ date modified: Saturday, 22. June 2024, 17:12
 - [[RNVS-Blatt-09]]
 - [[RNVS-Blatt-10]]
 - [[RNVS-Blatt-11]]
--
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
