@@ -164,5 +164,6 @@ console.log(asciiArt2);
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://rawgit.com/WeiChiaChang/Easter-egg/master/easter-eggs-collection.js"></script>
 
 <!-- DISQUS SCRIPT COMMENT END -->
