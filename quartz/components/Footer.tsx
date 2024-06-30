@@ -13,7 +13,7 @@ export default ((opts?: Options) => {
   const Footer: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
     const year = new Date().getFullYear()
     const links = opts?.links ?? []
-    const paypalMeLink = opts?.paypalMeLink ?? "https://paypal.me/YourPaypalMeLink"
+    const paypalMeLink = opts?.paypalMeLink ?? "https://paypal.me/myuninotes"
 
     return (
       <footer className={`${displayClass ?? ""} ${style.footer}`}>

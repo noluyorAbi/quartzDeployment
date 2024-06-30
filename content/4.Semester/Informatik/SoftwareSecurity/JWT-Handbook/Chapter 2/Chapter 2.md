@@ -7,7 +7,7 @@ fach: "[[Bachelorseminar-Software Security]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 3. June 2024, 23:06
-date modified: Monday, 10. June 2024, 16:08
+date modified: Friday, 28. June 2024, 11:23
 ---
 
 # 2 Practical Applications
@@ -48,7 +48,7 @@ date modified: Monday, 10. June 2024, 16:08
 ![[Pasted image 20240603235305.png]]
 [Whiteboard](https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtL2FjMjM0NGY4NWQxYTQxOWI4ZmUwOWQyNWE2MTliYjFjX0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRF82ZDY1YjA2YS1jOGUyLTQxNjQtYTdiNS1kNWY5MDY4ODZkNWQ=)-Link
 
-## 2.1.1.2 Cross-Site Request Forgery (CSRF)
+## 2.1.1.2 Cross-Site Request Forgery (CSRFCSRF)
 
 - Cross-site request forgery (CSRF) attacks attempt to perform requests against sites where the user is logged in by tricking the user’s browser into sending a request from a different site.
 - To accomplish this, a specially crafted site or item must contain the URL to the target.
