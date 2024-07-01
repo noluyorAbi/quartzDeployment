@@ -39,3 +39,51 @@ date modified: Monday, 24. June 2024, 16:05
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 <!-- DISQUS SCRIPT COMMENT END -->
+
+<!-- Sliding Banner START -->
+
+<div id="slidingBanner" class="banner">
+  <p class="banner-text">
+    Explore MyUniNotes for comprehensive study guides and academic resources tailored for Computer Science students!
+  </p>
+  <svg id="closeBanner" class="arrows">
+    <path d="M0 20 L20 42 L40 20"></path>
+    <path d="M0 40 L20 62 L40 40"></path>
+  </svg>
+</div>
+
+<script>
+  // JavaScript to slide down the banner on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Generate a random number between 1 and 5
+    const randomNumber = Math.floor(Math.random() * 5) + 1;
+    console.log(randomNumber)
+    if (randomNumber === 1) {
+      setTimeout(function() {
+        const banner = document.getElementById('slidingBanner');
+        if (banner) {
+          banner.classList.add('show');
+        }
+      }, 1000); // Adjust the delay as needed
+
+      const closeBanner = document.getElementById('closeBanner');
+      if (closeBanner) {
+        closeBanner.addEventListener('click', function() {
+          const banner = document.getElementById('slidingBanner');
+          if (banner) {
+            banner.classList.remove('show');
+            banner.style.visibility = 'hidden';
+          }
+        });
+      }
+    } else {
+      // Remove the banner from the DOM if the random number is not 1
+      const banner = document.getElementById('slidingBanner');
+      if (banner) {
+        banner.remove();
+      }
+    }
+  });
+</script>
+
+<!-- Sliding Banner END -->
