@@ -300,3 +300,63 @@ html[saved-theme="dark"] #disqus_thread {
   padding: 25px;
   border-radius: 25px;
 }
+
+/* Sliding Banner Styles */
+.banner {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 189, 227, 0.545);
+  color: white;
+  text-align: center;
+  padding: 20px 0 120px; /* Increase padding to accommodate the text */
+  font-size: 18px;
+  transition: bottom 0.5s;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.banner-text {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px; /* Position arrow below the text */
+  cursor: pointer;
+}
+
+.arrows path {
+  stroke: #F2E6C6;
+  fill: transparent;
+  stroke-width: 1.5px;
+}
+
+.banner.show {
+  bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .banner {
+    font-size: 16px;
+    padding: 20px 0 70px; /* Increase padding to accommodate the text */
+  }
+
+  .banner-text {
+    padding: 0 10px;
+  }
+
+  .arrows {
+    width: 50px;
+    height: 62px;
+    bottom: 20px; /* Position arrow below the text */
+    margin-top: 9%;
+  }
+}
