@@ -78,7 +78,7 @@ dass das im Grunde in den Platz der Eingabe geht. Also man hat die Länge W, man
   // JavaScript to display the modal on page load
   document.addEventListener('DOMContentLoaded', function() {
     // Generate a random number between 1 and 1
-    const randomNumber = Math.floor(Math.random() * 4) + 1;
+    const randomNumber = Math.floor(Math.random() * 1) + 1; // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
     console.log(randomNumber)
     if (randomNumber === 1) {
       setTimeout(function() {
