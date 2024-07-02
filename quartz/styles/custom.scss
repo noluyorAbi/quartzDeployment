@@ -289,7 +289,7 @@ html[saved-theme="dark"] .text {
 
 /* Disqus DARK*/
 #disqus_thread {
-  background-color: #faf8f8;
+  background-color: #005d73;
   padding: 25px;
   border-radius: 25px;
 }
@@ -301,62 +301,92 @@ html[saved-theme="dark"] #disqus_thread {
   border-radius: 25px;
 }
 
-/* Sliding Banner Styles */
-.banner {
-  position: fixed;
-  bottom: -100px;
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
   left: 0;
-  width: 100%;
-  background: rgba(0, 189, 227, 0.545);
-  color: white;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  backdrop-filter: blur(5px); /* Add blur to the background */
+  text-wrap: balance;
+  opacity: 0; /* Initially set to invisible */
+  animation: fadeIn 0.5s forwards; /* Add fade-in animation */
+}
+
+.modal-content {
+  background: rgba(21, 53, 79, 0.725); /* Semi-transparent background color */
+  margin: 10% auto; /* 10% from the top and centered */
+  padding: 20px;
+  padding-bottom: 5%;
+  border: none; /* Remove border */
+  width: 60%; /* Reduced width for a more modern look */
   text-align: center;
-  padding: 20px 0 120px; /* Increase padding to accommodate the text */
-  font-size: 18px;
-  transition: bottom 0.5s;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  backdrop-filter: blur(80px); /* Blur effect */
 }
 
-.banner-text {
-  margin: 0;
-  padding: 0 20px;
-}
-
-.arrows {
-  width: 60px;
-  height: 72px;
+.close {
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 20px; /* Position arrow below the text */
+  right: 15px;
+  top: 10px;
   cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition */
 }
 
-.arrows path {
-  stroke: #f2e6c6;
-  fill: transparent;
-  stroke-width: 1.5px;
+.close:hover,
+.close:focus {
+  color: #f2e6c6; /* Color change on hover */
+  text-decoration: none;
 }
 
-.banner.show {
-  bottom: 0;
+.modal-text {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+  margin-top: 5%;
 }
 
 @media (max-width: 600px) {
-  .banner {
-    font-size: 16px;
-    padding: 20px 0 70px; /* Increase padding to accommodate the text */
+  .modal-content {
+    width: 80%; /* Adjust width for smaller screens */
   }
+}
 
-  .banner-text {
-    padding: 0 10px;
-  }
+.modal-highlight {
+  animation: pulse 1s infinite;
+  background-color: rgba(0, 110, 227, 0.567);
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
-  .arrows {
-    width: 50px;
-    height: 62px;
-    bottom: 20px; /* Position arrow below the text */
-    margin-top: 9%;
+.modal-dono-link {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add a class to trigger the modal display and animation */
+.modal.show {
+  display: block;
+  opacity: 1; /* Ensure it's fully visible */
+  animation: fadeIn 0.5s forwards; /* Apply fade-in animation */
 }
