@@ -15,7 +15,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "www.myuninotes.com", // davor quartz.jzhao.xyz
+    baseUrl: "www.myuninotes.com", 
     ignorePatterns: [
       "private",
       "templates",
@@ -24,6 +24,9 @@ const config: QuartzConfig = {
       "public/4.Semester/Informatik/SoftwareSecurity/JWT-Handbook/**",
       "**/*ABGABE*",
       "**/*TRANSKRIPT*",
+      "**/Statistik/**",
+      "**/SoftwareSecurity/**",
+
     ],
     defaultDateType: "created",
     theme: {
