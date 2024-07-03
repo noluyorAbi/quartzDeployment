@@ -7,7 +7,7 @@ fach: "[[BaySta]]"
 Thema:
   - "[[Priori und Posteriori Wahrscheinlichkeit]]"
 date created: Wednesday, 24. April 2024, 21:17
-date modified: Monday, 24. June 2024, 16:05
+date modified: Wednesday, 3. July 2024, 12:37
 ---
 
 # Kurze Wiederholung der Theorie der Wahrscheinlichkeit

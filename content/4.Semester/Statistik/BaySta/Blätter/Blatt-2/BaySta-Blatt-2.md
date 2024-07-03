@@ -8,7 +8,7 @@ fach: "[[BaySta]]"
 Thema:
 Benötigte Zeit: ∞
 date created: Friday, 3. May 2024, 18:13
-date modified: Monday, 6. May 2024, 17:08
+date modified: Wednesday, 3. July 2024, 12:25
 ---
 
 # Aufgabe 1

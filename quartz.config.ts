@@ -15,7 +15,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "www.myuninotes.com", 
+    baseUrl: "www.myuninotes.com",
     ignorePatterns: [
       "private",
       "templates",
@@ -26,7 +26,6 @@ const config: QuartzConfig = {
       "**/*TRANSKRIPT*",
       "**/Statistik/**",
       "**/SoftwareSecurity/**",
-
     ],
     defaultDateType: "created",
     theme: {

@@ -6,7 +6,7 @@ tags:
 fach:
 Thema:
 date created: Monday, 22. April 2024, 17:51
-date modified: Tuesday, 11. June 2024, 21:37
+date modified: Wednesday, 3. July 2024, 12:38
 ---
 
 # https://slds-lmu.github.io/i2ml/

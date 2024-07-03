@@ -3,7 +3,7 @@ Thema:
 tags:
 fach:
 date created: Saturday, 30. March 2024, 01:12
-date modified: Saturday, 1. June 2024, 03:31
+date modified: Wednesday, 3. July 2024, 13:36
 ---
 
 "The value of the cloak is known in the rain." This proverb speaks volumes about the true test of worth and utility, which often comes only in times of need. It's a metaphorical statement emphasizing that the real value of something is realized not when conditions are favorable, but rather when they are adverse. This concept is universal, transcending cultures and contexts, and can be applied to various aspects of life, including education and personal growth. In the digital era, where information is abundant and resources are just a click away, the true value of educational content and tools becomes evident in moments of genuine need.
@@ -39,11 +39,11 @@ Go back to the [[index|Homepage]]
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
