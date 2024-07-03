@@ -7,21 +7,16 @@ fach:
 title: Studying made easy.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Wednesday, 3. July 2024, 12:37
+date modified: Wednesday, 3. July 2024, 14:05
 ---
-
-<!-- Scroll Indicator-->
-<div class="container">
-<div class="chevron"></div>
-<div class="chevron"></div>
-<div class="chevron"></div>
-<span class="text">Scroll down</span>
-</div>
-<!-- Scroll Indicator END -->
 
 # ℹ️ About This Site
 
-This website serves as a centralized archive, offering you structured access to a wealth of study materials that I’ve gathered and written in the language of the module (mostly German). It’s designed to provide a clear, organized, and comprehensive resource for anyone interested in the intricacies of computer science, as seen through my personal academic lens. If necessary, the website can be translated into any required language using a browser’s built-in translator.
+This website serves as a centralized archive, offering you structured access to a wealth of study materials that I’ve gathered and written in the language of the module (mostly German). It’s designed to provide a clear, organized, and comprehensive resource for anyone interested in the intricacies of computer science, as seen through my personal academic lens. **All of these are my personal university notes I took during the semester**. If necessary, the website can be translated into any required language using a browser’s built-in translator.
+
+<p>If this site has been helpful, consider supporting me with a donation:
+<a href="https://www.paypal.com/paypalme/myuninotes4u">Donate via PayPal </a>
+</p>
 
 # 💬 Comments
 
@@ -33,22 +28,20 @@ This website serves as a centralized archive, offering you structured access to 
   - Use a guest name and a gibberish email (e.g., `abc@def.com`) for posting.
 - Image upload function available for sharing complex equations, diagrams, and visual aids.
 
-(<a href="#guestbook">Leave a comment on the Guestbook!</a>)
+<a href="#guestbook">Leave a comment on the Guestbook!</a>
 
 # 📚 Modules
 
-| Bereich        | Kurse                                                   | Status |
-| -------------- | ------------------------------------------------------- | ------ |
-| **Informatik** | [[Datenbanksysteme (DBS)]]                              | done   |
-|                | [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/) | done   |
-|                | [[Formale Sprachen und Komplexität (FSK)]]              | active |
-|                | [[Rechnernetze und Verteilte Systeme (RNVS)]]           | active |
-|                | [[Bachelorseminar-Software Security]]                   | active |
-| **Statistik**  | [[LiMo]]                                                |        |
-|                | [[BaySta]]                                              | active |
-|                | [[I2ML]]                                                |        |
-| **Semester**   | [[3.Semester]]                                          | done   |
-|                | [[4.Semester]]                                          | active |
+| Bereich        | Kurse                                                   | Status  |
+| -------------- | ------------------------------------------------------- | ------- |
+| **Informatik** | [[Datenbanksysteme (DBS)]]                              | done    |
+|                | [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/) | done    |
+|                | [[Formale Sprachen und Komplexität (FSK)]]              | active  |
+|                | [[Rechnernetze und Verteilte Systeme (RNVS)]]           | active  |
+| **Statistik**  | [[LiMo]]                                                | unsure  |
+|                | [[BaySta]]                                              | planned |
+| **Semester**   | [[3.Semester]]                                          | done    |
+|                | [[4.Semester]]                                          | active  |
 
 # 🔄 Website Update Graph
 

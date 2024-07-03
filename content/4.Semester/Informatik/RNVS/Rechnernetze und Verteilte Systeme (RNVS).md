@@ -6,7 +6,7 @@ tags:
   - informatik
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 date created: Friday, 19. April 2024, 02:28
-date modified: Thursday, 13. June 2024, 16:41
+date modified: Wednesday, 3. July 2024, 13:58
 ---
 
 # Übersicht der Studieninhalte

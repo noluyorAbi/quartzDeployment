@@ -4,7 +4,7 @@ tags:
   - Klausuraufgabe
 fach: "[[Datenbanksysteme (DBS)]]"
 date created: Tuesday, 9. April 2024, 14:00
-date modified: Wednesday, 10. April 2024, 22:47
+date modified: Wednesday, 3. July 2024, 13:59
 ---
 
 # Aufgabe 1: **Gemischte Fragen**
@@ -97,13 +97,18 @@ FROM R NATURAL JOIN S;
 > #### Berechnung:
 >
 > Im schlimmsten Fall stimmt jedes Tuple in $R$ mit jedem Tuple in $S$ bezüglich der Werte in den Spalten $B$ und $C$ überein. Daher ist die Anzahl der Ergebnistupel das Product der Anzahl der Tuple in beiden Relationen:
-> $$50 \text{ Tupel in } R \times 10 \text{ Tupel in } S = 500$$
+>
+> $$
+> 50 \text{ Tupel in } R \times 10 \text{ Tupel in } S = 500
+> $$
+
+$$
 
 - Anzahl der Attribute in der Ergebnisrelation von Anfrage $A_2$
 
-> [!success] Lösung
->
-> - **Ergebnis**: 4 Attribute.
+>[!success] Lösung
+>- **Ergebnis**: 4 Attribute.
+
 
 ## (c) Gegeben seien die Transaktionen $T_1$, $T_2$ und $T_3$, wobei Transaktion $T_1$ aus 5 Einzelaktionen, Transaktion $T_2$ aus 7 Einzelaktionen und Transaktion $T_3$ aus 8 Einzelaktionen besteht. Wie viele mögliche verschiedene serielle Schedules gibt es?
 
@@ -111,9 +116,10 @@ FROM R NATURAL JOIN S;
 - $T_2$ hat 7 Einzelaktionen
 - $T_3$ hat 8 Einzelaktionen
 
-> [!success] Lösung
+>[!success] Lösung
 >
-> $$
+$$
+
 > serielle \ Schedules \ Anzahl: 3! = 6
 > $$
 
@@ -258,7 +264,7 @@ FROM R NATURAL JOIN S;
 >   - `FROM Einsätze E JOIN nimmt-teil NT ON E.EName = NT.EName`: Jeder Einsatz wird mit den Details seiner Teilnahme verknüpft.
 >   - `JOIN Decknamen D ON NT.Deckname = D.Deckname`: Die Teilnahmeinformationen werden über Decknamen mit den Agenten verbunden.
 > - **Filtern von Agenten**: Wähle nur die Agenten aus, die an mehr also zwei verschiedenen Einsätzen beteiligt waren.
->   - `WHERE D.ANr IN (...)`: Es wird eine Unterabfrage verwendet, die die Agenten filtert.
+>   - `WHERE D.ANr IN (…)`: Es wird eine Unterabfrage verwendet, die die Agenten filtert.
 >   - `SELECT D2.ANr FROM Decknamen D2 JOIN nimmt-teil NT2 ON D2.Deckname = NT2.Deckname`: Diese Unterabfrage sammelt alle Agenten und deren Einsätze.
 >   - `GROUP BY D2.ANr`: Gruppierung der Agenten, um die Einsätze je Agent zu zählen.
 >   - `HAVING COUNT(DISTINCT NT2.EName) > 2`: Agenten, die an mehr also zwei unterschiedlichen Einsätzen teilgenommen haben, werden ausgewählt.
@@ -722,11 +728,11 @@ $nimmt-teil (\underline{EName}, \underline{Deckname},Bezahlung)$
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */

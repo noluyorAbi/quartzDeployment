@@ -3,7 +3,7 @@ Thema:
 tags:
 fach:
 date created: Tuesday, 16. April 2024, 11:22
-date modified: Sunday, 23. June 2024, 12:33
+date modified: Wednesday, 3. July 2024, 13:58
 ---
 
 # Übungsblatt
