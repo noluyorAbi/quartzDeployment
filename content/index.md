@@ -7,7 +7,7 @@ fach:
 title: Studying made easier.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Wednesday, 3. July 2024, 14:05
+date modified: Wednesday, 3. July 2024, 14:39
 ---
 
 # ℹ️ About This Site
@@ -22,7 +22,7 @@ This website serves as a centralized archive, offering you structured access to 
 
 - Each chapter ends with a comment section for open, [[Comment Policy|respectful discussions]].
 - Readers are encouraged to share thoughts, feedback, and questions to enhance the content and community.
-- If you notice any errors, whether code-wise or content-wise, please comment to inform me.
+- **If you notice any errors, whether code-wise or content-wise, please comment to inform me**.
 - **Guest commenting:**
   - Click `Name` next to the Google icon.
   - Click `I'd rather post as a guest` to comment without an account.

@@ -1,6 +1,6 @@
 ---
 date created: Saturday, 1. June 2024, 03:57
-date modified: Tuesday, 11. June 2024, 21:37
+date modified: Wednesday, 3. July 2024, 14:39
 ---
 
 # Comment Policy for MyUniNotes
