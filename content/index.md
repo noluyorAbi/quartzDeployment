@@ -4,7 +4,7 @@ tags:
   - informatik
   - statistik
 fach:
-title: Studying made easy.
+title: Studying made easier.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
 date modified: Wednesday, 3. July 2024, 14:05
