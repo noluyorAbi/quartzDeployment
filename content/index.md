@@ -22,6 +22,7 @@ This website serves as a centralized archive, offering you structured access to 
 
 - Each chapter ends with a comment section for open, [[Comment Policy|respectful discussions]].
 - Readers are encouraged to share thoughts, feedback, and questions to enhance the content and community.
+- If you notice any errors, whether code-wise or content-wise, please comment to inform me.
 - **Guest commenting:**
   - Click `Name` next to the Google icon.
   - Click `I'd rather post as a guest` to comment without an account.
