@@ -19,6 +19,12 @@ date modified: Wednesday, 3. July 2024, 13:58
 - [[RNVS-6VL-24-05-2024]]
 - [[RNVS-7VL-31-05-2024]]
 - [[RNVS-8VL-07-06-2024]]
+- [[RNVS-9VL-14-06-2024]] (not available yet)
+- [[RNVS-10VL-21-06-2024]] (not available yet)
+- [[RNVS-11VL-28-06-2024]] (not available yet)
+- [[RNVS-12VL-05-07-2024]]
+- [[RNVS-13VL-12-07-2024]] (not available yet)
+- [[RNVS-14VL-19-07-2024]] (not available yet)
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
