@@ -388,6 +388,7 @@ Durch diese Aufteilung wird sichergestellt, dass in jeder Relation alle nicht-tr
 
 
 
+
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
 <script>
@@ -415,4 +416,52 @@ Durch diese Aufteilung wird sichergestellt, dass in jeder Relation alle nicht-tr
 
 
 <!-- DISQUS SCRIPT COMMENT END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $$
