@@ -3,12 +3,11 @@ tags:
   - 4semester
   - informatik
   - RNVS
-  - Übungsblatt
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
-Thema: "[[Unterschiede zwischen DNS-Servertypen]]"
+Thema:
 Benötigte Zeit:
-date created: Sunday, 14. July 2024, 15:26
-date modified: Monday, 15. July 2024, 00:03
+date created: Sunday, 14. July 2024, 17:32
+date modified: Monday, 15. July 2024, 00:04
 ---
 
 # Interpretation einer DNS-Antwort (H)
@@ -221,49 +220,6 @@ Diese Server sind autoritativ für die Domäne `nm.ifi.lmu.de` und können somit
 
 ### iii. Wurde die gesuchte IP-Adresse von einem autoritativen Server geliefert?
 
-> [!summary]- Overview: Unterschiede zwischen DNS-Servertypen
->
-> #### 🌐 [[Unterschiede zwischen DNS-Servertypen]]
->
-> **1. Root-Nameserver:**
->
-> - **Funktion**: Startpunkt für die DNS-Auflösung. Sie verweisen auf die zuständigen TLD-Nameserver.
-> - **Beispiel**: `d.root-servers.net`
->
-> **2. TLD-Nameserver (Top-Level-Domain-Nameserver):**
->
-> - **Funktion**: Verwalten die DNS-Einträge für eine bestimmte Top-Level-Domain (z.B. `.com`, `.de`). Sie verweisen auf die autoritativen Nameserver der Second-Level-Domänen.
-> - **Beispiel**: `C.DE.NET` für `.de`
->
-> **3. Autoritativer Nameserver:**
->
-> - **Funktion**: Enthält die DNS-Einträge für eine spezifische Domäne und gibt autoritative Antworten auf Anfragen zu diesen Einträgen.
-> - **Beispiel**: `acheron.ifi.lmu.de` für `nm.ifi.lmu.de`
->
-> **4. Rekursiver Nameserver (Resolver):**
->
-> - **Funktion**: Führt die DNS-Auflösung im Auftrag des anfragenden Clients durch, indem er andere Nameserver kontaktiert und die endgültige Antwort zurückgibt.
-> - **Beispiel**: Lokale DNS-Resolver, die von ISPs oder Unternehmen betrieben werden.
->
-> **5. Weiterleitungs-Nameserver:**
->
-> - **Funktion**: Leitet DNS-Anfragen an einen anderen DNS-Server weiter, anstatt die Auflösung selbst durchzuführen.
-> - **Beispiel**: Ein lokaler DNS-Server, der Anfragen an einen externen rekursiven Nameserver weiterleitet.
->
-> **6. Caching-Nameserver:**
->
-> - **Funktion**: Speichert Antworten auf DNS-Anfragen zwischen, um die Auflösung für zukünftige Anfragen derselben Domäne zu beschleunigen.
-> - **Beispiel**: DNS-Cache auf einem Router oder einem lokalen Server.
->
-> **Zusammenfassung der Unterschiede:**
->
-> - **Root-Nameserver**: Startpunkt der DNS-Auflösung, verweist auf TLD-Nameserver.
-> - **TLD-Nameserver**: Verwalten TLDs, verweisen auf autoritative Nameserver.
-> - **Autoritativer Nameserver**: Enthält und liefert die endgültigen DNS-Einträge für eine Domäne.
-> - **Rekursiver Nameserver**: Führt die vollständige DNS-Auflösung für Clients durch.
-> - **Weiterleitungs-Nameserver**: Leitet Anfragen an andere Nameserver weiter.
-> - **Caching-Nameserver**: Speichert Antworten zwischen, um die Auflösung zu beschleunigen.
-
 Ja, die gesuchte IP-Adresse wurde von einem autoritativen Server geliefert.
 
 > [!tip]- Erklärung
@@ -305,26 +261,6 @@ Ja, die gesuchte IP-Adresse wurde von einem autoritativen Server geliefert.
 ## (f) Angenommen Sie haben als Administrator Zugriff auf den DNS-Cache der lokalen DNS-Server im LRZ. Gibt es für Sie damit eine Möglichkeit, die von Nutzern meist besuchten Web-Server im Internet ausfindig zu machen? Fassen Sie sich kurz.
 
 Ja, indem man die Einträge im DNS-Cache analysiert, kann man feststellen, welche Domains und IP-Adressen am häufigsten aufgelöst werden, was auf die meistbesuchten Web-Server hinweist.
-
-> [!tip]- Detaillierte Erklärung
->
-> #### 📊 Detaillierte Erklärung:
->
-> 1. **Analyse des DNS-Caches**:
->    - **DNS-Cache**: Der DNS-Cache speichert die Ergebnisse vorheriger DNS-Abfragen, um die Auflösung zukünftiger Anfragen zu beschleunigen.
->    - **Einträge**: Jeder Eintrag im DNS-Cache enthält Informationen über eine zuvor durchgeführte DNS-Anfrage, einschließlich des angefragten Domain-Namens und der zugehörigen IP-Adresse.
-> 2. **Erfassung der Anfragen**:
->    - **Frequenzanalyse**: Durch das Zählen der Häufigkeit, mit der bestimmte Domains im DNS-Cache erscheinen, können Sie feststellen, welche Websites am häufigsten angefragt werden.
->    - **Zeitraum**: Es ist wichtig, die Anfragen über einen bestimmten Zeitraum zu analysieren, um ein genaues Bild des Nutzerverhaltens zu erhalten.
-> 3. **Statistische Auswertung**:
->    - **Datenaggregation**: Sammeln Sie die Daten aus dem DNS-Cache und aggregieren Sie die Anfragen nach Domain-Namen.
->    - **Rangliste**: Erstellen Sie eine Rangliste der Domains basierend auf der Anzahl der Anfragen, um die beliebtesten Websites zu identifizieren.
-> 4. **Identifikation der meist besuchten Web-Server**:
->    - **Top-Domains**: Die Domains mit den höchsten Anfragen in der Rangliste sind die meist besuchten Web-Server.
->    - **Nutzerverhalten**: Diese Analyse gibt Einblick in das allgemeine Nutzerverhalten und kann helfen, Trends und populäre Websites zu erkennen.
->
-> **Zusammenfassung**:
-> Durch die systematische Analyse und Auswertung der Einträge im DNS-Cache können Administratoren die meist besuchten Web-Server identifizieren. Dies erfolgt durch die Erfassung der Häufigkeit von DNS-Anfragen für verschiedene Domains, was eine Rangliste der populärsten Websites ermöglicht und wertvolle Einblicke in das Nutzerverhalten bietet.
 
 ---
 
@@ -475,43 +411,6 @@ Die Zeitspanne, nach der der Switch die Einträge aus der Forwarding-Tabelle lö
 
 Das Generatorpolynom $G = x^3 + 1$ wird durch 4 Bits repräsentiert (die Koeffizienten von $x^3, x^2, x^1$, und $x^0$), also `1001`.
 
-> [!tip] Erklärung
->
-> ### CRC und Generatorpolynome
->
-> #### Gegeben sei das Generatorpolynom $G = x^3 + 1$.
->
-> In der Codierungstheorie wird ein Generatorpolynom verwendet, um zyklische Codes zu erzeugen. Ein Generatorpolynom ist ein Polynom mit binären Koeffizienten, das in der Form $g(x) = g_0 + g_1x + g_2x^2 + … + g_nx^n$ dargestellt wird.
->
-> #### Darstellung durch Bits
->
-> Um das Generatorpolynom in Bits zu repräsentieren, betrachten wir die Koeffizienten der Potenzen von $x$. Das Polynom $G = x^3 + 1$ hat Koeffizienten für die Potenzen $x^3, x^2, x^1$ und $x^0$. Diese Koeffizienten sind binär und können entweder 0 oder 1 sein.
->
-> Das Polynom $G = x^3 + 1$ kann wie folgt geschrieben werden:
->
-> $$
-> G = 1 \cdot x^3 + 0 \cdot x^2 + 0 \cdot x^1 + 1 \cdot x^0
-> $$
->
-> Daher sind die Koeffizienten:
->
-> - $x^3$ hat den Koeffizienten 1
-> - $x^2$ hat den Koeffizienten 0
-> - $x^1$ hat den Koeffizienten 0
-> - $x^0$ hat den Koeffizienten 1
->
-> Diese Koeffizienten werden als Binärzahl geschrieben: 1001.
->
-> ### Antwort auf die Frage
->
-> #### i. Durch wie viele Bits wird $G$ bei CRC repräsentiert?
->
-> Das Generatorpolynom $G = x^3 + 1$ wird durch 4 Bits repräsentiert (die Koeffizienten von $x^3, x^2, x^1$ und $x^0$), also 1001.
->
-> #### Erklärung
->
-> Der Grad des Polynoms $x^3$ ist 3, und wir müssen auch den Koeffizienten für $x^0$ berücksichtigen, was zu insgesamt 4 Koeffizienten führt. Daher benötigen wir 4 Bits, um das Polynom vollständig zu repräsentieren.
-
 ### ii. Es soll die Nachricht 11 00 11 CRC-geschützt übertragen werden. Berechnen Sie die zu übertragende Bitfolge (inkl. CRC-Prüfsumme) unter Verwendung des Generatorpolynoms $G$.
 
 ### Berechnung der CRC-Prüfsumme für die Nachricht \(110011\)
@@ -549,90 +448,6 @@ Die zu übertragende Bitfolge (inkl. CRC-Prüfsumme) lautet:
 $$
 \boxed{110011011}
 $$
-
-> [!tip]- Alternative Erklärung
->
-> ### Berechnung der CRC-Prüfsumme für die Nachricht \(110011\)
->
-> Um die zu übertragende Bitfolge (inkl. CRC-Prüfsumme) für die Nachricht \(110011\) unter Verwendung des Generatorpolynoms \(G(x) = 1001\) zu berechnen, gehen wir Schritt für Schritt vor:
->
-> ### Schritt 1: Nachricht vorbereiten
->
-> Die Nachricht lautet \(110011\). Wir hängen drei Nullen (entspricht dem Grad des Generatorpolynoms minus 1) an die Nachricht an:
->
-> $$
-> \text{Nachricht: } 110011 \rightarrow 110011000
-> $$
->
-> ### Schritt 2: Polynomdivision durchführen
->
-> Wir führen die Polynomdivision des erweiterten Datenpolynoms durch das Generatorpolynom durch. Die Division wird im Binärmodus (ohne Überträge) durchgeführt.
->
-> **Initiale Nachricht:** \(110011000\)
->
-> **Generatorpolynom:** \(1001\)
->
-> 1. Dividiere den höchsten Grad des erweiterten Nachrichtenpolynoms durch den höchsten Grad des Generatorpolynoms:
->
-> $$
-> \begin{array}{r}
-> 110011000 \\
-> 1001 \\
-> \hline
-> 01010 \quad (\text{erste Division}) \\
-> 010110 \quad (\text{nächste Division}) \\
-> 1001 \\
-> \hline
-> 01110 \quad (\text{weitere Divisionen}) \\
-> 01110 \\
-> 1001 \\
-> \hline
-> 0011 \quad (\text{Ende der Divisionen})
-> \end{array}
-> $$
->
-> Der Rest der Division ist \(011\).
->
-> ### Schritt 3: CRC-Prüfsumme anhängen
->
-> Die Prüfsumme wird an das ursprüngliche Datenwort angehängt, um die zu übertragende Bitfolge zu erhalten:
->
-> $$
-> \text{Nachricht: } 110011 \\
-> \text{CRC-Prüfsumme: } 011 \\
-> \text{Zu übertragende Bitfolge: } 110011011
-> $$
->
-> ### Zusammenfassung der zu übertragenden Bitfolge
->
-> Die zu übertragende Bitfolge (inkl. CRC-Prüfsumme) lautet:
->
-> $$
-> \boxed{110011011}
-> $$
->
-> Hier ist die vollständige Berechnung zusammengefasst:
->
-> $$
-> \begin{align*}
-> \text{Nachricht: } & 110011 \\
-> \text{Angehängte Nullen: } & 110011000 \\
-> \text{Division durch } G(x) & : \\
-> 1100 \div 1001 & = 1 \\
-> 1100 \oplus 1001 & = 0101 \\
-> 1010 \div 1001 & = 1 \\
-> 1010 \oplus 1001 & = 0111 \\
-> 1110 \div 1001 & = 1 \\
-> 1110 \oplus 1001 & = 0110 \\
-> 0110 \div 1001 & = 0 \\
-> 0110 \\
-> 1001 \\
-> \text{Rest: } & 011 \\
-> \text{Zu übertragende Bitfolge: } & 110011011
-> \end{align*}
-> $$
->
-> Dies ist die berechnete zu übertragende Bitfolge, die sicherstellt, dass die Nachricht \(110011\) mit der Prüfsumme \(011\) geschützt ist.
 
 ### iii. Nehmen Sie an, dass Sie die CRC-geschützte Bitfolge 10 01 10 01 empfangen haben. Zeigen Sie, dass die empfangene Bitfolge unter Verwendung des Generatorpolynoms $G$ korrekt ist (inkl. Rechnung). Markieren Sie in Ihrer Rechnung die Stelle, an der der Empfänger die Korrektheit ablesen kann.
 
@@ -686,77 +501,6 @@ Da der Rest der Polynomdivision 000 ist, zeigt dies an, dass die empfangene Bitf
 ### Schlussfolgerung
 
 Die empfangene Bitfolge 10011001 ist korrekt, da der Rest der Polynomdivision durch das Generatorpolynom $G = 1001$ 0 ist. Die Stelle, an der der Empfänger die Korrektheit ablesen kann, ist das Endergebnis der Polynomdivision, das 000 ergibt.
-
-> [!tip]- Alternative Lösung???
->
-> ### Überprüfung der CRC-geschützten Bitfolge
->
-> Um zu überprüfen, ob die empfangene Bitfolge $10011001$ unter Verwendung des Generatorpolynoms $G(x) = 1001$ korrekt ist, führen wir die Polynomdivision der empfangenen Bitfolge durch das Generatorpolynom durch. Der Rest dieser Division sollte null sein, wenn die empfangene Bitfolge korrekt ist.
->
-> #### Schritt 1: Nachricht und Generatorpolynom
->
-> - **Empfangene Bitfolge:** $10011001$
-> - **Generatorpolynom:** $1001$
->
-> #### Schritt 2: Polynomdivision durchführen
->
-> Wir führen die Polynomdivision der empfangenen Bitfolge $10011001$ durch das Generatorpolynom $1001$ im Binärmodus (ohne Überträge) durch.
->
-> ```
-> 10011001 ÷ 1001
-> ```
->
-> 1. Dividiere den höchsten Grad des erweiterten Nachrichtenpolynoms durch den höchsten Grad des Generatorpolynoms:
->
-> $$
-> \begin{array}{r}
-> 10011001 \\
-> 1001 \\
-> \hline
-> 0000000 \quad (\text{erste Division}) \\
-> 000000000 \quad (\text{nächste Division}) \\
-> 1001 \\
-> \hline
-> 0010000 \quad (\text{weitere Divisionen}) \\
-> 0010 \\
-> 1001 \\
-> \hline
-> 001 \quad (\text{Ende der Divisionen})
-> \end{array}
-> $$
->
-> 2. Weitere Divisionen:
->    $$
->    \begin{align*}
->    1001 \div 1001 & = 1 \\
->    1001 \oplus 1001 & = 0000 \\
->    0110 \div 1001 & = 0 \\
->    0110 \\
->    1001 \\
->    \hline
->    \text{Rest: } 000
->    \end{align*}
->    $$
->
-> #### Schritt 3: Rest überprüfen
->
-> Der Rest der Division ist $000$. Dies zeigt, dass die empfangene Bitfolge korrekt ist.
->
-> ### Markierung der entscheidenden Stelle
->
-> Der Rest der Polynomdivision ist die entscheidende Stelle, an der der Empfänger die Korrektheit der Nachricht ablesen kann:
->
-> $$
-> \text{Rest: } 000
-> $$
->
-> ### Zusammenfassung
->
-> Die empfangene Bitfolge $10011001$ ist korrekt, da der Rest der Division durch das Generatorpolynom $G(x) = 1001$ null ist. Dies bestätigt, dass die empfangene Nachricht keine Fehler enthält.
->
-> $$
-> \boxed{10011001 \div 1001 = \text{Rest } 000}
-> $$
 
 ---
 
