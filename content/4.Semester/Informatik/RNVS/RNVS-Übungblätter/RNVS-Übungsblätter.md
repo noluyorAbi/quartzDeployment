@@ -3,7 +3,7 @@ Thema:
 tags:
 fach:
 date created: Tuesday, 16. April 2024, 11:22
-date modified: Wednesday, 3. July 2024, 13:58
+date modified: Sunday, 14. July 2024, 18:25
 ---
 
 # Übungsblatt
@@ -20,6 +20,7 @@ date modified: Wednesday, 3. July 2024, 13:58
 - [[RNVS-Blatt-09]]
 - [[RNVS-Blatt-10]]
 - [[RNVS-Blatt-11]]
+- [[RNVS-Blatt-12]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
@@ -27,11 +28,11 @@ date modified: Wednesday, 3. July 2024, 13:58
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
