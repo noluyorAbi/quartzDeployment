@@ -7,7 +7,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Sunday, 9. June 2024, 22:36
-date modified: Wednesday, 12. June 2024, 20:15
+date modified: Monday, 15. July 2024, 23:18
 ---
 
 # 1. TCP Reno (H)
@@ -149,7 +149,7 @@ $$
 
 ## (a) Sei die Übertragungsrate R = 20 kB/s. Erstellen Sie ein Sequenzdiagramm für die Übertragung und tragen Sie die Größe des jeweils aktuellen Überlastfensters (CongWin) in das Diagramm ein!
 
-- [ ] Verstehen
+- [x] Verstehen [completion:: 2024-07-15]
 
 ```mermaid
 sequenceDiagram

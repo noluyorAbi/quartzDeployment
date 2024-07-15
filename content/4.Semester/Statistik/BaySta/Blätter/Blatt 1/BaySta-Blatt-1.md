@@ -14,8 +14,8 @@ date modified: Sunday, 14. July 2024, 14:05
 
 # TODO:
 
-- [ ] [[BaySta-Blatt-1#Aufgabe 2#(e) Wie hoch ist die Wahrscheinlichkeit, dass eine Person bei der bei diesem Vorgehen der PCR-Test positiv ist, tatsächlich Corona-infiziert ist?|BaySta-1-2e nochmal machen]]
-- [ ] [[BaySta-Blatt-1#Aufgabe 3|BaySta 1-3 checken]]
+- [x] [[BaySta-Blatt-1#Aufgabe 2#(e) Wie hoch ist die Wahrscheinlichkeit, dass eine Person bei der bei diesem Vorgehen der PCR-Test positiv ist, tatsächlich Corona-infiziert ist?|BaySta-1-2e nochmal machen]] [completion:: 2024-07-15]
+- [x] [[BaySta-Blatt-1#Aufgabe 3|BaySta 1-3 checken]] [completion:: 2024-07-15]
 
 # Aufgabe 1
 

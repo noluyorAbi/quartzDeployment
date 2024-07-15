@@ -346,7 +346,7 @@ Durch den Induktionsanfang und den Induktionsschritt haben wir gezeigt, dass $a^
 
 # FSK2-4 Grammatik-Konkatenation (0 Punkte)
 
-- [ ] FSK 2-4 verstehen was abgeht
+- [x] FSK 2-4 verstehen was abgeht [completion:: 2024-07-15]
 
 > [!note] Aufgabenstellung
 > Seien $G$ und $G'$ Typ-i-Grammatiken (für $i \in \{0, \ldots, 3\}$), sodass $\varepsilon \notin L(G)$ und $\varepsilon \notin L(G')$. Zeigen oder widerlegen Sie für alle $i$: Es gibt eine Grammatik $G''$ vom Typ $i$, sodass $L(G'') = L(G)L(G')$.

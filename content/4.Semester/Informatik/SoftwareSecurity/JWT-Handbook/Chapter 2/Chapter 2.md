@@ -77,7 +77,7 @@ flowchart LR
 
 ## 2.1.1.3 Cross-Site Scripting (XSS)
 
-- [ ] Seminar XSS weiterlesen
+- [x] Seminar XSS weiterlesen [completion:: 2024-07-15]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
