@@ -1,6 +1,6 @@
 ---
 date created: Monday, 15. July 2024, 22:31
-date modified: Monday, 15. July 2024, 22:34
+date modified: Tuesday, 16. July 2024, 15:40
 ---
 
 # Woche 5-6: Quadratsummenzerlegung und statistische Inferenz
@@ -19,25 +19,33 @@ In der Regressionsanalyse wird die Gesamtvariation der abhängigen Variable $Y$ 
 
 Die gesamte Quadratsumme (Total Sum of Squares, SST) misst die gesamte Variation der abhängigen Variable $Y$ um ihren Mittelwert $\bar{Y}$.
 
-\[SST = \sum\_{i=1}^{n} (Y_i - \bar{Y})^2\]
+$$
+SST = \sum_{i=1}^{n} (Y_i - \bar{Y})^2
+$$
 
 #### Erklärbare Quadratsumme (SSR)
 
 Die erklärbare Quadratsumme (Regression Sum of Squares, SSR) misst die Variation der abhängigen Variable, die durch das Regressionsmodell erklärt wird.
 
-\[SSR = \sum\_{i=1}^{n} (\hat{Y}\_i - \bar{Y})^2\]
+$$
+SSR = \sum_{i=1}^{n} (\hat{Y}_i - \bar{Y})^2
+$$
 
 #### Residuenquadratsumme (SSE)
 
 Die Residuenquadratsumme (Error Sum of Squares, SSE) misst die Variation der abhängigen Variable, die nicht durch das Modell erklärt wird (d.h. die Fehlerkomponente).
 
-\[SSE = \sum\_{i=1}^{n} (Y_i - \hat{Y}\_i)^2\]
+$$
+SSE = \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2
+$$
 
 #### Beziehung zwischen SST, SSR und SSE
 
 Die Quadratsummen haben eine additive Beziehung:
 
-\[SST = SSR + SSE\]
+$$
+SST = SSR + SSE
+$$
 
 ### F-Tests zur Gesamtmodellprüfung
 
@@ -47,15 +55,21 @@ Der F-Test wird verwendet, um die Gesamtgüte des Regressionsmodells zu bewerten
 
 Die F-Statistik wird wie folgt berechnet:
 
-\[F = \frac{MSR}{MSE} = \frac{\frac{SSR}{k}}{\frac{SSE}{n - k - 1}}\]
+$$
+F = \frac{MSR}{MSE} = \frac{\frac{SSR}{k}}{\frac{SSE}{n - k - 1}}
+$$
 
 - $MSR$: Mittlere Quadratsumme der Regression (Mean Square Regression)
 
-\[MSR = \frac{SSR}{k}\]
+$$
+MSR = \frac{SSR}{k}
+$$
 
 - $MSE$: Mittlere Quadratsumme des Fehlers (Mean Square Error)
 
-\[MSE = \frac{SSE}{n - k - 1}\]
+$$
+MSE = \frac{SSE}{n - k - 1}
+$$
 
 ### Einzelfaktortests
 
@@ -65,7 +79,9 @@ Einzelfaktortests, in der Regel t-Tests, werden verwendet, um die Bedeutung einz
 
 Die t-Statistik wird wie folgt berechnet:
 
-\[t = \frac{\hat{\beta}\_j}{SE(\hat{\beta}\_j)}\]
+$$
+t = \frac{\hat{\beta}_j}{SE(\hat{\beta}_j)}
+$$
 
 - $\hat{\beta}_j$: geschätzter Regressionskoeffizient
 - $SE(\hat{\beta}_j)$: Standardfehler des geschätzten Regressionskoeffizienten
@@ -78,7 +94,9 @@ Die Varianzzerlegung hilft dabei zu verstehen, wie viel der Gesamtvariation der 
 
 Die Varianzzerlegung basiert auf der Quadratsummenzerlegung:
 
-\[R^2 = \frac{SSR}{SST}\]
+$$
+R^2 = \frac{SSR}{SST}
+$$
 
 - $R^2$ gibt den Anteil der Gesamtvariation an, der durch das Modell erklärt wird.
 - Ein höherer $R^2$ Wert deutet auf eine bessere Modellanpassung hin.
