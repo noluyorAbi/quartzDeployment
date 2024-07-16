@@ -5,14 +5,14 @@ tags:
   - statistik
 fach:
 date created: Tuesday, 16. April 2024, 11:12
-date modified: Monday, 15. July 2024, 23:19
+date modified: Wednesday, 17. July 2024, 01:00
 ---
 
 # Übersicht der Studieninhalte
 
 ## I fumbled and gotta learn the module in 2 weeks till the Exam
 
-### [[zVerzeichnis|Ah shit here we go again]]
+### [[z-Verzeichnis|Ah shit here we go again]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 

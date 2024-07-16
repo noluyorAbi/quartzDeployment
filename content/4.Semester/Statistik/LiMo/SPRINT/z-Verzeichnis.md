@@ -1,7 +1,9 @@
 ---
 date created: Monday, 15. July 2024, 23:07
-date modified: Tuesday, 16. July 2024, 14:57
+date modified: Wednesday, 17. July 2024, 01:02
 ---
+
+# Wochenübersicht
 
 - [[Woche 1-2 Das einfache lineare Regressionsmodell]]
 - [[Woche 3-4 Das multiple lineare Regressionsmodell]]
@@ -13,17 +15,30 @@ date modified: Tuesday, 16. July 2024, 14:57
 - [[Woche 15-16 Das gemischte lineare Regressionsmodell]]
 - [[Woche 17-18 Das logistische Regressionsmodell]]
 
+# [[z-Erklärungen-Verzeichnis|Erklärungen]]
+
+- [[Ansätze zur Berücksichtigung von Mehrfachmessungen]]
+- [[Die Kleinste-Quadrate-Schätzung (KQ-Schätzung) und ihre asymptotischen Eigenschaften]]
+- [[F-Statistik in Regressionsmodellen in der Statistik]]
+- [[Gewichtete Kleinste-Quadrate (WLS) vs Normale Kleinste-Quadrate (OLS)]]
+- [[Homoskedastizität in der Regressionsanalyse]]
+- [[Interaktionseffekt]]
+- [[Multiple Normale Lineare Modelle]]
+- [[R2 und Adjustiertes R2 in der Regressionsanalyse]]
+- [[Referenz-Codierung und Effekt-Codierung in der Linearen Regression]]
+- [[Wann sollte man R2 verwenden und wann adjustiertes R2]]
+
 <!-- DISQUS SCRIPT COMMENT START -->
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
 <script>
     /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */

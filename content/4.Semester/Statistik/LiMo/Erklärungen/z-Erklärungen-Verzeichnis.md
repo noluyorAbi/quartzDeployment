@@ -1,0 +1,42 @@
+---
+date created: Wednesday, 17. July 2024, 00:59
+date modified: Wednesday, 17. July 2024, 01:02
+---
+
+# Erklärungen Verzeichnis
+
+- [[Ansätze zur Berücksichtigung von Mehrfachmessungen]]
+- [[Die Kleinste-Quadrate-Schätzung (KQ-Schätzung) und ihre asymptotischen Eigenschaften]]
+- [[F-Statistik in Regressionsmodellen in der Statistik]]
+- [[Gewichtete Kleinste-Quadrate (WLS) vs Normale Kleinste-Quadrate (OLS)]]
+- [[Homoskedastizität in der Regressionsanalyse]]
+- [[Interaktionseffekt]]
+- [[Multiple Normale Lineare Modelle]]
+- [[R2 und Adjustiertes R2 in der Regressionsanalyse]]
+- [[Referenz-Codierung und Effekt-Codierung in der Linearen Regression]]
+- [[Wann sollte man R2 verwenden und wann adjustiertes R2]]
+
+<!-- DISQUS SCRIPT COMMENT START -->
+
+<hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://myuninotes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!-- DISQUS SCRIPT COMMENT END -->

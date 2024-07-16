@@ -1,7 +1,9 @@
 ---
 date created: Monday, 15. July 2024, 22:18
-date modified: Monday, 15. July 2024, 22:19
+date modified: Tuesday, 16. July 2024, 22:43
 ---
+
+https://novustat.com/statistik-blog/klassiker-lineare-regression-einfach-erklaert.html
 
 # Woche 1-2: Das einfache lineare Regressionsmodell
 
@@ -220,11 +222,11 @@ Dieses Skript gibt Ihnen eine umfassende Einführung in das einfache lineare Reg
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
