@@ -120,10 +120,10 @@ Da die Anzahl der Wörter in $L$ durch eine endliche Summe in einer geometrische
   <div class="modal-content">
     <span id="closeModal" class="close">&times;</span>
     <p class="modal-text">
-      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
+      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
     </p>
     <p class="modal-text">
-      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
+      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
     </p>
   </div>
 </div>
@@ -134,7 +134,7 @@ Da die Anzahl der Wörter in $L$ durch eine endliche Summe in einer geometrische
     // Generate a random number between 1 and 1
     // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
     const randomNumber = Math.floor(Math.random() * 1) + 1; 
-    console.log(randomNumber)
+    // console.log(randomNumber)
     if (randomNumber === 1) {
       setTimeout(function() {
         const modal = document.getElementById('myModal');
