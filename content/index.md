@@ -62,6 +62,9 @@ MyUniNotes is a personal project that I manage alongside my studies. As a studen
 
 The idea for MyUniNotes came from my own experiences struggling with difficult subjects. I wanted to share the information I gathered and learned in a way that could help others. However, please keep in mind that there may be mistakes on some pages, and I cannot cover every lecture or exercise due to personal time constraints. My primary motivation is to contribute to the academic community and support fellow students in their learning journeys.
 
+<div id="disqus_recommendations"></div>
+
+
 <center>
 
 <h1 id="guestbook" style="font-family: 'Arial', sans-serif; font-size: 36px; font-weight: bold; margin-top: 40px;">↓ 📖 Guestbook ↓</h1>
@@ -216,3 +219,18 @@ console.log(asciiArt2);
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 <!-- DISQUS SCRIPT COMMENT END -->
+
+
+<script> 
+(function() { // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+var d = document, s = d.createElement('script'); // IMPORTANT: Replace EXAMPLE with your forum shortname!
+s.src = 'https://myuninotes.disqus.com/recommendations.js'; s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>
+Please enable JavaScript to view the 
+<a href="https://disqus.com/?ref_noscript" rel="nofollow">
+comments powered by Disqus.
+</a>
+</noscript>
