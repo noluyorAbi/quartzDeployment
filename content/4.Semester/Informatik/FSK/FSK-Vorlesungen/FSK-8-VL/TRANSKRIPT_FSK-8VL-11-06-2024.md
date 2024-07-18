@@ -36,6 +36,54 @@ Das heißt, wir rattern jetzt wieder hier zurück, kann man sich das vorstellen,
 
 dass das im Grunde in den Platz der Eingabe geht. Also man hat die Länge W, man hat das Wort, also von der Länge W an Platz nur zur Verfügung im Grunde und muss jetzt gucken, dass man nie darüber hinauskommt. Das funktioniert genau aufgrund dieser Beschränkung der Produktionsregeln, dass sie nämlich nicht schrumpfen dürfen. Das heißt, wenn wir einmal über ein Wort haben, was über die Länge W hinausgehen würde, können wir aufhören, weil wir wissen dann, das Wort oder die Satzform wird nicht mehr kleiner, sondern die wird auf jeden Fall zu groß. Genau aus diesem Grund reicht uns dieser Platz aus, weil wir müssen nie weiterkommen. Wir müssen Worte herleiten, die größer oder länger sind als das Zielwort. Das war genau dieses Bild vom Anfang. Wenn Sie irgendwie die Produktionsschritte sehen, dann wächst das sozusagen monoton, die Ableitung in der Wortlänge bei einer kontextsensitiven Sprache, während es bei einer allgemeinen nicht kontextsensitiven Sprache passieren kann, dass sie erst größer werden und dann wieder schrumpfen. Genau das ist nicht möglich, wenn Sie sich an dieses Bild von einer der ersten Vorlesungen erinnern. Das ist die eine Richtung. Für die andere Richtung, es gibt ja noch eine zweite Richtung, müssen Sie zeigen. Das ist die eine Richtung. Für die andere Richtung, es gibt ja noch eine zweite Richtung, müssen Sie zeigen. Das ist, wenn es ein LBA in der Sprache L akzeptiert, dass es dann auch eine kontextsensitive Grammatik gibt, die L akzeptiert, die L-Herd erzeugt. Das ist ein bisschen aufwendiger. Das heißt, Sie müssen eine Grammatik konstruieren, die genau den Ablauf von diesen LBAs oder Turing-Maschinen, das ist ein bisschen aufwendiger. Das heißt, Sie müssen eine Grammatik konstruieren, die genau den Ablauf von diesen LBAs oder Turing-Maschinen, und die linear beschränkte Turing-Maschine ein Modell für die Typ-1-Sprache. Deswegen haben wir die Turing-Maschine auch jetzt eingeführt, weil es sozusagen die letzten beiden Sprachklassen sind, die wir noch nicht betrachtet haben. Und bei beiden Sprachklassen die Turing-Maschine das richtige Modell ist. Nur bei den kontextsensitiven Sprachen sind es eben die linear beschränkten Turing-Maschinen, während es bei den beliebigen, bei den rekursiv aufzählbaren Sprachen, die Typ-0-Sprachen, eben beliebige Turing-Maschinen sind. So, wie ist es jetzt mit den nicht deterministischen? Bei den nicht deterministischen Turing-Maschinen, ja, bei den allgemeinen Turing-Maschinen, also ohne die lineare Beschränkung, können nicht deterministische Turing-Maschinen einfach durch deterministische simuliert werden, indem man einfach alle Möglichkeiten nacheinander durchprobiert. Das heißt, man zählt irgendwie so ab, was für Möglichkeiten hat die Turing-Maschine, der Verzweigungsgrad ist ja immer endlich mit den Möglichkeiten, mit den nicht deterministischen, probiert die einfach nacheinander aus, wie in so einem Berechnungsbaum, können Sie sich das vorstellen. Daher gilt der letzte Satz, also der Satz, dass die nicht deterministischen Turing-Maschinen die Typ-0-Sprachen akzeptieren, tatsächlich auch für die deterministischen Turing-Maschinen, weil die sich nicht unterscheiden bezüglich der Ausdruckskraft, was sie akzeptieren. Der Unterschied zwischen nicht deterministischen Turing-Maschinen und deterministischen Turing-Maschinen kommt erst zum Tragen, wenn wir das Laufzeitverhalten dann genauer betrachten, das kommt erst im Kapitel zur Komplexitätstheorie. Was wichtig ist, dieses Resultat gilt natürlich erstmal nicht für die LBAs, beziehungsweise man weiß es nicht so genau, was da gilt. Aber die LBAs sind immer nicht deterministisch definiert. So, damit sind wir jetzt tatsächlich mit den formalen Sprachen durch. Wir haben noch ein paar Beweise offen, die die FSK-Zuhörer in den nächsten beiden Videos oder Vorlesungen sehen werden. Die TIMi-Zuhörer nicht. TIMi-Zuhörer sollten sich aber die Turing-Maschinen gut merken, weil wir werden mit den Turing-Maschinen jetzt viel arbeiten und uns um Rechenbarkeit kümmern und Probleme, welche berechenbar sind. Bevor wir dazu kommen, möchte ich aber hier zum Ende dieser Vorlesung noch mal einen Überblick geben über die Grammatiken-Automaten für die Chomsky-Hierarchie, die wir gesehen haben. Sehen Sie hier auf dieser Folie schon. Wir haben hier die Chomsky-Hierarchie mit Typ 0, Typ 1, Typ 2, Typ 3. Und wir haben zwischendrin noch die deterministisch-kontextfreien Sprachen, die ja eine Teilmenge der Typ-2-Sprachen sind. Sie sind echt größer als die Typ-3-Sprachen. Die passenden Grammatiken dazu. Das sind die Typ-0-Grammatiken, die Kontext-7-Grammatiken, die kontextfreien Grammatiken, die regulären Grammatiken. Bei deterministisch-kontextfreien gibt es natürlich auch eine Klasse von Grammatiken. Das sind die LRK-Grammatiken. Die haben wir nicht gesehen, werden wir auch nicht sehen, aber damit Sie es wissen, habe ich es hier hingeschrieben. Die Automaten-Modelle sind die endlichen Automaten bei den regulären Sprachen, sowohl deterministisch als auch nicht deterministisch. Es sind die deterministischen Kellerautomaten bei den deterministisch-kontextfreien Sprachen, die DPDAs. Bei den kontextfreien Sprachen sind es die Kellerautomaten, nicht deterministisch natürlich, also man braucht nicht deterministische, weil die deterministisch in einer echten Teilmenge sind. Bei den Typ-1-Sprachen sind es die linear beschränkten Turing-Maschinen, die LBAs, die sind auch nicht deterministisch. Bei den Typ-0-Sprachen sind es eben die Turing-Maschinen, sowohl deterministisch als auch nicht deterministisch. Wir haben bei den Typ-3-Sprachen noch als sonstigen Formalismus die regulären Ausdrücke gesehen. Bei den anderen Sprachen gibt es natürlich auch noch viele weitere sonstige Formalismen, die wir nicht gesehen haben. Hier unten bei den Typ-0-Sprachen werden wir tatsächlich auch noch ein paar sehen. Trennende Beispiele. Die Sprache A hoch N, B hoch N mit N in N ist in Typ-2 aber nicht vom Typ-3, also ist nicht regulär, aber kontextfrei. Die Sprache W mit W ist ein Palindrom, ist Typ-2 aber nicht deterministisch kontextfrei. Das heißt, man muss raten, wann man sozusagen den Rest vom Wort rückwärts liest. Die Sprache A hoch N, B hoch N, C hoch N ist vom Typ-1, also kontextsensitiv, aber nicht vom Typ-2, also nicht kontextfrei. Und die Sprache H, die haben wir noch nicht gesehen. Das sind alle Turing-Maschinen-M, die auf dem Eingabewort W anhalten. Die ist tatsächlich vom Typ-0, aber nicht vom Typ-1. Das heißt, die Sprache ist das sogenannte Halteproblem. Das werden wir später noch genau betrachten und erläutern. Und diese Sprache ist wie gesagt Typ-0, aber nicht vom Typ-1. Und es gibt dann tatsächlich auch noch Sprachen, die in der Hierarchie gucken. Sprachen, die in gar keinem Typ, von gar keinem Typ sind. Das ist das Komplement, die Sprache H, die ist nicht vom Typ-0. Die liegt sozusagen außerhalb der ganzen Hierarchie. Was gibt es noch zu sagen? Deterministisch versus nicht deterministisch. DFAs und NFAs bei den regulären Sprachen haben wir ja gesehen, die sind äquivalent. Die DPDAs und DPDAs, also Kellerautomaten und nicht deterministische Kellerautomaten sind nicht äquivalent. Haben wir gesehen. Bei den LBAs, also den linear beschränkten Turing-Maschinen, ist es tatsächlich unbekannt. Da werden wir die FSK-Zuhörer in der nächsten Vorlesung auch noch was dazu hören. Und bei den deterministischen Turing-Maschinen und den nicht deterministischen Turing-Maschinen ist es wieder so, dass sie äquivalent sind. Weil man die einen durch die andere einfach simulieren kann. Bei den Abschlusseigenschaften, wenn Sie daran denken. Bei den regulären Sprachen, die waren sozusagen gutartig. Die sind abgeschlossen bezüglich Schnittvereinigung, Komplement, Produkt und klinischen Abschluss. Also überall ein Ja. Die deterministisch-kontextfreien sind tatsächlich nur abgeschlossen, interessanterweise gegenüber dem Komplement, aber gegenüber sonst nichts. Die kontextfreien Sprachen sind abgeschlossen gegenüber Vereinigung, Produkt und klinischen Abschluss, aber nicht abgeschlossen gegenüber Schnitt und Komplement. Die kontextsensitiven Sprachen sind wieder überall abgeschlossen. Schnittvereinigung, Komplement, Produkt, klinischer Abschluss. Haben wir nicht gesehen, aber können Sie mir glauben. Und die Typ 0 Sprachen, die sind abgeschlossen bezüglich Schnittvereinigung, Produkt und klinischen Abschluss. Klinischer Abschluss, aber nicht abgeschlossen gegenüber Komplement. Das haben wir gerade eben gesehen. H ist Typ 0, aber das Komplement vom Halteproblem ist eben nicht in Typ 0. Das ist genau so ein trennendes Beispiel, warum die Typ 0 Sprachen nicht abgeschlossen sind gegenüber dem Komplement. Entscheidbarkeiten. Das Wortproblem ist für Typ 1 und damit auch für Typ 2 und Typ 3 und deterministisch-kontextfrei entscheidbar. Für Typ 0 ist es nicht mehr entscheidbar. Der Beweis steht natürlich noch aus. Das Leerheitsproblem, also ob die erzeugte Sprache leer ist, ist bei Typ 2 deterministisch-kontextfrei und Typ 3 entscheidbar. Aber bei Typ 1 nicht mehr entscheidbar, bei Typ 0 auch nicht mehr entscheidbar. Das Äquivalenzproblem, also ob zwei durch Grammatiken gegebene Sprachen die gleiche Sprache erzeugen, ist bei Typ 3, also regulär, und bei deterministisch-kontextfrei noch entscheidbar. Aber bei Typ 0, Typ 1, Typ 2 nicht entscheidbar. Also selbst bei kontextfrei nicht mehr entscheidbar. Das Schnittproblem ist sogar bei deterministisch-kontextfrei nicht mehr entscheidbar. Schnittproblem war, ob der Schnitt von zwei Sprachen leer ist. Letzte Folie. Ups, jetzt bin ich eins zu weit. Die Komplexität des Wortproblems. Bei Typ 3, wenn der DFA gegeben ist, ist es natürlich lineare Komplexität, weil er ist ja völlig deterministisch. Wir brauchen einfach nur den Automaten durchrennen lassen. Genauso gilt es bei den DPDAs, den deterministischen Kellerautomaten. Wenn der gegeben ist, können wir auch lineare Komplexität erreichen. Bei Typ 2, wenn wir die Chomsky-Normalform gegeben haben, ist es kubisch in der Größe der Grammatik, in der Größe des Wortes. Die Größe des Grammatiks muss man eigentlich auch noch zählen. Die Größe der Grammatik kann man aber auch einfach erstmal als konstant annehmen. Die Chomsky-Normalform muss schon gegeben sein, weil die die Grammatik sonst noch aufblähen kann. Bei Typ 1 ist es exponentiell, der Algorithmus, und bei Typ 0 ist es ja nicht entscheidbar, daher nicht lösbar. Damit sind wir jetzt tatsächlich mit den formalen Sprachen für die TIMi-Zuhörer durch. Für die FSK-Zuhörer haben wir noch ein paar Vorlesungen, also ich glaube zwei, zu den Beweisen, zu den Aussagen, die wir heute nicht gesehen haben. Die Turing-Maschine, wie gesagt, wurde jetzt schon eingeführt. Die dürfen Sie nicht vergessen. Die Turing-Maschine wird uns jetzt ziemlich lange, also eigentlich bis zum Rest der Vorlesung, immer wieder begleiten und auch immer wieder einführen. Das muss ein wesentliches Maschinenmodell sein, das heißt, Sie sollten die gut verinnerlichen.
 
+<!-- Modal START -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <p class="modal-text">
+      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
+    </p>
+    <p class="modal-text">
+      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
+    </p>
+  </div>
+</div>
+
+<script>
+  // JavaScript to display the modal on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Generate a random number between 1 and 1
+    // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
+    const randomNumber = Math.floor(Math.random() * 1) + 1; 
+    // console.log(randomNumber)
+    if (randomNumber === 1) {
+      setTimeout(function() {
+        const modal = document.getElementById('myModal');
+        if (modal) {
+          modal.classList.add('show');
+        }
+      }, 1000); // Adjust the delay as needed
+
+      const closeModal = document.getElementById('closeModal');
+      if (closeModal) {
+        closeModal.addEventListener('click', function() {
+          const modal = document.getElementById('myModal');
+          if (modal) {
+            modal.classList.remove('show');
+          }
+        });
+      }
+    } else {
+      // Ensure the modal is hidden if the random number is not 1
+      const modal = document.getElementById('myModal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+  });
+</script>
+<!-- Modal END -->
+
 <!-- DISQUS SCRIPT COMMENT START -->
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
@@ -60,147 +108,3 @@ dass das im Grunde in den Platz der Eingabe geht. Also man hat die Länge W, man
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 <!-- DISQUS SCRIPT COMMENT END -->
-
-<!-- Modal START -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <p class="modal-text">
-      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
-    </p>
-    <p class="modal-text">
-      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
-    </p>
-  </div>
-</div>
-
-<script>
-  // JavaScript to display the modal on page load
-  document.addEventListener('DOMContentLoaded', function() {
-    // Generate a random number between 1 and 1
-    // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
-    const randomNumber = Math.floor(Math.random() * 1) + 1; 
-    // console.log(randomNumber)
-    if (randomNumber === 1) {
-      setTimeout(function() {
-        const modal = document.getElementById('myModal');
-        if (modal) {
-          modal.classList.add('show');
-        }
-      }, 1000); // Adjust the delay as needed
-
-      const closeModal = document.getElementById('closeModal');
-      if (closeModal) {
-        closeModal.addEventListener('click', function() {
-          const modal = document.getElementById('myModal');
-          if (modal) {
-            modal.classList.remove('show');
-          }
-        });
-      }
-    } else {
-      // Ensure the modal is hidden if the random number is not 1
-      const modal = document.getElementById('myModal');
-      if (modal) {
-        modal.style.display = 'none';
-      }
-    }
-  });
-</script>
-<!-- Modal END -->
-
-<!-- Modal START -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <p class="modal-text">
-      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
-    </p>
-    <p class="modal-text">
-      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
-    </p>
-  </div>
-</div>
-
-<script>
-  // JavaScript to display the modal on page load
-  document.addEventListener('DOMContentLoaded', function() {
-    // Generate a random number between 1 and 1
-    // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
-    const randomNumber = Math.floor(Math.random() * 1) + 1; 
-    // console.log(randomNumber)
-    if (randomNumber === 1) {
-      setTimeout(function() {
-        const modal = document.getElementById('myModal');
-        if (modal) {
-          modal.classList.add('show');
-        }
-      }, 1000); // Adjust the delay as needed
-
-      const closeModal = document.getElementById('closeModal');
-      if (closeModal) {
-        closeModal.addEventListener('click', function() {
-          const modal = document.getElementById('myModal');
-          if (modal) {
-            modal.classList.remove('show');
-          }
-        });
-      }
-    } else {
-      // Ensure the modal is hidden if the random number is not 1
-      const modal = document.getElementById('myModal');
-      if (modal) {
-        modal.style.display = 'none';
-      }
-    }
-  });
-</script>
-<!-- Modal END -->
-
-<!-- Modal START -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <p class="modal-text">
-      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
-    </p>
-    <p class="modal-text">
-      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
-    </p>
-  </div>
-</div>
-
-<script>
-  // JavaScript to display the modal on page load
-  document.addEventListener('DOMContentLoaded', function() {
-    // Generate a random number between 1 and 1
-    // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
-    const randomNumber = Math.floor(Math.random() * 1) + 1; 
-    // console.log(randomNumber)
-    if (randomNumber === 1) {
-      setTimeout(function() {
-        const modal = document.getElementById('myModal');
-        if (modal) {
-          modal.classList.add('show');
-        }
-      }, 1000); // Adjust the delay as needed
-
-      const closeModal = document.getElementById('closeModal');
-      if (closeModal) {
-        closeModal.addEventListener('click', function() {
-          const modal = document.getElementById('myModal');
-          if (modal) {
-            modal.classList.remove('show');
-          }
-        });
-      }
-    } else {
-      // Ensure the modal is hidden if the random number is not 1
-      const modal = document.getElementById('myModal');
-      if (modal) {
-        modal.style.display = 'none';
-      }
-    }
-  });
-</script>
-<!-- Modal END -->

@@ -28,17 +28,65 @@ Rechtfertigen. Haben wir schon gesagt, UDP ist unsicher, aber schnell. Und darau
 
 um den Header zu bestimmen, um die richtige Folie herauszusuchen, wo dann draufsteht, wie groß der Header ist. Und das sehen wir, der Schlüssel ist das Wort TCP. Alice sendet zwei TCP-Segmente. Das heißt, ich weiß, dass ich von TCP spreche. Das heißt, ich kann bei meinem Protokoll nachschauen, wie groß ist der Header bei TCP. Und wenn man jetzt die Folie noch im Kopf hätte oder sich rausgesucht hätte, dann würde man sehen, der ist mindestens 40 Bytes lang. Wir haben dann unten nur die Optionen, das heißt, der kann länger sein. Das heißt, wir haben jetzt hier noch einmal den Header dabei, der das entsprechend drinnen hat. Den müssen wir jetzt noch dazuzählen. Die 20 Bytes. Das heißt, wir haben 40 Bytes in der Summe. Das heißt, der Header ist so groß wie die Nutztaten hier. Das wollte ich nämlich raus. Okay? Und das muss man sich überlegen. Gut. Wie lautet die Quittungsnummer der Bestätigung von Bob, wenn nur das erste Segment verloren geht? Also, was bestätigt der Bob? Der bestätigt dann das Zweite. Was kommt dann da zurück? Wieder, ihr könnt es tippen. Genau, 90 kommt zurück. Warum kommt 90 zurück? Genau, wir wollen ja dieses 90er-Paket noch einmal wiederholen. Die Aussage treffen wir dann. Das heißt, wir kriegen bestätigt, es ist ein Paket angekommen, aber wir warten immer noch auf das 90er, sozusagen. Also, das ist die Aussage, die dahintersteckt. Gut. Welche Mechanismen verwendet TCP für eine zuverlässige Ende-zu-Ende-Verbindung? Ich kann es nicht mehr hören, aber es ist natürlich der Verbindungsaufbau und die Sequenz nochmal. Das musst du jetzt selbst beantworten. Die nächste Frage ist ein bisschen schwieriger. Wie realisiert man Multiplexen von Anwendungen auf der Transportschicht? Jetzt müssen wir wieder verstehen, was verstehen wir unter Multiplexen und von Anwendungen auf der Transportschicht? Wir denken darüber nach, was könnte das sein? Das ist natürlich dazwischen den Alice und Bob natürlich beliebig viele Anwendungen laufen. Da läuft es nicht. Das ist nicht der WhatsApp oder Signal oder so irgendwas, sondern da läuft vielleicht gleichzeitig nur ein Streaming-Dienst. Ich lade Daten runter, ich mache eine Videokonferenz und so weiter. Was war der Mechanismus, damit man diese Dinge alle gleichzeitig machen kann? Genau, das sind die Ports, die wir drin haben. Sehr gut. Ja, haben wir jetzt auch gehabt. Wie funktioniert TCP-Tar und zur Stahlkontrolle? Wir haben ja gesagt, das war das mit dem Slow Start, mit dem exponentiellen Wachstum bis zum Limit und dann wieder entsprechend linear weiter. Können Sende- und Empfangsfenster bei der Fenstertechnik unterschiedlich groß sein? 50-50 Chance. Ohne Telefon-Joker. Achso, jetzt habe ich da hinten. Bitte. Und warum? Was könnte der Grund sein, dass die unterschiedlich groß sind? Genau, also das ist genau ein sehr gutes Beispiel, wo ich gesagt habe, wenn ich hier einen Supercomputer habe, dann kann der vielleicht relativ viel Speicher für so ein Fenster zur Verfügung stellen, während das Smartphone auf der anderen Seite gar nicht so viel Speicher hat, dass das so viel zur Verfügung stellen kann. Und da fließt es jetzt wieder zusammen mit dem, was wir gerade gehabt haben, mit der Flusskontrolle, weil man halt diesen Abgleich oder die Fenster dazu verwenden, sozusagen zu kontrollieren oder zu regeln, dass der Datentransfer entsprechend drüber geht. Okay, 16 Beispielfragen. Natürlich ist das jetzt nicht eine einzelne Frage bei der Klausur, sondern das ist vielleicht irgendwo ein Unterpunkt zu einer etwas umständlicheren Frage oder etwas komplexeren Frage. Gut, dann.
 
+<!-- Modal START -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <p class="modal-text">
+      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
+    </p>
+    <p class="modal-text">
+      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
+    </p>
+  </div>
+</div>
+
+<script>
+  // JavaScript to display the modal on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Generate a random number between 1 and 1
+    // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
+    const randomNumber = Math.floor(Math.random() * 1) + 1; 
+    // console.log(randomNumber)
+    if (randomNumber === 1) {
+      setTimeout(function() {
+        const modal = document.getElementById('myModal');
+        if (modal) {
+          modal.classList.add('show');
+        }
+      }, 1000); // Adjust the delay as needed
+
+      const closeModal = document.getElementById('closeModal');
+      if (closeModal) {
+        closeModal.addEventListener('click', function() {
+          const modal = document.getElementById('myModal');
+          if (modal) {
+            modal.classList.remove('show');
+          }
+        });
+      }
+    } else {
+      // Ensure the modal is hidden if the random number is not 1
+      const modal = document.getElementById('myModal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+  });
+</script>
+<!-- Modal END -->
+
 <!-- DISQUS SCRIPT COMMENT START -->
 
 <hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
 <div id="disqus_thread"></div>
 <script>
     /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
@@ -52,147 +100,3 @@ um den Header zu bestimmen, um die richtige Folie herauszusuchen, wo dann draufs
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 <!-- DISQUS SCRIPT COMMENT END -->
-
-<!-- Modal START -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <p class="modal-text">
-      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
-    </p>
-    <p class="modal-text">
-      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
-    </p>
-  </div>
-</div>
-
-<script>
-  // JavaScript to display the modal on page load
-  document.addEventListener('DOMContentLoaded', function() {
-    // Generate a random number between 1 and 1
-    // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
-    const randomNumber = Math.floor(Math.random() * 1) + 1; 
-    // console.log(randomNumber)
-    if (randomNumber === 1) {
-      setTimeout(function() {
-        const modal = document.getElementById('myModal');
-        if (modal) {
-          modal.classList.add('show');
-        }
-      }, 1000); // Adjust the delay as needed
-
-      const closeModal = document.getElementById('closeModal');
-      if (closeModal) {
-        closeModal.addEventListener('click', function() {
-          const modal = document.getElementById('myModal');
-          if (modal) {
-            modal.classList.remove('show');
-          }
-        });
-      }
-    } else {
-      // Ensure the modal is hidden if the random number is not 1
-      const modal = document.getElementById('myModal');
-      if (modal) {
-        modal.style.display = 'none';
-      }
-    }
-  });
-</script>
-<!-- Modal END -->
-
-<!-- Modal START -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <p class="modal-text">
-      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
-    </p>
-    <p class="modal-text">
-      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
-    </p>
-  </div>
-</div>
-
-<script>
-  // JavaScript to display the modal on page load
-  document.addEventListener('DOMContentLoaded', function() {
-    // Generate a random number between 1 and 1
-    // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
-    const randomNumber = Math.floor(Math.random() * 1) + 1; 
-    // console.log(randomNumber)
-    if (randomNumber === 1) {
-      setTimeout(function() {
-        const modal = document.getElementById('myModal');
-        if (modal) {
-          modal.classList.add('show');
-        }
-      }, 1000); // Adjust the delay as needed
-
-      const closeModal = document.getElementById('closeModal');
-      if (closeModal) {
-        closeModal.addEventListener('click', function() {
-          const modal = document.getElementById('myModal');
-          if (modal) {
-            modal.classList.remove('show');
-          }
-        });
-      }
-    } else {
-      // Ensure the modal is hidden if the random number is not 1
-      const modal = document.getElementById('myModal');
-      if (modal) {
-        modal.style.display = 'none';
-      }
-    }
-  });
-</script>
-<!-- Modal END -->
-
-<!-- Modal START -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <p class="modal-text">
-      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
-    </p>
-    <p class="modal-text">
-      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
-    </p>
-  </div>
-</div>
-
-<script>
-  // JavaScript to display the modal on page load
-  document.addEventListener('DOMContentLoaded', function() {
-    // Generate a random number between 1 and 1
-    // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
-    const randomNumber = Math.floor(Math.random() * 1) + 1; 
-    // console.log(randomNumber)
-    if (randomNumber === 1) {
-      setTimeout(function() {
-        const modal = document.getElementById('myModal');
-        if (modal) {
-          modal.classList.add('show');
-        }
-      }, 1000); // Adjust the delay as needed
-
-      const closeModal = document.getElementById('closeModal');
-      if (closeModal) {
-        closeModal.addEventListener('click', function() {
-          const modal = document.getElementById('myModal');
-          if (modal) {
-            modal.classList.remove('show');
-          }
-        });
-      }
-    } else {
-      // Ensure the modal is hidden if the random number is not 1
-      const modal = document.getElementById('myModal');
-      if (modal) {
-        modal.style.display = 'none';
-      }
-    }
-  });
-</script>
-<!-- Modal END -->
