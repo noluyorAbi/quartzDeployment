@@ -39,6 +39,14 @@ export default ((opts?: Options) => {
         <br />
         <br />
         <a href="mailto:contact@myuninotes.com">contact@myuninotes.com</a>
+        <br />
+        <br />
+        <a href="https://hits.sh/myuninotes.com/">
+          <img
+            alt="Hits"
+            src="https://hits.sh/myuninotes.com.svg?style=flat-square&label=Visitors%20Alltime%3A&extraCount=250&color=00BEE9"
+          />
+        </a>
       </footer>
     )
   }
