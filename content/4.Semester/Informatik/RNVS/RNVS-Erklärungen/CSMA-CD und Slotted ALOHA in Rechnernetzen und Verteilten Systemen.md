@@ -6,7 +6,11 @@ tags:
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
+date created: Saturday, 20. July 2024, 16:47
+date modified: Saturday, 20. July 2024, 18:01
 ---
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/lr6GWTbm5Fk" title="YouTube video player" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><br>
 
 > [!summary] Zusammenfassung
 >
@@ -73,6 +77,7 @@ Benötigte Zeit:
    - 7.2 [Aufgaben zu Slotted ALOHA](#aufgaben-zu-slotted-aloha)
 8. [Zusammenfassung und Ausblick](#zusammenfassung-und-ausblick)
 9. [Referenzen](#referenzen)
+10. [Mathematische Formeln zur Berechnung von Leitungslängen](#mathematische-formeln-zur-berechnung-von-leitungslängen)
 
 ## Einführung
 
@@ -153,7 +158,9 @@ CSMA/CD funktioniert nach dem Prinzip, dass ein Gerät, bevor es Daten sendet, d
 
 ### Beispiel
 
-Angenommen, wir haben ein Netzwerk mit drei Computern A, B und C. Computer A möchte eine Nachricht an Computer B senden. Es überprüft, ob der Kanal frei ist, und beginnt mit dem Senden der Nachricht. Währenddessen möchte auch Computer C eine Nachricht senden, hört jedoch den Kanal ab und erkennt, dass dieser belegt ist. Daher wartet Computer C, bis der Kanal frei ist.
+Angenommen, wir haben ein Netzwerk mit drei Computern A, B und C
+
+. Computer A möchte eine Nachricht an Computer B senden. Es überprüft, ob der Kanal frei ist, und beginnt mit dem Senden der Nachricht. Währenddessen möchte auch Computer C eine Nachricht senden, hört jedoch den Kanal ab und erkennt, dass dieser belegt ist. Daher wartet Computer C, bis der Kanal frei ist.
 
 #### Konkretes Beispiel
 
@@ -315,8 +322,70 @@ Stellen Sie sich ein Netzwerk mit vier Computern vor: A, B, C und D. Alle Comput
 
    - _Antwort_: Slotted ALOHA hat eine geringere Effizienz und ist anfälliger für Kollisionen bei hoher Netzwerklast.
 
-3. **Erklären Sie, warum Slotted ALOHA in drahtlosen Netzwerken vorteilhaft sein kann.**
-   - _Antwort_: Slotted ALOHA ist in drahtlosen Netzwerken vorteilhaft, da es eine einfache Methode zur Kollisionsvermeidung bietet und keine komplexe Infrastruktur zur Kollisionserkennung erfordert.
+3. \*\*Erklären Sie, warum Slotted ALOHA in drahtlosen Netzwerken vorteilhaft sein kann
+
+.\*\*
+
+- _Antwort_: Slotted ALOHA ist in drahtlosen Netzwerken vorteilhaft, da es eine einfache Methode zur Kollisionsvermeidung bietet und keine komplexe Infrastruktur zur Kollisionserkennung erfordert.
+
+## Mathematische Formeln zur Berechnung von Leitungslängen
+
+### 1. Berechnung der maximalen Segmentlänge bei CSMA/CD
+
+Die maximale Segmentlänge $L$ in einem Ethernet-Netzwerk mit CSMA/CD wird durch die Signallaufzeit und die Kollisionsdetektion bestimmt. Die Signallaufzeit hängt von der Geschwindigkeit des Signals und dem Medium ab.
+
+$$
+ L \leq \frac{v \cdot t}{2}
+$$
+
+Dabei ist:
+
+- $L$ die maximale Segmentlänge.
+- $v$ die Ausbreitungsgeschwindigkeit des Signals im Kabel (ungefähr $2 \times 10^8$ m/s für Kupferkabel).
+- $t$ die Zeit, die benötigt wird, um eine Kollision zu erkennen. Diese hängt von der Datenrate und der minimalen Paketlänge ab.
+
+### 2. Berechnung der Kollisionsdomäne
+
+Die Kollisionsdomäne ist der Bereich im Netzwerk, in dem eine Kollision auftreten kann. Die maximale Länge der Kollisionsdomäne $D$ kann berechnet werden, um sicherzustellen, dass Kollisionen rechtzeitig erkannt werden.
+
+$$
+ D \leq \frac{c \cdot T}{2}
+$$
+
+Dabei ist:
+
+- $D$ die maximale Länge der Kollisionsdomäne.
+- $c$ die Lichtgeschwindigkeit im Medium (ungefähr $3 \times 10^8$ m/s für Glasfaserkabel).
+- $T$ die maximale Übertragungsverzögerung (abhängig von der Datenrate und der minimalen Paketgröße).
+
+### 3. Berechnung der Latenz in einem Netzwerk
+
+Die Latenz $\tau$ in einem Netzwerk ist die Gesamtzeit, die ein Datenpaket benötigt, um von der Quelle zum Ziel zu gelangen. Sie setzt sich aus der Übertragungsverzögerung $\tau_t$ und der Verarbeitungsverzögerung $\tau_p$ zusammen.
+
+$$
+ \tau = \tau_t + \tau_p
+$$
+
+Dabei ist:
+
+- $\tau_t = \frac{L}{v}$ die Übertragungsverzögerung, wobei $L$ die Leitungslänge und $v$ die Ausbreitungsgeschwindigkeit des Signals ist.
+- $\tau_p$ die Verarbeitungsverzögerung in den Netzwerkgeräten.
+
+### 4. Berechnung der Signalverlustleistung
+
+Die Signalverlustleistung $P_L$ bei der Übertragung über eine Leitung kann mit der folgenden Formel berechnet werden:
+
+$$
+ P_L = 10 \cdot \log_{10}\left( \frac{P_{\text{out}}}{P_{\text{in}}} \right)
+$$
+
+Dabei ist:
+
+- $P_L$ die Verlustleistung in Dezibel (dB).
+- $P_{\text{out}}$ die Ausgangsleistung am Ende der Leitung.
+- $P_{\text{in}}$ die Eingangsleistung am Anfang der Leitung.
+
+Diese Formeln bieten eine Grundlage für die Analyse und Planung von Netzwerken unter Berücksichtigung der physischen Gegebenheiten und der Anforderungen an die Datenübertragung.
 
 ## Zusammenfassung und Ausblick
 
@@ -331,6 +400,8 @@ In Zukunft könnten neue Technologien und Protokolle entwickelt werden, die die 
 3. "Data and Computer Communications" von William Stallings
 4. RFC 791 - Internet Protocol
 5. Diverse wissenschaftliche Artikel und Fachpublikationen
+
+---
 
 <!-- Modal START -->
 <div id="myModal" class="modal">
