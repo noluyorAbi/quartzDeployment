@@ -7,10 +7,11 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Thursday, 18. July 2024, 18:01
-date modified: Thursday, 18. July 2024, 22:57
+date modified: Monday, 22. July 2024, 00:33
 ---
 
-- [[RNVS-Probeklausur-2024]] erledigt am (18.07.2024)
+- ## [[RNVS-Probeklausur-2024]] erledigt am 18.07.2024
+- ## [[RNVS-Altklausur-2018]] erledigt am 21.07.2024
 
 <!-- DISQUS SCRIPT COMMENT START -->
 

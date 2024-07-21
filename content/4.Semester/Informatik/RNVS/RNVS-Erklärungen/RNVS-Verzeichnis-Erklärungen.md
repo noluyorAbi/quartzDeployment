@@ -7,7 +7,7 @@ tags:
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 date created: Friday, 19. April 2024, 09:30
-date modified: Sunday, 21. July 2024, 18:14
+date modified: Sunday, 21. July 2024, 18:55
 ---
 
 # RNVS-Erklärungen Verzeichnis
