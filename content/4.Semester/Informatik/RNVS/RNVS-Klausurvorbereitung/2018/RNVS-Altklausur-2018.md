@@ -7,7 +7,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Sunday, 21. July 2024, 23:36
-date modified: Monday, 22. July 2024, 00:33
+date modified: Monday, 22. July 2024, 01:38
 ---
 
 # Rechnernetze und verteilte Systeme
@@ -250,7 +250,7 @@ flowchart LR
 
 ### (b) An welche MAC-Adresse sendet der Client Rahmen, die DNS-Anfragen enthalten?
 
-> [!bug] Developers Notice
+> [!info] Developers Notice
 > Hier wird 2x nach `MAC` gefragt in dem Gedankenprotokoll. Ich gehe mal von aus es sollte einmal `IP-Adresse` sein.
 
 ### (b\*) An welche IP-Adresse sendet der Client Rahmen, die DNS-Anfragen enthalten?
@@ -405,6 +405,142 @@ line [1, 2, 4, 8, 16, 17, 18, 19, 20]
 ### (d) Was ist ein frühzeitiger Indikator für Segmentverlust, noch bevor ein `timeout` für ein Segment auftritt?
 
 ### (e) Nennen Sie ein Verfahren zur Optimierung des Überlastkontrollalgorithmus nach Auftreten eines `timeouts`.
+
+---
+
+# VII. Transmission Control Protocol (TCP)
+
+## 26. Überlastkontrolle
+
+Die folgende Abbildung zeigt die zeitliche Entwicklung einer kritischen Kenngröße beim Tahoe-Algorithmus zur Überlastkontrolle. Der Ablauf ist in die Phasen a, b und c eingeteilt.
+
+```mermaid
+sequenceDiagram
+    participant Sender
+    participant Empfänger
+
+    Note right of Empfänger: [ ] [ ] [ ] [ ] <br/> Square representing some process or data
+
+    Sender->>Empfänger: 1024 Byte, Seq = 0
+    Note right of Empfänger: [ ] [ ] [ ] [ ] <br/>Square representing some process or data
+    Empfänger-->>Sender: ACK = … , Win = …
+
+    Sender->>Empfänger: 2048 Byte, Seq = …
+    Note right of Empfänger: [ ] [ ] [ ] [ ] <br/> Square representing some process or data
+    Empfänger-->>Sender: ACK = … , Win = …
+
+```
+
+### (a) Wie lautet die korrekte Beschriftung für die y-Achse?
+
+### (b) Benennen Sie Phase a:
+
+### (c) Benennen Sie Phase b:
+
+### (d) Was ist ein frühzeitiger Indikator für Segmentverlust, noch bevor ein `timeout` für ein Segment auftritt?
+
+### (e) Nennen Sie ein Verfahren zur Optimierung des Überlastkontrollalgorithmus nach Auftreten eines `timeouts`.
+
+---
+
+# VIII. Ethernet, CSMA
+
+## 28. Vervollständigen Sie das CSMA/CD (1-persistent) Ablaufdiagramm.
+
+> [!warning] Genaues Bild bitte aus Blatt entnehmen
+
+```mermaid
+flowchart TD
+    A([Station ist\nsendebereit]) --> B{Abhören\nKanal}
+    B -.->|Carrier\nSense| B
+    B -->|belegt| C([3])
+    B -->|frei| D[["Daten\nsenden\n1"]]
+    D -->|Kollision\nentdeckt| E([2])
+    D -->|keine\nKollision| F(((0)))
+    C --> B
+    E --> B
+    D --> D
+
+```
+
+1.
+2.
+3.
+
+## 29. Sie wollen einen Rahmen mit einer Gesamtlänge von 128 Byte übertragen. Die effektive Übertragungsrate beträgt $10^7$ bit/sec. Die Ausbreitungsgeschwindigkeit des Signals im Medium beträgt $2 \cdot 10^8 \frac{m}{sec}$.
+
+### (a) Wie groß ist die maximale Leitungslänge, auf der Sie eine Kollision unter Verwendung von CSMA/CD als Medienzugriffsverfahren zuverlässig erkennen können (inkl. Rechnung)? Nehmen Sie ein idealisiertes Medium unter Vernachlässigung z.B. der Dämpfung an.
+
+Hinweis: Sie können die Rückseite für Notizen zur Rechnung nutzen.
+
+**maximale Leitungslänge:**
+
+### (b) Wie verändert sich die maximal mögliche Leitungslänge zur Kollisionserkennung, wenn die effektive Übertragungsrate erhöht wird?
+
+---
+
+# IX. Von Signalen zu Bitströmen
+
+## 30. Im Folgenden finden Sie leere Koordinatensysteme zur Visualisierung von Signalmodulation. Zeichnen Sie in den Koordinatensystemen jeweils ein Beispiel der geforderten Modulationsart, sodass die Bitfolge `1001` übertragen wird.
+
+Hinweis: Wie eine logische 1 bzw. 0 kodiert wird, ist für jedes Modulationsverfahren frei wählbar.
+
+### (a) Amplituden-Modulation
+
+```mermaid
+%%{init: {'theme': 'dark'}}%%
+
+xychart-beta
+
+title "Signal vs Zeit"
+
+x-axis Zeit
+
+y-axis Signal
+
+line [0, 0]
+
+```
+
+In vier Abschnitte geteilt 1 | 0 | 0 | 1
+
+> [!info] Klappe Variablen und Funktion zur Seite und scrolle raus falls nötig
+
+<iframe src="https://www.geogebra.org/calculator/zvr2vryp?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+### (b) Frequenz-Modulation
+
+<iframe src="https://www.geogebra.org/calculator/wmvwe7un?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+### (c) Phasen-Modulation
+
+<iframe src="https://www.geogebra.org/calculator/wmvwe7un?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+## 31. Wie viele Bits pro Signalschritt werden übertragen, wenn 16 Signalzustände (Symbole) unterscheidbar sind? Wie verhalten sich somit Bit- und Baudrate?
+
+---
+
+# X. Von Signalen zu Bitströmen
+
+## 32. Gegeben seien die obere Grenzfrequenz $f_o = 2,1 GHz$ sowie die untere Grenzfrequenz $f_u = 2,8 GHz$ eines idealen Mediums.
+
+### (a) Wie hoch ist die Bandbreite des Mediums?
+
+### (b) Wie hoch muss $f_abtast$ gemäß dem Abtasttheorem von Shannon und Nyquist für zeitdiskrete Signale sein?
+
+---
+
+# XI. Cyclic Redundancy Check
+
+## 33. Gegeben sei das Generatorpolynom $G = x^3 + x + 1$.
+
+### (a) Durch wie viele Bits wird G bei CRC repräsentiert?
+
+### (b) Es soll die Nachricht `11 00 11` CRC-geschützt übertragen werden. Berechnen Sie die zu übertragende Bitfolge (inkl. CRC-Prüfsumme!) unter der Verwendung des Generatorpolynoms G.
+
+**zu übertragende Bitfolge:**
+
+### (c) Nehmen Sie an, dass Sie die CRC-geschützte Bitfolge `10 01 11 00` empfangen haben. Zeigen Sie, dass die empfangene Bitfolge unter Verwendung des Generatorpolynoms G korrekt ist (inkl. Rechnung). Markieren Sie in Ihrer Rechnung die Stelle, an der der Empfänger die Korrektheit ablesen kann.
 
 <!-- Modal START -->
 <div id="myModal" class="modal">
