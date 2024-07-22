@@ -8,7 +8,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Sunday, 14. July 2024, 19:39
-date modified: Friday, 19. July 2024, 11:00
+date modified: Monday, 22. July 2024, 19:00
 ---
 
 # ISO-OSI-Modell
@@ -37,6 +37,8 @@ Das ISO-OSI-Modell (Open Systems Interconnection Model) ist ein konzeptionelles 
 >   - A D K T V S B
 >     - **"Alle Daten Können Täglich Viele Server Beschäftigen."**
 >     - "**An**nas **Da**ch **Ko**stet **Tr**otz **Ve**rschiedener **Si**cherungen **Bi**llig."
+
+![img](https://www.black-box.de/_AppData/cms/image/PageElements/Tehnical/UKosimodel.gif)
 
 ## Schichten des ISO-OSI-Modells
 
