@@ -7,7 +7,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Friday, 19. July 2024, 09:20
-date modified: Sunday, 21. July 2024, 02:01
+date modified: Monday, 22. July 2024, 15:41
 ---
 
 # Vorlesung: TCP-Sequenznummern und IP-Subnetting
@@ -414,8 +414,7 @@ comments powered by Disqus.
       If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
     </p>
     <p class="modal-text">
-      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
-    </p>
+      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> Please note that these are my own notes and solutions, and I cannot guarantee the complete accuracy of all solutions as I am still a student myself.
   </div>
 </div>
 

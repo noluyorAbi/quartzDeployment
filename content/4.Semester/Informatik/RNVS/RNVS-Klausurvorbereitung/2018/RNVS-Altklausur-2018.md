@@ -1287,7 +1287,7 @@ In der Amplitudenmodulation (AM) wird die Amplitude des Trägersignals veränder
 - Logische 1: Amplitude
 - Logische 0: 0
 
-<iframe " src="https://www.geogebra.org/calculator/zvr2vryp?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0" ></iframe>
+<iframe src="https://www.geogebra.org/calculator/zvr2vryp?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0" ></iframe>
 
 ### (b) Frequenz-Modulation
 
@@ -1295,8 +1295,6 @@ In der Frequenzmodulation (FM) wird die Frequenz des Trägersignals verändert, 
 
 - Logische 1: Hohe Frequenz
 - Logische 0: Niedrige Frequenz
-
-> [!bug] If you find yourself scrolled down to this point, it's likely due to the GeoGebra iframes. I haven't found a fix for this issue yet. Please just scroll back up and continue as if nothing happened.
 
 <iframe src="https://www.geogebra.org/calculator/y442mh5w?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0" ></iframe>
 
@@ -1307,7 +1305,7 @@ In der Phasenmodulation (PM) wird die Phase des Trägersignals verändert, um In
 - Logische 1: Phasensprung von 180°
 - Logische 0: Keine Phasenänderung
 
-<iframe " src="https://www.geogebra.org/calculator/wmvwe7un?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0" "></iframe>
+<iframe  src="https://www.geogebra.org/calculator/wmvwe7un?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0" ></iframe>
 
 ## 31. Wie viele Bits pro Signalschritt werden übertragen, wenn 16 Signalzustände (Symbole) unterscheidbar sind? Wie verhalten sich somit Bit- und Baudrate?
 
@@ -1440,53 +1438,7 @@ $\Longrightarrow$ Somit ist die Bitfolge fehlerfrei
 
 <img src="https://cdn.wikirby.com/1/10/KRtDLD_Sleep.png">
 
-<!-- Modal START -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <p class="modal-text">
-      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
-    </p>
-    <p class="modal-text">
-      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> I manage this project alongside my studies, with all materials handwritten by me trying to help others understand challenging concepts.
-    </p>
-  </div>
-</div>
-
-<script>
-  // JavaScript to display the modal on page load
-  document.addEventListener('DOMContentLoaded', function() {
-    // Generate a random number between 1 and 1
-    // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
-    const randomNumber = Math.floor(Math.random() * 1) + 1; 
-    // console.log(randomNumber)
-    if (randomNumber === 1) {
-      setTimeout(function() {
-        const modal = document.getElementById('myModal');
-        if (modal) {
-          modal.classList.add('show');
-        }
-      }, 1000); // Adjust the delay as needed
-
-      const closeModal = document.getElementById('closeModal');
-      if (closeModal) {
-        closeModal.addEventListener('click', function() {
-          const modal = document.getElementById('myModal');
-          if (modal) {
-            modal.classList.remove('show');
-          }
-        });
-      }
-    } else {
-      // Ensure the modal is hidden if the random number is not 1
-      const modal = document.getElementById('myModal');
-      if (modal) {
-        modal.style.display = 'none';
-      }
-    }
-  });
-</script>
-<!-- Modal END -->
+<stle>
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
@@ -1532,3 +1484,50 @@ comments powered by Disqus.
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 <!-- DISQUS SCRIPT COMMENT END -->
+
+<!-- Modal START -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <p class="modal-text">
+      If MyUniNotes has been helpful and you’d like to support my efforts, <span class="modal-highlight"> you can contribute with a donation: <a class="modal-dono-link" href="https://paypal.me/myuninotes4u">Donate via PayPal</a> :) </span> Your support will help me continue improving the content, but there is no obligation to donate.
+    </p>
+    <p class="modal-text">
+      <span class="modal-highlight">MyUniNotes is a personal, non-revenue project as I believe in accessible education for everyone.</span> Please note that these are my own notes and solutions, and I cannot guarantee the complete accuracy of all solutions as I am still a student myself.
+  </div>
+</div>
+
+<script>
+  // JavaScript to display the modal on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Generate a random number between 1 and 1
+    // Wanted it to load with a adjustable probability for every page load but did not work, as DOM is loaded only once. Therefore now loading it every time website is visited and DOM is loaded.
+    const randomNumber = Math.floor(Math.random() * 1) + 1; 
+    // console.log(randomNumber)
+    if (randomNumber === 1) {
+      setTimeout(function() {
+        const modal = document.getElementById('myModal');
+        if (modal) {
+          modal.classList.add('show');
+        }
+      }, 1000); // Adjust the delay as needed
+
+      const closeModal = document.getElementById('closeModal');
+      if (closeModal) {
+        closeModal.addEventListener('click', function() {
+          const modal = document.getElementById('myModal');
+          if (modal) {
+            modal.classList.remove('show');
+          }
+        });
+      }
+    } else {
+      // Ensure the modal is hidden if the random number is not 1
+      const modal = document.getElementById('myModal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+  });
+</script>
+<!-- Modal END -->
