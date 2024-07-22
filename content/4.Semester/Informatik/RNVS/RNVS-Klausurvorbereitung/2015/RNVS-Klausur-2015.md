@@ -6,6 +6,8 @@ tags:
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
+date created: Monday, 22. July 2024, 17:54
+date modified: Monday, 22. July 2024, 18:32
 ---
 
 # Gedächtnisprotokoll der Klausur zur Vorlesung Rechnernetze
@@ -58,86 +60,85 @@ Maximal 80 Punkte erreichbar.
 ### Hinweise:
 
 - Jede falsche oder zu viel gegebene Antwort führt zu Punktabzug.
-- Bei den Mehrfachauswahl-Fragen können mehr als eine Antwort richtig sein.
+- ei den Mehrfachauswahl-Fragen können mehr als eine Antwort richtig sein.
 
 # I. Multiple Choice
 
 <Verschiedene Fragen zu ISO/OSI-Schichten, …>
 
-Hier sind einige Multiple-Choice-Fragen zum Thema ISO/OSI-Schichten:
+## Hier sind einige Multiple-Choice-Fragen zum Thema ISO/OSI-Schichten:
 
-1. Welche der folgenden Schichten gehört nicht zum OSI-Modell?
+### 1. Welche der folgenden Schichten gehört nicht zum OSI-Modell?
 
-   - a) Anwendungsschicht
-   - b) Transportschicht
-   - c) Steuerungsschicht
-   - d) Sicherungsschicht
+- a) Anwendungsschicht
+- b) Transportschicht
+- c) Steuerungsschicht
+- d) Sicherungsschicht
 
-2. Auf welcher Schicht des OSI-Modells wird Routing durchgeführt?
+### 2. Auf welcher Schicht des OSI-Modells wird Routing durchgeführt?
 
-   - a) Anwendungsschicht
-   - b) Transportschicht
-   - c) Netzwerkschicht
-   - d) Sicherungsschicht
+- a) Anwendungsschicht
+- b) Transportschicht
+- c) Netzwerkschicht
+- d) Sicherungsschicht
 
-3. Welche Protokolle gehören zur Transportschicht des OSI-Modells?
+### 3. Welche Protokolle gehören zur Transportschicht des OSI-Modells?
 
-   - a) TCP und UDP
-   - b) IP und ICMP
-   - c) HTTP und FTP
-   - d) Ethernet und PPP
+- a) TCP und UDP
+- b) IP und ICMP
+- c) HTTP und FTP
+- d) Ethernet und PPP
 
-4. Welche Schicht des OSI-Modells ist für die Datenverschlüsselung zuständig?
+### 4. Welche Schicht des OSI-Modells ist für die Datenverschlüsselung zuständig?
 
-   - a) Sitzungsschicht
-   - b) Präsentationsschicht
-   - c) Netzwerkschicht
-   - d) Anwendungsschicht
+- a) Sitzungsschicht
+- b) Präsentationsschicht
+- c) Netzwerkschicht
+- d) Anwendungsschicht
 
-5. Welche der folgenden Funktionen wird von der Sicherungsschicht bereitgestellt?
+### 5. Welche der folgenden Funktionen wird von der Sicherungsschicht bereitgestellt?
 
-   - a) Pfadbestimmung und Routing
-   - b) Datenflusskontrolle und Fehlererkennung
-   - c) Datenkompression und Verschlüsselung
-   - d) Netzwerkzugriff und Datenübertragung
+- a) Pfadbestimmung und Routing
+- b) Datenflusskontrolle und Fehlererkennung
+- c) Datenkompression und Verschlüsselung
+- d) Netzwerkzugriff und Datenübertragung
 
-6. Auf welcher Schicht des OSI-Modells arbeitet ein Switch hauptsächlich?
+### 6. Auf welcher Schicht des OSI-Modells arbeitet ein Switch hauptsächlich?
 
-   - a) Physikalische Schicht
-   - b) Sicherungsschicht
-   - c) Netzwerkschicht
-   - d) Transportschicht
+- a) Physikalische Schicht
+- b) Sicherungsschicht
+- c) Netzwerkschicht
+- d) Transportschicht
 
-7. Welches der folgenden Protokolle arbeitet auf der Anwendungsschicht des OSI-Modells?
+### 7. Welches der folgenden Protokolle arbeitet auf der Anwendungsschicht des OSI-Modells?
 
-   - a) FTP
-   - b) IP
-   - c) ARP
-   - d) PPP
+- a) FTP
+- b) IP
+- c) ARP
+- d) PPP
 
-8. Die Hauptaufgabe der Netzwerkschicht ist:
+### 8. Die Hauptaufgabe der Netzwerkschicht ist:
 
-   - a) Sicherstellung der fehlerfreien Datenübertragung
-   - b) Steuerung der logischen Pfade zwischen Sender und Empfänger
-   - c) Verwaltung von Netzwerkverbindungen
-   - d) Übersetzung von Daten in ein standardisiertes Format
+- a) Sicherstellung der fehlerfreien Datenübertragung
+- b) Steuerung der logischen Pfade zwischen Sender und Empfänger
+- c) Verwaltung von Netzwerkverbindungen
+- d) Übersetzung von Daten in ein standardisiertes Format
 
-9. Welche der folgenden Aussagen zur Präsentationsschicht ist korrekt?
+### 9. Welche der folgenden Aussagen zur Präsentationsschicht ist korrekt?
 
-   - a) Sie ist für die physikalische Übertragung der Daten zuständig.
-   - b) Sie stellt sicher, dass die Daten in einem anwendungsgerechten Format vorliegen.
-   - c) Sie übernimmt die Datenflusskontrolle zwischen Endgeräten.
-   - d) Sie ist für das Routing von Datenpaketen verantwortlich.
+- a) Sie ist für die physikalische Übertragung der Daten zuständig.
+- b) Sie stellt sicher, dass die Daten in einem anwendungsgerechten Format vorliegen.
+- c) Sie übernimmt die Datenflusskontrolle zwischen Endgeräten.
+- d) Sie ist für das Routing von Datenpaketen verantwortlich.
 
-10. Welches Gerät arbeitet typischerweise auf der physikalischen Schicht des OSI-Modells?
-    - a) Router
-    - b) Switch
-    - c) Hub
-    - d) Firewall
+### 10. Welches Gerät arbeitet typischerweise auf der physikalischen Schicht des OSI-Modells?
 
-> [!]
->
-> ### Lösungen
+- a) Router
+- b) Switch
+- c) Hub
+- d) Firewall
+
+> [!success]- Lösung
 >
 > 1. **c) Steuerungsschicht**
 >    - Erklärung: Die Steuerungsschicht ist keine der sieben Schichten des OSI-Modells. Die sieben Schichten sind: Anwendungsschicht, Präsentationsschicht, Sitzungsschicht, Transportschicht, Netzwerkschicht, Sicherungsschicht und physikalische Schicht.
@@ -184,19 +185,69 @@ Hier sind einige Multiple-Choice-Fragen zum Thema ISO/OSI-Schichten:
 
 ## 8. Betrachten Sie ein Netz bestehend aus den Endsystemen `E1` und `E2`, sowie den Routern `R1` und `R2`. Die Leitungen sind mit ihren maximum transfer units beschriftet.
 
+```mermaid
+graph LR
+    subgraph Endsystem
+        E1["E1"]
+    end
+    subgraph Router
+        R1["R1"]
+        R2["R2"]
+    end
+    subgraph Endsystem
+        E2["E2"]
+    end
+
+    E1 -- "2500 Bytes" --> R1
+    R1 -- "280 Bytes" --> R2
+    R2 -- "1500 Bytes" --> E2
+
+    style E1 fill:#ffffff,stroke:#000000,stroke-width:2px
+    style R1 fill:#ffffff,stroke:#000000,stroke-width:2px,shape:circle
+    style R2 fill:#ffffff,stroke:#000000,stroke-width:2px,shape:circle
+    style E2 fill:#ffffff,stroke:#000000,stroke-width:2px
+
+```
+
 ### a. Nennen Sie die Komponente(n), die ein 1000 Byte langes IPv6-Paket von `E1` an `E2` fragmentieren!
 
 ### b. `E1` möchte ein IPv6 Paket mit 600 Bytes Nutzdaten an `E2` senden. Header (40 Byte) Nutzdaten (600 Byte)
 
+```plaintext
++--------------------+---------------------+
+| Header (40 Byte)   | Nutzdaten (600 Byte)|
++--------------------+---------------------+
+
+```
+
+$$
+\begin{array}{|c|c|}
+\hline
+\text{Header (40 Byte)} & \text{Nutzdaten (600 Byte)} \\
+\hline
+\end{array}
+$$
+
 ### Zeichnen Sie die Fragmente so wie `E2` sie empfängt. Geben Sie dabei Kopf- und Nutzdatenlänge analog zur Darstellung des ursprünglichen Pakets an! Hinweis: Ein IPv6 Header inklusive Fragmentation-Header ist 48 Byte lang.
+
+| Fragmentnummer | Fragment |
+| -------------- | -------- |
+| 1              |          |
+| 2              |          |
+| 3              |          |
 
 # IV. Vielfachzugriff
 
-Die Abbildung zeigt drei Rechner, die über einen Bus miteinander verbunden sind. Zum Medienzugriff wird ein statischer Zeitmultiplex eingesetzt, der die gesamte verfügbare Zeit gleichmäßig in Intervalle aufteilt.
-
-`A` möchte 3 Rahmen an `B` senden, `B` möchte 3 Rahmen an `C` senden und `C` möchte 3 Rahmen an `A` senden. Alle Rechner sind gleichzeitig sendebereit, ein Rahmen mit Nutzdaten ist exakt ein Sendeintervall groß und zu jedem Zeitpunkt kann nur ein einzelner Rechner senden.
+> [!note] Aufgabenstellung
+> Die Abbildung zeigt drei Rechner, die über einen Bus miteinander verbunden sind. Zum Medienzugriff wird ein statischer Zeitmultiplex eingesetzt, der die gesamte verfügbare Zeit gleichmäßig in Intervalle aufteilt.
+>
+> `A` möchte 3 Rahmen an `B` senden, `B` möchte 3 Rahmen an `C` senden und `C` möchte 3 Rahmen an `A` senden. Alle Rechner sind gleichzeitig sendebereit, ein Rahmen mit Nutzdaten ist exakt ein Sendeintervall groß und zu jedem Zeitpunkt kann nur ein einzelner Rechner senden.
 
 ## 9. Tragen sie an den Zeitstrahl mit den Absendern beschriftete Intervalle an, zu denen die Rechner senden!
+
+```plaintext
++-------------------------------------------------------->
+```
 
 ## 10. Die korrekte Übertragung der Rahmen soll nun quittiert werden. Gehen Sie davon aus, dass keine Übertragungsfehler auftreten! Angenommen jeder Rechner versendet nach Erhalt eines Rahmens nächstmöglich eine explizite Quittungs-PDU, die genau so lang wie die zu quittierende Nachricht ist.
 
@@ -206,17 +257,25 @@ Die Abbildung zeigt drei Rechner, die über einen Bus miteinander verbunden sind
 
 ### c. `A` beginnt als erster mit der Datenübertragung. Welcher ist der letzte Rechner, der einen Rahmen verschickt und an wen ist dieser adressiert?
 
-### Sender: Empfänger:
+Sender:
+
+Empfänger:
 
 # V. Ethernet, CSMA
 
-## 11. Gegeben sei ein Ethernet mit einer Übertragungsrate von $10 \text{ GBit/s}$, einer Leitungslänge von $2000 \text{m}$ und einer Signalgeschwindigkeit von $2 \cdot 10^8 \text{m/s}$. Berechnen Sie die minimale Rahmengröße, bei der CSMA/CD als Vielfachzugriffsverfahren noch einsetzbar wäre. Geben Sie das Ergebnis in Bytes (Oktetten), sowie den Rechenweg an!
+## 11.
 
-Hinweis: $1 \text{ GBit} = 10^9 \text{ Bits}$
+> [!note] Aufgabenstellung
+> Gegeben sei ein Ethernet mit einer Übertragungsrate von $10 \text{ GBit/s}$, einer Leitungslänge von $2000 \text{m}$ und einer Signalgeschwindigkeit von $2 \cdot 10^8 \text{m/s}$. Berechnen Sie die minimale Rahmengröße, bei der CSMA/CD als Vielfachzugriffsverfahren noch einsetzbar wäre. Geben Sie das Ergebnis in Bytes (Oktetten), sowie den Rechenweg an!
+>
+> Hinweis: $1 \text{ GBit} = 10^9 \text{ Bits}$
+
+---
 
 # VI. Cyclic Redundancy Check
 
-Gegeben sei das Generatorpolynom $G = x^3 + 1$
+> [!note] Aufgabenstellung
+> Gegeben sei das Generatorpolynom $G = x^3 + 1$
 
 ## 12. Welche Länge hat das Generatorpolynom $G$ in Bits?
 
@@ -224,11 +283,75 @@ Gegeben sei das Generatorpolynom $G = x^3 + 1$
 
 ## 14. Beim Empfänger kommt die Bitfolge $10011001$ an. Zeigen Sie (mit Rechnung), dass diese korrekt übertragen wurde und markieren Sie die Stelle, an der der Empfänger weiß, dass die Übertragung fehlerfrei war und begründen Sie kurz.
 
+---
+
 # VII. TCP
 
 ## 15. Folgendes Diagramm beschreibt einen HTTP-Anfrage-Antwort-Dialog zwischen einem Client und einem Server inkl. des TCP Auf- und Abbaus. Die Anfrage sei 50 Byte groß, die Antwort 1000 Byte.
 
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+
+    Client->>Server:
+    Note right of Server: [ ] [ ] <br/> S0
+
+    Server-->>Client:
+    Note left of Client: [ ] [ ] <br/> C1
+
+    Client->>Server:
+    Note right of Server: [ ] [ ] <br/> S1
+
+    Server-->>Client:
+    Note left of Client: [ ] [ ] <br/> C2
+
+    Client->>Server:
+    Note right of Server: [ ] [ ] <br/> S2
+
+    Server-->>Client:
+    Note left of Client: [ ] [ ] <br/> C3
+
+    Client->>Server:
+    Note right of Server:
+
+    Server-->>Client:
+    Note left of Client: [ ] [ ] <br/> C4
+
+```
+
 ### a. Tragen Sie in das Sequenzdiagramm alle gesendeten TCP-Flags ein (und nichts sonst)!
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+
+    Client->>Server:
+    Note right of Server: [ ] [ ] <br/> S0
+
+    Server-->>Client:
+    Note left of Client: [ ] [ ] <br/> C1
+
+    Client->>Server:
+    Note right of Server: [ ] [ ] <br/> S1
+
+    Server-->>Client:
+    Note left of Client: [ ] [ ] <br/> C2
+
+    Client->>Server:
+    Note right of Server: [ ] [ ] <br/> S2
+
+    Server-->>Client:
+    Note left of Client: [ ] [ ] <br/> C3
+
+    Client->>Server:
+    Note right of Server:
+
+    Server-->>Client:
+    Note left of Client: [ ] [ ] <br/> C4
+
+```
 
 ### Zu Beginn der Übertragung stehe der Sequenznummernzähler des Clients auf `5050`, der des Servers auf `7070`.
 
@@ -258,21 +381,29 @@ Gegeben sei das Generatorpolynom $G = x^3 + 1$
 
 Gegeben sind die vollständigen Daten, die ein SMTP-Server während einer SMTP-Sitzung empfängt:
 
-- `O1 Helo nm.ifi.lmu.de`
-- `O2 Mail From: <root@nm.ifi.lmu.de>`
-- `O3 Rcpt To: <manager@nm.ifi.lmu.de>`
-- `O4 Data`
-- `O5 Reply-To: <operators@nm.ifi.lmu.de>`
-- `O6 From: <admin@nm.ifi.lmu.de>`
-- `O7 To: <manager@nm.ifi.lmu.de>`
-- `O8 Subject: Was ist das`
-- `O9`
-- `O10 was ist das?`
-- `O11`
-- `O12 .`
-- `O13 Quit`
+> [!note]
+>
+> Gegeben sind die vollständigen Daten, die ein SMTP-Server während einer SMTP-Sitzung empfängt:
+>
+> | O   | Daten                                 |
+> | --- | ------------------------------------- |
+> | 1   | Helo nm.ifi.lmu.de                    |
+> | 2   | Mail From: `<root@nm.ifi.lmu.de>`     |
+> | 3   | Rcpt To: `<manager@nm.ifi.lmu.de>`    |
+> | 4   | Data                                  |
+> | 5   | Reply-To: `<operators@nm.ifi.lmu.de>` |
+> | 6   | From: `<admin@nm.ifi.lmu.de>`         |
+> | 7   | To: `<manager@nm.ifi.lmu.de>`         |
+> | 8   | Subject: Was ist das                  |
+> | 9   |                                       |
+> | 10  | was ist das?                          |
+> | 11  |                                       |
+> | 12  | .                                     |
+> | 13  | Quit                                  |
 
-## 17. Markieren Sie genau die Zeilen, die SMTP-Protokollsteuerinformationen enthalten! Hinweis: Es zählt genau die Markierung in den vorgegebenen Kreisen!
+## 17. Markieren Sie genau die Zeilen, die SMTP-Protokollsteuerinformationen enthalten!
+
+Hinweis: Es zählt genau die Markierung in den vorgegebenen Kreisen!
 
 ## 18. An wen soll eine Antwort adressiert werden?
 
@@ -286,7 +417,7 @@ Gegeben sind die vollständigen Daten, die ein SMTP-Server während einer SMTP-S
 
 # X. Comic: So funktioniert das Internet
 
-Bearbeitet nach: [How Internet Works](http://images.forwallpaper.com/files/thumbs/preview/111/1110896__how-internet-works_p.jpg)
+[![mt4dqzko.png](https://i.postimg.cc/xjG8ZSmk/mt4dqzko.png)](https://postimg.cc/Cd1wZXmY)
 
 ## 23. Wie muss das Feld `a)` in Bild 3 beschriftet werden?
 
@@ -367,15 +498,15 @@ comments powered by Disqus.
 
 <!-- DISQUS RECOMMENDATION END -->
 
-<hr style="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; margin-bottom: 5rem;">
+<hr tle="border: none; height: 2px; background: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0); margin-top: 4rem; gin-bottom: 5rem;">
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
