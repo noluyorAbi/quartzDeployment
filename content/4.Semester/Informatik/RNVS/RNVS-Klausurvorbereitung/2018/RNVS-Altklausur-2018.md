@@ -7,7 +7,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Sunday, 21. July 2024, 23:36
-date modified: Monday, 22. July 2024, 04:54
+date modified: Monday, 22. July 2024, 17:04
 ---
 
 # Rechnernetze und verteilte Systeme
@@ -394,7 +394,7 @@ $$
 
 Die IPv4-Adresse des Rechners, an den die HTTP-Anfrage gestellt wird, ist `141.84.94.144`. Diese Adresse wurde als Ergebnis der DNS-Anfrage erhalten.
 
-> [!bug] Unsicher ob `141.84.94.144` oder `141.40.9.211`
+> [!unsure] Unsicher ob `141.84.94.144` oder `141.40.9.211`
 >
 > Gerne per Kommentar unten ausbessern falls falsch
 >
@@ -678,34 +678,91 @@ $$
 
 ### (a) Zeichnen Sie die Fragmente unter Angabe von Kopf- und Nutzdatenlänge (wie in der Aufgabenstellung), in der Reihenfolge, in der sie von R1 versendet werden!
 
-- Kleinster Kanal ist 280 Bytes
-- 20 Bytes davon sind Header und nicht Nutzdaten also
+> [!info] Aufgabe wurde ausgebessert nach Input von Komillitonen. Danke! 🩵
 
-$$
-280 \text{ Byte}-20 \text{ Byte}=260 \text{ Byte}
-$$
+- **Originalpaket:** | Header (20 Byte) | Nutzdaten (600 Byte) |
+- **Kleinster Kanal:** 280 Bytes
+- **Header:** 20 Bytes
+- **Maximale Nutzdaten pro Fragment:** $280 - 20 = 260$ Bytes
 
-Nun zum Paket selbst:
+Um sicherzustellen, dass die Nutzdatenlänge durch 8 teilbar ist, können wir maximal 256 Bytes Nutzdaten pro Fragment verwenden
 
-- 20 wegen Header
+Um sicherzustellen, dass die Nutzdatenlänge durch 8 teilbar ist, können wir maximal 256 Bytes Nutzdaten pro Fragment verwenden. Der Grund dafür ist die Offset-Fragmentierung
+
+Um die größte mögliche Zahl kleiner oder gleich 260 zu finden, die durch 8 teilbar ist, gehen wir wie folgt vor:
 
 $$
 \begin{aligned}
-600 -20 &= 580 \\
-\lfloor 580 \div 260 \rfloor &= 2 \\
-580 - 520 &=60 \\
+&\text{Maximale Länge eines Fragments:} \ 280 \ \text{Bytes} \\
+&\text{Header-Länge:} \ 20 \ \text{Bytes} \\
+&\text{Maximale Nutzdaten pro Fragment:} \ 280 - 20 = 260 \ \text{Bytes} \\
+&\text{Größte durch 8 teilbare Zahl } \leq 260: \ \left\lfloor \frac{260}{8} \right\rfloor \times 8 = 256
 \end{aligned}
 $$
 
-- $\lfloor 580 \div 260 \rfloor = 2$ berechnet wie viele Fragmente wir komplett füllen können
-- $580 - 520 =20$ Für die restlichen Byte
-- Header Länge ist immer 20
+Berechne:
+
+$$
+\begin{aligned}
+\lfloor 600 \div 256 \rfloor &= 2 \\
+600 - (2 \cdot 256) &=88 \\
+\end{aligned}
+$$
+
+**Fragmente:**
+
+1. **Erstes Fragment:**
+   - Header-Länge: 20 Bytes
+   - Nutzdatenlänge: 256 Bytes
+2. **Zweites Fragment:**
+   - Header-Länge: 20 Bytes
+   - Nutzdatenlänge: 256 Bytes
+3. **Drittes Fragment:**
+   - Header-Länge: 20 Bytes
+   - Nutzdatenlänge: 88 Bytes (der Rest der Nutzdaten: $600 - 512 = 88$)
+
+**Korrigierte Tabelle der Fragmente:**
 
 | Fragmentnummer | Header-Länge | Nutzdatenlänge |
 | -------------- | ------------ | -------------- |
-| 1              | 20           | 260            |
-| 2              | 20           | 260            |
-| 3              | 20           | 60             |
+| 1              | 20           | 256            |
+| 2              | 20           | 256            |
+| 3              | 20           | 88             |
+
+> [!fail]- Falsche alte Lösung
+>
+> - Kleinster Kanal ist 280 Bytes
+> - 20 Bytes davon sind Header und nicht Nutzdaten also
+>
+> $$
+> 280 \text{ Byte}-20 \text{ Byte}=260 \text{ Byte}
+> $$
+>
+> Nun zum Paket selbst:
+>
+> - 20 wegen Header
+>
+> $$
+> \begin{aligned}
+> 600 -20 &= 580 \\
+> \lfloor 580 \div 260 \rfloor &= 2 \\
+> 580 - 520 &=60 \\
+> \end{aligned}
+> $$
+>
+> - $\lfloor 580 \div 260 \rfloor = 2$ berechnet wie viele Fragmente wir komplett füllen können
+> - $580 - 520 =20$ Für die restlichen Byte
+> - Header Länge ist immer 20
+>
+> | Fragmentnummer | Header-Länge | Nutzdatenlänge |
+> | -------------- | ------------ | -------------- |
+> | 1              | 20           | 260            |
+> | 2              | 20           | 260            |
+> | 3              | 20           | 60             |
+>
+> **Fehler:** In der alten Lösung wurde nicht berücksichtigt, dass die Nutzdatenlänge der Fragmente durch 8 teilbar sein muss. Dies ist notwendig, um die Anforderungen des Fragment-Offset-Felds im IPv4-Header zu erfüllen.
+>
+> **Grund:** Das Fragment-Offset-Feld im IPv4-Header gibt die Position des Fragments in Einheiten von 8-Byte-Blöcken (64 Bits) an. Daher muss die Nutzdatenlänge jedes Fragments (außer des letzten Fragments) durch 8 teilbar sein, um sicherzustellen, dass die Offsets korrekt berechnet und interpretiert werden können, um die Fragmente in der richtigen Reihenfolge wieder zusammenzusetzen.
 
 ### (b) Wie erkennt R2 beim ersten Fragment, dass es sich um ein Fragment handelt, dass es sich um ein Fragment handelt (und nicht um ein „vollständiges“ IPv4-Paket)?
 
@@ -821,7 +878,7 @@ $$
 
 ### (b) Schreiben Sie die vier entstehenden Subnetze in CIDR-Notation auf!
 
-> [!bug] Bin mir hier unsicher, gerne Kommentar falls Lösung bekannt
+> [!unsure] Bin mir hier unsicher, gerne Kommentar falls Lösung bekannt
 
 |     | CIDR-Notation |
 | --- | ------------- |
@@ -916,7 +973,7 @@ Benutzen Sie hierfür die Subnetze `fd00::a:0/112`, `fd00::b:0/112` sowie `fd00:
 $$
 \begin{aligned}
 \text{Ziel } \text{Subnetz}&: \quad :: \\
-\text{Erreichbar } \text{über}&:  \text{fd00::f:0}
+\text{Erreichbar } \text{über}&: \text{fd00::f:0}
 \end{aligned}
 $$
 
@@ -1305,7 +1362,7 @@ In der Phasenmodulation (PM) wird die Phase des Trägersignals verändert, um In
 - Logische 1: Phasensprung von 180°
 - Logische 0: Keine Phasenänderung
 
-<iframe  src="https://www.geogebra.org/calculator/wmvwe7un?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0" ></iframe>
+<iframe src="https://www.geogebra.org/calculator/wmvwe7un?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0" ></iframe>
 
 ## 31. Wie viele Bits pro Signalschritt werden übertragen, wenn 16 Signalzustände (Symbole) unterscheidbar sind? Wie verhalten sich somit Bit- und Baudrate?
 
