@@ -14,10 +14,6 @@ date modified: Monday, 22. July 2024, 18:32
 
 ## 15.07.2015
 
-### Prof. Dr. Kranzlmüller
-
-Maximal 80 Punkte erreichbar.
-
 ### Notenschlüssel:
 
 | Note | Punkte |
