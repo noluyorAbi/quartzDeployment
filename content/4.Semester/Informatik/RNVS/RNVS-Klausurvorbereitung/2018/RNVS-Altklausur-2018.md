@@ -7,7 +7,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Sunday, 21. July 2024, 23:36
-date modified: Monday, 22. July 2024, 17:35
+date modified: Wednesday, 24. July 2024, 18:43
 ---
 
 # Rechnernetze und verteilte Systeme
@@ -21,14 +21,14 @@ date modified: Monday, 22. July 2024, 17:35
 **Welche der folgenden Aussagen zum OSI-Referenzmodell sind korrekt?**
 
 - [ ] Die ISO/OSI-Schichten 1 bis 4 enthalten anwendungsorientierte Protokolle.
-- [x] Aufgabe von Protokollen der Transportschicht ist es, eine Ende-zu-Ende-Kommunikation zu ermöglichen.
+- [ ] Aufgabe von Protokollen der Transportschicht ist es, eine Ende-zu-Ende-Kommunikation zu ermöglichen.
 - [x] Für Wegwahl/Routing sind Protokolle der Vermittlungsschicht zuständig.
 - [x] Für zwischengelagerte Transitsysteme sind die ISO/OSI-Schichten 1 bis 3 relevant.
 
 **Erläuterung:**
 
 - Die ISO/OSI-Schichten 1 bis 4 sind nicht anwendungsorientiert. Anwendungsorientierte Protokolle befinden sich in den Schichten 5 bis 7.
-- Die Transportschicht (Schicht 4) ist für die Ende-zu-Ende-Kommunikation verantwortlich.
+- Die Vermittlungsschicht (Schicht 3) ist für die Ende-zu-Ende-Kommunikation verantwortlich. (UDP zum Beispiel nicht Ende zu Ende)
 - Die Vermittlungsschicht (Schicht 3) kümmert sich um das Routing der Datenpakete.
 - Schichten 1 bis 3 sind relevant für Transitsysteme, die Daten von einem Netzwerk zum anderen weiterleiten.
 
@@ -569,14 +569,6 @@ $$
 $$
 DD
 $$
-
-> [!tip]- Erklärung (aufklappen)
->
-> **Erklärung:**
->
-> - Wenn der **Router** einen Rahmen an die **Ziel-IP 10.10.8.3** sendet, ist die **Ziel-MAC-Adresse** die MAC-Adresse des WWW-Servers im Netzwerk **10.10.8.0/24**.
-> - Die **MAC-Adresse** des WWW-Servers ist **00:30:05:79:55:0D**.
-> - Daher ist die **MAC-Adresse**, an die der Router den Rahmen sendet, **00:30:05:79:55:0D**.
 
 ## 18. Warum benötigen die Ports eines Routers IPv4-Adressen um Daten zwischen den Netzen übertragen zu können, die Ports eines Switches jedoch nicht?
 
@@ -1471,14 +1463,59 @@ $$
 
 ### (b) Es soll die Nachricht `11 00 11` CRC-geschützt übertragen werden. Berechnen Sie die zu übertragende Bitfolge (inkl. CRC-Prüfsumme!) unter der Verwendung des Generatorpolynoms G.
 
-**zu übertragende Bitfolge:** $11 00 11 10$
+> [!info] Aufgabe wurde ausgebessert nach Input von Komillitonen. Danke! 🩵
+>
+> - Uhrzeit hat mir nicht gut getan my bad
+
+```plaintext
+110011000 : 1011 =
+1011
+----
+01111
+ 1011
+ ----
+ 01001
+  1011
+  ----
+  001000
+    1011
+    ----
+    00110 → Rest ist 110
+```
+
+**zu übertragende Bitfolge:** $11 \ 00\ 11 \ 110$
 
 > [!info] Devs Notice: 404 Sleep not found
 >
 > - Es ist gerade 04:36 Uhr und ich habe den CRC-Alg hier schon ausführlich durchgeführt [[RNVS-Probeklausur-2024#Cyclic Redundancy Check RNVS-Blatt-12]]
 > - Das ganze Blatt hat mich mit Erklärungen und knapp 65.000 chars und 45-60min read time mehr Zeit gekostet als erwartet (~ 4-5hrs) und CRC ist relativ simpel aber nervig zum aufschreiben in ASCII Plaintext weswegen ich es jz auslasse
 >   <br>
-> - Es sollte als Ergebnis $11 00 11 10$ rauskommen
+> - Es sollte als Ergebnis $11 00 11 110$ rauskommen
+>   <br>
+> - **EDIT**: Habe die Berechnung nun im Nachhinein hinzugefügt, da die CRC-Fehlerhaft war
+
+$$
+\begin{aligned}
+110011 \cdot 2^{n} &= 110011000 \\
+n&= Grad \ von  \ G =3
+\end{aligned}
+$$
+
+```plaintext
+110011000 : 1011 =
+1011
+----
+01111
+ 1011
+ ----
+ 01001
+  1011
+  ----
+  001000
+    1011
+    ----
+    00110 → Rest ist 110
+```
 
 ### (c) Nehmen Sie an, dass Sie die CRC-geschützte Bitfolge `10 01 11 00` empfangen haben. Zeigen Sie, dass die empfangene Bitfolge unter Verwendung des Generatorpolynoms G korrekt ist (inkl. Rechnung). Markieren Sie in Ihrer Rechnung die Stelle, an der der Empfänger die Korrektheit ablesen kann.
 
