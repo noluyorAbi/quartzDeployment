@@ -7,21 +7,21 @@ fach:
 title: Studying made easier.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Wednesday, 24. July 2024, 19:16
+date modified: Wednesday, 24. July 2024, 19:25
 ---
 
 # 📚 Modules
 
-| Bereich        | Kurse                                                   | Status  |
-| -------------- | ------------------------------------------------------- | ------- |
-| **Informatik** | [[Datenbanksysteme (DBS)]]                              | done    |
-|                | [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/) | done    |
-|                | [[Formale Sprachen und Komplexität (FSK)]]              | active  |
-|                | [[Rechnernetze und Verteilte Systeme (RNVS)]]           | active  |
-| **Statistik**  | [[LiMo]]                                                | unsure  |
-|                | [[BaySta]]                                              | planned |
-| **Semester**   | [[3.Semester]]                                          | done    |
-|                | [[4.Semester]]                                          | active  |
+| Bereich        | Kurse                                                   | Status    |
+| -------------- | ------------------------------------------------------- | --------- |
+| **Informatik** | [[Datenbanksysteme (DBS)]]                              | done      |
+|                | [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/) | done      |
+|                | [[Formale Sprachen und Komplexität (FSK)]]              | active    |
+|                | [[Rechnernetze und Verteilte Systeme (RNVS)]]           | active    |
+| **Statistik**  | [[LiMo]]                                                | unsure    |
+|                | [[BaySta]]                                              | cancelled |
+| **Semester**   | [[3.Semester]]                                          | done      |
+|                | [[4.Semester]]                                          | active    |
 
 # ℹ️ About This Site
 

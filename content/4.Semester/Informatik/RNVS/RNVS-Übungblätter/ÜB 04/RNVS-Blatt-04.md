@@ -237,9 +237,6 @@ sequenceDiagram
 	S -->> E: Nachricht 2
     note right of E: Nachricht 2 kommt beschädigt an
 
-	S ->> E: Nachricht 2
-    note right of E: Nachricht 2 kommt beschädigt an
-
     S ->> E: Nachricht 2 (erneut)
     E ->> S: ACK 2
     S ->> E: Nachricht 3
