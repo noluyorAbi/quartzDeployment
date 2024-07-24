@@ -7,29 +7,8 @@ fach:
 title: Studying made easier.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Sunday, 21. July 2024, 23:35
+date modified: Wednesday, 24. July 2024, 19:16
 ---
-
-# ℹ️ About This Site
-
-This website serves as a centralized archive, offering you structured access to a wealth of study materials that I’ve gathered and written in the language of the module (mostly German). It’s designed to provide a clear, organized, and comprehensive resource for anyone interested in the intricacies of computer science, as seen through my personal academic lens. **All of these are my personal university notes I took during the semester**. If necessary, the website can be translated into any required language using a browser’s built-in translator.
-
-<p>If this site has been helpful, consider supporting me with a donation:
-<a href="https://www.paypal.com/paypalme/myuninotes4u">Donate via PayPal </a>
-</p>
-
-# 💬 Comments
-
-- Each chapter ends with a comment section for open, [[Comment Policy|respectful discussions]].
-- Readers are encouraged to share thoughts, feedback, and questions to enhance the content and community.
-- **If you notice any errors, whether code-wise or content-wise, please comment to inform me**.
-- **Guest commenting:**
-  - Click `Name` next to the Google icon.
-  - Click `I'd rather post as a guest` to comment without an account.
-  - Use a guest name and a gibberish email (e.g., `abc@def.com`) for posting.
-- Image upload function available for sharing complex equations, diagrams, and visual aids.
-
-<a href="#guestbook">Leave a comment on the Guestbook!</a>
 
 # 📚 Modules
 
@@ -43,6 +22,23 @@ This website serves as a centralized archive, offering you structured access to 
 |                | [[BaySta]]                                              | planned |
 | **Semester**   | [[3.Semester]]                                          | done    |
 |                | [[4.Semester]]                                          | active  |
+
+# ℹ️ About This Site
+
+This website serves as a centralized archive, offering you structured access to a wealth of study materials that I’ve gathered and written in the language of the module (mostly German). It’s designed to provide a clear, organized, and comprehensive resource for anyone interested in the intricacies of computer science, as seen through my personal academic lens. **All of these are my personal university notes I took during the semester**. If necessary, the website can be translated into any required language using a browser’s built-in translator.
+
+# 💬 Comments
+
+- Each chapter ends with a comment section for open, [[Comment Policy|respectful discussions]].
+- Readers are encouraged to share thoughts, feedback, and questions to enhance the content and community.
+- **If you notice any errors, whether code-wise or content-wise, please comment to inform me**.
+- **Guest commenting:**
+  - Click `Name` next to the Google icon.
+  - Click `I'd rather post as a guest` to comment without an account.
+  - Use a guest name and a gibberish email (e.g., `abc@def.com`) for posting.
+- Image upload function available for sharing complex equations, diagrams, and visual aids.
+
+<a href="#guestbook">Leave a comment on the Guestbook!</a>
 
 # 🔄 Website Update Graph
 
