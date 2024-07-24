@@ -7,7 +7,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Sunday, 21. July 2024, 23:36
-date modified: Wednesday, 24. July 2024, 18:43
+date modified: Wednesday, 24. July 2024, 18:50
 ---
 
 # Rechnernetze und verteilte Systeme
