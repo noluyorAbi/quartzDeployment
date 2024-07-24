@@ -8,7 +8,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Wednesday, 15. May 2024, 19:25
-date modified: Monday, 27. May 2024, 10:46
+date modified: Wednesday, 24. July 2024, 19:10
 ---
 
 # 1. Verbindungslose und verbindungsorientierte Kommunikation (H)
@@ -222,11 +222,21 @@ sequenceDiagram
     S ->> E: Nachricht 1
     note right of S: S schickt Nachricht 1 erneut
     E ->> S: ACK 1
+```
 
-    S ->> E: Nachricht 2
+```mermaid
+	sequenceDiagram
+    participant S as Sender
+    participant E as Empfänger
+
+    S ->> E: Nachricht 1
+    E ->> S: ACK 1
+
+	S -->> E: Nachricht 2
     note right of E: Nachricht 2 kommt beschädigt an
-    E --x S: NAK 2
-    note right of S: Sender empfängt NAK 2
+
+	S ->> E: Nachricht 2
+    note right of E: Nachricht 2 kommt beschädigt an
 
     S ->> E: Nachricht 2 (erneut)
     E ->> S: ACK 2
@@ -293,11 +303,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
