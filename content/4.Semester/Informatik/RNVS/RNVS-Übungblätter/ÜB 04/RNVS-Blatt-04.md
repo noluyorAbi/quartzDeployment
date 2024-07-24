@@ -196,9 +196,11 @@ sequenceDiagram
 
 ## (c) Zeichnen Sie ein Sequenzdiagramm, in dem der Sender 3 weitere Nachrichten sendet, aber die folgenden Fehlerfälle eintreten:
 
-- [ ] Fehler ausbessern in ÜB
+> [!info] Aufgabe wurde ausgebessert nach Input von Komillitonen. Danke L! 🩵
 
 > [!danger] Fehler in Lösung welcher noch ausgebessert werden muss!
+> **EDIT:** Fehler ausgebessert und sollte nun passen
+> <br>
 > Der Sender wartet 800ms (Timeout Länge) auf ACK 1, welches verloren gegangen ist. Wenn das nicht ankommt, sendet der Sender erneut Nachricht 1 (nicht 2). Ebenfalls steht in der Aufgabenstellung, dass der Empfänger nur positive Einzelquittungen schickt, weshalb er nicht NAK 2 zurückschicken kann. Der Sender muss dort ebenfalls 800ms warten, bis er Nachricht 2 erneut sendet.
 >
 > Sender erkennt den Fehler am Timout, da er nicht weiß, ob das ACK 1 verloren gegangen ist oder seine Nachricht beschädigt ankam. Empfänger erkennt es an doppelten Nachrichten
