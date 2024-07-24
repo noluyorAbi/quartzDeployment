@@ -7,8 +7,10 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Sunday, 9. June 2024, 22:36
-date modified: Monday, 22. July 2024, 00:29
+date modified: Wednesday, 24. July 2024, 19:53
 ---
+
+> [!warning] Seite hat Formatierungsfehler die mir bekannt sind, hatte keine Zeit diese auszubessern
 
 # 1. TCP Reno (H)
 

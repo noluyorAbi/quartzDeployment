@@ -8,7 +8,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Wednesday, 15. May 2024, 19:25
-date modified: Wednesday, 24. July 2024, 19:13
+date modified: Wednesday, 24. July 2024, 19:53
 ---
 
 # 1. Verbindungslose und verbindungsorientierte Kommunikation (H)
