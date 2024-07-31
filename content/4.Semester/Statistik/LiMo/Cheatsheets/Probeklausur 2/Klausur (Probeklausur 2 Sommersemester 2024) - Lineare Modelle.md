@@ -2,7 +2,88 @@
 
 ---
 
-# INHALTSVERZEICHNIS
+# AUFGABENTYPEN - PK2
+
+## Modellgleichungen und Interpretation
+
+1. **Aufgabe 1**
+
+   - (a) Modellgleichung aufstellen
+   - (b) Interpretation der Koeffizienten
+
+2. **Aufgabe 3**
+
+   - (a) Linearer Prädiktor, Responsefunktion und Verteilung der Zielvariable
+   - (b) Interpretation der Koeffizienten auf Ebene der Odds
+   - (c) Vergleich der Chancen für Kreditkartenbewilligung
+
+3. **Aufgabe 4**
+   - (a) Interpretation des $R^2$
+
+## Berechnungen und Konfidenzintervalle
+
+4. **Aufgabe 1**
+
+   - (c) Erwartete Zufriedenheit berechnen
+
+5. **Aufgabe 4**
+   - (ii) RMSE für Prognose neuer Daten
+   - (iii) Grund für gleiche RMSEs
+
+## Modellannahmen und -überprüfung
+
+6. **Aufgabe 1**
+
+   - (d) Überprüfung der Linearität
+   - (e) Überprüfung der Normalverteilungsannahme
+
+7. **Aufgabe 3**
+
+   - (d) Problematik der Variable expenditure
+
+8. **Aufgabe 4**
+   - (d) Vorteile der schrittweisen Variablenselektion gegenüber Best Subset-Methode
+
+## Hypothesentests und Modellvergleich
+
+9. **Aufgabe 2**
+
+   - (c) Hypothesentest der Bildungskategorien
+   - (f) Veränderung des Bildungseffekts über Zeit überprüfen
+
+10. **Aufgabe 4**
+
+- (b) Variablenselektionsverfahren analysieren
+  - (i) Bestimmung des Selektionskriteriums und -methode
+  - (ii) Verfahren für das kleinste Modell
+  - (iii) RMSE für Prognose neuer Daten
+  - (iv) Grund für gleiche RMSEs
+- (d) Variablenselektion mit $R^2$ als Kriterium
+
+## Datensituationen und Modellanpassungen
+
+11. **Aufgabe 2**
+
+- (d) Vorteile des Random Intercept-Modells
+- (e) Intra-Class-Correlation berechnen und interpretieren
+
+12. **Aufgabe 5**
+
+- (a) Beurteilung der Varianzhomogenitäts- und Normalverteilungsannahme
+- (b) Problematik der Kollinearität
+- (c) Unterschied zwischen Konfidenz- und Prognoseintervall
+- (d) Anwendung eines gemischten linearen Modells
+- (e) Eignung der logistischen Regression zur Vorhersage von Wahrscheinlichkeiten
+
+## Datenvisualisierung und Interpretation
+
+13. **Aufgabe 3**
+
+- (e) ROC-Kurve zeichnen und AUC berechnen
+
+---
+
+# INHALTSVERZEICHNIS - PK2
 
 1. **Aufgabe 1**
 

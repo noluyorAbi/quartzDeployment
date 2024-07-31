@@ -28,6 +28,10 @@ date modified: Wednesday, 17. July 2024, 01:02
 - [[Referenz-Codierung und Effekt-Codierung in der Linearen Regression]]
 - [[Wann sollte man R2 verwenden und wann adjustiertes R2]]
 
+## Probbeklausuren
+
+- [[Klausur (Probeklausur 2 Sommersemester 2024) - Lineare Modelle]]
+
 <!-- DISQUS SCRIPT COMMENT START -->
 
 <!-- DISQUS RECOMMENDATION START -->
