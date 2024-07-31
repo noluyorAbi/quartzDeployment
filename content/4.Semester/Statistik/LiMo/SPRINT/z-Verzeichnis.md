@@ -32,6 +32,8 @@ date modified: Wednesday, 17. July 2024, 01:02
 
 - [[Klausur (Probeklausur 1 Sommersemester 2024)]]
 - [[Klausur (Probeklausur 2 Sommersemester 2024) - Lineare Modelle]]
+- [[Limo-Klausur-SS23]]
+- [[LiMo-Cheatsheet]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 

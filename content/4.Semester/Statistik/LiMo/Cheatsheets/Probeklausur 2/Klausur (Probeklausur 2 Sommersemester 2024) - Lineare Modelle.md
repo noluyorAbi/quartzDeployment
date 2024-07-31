@@ -1,3 +1,8 @@
+---
+date created: Tuesday, 30. July 2024, 16:19
+date modified: Thursday, 1. August 2024, 00:28
+---
+
 # Klausur (Probeklausur 2 Sommersemester 2024) - Lineare Modelle
 
 ---
@@ -147,6 +152,9 @@
 
 ## (a) Stellen Sie anhand des R-Outputs die Modellgleichung zu Modell 1.1 auf.
 
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731233003.png]]
+
 _Ohne Werte:_
 
 $$
@@ -160,6 +168,9 @@ $$
 $$
 
 ## (b) Interpretieren Sie die Koeffizienten der Variablen Aufenthalt und Therapien.
+
+> [!success] Eugens Lösung
+> Wenn sich des Aufenthelt um einen Tag verlängert dann sinkt die Zufriedenheit ceteris paribus im Durchschnitt um 0.05 Einheiten. Wenn der Patient mehrere Therapien erhält, dann sinkt dessen Zufriedenheit im Vergleich zu einem Patienten der nur eine Therapie erhalt im Durchschnitt Ceteris paribus um 0.2 Einheiten.
 
 - Aufenthalt
   - Pro Tag um den sich der Aufenthalt im Krankenhaus verlängert, sinkt die Zufriedenheit um `-0.5`
@@ -177,6 +188,9 @@ $$
 $$
 
 ## (d) Es ist zweifelhaft, ob der Zusammenhang zwischen der Dauer des Aufenthalts und der Zufriedenheit linear ist. Nennen und beschreiben Sie zwei sinnvolle Modifikationen des Modells, mit deren Hilfe die Linearität überprüft werden kann.
+
+> [!success] Eugens Lösungen
+> ![[Pasted image 20240731234729.png]]
 
 Um die Linearität zu überprüfen, können folgende Modifikationen des Modells vorgenommen werden:
 
@@ -209,6 +223,7 @@ Um die Linearität zu überprüfen, können folgende Modifikationen des Modells 
   - Kleine Stichprobengröße (20 Patienten) könnte Normalverteilungsannahme der Residuen verletzen
   - Verletzung der Normalverteilungsannahme könnte Testergebnisse und Konfidenzintervalle beeinflussen
   - Verteilung könnte z.B stattdessen schief, bimodal oder diskret sein
+  - Hier: Therapien ist kategorisch behandelt. Dies führt zur diskreten Darstellung der Datenpunkte und erschwert die Erkennung der Normalverteilung.
 
 ### Fließtext
 
@@ -253,6 +268,8 @@ Bei Modell 1.1 könnte sich eine Problematik ergeben, da die Zufriedenheitswerte
 > $$
 >
 > ![[Pasted image 20240730162732.png]]
+
+![[Pasted image 20240731235149.png]]
 
 ## (a) Geben Sie die Referenzkategorie der Variable Bildung an und begründen Sie, warum diese eine sinnvolle Wahl darstellt.
 
@@ -301,6 +318,9 @@ $$
 
 ## (c) Basierend auf Modell 2.1 soll nun in einem linearen Hypothesentest der Form $A \beta = c$ die Nullhypothese überprüft werden, dass der Effekt für die `Kategorie mittel` im Vergleich zur Referenzkategorie `doppelt so groß`ist `wie für die Kategorie hoch`. Geben Sie für diesen Test die Hypothesen, die Matrizen $A$ und $c$ sowie die Verteilung der Teststatistik an.
 
+> [!success] Eugens Lösung
+> ![[Pasted image 20240801000316.png]]
+
 - Hypothesenformulierung
   $$
   \begin{aligned}
@@ -346,17 +366,11 @@ $$
 
   Die Teststatistik lautet:
 
-  $$
-  T = (A \hat{\beta} - c)' (A (X'X)^{-1} A')^{-1} (A \hat{\beta} - c)
-  $$
+$$
+F=(1,995)
+$$
 
-  wobei $\hat{\beta}$ der Vektor der geschätzten Koeffizienten und $X$ die Designmatrix ist.
-
-  Unter der Nullhypothese $H_0$ folgt die Teststatistik einer $\chi^2$-Verteilung mit 1 Freiheitsgrad:
-
-  $$
-     T \sim \chi^2(1)
-  $$
+1 weil wir auf eine Variable testen $\beta_3 =2\beta_4$ und 995 weil wir 1000 n haben - 5 Variablen
 
 > [!note] Aufgabenstellung
 > Die Umfrage zum Reiseverhalten wurde auch in den folgenden vier Jahren an den gleichen Personen (id) durchgeführt. Um zu untersuchen, ob es generelle Entwicklungen bei der Reisedistanz von 2018 bis 2022 gab, wurde das folgende Random Intercept-Modell (Modell 2.2) mit der Zeit (Jahr) als zusätzlicher Kovariable gefittet.
@@ -369,10 +383,8 @@ $$
 ### Stichpunkte
 
 - **Kontrolle für unbeobachtete Heterogenität:**
-
   - Erfasst individuelle Unterschiede, die nicht durch beobachtete Variablen erklärt werden.
   - Berücksichtigt personenspezifische Einflüsse wie persönliche Vorlieben.
-
 - **Effizientere Schätzung und Generalisierbarkeit:**
   - Nutzt die Datenstruktur besser, besonders bei vielen Beobachtungen pro Person.
   - Vermeidet Reduktion der Freiheitsgrade und Überanpassung.
@@ -493,7 +505,8 @@ Der Modellvergleich erfolgt mittels Likelihood-Ratio-Test (LRT) oder Akaike-Info
 
 ## (a) Geben Sie anhand des R-Outputs zu Modell 3.1 den linearen Prädiktor, die Responsefunktion und die Verteilung der Zielvariable (gegeben die Kovariablen) an.
 
-### (a) Lineare Prädiktor, Responsefunktion und Verteilung der Zielvariable
+> [!success] Eugens Lösung
+> ![[Pasted image 20240801000746.png]]
 
 - **Linearer Prädiktor ($\eta$)**:
   Der lineare Prädiktor fasst die Einflüsse der Kovariablen in einem logistischen Regressionsmodell zusammen. Basierend auf dem R-Output des Modells 3.1 lautet der lineare Prädiktor:
@@ -637,7 +650,10 @@ Die Chancen auf die Bewilligung einer Kreditkarte für eine selbstständige Antr
 
 ![[Pasted image 20240730163621.png]]
 
-### **Vergleich der Modelle:**
+> [!success] Eugens Lösung
+> ![[Pasted image 20240801001359.png]]
+
+### Vergleich der Modelle:
 
 **Modell 3.1:**
 
@@ -654,7 +670,7 @@ Die Chancen auf die Bewilligung einer Kreditkarte für eine selbstständige Antr
 - Koeffizient für expenditure: sehr hoch (35.19398), aber nicht signifikant (\(p = 0.839061\)).
 - income, owner und selfemp sind nicht mehr signifikant.
 
-### **Problematik bezüglich der Variable expenditure:**
+### Problematik bezüglich der Variable expenditure:
 
 1. **Multikollinearität:**
 
@@ -735,12 +751,18 @@ $$
 1- \frac{1}{3} \cdot 0.5 = 0.8333
 $$
 
+oder
+
+$$
+\text{AUC} = \frac{2}{3} \cdot \frac{1}{2} + 1 \cdot \frac{1}{2} = \frac{5}{6} = 0.8\overline{3}
+$$
+
 - 1/3 \* 0.5 berechnet Flächeninhalt blaues viereck links oben
 - 1-Fläche dieser kehrt diese um und gibt uns die AUC
 
 ---
 
-# Aufgabe 4
+# Aufgabe 4 (irrelevant für Info)
 
 > [!note] Aufgabenstellung
 > Im Rahmen dieser Aufgabe soll die Mortalität (pro 100 000 Einwohner) in Metropolregionen in den USA in Abhängigkeit von bis zu 15 Kovariablen modelliert werden. Hierfür wird ein Datensatz verwendet, der 1973 von McDonald und Schwing veröffentlicht wurde.
@@ -779,6 +801,9 @@ Selektion_4 <- stepAIC(Volles_Modell, scope = scope_schmutz,
 
 ### (i) Bestimmen Sie für jedes der vier Variablenselektionsverfahren, welches Selektionskriterium und welche Selektionsmethode verwendet wurden. Geben Sie auch jeweils an, ob das Verfahren mit dem Nullmodell oder dem vollen Modell gestartet wurde.
 
+> [!success] Eugens Lösung
+> ![[Pasted image 20240801002022.png]]
+
 > [!tip] Erklärung: Selektionskriterium,-methode, Null/-Volles-Modell
 >
 > ### Erklärungen in ausführlicheren Stichpunkten:
@@ -810,7 +835,7 @@ Selektion_4 <- stepAIC(Volles_Modell, scope = scope_schmutz,
 
 1. **Selektion_1**
 
-   - **Selektionskriterium**: Akaike-Informationskriterium (AIC) mit Anpassung für große Stichproben ($k = \log(n)$).
+   - **Selektionskriterium**: Akaike-Informationskriterium (BIC) mit Anpassung für große Stichproben ($k = \log(n)$).
    - **Selektionsmethode**: Vorwärtsselektion.
    - **Startmodell**: Nullmodell.
 
@@ -933,6 +958,9 @@ Zwei verschiedene Variablenselektionsverfahren können gleiche RMSEs ergeben, we
 
 ## (d) Stellen Sie sich nun vor, dass ein schrittweises Variablenselektionsverfahren mit dem $R^2$ als Selektionskriterium durchgeführt wird. Begründen Sie, wie viele Variablen durch dieses Selektionsverfahren ausgewählt werden würden.
 
+> [!success] Eugens Lösung
+> ![[Pasted image 20240801002143.png]]
+
 - **Selektionskriterium $R^2$**:
 
   - $R^2$ misst den Anteil der Varianz der abhängigen Variable, der durch das Modell erklärt wird.
@@ -1009,6 +1037,9 @@ Zwei verschiedene Variablenselektionsverfahren können gleiche RMSEs ergeben, we
 > - **Normalverteilung**: Prüfen im Normal Q-Q Plot.
 > - **Ausreißer und einflussreiche Beobachtungen**: Identifizieren im Residuals vs. Leverage Plot.
 
+> [!success] Eugens Lösung
+> ![[Pasted image 20240801002244.png]]
+
 1. **Residuals vs. Fitted Plot**:
 
    - **Varianzhomogenität**: Kein eindeutiges Muster, aber einige Punkte (z.B. 39, 85) deuten auf mögliche Heteroskedastizität hin.
@@ -1024,12 +1055,15 @@ Zwei verschiedene Variablenselektionsverfahren können gleiche RMSEs ergeben, we
 4. **Residuals vs. Leverage Plot**:
    - **Einflussreiche Beobachtungen**: Punkte wie 580 und 59 haben hohe Residuen und Hebelwirkung, sind potenziell einflussreich.
 
-#### Zusammenfassung:
+### Zusammenfassung:
 
 - Hinweise auf Varianzprobleme und Nicht-Normalität der Residuen.
 - Einflussreiche Beobachtungen (z.B. 85, 59) könnten das Modell stark beeinflussen und sollten weiter untersucht werden.
 
 ## (b) Beschreiben Sie die Problematik der Kollinearität bei einem multiplen linearen Regressionsmodell. Warum ist es wichtig, das Modell diesbezüglich zu überprüfen und ggf. Anpassungen vorzunehmen?
+
+> [!success] Eugens Lösung
+> ![[Pasted image 20240801002317.png]]
 
 - **Kollinearität**:
 
@@ -1122,6 +1156,9 @@ Das Konfidenzintervall schätzt den Mittelwert für neue Beobachtungen, während
 Gemischte lineare Modelle sind sinnvoll bei hierarchischen, längsschnittlichen oder gruppierten Daten, wo die Annahme der Unabhängigkeit der Beobachtungen verletzt ist. Sie erlauben die Modellierung von Korrelationen und Abhängigkeiten innerhalb der Datenstruktur.
 
 ## (e) Erklären Sie, warum die logistische Regression im Gegensatz zur linearen Regression eine geeignete Methode für die Vorhersage von Wahrscheinlichkeiten darstellt.
+
+> [!success] Eugens Lösung
+> ![[Pasted image 20240801002731.png]]
 
 - **Vorhersagebereich**:
 

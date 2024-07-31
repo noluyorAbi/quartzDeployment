@@ -1,3 +1,10 @@
+---
+date created: Tuesday, 30. July 2024, 22:03
+date modified: Wednesday, 31. July 2024, 23:16
+---
+
+``
+
 # Klausur (Probeklausur 1 Sommersemester 2024)
 
 ---
@@ -105,7 +112,9 @@ Die erwartete Überlebensdauer von 207 Tagen bei einer Wassermenge von 2000 mL/T
 
 Der Effekt der Wassermenge auf dem Standort Tisch wird durch die Summe der Koeffizienten $\beta_2$ und $\beta_3$ dargestellt:
 
-$$ \text{Effekt der Wassermenge} = \beta_2 + \beta_3 $$
+$$
+ \text{Effekt der Wassermenge} = \beta_2 + \beta_3
+$$
 
 Setzen wir die Werte ein:
 
@@ -158,6 +167,11 @@ Die Schlussfolgerung daraus ist, dass die Interaktion zwischen der Wassermenge u
 
 ### i) Geben Sie an, welche Modellannahme verletzt sein könnte und nennen Sie **KURZ** die Begründung, warum Sie dies vermuten.
 
+> [!success] Eugens Lösung
+> Annahme: Die Überlebenszeit hängt lineas von der Wassermenge ab.
+> Die Annahme scheint falsch zu sein, da die echten Werte systematisch über oder unter
+> unserer Schätzung liegen.
+
 Die Modellannahme, die verletzt sein könnte, ist die Annahme der **Homoskedastizität** (konstante Varianz der Residuen).
 
 - Varianz der Residuen (= Abweichung vom vorhergesagten Wert) ist nicht konstant und weicht sehr stark ab, zum Beispiel bei 50 schwant es von -10 bis nahezu +3
@@ -166,6 +180,10 @@ Die Modellannahme, die verletzt sein könnte, ist die Annahme der **Homoskedasti
 **Begründung:** Im Diagnostik-Plot zeigt sich, dass die Streuung der Residuen für verschiedene Wassermengen unterschiedlich ist. Insbesondere bei 100 mL/Tag scheinen die Residuen eine größere Streuung zu haben als bei 50 mL/Tag oder 150 mL/Tag. Dies deutet darauf hin, dass die Varianz der Fehlerterme nicht konstant ist, was eine Verletzung der Homoskedastizitätsannahme bedeutet.
 
 ### ii) Geben Sie eine Lösungsmöglichkeit an.
+
+> [!success] Eugens Lösung
+> Wassermenge als kategorialle Größe ins Modell
+> aufnehmen, anstatt als numerische Größe.
 
 Eine Lösungsmöglichkeit besteht darin, das Modell anzupassen, um die Annahmeverletzungen zu korrigieren:
 
@@ -186,6 +204,9 @@ summary(modell1.1a_log)
 > ![[Pasted image 20240730221244.png]]
 
 ## (g) Im Vergleich zu **Modell 1a** ist in **Modell 1g** nun die Variable **Wassermenge_fakt** statt **Wassermenge** verwendet worden. Was wurde inhaltlich getan? Hinweis: Severin hat nur die Wassermenge 50, 100 und 150 mL/Tag ausprobiert.
+
+> [!success] Eugens Lösung
+> Die Variable Wassermenge wurde dirkretisiert und in eine Rategorielle Variable mit den Werten 50 ml/Tag , 100 ml/ Tag und 150 ml/ag unterteilt. Herbei ist 50mL/Tag der Referenzwert.
 
 In Modell 1g wurde die kontinuierliche Variable "Wassermenge" durch die faktorielle Variable "Wassermenge_fakt" ersetzt. Dies bedeutet, dass die Wassermengen von 50, 100 und 150 mL/Tag als separate Kategorien (Faktoren) behandelt wurden, anstatt als kontinuierliche Werte.
 
@@ -209,6 +230,9 @@ Dies deutet darauf hin, dass höhere Wassermengen signifikant die Überlebenszei
 ```
 
 ## (h) Interpretieren Sie die Regressionskoeffizienten zur Variable **Wassermenge_fakt** in **Modell 1g**.
+
+> [!success] Eugens Lösung
+> Wenn die Wassermenge S0mL/Tag beträgt und die Pfanze auf dem Fensterbrett steht, dann beträgt die Duschschnittliche Überlebenszeit 17 Tage. Wenn die Wassermenge von 50 mL tag auf 100 mL/Tag Steigt, dann steigt die überlebenszeit ceteris paribus im Durchschnitt un 20 Tage. Wenn die Wascermenge von 50mL/Tag auf 150 mL /Tag steigt, dann Steigt die Überlebenszeit ceteris paribus im Durchschnitt um 10 Tage.
 
 1. **Wassermenge_fakt100 (20.0000)**:
 
@@ -234,7 +258,9 @@ Modell 1i berücksichtigt die Interaktion zwischen dem Standort und der faktoris
 
 Das Modell lautet:
 
-$$ \text{Überlebenszeit} \sim \text{Standort} \* \text{Wassermenge_fakt} $$
+$$
+ \text{Überlebenszeit} \sim \text{Standort} * \text{Wassermenge\_fakt}
+$$
 
 Das bedeutet, dass wir folgende Terme haben:
 
@@ -259,7 +285,9 @@ Zusammengefasst haben wir:
 
 Also insgesamt:
 
-$$ 1 + 1 + 2 + 2 = 6 $$
+$$
+ 1 + 1 + 2 + 2 = 6
+$$
 
 ### Antwort
 
@@ -297,23 +325,20 @@ Modell 1i hat insgesamt 6 Regressionskoeffizienten.
 
 Begründen Sie anhand der Grafik, ob es Indizien für einen Interaktionseffekt gibt und begründen Sie kurz.
 
+> [!success] Eugens Lösung  
+> Es gibt keinen Hinweis auf Interaktionseffekte, da der Verlauf der Effektkurve für beide Standorte gleich ist und sich fast nur um einen konstanten Wert unterscheidet, d.h., die Linien verlaufen (fast) parallel.
+
 > Ein Interaktionseffekt tritt auf, wenn die Wirkung einer unabhängigen Variable auf die abhängige Variable von der Ausprägung einer anderen unabhängigen Variable abhängt. Mit anderen Worten, die gleichzeitige Wirkung zweier Variablen auf das Ergebnis unterscheidet sich von der Summe ihrer individuellen Wirkungen.
 >
 > Ein Interaktionseffekt bedeutet, dass die Wirkung einer Sache auf ein Ergebnis davon abhängt, was mit einer anderen Sache passiert. Zum Beispiel, wie gut ein Medikament wirkt, könnte davon abhängen, wie viel Sport jemand treibt.
 
-Die Grafik zeigt die Überlebenszeit in Tagen in Abhängigkeit von der Wassermenge (in mL/Tag) für zwei verschiedene Standorte: Fensterbank und Tisch.
-
-Es gibt Indizien für einen Interaktionseffekt zwischen der Wassermenge und dem Standort, da die Linien für die beiden Standorte nicht parallel verlaufen. Dies deutet darauf hin, dass die Wirkung der Wassermenge auf die Überlebenszeit vom Standort abhängt. Konkret:
-
-- Bei niedriger Wassermenge (50 mL/Tag) ist die Überlebenszeit auf der Fensterbank deutlich höher als auf dem Tisch.
-- Bei mittlerer Wassermenge (100 mL/Tag) ist der Unterschied in der Überlebenszeit zwischen den beiden Standorten geringer.
-- Bei hoher Wassermenge (150 mL/Tag) ist die Überlebenszeit auf der Fensterbank immer noch höher als auf dem Tisch, aber der Unterschied ist wieder deutlicher.
-
-Diese Variation in den Unterschieden bei den Überlebenszeiten über die verschiedenen Wassermengen hinweg deutet auf einen Interaktionseffekt hin.
-
 ### (Bsp ohne Interaktionseffekt)
 
 ![[Pasted image 20240731003311.png]]
+
+### (Bsp mit Interaktionseffekt)
+
+![[Pasted image 20240731215127.png]]
 
 ---
 
@@ -325,6 +350,9 @@ Diese Variation in den Unterschieden bei den Überlebenszeiten über die verschi
 > Wir beobachten insgesamt 300 Samen in unserer Studie. 75 Samen werden mit dem ersten Dünger gedüngt (Treatment 1), 75 Samen werden mit dem zweiten Dünger gedüngt (Treatment 2), 75 Samen werden mit dem dritten Dünger gedüngt (Treatment 3) und 75 Samen werden als Kontrolle ohne Behandlung beobachtet.
 
 ## (a) Die Assoziation zwischen Wachstum und Düngermittelsorte soll mit Hilfe eines linearen Regressionsmodells geschätzt werden. Wir nehmen an, dass die Düngermittelsorte mit einer Referenzkodierung in das Modell aufgenommen wird. Schreiben Sie die Modellgleichung aus. Sie dürfen in diesem Fall die Verteilungsannahmen auslassen. Definieren Sie die Ausprägungen der Kovariablen.
+
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731215233.png]]
 
 Um die Assoziation zwischen Wachstum und Düngemittelsorte mit einem linearen Regressionsmodell zu schätzen, verwenden wir die Referenzkodierung. Die Kontrollgruppe (ohne Dünger) dient als Referenz.
 
@@ -350,12 +378,14 @@ Die Kontrollgruppe (ohne Dünger) ist durch den Achsenabschnitt $\beta_0$ reprä
 
 Das $_i$ in der Modellgleichung steht für die Beobachtungsnummer oder den einzelnen Samen in der Studie. Es zeigt an, dass jede Variable für jede einzelne Beobachtung (jedes $i$) gemessen wird. Es bedeutet also:
 
-- $Wachstum_i$: Das Wachstum des $i$-ten Samens.
+- $Wachstum_i$: Das Wachstum des $i$-ten Samens. (Bis 300)
 - $\epsilon_i$: Der Fehlerterm für den $i$-ten Samen.
 
-Diese Notation wird verwendet, um klarzustellen, dass das Modell auf jede einzelne Beobachtung angewendet wird.
-
 ## (b) Stellen Sie sich nun vor, dass Sie anstatt der Referenzkodierung eine Effektkodierung wählen. Skizzieren Sie hierfür eine dementsprechende Designmatrix. Geben Sie an welche Zeilen und welche Spalten welchem Dünger entsprechen. (Hinweis: Sie müssen NICHT 300 Zeilen ausschreiben. Kürzen Sie die Skizze Ihrer Designmatrix so viel wie möglich.)
+
+> [!success] Eugens Lösung
+> Ich glaube ich habe den Intercept vergessen
+> ![[Pasted image 20240731215914.png]]
 
 ![[Pasted image 20240731004616.png]]
 
@@ -377,6 +407,12 @@ Hier beschreibt XData den oben beschriebenen Datensatz. “y” ist hier die Res
 
 ### i) Nutzen Sie den Output des Modells 2c, um für alle drei Düngersorten jeweils das durchschnittliche Wachstum der Pflanzen per Hand zu berechnen.
 
+> [!success] Eugens Lösung
+>
+> - Treatment 1: 5.7524+0.2886=6.041
+> - Treatment 2: 5.7524+3.1414 =8.89
+> - Treatment 3: 5.7524-2.7460=3.0064
+
 - **Intercept (Gesamtmittelwert):** $5.7524$
 - **Treatment 1:** $0.2886$
 - **Treatment 2:** $3.1414$
@@ -385,13 +421,21 @@ Hier beschreibt XData den oben beschriebenen Datensatz. “y” ist hier die Res
 ### Berechnungen:
 
 1. **Durchschnittliches Wachstum für Treatment 1:**
-   $$ 5.7524 + 0.2886 = 6.0410 $$
+
+   $$
+   5.7524 + 0.2886 = 6.0410
+   $$
 
 2. **Durchschnittliches Wachstum für Treatment 2:**
-   $$ 5.7524 + 3.1414 = 8.8938 $$
+
+   $$
+   5.7524 + 3.1414 = 8.8938
+   $$
 
 3. **Durchschnittliches Wachstum für Treatment 3:**
-   $$ 5.7524 - 2.7460 = 3.0064 $$
+   $$
+   5.7524 - 2.7460 = 3.0064
+   $$
 
 ### Ergebnisse:
 
@@ -401,13 +445,21 @@ Hier beschreibt XData den oben beschriebenen Datensatz. “y” ist hier die Res
 
 ### ii) Nehmen Sie an, dass Sie mit Hilfe eines F-Tests testen möchten, ob mindestens einer der Düngervarianten einen signifikanten Wachstumsunterschied zur Kontrollgruppe aufweist. Stellen Sie dafür die passenden Hypothesen und Test-Statistik auf. (Sie müssen den Test hier nicht durchführen.)
 
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731220119.png]]
+
 #### Hypothesen für den F-Test
 
 - **Nullhypothese ($H_0$):** Alle Düngervarianten haben keinen signifikanten Effekt auf das Wachstum im Vergleich zur Kontrollgruppe.
-  $$ H_0: \beta_1 = \beta_2 = \beta_3 = 0 $$
+
+  $$
+  H_0: \beta_1 = \beta_2 = \beta_3 = 0
+  $$
 
 - **Alternativhypothese ($H_A$):** Mindestens eine Düngervariante hat einen signifikanten Effekt auf das Wachstum im Vergleich zur Kontrollgruppe.
-  $$ H_A: \text{Mindestens eine} \ \beta_i \ (\beta_1, \beta_2, \beta_3) \ \text{ist nicht null} $$
+  $$
+  H_A: \text{Mindestens eine} \ \beta_i \ (\beta_1, \beta_2, \beta_3) \ \text{ist nicht null}
+  $$
 
 ### Test-Statistik
 
@@ -433,13 +485,22 @@ Dabei:
 ### Berechnung der F-Statistik
 
 1. **Regressions-Sum of Squares (RSS):**
-   $$ RSS = \sum (\hat{y}\_i - \bar{y})^2 $$
+
+   $$
+   RSS = \sum (\hat{y}_i - \bar{y})^2
+   $$
 
 2. **Residual Sum of Squares (RSS):**
-   $$ RSS = \sum (y_i - \hat{y}\_i)^2 $$
+
+   $$
+   RSS = \sum (y_i - \hat{y}_i)^2
+   $$
 
 3. **F-Statistik:**
-   $$ F = \frac{\frac{RSS*{\text{Reg}}}{k}}{\frac{RSS*{\text{Res}}}{n - k - 1}} $$
+
+   $$
+   F = \frac{\frac{RSS_{\text{Reg}}}{k}}{\frac{RSS_{\text{Res}}}{n - k - 1}} = \frac{MSM}{MSE}
+   $$
 
    - $k$ : Anzahl der Regressoren (hier 3: $\beta_1$, $\beta_2$, $\beta_3$)
    - $n$: Gesamtanzahl der Beobachtungen
@@ -447,6 +508,8 @@ Dabei:
 Der F-Test vergleicht die Varianz, die durch das Modell erklärt wird, mit der Varianz, die durch die Residuen erklärt wird. Wenn der berechnete F-Wert größer als der kritische F-Wert aus der F-Verteilung ist, lehnen wir die Nullhypothese ab und schließen, dass mindestens eine Düngervariante einen signifikanten Effekt auf das Wachstum hat.
 
 ### iii) Im folgenden sehen Sie, dass eine ANOVA in R genutzt wurde, um einen F-Test durchzuführen. Hier fehlen jedoch noch vier Felder; hier mit “a?”, “b?”, “c?” und “d?” gekennzeichnet. Vervollständigen Sie den Output. (Hinweis: Geben Sie bei Ihrer Antwort klar an, welches Feld Sie jeweils vervollständigen.)
+
+![[Pasted image 20240731220807.png]]
 
 ```r
 Analysis of Variance Table
@@ -460,7 +523,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 ```
 
 $$
-F=\frac{\text{MeanSq}_T}{}
+F=\frac{\text{MeanSq}_{Treatment}}{\text{MeanSq}_{Residuals}}
 $$
 
 - a:
@@ -481,7 +544,13 @@ $$
 
 ### iv) Nutzen Sie Ihre Antwort aus der vorherigen Frage, um das adjustierte $R^2$ für das Modell auszurechnen. Als Ersatzlösung dürfen Sie stattdessen auch 1500 als Streuung des Models annehmen und 200 als Residualstreuung.
 
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731220944.png]]
+
 ### v) Diskutieren Sie kurz, ob in dieser Aufgabe ein $R^2$ oder ein adjustiertes $R^2$ als Bestimmtheitsmaß zu bevorzugen wäre. (Hinweis: Wir suchen nach jeweils einem Argument für beide Bestimmtheitsmaße.)
+
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731221035.png]]
 
 **1. Argument für$R^2$:**
 
@@ -494,6 +563,9 @@ $$
 In der Praxis wäre der adjustierte$R^2$ oft zu bevorzugen, insbesondere wenn das Modell viele Prädiktoren enthält oder wenn man Modelle vergleichen möchte, da er eine realistischere Einschätzung der Modellgüte bietet.
 
 ## (d) Es wird angenommen, dass die Fehler $\epsilon_i$ unabhängig und identisch verteilt sind. Welche asymptotischen Eigenschaften besitzt die KQ-Schätzung? Wann werden diese benötigt?
+
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731221135.png]]
 
 Die KQ-Schätzung (Kleinste-Quadrate-Schätzung) hat unter der Annahme, dass die Fehler $E_i$ unabhängig und identisch verteilt sind, folgende asymptotische Eigenschaften:
 
@@ -508,6 +580,9 @@ Benötigt bei:
 - Erstellung von Konfidenzintervallen
 
 ## (e) Beschreiben Sie kurz, wann eine gewichtete KQ-Schätzung einer ungewichteten KQ-Schätzung vorzuziehen wäre.
+
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731221246.png]]
 
 ### Ungewichtete KQ-Schätzung
 
@@ -530,6 +605,9 @@ Eine gewichtete KQ-Schätzung ist der ungewichteten KQ-Schätzung vorzuziehen, w
 In diesen Fällen verbessert die gewichtete KQ-Schätzung die Schätzung, indem sie Unterschiede in Varianz oder Präzision der Beobachtungen berücksichtigt.
 
 ## (f) Erläutern Sie, anhand einer der oben aufgeführten Modelle, oder einer generellen Form des Multiplen Normalen Linearen Modells, wie eine Transformation des Modells in einer gewichteten KQ-Schätzung aussehen würde.
+
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731221504.png]]
 
 ### Gewichtete KQ-Schätzung
 
@@ -558,10 +636,20 @@ In diesen Fällen verbessert die gewichtete KQ-Schätzung die Schätzung, indem 
 
 ## (a) Worauf beziehen sich die Laufindizes $i$ und $t$?
 
+> [!success] Eugens Lösungen
+>
+> - t bezieht sich auf Messzeitpunkt
+> - i auf den Schüler
+
 - **$i$:** Der Index $i$ steht für die individuelle SchülerID (Student), also die spezifische Person im Datensatz. Jeder Schüler oder jede Schülerin hat eine eigene ID.
 - **$t$:** Der Index $t$ steht für den Zeitpunkt oder die Messwoche, an dem die Daten erhoben wurden. Es sind insgesamt 6 Zeitpunkte ($t \in \{0, 1, 2, 3, 4, 5\}$), zu denen jeweils Notendurchschnitt und Arbeitszeiten gemessen wurden.
 
 ## (b) Welche Variablen sind zeitabhängig? Welche sind zeitkonstant? Begründen Sie kurz.
+
+> [!success] Eugens Lösungen
+>
+> - job, gpa, occasion sind zeitabhängig, de sie sich über die Zeit ändern können.
+> - student, sex ist konstant über die Zeit.
 
 - **Zeitabhängige Variablen:**
 
@@ -575,6 +663,9 @@ In diesen Fällen verbessert die gewichtete KQ-Schätzung die Schätzung, indem 
 ## (c) Sie sehen eine Visualisierung des $gpa$ einer Auswahl von SchülerInnen in Abhängigkeit des Zeitpunkts. Jede Verlaufskurve dieses Spaghetti-Plots entspricht dem $gpa$ einer Person und ist in einem eigenen Grauton dargestellt. Kommentieren Sie die Visualisierung hinsichtlich des zeitlichen Verlaufs sowie der Streuung zwischen SchülerInnen.
 
 ![[Pasted image 20240730223204.png]]
+
+> [!success] Eugens Lösung  
+> Es scheint einen generellen Trend nach oben zu geben. Der Verlauf eines einzelnen Schülers folgt diesem Trend, weicht aber im Durchschnitt davon ab. Die Streuung innerhalb eines Schülers ist deutlich geringer als die Streuung über alle Schüler hinweg.
 
 ### Zeitlicher Verlauf:
 
@@ -594,6 +685,9 @@ In diesen Fällen verbessert die gewichtete KQ-Schätzung die Schätzung, indem 
 ## (d) Nehmen Sie an, Sie würden für die in der Angabe genannte Fragestellung ein lineares Regressionsmodell benutzen und damit die longitudinale Struktur des Datensatzes (also die Tatsache, dass für alle SchülerInnen Wiederholungsmessungen vorliegen) ignorieren. Das entspräche folgender R-Formel: $lm(gpa \sim occasion + sex + job, data = college)$. Wie viele Beobachtungen ($n$) hätten Sie zur Verfügung und wie viele Parameter würden geschätzt werden? Berechnen bzw. begründen Sie jeweils kurz.
 
 (Hinweis: Nehmen Sie an, dass die Variable $occasion$ als stetig in das Modell aufgenommen wurde.)
+
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731224405.png]]
 
 ### Anzahl der Beobachtungen ($n$)
 
@@ -632,6 +726,10 @@ $$
 
 ## (e) Welche Annahme des linearen Regressionsmodells wird durch die longitudinale Struktur des Datensatzes verletzt? Begründen Sie kurz.
 
+> [!success] Eugens Lösung
+>
+> - Unkorreliertheit des Residuenist verletzt, da die gpa Werte eines Schülers zum Zeitpunkt t2 vermutlich vom Wert zum Zeitpunkt t1 abhängen.
+
 Die Annahme der **Unabhängigkeit der Fehlerterme** wird durch die longitudinale Struktur des Datensatzes verletzt.
 
 **Begründung:** Bei longitudinalen Daten sind Fehlerterme innerhalb eines Individuums oft korreliert, da dieselben SchülerInnen über mehrere Zeitpunkte hinweg beobachtet werden (Autokorrelation). Diese Korrelation verletzt die Annahme, dass Fehlerterme unabhängig sind.
@@ -639,6 +737,12 @@ Die Annahme der **Unabhängigkeit der Fehlerterme** wird durch die longitudinale
 Die Daten sind abhängig von den Studis da mehrmals die gleichen Studenten befragt werden und diese abhängigkeit den p-Wert verzerren kann
 
 ## (f) Nennen Sie zwei Ansätze, mit Mehrfachmessungen dieser Art umzugehen, sodass die oben genannte Annahme nicht verletzt wird.
+
+> [!success] Eugens Lösung
+>
+> 1.  Random Intercept Modell
+> 2.  Zeitreihermodell
+> 3.  Gewichtetes KQ-Modell
 
 1. **Gemischte Modelle (Mixed Effects Models):**
 
@@ -679,6 +783,9 @@ Durch die Wahl der Schüler-ID für den zufälligen Intercept wird sichergestell
 **Zusammenfassung:** Der zufällige Intercept sollte die Schüler-ID ($student$) verwenden, da sie die individuellen Unterschiede zwischen den SchülerInnen korrekt erfassen kann, während die anderen Variablen diese individuelle Variation nicht berücksichtigen.
 
 ## (h) Sei $x_{it}$ der Vektor aller Kovariablen (inklusive Intercept) für Person $i$ zum Zeitpunkt $t$, und $\beta$ der Koeffizientenvektor. Stellen Sie nun die Modellgleichung des linearen gemischten Modells auf und nennen Sie die Annahmen des Modells.
+
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731225125.png]]
 
 ### Modellgleichung des linearen gemischten Modells
 
@@ -776,6 +883,10 @@ Dies weist darauf hin, dass es eine erhebliche individuelle Variation im Notendu
 
 ![[Pasted image 20240730223326.png]]
 
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731225515.png]]
+> erklärt homoskedastizität besser
+
 ### Erklärung der diagonalen Anordnung der Residuen
 
 - **Diagonale Anordnung:** Residuen liegen auf Diagonalen, jeweils um 0.1 verschoben.
@@ -809,7 +920,7 @@ Deviance Residuals:
 -0.6359  -0.0707  -0.0306  -0.0306   3.9156
 
 Coefficients:
-                 Estimate Std. Error z value Pr(>|z|)
+                 Estimate Std. Error z.B.value Pr(>|z|)
 (Intercept)       -7.6653     0.1863  -41.15  < 2e-16 ***
 Alt75-79           2.7650     0.2009   13.76  < 2e-16 ***
 Alt90+             4.4949     0.1875   23.97  < 2e-16 ***
@@ -933,7 +1044,7 @@ Deviance Residuals:
 -0.5849  -0.0774  -0.0255  -0.0255   4.0074
 
 Coefficients:
-                           Estimate   Std. Error z value  Pr(>|z|)
+                           Estimate   Std. Error z.B.value  Pr(>|z|)
 (Intercept)                 -8.0293     0.3333  -24.089  < 2e-16 ***
 Alt75-79                     2.7653     0.3718    7.437  1.03e-13 ***
 Alt90+                       5.0575     0.3466   14.590  < 2e-16 ***
@@ -954,9 +1065,15 @@ Number of Fisher Scoring iterations: 10
 
 ## (f) Welche zusätzliche Fragestellung wird in Modell 4e, im Vergleich zu Modell 4a, bearbeitet? Erklären Sie.
 
+> [!success] Eugens Lösung
+> Es wird berücksichtigt, ob des Effekt von der Impfung mit dem Alter zusammenhängt. So scheint eine Impfung im Alter 90+ mehr zu bringen als bei 60-64.
+
 In Modell 4e wird untersucht, ob es eine Wechselwirkung zwischen Alter und Impfstatus gibt, also ob der Effekt des Impfstatus auf das Überleben je nach Altersgruppe unterschiedlich ist. Dies wird durch die Interaktionsterme $Alt * impfst$ berücksichtigt.
 
 ## (g) Vergleichen Sie die Ergebnisse von Modell 4a und Modell 4e inhaltlich im Hinblick auf Alters- und Impfstatus-Effekte. Welches Modell ist zu bevorzugen? Begründen Sie.
+
+> [!success] Eugens Lösung
+> ![[Pasted image 20240731231629.png]]
 
 Modell 4e zeigt, dass es signifikante Interaktionen zwischen Alter und Impfstatus gibt (z.B. $Alt90+:impfstungeimpft$ ist signifikant mit $p=0.0254$). Dies deutet darauf hin, dass der Effekt des Impfstatus auf das Überleben von der Altersgruppe abhängt. Das Modell 4e ist daher vorzuziehen, da es diese komplexere Beziehung berücksichtigt und eine genauere Modellierung der Daten ermöglicht.
 
@@ -1004,11 +1121,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
