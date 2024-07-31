@@ -30,6 +30,7 @@ date modified: Wednesday, 17. July 2024, 01:02
 
 ## Probbeklausuren
 
+- [[Klausur (Probeklausur 1 Sommersemester 2024)]]
 - [[Klausur (Probeklausur 2 Sommersemester 2024) - Lineare Modelle]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
