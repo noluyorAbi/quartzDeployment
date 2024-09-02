@@ -31,7 +31,7 @@ The creation of a cloak, much like the accumulation of resources on MyUniNotes.c
 In essence, "The value of the cloak is known in the rain" transcends its literal meaning to encapsulate the essence of preparedness, resilience, and the intrinsic value of educational resources like MyUniNotes.com. Just as a cloak becomes an indispensable ally in the rain, so does MyUniNotes.com in the unpredictable and often challenging journey of education. It is a testament to the platform’s enduring value, offering shelter and support to students when they need it the most, illuminating the path towards academic success with the steady light of knowledge and preparedness.
 "The value of the cloak is known in the rain." This proverb speaks volumes about the true test of worth and utility, which often comes only in times of need. It's a metaphorical statement emphasizing that the real value of something is realized not when conditions are favorable, but rather when they are adverse. This concept is universal, transcending cultures and contexts, and can be applied to various aspects of life, including education and personal growth. In the digital era, where information is abundant and resources are just a click away, the true value of educational content and tools becomes evident in moments of genuine need.
 
-Go back to the [[index|Homepage]]
+Go back to the [[Uni2/Semester/index|Homepage]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 

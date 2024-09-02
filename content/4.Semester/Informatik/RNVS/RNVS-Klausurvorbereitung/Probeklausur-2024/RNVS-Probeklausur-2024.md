@@ -7,7 +7,7 @@ fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 Benötigte Zeit:
 date created: Thursday, 18. July 2024, 17:42
-date modified: Wednesday, 24. July 2024, 19:58
+date modified: Wednesday, 7. August 2024, 23:12
 ---
 
 # ISO OSI-Schichtenmodell [[ISO-OSI-Modell]]
