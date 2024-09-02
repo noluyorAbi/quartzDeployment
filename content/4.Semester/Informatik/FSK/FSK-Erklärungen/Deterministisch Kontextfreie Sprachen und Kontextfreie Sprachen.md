@@ -7,7 +7,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema: "[[Uni2/Semester/4.Semester/Informatik/FSK/FSK-ÜB/ÜB 7/FSK-ÜB-7]]"
 Benötigte Zeit:
 date created: Thursday, 6. June 2024, 21:04
-date modified: Friday, 7. June 2024, 09:19
+date modified: Monday, 2. September 2024, 22:27
 ---
 
 # Deterministisch Kontextfreie Sprachen und Kontextfreie Sprachen
@@ -99,11 +99,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
