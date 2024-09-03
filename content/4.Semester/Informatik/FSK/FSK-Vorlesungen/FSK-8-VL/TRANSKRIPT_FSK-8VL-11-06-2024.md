@@ -7,7 +7,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 11. June 2024, 18:51
-date modified: Monday, 22. July 2024, 01:44
+date modified: Monday, 2. September 2024, 23:04
 ---
 
 Videos vom 14.06. das ist VL 07 statt 08
