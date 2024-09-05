@@ -27,22 +27,22 @@ date modified: Monday, 2. September 2024, 23:09
        _Datum_: 26.04.2022  
        _Beschreibung_: Es werden Beispiele für Typ 1- und Typ 0-Grammatiken und deren erzeugte Sprachen gegeben und untersucht. Mehrdeutige Grammatiken und inhärent mehrdeutige Sprachen werden erläutert. Ein Algorithmus zum Entfernen von ε-Produktionen wird behandelt.
 
-- [ ] **04 Chomsky-Grammatiken: Abschlusseigenschaften, Entscheidungsprobleme**  
+- [x] **04 Chomsky-Grammatiken: Abschlusseigenschaften, Entscheidungsprobleme**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 03.05.2022  
        _Beschreibung_: Nach einer Wiederholung zu Chomsky-Grammatiken werden Syntaxbäume und Links- und Rechtsableitungen sowie Epsilon-Regeln definiert. Es werden Entscheidungsprobleme und Abschlusseigenschaften für Chomsky-Grammatiken definiert.
 
-- [ ] **05 Deterministische Endliche Automaten**  
+- [x] **05 Deterministische Endliche Automaten**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 03.05.2022  
        _Beschreibung_: Deterministische Endliche Automaten werden eingeführt, Entwurf und Analyse werden an Beispielen demonstriert.
 
-- [ ] **06 Entscheidbarkeit des Wortproblems für Typ 1-Sprachen**  
+- [x] **06 Entscheidbarkeit des Wortproblems für Typ 1-Sprachen**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 03.05.2022  
        _Beschreibung_: Es wird gezeigt, dass das Wortproblem für Typ 1-Sprachen entscheidbar ist.
 
-- [ ] **07 DFAs akzeptieren reguläre Sprachen, Nichtdeterministische Endliche Automaten**  
+- [x] **07 DFAs akzeptieren reguläre Sprachen, Nichtdeterministische Endliche Automaten**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 10.05.2022  
        _Beschreibung_: Es wird bewiesen, dass DFAs reguläre Sprachen akzeptieren. Im Anschluss werden nichtdeterministische endliche Automaten eingeführt.
