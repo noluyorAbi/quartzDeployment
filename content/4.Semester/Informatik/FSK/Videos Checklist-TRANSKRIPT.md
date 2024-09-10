@@ -7,7 +7,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 2. September 2024, 23:05
-date modified: Monday, 2. September 2024, 23:09
+date modified: Friday, 6. September 2024, 15:27
 ---
 
 # Formale Sprachen und Komplexität SoSe 2022 - Videos
@@ -47,12 +47,14 @@ date modified: Monday, 2. September 2024, 23:09
        _Datum_: 10.05.2022  
        _Beschreibung_: Es wird bewiesen, dass DFAs reguläre Sprachen akzeptieren. Im Anschluss werden nichtdeterministische endliche Automaten eingeführt.
 
-- [ ] **08 Determinisierung von endlichen Automaten**  
+- [x] **08 Determinisierung von endlichen Automaten**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 10.05.2022  
        _Beschreibung_: Zunächst zeigen wir, dass jede reguläre Sprache von einem nichtdeterministischen endlichen Automaten erkannt wird. Danach zeigen wir, wie man für jeden NFA einen DFA konstruiert, der dieselbe Sprache erkennt. Damit vervollständigen wir den Beweis, dass NFAs und DFAs genau die regulären Sprachen erkennen.
 
-- [ ] **09 Nichtdeterministische Endliche Automaten und ε-Übergänge**  
+> [!warning] Beweislastig, schwierig
+
+- [x] **09 Nichtdeterministische Endliche Automaten und ε-Übergänge**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 10.05.2022  
        _Beschreibung_: Zunächst wird bewiesen, dass DFAs exponentiell viel größer sein können als NFAs. Danach werden NFAs mit ε-Übergängen eingeführt und es wird gezeigt, dass diese genau die regulären Sprachen erkennen.
@@ -242,11 +244,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
