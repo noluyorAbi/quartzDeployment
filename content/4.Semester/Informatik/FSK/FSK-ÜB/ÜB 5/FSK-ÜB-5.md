@@ -8,7 +8,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit: 6h
 date created: Tuesday, 21. May 2024, 16:56
-date modified: Monday, 10. June 2024, 14:48
+date modified: Sunday, 15. September 2024, 11:22
 ---
 
 # FSK5-1 Myhill und Nerode (2 Punkte)
@@ -260,6 +260,67 @@ $$
 > ### Schlussfolgerung:
 >
 > Die unendliche Anzahl und die Art der Äquivalenzklassen, die durch die Bedingung $j < k$ entstehen, überschreiten die Möglichkeiten eines endlichen Automaten, was gemäß dem Myhill-Nerode Theorem zur Nicht-Regulärität der Sprache führt.
+
+**ii) Sprache $L_2 = \{ wwww \mid w \in \Sigma_2^* \}$ mit $ \Sigma_2 = \{ a, b \}$:**
+
+**Bestimmung des Nerode-Index:**
+
+Wir zeigen, dass $L_2$ unendlich viele Nerode-Äquivalenzklassen besitzt.
+
+**Beweis:**
+
+Betrachten wir für jedes Wort $w \in \Sigma_2^*$ das Präfix $x_w = w$. Wir behaupten, dass für jedes Paar verschiedener Wörter $u, v \in \Sigma_2^*$ gilt: $u \not\equiv_{L_2} v$.
+
+**Annahme:** Angenommen, es gibt zwei verschiedene Wörter $u, v \in \Sigma_2^*$ mit $u \equiv_{L_2} v$.
+
+**Widerspruch:** Wählen wir $z = uuu$. Dann gilt:
+
+- $u z = uuuu \in L_2$, da $uuuu = wwww$ für $w = u$.
+- $v z = vuuu \notin L_2$, außer wenn $v = u$, was aber per Annahme nicht der Fall ist.
+
+Da $u z \in L_2$ und $v z \notin L_2$, sind $u$ und $v$ nicht äquivalent. Somit gibt es für jedes Wort $w \in \Sigma_2^*$ eine eigene Äquivalenzklasse.
+
+**Schlussfolgerung:**
+
+- **Nerode-Index:** Unendlich
+- **Regulärität:** $L_2$ ist nicht regulär, da es unendlich viele Äquivalenzklassen gibt.
+
+**iii) Sprache $L_3 = \{ a^i b^j c^k \mid i, j, k \in \mathbb{N}, \text{ und wenn } i = 2, \text{ dann } j < k \}$ mit $ \Sigma_3 = \{ a, b, c \}$:**
+
+**Bestimmung des Nerode-Index:**
+
+Wir zeigen, dass $L_3$ unendlich viele Nerode-Äquivalenzklassen besitzt.
+
+**Beweis:**
+
+Betrachten wir die Wörter der Form $x_n = a^2 b^n$ für $n \in \mathbb{N}$.
+
+Für zwei verschiedene natürliche Zahlen $n$ und $m$ mit $n \neq m$ zeigen wir, dass $x_n \not\equiv_{L_3} x_m$.
+
+**Annahme:** Angenommen, $x_n \equiv_{L_3} x_m$.
+
+Wählen wir $z = c^{n+1}$. Dann gilt:
+
+- $x_n z = a^2 b^n c^{n+1} \in L_3$, da $j = n < n+1 = k$.
+- $x_m z = a^2 b^m c^{n+1}$:
+
+  - Falls $m > n$: $j = m \geq n+1 = k$ ⇒ $j \geq k$ ⇒ $x_m z \notin L_3$.
+  - Falls $m < n$: $j = m < n+1 = k$ ⇒ $x_m z \in L_3$.
+
+Da das Ergebnis von $x_m z$ vom Wert von $m$ abhängt, unterscheiden sich $x_n$ und $x_m$ hinsichtlich der Zugehörigkeit zu $L_3$. Somit sind sie nicht äquivalent.
+
+**Schlussfolgerung:**
+
+- **Nerode-Index:** Unendlich
+- **Regulärität:** $L_3$ ist nicht regulär, da es unendlich viele Äquivalenzklassen gibt.
+
+**Zusammenfassung:**
+
+- **Sprache $L_1$:** Regulär mit einem endlichen Nerode-Index von 17 Äquivalenzklassen.
+- **Sprache $L_2$:** Nicht regulär aufgrund eines unendlichen Nerode-Index.
+- **Sprache $L_3$:** Nicht regulär aufgrund eines unendlichen Nerode-Index.
+
+**Hinweis:** Die detaillierten Beweise für $L_2$ und $L_3$ zeigen, dass es unendlich viele paarweise verschiedene Äquivalenzklassen gibt, was nach dem Satz von Myhill-Nerode die Nicht-Regularität der Sprachen bestätigt.
 
 ---
 
@@ -513,11 +574,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */

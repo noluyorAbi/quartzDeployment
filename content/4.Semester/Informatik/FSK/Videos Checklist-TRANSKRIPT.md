@@ -7,7 +7,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 2. September 2024, 23:05
-date modified: Friday, 6. September 2024, 15:27
+date modified: Monday, 16. September 2024, 14:23
 ---
 
 # Formale Sprachen und Komplexität SoSe 2022 - Videos
@@ -59,21 +59,25 @@ date modified: Friday, 6. September 2024, 15:27
        _Datum_: 10.05.2022  
        _Beschreibung_: Zunächst wird bewiesen, dass DFAs exponentiell viel größer sein können als NFAs. Danach werden NFAs mit ε-Übergängen eingeführt und es wird gezeigt, dass diese genau die regulären Sprachen erkennen.
 
-- [ ] **10 Reguläre Ausdrücke**  
+- [x] **10 Reguläre Ausdrücke**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 17.05.2022  
        _Beschreibung_: Nach einer Wiederholung zu NFAs mit Epsilon-Übergängen wird die Syntax und Semantik von regulären Ausdrücken eingeführt.
 
-- [ ] **11 Der Satz von Kleene**  
+- [x] **11 Der Satz von Kleene**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 17.05.2022  
        _Beschreibung_: Der Satz von Kleene wird bewiesen. Hierfür ist einerseits zu zeigen, dass jede reguläre Sprache durch einen regulären Ausdruck erzeugt wird. Hierfür wird für jeden DFA ein regulärer Ausdruck konstruiert, so dass die erzeugten Sprachen übereinstimmen. Andererseits muss gezeigt werden, dass reguläre Ausdrücke stets reguläre Sprachen erzeugen. Hierfür wird für jeden regulären Ausdruck ein NFA mit Epsilon-Übergängen und eindeutigen Start- und Endzuständen erzeugt, der genau die Worte akzeptiert, die der reguläre Ausdruck erzeugt.
 
-- [ ] **12 Das Pumping-Lemma**  
+> [!warning] Pumping Lemma ist heavy
+
+- [x] **12 Das Pumping-Lemma**  
        _Datum_: 17.05.2022  
        _Beschreibung_: Das Pumping-Lemma und dessen Verwendung zum Widerlegen der Regularität formaler Sprachen wird erläutert und an Beispielen demonstriert.
 
-- [ ] **13 Der Satz von Myhill-Nerode**  
+> [!warning] ist heavy
+
+- [x] **13 Der Satz von Myhill-Nerode**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 24.05.2022  
        _Beschreibung_: Die Nerode-Relation für formale Sprachen wird eingeführt und erläutert. Der Satz von Myhill und Nerode wird vorgestellt und bewiesen. Dieser liefert eine Charakterisierung der regulären Sprachen. Die Anwendung des Satzes zum Nichtregularitätsbeweis wird erläutert. Schließlich wird gezeigt, dass der Nerode-Automat ein Minimalautomat ist.
