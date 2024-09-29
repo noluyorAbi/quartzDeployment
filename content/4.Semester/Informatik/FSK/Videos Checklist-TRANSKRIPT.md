@@ -7,7 +7,7 @@ fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 2. September 2024, 23:05
-date modified: Monday, 23. September 2024, 15:11
+date modified: Monday, 30. September 2024, 00:26
 ---
 
 # Formale Sprachen und Komplexität SoSe 2022 - Vorlesungen
@@ -133,116 +133,118 @@ date modified: Monday, 23. September 2024, 15:11
        _Datum_: 08.06.2022  
        _Beschreibung_: Kellerautomaten werden eingeführt.
 
-- [ ] **21 Äquivalenz von Kellerautomaten und Kontextfreien Sprachen**  
+- [x] **21 Äquivalenz von Kellerautomaten und Kontextfreien Sprachen**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 14.06.2022  
        _Beschreibung_: Die Äquivalenz von PDAs und CFLs wird bewiesen.
 
 ## Vorlesung 8
 
-- [ ] **22 Deterministisch kontextfreie Sprachen und Entscheidbarkeiten**  
+- [x] **22 Deterministisch kontextfreie Sprachen und Entscheidbarkeiten**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 14.06.2022  
        _Beschreibung_: Die deterministisch kontextfreien Sprachen werden definiert, die deterministischen Kellerautomaten eingeführt und Eigenschaften der Sprachen vorgestellt.
 
-- [ ] **23 Turingmaschinen und Typ 1- und Typ 0-Sprachen**  
+> [!info] Am ende des vis coole zusammenfassung
+
+- [x] **23 Turingmaschinen und Typ 1- und Typ 0-Sprachen**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 14.06.2022  
        _Beschreibung_: Die Turingmaschine (deterministisch wie auch nichtdeterministisch) wird eingeführt. Die linear-platzbeschränkten Turingmaschinen werden definiert. Nach dem Satz von Kuroda und der Äquivalenz von Turingmaschine und Typ 0-Sprachen wird eine abschließende Übersicht über die Chomsky-Hierarchie und die äquivalenten Maschinenmodelle gegeben.
 
-- [ ] **24 Entscheidbarkeiten bei kontextfreien Grammatiken und Kuroda-Normalform für kontextsensitive Grammatiken**  
+- [x] **24 Entscheidbarkeiten bei kontextfreien Grammatiken und Kuroda-Normalform für kontextsensitive Grammatiken**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 21.06.2022  
        _Beschreibung_: Entscheidbarkeitsresultate für Typ 2-Sprachen werden formuliert und bewiesen. Die Kuroda-Normalform für kontextsensitive Sprachen wird eingeführt und ein Algorithmus zum Erstellen dieser Normalform wird vorgestellt und demonstriert.
 
 ## Vorlesung 9
 
-- [ ] **25 Satz von Kuroda und LBA-Probleme**  
+- [x] **25 Satz von Kuroda und LBA-Probleme**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 21.06.2022  
        _Beschreibung_: Der Satz von Kuroda wird bewiesen. Anschließend werden das 1. und das 2. LBA-Problem erläutert und der Beweis des Satzes von Immerman und Szelepcsényi wird skizziert.
 
-- [ ] **26 Intuitive und Turing-Berechenbarkeit**  
+- [x] **26 Intuitive und Turing-Berechenbarkeit**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 21.06.2022  
        _Beschreibung_: Der Begriff der Berechenbarkeit wird thematisiert und definiert. Nach Beispielen folgt der Begriff der Turingberechenbarkeit. Zum Ende werden Varianten der Turingmaschine (Mehrspuren- und Mehrbandmaschinen) vorgestellt und gezeigt, dass sie die Turingberechenbarkeit nicht verändern.
 
-- [ ] **27 Konstruktion von Turingmaschinen und LOOP-Programme**  
+- [x] **27 Konstruktion von Turingmaschinen und LOOP-Programme**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 28.06.2022  
        _Beschreibung_: Es werden Konstruktionen von Turingmaschinen für Zuweisung, Hintereinanderschaltung, Verzweigung, Schleifen eingeführt. Anschließend wird die Syntax und operationale Semantik von LOOP-Programmen erläutert und die LOOP-Berechenbarkeit definiert. Schließlich wird bewiesen, dass alle LOOP-berechenbaren Funktionen total sind.
 
 ## Vorlesung 10
 
-- [ ] **28 WHILE- und GOTO-Programme**  
+- [x] **28 WHILE- und GOTO-Programme**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 28.06.2022  
        _Beschreibung_: WHILE- und GOTO-Programme werden vorgestellt und die WHILE- und GOTO-Berechenbarkeit definiert. Schließlich wird nachgewiesen, dass WHILE-, GOTO- und Turingberechenbarkeit zusammenfallen und denselben Berechenbarkeitsbegriff darstellen.
 
-- [ ] **29 Die Ackermannfunktion**  
+- [x] **29 Die Ackermannfunktion**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 28.06.2022  
        _Beschreibung_: Die Ackermannfunktion wird erläutert. Es wird bewiesen, dass die Ackermannfunktion total ist, WHILE-berechenbar ist, aber nicht LOOP-berechenbar ist.
 
-- [ ] **30 Primitiv rekursive und µ-rekursive Funktionen**  
+- [x] **30 Primitiv rekursive und µ-rekursive Funktionen**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 05.07.2022  
        _Beschreibung_: Die primitiv rekursiven und die µ-rekursiven Funktionen werden definiert und es wird gezeigt, dass erstere den LOOP-berechenbaren Funktionen entsprechen, während letztere den WHILE-berechenbaren Funktionen entsprechen.
 
 ## Vorlesung 11
 
-- [ ] **31 Entscheidbarkeit, Unentscheidbarkeit und das Halteproblem**  
+- [x] **31 Entscheidbarkeit, Unentscheidbarkeit und das Halteproblem**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 05.07.2022  
        _Beschreibung_: Die Begriffe entscheidbar, semi-entscheidbar, rekursiv-aufzählbar werden erläutert und ihre Beziehung untereinander wird untersucht. Im Anschluss wird die Unentscheidbarkeit des speziellen Halteproblems bewiesen.
 
-- [ ] **32 Reduktion und der Satz von Rice**  
+- [x] **32 Reduktion und der Satz von Rice**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 05.07.2022  
        _Beschreibung_: Die Technik der Reduktion zum Nachweis der Unentscheidbarkeit wird eingeführt. Im Anschluss wird der Satz von Rice bewiesen.
 
-- [ ] **33 Das Postsche Korrespondenzproblem**  
+- [x] **33 Das Postsche Korrespondenzproblem**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 12.07.2022  
        _Beschreibung_: Das Postsche Korrespondenzproblem wird erläutert, seine Unentscheidbarkeit wird bewiesen und Varianten des Problems werden betrachtet.
 
 ## Vorlesung 12
 
-- [ ] **34 Laufzeitkomplexität und die Klassen P und NP**  
+- [x] **34 Laufzeitkomplexität und die Klassen P und NP**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 12.07.2022  
        _Beschreibung_: Die Komplexitätstheorie wird motiviert, die Klassen P und NP sowie die P-versus-NP-Frage erläutert.
 
-- [ ] **35 NP-Vollständigkeit**  
+- [x] **35 NP-Vollständigkeit**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 12.07.2022  
        _Beschreibung_: Der Begriff der NP-Vollständigkeit wird eingeführt und Konsequenzen für das P-vs-NP-Problem werden diskutiert.
 
-- [ ] **36 Der Satz von Cook**  
+- [x] **36 Der Satz von Cook**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 19.07.2022  
        _Beschreibung_: Die NP-Vollständigkeit des SAT-Problems wird bewiesen.
 
 ## Vorlesung 13
 
-- [ ] **37 NP-Vollständigkeit von 3-CNF-SAT**  
+- [x] **37 NP-Vollständigkeit von 3-CNF-SAT**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 19.07.2022  
        _Beschreibung_: Die NP-Vollständigkeit von 3-CNF-SAT wird bewiesen.
 
-- [ ] **38 NP-Vollständigkeit von CLIQUE, INDEPENDENT SET und VERTEX COVER**  
+- [x] **38 NP-Vollständigkeit von CLIQUE, INDEPENDENT SET und VERTEX COVER**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 19.07.2022  
        _Beschreibung_: Die NP-Vollständigkeit von CLIQUE, INDEPENDENT SET und VERTEX COVER wird bewiesen.
 
-- [ ] **39 NP-Vollständigkeit von SETCOVER, SUBSETSUM, KNAPSACK, PARTITION und BINPACKING**  
+- [x] **39 NP-Vollständigkeit von SETCOVER, SUBSETSUM, KNAPSACK, PARTITION und BINPACKING**  
        _Sprecher_: Prof. Dr. David Sabel  
        _Datum_: 26.07.2022  
        _Beschreibung_: Die NP-Vollständigkeit von SETCOVER, SUBSETSUM, KNAPSACK, PARTITION und BINPACKING wird bewiesen.
 
 ## Vorlesung 14
 
-- [ ] **40 NP-Vollständigkeit von (UN-)DIRECTED-HAMILTON-CYCLE, TRAVELLING-SALESMAN und GRAPH-COLORING**  
+- [x] **40 NP-Vollständigkeit von (UN-)DIRECTED-HAMILTON-CYCLE, TRAVELLING-SALESMAN und GRAPH-COLORING**  
        _Datum_: 26.07.2022  
        _Beschreibung_: Die NP-Vollständigkeit von (UN-)DIRECTED-HAMILTON-CYCLE, TRAVELLING-SALESMAN und GRAPH-COLORING wird bewiesen.
 
@@ -277,11 +279,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
