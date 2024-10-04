@@ -6,13 +6,15 @@ tags:
 fach: "[[Formale Sprachen und Komplexität (FSK)]]"
 Thema:
 Benötigte Zeit:
+date created: Monday, 30. September 2024, 00:27
+date modified: Monday, 30. September 2024, 17:29
 ---
 
 **Cheat Sheet**
 
 ---
 
-### **Normalformen**
+# **Normalformen**
 
 **Chomsky-Normalform (CNF)**
 
@@ -79,7 +81,7 @@ Benötigte Zeit:
 
 ---
 
-### **Sätze**
+# **Sätze**
 
 **Satz von Rice**
 
@@ -95,7 +97,7 @@ Benötigte Zeit:
 
 ---
 
-### **Abschlusseigenschaften**
+# **Abschlusseigenschaften**
 
 **Abschlusseigenschaften von Sprachklassen**
 
@@ -119,7 +121,7 @@ Benötigte Zeit:
 
 ---
 
-### **Primitive Rekursion und μ-Rekursion**
+# **Primitive Rekursion und μ-Rekursion**
 
 **Primitiv Rekursive Funktionen**
 
@@ -167,7 +169,7 @@ Benötigte Zeit:
 
 ---
 
-### **NP-Vollständigkeits-Hierarchie**
+# **NP-Vollständigkeits-Hierarchie**
 
 **Übersicht der NP-vollständigen Probleme**
 
@@ -248,11 +250,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
