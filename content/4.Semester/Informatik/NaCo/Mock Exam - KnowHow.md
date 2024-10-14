@@ -1,6 +1,6 @@
 ---
 date created: Monday, 14. October 2024, 21:42
-date modified: Tuesday, 15. October 2024, 00:37
+date modified: Tuesday, 15. October 2024, 00:40
 ---
 
 # Task 1: Fill in the Blanks
@@ -123,68 +123,6 @@ def fitness_phi(x):
     return max(x[0]**2 + x[1]**2, 50 - x[0]**2 - x[1]**2)
 ```
 
-This fitness function takes the maximum value between two expressions:
-
-1. $f_1(x) = x[0]^2 + x[1]^2$, which is a parabolic function (opens upwards) and is minimized at the origin, $(0, 0)$.
-2. $f_2(x) = 50 - x[0]^2 - x[1]^2$, which is an inverted parabola (opens downwards) and is maximized at the origin, $(0, 0)$.
-
-The task asks us to find two different global optima for this fitness function and suggest a technique to help the evolutionary algorithm find multiple global optima in a single run.
-
-### Part (a): Finding Two Global Optima
-
-#### What Does the Question Mean?
-
-The fitness function $\phi(x)$ has multiple global optima, meaning there are several points in the search space where the function achieves its smallest possible value. In this case, you are asked to identify two different points (optima) where $\phi(x)$ is minimized.
-
-#### Explanation:
-
-The fitness function compares two competing terms:
-
-- $f_1(x)$ increases as $x[0]$ and $x[1]$ move away from the origin.
-- $f_2(x)$ decreases as $x[0]$ and $x[1]$ move away from the origin, but is bounded by 50.
-
-The global optima are the points where the function achieves its minimum, meaning where both $f_1(x)$ and $f_2(x)$ are minimized simultaneously. These occur when the function values are equal at certain points in the search space.
-
-#### Solution:
-
-Two examples of global optima that minimize $\phi(x)$ are:
-
-- **Optimum 1**: $(5, 0)$, where the fitness function evaluates to $\phi(5, 0) = 25$.
-- **Optimum 2**: $(0, 5)$, where the fitness function also evaluates to $\phi(0, 5) = 25$.
-
-These are points where the function reaches its lowest value of 25, and thus they are two different global optima.
-
-### Part (b): Technique to Find Multiple Optima
-
-#### What Does the Question Mean?
-
-In evolutionary algorithms, the population of solutions tends to converge to a single solution over time, which may prevent the discovery of multiple global optima. The task here is to propose a technique that would allow the algorithm to discover multiple different optima in a single run.
-
-#### Explanation:
-
-To avoid convergence to a single solution, we can promote diversity within the population. This ensures that the algorithm explores various regions of the solution space, increasing the likelihood of finding multiple global optima.
-
-#### Solution:
-
-One effective technique is to use diversity-based selection:
-
-- **Diversity-based selection**: During the selection process, prioritize individuals that are different from others, either in terms of their fitness values or their positions in the search space. This encourages a wider exploration of the solution space.
-
-By promoting diversity, the algorithm is less likely to converge prematurely to a single solution, and instead it will explore different areas of the solution space, increasing the chance of discovering multiple global optima.
-
-This approach ensures that the evolutionary algorithm explores the solution space more thoroughly and finds multiple global optima in a single run.
-
-# Task 6: Evolutionary Computing
-
-## Problem Description
-
-We are given an evolutionary algorithm that minimizes a fitness function $\phi$ over the search space $X = Q^2$, where $Q = [-5, +5] \subset \mathbb{R}$. The goal of the evolutionary algorithm is to find values of $x_0$ and $x_1$ within this range that minimize the function $\phi$, which is defined as:
-
-```python
-def fitness_phi(x):
-    return max(x[0]**2 + x[1]**2, 50 - x[0]**2 - x[1]**2)
-```
-
 ### Why Does `fitness_phi(x)` Have Poor Fitness Values at the Center?
 
 The reason why the fitness function `fitness_phi(x)` has poor fitness values near the center of the search space is due to its structure:
@@ -238,7 +176,7 @@ def recombine_xover(parent_a, parent_b):
         return [parent_b[0], parent_a[1]]
 ```
 
-**Which of the two recombination functions `recombine_avg` and `recombine_xover` is better suited for the optimization problem given by `fitness_phi`?**
+#### Which of the two recombination functions `recombine_avg` and `recombine_xover` is better suited for the optimization problem given by `fitness_phi`?
 
 #### Explanation:
 
@@ -251,6 +189,48 @@ The fitness function `fitness_phi` has poor fitness values near the center of th
 
 - **`recombine_xover`** is better suited for the optimization problem because it spreads offspring more evenly across the search space, avoiding the center where fitness is poor.
 - **`recombine_avg`** is less ideal because it tends to pull offspring toward the center, potentially leading to suboptimal solutions.
+
+---
+
+### Part (d): Mutation Function
+
+A mutation function is defined to have the following qualities:
+
+- It does not return solution candidates that lie outside the search space’s boundaries.
+- Its effects are random and not affected by fitness.
+- Its effects work the same way in all of the individual’s dimensions.
+- Its effects completely change the original individual only very rarely.
+- There is no point within the search space that can never be reached via mutation, provided any arbitrary individual as a starting point and infinite time.
+
+The following Python function satisfies these requirements:
+
+```python
+import random
+import math
+
+def mutate(parent):
+    index = math.floor(random.random() * 2)
+    parent[index] = parent[index] + random.random() - 0.5
+    if parent[index] < -5:
+        parent[index] = -5
+    if parent[index] > 5:
+        parent[index] = 5
+    return parent
+```
+
+This function randomly selects a dimension (either $x_0$ or $x_1$) and perturbs the value slightly by a random amount between $-0.5$ and $+0.5$. The mutation is constrained to stay within the bounds of the search space $[-5, 5]$. This ensures that individuals mutate in a controlled but still random way, respecting the boundaries of the search space.
+
+---
+
+### Part (e): Augmented Evolutionary Algorithm with Greedy Local Search
+
+Consider that we now construct an evolutionary algorithm with local search, i.e., we augment the evolutionary algorithm by using a greedy gradient-based search algorithm on each individual before the fitness evaluation. Given the fitness function `fitness_phi`, what should we expect to happen when running this augmented evolutionary algorithm?
+
+#### Explanation:
+
+- Greedy gradient-based search will immediately converge towards a local or global minimum.
+- This setup will yield results very quickly, but it does not take full advantage of the evolutionary algorithm because the local search dominates the optimization process.
+- Therefore, this setup is not reasonable because the evolutionary aspect is essentially redundant. Instead, we could just use the greedy local search by itself, as it would produce the same results without needing the additional complexity of the evolutionary algorithm.
 
 ---
 
@@ -280,11 +260,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
