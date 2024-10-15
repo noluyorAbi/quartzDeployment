@@ -1,25 +1,29 @@
 ---
 date created: Monday, 14. October 2024, 21:46
-date modified: Tuesday, 15. October 2024, 00:27
+date modified: Tuesday, 15. October 2024, 17:20
 ---
 
 # Natural Computing - Index
 
-Welcome to the Natural Computing index page. This serves as a directory to key topics and resources I've compiled while preparing for my Natural Computing exam.
+Welcome to the **Natural Computing** index page. This serves as a comprehensive directory of the most important topics and resources I have compiled while preparing for my **Natural Computing** exam.
 
-> Please note that this page is not heavily filled with information, as I decided to prioritize this topic just one week before the exam. Due to the limited time, I had to quickly gather and learn the material, which resulted in less detailed content than I would have liked.
+> **Note**: This page is not extensively detailed, as I focused on this subject only one week before the exam. Due to the limited time, I had to swiftly gather and study the material, resulting in less comprehensive content than I would have preferred.
 
 ## [[Elitist vs Greedy]]
 
-A comparison of two important concepts in optimization algorithms.
+A comparative analysis of two fundamental concepts in optimization algorithms. Explore the differences, strengths, and suitable applications of **elitist** and **greedy** algorithms.
 
 ## [[Mock Exam - KnowHow]]
 
-Key insights and knowledge extracted from mock exams for quick review.
+Essential insights and key points derived from mock exams. Perfect for a quick review and identifying areas that need further understanding.
 
 ## [[Cheatsheet - NaCo]]
 
-A condensed cheatsheet of essential terms and concepts in Natural Computing.
+A concise cheatsheet containing the essential terms and concepts in **Natural Computing**. Ideal for quick reference during study sessions.
+
+## [[Exam - 2022]]
+
+Resources and information related to the **Natural Computing** exam from the year 2022. Includes past exam questions, solutions, explanations.
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
@@ -47,11 +51,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */

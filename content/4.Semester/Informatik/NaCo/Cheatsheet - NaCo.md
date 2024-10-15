@@ -1,6 +1,6 @@
 ---
 date created: Tuesday, 15. October 2024, 00:16
-date modified: Tuesday, 15. October 2024, 00:27
+date modified: Tuesday, 15. October 2024, 17:16
 ---
 
 # Natural Computing - Important Terms (English & German)
@@ -253,6 +253,18 @@ date modified: Tuesday, 15. October 2024, 00:27
 
 ---
 
+### Memetic Algorithm
+
+**English**:
+
+- **Definition**: A **memetic algorithm** is an extension of the genetic algorithm that incorporates local search heuristics to refine individuals. This hybrid approach combines the global search capabilities of genetic algorithms with the fine-tuning power of local optimization, often leading to faster convergence and better solutions.
+
+**Deutsch**:
+
+- **Definition**: Ein **memetischer Algorithmus** ist eine Erweiterung des genetischen Algorithmus, der lokale Suchheuristiken zur Verfeinerung von Individuen einbezieht. Dieser hybride Ansatz kombiniert die globalen Suchfähigkeiten genetischer Algorithmen mit der Feinabstimmung durch lokale Optimierung, was oft zu einer schnelleren Konvergenz und besseren Lösungen führt.
+
+---
+
 ## 5. Quantum Computing
 
 ### Superposition
@@ -276,6 +288,56 @@ date modified: Tuesday, 15. October 2024, 00:27
 **Deutsch**:
 
 - **Definition**: **Verschränkung** bedeutet, dass zwei Qubits miteinander verbunden sind, sodass der Zustand eines Qubits den Zustand des anderen beeinflusst, unabhängig von der Entfernung.
+
+---
+
+## 6. Genetic Algorithms
+
+### Genotype
+
+**English**:
+
+- **Definition**: A **genotype** is the genetic representation of a solution in a genetic algorithm, typically encoded in a string of bits or symbols.
+
+**Deutsch**:
+
+- **Definition**: Ein **Genotyp** ist die genetische Darstellung einer Lösung in einem genetischen Algorithmus, die typischerweise in einer Zeichenkette aus Bits oder Symbolen codiert ist.
+
+---
+
+### Phenotype
+
+**English**:
+
+- **Definition**: A **phenotype** is the expressed characteristics or traits of a genotype, representing the actual solution in the problem space.
+
+**Deutsch**:
+
+- **Definition**: Ein **Phänotyp** ist die ausgedrückte Merkmale oder Eigenschaften eines Genotyps und stellt die tatsächliche Lösung im Problemraum dar.
+
+---
+
+### Fitness Function
+
+**English**:
+
+- **Definition**: The **fitness function** evaluates how well a solution (phenotype) performs in the context of the optimization problem, guiding the selection process.
+
+**Deutsch**:
+
+- **Definition**: Die **Fitnessfunktion** bewertet, wie gut eine Lösung (Phänotyp) im Kontext des Optimierungsproblems funktioniert und leitet den Selektionsprozess.
+
+---
+
+### Target Function
+
+**English**:
+
+- **Definition**: The **target function** (or objective function) is the specific function that the optimization algorithm aims to optimize, often representing the desired outcome.
+
+**Deutsch**:
+
+- **Definition**: Die **Ziel-Funktion** (oder Objektivfunktion) ist die spezifische Funktion, die der Optimierungsalgorithmus zu optimieren versucht und oft das gewünschte Ergebnis darstellt.
 
 ---
 
@@ -305,11 +367,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
