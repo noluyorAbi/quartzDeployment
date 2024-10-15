@@ -1,6 +1,6 @@
 ---
 date created: Monday, 14. October 2024, 21:46
-date modified: Tuesday, 15. October 2024, 18:59
+date modified: Tuesday, 15. October 2024, 22:00
 ---
 
 # Natural Computing - Index
@@ -24,6 +24,8 @@ A concise cheatsheet containing the essential terms and concepts in **Natural Co
 ## [[Exam - 2022]]
 
 Resources and information related to the **Natural Computing** exam from the year 2022. Includes past exam questions, solutions, explanations.
+
+# [[Was ist Fitness?]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
