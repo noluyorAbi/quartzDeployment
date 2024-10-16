@@ -1,6 +1,6 @@
 ---
 date created: Tuesday, 15. October 2024, 21:35
-date modified: Tuesday, 15. October 2024, 22:00
+date modified: Wednesday, 16. October 2024, 00:34
 ---
 
 # In Betracht zur Aufgabe
@@ -10,7 +10,7 @@ def fitness_phi(x):
     return max(x[0]**2 + x[1]**2, 50 - x[0]**2 - x[1]**2)
 ```
 
-![Bild ausgeben](https://files.oaiusercontent.com/file-q6KBYkL0Pr5y8xfCp5egUnkK?se=2024-10-15T19%3A46%3A42Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D2a7e76c3-0273-4bba-971d-e0fe6a8289f6&sig=AEffruuR5xPd6Dw3RF/1hmYIMo8XxayOpFqzPuqhbcU%3D)
+![[output.png]]
 
 ## Frage:
 

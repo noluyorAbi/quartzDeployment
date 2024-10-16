@@ -1,31 +1,53 @@
 ---
 date created: Monday, 14. October 2024, 21:46
-date modified: Tuesday, 15. October 2024, 22:00
+date modified: Wednesday, 16. October 2024, 02:45
 ---
 
 # Natural Computing - Index
 
-Welcome to the **Natural Computing** index page. This serves as a comprehensive directory of the most important topics and resources I have compiled while preparing for my **Natural Computing** exam.
+🌿 **Welcome to the Wild World of Natural Computing!** 🌿
 
-> **Note**: This page is not extensively detailed, as I focused on this subject only one week before the exam. Due to the limited time, I had to swiftly gather and study the material, resulting in less comprehensive content than I would have preferred.
+This is your central hub for all things **Natural Computing**—the realm where nature and computation intersect to create mind-bending algorithms and optimization techniques. Here's the collection of topics and key resources I've pulled together while cramming for my exam. 📚
 
-## [[Elitist vs Greedy]]
+> 🧠 **Brain Hack**: I dove into this subject just a week before the exam, so expect a fast-and-furious breakdown of topics. It may not be exhaustive, but it's packed with what you need to survive (and maybe thrive)!
 
-A comparative analysis of two fundamental concepts in optimization algorithms. Explore the differences, strengths, and suitable applications of **elitist** and **greedy** algorithms.
+---
 
-## [[Mock Exam - KnowHow]]
+## 🚀 **[[Elitist vs Greedy]]**
 
-Essential insights and key points derived from mock exams. Perfect for a quick review and identifying areas that need further understanding.
+A battle of algorithmic titans. Who wins in the evolutionary race—**elitist** or **greedy** strategies? Find out how they differ, their strengths, and where to deploy them for maximum success.
 
-## [[Cheatsheet - NaCo]]
+---
 
-A concise cheatsheet containing the essential terms and concepts in **Natural Computing**. Ideal for quick reference during study sessions.
+## 📚 **[[Mock Exam - KnowHow]]**
 
-## [[Exam - 2022]]
+Your crash course in NaCo survival. Vital tips, tricks, and key points from mock exams. Because who doesn't love a cheat code for exams? 🤓
 
-Resources and information related to the **Natural Computing** exam from the year 2022. Includes past exam questions, solutions, explanations.
+---
 
-# [[Was ist Fitness?]]
+## 🔑 **[[Cheatsheet - NaCo]]**
+
+One sheet to rule them all. The **Natural Computing Cheatsheet**—a quick-glance guide to key concepts, terms, and formulas you can't afford to forget when the clock's ticking. ⏳
+
+---
+
+## 📜 **[[Exam - 2022 - NaCo]]**
+
+Relive the past. Explore **2022’s NaCo exam** questions, complete with solutions and breakdowns. Perfect for a walk down memory lane or intense last-minute practice.
+
+---
+
+## 🕒 **[[Exam - 2024 - NaCo]]**
+
+And here it comes—the **2024 exam** journey. Ready to smash it? Dive into the most recent challenges, just in time to sharpen your sword before the big day.
+
+---
+
+## 🧬 **[[Was ist Fitness?]]**
+
+Fitness isn't just for the gym, folks. Learn how the concept of **fitness** shapes the survival of the fittest algorithms in Natural Computing. Strong solutions, stronger results. 💪
+
+---
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
@@ -53,11 +75,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
