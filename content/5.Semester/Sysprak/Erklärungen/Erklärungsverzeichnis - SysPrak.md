@@ -6,11 +6,12 @@ tags:
 fach: "[[Systempraktikum]]"
 Thema:
 Benötigte Zeit:
-date created: Monday, 21. October 2024, 16:48
-date modified: Monday, 21. October 2024, 17:43
+date created: Monday, 21. October 2024, 17:36
+date modified: Monday, 21. October 2024, 17:37
 ---
 
-**Ende:** Theorie-2 Seite:
+- [[Einführung in Headerdateien in C]]
+- [[Warum man sizeof für Strings in C nicht verwenden sollte]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
