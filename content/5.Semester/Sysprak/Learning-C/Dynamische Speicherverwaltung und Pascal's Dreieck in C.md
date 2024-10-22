@@ -7,7 +7,7 @@ fach: "[[Systempraktikum]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 21. October 2024, 15:17
-date modified: Monday, 21. October 2024, 15:37
+date modified: Tuesday, 22. October 2024, 09:50
 ---
 
 Dieses Tutorial führt Einsteiger in die dynamische Speicherverwaltung in C ein, indem es ein Programm vorstellt, das ein zweidimensionales Array erstellt, dessen Struktur einem Pascal'schen Dreieck ähnelt. Wir erklären Schritt für Schritt die Konzepte und den Code, um ein besseres Verständnis zu ermöglichen.
@@ -309,11 +309,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
