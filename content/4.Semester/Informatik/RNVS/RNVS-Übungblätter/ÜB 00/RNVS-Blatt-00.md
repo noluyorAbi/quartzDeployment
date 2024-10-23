@@ -7,7 +7,7 @@ tags:
 fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
 Thema:
 date created: Friday, 19. April 2024, 01:50
-date modified: Monday, 26. August 2024, 13:23
+date modified: Wednesday, 23. October 2024, 15:46
 ---
 
 # Aufgabe 1: Anforderungen des Internets (H)

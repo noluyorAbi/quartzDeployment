@@ -7,7 +7,7 @@ fach: "[[Einführung medizinische Biometrie]]"
 Thema:
 Benötigte Zeit:
 date created: Wednesday, 23. October 2024, 12:40
-date modified: Wednesday, 23. October 2024, 15:27
+date modified: Wednesday, 23. October 2024, 15:41
 ---
 
 # Grundbegriffe und epidemiologische Maßzahlen
@@ -15,11 +15,21 @@ date modified: Wednesday, 23. October 2024, 15:27
 ## Schnick Schnack
 
 - Confounding erklärt
-  - $\text{Korrelation} \neq \text{Kausalität}$
+  - Ein Confounder verzerrt den Zusammenhang zwischen zwei Variablen, weshalb Korrelation ≠ Kausalität ist.
 - Inzidenz erklärt
+
+  - Die Inzidenz beschreibt die Anzahl der neu auftretenden Fälle einer Krankheit in einer definierten Population über einen bestimmten Zeitraum.
+
 - Letalität erklärt
+
+  - Die Letalität gibt an, wie tödlich eine Krankheit ist, indem sie das Verhältnis von Todesfällen zu Erkrankten misst.
+
 - Pyramide der Evidenz
-- Die Prävalenz gibt Aufschluss über bestehende Fälle, die Inzidenz hingegen über neu auftretende Fälle
+
+  - Die Pyramide stellt verschiedene Studienarten hierarchisch nach ihrer wissenschaftlichen Aussagekraft dar, von Expertenmeinungen bis hin zu randomisierten kontrollierten Studien.
+
+- Prävalenz vs. Inzidenz
+  - Prävalenz beschreibt die Gesamtzahl bestehender Fälle zu einem bestimmten Zeitpunkt, während die Inzidenz die neuen Fälle innerhalb eines bestimmten Zeitraums angibt.
 
 ## 1. Definieren Sie folgende Studienarten und diskutieren Sie Vor- und Nachteile.
 

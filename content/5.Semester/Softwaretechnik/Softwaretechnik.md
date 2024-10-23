@@ -1,19 +1,19 @@
 ---
 tags:
-  - 4semester
+  - 3semester
+  - 5semester
+  - SWT
   - informatik
-  - RNVS
-fach: "[[Rechnernetze und Verteilte Systeme (RNVS)]]"
+fach: "[[Softwaretechnik]]"
 Thema:
 Benötigte Zeit:
-date created: Thursday, 18. July 2024, 18:01
-date modified: Wednesday, 23. October 2024, 15:46
+date created: Wednesday, 23. October 2024, 16:56
+date modified: Wednesday, 23. October 2024, 16:57
 ---
 
-- ## [[RNVS-Probeklausur-2024]] erledigt am 18.07.2024
-- ## [[RNVS-Altklausur-2018]] erledigt am 21.07.2024
-- ## [[RNVS-Klausur-2015]] erledigt am 22.07.2024
--
+# Übungsblätter
+
+- [[SWT - Blatt 1]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
@@ -41,11 +41,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
