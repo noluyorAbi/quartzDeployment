@@ -7,11 +7,11 @@ fach: "[[Juristisches IT-Projektmanagement]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 22. October 2024, 07:58
-date modified: Tuesday, 22. October 2024, 07:58
+date modified: Tuesday, 22. October 2024, 16:14
 ---
 
-- [[Uni2/Semester/5.Semester/JurIT/VL/1.VL/1. VL Juristisches IT-Projektmanagement 15.10.2022]]
-- [[2. Jurit]]
+- [[1. VL Juristisches IT-Projektmanagement 15.10.2022]]
+- [[2. VL Juristisches IT-Projektmanagement 22.10.2022]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
@@ -39,11 +39,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */

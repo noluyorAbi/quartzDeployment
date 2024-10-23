@@ -7,10 +7,21 @@ fach: "[[Einführung medizinische Biometrie]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 22. October 2024, 12:25
-date modified: Tuesday, 22. October 2024, 13:42
+date modified: Wednesday, 23. October 2024, 12:56
 ---
 
-- [[Medizinische Biometrie - Vorlesung]]
+# Übungsblätter
+
+- [[EiMedBiom - Blatt 1]]
+
+# Skript Vorlesung
+
+- [[EiMedBiom - 2VL]]
+
+# Skript Zusammenfassungen
+
+- [[EiMedBio - 1.Folien Zusammenfassung]]
+- [[EiMedBio - 2.Folien Zusammenfassung]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 

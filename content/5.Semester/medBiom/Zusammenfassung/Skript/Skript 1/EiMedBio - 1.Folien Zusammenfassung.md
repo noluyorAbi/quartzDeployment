@@ -7,22 +7,10 @@ fach: "[[Einführung medizinische Biometrie]]"
 Thema:
 Benötigte Zeit:
 date created: Tuesday, 22. October 2024, 12:30
-date modified: Tuesday, 22. October 2024, 12:39
+date modified: Wednesday, 23. October 2024, 12:53
 ---
 
 # Einführung in die medizinische Biometrie
-
-## Organisatorisches zur Veranstaltung
-
-- **Dozenten**:
-  - Dr. Sabine Hoffmann (Institut für Statistik)
-  - Maximilian Mandl (IBE)
-- **Termine**:
-  - Dienstags 12-14 Uhr
-  - Mittwochs 14-16 Uhr
-- **Klausur**: 05.02.2025, 12-14 Uhr
-- **Sprechstunde**: Nach Vereinbarung
-- **Informationen**: Aktuelle Infos auf Moodle
 
 ## Veranstaltungsüberblick
 
@@ -244,11 +232,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */

@@ -1,10 +1,10 @@
 ---
 date created: Tuesday, 22. October 2024, 12:22
-date modified: Tuesday, 22. October 2024, 13:42
+date modified: Tuesday, 22. October 2024, 13:44
 ---
 
 _Beginn_: Skript 2 Beginn
-_Ende:_
+_Ende:_ Folie 41
 
 # Einführung in die medizinische Biometrie
 
