@@ -7,7 +7,7 @@ fach: "[[Systempraktikum]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 21. October 2024, 15:19
-date modified: Monday, 21. October 2024, 17:32
+date modified: Wednesday, 23. October 2024, 20:35
 ---
 
 # Systempraktikum - Index
@@ -15,6 +15,8 @@ date modified: Monday, 21. October 2024, 17:32
 🛠️ **Willkommen in der Welt des Systempraktikums!** 🛠️
 
 Dies ist dein zentraler Hub für alles rund ums **Systempraktikum**—der Ort, an dem Theorie auf Praxis trifft und Bits zu echten Projekten werden. Hier findest du die Sammlung von Themen und wichtigen Ressourcen, die ich zusammengestellt habe, während ich mich auf die Prüfung vorbereitet habe. 📚
+
+- `Empfehlung Videos: Jacob Sorber C`
 
 ---
 

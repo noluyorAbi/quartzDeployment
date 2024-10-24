@@ -1,12 +1,13 @@
 ---
 date created: Wednesday, 23. October 2024, 19:52
-date modified: Wednesday, 23. October 2024, 20:23
+date modified: Thursday, 24. October 2024, 11:42
 ---
 
 # Vorlesungen
 
 - [[1.VL - CompInt]]
 - [[2.VL - CompInt]]
+- [[3.VL - CompInt]]
 
 # Exercises
 
