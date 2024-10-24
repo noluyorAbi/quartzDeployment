@@ -7,7 +7,7 @@ fach:
 title: Studying made easier.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Wednesday, 23. October 2024, 17:02
+date modified: Thursday, 24. October 2024, 11:44
 ---
 
 # 📚 Modules
@@ -21,6 +21,7 @@ date modified: Wednesday, 23. October 2024, 17:02
 |                | [[Natural Computing - NaCo]]                                                                   | done   |
 |                | [[Systempraktikum]]                                                                            | active |
 |                | [[Juristisches IT-Projektmanagement]]                                                          | active |
+|                | [[Computational Intelligence]]                                                                 | active |
 | **Statistik**  | [[LiMo]]                                                                                       | done   |
 |                | [[BaySta]]                                                                                     | done   |
 |                | [[Einführung medizinische Biometrie]]                                                          | active |
