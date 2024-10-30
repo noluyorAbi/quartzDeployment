@@ -7,34 +7,15 @@ fach: "[[Systempraktikum]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 21. October 2024, 15:19
-date modified: Wednesday, 23. October 2024, 20:35
+date modified: Monday, 28. October 2024, 17:34
 ---
 
-# Systempraktikum - Index
+[[Einführung in Headerdateien in C]][[Erklärungsverzeichnis - SysPrak]][[Verständnis von option_val im C-Programm zur Verarbeitung von Kommandozeilenargumenten]]
+[[Warum man sizeof für Strings in C nicht verwenden sollte]]
+[[Dynamische Speicherverwaltung und Pascal's Dreieck in C]]
 
-🛠️ **Willkommen in der Welt des Systempraktikums!** 🛠️
-
-Dies ist dein zentraler Hub für alles rund ums **Systempraktikum**—der Ort, an dem Theorie auf Praxis trifft und Bits zu echten Projekten werden. Hier findest du die Sammlung von Themen und wichtigen Ressourcen, die ich zusammengestellt habe, während ich mich auf die Prüfung vorbereitet habe. 📚
-
-- `Empfehlung Videos: Jacob Sorber C`
-
----
-
-## 📖 **[[Zusammenfassung Theorie 1 - Sysprak]]**
-
-Der erste Teil der Theorie zusammengefasst. Alles, was du über die Grundlagen des Systempraktikums wissen musst, kompakt und verständlich aufbereitet.
-
----
-
-## 🧮 **[[Dynamische Speicherverwaltung und Pascal's Dreieck in C]]**
-
-Tauche ein in die Welt der **dynamischen Speicherverwaltung** und entdecke, wie du **Pascal's Dreieck in C** implementieren kannst. Praktische Beispiele für komplexe Konzepte.
-
----
-
-## 📝 **[[Zusammenfassungen-SysPrak]]**
-
-Alle Zusammenfassungen an einem Ort. Ein umfassender Überblick über die wichtigsten Themen und Konzepte des Systempraktikums, ideal zum Wiederholen und Vertiefen.
+[[Zusammenfassung Theorie 1 - Sysprak]][[2 VL - Sysprak]]
+[[3VL - Sysprak]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
@@ -62,11 +43,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
