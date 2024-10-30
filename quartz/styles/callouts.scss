@@ -160,13 +160,3 @@
     font-weight: $semiBoldWeight;
   }
 }
-
-.callout.is-collapsed {
-  max-height: 0;
-  padding: 0 1rem; // Optional: Entfernt Innenabstand im kollabierten Zustand
-  overflow: hidden;
-}
-
-.callout:not(.is-collapsed) {
-  max-height: 500px; // Setze hier eine Höhe fest, je nachdem, wie viel Inhalt in den Callouts erwartet wird
-}
