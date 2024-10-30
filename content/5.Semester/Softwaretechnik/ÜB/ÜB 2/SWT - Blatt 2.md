@@ -1,6 +1,6 @@
 ---
 date created: Wednesday, 23. October 2024, 15:41
-date modified: Wednesday, 30. October 2024, 17:10
+date modified: Wednesday, 30. October 2024, 20:12
 ---
 
 # 🗓 Übungsblatt 2 – Abgabe am Mittwoch, 30.10.
@@ -84,10 +84,10 @@ Da ich keinen direkten Zugriff auf den Merge-Request habe, beschreibe ich kurz, 
 - **(h)** **Wahr**  
   Ein Merge Request sollte die Codebase verbessern, um angenommen zu werden.
 
-- **(i)** **Wahr**  
+- **(i)** **Falsch**  
   Die Person, die den Code reviewed, besitzt den Code nicht und ist nicht für die Änderungen verantwortlich.
 
-- **(j)** **Wahr**  
+- **(j)** **Falsch**  
   Persönliche Vorlieben sollten nicht die Integration eines Merge Requests verhindern.
 
 # 🧼 Clean Code
@@ -160,11 +160,11 @@ comments powered by Disqus.
 <div id="disqus_thread"></div>
 <script>
     /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
     /*
     var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */

@@ -7,15 +7,28 @@ fach: "[[Systempraktikum]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 21. October 2024, 15:19
-date modified: Monday, 28. October 2024, 17:34
+date modified: Wednesday, 30. October 2024, 20:29
 ---
 
-[[Einführung in Headerdateien in C]][[Erklärungsverzeichnis - SysPrak]][[Verständnis von option_val im C-Programm zur Verarbeitung von Kommandozeilenargumenten]]
-[[Warum man sizeof für Strings in C nicht verwenden sollte]]
-[[Dynamische Speicherverwaltung und Pascal's Dreieck in C]]
+# Übung zum EFV
 
-[[Zusammenfassung Theorie 1 - Sysprak]][[2 VL - Sysprak]]
-[[3VL - Sysprak]]
+- [[T01 MC - Sysprak]]
+- [[T02 MC - Sysprak]]
+- [[T03 MC - Sysprak]]
+- [[2020 EFV - Sysprak]]
+
+# Grundlagen C
+
+- [[Einführung in Headerdateien in C]]
+- [[Verständnis von option_val im C-Programm zur Verarbeitung von Kommandozeilenargumenten]]
+- [[Warum man sizeof für Strings in C nicht verwenden sollte]]
+- [[Dynamische Speicherverwaltung und Pascal's Dreieck in C]]
+
+# SysPrak Theorie und Vorlesungen
+
+- [[Erklärungsverzeichnis - SysPrak]]
+- [[Zusammenfassung Theorie 1 - Sysprak]]
+- [[2 VL - Sysprak]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
