@@ -7,7 +7,7 @@ fach: "[[Systempraktikum]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 21. October 2024, 15:19
-date modified: Thursday, 31. October 2024, 12:34
+date modified: Thursday, 31. October 2024, 12:56
 ---
 
 # Übung zum EFV
@@ -16,12 +16,14 @@ date modified: Thursday, 31. October 2024, 12:34
 - [[T02 MC - Sysprak]]
 - [[T03 MC - Sysprak]]
 - [[2020 EFV - Sysprak]]
+- [Anki Deck für EFV Multiplechoice](https://www.dropbox.com/scl/fi/b9prpblufnbox8vu3z9kf/EFV-SYSPRAK-ANKIDECK.apkg?rlkey=bfq0mr5vlk5jsglhxc4v1xb8c&st=zc1id8zf&dl=0)
 
 # SysPrak Theorie und Vorlesungen
 
 - [[Erklärungsverzeichnis - SysPrak]]
-- [[Zusammenfassung Theorie 1 - Sysprak]]
+- [[1 VL - Sysprak]]
 - [[2 VL - Sysprak]]
+  - [[Theorie2 - Zusammenfasssung]] (Skript Zusammengefasst)
 - [[3 VL - Sysprak]]
 - [[3 Übung - Sysprak]]
 
