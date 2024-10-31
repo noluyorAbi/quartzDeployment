@@ -7,7 +7,7 @@ fach: "[[Systempraktikum]]"
 Thema:
 Benötigte Zeit:
 date created: Wednesday, 30. October 2024, 20:26
-date modified: Wednesday, 30. October 2024, 21:03
+date modified: Wednesday, 30. October 2024, 21:40
 ---
 
 # Systempraktikum - Eignungsfeststellung, 23.11.2020
