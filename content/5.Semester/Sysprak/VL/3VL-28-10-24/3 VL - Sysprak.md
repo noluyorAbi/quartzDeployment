@@ -915,8 +915,6 @@ Um einen sicheren Zugriff auf Shared Memory zu gewährleisten, sollten Semaphore
 
 Das Verständnis von Prozessen und Inter-Prozess-Kommunikation ist essenziell für die Entwicklung effizienter und stabiler Anwendungen in C. Durch die praktische Anwendung der vorgestellten Konzepte und die Auseinandersetzung mit den bereitgestellten Beispielen werden Sie in der Lage sein, komplexe Systeme zu entwickeln und die Performance Ihrer Programme zu optimieren.
 
-Bleiben Sie neugierig, üben Sie regelmäßig und scheuen Sie sich nicht, tiefer in die Materie einzutauchen. Viel Erfolg in Ihrem Systempraktikum C!
-
 <!-- DISQUS SCRIPT COMMENT START -->
 
 <!-- DISQUS RECOMMENDATION START -->
