@@ -239,6 +239,12 @@ erDiagram
 - **Primärschlüssel (PK)**: Eindeutige Identifikation einer Entität.
 - **Fremdschlüssel (FK)**: Verbindet Entitäten durch Referenz.
 
+---
+
+# Aufgabe 9-4 **Ableitung eines Relationenschemas**
+
+_Erzeugen Sie entsprechend der Vorlesung (Kapitel 6 Folien 16-24) aus dem gegebenen E/R-Diagramm eines Christkindlmarktes ein vollständiges Relationenschema. Unterstreichen Sie dabei in jeder Relation den Primärschlüssel und überstreichen Sie die Fremdschlüssel. Begründen Sie Ihre Umsetzung der Relationship ‘freier Eintritt’._
+
 <!-- DISQUS SCRIPT COMMENT START -->
 
 <!-- DISQUS RECOMMENDATION START -->
