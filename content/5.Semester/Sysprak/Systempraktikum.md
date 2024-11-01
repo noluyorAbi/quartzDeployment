@@ -7,7 +7,7 @@ fach: "[[Systempraktikum]]"
 Thema:
 Benötigte Zeit:
 date created: Monday, 21. October 2024, 15:19
-date modified: Thursday, 31. October 2024, 12:56
+date modified: Thursday, 31. October 2024, 14:26
 ---
 
 # Übung zum EFV
@@ -33,6 +33,8 @@ date modified: Thursday, 31. October 2024, 12:56
 - [[Verständnis von option_val im C-Programm zur Verarbeitung von Kommandozeilenargumenten]]
 - [[Warum man sizeof für Strings in C nicht verwenden sollte]]
 - [[Dynamische Speicherverwaltung und Pascal's Dreieck in C]]
+- [[Call by Value vs Call by Reference]]
+- [[Quelltext zu ausführbarer Datei]]
 
 <!-- DISQUS SCRIPT COMMENT START -->
 
