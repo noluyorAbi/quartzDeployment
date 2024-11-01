@@ -7,28 +7,28 @@ fach:
 title: Studying made easier.
 description: Explore MyUniNotes for comprehensive study guides, summaries, and academic resources tailored for students across Computer Science. Elevate your learning, ace your exams, and connect with peers for collaborative study. Your go-to for academic success!
 date created: Thursday, 21. March 2024, 01:39
-date modified: Wednesday, 30. October 2024, 16:19
+date modified: Friday, 1. November 2024, 17:34
 ---
 
 # 📚 Modules
 
 | Bereich        | Kurse                                                                                          | Status |
 | -------------- | ---------------------------------------------------------------------------------------------- | ------ |
-| **Informatik** | [[Datenbanksysteme (DBS)]]                                                                     | done   |
-|                | (OG site) [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/)<br>(new) [[Softwaretechnik]] | done   |
-|                | [[Formale Sprachen und Komplexität (FSK)]]                                                     | done   |
-|                | [[Rechnernetze und Verteilte Systeme (RNVS)]]                                                  | done   |
-|                | [[Natural Computing - NaCo]]                                                                   | done   |
-|                | [[Systempraktikum]]                                                                            | active |
-|                | [[Juristisches IT-Projektmanagement]]                                                          | active |
-|                | [[Grid and Cloudcomputing]]                                                                    | active |
-|                | [[Computational Intelligence]]                                                                 | active |
-| **Statistik**  | [[LiMo]]                                                                                       | done   |
-|                | [[BaySta]]                                                                                     | done   |
-|                | [[Einführung medizinische Biometrie]]                                                          | active |
-| **Semester**   | [[3.Semester]]                                                                                 | done   |
-|                | [[4.Semester]]                                                                                 | done   |
-|                | [[5.Semester]]                                                                                 | active |
+| **Informatik** | [[Datenbanksysteme (DBS)]]                                                                     | ✅     |
+|                | (OG site) [Softwaretechnik (SWT)](https://hustle-swt.vercel.app/)<br>(new) [[Softwaretechnik]] | ✅     |
+|                | [[Formale Sprachen und Komplexität (FSK)]]                                                     | ✅     |
+|                | [[Rechnernetze und Verteilte Systeme (RNVS)]]                                                  | ✅     |
+|                | [[Natural Computing - NaCo]]                                                                   | ✅     |
+|                | [[Systempraktikum]]                                                                            | ⏳     |
+|                | [[Juristisches IT-Projektmanagement]]                                                          | ⏳     |
+|                | [[Grid and Cloudcomputing]]                                                                    | ⏳     |
+|                | [[Computational Intelligence]]                                                                 | ⏳     |
+| **Statistik**  | [[LiMo]]                                                                                       | ✅     |
+|                | [[BaySta]]                                                                                     | ✅     |
+|                | [[Einführung medizinische Biometrie]]                                                          | ⏳     |
+| **Semester**   | [[3.Semester]]                                                                                 | ✅     |
+|                | [[4.Semester]]                                                                                 | ✅     |
+|                | [[5.Semester]]                                                                                 | ⏳     |
 
 # ℹ️ About This Site
 

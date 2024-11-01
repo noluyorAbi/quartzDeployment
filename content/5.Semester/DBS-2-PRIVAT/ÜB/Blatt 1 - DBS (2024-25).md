@@ -245,6 +245,34 @@ erDiagram
 
 _Erzeugen Sie entsprechend der Vorlesung (Kapitel 6 Folien 16-24) aus dem gegebenen E/R-Diagramm eines Christkindlmarktes ein vollständiges Relationenschema. Unterstreichen Sie dabei in jeder Relation den Primärschlüssel und überstreichen Sie die Fremdschlüssel. Begründen Sie Ihre Umsetzung der Relationship ‘freier Eintritt’._
 
+| Relation            | Attribute                               |
+| ------------------- | --------------------------------------- |
+| **Besitzer**        | GewerbeNr (PK), Name                    |
+| **Stand**           | PlatzNr (PK), GewerbeNr (FK), Name      |
+| **Gegenstand**      | Bezeichnung (PK), Preis, PlatzNr (FK)   |
+| **Mitarbeiter**     | PersNr (PK), Name, PlatzNr (FK)         |
+| **Besucher**        | SteuerId (PK), Geb_Datum                |
+| **Kauft**           | SteuerId (FK), Bezeichnung (FK), Anzahl |
+| **Freier_Eintritt** | SteuerId (FK), PersNr (FK), Datum       |
+
+$$
+\begin{aligned}
+&\textbf{Besitzer}(\underline{\text{GewerbeNr}}, \text{Name}) \\
+
+&\textbf{Stand}(\underline{\text{PlatzNr}}, \overline{\text{GewerbeNr}}, \text{Name}) \\
+
+&\textbf{Gegenstand}(\underline{\text{Bezeichnung}}, \text{Preis}, \overline{\text{PlatzNr}}) \\
+
+&\textbf{Mitarbeiter}(\underline{\text{PersNr}}, \text{Name}, \overline{\text{PlatzNr}}) \\
+
+&\textbf{Besucher}(\underline{\text{SteuerId}}, \text{Geb\_Datum}) \\
+
+&\textbf{Kauft}(\overline{\text{SteuerId}}, \overline{\text{Bezeichnung}}, \text{Anzahl}) \\
+
+&\textbf{Freier\_Eintritt}(\overline{\text{SteuerId}}, \overline{\text{PersNr}}, \text{Datum}) \\
+\end{aligned}
+$$
+
 <!-- DISQUS SCRIPT COMMENT START -->
 
 <!-- DISQUS RECOMMENDATION START -->
